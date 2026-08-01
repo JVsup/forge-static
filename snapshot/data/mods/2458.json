@@ -1,0 +1,167 @@
+{
+  "type": "mod",
+  "id": 2458,
+  "hub_id": null,
+  "guid": "com.sp-tarkov.bela.tweaks",
+  "name": "Bela.s.Tweaks",
+  "slug": "belastweaks",
+  "teaser": "Faster compression time, longer escape time and bullet stack multiplie",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/UQUohBjpe7lyg8cG1btRpDvyvHM6Q4TJ9nTnqH7L.jpg",
+  "downloads": 7395,
+  "favourites_count": 3,
+  "description": "<h1>If you need more modifications, I strongly recommend <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/236/server-value-modifier-svm\" rel=\"noreferrer noopener\">SVM</a>, It’s better than mine.</h1>\n<h1>If the configuration file is not found, load the backend server once.</h1>\n<p>very simple adjustment</p>\n<pre><code>{\n  // Whether to remove items added by Mods from the player profile\n  \"RemoveModItemsFromProfile\": false,\n\n  // Whether to remove invalid trader data to prevent save corruption\n  \"RemoveInvalidTradersFromProfile\": false,\n\n  // Fix inventory item issues that may cause save corruption\n  \"FixProfileBreakingInventoryItemIssues\": false,\n\n  // Enable tweaks for ammo loading/unloading speed\n  \"EnableAmmoLoadTweaks\": true,\n\n  // Default 0.85, base loading time (seconds). Smaller values = faster loading\n  \"BaseLoadTime\": 0.05,\n\n  // Default 0.3, base unloading time (seconds). Smaller values = faster unloading\n  \"BaseUnLoadTime\": 0.05,\n\n  // Time limit per raid (minutes)\n  \"RaidTimeMinutes\": 120,\n\n  // Ammo stack multiplier, e.g. 6 means originally 30 rounds per slot → 180 rounds\n  \"AmmoStackMultiplier\": 6\n}\n</code></pre>\n<p>starting from a very early version (around 0.12.9.0.19428), every time I updated the game I had to manually change these options and files, which was a real headache. Since I don’t often use mods, I only needed a few simple adjustments. Fortunately, after following the official tutorial, I learned how to make the modifications I wanted. With this script, the console no longer reports verification errors, and I can keep my preferred settings without repeating the same manual work after each update.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2458/belastweaks",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 3,
+  "published_at": "2025-11-20T10:41:00.000000Z",
+  "created_at": "2025-11-20T10:40:42.000000Z",
+  "updated_at": "2026-07-28T06:44:29.000000Z",
+  "owner": {
+    "id": 90441,
+    "name": "Bela",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=B&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-11-20T09:38:36.000000Z",
+    "updated_at": "2026-07-15T16:25:26.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 7,
+    "hub_id": 9,
+    "name": "GNU AGPLv3",
+    "link": "https://choosealicense.com/licenses/agpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 3,
+    "hub_id": 19,
+    "title": "Scripting",
+    "slug": "scripting",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/925316/SPTarkov.Tweaks",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12406,
+      "hub_id": null,
+      "version": "1.2.3",
+      "description": "<p>clearer generation path</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2458/belastweaks/1.2.3",
+      "content_length": 22624,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 6495,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-22T14:59:46.000000Z",
+      "created_at": "2025-11-22T14:59:11.000000Z",
+      "updated_at": "2026-07-28T06:44:29.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bbb97d2e867e87cad7556c920580ffee7a2577620d0852a4e4625b50075f904d",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100441513/0e856046-6832-40c9-9c9d-f23b50143f71?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A13%3A15Z&rscd=attachment%3B+filename%3DSPTarkov.Tweaks.1.2.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A12%3A46Z&ske=2026-08-01T20%3A13%3A15Z&sks=b&skv=2018-11-09&sig=6%2F7ILMBcTdm4q6iXQMc4pAJmULF1of0Ixrdb9HI9jxQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4MSwibmJmIjoxNzg1NjEzMTgxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MjB9G2cVsJ5nGvfis4DrmztfWXJ5R7BASLmjGlXG1wU&response-content-disposition=attachment%3B%20filename%3DSPTarkov.Tweaks.1.2.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12397,
+      "hub_id": null,
+      "version": "1.2.2",
+      "description": "<p>support all adjustable items</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2458/belastweaks/1.2.2",
+      "content_length": 10436,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 119,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-22T09:15:52.000000Z",
+      "created_at": "2025-11-22T09:15:38.000000Z",
+      "updated_at": "2026-07-28T06:44:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/513038c537632a6c03562b0a260a0d1bf371401592e5713fd2301b0f3908a094",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100441513/f1525e40-8b3c-43d8-9577-b36c66d6d836?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A19%3A19Z&rscd=attachment%3B+filename%3DSPTarkov.Tweaks.1.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A18%3A48Z&ske=2026-08-01T20%3A19%3A19Z&sks=b&skv=2018-11-09&sig=QAqFuxrnxF24mnHD0K6NN%2FalFYU3lf1tiykNh4XHdo4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4MSwibmJmIjoxNzg1NjEzMTgxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MjB9G2cVsJ5nGvfis4DrmztfWXJ5R7BASLmjGlXG1wU&response-content-disposition=attachment%3B%20filename%3DSPTarkov.Tweaks.1.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12389,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>add exception handling\nadd more adjustable variables</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2458/belastweaks/1.2.1",
+      "content_length": 22575,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 308,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-21T08:36:00.000000Z",
+      "created_at": "2025-11-21T08:34:50.000000Z",
+      "updated_at": "2026-07-28T06:44:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8abd699c4b5c45abeaf746fc1cca65cc84f70c0b1050b3a6884d08b67b70e390?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100441513/da80e14a-a21c-4c20-b9bd-5640ca826efe?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A35%3A17Z&rscd=attachment%3B+filename%3DSPTarkov.Tweaks.1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A34%3A54Z&ske=2026-08-01T20%3A35%3A17Z&sks=b&skv=2018-11-09&sig=%2FQsAQQUYsDe76HvnVQfCPBxLGGplvuvLExImJfRuQfc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4MiwibmJmIjoxNzg1NjEzMTgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bNLhFSM8Z-u146V_cReEGQ8IQzUumFuoG38Cc90w7uY&response-content-disposition=attachment%3B%20filename%3DSPTarkov.Tweaks.1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12383,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Supports 4.0.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2458/belastweaks/1.2.0",
+      "content_length": 6638,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 473,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-21T08:30:00.000000Z",
+      "created_at": "2025-11-20T10:42:01.000000Z",
+      "updated_at": "2026-07-28T06:42:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8abd699c4b5c45abeaf746fc1cca65cc84f70c0b1050b3a6884d08b67b70e390?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100441513/5458f238-1a29-4ade-81f7-eac122256a22?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A32%3A36Z&rscd=attachment%3B+filename%3DBela.s.Tweaks.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A32%3A28Z&ske=2026-08-01T20%3A32%3A36Z&sks=b&skv=2018-11-09&sig=Eer37FzUtBgZ0P%2BwEH85ladu6ZLZpsoXMQlMTluxpHo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4MSwibmJmIjoxNzg1NjEzMTgxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MjB9G2cVsJ5nGvfis4DrmztfWXJ5R7BASLmjGlXG1wU&response-content-disposition=attachment%3B%20filename%3DBela.s.Tweaks.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 7,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:39:40.681Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "type": "mod",
+  "id": 2660,
+  "hub_id": null,
+  "guid": "com.refringe.betterbackpacks",
+  "name": "Better Backpacks",
+  "slug": "better-backpacks",
+  "teaser": "Makes backpacks bigger in a balanced way.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/w0Aeguc27KsRF1WV6MdlGn6Htwj2U7KtxwBztU7w.jpg",
+  "downloads": 19635,
+  "favourites_count": 72,
+  "description": "<h1>Better Backpacks</h1>\n<blockquote class=\"is-success\">\n<p>Huge thank you to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/21711/josh-mate\" rel=\"noreferrer noopener\">Josh Mate</a> for the original <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/552/josh-mates-better-backpacks\" rel=\"noreferrer noopener\">Better Backpacks</a>. This mod would not be possible without their work. Send them your love! ♥</p>\n</blockquote>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p>Make backpacks bigger while staying in-line with vanilla gameplay balance.</p>\n<ul>\n<li>Increases backpack grid sizes across all tiers, with buffs scaled by rarity/availability.</li>\n<li>Boss backpack have been made significantly larger to fit their status.</li>\n<li>The backpack grid system has been modified to allow for multi-grid backpacks to be resized properly.</li>\n<li>Configurable backpack sizes with web-based user interface.</li>\n</ul>\n<blockquote class=\"is-info\">\n<p>The backpack sizes have been altered from the original Better Backpacks mod due to the addition of all of the extra bags over time.</p>\n</blockquote></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Install / Configure</div>\n<div class=\"tab-content\"><h3>Vanilla SPT:</h3>\n<ol>\n<li>Decompress the contents of the download into your root SPT directory.</li>\n<li>Run the server.</li>\n<li>Configure the mod using the web UI here:<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://127.0.0.1:6969/better-backpacks\" rel=\"noreferrer noopener\">https://127.0.0.1:6969/better-backpacks</a></li>\n</ol>\n<hr />\n<h3>Fika</h3>\n<p>If you are using Fika, this mod must be installed into the Fika server, and each client that connects to the server. The <a target=\"_blank\" class=\"external-link\" href=\"https://wiki.project-fika.com/faqandguides/set-up-required-optional-mods\" rel=\"noreferrer noopener\">Fika documentation</a> has a page about setting required mods on a server. The line you’re probably looking to modify in your <code>fika.jsonc</code> is this:</p>\n<pre><code>    \"mods\": {\n      \"required\": [\"com.refringe.betterbackpacks\"],\n      \"optional\": []\n    },\n</code></pre>\n<p>If you are using the Fika headless client, this mod needs to be installed there as well.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Uninstall</div>\n<div class=\"tab-content\"><blockquote class=\"is-danger\">\n<p>It’s extreamly important to remove all backpacks from your player and stash before removing this mod. Failing to do this may result in your profile becoming corrupted.</p>\n</blockquote>\n<p>Remove the following:</p>\n<ul>\n<li><code>BepInEx/plugins/BetterBackpacks.dll</code></li>\n<li><code>SPT/user/mods/BetterBackpacks</code></li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Issues?</div>\n<div class=\"tab-content\"><p>If you experience any problems, please <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/refringe/BetterBackpacks/issues\" rel=\"noreferrer noopener\">submit a detailed bug report.</a></p></div></div></div>\n<p>♥</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2660/better-backpacks",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2026-04-08T06:18:00.000000Z",
+  "created_at": "2026-04-08T06:19:16.000000Z",
+  "updated_at": "2026-07-28T18:01:55.000000Z",
+  "owner": {
+    "id": 14604,
+    "name": "Refringe",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/GqV2DCzOs8YgpLJkke28iHB8w9nVBm9mcVHsqSBF_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/jtyCzEQSvGkeUpqAb99cUPVxCUzRIqXKbUfUCv0i.png",
+    "created_at": "2022-02-12T03:17:31.000000Z",
+    "updated_at": "2026-07-30T16:47:38.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/refringe/BetterBackpacks",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13401,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<h2>Updates:</h2>\n<ul>\n<li>Add web UI for backpack configuration</li>\n<li>Add dynamic scaling for custom backpacks</li>\n<li>Add debug logging</li>\n<li>Never process the endless backpack</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2660/better-backpacks/1.0.1",
+      "content_length": 27761,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 19134,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-08T19:35:00.000000Z",
+      "created_at": "2026-04-08T19:35:30.000000Z",
+      "updated_at": "2026-07-28T18:01:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/c12ec7d84023b62aeadf3d2493dbf69979ac10a95cd92af11741ce7581e8dfc3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1204547553/a8e30f8e-5971-4d29-b08e-d19dc411a54a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A39%3A11Z&rscd=attachment%3B+filename%3DBetterBackpacks-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A38%3A33Z&ske=2026-08-01T20%3A39%3A11Z&sks=b&skv=2018-11-09&sig=8yTY%2FntdmUhDHlWxZ3z78eFlDjUu4c0dJqTzghwiV68%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OCwibmJmIjoxNzg1NjEzMTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qcJcz5_n9ngG85jvuIhjH9_jzwULqIWsv16aizWzFx8&response-content-disposition=attachment%3B%20filename%3DBetterBackpacks-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13396,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Make backpacks bigger while staying in-line with vanilla gameplay.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2660/better-backpacks/1.0.0",
+      "content_length": 13818,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 501,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-08T06:38:00.000000Z",
+      "created_at": "2026-04-08T06:38:14.000000Z",
+      "updated_at": "2026-07-28T18:01:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/2128e29e301ceb92adbd24a495b9c21e2a96d109127446bacc102570a7358bc0",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1204547553/d030e07a-8304-48ef-ab0c-814ce7f8fc2f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A35%3A08Z&rscd=attachment%3B+filename%3DBetterBackpacks-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A34%3A29Z&ske=2026-08-01T20%3A35%3A08Z&sks=b&skv=2018-11-09&sig=xIriK6%2FokudL0tys7I70KiXc8Pxj0FehvNmzxgr9ol4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OCwibmJmIjoxNzg1NjEzMTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qcJcz5_n9ngG85jvuIhjH9_jzwULqIWsv16aizWzFx8&response-content-disposition=attachment%3B%20filename%3DBetterBackpacks-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 136,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:39:47.899Z",
+    "discoveredBy": "seed"
+  }
+}

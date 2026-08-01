@@ -1,0 +1,149 @@
+{
+  "type": "mod",
+  "id": 2790,
+  "hub_id": null,
+  "guid": "com.maschine.easymounting",
+  "name": "EasyMounting",
+  "slug": "easymounting",
+  "teaser": "No more existential dreads while trying to mount your weapon",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Wf6T09iWt3fNhzWGhzqZDR4BwITGxIeOSyuufVtn.png",
+  "downloads": 3537,
+  "favourites_count": 30,
+  "description": "<h2>Overview</h2>\n<p>An SPT mod bundle that makes bipod deployment and weapon mounting (ledges, windowsills,\nrailings, etc.) far less picky about the surface. Two parts, shipped together:</p>\n<ul>\n<li><strong>Server mod</strong> - relaxes the surface-detection tolerances stored in <code>globals.json</code> via simple presets. Handles the vast majority of cases on its own.</li>\n<li><strong>Client plugin</strong> - patches the handful of mounting checks hardcoded in the game client that no server config can reach, up to and including some deliberately “cursed” bypasses.</li>\n</ul>\n<p>Neither strictly requires the other, but they’re designed to be used together - some spots only\nbecome mountable with both installed.</p>\n<h2>What it does</h2>\n<p>Vanilla EFT is fairly strict about what counts as a valid mounting point: the surface angle\ntolerance, accepted height range, and detection resolution in <code>globals.json</code> under\n<code>MountingSettings</code> reject a lot of real-world edge cases (tilted ledges, thin railings, uneven\ncover). The server mod overwrites those values in memory at server startup according to the\npreset you pick, plus widens how far up/down you can look while mounted. The client plugin then\ncovers what’s left: railings whose collision lives on a physics layer the detection rays never\nquery, spots too tight for the body-clearance check, and even paper-thin colliders that have no\ntop surface for the scan to find at all.</p>\n<h2>Installation</h2>\n<p>As usual, unzip to your SPT directory.</p>\n<p>All details in <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/maschine34675/EasyMounting/blob/main/README.md\" rel=\"noreferrer noopener\">README.md</a></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/maschine34675/EasyMounting/refs/heads/main/example3.png\" alt=\"example\" /></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/maschine34675/EasyMounting/refs/heads/main/example1.png\" alt=\"example\" /></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/maschine34675/EasyMounting/refs/heads/main/example2.png\" alt=\"example\" /></p>\n<hr />\n<p>Let me know if you run into any problems or have suggestions for improvement.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2790/easymounting",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to find the correct classes/methods to patch in the game’s source code. The thumbnail is AI generated.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-07-02T16:05:00.000000Z",
+  "created_at": "2026-07-01T18:39:13.000000Z",
+  "updated_at": "2026-07-30T09:34:37.000000Z",
+  "owner": {
+    "id": 109459,
+    "name": "maschine",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2xAHR3ttkN7Su6wHEefYq1aNQJLqsN3CqsMwuBpH_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-04-10T00:02:34.000000Z",
+    "updated_at": "2026-08-01T17:06:08.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/maschine34675/EasyMounting",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14202,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<ul>\n<li>Added an option that generates a support package containing all the necessary information for debugging.</li>\n<li>If you’re not having any issues with the mod, you don’t need to update it.</li>\n</ul>\n<p><strong>How to use:</strong> Configure the hotkey in the F12 menu; when you press it, a 10-second timer starts. Try to mount at the appropriate location; the folder containing the ZIP file will open automatically once the timer expires. Send it using a file-sharing service of your choice.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2790/easymounting/1.2.0",
+      "content_length": 32556,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1090,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-23T19:12:00.000000Z",
+      "created_at": "2026-07-23T19:26:48.000000Z",
+      "updated_at": "2026-07-30T09:34:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/95fd617f5d98f33196f95d884b720010a5f87d1a34ef67d257ab32bdc9c35ece?nocache=1",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/a726951c621899e770ffcdfc8232e1c253a82e4cca325a5a6d2fb2d17cd19214?nocache=1",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/312baa4d-94c5-4964-b087-2ec191abdef9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A49Z&rscd=attachment%3B+filename%3DEasyMounting-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A39Z&ske=2026-08-01T21%3A25%3A49Z&sks=b&skv=2018-11-09&sig=xn%2FfzxB6ga27%2BaysuXcZAbiKJOPPq37aPoDEGPyWSGk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DEasyMounting-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14044,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<ul>\n<li><strong>New bundled client plugin:</strong> unlocks mounting spots that no server setting could ever reach.</li>\n<li><strong>Thin railings are finally mountable:</strong> some railings have paper-thin collision the game could literally never detect as a surface; the plugin now handles these.</li>\n<li><strong>Tight spots now work:</strong> spots that are geometrically valid but too tight for vanilla anti-clip check now mount properly</li>\n<li><strong>Fixes a vanilla weapon bug:</strong> weapons with broken mounting data (e.g. the TRG M10) were basically unmountable; they now rest properly on the surface.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2790/easymounting/1.1.0",
+      "content_length": 25557,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1384,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-10T19:10:00.000000Z",
+      "created_at": "2026-07-10T19:09:21.000000Z",
+      "updated_at": "2026-07-30T09:34:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/67b9fde6abaf72a808424b41e11437c41dd681c9df3afc1e428c30363eb425fa?nocache=1",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/8cd6c3ec397176d3020d34d37aae19e3d72b7100c5c2ca8e6da3564161b3ffa5?nocache=1",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/4de2b0ec-e6c2-400a-a959-8bab9a50a1e2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A53Z&rscd=attachment%3B+filename%3Dmaschine-EasyMounting-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A23Z&ske=2026-08-01T21%3A09%3A53Z&sks=b&skv=2018-11-09&sig=ibnYzecjN6g7bmjWrIEJhwKZGcijrHVQTEm8NbiO1WM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3Dmaschine-EasyMounting-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13962,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2790/easymounting/1.0.0",
+      "content_length": 12004,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1063,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T16:01:00.000000Z",
+      "created_at": "2026-07-02T16:01:44.000000Z",
+      "updated_at": "2026-07-30T09:34:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/cee087997d338783770804b24f705a609fb7ffd0179d0538d2cef7c5c4d7c28e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/10336a0f-360f-47f7-9ff5-54503ceb258e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A45Z&rscd=attachment%3B+filename%3Dmaschine-EasyMounting-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A30Z&ske=2026-08-01T21%3A19%3A45Z&sks=b&skv=2018-11-09&sig=glokUy6qA2CsFU0ndQ7sg2SkmLUAY9wkIRuEQmj2oPY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3Dmaschine-EasyMounting-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 55,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:42.062Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2628,
+  "hub_id": null,
+  "guid": "com.vinihns.tarkovcraftloader",
+  "name": "Tarkov Craft Loader",
+  "slug": "tarkov-craft-loader",
+  "teaser": "Load custom hideout production recipes from JSON files without touching any code.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/4Xed3kwQcj941yFdsZYWzOG16VqA1ADZXutamufL.png",
+  "downloads": 662,
+  "favourites_count": 3,
+  "description": "<blockquote>\n<h1>Mods on Hiatus / Support Paused</h1>\n<ul>\n<li><strong>Status:</strong> No updates planned due to focus on other projects.</li>\n<li><strong>Open Invitation:</strong> The community has full permission to update, modify, and redistribute these mods. Feel free to fork the repository and build your own version.</li>\n</ul>\n</blockquote>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">What is this?</div>\n<div class=\"tab-content\"><p>A simple mod that lets you add custom hideout production recipes by placing JSON files in the <code>recipes</code> folder — no coding required.</p>\n<p>Use the <a target=\"_blank\" class=\"external-link\" href=\"https://vinihns.github.io/TarkovCraft/\" rel=\"noreferrer noopener\">TarkovCraft website</a> to generate your recipes easily!</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><ul>\n<li>Automatically loads <strong>all</strong> <code>.json</code> files from the <code>recipes</code> folder</li>\n<li>Supports <strong>multiple files</strong> — organize your recipes however you like</li>\n<li>Logs loaded recipes and errors in the server console</li>\n<li>Seamlessly integrates with the existing hideout crafting system</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Usage</div>\n<div class=\"tab-content\"><p>Place your recipe <code>.json</code> files inside <code>user/mods/TarkovCraft-Loader/recipes/</code>.</p>\n<p>You can have as many <code>.json</code> files as you want — any name works!</p>\n<p>Need help creating recipe JSON files? Use the <strong><a target=\"_blank\" class=\"external-link\" href=\"https://vinihns.github.io/TarkovCraft/\" rel=\"noreferrer noopener\">TarkovCraft website</a></strong>.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><ol>\n<li>Download the latest release <code>.zip</code></li>\n<li>Drag and drop the files directly into the root folder of your SPT installation</li>\n<li>The folders should merge automatically. If you get a prompt to overwrite files, say yes</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Notes</div>\n<div class=\"tab-content\"><ul>\n<li>Malformed JSON or invalid item IDs will be <strong>skipped</strong> and logged as errors in the server console</li>\n<li>Adding many recipes to one hideout area may cause a <strong>brief freeze</strong> when first opening that station — this is a client-side limitation</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Issues</div>\n<div class=\"tab-content\"><p>Issues? Open one <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/viniHNS/TarkovCraft-Loader/issues\" rel=\"noreferrer noopener\">HERE</a></p></div></div></div>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/Q5Q116JYQN\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"ko-fi\" /></a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2628/tarkov-craft-loader",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": true,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 6,
+  "published_at": "2026-03-14T16:24:00.000000Z",
+  "created_at": "2026-03-14T18:45:47.000000Z",
+  "updated_at": "2026-07-28T08:10:01.000000Z",
+  "owner": {
+    "id": 24845,
+    "name": "viniHNS",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/84101c224775f3cd8ee04dcdc31158d6280cc336_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fd12e19d8bfff462fbccc46bfeb6bb2eebf04094_1280w.webp",
+    "created_at": "2023-01-05T00:28:21.000000Z",
+    "updated_at": "2026-08-01T19:03:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 6,
+    "hub_id": 23,
+    "title": "Hideout",
+    "slug": "hideout",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/viniHNS/TarkovCraft-Loader",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13259,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release. Load custom hideout production recipes into SPT by placing JSON files in the <code>recipes</code> folder.</p>\n<h2>What’s new</h2>\n<ul>\n<li>Automatically loads all <code>.json</code> files from the <code>recipes</code> folder on server start</li>\n<li>Supports multiple files — any name works</li>\n<li>Logs loaded recipe count and errors in the server console</li>\n</ul>\n<h2>Installation</h2>\n<ol>\n<li>Download <code>TarkovCraft-Loader.zip</code></li>\n<li>Drag and drop the contents into your SPT root folder</li>\n<li>Let the folders merge</li>\n</ol>\n<h2>Notes</h2>\n<ul>\n<li>Use the <a target=\"_blank\" class=\"external-link\" href=\"https://vinihns.github.io/TarkovCraft/\" rel=\"noreferrer noopener\">TarkovCraft website</a> to generate recipe JSON files easily</li>\n<li>Malformed JSON or invalid item IDs are skipped and logged as errors</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2628/tarkov-craft-loader/1.0.0",
+      "content_length": 6371,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 662,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-14T18:46:00.000000Z",
+      "created_at": "2026-03-14T19:10:24.000000Z",
+      "updated_at": "2026-07-28T08:10:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e579aa5627544298587b62cbb73a89448e2ff3957e12a06b1eac7496d51a3a27?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1181787486/4fac7a4c-3f00-4bf7-a137-2275293c7162?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A59Z&rscd=attachment%3B+filename%3DTarkovCraft-Loader.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A18%3A13Z&ske=2026-08-01T21%3A18%3A59Z&sks=b&skv=2018-11-09&sig=Klk1f8o7prjBd8ruAEd3RHdYC5U2H3Z8ddMT%2Foc0Yu4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIwOSwibmJmIjoxNzg1NjE1OTA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WPr-X8dmOGgpVaO4nwI8kAVCRgP8tkubT5oqLyVdQN4&response-content-disposition=attachment%3B%20filename%3DTarkovCraft-Loader.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 4,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:35.628Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "type": "mod",
+  "id": 2847,
+  "hub_id": null,
+  "guid": "com.forgehq.nemesisprotocol",
+  "name": "Nemesis Protocol",
+  "slug": "nemesis-protocol",
+  "teaser": "Nemesis Protocol turns ordinary PMC encounters into a persistent rivalry that develops across multiple raids.  Instead of every enemy PMC being a disposable, randomly generated opponent, the mod creates a recurring rival.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Lfgo38GqxeDQ7DyPkm23lluohvodplR4XYqCPW8E.png",
+  "downloads": 1475,
+  "favourites_count": 20,
+  "description": "<h1>Nemesis Protocol</h1>\n<p><strong>Nemesis Protocol turns ordinary PMC encounters into a persistent rivalry that develops across multiple raids.</strong></p>\n<p>Instead of every enemy PMC being a disposable, randomly generated opponent, the mod creates a recurring rival who can remember previous encounters, grow stronger, improve their equipment, and return in future raids.</p>\n<p>Your nemesis is generated as a normal USEC or BEAR PMC, allowing other AI mods to continue controlling their combat behavior, navigation, objectives, looting, and extraction logic. Nemesis Protocol focuses on the persistent identity and progression behind that PMC rather than replacing the existing AI system.</p>\n<p>Every encounter contributes to an ongoing rivalry. Kill your nemesis and they may return stronger. Let them escape and they can continue progressing. If they kill you, their threat level increases and the rivalry becomes more dangerous.</p>\n<h2>Key Features</h2>\n<h3>Persistent Rival PMC</h3>\n<p>Nemesis Protocol creates a recurring enemy PMC with a persistent identity that carries across raids.</p>\n<p>The mod stores information such as:</p>\n<ul>\n<li>Name and faction</li>\n<li>Current level and rank</li>\n<li>Encounter history</li>\n<li>Player kills and nemesis deaths</li>\n<li>Successful escapes</li>\n<li>Rivalry progression</li>\n<li>Last generated equipment tier</li>\n<li>Previous raid outcomes</li>\n</ul>\n<p>Your nemesis is not regenerated from scratch after every raid. Their history follows them.</p>\n<h3>Dynamic Progression</h3>\n<p>The nemesis can gain levels based on configurable events, including:</p>\n<ul>\n<li>Killing the player</li>\n<li>Surviving and escaping a raid</li>\n<li>Reappearing in later raids</li>\n<li>Reaching new rivalry milestones</li>\n</ul>\n<p>Level growth, health scaling, appearance frequency, and progression limits can all be adjusted through the included configuration file.</p>\n<h3>NEMESIS NETWORK</h3>\n<p>Nemesis Network is a separate Messenger contact that functions as the player’s rivalry database and command interface.</p>\n<p>Available commands:</p>\n<ul>\n<li>help</li>\n<li>status</li>\n<li>rivals</li>\n<li>history</li>\n<li>rival 1</li>\n<li>rival </li>\n<li>compat</li>\n<li>compatibility</li>\n</ul>\n<p>Nemesis Network can be used to:</p>\n<ul>\n<li>View the active Nemesis</li>\n<li>Review previous rivals</li>\n<li>Inspect encounter statistics</li>\n<li>Check rivalry progression</li>\n<li>Search for a rival by name</li>\n<li>View APBS compatibility status</li>\n<li>View ORBIT compatibility status</li>\n</ul>\n<p>Nemesis Network handles records and commands, while individual rivals handle their personal messages and taunts.</p>\n<h3>APBS/ORBIT Dependencies</h3>\n<p>If you don’t want to use APBS or ORBIT to control the Nemesis behavior/equipment, simply change the following in your config.jsonc:</p>\n<p>“UseApbsProgression”: false,\n“PreserveOrbitPmcRole”: false,\n“ExactLevelFallbackWithoutApbs”: false,</p>\n<h3>APBS Progression Support</h3>\n<p>When <strong>Acid’s Progressive Bot System — APBS</strong> is installed, Nemesis Protocol passes the nemesis progression level into APBS during bot generation.</p>\n<p>APBS remains responsible for generating the final:</p>\n<ul>\n<li>PMC level</li>\n<li>Equipment tier</li>\n<li>Weapons</li>\n<li>Armor</li>\n<li>Ammunition</li>\n<li>Inventory</li>\n<li>Loot</li>\n</ul>\n<p>This allows the nemesis to naturally receive stronger and more appropriate equipment as the rivalry develops.</p>\n<p>Nemesis Protocol does not overwrite the final APBS-generated loadout after creation.</p>\n<h3>ORBIT Compatibility</h3>\n<p>The nemesis remains a standard USEC or BEAR PMC instead of being converted into a custom boss or unsupported bot role.</p>\n<p>This allows ORBIT to continue managing the PMC’s normal:</p>\n<ul>\n<li>Objectives</li>\n<li>Navigation</li>\n<li>Combat behavior</li>\n<li>Looting</li>\n<li>Decision-making</li>\n<li>Extraction behavior</li>\n</ul>\n<p>Nemesis Protocol manages the persistent rival identity while ORBIT manages what that PMC does during the raid.</p>\n<h3>Configurable Spawn System</h3>\n<p>Control how often your nemesis appears and where encounters can occur.</p>\n<p>Configuration options include:</p>\n<ul>\n<li>Base spawn chance</li>\n<li>Minimum raids between encounters</li>\n<li>Maximum progression level</li>\n<li>Disabled locations</li>\n<li>PMC-side requirements</li>\n<li>Progression rewards</li>\n<li>Health scaling</li>\n<li>Rival messages</li>\n<li>APBS integration</li>\n<li>ORBIT compatibility behavior</li>\n</ul>\n<p>Every option is documented directly inside the included <code>config.jsonc</code> file.</p>\n<h3>Persistent Encounter History</h3>\n<p>Nemesis Protocol records the developing rivalry between the player and the recurring PMC.</p>\n<p>Depending on the outcome of each raid, the mod can track whether:</p>\n<ul>\n<li>The player killed the nemesis</li>\n<li>The nemesis killed the player</li>\n<li>The nemesis survived</li>\n<li>The nemesis escaped</li>\n<li>The encounter ended without a confirmed result</li>\n</ul>\n<p>This history remains connected to the player profile and can continue through future raids.</p>\n<h3>Rival Messages and Status Commands</h3>\n<p>The nemesis can communicate through the SPT messaging system, providing updates and rivalry-themed responses.</p>\n<p>Available chat commands allow the player to inspect information such as:</p>\n<ul>\n<li>Current nemesis status</li>\n<li>Rivalry progression</li>\n<li>Encounter history</li>\n<li>APBS detection</li>\n<li>ORBIT detection</li>\n<li>Current compatibility state</li>\n</ul>\n<p>Message pools can be customized in the configuration.</p>\n<h3>Profile Migration</h3>\n<p>Older Nemesis Protocol rivalry profiles are automatically migrated when newer fields are introduced.</p>\n<p>This allows players to update the mod without intentionally resetting their existing nemesis history.</p>\n<h2>Compatibility</h2>\n<p>Designed for:</p>\n<ul>\n<li><strong>SPT 4.0.13</strong></li>\n<li><strong>APBS</strong></li>\n<li><strong>ORBIT</strong></li>\n<li>Standard USEC and BEAR PMC generation</li>\n</ul>\n<p>Nemesis Protocol is a server-side mod and installs under:</p>\n<p><code>user/mods/ForgeHQ-NemesisProtocol</code></p>\n<p>A separate Nemesis BepInEx plugin is not required for the current feature set.</p>\n<h2>Installation</h2>\n<ol>\n<li>Download and extract the archive.</li>\n<li>Merge the included folder with your main SPT installation.</li>\n<li>Confirm the mod is located at:</li>\n</ol>\n<p><code>SPT/user/mods/ForgeHQ-NemesisProtocol</code></p>\n<ol start=\"4\">\n<li>Start the SPT server.</li>\n<li>Review <code>config.jsonc</code> to customize the experience.</li>\n</ol>\n<h2>Updating</h2>\n<p>When installing an update, preserve the following folder to retain existing rivalry data:</p>\n<p><code>user/mods/ForgeHQ-NemesisProtocol/data/profiles</code></p>\n<p>Do not replace or delete that folder unless you intentionally want to reset your nemesis.</p>\n<h2>Configuration</h2>\n<p>The included <code>config.jsonc</code> contains readable descriptions above every setting.</p>\n<p>Users can configure:</p>\n<ul>\n<li>Nemesis appearance frequency</li>\n<li>Level gains</li>\n<li>Health growth</li>\n<li>Maximum level</li>\n<li>Disabled maps</li>\n<li>Message text</li>\n<li>APBS progression handling</li>\n<li>ORBIT compatibility</li>\n<li>Logging and debugging options</li>\n</ul>\n<p>Restart the SPT server after changing the configuration.</p>\n<h2>Important Notes</h2>\n<p>Nemesis Protocol controls the persistent identity, history, progression, and spawn scheduling of the rival PMC.</p>\n<p>It does not replace the full PMC AI system. Combat behavior remains controlled by the player’s existing AI setup, including ORBIT, SAIN, BigBrain, Waypoints, or standard SPT behavior where applicable.</p>\n<p>The result is a recurring enemy who still behaves like part of the normal SPT ecosystem—but has a reason to remember you.</p>\n<p><strong>Your raids are no longer isolated encounters. Someone is coming back.</strong></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2847/nemesis-protocol",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>This project used AI to clean up and format the coding to the industry standard, as I can generally code, but don’t tend to follow traditional formatting, aka I provide slop :)</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-07-26T00:00:00.000000Z",
+  "created_at": "2026-07-26T16:21:58.000000Z",
+  "updated_at": "2026-07-28T09:57:48.000000Z",
+  "owner": {
+    "id": 118133,
+    "name": "zomboy.",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/gpECWg2lQuraxLTr1v6HWRF0KCpTP4KWxVFs0Ky7_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-07-16T03:28:47.000000Z",
+    "updated_at": "2026-08-01T02:09:26.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ForgeHQ-Mods/NemesisProtocol/tree/main/src",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14261,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<h1>NEMESIS PROTOCOL — CHANGELOG - VERSION 1.0.1</h1>\n<p>ADDED:</p>\n<ul>\n<li>Added unique, persistent Messenger identities for individual Nemeses.</li>\n<li>Rivalry messages now come directly from the Nemesis instead of Nemesis Network.</li>\n<li>Added persistent Russian-style first and last names for Nemeses.</li>\n<li>Added a randomized pool of Tarkov-appropriate Russian names.</li>\n<li>Added Nemesis Network as a separate Messenger contact for rivalry records, statistics, and commands.</li>\n<li>Added the following Nemesis Network commands:</li>\n</ul>\n<p>help\nstatus\nrivals\nhistory\nrival 1\nrival \ncompat\ncompatibility</p>\n<p>Added detailed rival statistics and encounter information.\nAdded live APBS and ORBIT compatibility reporting.\nAdded reporting of the detected ORBIT installation path.\nAdded automatic data migration for existing Nemesis profiles.\nAdded persistent Messenger dialogue IDs for each rival.\nAdded storage of the original generated PMC nickname through the internal sourceBotName field.</p>\n<p>CHANGED:</p>\n<ul>\n<li>Creation, repeat-kill, escape, and defeat messages are now sent by the individual rival.</li>\n<li>Nemesis Network now functions as the rivalry database and command interface.</li>\n<li>Existing Nemeses are automatically assigned persistent Russian-style identities.</li>\n<li>Rival detail commands now check the current compatibility status instead of displaying outdated saved information.</li>\n<li>ORBIT detection now searches both the SPT server directory and its parent installation directory.</li>\n<li>Improved support for installations where the SPT server and BepInEx folders are stored in different locations.</li>\n<li>Nemeses remain standard USEC or BEAR PMCs so ORBIT and other installed AI frameworks retain control of their behavior.</li>\n<li>Updated the default configuration values: (Change this to your preference)\n– Spawn chance: 42%\n– Minimum raids between appearances: 0\n– Maximum bonus levels: 16\n– Levels gained per player kill: 2\n– Levels gained per escape: 1\n– Health bonus per rank: 8%\n– Matching-faction replacement: Enabled\n– Nemesis messages: Enabled\n– Escape messages: Enabled\n– APBS progression integration: Enabled\n– ORBIT PMC-role preservation: Enabled\n– Exact-level fallback without APBS: Enabled\n– Compatibility logging: Enabled</li>\n</ul>\n<p>FIXED:</p>\n<ul>\n<li>Fixed Nemesis Network not appearing as a usable Messenger contact.</li>\n<li>Fixed Nemesis Network commands not being routed to the chatbot.</li>\n<li>Fixed the first rivalry message failing to reveal the Nemesis’s identity.</li>\n<li>Fixed individual rival messages appearing under the Nemesis Network name and level.</li>\n<li>Fixed false-negative ORBIT detection when ORBIT was installed under a parent-level BepInEx/plugins folder.</li>\n<li>Fixed the rival details command displaying: “Behavior Authority: SPT/Installed AI mods” after ORBIT had already been detected.</li>\n<li>Rival details now display the current ORBIT behavior-authority status immediately.</li>\n<li>Fixed stale build files occasionally being included in newly compiled packages.</li>\n<li>Fixed build verification incorrectly reporting that the Nemesis chatbot class was missing.</li>\n<li>Improved startup diagnostics for Messenger registration and compatibility detection.</li>\n</ul>\n<p>PROFILE COMPATIBILITY:</p>\n<ul>\n<li>Existing Nemesis progression is preserved.</li>\n<li>Existing rival names and identities are migrated automatically.</li>\n<li>Existing faction, level, rank, and health progression are preserved.</li>\n<li>Existing encounter history and statistics are preserved.</li>\n<li>Existing Messenger identities and conversations are preserved.</li>\n<li>Existing active-rival status is preserved.</li>\n<li>A profile reset is not required.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2847/nemesis-protocol/1.0.1",
+      "content_length": 35386,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 879,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-27T22:56:00.000000Z",
+      "created_at": "2026-07-27T22:50:49.000000Z",
+      "updated_at": "2026-07-28T09:57:48.000000Z",
+      "dependencies": [
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23347,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZTU0YmRmMWMwNmQ2YzhiNjAwZWFlZDNlM2UwNjc0NzU6MTc4NTE5MzAyNg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://raw.githubusercontent.com/ForgeHQ-Mods/NemesisProtocol/main/download/ForgeHQ-NemesisProtocol-v1.0.1.zip"
+      }
+    },
+    {
+      "id": 14239,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>This is the initial version of this mod, changes will be made later if needed.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2847/nemesis-protocol/1.0.0",
+      "content_length": 33958,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 596,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-26T00:30:00.000000Z",
+      "created_at": "2026-07-26T16:37:41.000000Z",
+      "updated_at": "2026-07-28T09:56:20.000000Z",
+      "dependencies": [
+        {
+          "id": 2097,
+          "hub_id": 2782,
+          "guid": "com.acidphantasm.botplacementsystem",
+          "name": "ABPS - Acid's Bot Placement System",
+          "slug": "abps-acids-bot-placement-system",
+          "teaser": "Configurable spawn mod, allows waves / starting PMCs / boss chances / progressive boss chances. ABPS will always try to keep your raids full and different each time.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2782.png",
+          "downloads": 158164,
+          "favourites_count": 208,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2097/abps-acids-bot-placement-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-04-13T19:05:00.000000Z",
+          "created_at": "2025-04-13T19:05:25.000000Z",
+          "updated_at": "2026-07-28T09:14:31.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13770,
+              "hub_id": null,
+              "version": "2.0.19",
+              "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Configs are now forward compatible - ABPS no longer ships with a config.json</li>\n<li>The server will notify you if your config needs the new features added and will do so without impacting your existing settings</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Added load order to router</li>\n<li>Adjusted rebuild logic to event based actions instead of DI</li>\n<li>Adjusted config logic to event based actions instead of DI</li>\n<li>Adjusted initialization logic</li>\n<li>Adjusted namespace naming</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved caching racing loading and occasionally causing human players to be skipped</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.19",
+              "content_length": 903224,
+              "spt_version_constraint": "~4.0.3",
+              "downloads": 23219,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-13T16:51:00.000000Z",
+              "created_at": "2026-06-13T16:51:55.000000Z",
+              "updated_at": "2026-07-28T09:14:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23347,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0101ca3747e640b8bfc4becc6ff9d6080f03d6e9beaaafb47de970b66e8b5dd7/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://raw.githubusercontent.com/ForgeHQ-Mods/NemesisProtocol/main/NemesisProtocol-v1.0.zip"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 20,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:55.134Z",
+    "discoveredBy": "seed"
+  }
+}

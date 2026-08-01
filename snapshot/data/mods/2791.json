@@ -1,0 +1,1235 @@
+{
+  "type": "mod",
+  "id": 2791,
+  "hub_id": null,
+  "guid": "com.tylevo.tacticalservicescontrol",
+  "name": "Tylevo's Tactical Service Control",
+  "slug": "tylevos-tactical-service-control",
+  "teaser": "Adds a TSC phone and Fika-ready Fire Support options, including UAV recon, A-10 strikes, Black Hawk extraction, stash payments, and host-controlled pricing.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/6VdJ6nRTQO58JeKWjsdsaRJw1KFC9tCdnSZAu9Fk.png",
+  "downloads": 4612,
+  "favourites_count": 41,
+  "description": "<h1>Tylevo’s Tactical Services Control</h1>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><ul>\n<li><strong>A-10 Strafe</strong> and <strong>A-10 Double Pass</strong> with aircraft, GAU-8 audio, tracers, and impact effects.</li>\n<li><strong>UH-60 Black Hawk Extraction</strong> and <strong>Priority Exfil</strong>.</li>\n<li><strong>UAV Recon</strong> and <strong>Focused Sweep</strong> with a requester-only radar display.</li>\n<li>Purchase and deploy services from the animated <strong>TerraGroup TSC Uplink</strong>.</li>\n<li>Carried roubles, stash roubles, and configurable hybrid payment behavior.</li>\n<li>Persistent service authorizations with separate counts for every standard and upgraded option.</li>\n<li>Configurable prices, limits, payment rules, support settings, and Fika/headless behavior.</li>\n<li>Optional Project Fika support with host-authoritative requests and synchronized raid visuals.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">How To Use</div>\n<div class=\"tab-content\"><ol>\n<li>Bring the <strong>TerraGroup TSC Uplink</strong> into the raid.</li>\n<li>Press <code>U</code> to open the phone in purchase mode.</li>\n<li>Press <code>1</code>, <code>2</code>, or <code>3</code> to open Extraction, Fire Support, or UAV Recon.</li>\n<li>Inside a category, press <code>1</code> for the standard service or <code>2</code> for the upgraded option when available.</li>\n<li>Press <code>Enter</code> on the confirmation screen to purchase the selected authorization.</li>\n<li>When you are ready to use it, press <code>K</code> to open the phone in deployment mode.</li>\n<li>Press <code>1</code>-<code>6</code> to choose one of your owned services, then press <code>LMB</code> or <code>Enter</code> to deploy it.</li>\n</ol>\n<p>The deploy phone only lists authorizations you currently own. Closing it with <code>RMB</code>, <code>Backspace</code>, or <code>Escape</code> does not consume anything.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Targeting And Controls</div>\n<div class=\"tab-content\"><ul>\n<li><code>U</code>: Open the Uplink in purchase mode.</li>\n<li><code>K</code>: Open the Uplink in deployment mode.</li>\n<li><code>1</code>-<code>6</code>: Navigate phone menus and select owned services.</li>\n<li><code>Enter</code>: Confirm a purchase, deployment, or targeting step.</li>\n<li><code>LMB</code>: Deploy the selected authorization from the phone.</li>\n<li><code>Mouse 2</code> / middle mouse: Confirm A-10 and UH-60 targeting steps.</li>\n<li><code>RMB</code>: Return to the previous phone screen.</li>\n<li><code>Alt + RMB</code> or <code>Backspace</code>: Cancel active target designation.</li>\n<li><code>Escape</code>: Close or stow the phone.</li>\n</ul>\n<p>A-10 and UH-60 targeting uses the player camera. <strong>A rangefinder is not required.</strong> UAV Recon and Focused Sweep start immediately after deployment.</p>\n<p>The purchase, deploy, and spotter-confirm keys can all be changed in <code>F12</code>. Phone zoom, FOV, and horizontal/vertical framing can also be adjusted there.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>Local controls and phone presentation settings are available through the <code>F12</code> BepInEx configuration manager.</p>\n<p>Server and gameplay settings are managed from the TSC Dashboard:</p>\n<p><code>https://127.0.0.1:6969/tsc/admin</code></p>\n<p>The dashboard controls prices, payment sources, authorization limits, support behavior, and Fika/headless settings. It is localhost-only by default. Do not expose or port-forward it to the public internet.</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Fika</div>\n<div class=\"tab-content\"><p>Project Fika is optional. Solo SPT does not require it.</p>\n<p>For Fika, install the same TSC version on the human host, every client, and the dedicated headless host when one is used. The raid host’s settings are authoritative while connected.</p>\n<ul>\n<li>Human-hosted Fika raids retain the original Arys A-10 runtime and damage path.</li>\n<li>Fika clients render synchronized support visuals and do not execute authoritative A-10 damage.</li>\n<li>Dedicated-headless A-10 damage is separately gated and remains <strong>experimental</strong>. Results can vary by map and mod combination.</li>\n<li>UAV radar is displayed only to the player who requested it and is never created on the headless host.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><ol>\n<li>Install <strong>UnityToolkit v2.0.1</strong> and <strong>WTT CommonLib</strong>.</li>\n<li>Install Project Fika only when using multiplayer.</li>\n<li>Extract the TSC release ZIP directly into the SPT root.</li>\n<li>Start SPT normally.</li>\n</ol>\n<p>After extraction, these folders should exist:</p>\n<p><code>BepInEx/plugins/Tylevo.TacticalServicesControl/</code></p>\n<p><code>SPT/user/mods/Tylevo.TacticalServicesControl/</code></p>\n<p>Do not install SamSWAT Fire Support or Arys Reloaded alongside TSC. TSC is a derivative replacement and the packages conflict.</p></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility And Known Issues</div>\n<div class=\"tab-content\"><ul>\n<li>Built for <strong>SPT 4.0.13</strong>.</li>\n<li>Project Fika is supported but optional.</li>\n<li>Dedicated-headless Fika A-10 damage is experimental and is not claimed to match the original human-host ballistic path in every setup.</li>\n<li>Remote third-person phone animation sync is not currently included.</li>\n<li>The phone’s inventory inspect presentation may still need polish.</li>\n<li>Back up profiles before testing new payment configurations.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Credits</div>\n<div class=\"tab-content\"><p>TSC is derived from <strong>SamSWAT’s Fire Support</strong> and <strong>SamSWAT’s Fire Support - Arys Reloaded by Arys</strong>, with permission and attribution retained.</p>\n<p>Additional credit goes to Tyrian for radar work, danauraborealis for Manimal Hacker Mod material used under the MIT license, and the SPT and Project Fika teams for their platforms and APIs.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Tylevo/Tylevo.TacticalServicesControl\" rel=\"noreferrer noopener\">Source code and full notices</a></p>\n<p>Optional support: <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/tylevo\" rel=\"noreferrer noopener\">Ko-fi</a>. Tips are voluntary and do not unlock downloads, features, early access, or support priority.</p></div></div></div>\n<h2>Description</h2>\n<p>Bring battlefield support into the raid with the <strong>TerraGroup TSC Uplink</strong>. Purchase an authorization from the phone, save it until you need it, then call in an A-10 strike, Black Hawk extraction, or UAV sweep without leaving the raid.</p>\n<p>TSC is a full rework and expansion of SamSWAT’s Fire Support and Arys Reloaded. It replaces the old rangefinder-and-radial workflow with a purpose-built tactical phone, adds an in-raid economy, and supports both solo SPT and Project Fika.</p>\n<div class=\"youtube-lite\" data-video-id=\"dKZQxQjVVQQ\" data-embed-url=\"https://www.youtube-nocookie.com/embed/dKZQxQjVVQQ?autoplay=1\"><img src=\"https://i.ytimg.com/vi/dKZQxQjVVQQ/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/qgsfulX.png\" alt=\"TSC In Game\" /></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2791/tylevos-tactical-service-control",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI tools were used for development assistance, documentation drafts, troubleshooting, and some artwork. All code and release contents were reviewed, tested, and approved by Tylevo.</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2026-07-01T22:42:00.000000Z",
+  "created_at": "2026-07-01T21:24:45.000000Z",
+  "updated_at": "2026-07-28T09:37:35.000000Z",
+  "owner": {
+    "id": 116840,
+    "name": "tylevo",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9vzl7dJbyQcOH2yH673Ys9qrEaRmzQ7m0EotTn5p_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-06-22T22:41:56.000000Z",
+    "updated_at": "2026-08-01T16:41:12.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 200,
+      "name": "SamSWAT",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1b5bf15f78035540327b8515a5dfa83a4c339b32_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2020-08-15T19:53:17.000000Z",
+      "updated_at": "2026-07-10T04:49:20.000000Z"
+    },
+    {
+      "id": 13652,
+      "name": "Arys",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+      "created_at": "2022-01-18T19:35:58.000000Z",
+      "updated_at": "2026-08-01T15:51:41.000000Z"
+    },
+    {
+      "id": 25468,
+      "name": "Tyrian",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/97cfb8a6ce199d08cc45f98d874743a365812ba3_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-01-14T18:10:08.000000Z",
+      "updated_at": "2026-07-10T04:50:20.000000Z"
+    }
+  ],
+  "license": {
+    "id": 4,
+    "hub_id": 6,
+    "name": "Creative Commons BY-NC 3.0",
+    "link": "http://creativecommons.org/licenses/by-nc/3.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Tylevo/Tylevo.TacticalServicesControl",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14067,
+      "hub_id": null,
+      "version": "1.0.8",
+      "description": "<h1>Tylevo’s Tactical Services Control v1.0.8 Public Beta</h1>\n<p>Install-ready beta package for SPT 4.0.13. Extract it into the SPT root while the game and server are closed.</p>\n<p>This update follows the published v1.0.7 build and contains the changes below.</p>\n<h2>Highlights</h2>\n<ul>\n<li>Support deployment now happens from the TSC Uplink phone. Buy an authorization, press the configurable deploy key, select the exact service you purchased, and designate the target without carrying the rangefinder.</li>\n<li>The phone can automatically zoom and reframe itself while raised. Its default zoom FOV is now 45 for a slightly wider view; FOV and horizontal/vertical framing remain configurable in F12 and restore cleanly when the phone is stowed. Existing custom FOV values are preserved.</li>\n<li>Purchase, deploy, and spotter-confirm keybinds are now visible in F12.</li>\n<li>A-10 single and double passes stay separate from purchase through deployment, so selecting one no longer spends or launches the other.</li>\n</ul>\n<h2>Controls And Workflow</h2>\n<ul>\n<li><code>U</code> (configurable in F12 as <strong>Open uplink key</strong>) opens the TSC Uplink in purchase mode.</li>\n<li>On the purchase phone, press <code>1</code>, <code>2</code>, or <code>3</code> to open Extraction, Fire Support, or UAV Recon. Inside a category, <code>1</code> selects the standard service and <code>2</code> selects the upgraded variant when enabled. Press Enter on the confirmation screen to authorize payment. RMB returns to the previous screen; Escape closes the phone.</li>\n<li><code>K</code> (configurable in F12 as <strong>Open deploy key</strong>) opens the Uplink in deployment mode after you own an authorization. Only services you currently own are listed. Press <code>1</code>-<code>6</code> to select one, then LMB or Enter to deploy it. RMB, Backspace, or Escape stows the phone without spending anything.</li>\n<li>A-10 and UH-60 use camera-based target designation after deployment; the rangefinder is no longer required. Press <code>Mouse 2</code>/middle mouse (configurable in F12 as <strong>Spotter confirm key</strong>) or Enter to confirm each targeting step. Alt+RMB or Backspace cancels targeting.</li>\n<li>UAV Recon and Focused Sweep start directly after deployment and display the radar overlay only for the requesting player.</li>\n</ul>\n<h2>Payment And Authorizations</h2>\n<ul>\n<li>Fixed authorizations being duplicated, not consumed, or restored with the wrong service type.</li>\n<li>Stash purchases are serialized and transactional. TSC restores the inventory if profile saving or authorization persistence fails, preventing lost roubles without a matching authorization.</li>\n<li><code>PreferStashThenCarried</code> now falls back to carried roubles when stash payment is unavailable.</li>\n<li>The purchase endpoint accepts plain, zlib, and deflate request bodies and returns a controlled failure instead of crashing on malformed or unexpected input.</li>\n<li>The authorization ledger now uses atomic saves, backups, corrupt-file preservation, and mutation rollback.</li>\n</ul>\n<h2>Fika And A-10</h2>\n<ul>\n<li>Exactly one raid-world authority executes an A-10 strike. Single-player and human Fika hosts retain the original Arys runtime/ballistic behavior; clients are visual-only.</li>\n<li>Every support request carries a unique ID. In-flight and completed request gates prevent duplicate network packets from firing projectiles or consuming authorizations twice.</li>\n<li>Fika clients wait for the host/headless acceptance broadcast before starting A-10 visuals.</li>\n<li>Tracers and impact effects are aligned to the visible aircraft firing pass and keyed to the request, seed, and pass.</li>\n<li>Dedicated-headless A-10 damage is available through the experimental headless executor and Fika damage packets. This remains intentionally gated and experimental.</li>\n<li>UAV radar overlays are requester-local and are not created on a dedicated headless host.</li>\n<li>Fika integration startup/shutdown and duplicate-request retention are bounded and safe across repeated raid initialization.</li>\n</ul>\n<h2>Stability And Compatibility</h2>\n<ul>\n<li>Fixed concurrent AssetBundle loading, including the UAV radar HUD double-load race.</li>\n<li>Added compatibility with Manimal’s HackerMod phone assets by reusing its complete phone bundle set when present.</li>\n<li>Fixed null-reference teardown paths in <code>SimpleSpinBlur</code>, the fire-support pool, UI/controller cleanup, and phone camera restoration.</li>\n<li>Hardened UH-60 extraction trigger cleanup and Fika extraction routing to reduce stuck black-screen exits.</li>\n<li>Restored the loud A-10 strike flyover while keeping UAV loiter audio quiet and non-looping.</li>\n</ul>\n<h2>Updating</h2>\n<p>Extract over the existing installation. Back up <code>SPT/user/mods/Tylevo.TacticalServicesControl/config/tsc-config.json</code> first if it contains custom dashboard settings.</p>\n<p>Required dependencies are not bundled: UnityToolkit v2.0.1, WTT Client Common Lib, and WTT Server Common Lib. Project Fika is optional and only required for multiplayer.</p>\n<h2>Known Issues</h2>\n<ul>\n<li>Remote third-person phone animation sync is not included.</li>\n<li>Phone inventory inspect presentation may still need polish.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.8",
+      "content_length": 41236560,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1825,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-13T04:10:08.000000Z",
+      "created_at": "2026-07-13T04:09:59.000000Z",
+      "updated_at": "2026-07-28T09:37:35.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/eec18cbbd41bb4fc96324f677d51726abccab7d1778968dd704a8fe9be30b6e9?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/dcd89e76-bd74-4f81-a3ea-7613f1028c8f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A57Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.8-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A44Z&ske=2026-08-01T21%3A14%3A57Z&sks=b&skv=2018-11-09&sig=86W6%2Bl2Mfldbqpn7Phxkfv796o4Co7qKYvFnfzSBsXM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bL3_jboeCCPIYUl7_-tLbvu90e1PnETs8TSF5H69JoE&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.8-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14012,
+      "hub_id": null,
+      "version": "1.0.7",
+      "description": "<h1>Tylevo’s Tactical Services Control v1.0.7</h1>\n<p>A stability-focused update for dashboard, Fika/headless/Radmin setups, stash payments, phone controls, and release packaging.</p>\n<h2>Highlights</h2>\n<ul>\n<li>Fixed Radmin/Fika stash-backed purchases through the active SPT backend.</li>\n<li>Fixed compressed <code>/tsc/purchase</code> request handling.</li>\n<li>Fixed CarriedRoubles so it works locally without dashboard/config routing.</li>\n<li>Fixed stale dashboard payment settings not applying quickly enough.</li>\n<li>Fixed Fika UH-60 / Priority Exfil broadcasts so client-called extracts are shared to all clients.</li>\n<li>Restored quick-use/manual phone restore safety to prevent stuck hands.</li>\n<li>Reduced config polling and repeated Fika settings log spam.</li>\n</ul>\n<h2>Important Fika / Radmin Notes</h2>\n<p>Install the same TSC version on the host/headless server and every Fika client.</p>\n<p>Do not point <code>Server Config URL</code> at another player’s machine for purchases. Purchases now use the active game/SPT backend path automatically.</p>\n<p>The host/headless dashboard controls raid settings while connected. Client-local dashboard changes do not override host settings during a joined raid.</p>\n<p>Dashboard URLs:</p>\n<ul>\n<li>Local: <code>https://127.0.0.1:6969/tsc/admin</code></li>\n<li>Trusted LAN/Radmin/VPN: <code>https://&lt;host-ip&gt;:6969/tsc/admin</code></li>\n</ul>\n<p>Do not port-forward the dashboard publicly.</p>\n<h2>Clean Install Note</h2>\n<p>Normal users can extract over an existing install.</p>\n<p>If you tested pre-release builds, delete these first:</p>\n<pre><code>BepInEx/plugins/Tylevo.TacticalServicesControl/\nSPT/user/mods/Tylevo.TacticalServicesControl/\n</code></pre>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.7",
+      "content_length": 42046590,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 789,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-06T21:52:00.000000Z",
+      "created_at": "2026-07-06T21:52:05.000000Z",
+      "updated_at": "2026-07-28T09:26:51.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/42906531267dd46a6b56e99cd354efe529cad9119c0366d1cc3f448d06c45839?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/ce1fd0f2-4549-49d0-9a2b-6ccb611585ac?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A27%3A07Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.7-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A19Z&ske=2026-08-01T21%3A27%3A07Z&sks=b&skv=2018-11-09&sig=t9WIWw%2FL6YI7NWz6nUxO%2BbY5nSttrf32fUvPb2WNxdM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bL3_jboeCCPIYUl7_-tLbvu90e1PnETs8TSF5H69JoE&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.7-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13988,
+      "hub_id": null,
+      "version": "1.0.6",
+      "description": "<p>Install-ready beta package. Extract into the SPT root. Game and server must be closed while extracting.</p>\n<h2>Fixed</h2>\n<ul>\n<li><strong>Fika stash purchases should be fixed.(not tested fully but by word of mouth) Buying support with stash roubles now works for every player in a Fika session with no extra setup. TSC routes its server requests through the game’s own connection, so it always reaches the correct server and charges the right player no matter how the session is hosted (direct, LAN, or VPN). The Server Config URL is no longer needed and can be left at its default.</strong></li>\n</ul>\n<h2>Updating</h2>\n<p>Extract over your existing install; no uninstall needed. If you customized the dashboard config, back up SPT/user/mods/Tylevo.TacticalServicesControl/config/tsc-config.json first and restore it after.</p>\n<p>Required dependencies, not bundled: UnityToolkit v2.0.1, WTT Client Common Lib, WTT Server Common Lib. Project Fika is optional and only needed for multiplayer.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.6",
+      "content_length": 42847104,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 594,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-04T15:59:02.000000Z",
+      "created_at": "2026-07-04T15:58:43.000000Z",
+      "updated_at": "2026-07-28T09:25:34.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/60c3469367d1241c07c9bad58723ec66594e1a49eaa03a30726630af9c0549e9?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/401b6357-2b25-4456-a173-a23701cb8be3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A38Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.6-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A00Z&ske=2026-08-01T21%3A10%3A38Z&sks=b&skv=2018-11-09&sig=ha%2Fb%2BTpwrOx5ceVNub%2Bx4LmIw5t9U0asJ0VfE%2F%2BoAMA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bL3_jboeCCPIYUl7_-tLbvu90e1PnETs8TSF5H69JoE&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.6-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13985,
+      "hub_id": null,
+      "version": "1.0.5",
+      "description": "<p>Install-ready beta package. Extract into the SPT root. Game and server must be closed while extracting.</p>\n<h2>Fixed</h2>\n<ul>\n<li><strong>Fika clients can now use stash purchases.</strong> A host running default config broadcast its own loopback address (127.0.0.1) to every client, and that overrode each client’s configured host address - so a client’s purchase went to its own machine and failed with “Check the TSC server and dashboard connection.” A loopback host broadcast is now ignored, so a client’s own Server Config URL (pointed at the host’s IP) takes effect. Zero-config alternative: the host can set its Server Config URL to its LAN IP, or use the CarriedRoubles payment source (fully client-side, no server needed).</li>\n<li><strong>UH-60 extraction as a Fika host no longer strands the lobby.</strong> A host extracting first used to kill the hosted session while other players kept playing into a dead lobby. Extraction now routes through Fika’s own extract flow (host goes to spectate, the session stays alive). Solo and non-Fika installs are unchanged.</li>\n</ul>\n<h2>Changed</h2>\n<ul>\n<li><strong>Phone navigation simplified.</strong> Number keys (1-3) now open a category directly instead of only highlighting it. RMB steps back one screen, and Escape closes the phone. Enter still only confirms on the final screen, so stray input cannot spend money. (Note: RMB used to cancel the whole session - it now goes back a screen; Escape is the immediate close.)</li>\n<li><strong>The TerraGroup TSC Uplink now looks like special gear</strong> - orange grid background and the orange SPEC tag, matching the rangefinder, so it sorts and reads as special-slot equipment.</li>\n</ul>\n<h2>Updating</h2>\n<p>Extract over your existing install; no uninstall needed. If you customized the dashboard config, back up SPT/user/mods/Tylevo.TacticalServicesControl/config/tsc-config.json first and restore it after.</p>\n<p>Required dependencies, not bundled: UnityToolkit v2.0.1, WTT Client Common Lib, WTT Server Common Lib. Project Fika is optional and only needed for multiplayer.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.5",
+      "content_length": 42848360,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 272,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-04T05:00:48.000000Z",
+      "created_at": "2026-07-04T05:00:39.000000Z",
+      "updated_at": "2026-07-28T09:25:29.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/ac84b43a07fe2e0b97711bd715b35e123773ee896650bca638ac6631c23231b5?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/45e0b74d-c397-419f-86db-636bf4804419?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A39Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.5-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A49Z&ske=2026-08-01T21%3A21%3A39Z&sks=b&skv=2018-11-09&sig=NXs%2B6rxI9qStPwykyMSliTJK2f9YOuT6FG3LamaFMAc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MiwibmJmIjoxNzg1NjE2MDUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NR75-iASRDzsQxD7-ooVk4WMq3rvONiEyo1CEvJfR9s&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.5-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13958,
+      "hub_id": null,
+      "version": "1.0.4",
+      "description": "<p>Install-ready beta package. Extract into the SPT root. Game and server must be closed while extracting.</p>\n<h2>Fixed</h2>\n<ul>\n<li>\n<p><strong>Carried-rouble purchases no longer lose your money.</strong> Authorizations bought with carried roubles used to vanish within seconds of purchase the service showed AUTH REQ again unless you deployed it almost immediately, and the roubles were spent either way. These purchases now persist for the whole raid and following raids and can be deployed whenever you are ready.</p>\n</li>\n<li>\n<p><strong>Fika: non-host players now see A-10 tracers reliably.</strong> Playback was scheduled against the host’s clock; depending on which machine had been running longer, tracers appeared all at once or never. Clients now time playback from packet arrival.</p>\n</li>\n<li>\n<p><strong>Fika: non-host players now see the GAU-8 impact explosions.</strong> Detonation effects only existed on the host, which runs the ballistics. Clients now emit the same explosion effect at each round’s impact point, so the strafe looks the same for everyone.</p>\n</li>\n<li>\n<p><strong>Potentially fixed a freeze after using the phone</strong> where loot pickups locked movement and camera (weapon still worked) until a stance change. Opening the phone from its special slot and cancelling with the hotkey ran two hand-restore flows at once; quick-use sessions are now restored by the game alone. The race was intermittent, so please report if it still occurs on this version.</p>\n</li>\n<li>\n<p><strong>Carried-rouble payment now counts money in your secure container.</strong> The previous scan excluded it, so purchases failed with Carried Roubles: 0 despite the cash being on your character.</p>\n</li>\n<li>\n<p><strong>Stash balance now syncs outside raids too.</strong> The phone previously showed carried-only balances in menus, the hideout, and the first seconds of a raid because config requests carried no profile id; stash-based payment sources now display the correct available total everywhere.</p>\n</li>\n</ul>\n<h2>Changed</h2>\n<ul>\n<li>\n<p><strong>Rebalanced default prices for new installs:</strong> Extraction 300k (was 50k), Priority Exfil 450k (was 150k), UAV 125k (was 100k), Focused Sweep 90k (was 75k). A-10 Strafe (250k) and Double Pass (450k) unchanged. Max stored authorizations per service is now 2 (was 3). Existing configs keep their saved values.</p>\n</li>\n<li>\n<p><strong>TSC now declares a BepInEx incompatibility with SamSWAT’s Fire Support: Arys Reloaded</strong> (requested by Arys). TSC is its derivative replacement and the two cannot run together; TSC is skipped with a clear log message if both are installed. HeliCrash: Arys Reloaded remains fully compatible.</p>\n</li>\n<li>\n<p><strong>Dashboard is easier to find.</strong> Opening /tsc in a browser now redirects to the dashboard at /tsc/admin, and a missing dashboard install produces an error that names the exact folder the server expects instead of a bare not-found message.</p>\n</li>\n</ul>\n<h2>Updating</h2>\n<p>Extract over your existing install; no uninstall needed. If you customized the TSC dashboard config, back up SPT/user/mods/Tylevo.TacticalServicesControl/config/tsc-config.json first and restore it after.</p>\n<p>Required dependencies, not bundled: UnityToolkit v2.0.1, WTT Client Common Lib, WTT Server Common Lib. Project Fika is optional and only needed for multiplayer.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.4",
+      "content_length": 42847588,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 734,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T11:15:41.000000Z",
+      "created_at": "2026-07-02T11:15:33.000000Z",
+      "updated_at": "2026-07-28T09:24:35.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/44b303edd1a731f7130df6aab8d737cf2be88f6eddac50e8ee6de9774dd77c59?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/ca35f3d3-6058-4ad7-881e-c3b7a2e7900b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A33Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.4-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A02Z&ske=2026-08-01T21%3A08%3A33Z&sks=b&skv=2018-11-09&sig=TDLyw4aV4BcYIbAuEzdiTdU0rExhozuwoMv57578%2F7U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MiwibmJmIjoxNzg1NjE2MDUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NR75-iASRDzsQxD7-ooVk4WMq3rvONiEyo1CEvJfR9s&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.4-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13956,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<p>Compatibility fix: mod conflicts breaking the phone and displaying an error in inspect mode or crashing game when loading in.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.3",
+      "content_length": 42846035,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 132,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T06:39:00.000000Z",
+      "created_at": "2026-07-02T06:39:12.000000Z",
+      "updated_at": "2026-07-28T09:24:19.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f6196d9a6ce448d48a24fc3519d15a06adef1c0323e7a872502bf2831733eb0e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/f9f4ec47-bf03-45ca-9b80-41f878cc3567?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A31Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.3-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A40Z&ske=2026-08-01T21%3A18%3A31Z&sks=b&skv=2018-11-09&sig=1VL9BXYASWmCqnndKIm2aWD1XWbjpCqfdxSaj90zAHk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MiwibmJmIjoxNzg1NjE2MDUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NR75-iASRDzsQxD7-ooVk4WMq3rvONiEyo1CEvJfR9s&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.3-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13955,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>Install-ready beta package. Extract into the SPT root.</p>\n<h2>Critical fix</h2>\n<ul>\n<li><strong>Fixed infinite loading on installs without Fika</strong> (bug introduced in v1.0.1). Fika-typed networking code now lives in a separate <code>Tylevo.TacticalServicesControl.Fika.Interop.dll</code> that is only loaded when Fika is actually installed, so other mods’ assembly scans no longer crash on single-player installs.</li>\n<li>Fika remains a soft dependency: no more missing <code>com.fika.core</code> error on single-player installs, and one package works for both Fika and non-Fika users.</li>\n</ul>\n<p>Skipped v1.0.1, please update, or can hang the game on loading if you do not have Fika installed.</p>\n<p>Archive root contains:</p>\n<ul>\n<li>BepInEx/</li>\n<li>SPT/</li>\n<li>README.md</li>\n</ul>\n<p>Required dependencies, not bundled:</p>\n<ul>\n<li>UnityToolkit v2.0.1</li>\n<li>WTT Client Common Lib</li>\n<li>WTT Server Common Lib</li>\n<li>Project Fika, optional and only for multiplayer/Fika use</li>\n</ul>\n<p>TSC references WTT Common Lib from the installed dependency DLLs. WTT Common Lib is not redistributed inside this package.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.2",
+      "content_length": 41407795,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 183,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T00:11:00.000000Z",
+      "created_at": "2026-07-02T00:11:02.000000Z",
+      "updated_at": "2026-07-28T09:24:14.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/92cc908b834ea1920d8f9cff7de850d76f29bc8f1209d17362b973e43f2aad0b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/7df788ff-662b-4b37-88fd-2b906c202963?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A54Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.2-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A26Z&ske=2026-08-01T21%3A04%3A54Z&sks=b&skv=2018-11-09&sig=kjYipiGEyMJNUs7yA%2FmQ5zCAk62GPrBct1XZvb%2Fej9Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1OCwibmJmIjoxNzg1NjE2MDU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jkgIzYzg1CDTslIGWp6d66VSn8nw4PGhMoiwSPMMsF4&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.2-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13954,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h2>Description</h2>\n<p>A BepInEx mod that reworks SamSWAT’s Fire Support / Arys Reloaded into a TerraGroup-style tactical support system for SPT and Fika.</p>\n<p>This mod adds a <strong>TerraGroup TSC Uplink</strong> phone that lets you buy support authorizations in raid, then deploy them later from the YY gesture menu.</p>\n<p>Currently available support options:</p>\n<ul>\n<li>A-10 autocannon strafe</li>\n<li>A-10 Double Pass</li>\n<li>UH-60 Black Hawk extraction</li>\n<li>Priority Exfil</li>\n<li>UAV Recon</li>\n<li>Focused Sweep</li>\n</ul>\n<h2>How To Install</h2>\n<ol>\n<li>Install the required dependencies:\n<ul>\n<li>UnityToolkit v2.0.1</li>\n<li>WTT Client Common Lib</li>\n<li>WTT Server Common Lib</li>\n<li>Project Fika, only for multiplayer/Fika use</li>\n</ul>\n</li>\n<li>Download the TSC release archive.</li>\n<li>Extract it directly into your SPT root folder.</li>\n<li>Confirm these folders exist:\n<ul>\n<li><code>BepInEx/plugins/Tylevo.TacticalServicesControl/</code></li>\n<li><code>SPT/user/mods/Tylevo.TacticalServicesControl/</code></li>\n</ul>\n</li>\n<li>Do not install the old SamSWAT Fire Support or Arys Reloaded mod alongside TSC.</li>\n</ol>\n<h2>Planned Updates</h2>\n<ul>\n<li>Mortar/artillery support.</li>\n<li>Phone-as-designator/rangefinder replacement.</li>\n<li>Remote third-person phone animation sync.</li>\n<li>More phone model/inspect polish.</li>\n</ul>\n<h2>Credits</h2>\n<ul>\n<li>SamSWAT: original Fire Support concept and implementation.</li>\n<li>Arys: SamSWAT’s Fire Support - Arys Reloaded / SPT 4.x basis.</li>\n<li>danauraborealis: Manimal Hacker Mod material under MIT license.</li>\n<li>Accurate Circular Radar / Tyrian Radar Standalone: radar HUD material, if applicable.</li>\n<li>SPT and Project Fika: compatibility targets.</li>\n</ul>\n<h2>Disclaimer</h2>\n<p>This mod is not affiliated with Battlestate Games, SPT, Project Fika, SamSWAT, Arys, or the other credited authors.</p>\n<p>Tylevo’s Tactical Services Control is released under Creative Commons Attribution-NonCommercial 4.0 International, matching the upstream Arys Reloaded source license.</p>\n<p>The dashboard is localhost-only by default. Do not port-forward it.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2791/tylevos-tactical-service-control/1.0.0",
+      "content_length": 42034263,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 83,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-01T22:42:51.000000Z",
+      "created_at": "2026-07-01T21:47:21.000000Z",
+      "updated_at": "2026-07-28T09:23:44.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255748,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/24594c336fa2e0c2c720513afd3701d9a25e8c2ceba4277ef120a62df4e7fa2a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1285621543/cd8ec554-79d7-4eb8-82db-db02e87aac02?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A48Z&rscd=attachment%3B+filename%3DTylevo.TacticalServicesControl-v1.0.0-SPT4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A33Z&ske=2026-08-01T21%3A03%3A48Z&sks=b&skv=2018-11-09&sig=q%2FXjKriQKXO%2Br%2BBh0H8OsGhIlfEQaEz40mlSqMtmva4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1OCwibmJmIjoxNzg1NjE2MDU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jkgIzYzg1CDTslIGWp6d66VSn8nw4PGhMoiwSPMMsF4&response-content-disposition=attachment%3B%20filename%3DTylevo.TacticalServicesControl-v1.0.0-SPT4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 43,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:08.025Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 1867,
+  "hub_id": 2521,
+  "guid": "com.rootsnine.qcadjustments",
+  "name": "QCAdjustments",
+  "slug": "qcadjustments",
+  "teaser": "Customize quest requirements with adjustable item amounts and new Gunsmith options. Add kill objectives, skip weapon turn-ins, and tailor tasks to your gameplay style.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2521.png",
+  "downloads": 4990,
+  "favourites_count": 4,
+  "description": "<p>QCAdjustments</p>\n<p>Tired of grinding through Tarkov’s quests? <strong>QCAdjustments</strong> lets you customize quest conditions for a smoother or more challenging experience. Adjust conditions for CounterCreator, FindItem, HandoverItem, LeaveItemAtLocation, and SellItemToTrader quests. The mod also offers tweaks for the <strong>Gunsmith</strong> quest line, allowing you to add kill requirements or replace the weapon turn-in condition with a kill task.</p>\n<p>This mod doesn’t remove quest conditions entirely—the minimum value is 1—so you can fine-tune difficulty without breaking the game’s progression.</p>\n<h3>Compatibility</h3>\n<ul>\n<li>Works with existing profiles, but creating a backup beforehand is recommended.</li>\n<li>Works with quests added and/or adjusted using <strong>Virtual’s Custom Quest Loader</strong> (~3.11)</li>\n<li><strong>Gunsmith Tweaks</strong> is confirmed compatible. Other Gunsmith-related mods are untested.</li>\n</ul>\n<h3>Installation</h3>\n<ol>\n<li>Download the latest mod release.</li>\n<li>Extract the contents of the archive into your SPT directory or manually drag the user folder into the SPT directory.</li>\n<li>Edit the config found in <code>SPT/user/mods/qcadjustments/config.json</code> to your preferences.</li>\n</ol>\n<h3>Updating</h3>\n<ul>\n<li>See release notes for version specific updating instructions.</li>\n</ul>\n<h3>Issues</h3>\n<p>While extensively tested, bugs may still occur. If you encounter any issues, please leave a comment or <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/issues\" rel=\"noreferrer noopener\">open an issue on GitHub.</a></p>\n<h3>Configuration</h3>\n<p>All values in the config file must be greater than 0. If set to 0, the defaults will be used.</p>\n<p>Kill Targets</p>\n<p>This section allows you to change the targets for kill quests. It will not target any quests involving Rogues, Raiders, or Scav Bosses. The default values will retain vanilla kill targets on quests. Note: This will <em><strong>NOT</strong></em> change the task text. If you change all Bear quests to Any, the task will still say Bear PMCs, but any kill will count. As an aside that has made testing this very difficult, so please let me know of any issues you find and I will do my best to solve them as quickly as possible.</p>\n<ul>\n<li><strong>any</strong> (Default: Any)</li>\n<li><strong>any_pmc</strong> (Default: AnyPmc)</li>\n<li><strong>bear</strong> (Default: Bear)</li>\n<li><strong>scavs</strong> (Default: Savage)</li>\n<li><strong>usec</strong> (Default: Usec)</li>\n</ul>\n<h4>Task Multipliers</h4>\n<p>Adjust the total amounts for quest conditions. Lower values mean easier tasks.</p>\n<ul>\n<li><strong>counter</strong> (Default: 0.5)<br />\nProgress tracked by actions (e.g., kills, shots on specific body parts, etc.).</li>\n<li><strong>find_handover</strong> (Default: 0.5)<br />\nTasks requiring you to find items in raid and hand them over.</li>\n<li><strong>leave_at</strong> (Default: 0.5)<br />\nTasks where you must stash an item at a specific location.</li>\n<li><strong>sell</strong> (Default: 0.5)<br />\nTasks that require selling items to traders.</li>\n<li><strong>timer</strong> (Default: 0.5)<br />\nThe time spent placing or stashing an item at a location.</li>\n<li><strong>xp</strong> (Default: 1.0)<br />\nThe experience rewarded by quests.</li>\n</ul>\n<h4>Gunsmith Adjustments</h4>\n<p>Customize the Gunsmith quest line with new conditions:</p>\n<ul>\n<li><strong>enabled</strong> (Default: false)<br />\nEnables Gunsmith adjustments, adding a kill requirement.</li>\n<li><strong>replace_task</strong> (Default: false)<br />\nReplaces the handover condition with a kill requirement.</li>\n<li><strong>kills</strong> (Default: 10)<br />\nNumber of kills required. This value is not affected by Task Multipliers.</li>\n</ul>\n<h4>Quest Blacklist(Optional)</h4>\n<ul>\n<li><strong>quest_blacklist</strong> (Default: [])<br />\nA list of quest names to skip when applying changes. Example: [“Regulated Materials”, “Gunsmith - Part 6”]</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1867/qcadjustments",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 7,
+  "published_at": "2024-12-03T21:40:00.000000Z",
+  "created_at": "2024-12-03T21:40:29.000000Z",
+  "updated_at": "2026-07-28T06:03:54.000000Z",
+  "owner": {
+    "id": 68245,
+    "name": "RootsNine",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/3704bcc09c0f48794f8658db7548ebafb01223ea_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-11-26T16:12:18.000000Z",
+    "updated_at": "2026-07-20T23:15:30.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 7,
+    "hub_id": 24,
+    "title": "Quests",
+    "slug": "quests",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ScidaJ/QCAdjustments",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 11840,
+      "hub_id": null,
+      "version": "4.0.0",
+      "description": "<p><strong>Full Changelog</strong>: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/compare/3.0.1...4.0.0\" rel=\"noreferrer noopener\">https://github.com/ScidaJ/QCAdjustments/compare/3.0.1...4.0.0</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/commit/9b7913bd297dd388a936ff3c89d2bddf501649b2\" rel=\"noreferrer noopener\">4.0. Complete rewite in C# for SPT4.0. Config.json is almost exactly …</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/commit/2de2f6fd7015c0d5e274dcb9c5f58c75341b9c00\" rel=\"noreferrer noopener\">Compliance with coding standards for SPT.</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/commit/ebe2e1c9a89f2788889587515108a9552364ed7e\" rel=\"noreferrer noopener\">kill_target changes working.</a></p>\n<h2>Updating from an older version?</h2>\n<p>Simply download and unzip into the root directory of your SPT installation. All installations come with a <code>Config.json</code> that could be overwritten on future updates! It is recommended to backup your config before updating.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1867/qcadjustments/4.0.0",
+      "content_length": 30767,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1719,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-14T18:28:00.000000Z",
+      "created_at": "2025-10-14T18:28:55.000000Z",
+      "updated_at": "2026-07-28T06:03:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f7f59a0aa76e70c629aef38645fbf2c4802872f1b9e81f5c872667563f77fff1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/898124571/05a08a00-1a74-4692-b7cc-4aea2d0d60eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A52%3A29Z&rscd=attachment%3B+filename%3DQCAdjustments_4.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A34Z&ske=2026-08-01T20%3A52%3A29Z&sks=b&skv=2018-11-09&sig=E053M3hPuPczdWJ3a1pQPJ2aSUFPw9hmeK6P9qruYw4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc5MSwibmJmIjoxNzg1NjE1NDkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugiUqcoPViDBW05LYL8mNn-QMPpJtrIsXWDyqf9N6_0&response-content-disposition=attachment%3B%20filename%3DQCAdjustments_4.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 657,
+      "hub_id": 14171,
+      "version": "3.0.1",
+      "description": "<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/compare/3.0.0...3.0.1\" rel=\"noreferrer noopener\"><strong>Full Changelog</strong></a></p>\n<p><strong>Bug Fixes</strong></p>\n<ul>\n<li>Fixed issue with unexpected VCQ JSON differences from Vanilla. May be present on other quest types.</li>\n</ul>\n<p>Updating from an older version?</p>\n<p>Unzip the new release into your SPT directory and override existing files.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1867/qcadjustments/3.0.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 902,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-05-05T16:20:00.000000Z",
+      "created_at": "2025-05-05T16:20:51.000000Z",
+      "updated_at": "2026-05-14T01:53:42.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b355f65b53cb2004e17e2c25a1a303c7f51c84ccdd953c2af225deb6531bde3e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/898124571/5a742291-efca-4ab4-9ec9-26829198a764?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A34Z&rscd=attachment%3B+filename%3Drootsnine-qcadjustments_3.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A18Z&ske=2026-08-01T21%3A04%3A34Z&sks=b&skv=2018-11-09&sig=FGavqtd8bEQgoF42Tj9OdQaVr%2BYH1H7QgwN1taMOPww%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc5MSwibmJmIjoxNzg1NjE1NDkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugiUqcoPViDBW05LYL8mNn-QMPpJtrIsXWDyqf9N6_0&response-content-disposition=attachment%3B%20filename%3Drootsnine-qcadjustments_3.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1192,
+      "hub_id": 13584,
+      "version": "2.4.0",
+      "description": "<p><strong>What’s Changed</strong></p>\n<p><strong>:Crab: :Crab: 3.11 :Crab: :Crab:</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ScidaJ/QCAdjustments/compare/2.3.0...2.4.0\" rel=\"noreferrer noopener\"><strong>Full Changelog</strong></a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1867/qcadjustments/2.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 254,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T23:32:24.000000Z",
+      "created_at": "2025-03-15T23:32:24.000000Z",
+      "updated_at": "2026-05-14T02:07:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b355f65b53cb2004e17e2c25a1a303c7f51c84ccdd953c2af225deb6531bde3e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/898124571/5fe0b02f-4af2-445c-8c05-5be2400eb9b3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A52%3A04Z&rscd=attachment%3B+filename%3Drootsnine-qcadjustments_2.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A11Z&ske=2026-08-01T20%3A52%3A04Z&sks=b&skv=2018-11-09&sig=PjpwfJizMC2IC%2BDeXXu8ssGZiGdvY2UmNooWqXnn6gc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc5MSwibmJmIjoxNzg1NjE1NDkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugiUqcoPViDBW05LYL8mNn-QMPpJtrIsXWDyqf9N6_0&response-content-disposition=attachment%3B%20filename%3Drootsnine-qcadjustments_2.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 5,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:54.593Z",
+    "discoveredBy": "seed"
+  }
+}

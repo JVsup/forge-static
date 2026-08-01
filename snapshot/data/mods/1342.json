@@ -1,0 +1,966 @@
+{
+  "type": "mod",
+  "id": 1342,
+  "hub_id": 1860,
+  "guid": "com.tyfon.uifixes",
+  "name": "UI Fixes",
+  "slug": "ui-fixes",
+  "teaser": "Quality of life improvements and fixes for SPT",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1860.png",
+  "downloads": 402502,
+  "favourites_count": 262,
+  "description": "<p>UI Fixes</p>\n<p>Tarkov’s interface is full of annoyances, but it doesn’t have to be. This mod aims to fix at least some of them.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p>✨ Recently added</p>\n<h3>Added features</h3>\n<p>New UI features enabled by this mod</p>\n<ul>\n<li>Multiselect - select multiple items at once with shift-click or dragging a selection box\n<ul>\n<li>Move items around as a group, drop them into containers, place them in grids</li>\n<li>Ctrl-click and Alt-click to quick move or equip them all. Compatible with Quick Move to Containers!</li>\n<li>Context menu to insure, equip, unequip, load/unload ammo, install/uninstall, pin, and lock all at once</li>\n</ul>\n</li>\n<li>Swap items in place - drag one item over another to swap their locations!</li>\n<li>Flea market history - press the new back button to go back to the previous search</li>\n<li>Linked flea search from empty slots - find mods that fit that specific slot</li>\n<li>Keybinds for most context menu actions</li>\n<li>Toggle/Hold input - tap a key for “Press” mechanics, hold the key for “Continuous” mechanics\n<ul>\n<li>Can be set for aiming, sprinting, tactical devices, headlights, and goggles/faceshields, and ✨ interact/place quest item</li>\n</ul>\n</li>\n<li>✨ Highlight quick-move and quick-equip destination</li>\n<li>✨ Window manager remembers the status and location of open containers and inspect windows</li>\n</ul>\n<h3>Improved features</h3>\n<p>Existing SPT features made better</p>\n<h4>Inventory</h4>\n<ul>\n<li>Modify equipped weapons</li>\n<li>Rebind Home/End, PageUp/PageDown to work like you would expect</li>\n<li>Customizable mouse scrolling speed</li>\n<li>Moving stacks into containers always moves entire stack</li>\n<li>Items made stackable by other mods follow normal stacking behavior</li>\n<li>Synchronize stash scroll position everywhere your stash is visible</li>\n<li>Insure and repair items directly from the context menu</li>\n<li>Load ammo via context menu <em>in raid</em></li>\n<li>Load ammo preset will pull ammo from inventory, not just stash</li>\n<li>Multi-grid vest and backpack grids reordered to be left to right, top to bottom</li>\n<li>Vests and backpacks are taggable</li>\n<li>Sorting will stack and combine stacks of items</li>\n<li>Open-&gt;All context flyout that will recursively open nested containers to get at that innermost bag</li>\n<li>Improve modding/preset dropdown usability</li>\n<li>Enable context menu while searching (off by default)</li>\n<li>✨ Search In Stash - add item context menu to open the search window for that item</li>\n<li>✨ Rebind rotate key</li>\n</ul>\n<h4>Inspect windows</h4>\n<ul>\n<li>Show the total stats (including sub-mods) when inspecting mods (optional, toggleable <em>in</em> the inspect pane with a new button)</li>\n<li>See stats change as you add/remove mods, with color-coded deltas</li>\n<li>Highlight empty slots when you drag items that can be attached there</li>\n<li>Remember last window size when you change it, with restore button to resize to default</li>\n<li>Move left and move right buttons + keybinds to quickly snap inspect windows to the left or right half of the screen, for easy comparisons</li>\n<li>Auto-expand descriptions when possible (great for showing extra text from mods like Item Info)</li>\n<li>Quickbinds will not be removed from items you keep when you die</li>\n<li>Compatible slots are now outlined in green, like the paper doll already does</li>\n<li>✨ Resize fonts for stats and description</li>\n</ul>\n<h4>Traders</h4>\n<ul>\n<li>Autoswitch between buy and sell when you click trader items or control-click your own items</li>\n<li>Autoselect quest items when turning in</li>\n<li>Repair window remembers last used repairer, and actually updates the repair amount when you switch repairers</li>\n<li>More icons on trader avatars - when their only new quests are operational (dailies/weeklies) and when you have items you could turn in</li>\n<li>Trader window remembers which tab you had open, and can optionally remember which trader you last looked at even when you completely close the trading screen</li>\n</ul>\n<h4>Flea market</h4>\n<ul>\n<li>Auto-expand categories when there’s space to do so</li>\n<li>Locked trader item tooltip reveals which specific quest will unlock it</li>\n<li>Option to keep the Add Offer window open after placing your offer</li>\n<li>Set prices in the Add Offer window by clicking the min/avg/max market prices (multiplies for bulk orders)</li>\n<li>Autoselect Similar checkbox is remembered across sessions and application restarts</li>\n<li>Replace barter offers icons with actual item images, plus owned/required counts on expansion, ✨ color-coded if you own the items needed</li>\n<li>Clears filters for you when you type in search bar and there’s no match</li>\n</ul>\n<h4>Weapon modding/presets</h4>\n<ul>\n<li>Weapons can grow left or up, not just right and down</li>\n<li>Enable zooming with mousewheel</li>\n<li>Skip needless unsaved changes warnings when not actually closing the screen</li>\n<li>Saving the current preset is now one-click; you don’t have to confirm the name. That’s what Save As… is for.</li>\n<li>Open build window can filter out stock presets so you only see yours</li>\n</ul>\n<h4>Hideout</h4>\n<ul>\n<li>Remember window state when you leave hideout without closing (e.g. when searching for a recipe item on flea)</li>\n<li>Tools used in crafting will be returned to the container they were in</li>\n</ul>\n<h4>In raid</h4>\n<ul>\n<li>Quickbind tactical devices to control them individually</li>\n<li>Option to make unequipped weapons moddable in raid, optionally with multitool</li>\n<li>Reloading will swap magazines in-place, instead of dropping them on the ground when there’s no room</li>\n<li>Grenade (✨ and consumable) quickbinds will transfer to the next grenade of the same type after throwing</li>\n<li>✨ Queued input\n<ul>\n<li>Holding sprint before forward will work (you will sprint)</li>\n<li>Holding certain actions (aim, reload, hold breath) during some other action will cause you to immediately do it when the current action is complete</li>\n</ul>\n</li>\n</ul>\n<h4>Mail</h4>\n<ul>\n<li>The messages window stays open when you return from transfering items</li>\n<li>✨ Attachment icon now tracks attachments, not just <em>new</em> attachments.</li>\n</ul>\n<h4>Misc</h4>\n<ul>\n<li>Confirm dialogs with Return/Enter/Space instead of just Y</li>\n<li>Close modal dialogs by clicking outside of them</li>\n<li>Sensible autofocus of textboxes in various dialogs</li>\n<li>Unlock cursor in windowed/borderless modes when in a menu</li>\n<li>Many little UI tweaks to tighten up the graphics</li>\n</ul>\n<h3>Fixes</h3>\n<p>Fixing bugs that BSG won’t or can’t</p>\n<h4>Inventory</h4>\n<ul>\n<li>Fix item tooltips disapparing if your mouse goes through the Quest/FoundInRaid icon (great for MoreCheckmarks)</li>\n<li>Fix windows appearing partially offscreen</li>\n<li>Fix modding/preset UI breaking when you click not allowed (red outlined) items</li>\n<li>Fix trader items not showing “Compatible with Available” with your items</li>\n<li>Fix selected barter items not being highlighted correctly</li>\n<li>✨ Disassemble weapon actually works</li>\n<li>✨ Debounce duplicate quest notifications and their ear-splitting sounds</li>\n<li>✨ Fix Revolvers/Multibarrel guns not handling most ammo interactions</li>\n<li>✨ Block alphanumeric keybinds when you’re typing in a textbox</li>\n</ul>\n<h4>Weapon Modding</h4>\n<ul>\n<li>✨ Fix Edit Build -&gt; Assemble not handling duplicate mods or putting mods in the wrong slot</li>\n</ul>\n<h4>Hideout</h4>\n<ul>\n<li>Fix top-down camera panning around when you’re in a menu</li>\n</ul>\n<h4>In raid</h4>\n<ul>\n<li>Remove the unimplemented door actions like “Bang &amp; clear” that are never going to happen</li>\n<li>Fix the keybind for weapons always showing up as 1, 2, and 3. Now shows your actual keybind like every other slot</li>\n<li>Fix issue where clicking the eye at the wrong time during raid load would break your equipment UI for the rest of the raid</li>\n<li>Fix not being able to pay the BTR man with money from your backpack or secure container if you happened to be carrying grenades</li>\n<li>✨ Fix not putting your compass away when swapping weapons</li>\n</ul>\n<h4>Mail</h4>\n<ul>\n<li>Skips “You can return to this later” warnings when not transferring all items</li>\n<li>“Receive All” button no longer shows up when there is nothing to receive</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p>Like almost every mod here, extract the zip archive into your SPT directory.</p>\n<p>Recommend using <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7zip</a> to extract and install this mod.</p>\n<p>Example (thanks DrakiaXYZ for the gif)</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"3N6gTe2.gif\" /></p>\n<h3><strong>Important Note for Fika users</strong></h3>\n<p>Several of the features of UI Fixes make changes to inventory operations that are sent between multiple clients. You <strong>MUST</strong> install the same version of UI Fixes on all clients, including the dedicated client if you’re using that. At raid start, certain settings that must be in sync will be synced from the host client to all other clients, and only the host can change those settings (and they can at any time during raid).</p>\n<p>If you don’t use Fika or don’t know what that is, don’t worry about it.</p>\n<h3>Uninstallation</h3>\n<p>To uninstall, simply delete <strong>Tyfon.UIFixes.dll</strong> and <strong>Tyfon.UIFixes.Net.dll</strong> from <strong>&lt;your SPT folder&gt;/BepInEx/plugins,</strong> and the <strong>Tyfon.UIFixes.Server</strong> folder from <strong>&lt;your SPT folder&gt;/SPT/user/mods</strong></p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>Configuration is available through the in-game F12 menu. Settings should be self-explanatory, be sure to mouse-over the name to see a more detailed tooltip if you’re confused.</p>\n<p>There are some feature toggles that only show up if you select “Advanced Settings” at the top of the F12 menu. Check these if you don’t see a toggle you want, but most people won’t need those.</p>\n<p>Default client settings are show below:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/TvzyOED.png\" alt=\"TvzyOED.png\" /></p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Interop</div>\n<div class=\"tab-content\"><p>Other mods can interop with UI Fixes’ multi-select functionality! See the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/tyfon7/UIFixes\" rel=\"noreferrer noopener\">readme</a> for details.</p>\n<p>Other addon authors - UI Fixes touches a <em>lot</em> of code in the client. If you think there’s a conflict with your mod and UIFixes, please feel free to reach out. I’m happy to help our mods work together!</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Troubleshooting</div>\n<div class=\"tab-content\"><p><strong>Q: Keybinds won’t work, or typing in textboxes won’t work</strong></p>\n<p>A: When your focus is in a textbox and your mouse is over an item, I have to pick which one to handle the keypress. Currently it will prefer keybinds, so textboxes won’t work if your mouse is over an item. If you’d prefer the opposite, where keybinds won’t work if any textbox has focus, enabled “Advanced Settings” at the top of the F12 menu and toggle “Block Text Inputs on Item Mouseover”\n<br />\n<br />\n<br />\n<strong>Q: When I start a raid with Fika, there’s a warning about a missing sync?</strong></p>\n<p>A: You didn’t install UIFixes on your host. UIFixes is required on ALL clients, including the dedicated host if you’re using that.\n<br />\n<br />\n<br />\n<strong>Q: Some of the settings in F12 menu aren’t changing! Nothing happens when I click them</strong></p>\n<p>A: Some settings depend on others - read the tooltips. Some settings are forced off if you’re using Fika, and if you’re in a Fika raid, some settings are locked to the host’s value.\n<br />\n<br />\n<br />\n<strong>Q: I found a bug !</strong></p>\n<p>A: Open an <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/tyfon7/UIFixes/issues\" rel=\"noreferrer noopener\">issue</a> or make a comment here. Please include logs if possible!</p></div></div></div>\n<p>If you’d like to support my work, you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/tyfon\" rel=\"noreferrer noopener\">buy me a coffee</a> ☕</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1342/ui-fixes",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-04-19T07:23:00.000000Z",
+  "created_at": "2024-04-19T07:23:35.000000Z",
+  "updated_at": "2026-07-28T09:37:00.000000Z",
+  "owner": {
+    "id": 46005,
+    "name": "Tyfon",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/63c0fc245b25b135a26465ea268ebdd8a35b62d0_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-02-27T23:21:18.000000Z",
+    "updated_at": "2026-08-01T17:45:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/tyfon7/UIFixes",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14051,
+      "hub_id": null,
+      "version": "5.3.11",
+      "description": "<ul>\n<li>Fix cursor getting stuck “locked” in the weapon modding screen</li>\n<li>Fix player model panning/rotating at silly speeds when you change clothing many times</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.11",
+      "content_length": 191499,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 13131,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-11T17:01:00.000000Z",
+      "created_at": "2026-07-11T17:02:29.000000Z",
+      "updated_at": "2026-07-28T09:37:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/031c293ab00b4de416257058c420b0e8f685ba1e341e84e7b03f4ee4ec7f8ce5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/d85b37d0-f93b-483c-9ac5-6c47d9874e7c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A52Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.11.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A11Z&ske=2026-08-01T21%3A11%3A52Z&sks=b&skv=2018-11-09&sig=hrWBDMpy%2FPMzDwcmN6cz%2Bsqx8B8GAo%2FSYvxV6smHWdk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.11.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14034,
+      "hub_id": null,
+      "version": "5.3.10",
+      "description": "<h3>New stuff 🚀</h3>\n<ul>\n<li>Added panning and zooming to the player model in the character screen (thanks @7Bpencil)</li>\n<li>Added panning to weapons in the modding and build editing screens (thanks @7Bpencil)</li>\n<li>Automatically re-enabled group invite panel when PIT Fireteam is detected.</li>\n</ul>\n<h3>Bug fixes 🪳</h3>\n<ul>\n<li>Fixed camera clipping when zooming in close on weapons (thanks @7Bpencil)</li>\n<li>Fixed issue with SAIN + Fika + Always Swap Magazines that caused bots to not fire after reloading. Bots no longer get to swap magazines in place. Get stuffed, clankers!</li>\n<li>Fixed Toggle/Hold Tactical setting not completely overriding BSG’s Tactical Mode and causing issues/confusion.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.10",
+      "content_length": 191349,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1713,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-09T23:02:00.000000Z",
+      "created_at": "2026-07-09T23:02:26.000000Z",
+      "updated_at": "2026-07-28T09:36:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1db9c4857aae9137be89f1b863b40a5950deb470c9a270732cef69b4f084e550",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/ba47a2a1-ea52-4fb1-8014-a2aa2665d15f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A49Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.10.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A29Z&ske=2026-08-01T21%3A05%3A49Z&sks=b&skv=2018-11-09&sig=c3WHQoy0IWgPFzM959GAh%2FDM1uVYhGRSGp%2BmujmHGhY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.10.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13704,
+      "hub_id": null,
+      "version": "5.3.9",
+      "description": "<ul>\n<li>Add setting to enable/disable weapon zoom with mousewheel (for users of Scrollable Attachments)</li>\n<li>Change rotate keybind to fall back to default Tarkov R handling if you clear the binding in the F12 menu.</li>\n<li>Fix a nullref when alt-equipping items directly from transfer screen</li>\n<li>Update some setting descriptions</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.9",
+      "content_length": 188496,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 16476,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-04T20:43:00.000000Z",
+      "created_at": "2026-06-04T20:44:31.000000Z",
+      "updated_at": "2026-07-28T09:05:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/633384662272f704619e479852c9f0b790fd81c0701311103e997f4f4d54f39e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/12cf8c11-a817-4953-8d1e-47072a902e21?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A03Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.9.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A10Z&ske=2026-08-01T21%3A10%3A03Z&sks=b&skv=2018-11-09&sig=nfxVjpXxd43COZfDG0ZK04luLHhdA0MhbPO5oOlaUsI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.9.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13485,
+      "hub_id": null,
+      "version": "5.3.8",
+      "description": "<ul>\n<li>Hide Group Panel from main taskbar. It serves no purpose, doesn’t work, and throws errors to boot.</li>\n<li>Fix certain UI Fixes settings reverting on client restart</li>\n<li>Fix multi-select operations changing items’ pin status.</li>\n<li>Fix compat with latest Fika</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.8",
+      "content_length": 188294,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 15529,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-25T02:01:00.000000Z",
+      "created_at": "2026-04-25T02:02:06.000000Z",
+      "updated_at": "2026-07-28T08:25:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/dc1a6c32b8ee1c76b7483b562a295692940f702b6ade1265cf01c3f1e187834f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/c09074cc-2582-4405-a27b-91cdafcc31ae?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A41Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A01Z&ske=2026-08-01T21%3A02%3A41Z&sks=b&skv=2018-11-09&sig=OT9TLvwNAhv3ay4OmuRFF8cVwXIOOFPv%2FVQgghWe6VQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13286,
+      "hub_id": null,
+      "version": "5.3.7",
+      "description": "<ul>\n<li>Fix issue where mod changes in the weapon modding screen that result in a grow left/up wouldn’t update the visual model</li>\n<li>Fix compat issue with Show Me The Money QuickSell where <em>sometimes</em> it wouldn’t work</li>\n<li>Fix quickbar visibility issues, including where it’s broken after visiting your hideout</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.7",
+      "content_length": 187939,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 12295,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-19T19:50:00.000000Z",
+      "created_at": "2026-03-19T19:50:41.000000Z",
+      "updated_at": "2026-07-28T08:10:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ff2edcae628e09b62f505587ba73737b69c5f98b0c3c9c93a09fa249fa58476f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/eecc3c5a-fb9a-4b57-8a82-071a877380b1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A13Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.7.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A08Z&ske=2026-08-01T20%3A55%3A13Z&sks=b&skv=2018-11-09&sig=7KV7s%2FBRU1K7gMXLNl8rsUg%2FPCu8AmEwimCPmNDcFxY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.7.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13147,
+      "hub_id": null,
+      "version": "5.3.6",
+      "description": "<p>Rough day. Hotfix 2 - fix unnecessary rollback code breaking modding selector</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.6",
+      "content_length": 187356,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 8183,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-23T07:04:00.000000Z",
+      "created_at": "2026-02-23T07:04:37.000000Z",
+      "updated_at": "2026-07-28T08:06:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5bde041c75a719dc80b4e34e81ef3e726bf1265edb90c21edfee3830b8e01070",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/21979819-9717-4e60-8871-bf54c9d10fa4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A55Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A37Z&ske=2026-08-01T20%3A56%3A55Z&sks=b&skv=2018-11-09&sig=%2BKOQcIYq33uB5WF7m98GhAhnz01eea2jAr0tcpFK1fo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4NiwibmJmIjoxNzg1NjE1MTg2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QO3YyHwQxQm-4MuSbVeHNvbLzJMbOxBiESNex3BdoFE&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13142,
+      "hub_id": null,
+      "version": "5.3.5",
+      "description": "<p>Hotfix null reference in add offer window</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.5",
+      "content_length": 187496,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 500,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-22T22:10:00.000000Z",
+      "created_at": "2026-02-22T22:10:56.000000Z",
+      "updated_at": "2026-07-28T08:05:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/58c393667d7c24b047a178bbe52677d6013c9fc7129e67b6ca73d1ec0eac2d83",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/0c1c3f81-37cb-467f-a89c-9c511ec59011?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A08Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A22Z&ske=2026-08-01T20%3A56%3A08Z&sks=b&skv=2018-11-09&sig=pgzEWZ77p1zkB%2F0r6qGofwF33JzpNPAo%2BDQ2g3yYV1M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13139,
+      "hub_id": null,
+      "version": "5.3.4",
+      "description": "<h2>New stuff ✨</h2>\n<ul>\n<li>If BSG’s prioritized window feature is enabled, the prioritized window will be bordered yellow, as it is in EFT 1.0 (Configurable)</li>\n<li>When holding CTRL and mousing over an item, the exact grid location that CTRL-clicking would move it to will be bordered yellow. (Configurable)</li>\n<li>When holding ALT and mousing over an item, the slot where it would be equipped by ALT-clicking will be highlighted yellow. (Configurable)</li>\n<li>Added keybind setting for rotate, since EFT’s default of R is hard-coded.</li>\n<li>Added configurable font sizing to inspect windows, weapon stats, and context menus</li>\n</ul>\n<h2>Bug fixes 🪳</h2>\n<ul>\n<li>Improved F12 config menu experience for disabled/readonly settings. Readonly settings will now be grayed out with a reason.</li>\n<li>Disabled equipped armor plate swapping when Fika is present.</li>\n<li>Up/left item growth now works with swap</li>\n<li>Hide “Search in Stash” context menu in raid</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.4",
+      "content_length": 187517,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 263,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-22T18:46:00.000000Z",
+      "created_at": "2026-02-22T18:46:48.000000Z",
+      "updated_at": "2026-07-28T08:05:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/54d9ded1c922d8c700aeda3da2d754ebeb26a74c764c09e2246e41f1a18e0c8f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/64a22746-36bc-45cf-a76a-c2f833c7478e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A17Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A06Z&ske=2026-08-01T21%3A07%3A17Z&sks=b&skv=2018-11-09&sig=G%2FjmpNkDHiDDpqQ06xRXr87AJ0URyeeePPGVwwQib9w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13067,
+      "hub_id": null,
+      "version": "5.3.3",
+      "description": "<ul>\n<li>Added “Hold Breath” to queued inputs - holding this key while aiming but moving will start holding breath as soon as you stop moving. Thanks Ozen!</li>\n<li>Better handling of expired mail attachments</li>\n<li>Fix repair flyout not handling multiple repair kit types with the same name</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.3",
+      "content_length": 183986,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 4219,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-13T19:46:00.000000Z",
+      "created_at": "2026-02-13T19:46:57.000000Z",
+      "updated_at": "2026-07-28T08:03:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fd15aa54664eac2d1a1a531c1cf4d03dafef17ac3e30cbd22f16d74b6abb67c4",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/1280f5b1-6a90-47ad-b4c9-2ea8ebc229c9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A20Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A01Z&ske=2026-08-01T20%3A50%3A20Z&sks=b&skv=2018-11-09&sig=iRq5vDK0LUSG19m4eo3NOfvhbrM3xALGVkwTE4g%2FZEU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12962,
+      "hub_id": null,
+      "version": "5.3.2",
+      "description": "<h2>New stuff ✨</h2>\n<ul>\n<li>Added “Search in stash” context menu option. Opens stash search with the name of the item pre-populated in the search bar.  Also triggered by using stash search keybind when mousing over an item (default ctrl-F)</li>\n<li>Fetching mail from the server is now paginated and lazy-loaded, and properly marks mail as read. This solves virtually all lag associated with having too many mail messages in your profile. This pagination change will be part of core SPT in a future SPT release, but is included now by UI Fixes.</li>\n</ul>\n<h2>Bug fixes 🪳</h2>\n<ul>\n<li>Fixed BSG bug causing containers to occasionally stop searching and then display 3 duplicate grids</li>\n<li>Fixed BSG bug where trader filter sub-groups don’t properly deselect other filters</li>\n<li>Held weapon inputs (aim/reload) will now work while switching weapons</li>\n<li>Open windows will no longer be remembered between raids</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.2",
+      "content_length": 183418,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 5019,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-01T01:57:00.000000Z",
+      "created_at": "2026-02-01T01:57:08.000000Z",
+      "updated_at": "2026-07-28T07:58:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7e19c76df36d03de5de5be6dd6f63a56db255b6660160f8626d0d9aab620f047",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/0fafa21c-ede8-4c55-a070-23c4b4410eb1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A23Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A58Z&ske=2026-08-01T21%3A13%3A23Z&sks=b&skv=2018-11-09&sig=MsoAvNT1Qc2D3k0gzo5W5kmM5FGvX2biyFeOpasgSb0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12887,
+      "hub_id": null,
+      "version": "5.3.1",
+      "description": "<p>Add workaround and logging for mysterious quickbind bug</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.1",
+      "content_length": 181257,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3882,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-21T20:06:00.000000Z",
+      "created_at": "2026-01-21T20:06:59.000000Z",
+      "updated_at": "2026-07-28T07:56:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4467c640653159a94351a6d3ca95deb326cb4e46468df6ed300342526c4d1420",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/53896284-dc9c-44cd-9051-fe4aa3034164?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A51%3A54Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A21Z&ske=2026-08-01T20%3A51%3A54Z&sks=b&skv=2018-11-09&sig=XGKyuEo%2Bm5PNl8WxrMpQ9qYd5JPc6dL%2BImuVJDpf1gE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12875,
+      "hub_id": null,
+      "version": "5.3.0",
+      "description": "<ul>\n<li>🪟 Added feature to remember open windows and window locations per item. See “Inventory Windows” section of settings.</li>\n<li>📲 Added visual feedback for swaps, so you can see where the swapped item will go (or why it can’t swap)</li>\n<li>Improved force swap button (Alt) to give instant feedback when pushed</li>\n<li>🪳 Fixed weapon disassemble to actually work</li>\n<li>Extended quickbind shortening to the item itself, not just the quickbar</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.3.0",
+      "content_length": 180771,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2040,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-19T00:36:00.000000Z",
+      "created_at": "2026-01-19T00:36:34.000000Z",
+      "updated_at": "2026-07-28T07:54:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c7f5face73fca046dafc17254320a47082279087b317c7362d32dfb09697fe2",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/3a5b5ac7-2daf-4ab4-8be7-c658a741a7e1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A29Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A29Z&ske=2026-08-01T21%3A05%3A29Z&sks=b&skv=2018-11-09&sig=0cEuAINhzwp6lW9IhpxRpQ8XGqXxRW3pHJ339Jfqpr4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OCwibmJmIjoxNzg1NjE1MTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._kr6o0GIKRqN5P2t5LyBavbEtchvHhvWM-rB8mcbgMc&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12847,
+      "hub_id": null,
+      "version": "5.2.0",
+      "description": "<h3>New stuff 🚀</h3>\n<ul>\n<li>Backported some 1.0 input changes.\n<ul>\n<li>Holding sprint before pressing forward will make you start sprinting</li>\n<li>Holding aim while performing another action will start aiming as soon as the action is complete</li>\n<li>Holding reload while performing another action will start the reload as soon as the action is complete</li>\n<li>The above will only work if the keybind is set to “Press” or “Continuous”. Reload is “Release” by default (to allow mag selection UI). Works with UI Fixes’ “Toggle/Hold” as well.</li>\n<li>In settings as “Queue Held Inputs”, if you want to disable it for some reason</li>\n</ul>\n</li>\n<li>Block hideout overhead camera zoom when mouse is on another monitor</li>\n</ul>\n<h3>Bug fixes 🪳</h3>\n<ul>\n<li>Fixed empty slot context menu randomly getting extra buttons</li>\n<li>Fixed BSG bug: Assembling builds didn’t properly handle duplicate items (e.g. multiple rails of the same name)</li>\n<li>Fixed BSG bug: Toggling goggles with a compass in your hand will now properly put the compass away</li>\n<li>Fixed BSG bug: Blocked duplicate quest status notifications within a single second</li>\n<li>Fixed some erroneous log spam</li>\n<li>Fixed “grow up/left” corner case (literally in the corner) that caused items to temporarily disappear</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.2.0",
+      "content_length": 176597,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3225,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-13T21:05:00.000000Z",
+      "created_at": "2026-01-13T21:05:50.000000Z",
+      "updated_at": "2026-07-28T07:51:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b7d82cadb127b6d752b345f0b7a8b9daf94fa84d818cc17910b357ea925c62d8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/c1a98872-a5a2-4806-ab1b-fd795135e22d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A03Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A14Z&ske=2026-08-01T21%3A13%3A03Z&sks=b&skv=2018-11-09&sig=rf%2Bx72FTNNcotTGLlGLSUNWEk%2B83ghyAq83OW9917Mc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12790,
+      "hub_id": null,
+      "version": "5.1.2",
+      "description": "<h3>New stuff 🚀</h3>\n<ul>\n<li>Rebind consumables: when you fully consume food/drink/meds, the quickbind will automatically reassign to an item of the same type, if possible. Just like existing rebind grenades feature</li>\n<li>Multiselect context menu actions now work regardless of which selected item your mouse is over. E.g. a bunch of selected magazines can be loaded with ammunition even if your mouse happens to be over a full one.</li>\n<li>When dragging items that don’t fit into a grid, a red outline now extends beyond the edge of the grid to show you how big the item is</li>\n</ul>\n<h3>Fixes 🪳</h3>\n<ul>\n<li>Fix stack merge not being possible from mail transfer. This is why you couldn’t drag money from your mail directly into a wallet or money case.</li>\n<li>Prevent hideout overhead camera from rotating/panning when another screen is on top</li>\n<li>Copied variable zoom fixes from Fika (thanks Lacy!). Only active if Fika is not present, since Fika has the same fix</li>\n<li>Fix item keybinds also typing into textboxes in hideout</li>\n<li>Fix some typos in UI Fixes settings</li>\n<li>Fix some multiselect edge cases</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.1.2",
+      "content_length": 173748,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 5013,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-05T02:55:00.000000Z",
+      "created_at": "2026-01-05T02:55:13.000000Z",
+      "updated_at": "2026-07-28T07:42:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/95302535a98ae595b4e52cf478cb338b810a7b45dce9b866d03ca722afcb0b1a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/09fd23f5-e16e-4a86-8b33-0254e1eedb07?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A20Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.1.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A39Z&ske=2026-08-01T21%3A09%3A20Z&sks=b&skv=2018-11-09&sig=sg9CAGbWANIB9DdOEyp2GER653NPf%2FaH9metR3mYwZY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.1.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12558,
+      "hub_id": null,
+      "version": "5.1.1",
+      "description": "<p>Fix issue where adding flea offers after doing an empty slot search would break the client 🫠</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.1.1",
+      "content_length": 170913,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 13106,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-09T14:51:00.000000Z",
+      "created_at": "2025-12-09T14:51:18.000000Z",
+      "updated_at": "2026-07-28T07:02:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0cb5c4e044faa23997f91b9a2d6e842be642104673dd5c1446ba71a56683c546",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/98e91c19-022d-4278-bf87-caeb4198d8ca?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A54%3A02Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.1.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A53%3A18Z&ske=2026-08-01T20%3A54%3A02Z&sks=b&skv=2018-11-09&sig=jCCOA9zbGXbw8fphXfThiaPDeqjAcXAYG%2FQX%2BhdXgCE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.1.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12541,
+      "hub_id": null,
+      "version": "5.1.0",
+      "description": "<h2>Shotguns, Revolvers, Multi-barrels, oh my 🐻</h2>\n<p>BSG basically didn’t implement most inventory interactions for these weapons.</p>\n<h3>Out of raid</h3>\n<ul>\n<li>You can now load revolvers and multi-barrels by dragging a stack of ammo onto them (previously this would load only 1 bullet)</li>\n<li>You can unload revolvers and multi-barrels with the context menu (previously only shotguns and bolt-actions supported this)</li>\n<li>Unloading bolt-action rifles with the context menu wills now also unload the chambered round</li>\n<li>Added Load Ammo context menu to shotguns, revolvers, multi-barrels, and bolt-actions</li>\n<li>Removed Load and Reload context menu from all of the above (it was permanently disabled)</li>\n<li>Multi-select dragging all the bullets out of a revolver or multi-barrel will now work as expected</li>\n<li>Note that revolvers do not support mag presets, and that’s a can of worms I’m not opening</li>\n</ul>\n<h3>In raid</h3>\n<ul>\n<li>Dragging ammo onto an unequipped revolver will now load all the ammo, one at a time, like a magazine (previously only loaded 1 bullet)</li>\n<li>Note that UIFixes’ “Load Ammo In Raid” context menu feature does not apply to internal mag weapons (shotguns/bolt actions) or revolvers</li>\n</ul>\n<h2>Other new stuff ✨</h2>\n<ul>\n<li>Added Toggle/Hold functionality for interactions (placing quest items, transiting, disarming tripwires, etc)</li>\n<li>Added “Force Swap” key (default: Alt). Holding this will prioritize swapping over other interactions, e.g. swapping backpacks instead of putting one inside the other</li>\n<li>Added option to remember your hideout crafting search filter even when you leave the screen entirely</li>\n</ul>\n<h2>Bug fixes 🪳</h2>\n<ul>\n<li>Fixed BSG bug where inventory keybinds would fire while typing in textboxes (i.e. you bound “toggle inventory” to the letter I, would make it impossible to use that letter while tagging items)</li>\n<li>Fixed intelligence center crafting search filter not being saved</li>\n<li>Fixed race condition when stacking ammo that would swap the stacks</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.1.0",
+      "content_length": 170716,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1771,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-07T17:20:00.000000Z",
+      "created_at": "2025-12-07T17:20:41.000000Z",
+      "updated_at": "2026-07-28T07:02:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2091283314c6391b76200286ac0ba1d5e6bc5c8f38075fb5426c289d5096ef4b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/975c54eb-9b4b-4bc8-8849-9ac061236102?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A23Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A00Z&ske=2026-08-01T21%3A04%3A23Z&sks=b&skv=2018-11-09&sig=lfnTF2fFcT5GqtPxYtjrL%2FPE5E42GW5zz1SFQwh4Au8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12341,
+      "hub_id": null,
+      "version": "5.0.6",
+      "description": "<ul>\n<li>Fixed dragging multiple stacks of ammo into a magazine <em>in raid</em> stopping after the first stack is loaded.</li>\n<li>Fixed a class of bugs around long-running multiselect operations (like the one above). Generally speaking, doing other actions will now cancel the remaining operations, since bugs and weirdness happened otherwise.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.6",
+      "content_length": 159567,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 13077,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-16T19:46:00.000000Z",
+      "created_at": "2025-11-16T19:46:19.000000Z",
+      "updated_at": "2026-07-28T06:30:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6a46063165be1ac6349aeb205dd8d34c8e88f6c9b22b91cfe9a6cd2b9546e64f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/e4e63a86-427e-4a40-b6da-929c587201f5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A54Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A18Z&ske=2026-08-01T20%3A57%3A54Z&sks=b&skv=2018-11-09&sig=oQ4Qnaiy22yWMvk3hp22N2BT7JGSTbbaVs1vCHWkcJE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12119,
+      "hub_id": null,
+      "version": "5.0.5",
+      "description": "<ul>\n<li>Fix exception breaking the prestige screen</li>\n<li>Fix exception when other mods modify hideout requirements</li>\n<li>Fix BSG marking every single preset as “dirty” on open even when you don’t change anything</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.5",
+      "content_length": 159231,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 6732,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-02T00:12:00.000000Z",
+      "created_at": "2025-11-02T00:12:23.000000Z",
+      "updated_at": "2026-07-28T06:13:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b878da9d5458d9bf17ab4d705b4a0fdc7ba1725d8dfb7c171b0b2a2d2f0e2ffe",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/7d21756b-ef76-4578-80ff-af2c07712119?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A53%3A03Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A52%3A25Z&ske=2026-08-01T20%3A53%3A03Z&sks=b&skv=2018-11-09&sig=n6r4JwXhD7TxMyGP4AAVCWASRRZdW1lBE8pipLRNprw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4OSwibmJmIjoxNzg1NjE1MTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XhefcdPoFLl6pZwbcHLjhpRTI4E1_Tz9AN8sFqxlxXA&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12076,
+      "hub_id": null,
+      "version": "5.0.4",
+      "description": "<h2>New stuff ✨</h2>\n<ul>\n<li>Overhauled messenger “unread” and “attachment” icons.\n<ul>\n<li>Unread icon will now actually work and persist correctly across raids and client restarts</li>\n<li>Attachment icon is now useful and shows the number of messages with items left to collect.</li>\n</ul>\n</li>\n<li>Non-FIR items auto-wishlisted for hideout upgrades will no longer show the hideout icon (if hideout upgrades require FIR)</li>\n<li>Ctrl-F (configurable) will open the stash search panel</li>\n<li>Stash search panel will auto-focus the search box</li>\n<li>Add Offer context menu now works with multi-select, if all the items are the same type</li>\n<li>Unload/Load weapon now supports multi-select</li>\n</ul>\n<h2>Fixes 🪳</h2>\n<ul>\n<li>Fixed Linked Search for empty slots categories not working correctly</li>\n<li>Fixed some multi-select interactions with the stash search panel</li>\n<li>Fixed spacebar closing the stash search panel when you’re typing in the search box</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.4",
+      "content_length": 158835,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2263,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-29T21:13:00.000000Z",
+      "created_at": "2025-10-29T21:14:06.000000Z",
+      "updated_at": "2026-07-28T06:11:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e13e8618ff513386243f27d851b86f8336b479eebb7eaecc0b9fddcc75f3dd7b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/5d9841f7-0c0a-4292-8b3b-18f7e36e2f16?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A59Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A45Z&ske=2026-08-01T21%3A12%3A59Z&sks=b&skv=2018-11-09&sig=PUDT6gKlRUVFLmwtugfNQ1a6tq9eJYkGI7iguy6c7q0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11964,
+      "hub_id": null,
+      "version": "5.0.3",
+      "description": "<ul>\n<li>Fix hideout production tools not being returned to their original containers if the server is restarted</li>\n<li>Fix the “Unpack” context menu (and hotkey) not being added to stash items on the transfer screen</li>\n<li>Fix wonky interaction when merging ammo stacks that would swap the resulting stacks</li>\n<li>Removed “Always Move Entire Stacks” F12 setting (the feature was already removed since it’s built into the game now)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.3",
+      "content_length": 154593,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 4758,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-21T17:25:00.000000Z",
+      "created_at": "2025-10-21T17:25:48.000000Z",
+      "updated_at": "2026-07-28T06:06:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/eadc09d8859bbabdf9020963adc7db11dc292cac9da737c0ba14350a2e08f527",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/25d706c2-ee91-466e-8474-2d7352902861?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A31Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A31Z&ske=2026-08-01T21%3A12%3A31Z&sks=b&skv=2018-11-09&sig=juxSK6Pg1BeRavaoSeH4YwECMBQftC%2Bpua49BSLEFDY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11894,
+      "hub_id": null,
+      "version": "5.0.2",
+      "description": "<p>Somehow 5.0.1 had a strict requirement for SPT 4.0.1.\nChanged how the project references SPT, should now correctly only require ~4.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.2",
+      "content_length": 153375,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2661,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-18T17:29:00.000000Z",
+      "created_at": "2025-10-18T17:29:44.000000Z",
+      "updated_at": "2026-07-28T06:04:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/712f85a7f6e70608e0ad7303f7187d7c73485dc4ac49873d7754975d346f4b77",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/01a924d7-88be-48b3-8792-e8ef9eb69708?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A31Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A19Z&ske=2026-08-01T20%3A57%3A31Z&sks=b&skv=2018-11-09&sig=UCdQbAmuG5xDWy7sKn0NkTpuEF9ogTYXLs%2Fv7nEhCps%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11892,
+      "hub_id": null,
+      "version": "5.0.1",
+      "description": "<ul>\n<li>Fixed load ammo context menu not showing up in raid 🪳</li>\n<li>Fixed discard context menu disabled in pockets 😩</li>\n<li>Fixed armor tooltip not hiding properly</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.1",
+      "content_length": 153378,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 512,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-18T14:52:00.000000Z",
+      "created_at": "2025-10-18T14:52:31.000000Z",
+      "updated_at": "2026-07-28T06:04:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5fed0a1cbd3f07fccce1c0c4412586a0d72ccdb19674e51f9c671ce4815e9fdb",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/b03c8260-6c56-4cc1-b306-39419435730a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A36Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A40Z&ske=2026-08-01T21%3A07%3A36Z&sks=b&skv=2018-11-09&sig=ADEcytiQszVUeht00lJZ3pVEiLmUjk1cRwbbGjEbnmc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11873,
+      "hub_id": null,
+      "version": "5.0.0",
+      "description": "<h1>Updated for SPT 4.0 🚀</h1>\n<ul>\n<li>Task item warning removed, as this was implemented by BSG</li>\n<li>Stack FiR/non-FiR ammo feature removed, ammo is now never FiR</li>\n<li>Barter icons in flea offer view are now bordered green/red if you have the required items  (thanks KobeThuy!)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/5.0.0",
+      "content_length": 153238,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2403,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-16T20:43:00.000000Z",
+      "created_at": "2025-10-17T05:44:51.000000Z",
+      "updated_at": "2026-07-28T06:04:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/706f7be68af0c4f87e890a93a68fc7160c5df6ba85c3dd20ed804c88f8be9877",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/95cd507f-b1b1-47cb-ae07-c588eff2e131?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A05Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-5.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A31Z&ske=2026-08-01T20%3A57%3A05Z&sks=b&skv=2018-11-09&sig=6%2FKgzOhZkAzH3f27QlBWI%2F7URkPhoG3LxM%2FyLwqMbGY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-5.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11700,
+      "hub_id": null,
+      "version": "4.2.3",
+      "description": "<p>New stuff:</p>\n<ul>\n<li>Change the behavior of hideout upgrade auto-wishlisting, with 3 options:</li>\n</ul>\n<ol>\n<li>Normal: This is vanilla EFT behavior, and items will not be wishlisted if there are ANY other requirements missing, like rep, or skills, or other hideout areas</li>\n<li>Visible upgrades: The UI Fixes default. If you can see the upgrade, the item is listed. This means the area has an icon in the hideout, and items will be listed even if you lack rep or skill or something like that.</li>\n<li>All upgrades: Items will be wishlisted even for areas that you can’t see yet and can only navigate to using the area selector on the bottom of the hideout screen.</li>\n</ol>\n<p>Bug fixes:</p>\n<ul>\n<li>Multi-select selection box will no longer select the player’s dogtag</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/4.2.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 9700,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-02T08:33:00.000000Z",
+      "created_at": "2025-10-02T17:33:41.000000Z",
+      "updated_at": "2026-05-14T06:13:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ea7e706d315c98fd29f7c37a449c03254a39f5a87cd18a4536fc82a2a1eb2014",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/c18d5289-77d8-4846-9dd2-9cf9f770165d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A53%3A16Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-4.2.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A52%3A56Z&ske=2026-08-01T20%3A53%3A16Z&sks=b&skv=2018-11-09&sig=ct8FQMIfDeOPaCZvwmh1fEAfF7eMrd0pFKlZLOwbUfo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MSwibmJmIjoxNzg1NjE1MTkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IMAe5fwU69aPO36rgSkBHapwU-H3qL9ZX4ipds-2HLI&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-4.2.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 174,
+      "hub_id": 14705,
+      "version": "4.2.2",
+      "description": "<p>- Turn-in available icon on traders (blue hand) will disappear immediately upon turning in items</p>\n<p>- Select-all will now select items off screen (still in the same container)</p>\n<p>- Multi-select moving stackable items to the sorting table will no longer stall the multi-move and result in weirdness that sends items to the void 😩</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/4.2.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 20965,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-31T21:09:30.000000Z",
+      "created_at": "2025-07-31T21:09:30.000000Z",
+      "updated_at": "2026-05-14T01:40:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/e7524d78-6b76-48ae-b8a1-d86231529fd4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A53%3A52Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-4.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A53%3A02Z&ske=2026-08-01T20%3A53%3A52Z&sks=b&skv=2018-11-09&sig=UhuspEAvYxVKIqpoHfN0MLcLZ%2FQ7xF%2BdpopnF13oWqI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-4.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1184,
+      "hub_id": 13592,
+      "version": "4.0.0",
+      "description": "<p>Updated for SPT 3.11 🚀</p>\n<p>Also new:</p>\n<p>- Fixed BSG’s new trading highlight feature to, well, work</p>\n<p>- One-click save presets. If I wanted to re-enter the name, I would have clicked Save As…</p>\n<p>- Compatible slots on weapons are outlined in green, similar to the what the player paper doll already does</p>\n<p>- Fixed error when using auto-switch trading feature very quickly</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/4.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3909,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T03:59:17.000000Z",
+      "created_at": "2025-03-16T03:59:17.000000Z",
+      "updated_at": "2026-05-14T02:07:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/d7589b76-cf2a-4a46-b338-397e26a483c4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A58Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-4.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A12Z&ske=2026-08-01T20%3A55%3A58Z&sks=b&skv=2018-11-09&sig=c7L%2FC67Cu5sc33l3LIbj%2FXWlJ3A5QUiHRZJL053JiWY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-4.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1339,
+      "hub_id": 13425,
+      "version": "3.1.3",
+      "description": "<p>New stuff 💥</p>\n<p>- Changing attachments through modding screen will use swap (the old item will go where the new item was), if possible</p>\n<p>- Out of Stock checkbox will persist through game restarts</p>\n<p>- Add hot-key to multi-select all items of the type under your mouse, defaults to ctrl-A</p>\n<p>- Prevent BSG’s mousewheel zoom affecting your gun’s scope while you are scrolling your inventory</p>\n<p>Bug fixes 🪳</p>\n<p>- Prevent item hotkeys from affecting the item under your cursor while you are dragging a different item around</p>\n<p>- Error messages around in-raid modding should show correct (more descriptive) error</p>\n<p>- Fika multitool check for in-raid modding should now work properly when the gun is on a dead body.</p>\n<p>Note: This is the last version that works with SPT 3.10.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/3.1.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 12007,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-02-21T17:34:06.000000Z",
+      "created_at": "2025-02-21T17:34:06.000000Z",
+      "updated_at": "2026-05-14T02:20:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/34c61da5-49fc-40c9-81bc-c3139d8f1861?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A12Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-3.1.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A48%3A13Z&ske=2026-08-01T20%3A49%3A12Z&sks=b&skv=2018-11-09&sig=vbNufg500mwWA9jlc0%2B5W60kByoaNAHKSs4EBpV82eg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-3.1.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2323,
+      "hub_id": 12284,
+      "version": "3.0.0",
+      "description": "<p><em>This release only works with SPT v3.10. It will not work with earlier versions of SPT.</em></p>\n<p>Features that are no longer needed</p>\n<p>- Add offer context menu: implemented by BSG</p>\n<p>- Wishlist anywhere: implemented by BSG</p>\n<p>- Clickable market prices in Add Offer Window: implemented by BSG, but UI Fixes still adds bulk support</p>\n<p>- Add Offer window double scroll bar fix: fixed by BSG</p>\n<p>- Flea market masking fixes: fixed by BSG</p>\n<p>- Sorting without moving containers: BSG implemented pinning/locking for a better experience, but UI Fixes still consolidates stacks</p>\n<p>- Unload last bullet from mags fix: fixed by BSG</p>\n<p>- Deterministic Grenades: default grenade selection is now in order, by type (G will use the same type until exhausted, then pick the next type in order)</p>\n<p>- Quick Access bar visibility fixes: fixed by BSG</p>\n<p>- Stack found-in-raid money with non-FIR money: all money is now considered non-FIR</p>\n<p>New features</p>\n<p>- Adding tagging to vests and backpacks</p>\n<p>- Multiselect support for pinning/locking</p>\n<p>- Improved mag preset name textbox/placeholder</p>\n<p>- Fixed BSG bug with clicking eye button during raid load</p>\n<p>Updated features</p>\n<p>- Overhauled config categories: there are now many more categories, hopefully makes the settings less daunting</p>\n<p>- Linked search keybind now defaults to empty so as not to conflict with built-in “Lock Mode” keybind</p>\n<p>- Hotkeys added for pinning/locking. Note that the game has built-in keys (default P and L) for pin and lock “modes”. Recommend changing those to something else, or just unbinding them completely and using UI Fixes hotkeys (which are better, imo)</p>\n<p>- Locked items cannot be multiselected</p>\n<p>- Hold/Toggle tactical device updated to override BSG’s crude extra hotkey that swaps between toggle and hold mechanics</p>\n<p>Removed features</p>\n<p>- Unload ammo boxes in place. This feature is more trouble than its worth and BSG completely changed the underlying code.</p>\n<p>- Old sorting table button placement. With the addition of more buttons, and the removal of places that still had the old button, this feature to keep the old placement is being retired.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/3.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 6167,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-26T19:25:01.000000Z",
+      "created_at": "2024-11-26T19:25:01.000000Z",
+      "updated_at": "2026-05-14T03:19:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/04d4acb7-8196-4a23-9a49-215bd5d31080?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A25Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A16Z&ske=2026-08-01T21%3A08%3A25Z&sks=b&skv=2018-11-09&sig=0Zz4AEqf%2FjOcWgKF3vybOHX%2FUlHeiUuZe5yUUH%2BIgtA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2404,
+      "hub_id": 12181,
+      "version": "2.5.3",
+      "description": "<p><em>Note: This is the last version that works with SPT 3.9.x</em></p>\n<p>- Inspect panel will highlight (green border) compatible empty slots when dragging attachable mod (just like player equipment slots)</p>\n<p>- In-raid weapon modding will not consider weapons equipped by dead bodies to be “in hand”</p>\n<p>- Fix resizing left/up feature to work in raid</p>\n<p>- Adjust rules around in-raid container swapping. Swapping incompatible containers (e.g. a container that could never fit inside another) was previously disabled in raid to prevent you from accidently swapping with your dogtag case and losing it all. That’s still disabled, but you can now swap *equipped* containers. This will let you swap your backpack with a bigger one off a dead body.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/2.5.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 6371,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-17T17:10:50.000000Z",
+      "created_at": "2024-11-17T17:10:50.000000Z",
+      "updated_at": "2026-05-14T03:22:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/6870ed7d-19ad-4dcd-a3a4-4f76589b1301?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A53%3A07Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-2.5.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A52%3A29Z&ske=2026-08-01T20%3A53%3A07Z&sks=b&skv=2018-11-09&sig=gwzv6P6kVA55X72y0txBJRbqppa5D9Y149e73nS4o2k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-2.5.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3618,
+      "hub_id": 10661,
+      "version": "2.0.4",
+      "description": "<p>- Fixed more multiselect issues stemming from 3.9 refactor</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/2.0.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 966,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-09T08:56:34.000000Z",
+      "created_at": "2024-07-09T08:56:34.000000Z",
+      "updated_at": "2026-05-14T03:54:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/a4fd451d-212f-4db3-ac91-16c0a64304c2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A27Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-2.0.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A25Z&ske=2026-08-01T21%3A00%3A27Z&sks=b&skv=2018-11-09&sig=FU3rg3UOlxFjMzxqEYwMPGMQ9UbWt2xZ1b3%2BanJFfMw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ5MiwibmJmIjoxNzg1NjE1MTkyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.G6YoUmRHppq68WL4yNli2Bhxrc-59o_9W0QNNk9p4TY&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-2.0.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3727,
+      "hub_id": 10528,
+      "version": "2.0.0",
+      "description": "<p>Updated for 3.9.0!</p>\n<p>Testing was a little rushed, let me know if anything isn’t working as expected.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 1163,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T04:54:13.000000Z",
+      "created_at": "2024-07-07T04:54:13.000000Z",
+      "updated_at": "2026-05-14T03:55:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/0507d76c-9e55-4d5a-8c8b-b59fe41d716e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A38Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A29Z&ske=2026-08-01T21%3A03%3A38Z&sks=b&skv=2018-11-09&sig=%2F0HVJMFyl2G%2FLoTLzkbzf7MknsNfcQWUAOcq7rXmbxQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMCwibmJmIjoxNzg1NjE1MjAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.agGjWEo-cuQ-mHBowlK2KFgrMa3o6T5gapl9kkU0-RQ&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3774,
+      "hub_id": 10476,
+      "version": "1.7.5",
+      "description": "<p>- Fixed issue when closing inventory while dragging a selection box</p>\n<p>- Fix context menu flyout to open on the right side. BSG always intended this, but their code is literally broken and always switches it to the left side. Configurable, if you’re really used to the old way and don’t want to change.</p>\n<p>This is the last version for SPT 3.8.X.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/1.7.5",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 1161,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T17:43:09.000000Z",
+      "created_at": "2024-07-06T17:43:09.000000Z",
+      "updated_at": "2026-05-14T03:56:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/ff24c8a3-578f-4d6d-8282-0f732dcecf31?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A52%3A01Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-1.7.5.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A12Z&ske=2026-08-01T20%3A52%3A01Z&sks=b&skv=2018-11-09&sig=0H1VxikKROuTNApVpJ0Yd0qa6wfzMda%2FfaQTUeX7DXg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMiwibmJmIjoxNzg1NjE1MjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.t6TfhpNitjvdWocHje3Fnos8Cvsc95hS2aHvi8_pX0s&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-1.7.5.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4058,
+      "hub_id": 10099,
+      "version": "1.6.1",
+      "description": "<p>- Restore back-compatibility with 3.8.0 #sorry #notsorry #youshouldupdate</p>\n<p>- Persist “Autoselect Similar” checkbox in the Add Offer window across sessions</p>\n<p>- Localize the “&lt; BACK” button added to the flea market 🌍</p>\n<p>- The existing “Autostack Ammo with FiR Ammo” feature will now allow you to top up ammo with found-in-raid ammo, and vice-versa.</p>\n<p>- The inspect window snap-left and snap-right buttons now have keyboard shortcuts (left arrow and right arrow by default) ⬅️➡️</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/1.6.1",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 246,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-29T22:22:50.000000Z",
+      "created_at": "2024-05-29T22:22:50.000000Z",
+      "updated_at": "2026-05-14T04:02:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/1ddc9576-46a1-4802-8067-af8d7bea84ae?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A51Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-1.6.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A13Z&ske=2026-08-01T20%3A59%3A51Z&sks=b&skv=2018-11-09&sig=NCm6tRRuHj7AL%2FsTY9BLhUbPOMuwQ01HRSqwWo%2Bnm9c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMiwibmJmIjoxNzg1NjE1MjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.t6TfhpNitjvdWocHje3Fnos8Cvsc95hS2aHvi8_pX0s&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-1.6.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4071,
+      "hub_id": 10085,
+      "version": "1.6.0",
+      "description": "<p>This particular version requires SPT <strong>3.8.2</strong> or greater for the feature “Show Required Quest for Locked Offers”. Version 1.6.1 or later does not, so if for some weird reason you’re installing 1.6.0 directly, be aware.</p>\n<p>- Now with a server component to enable certain features</p>\n<p>- Auto-switch between buy/sell when trading (just click or control-click items)</p>\n<p>- Insure items directly from the context menu</p>\n<p>- Autofill quest items when turning in</p>\n<p>- Autofocus number field in flea barter offers</p>\n<p>- Separate mousewheel scroll speed when in raid (advanced setting, select advanced settings to see it)</p>\n<p>- Remember if you had the upgrade view active when leaving hideout</p>\n<p>Bug fixes</p>\n<p>- Setting flea offer prices by clicking market values now works for values over 10 million</p>\n<p>- Locked trader offers will now show what quest unlocks it (for real, 3rd time’s the charm 🤞)</p>\n<p>- Re-enabled swapping items in the post-raid scav transfer screen</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/1.6.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.2",
+      "downloads": 1092,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-28T18:30:14.000000Z",
+      "created_at": "2024-05-28T18:30:14.000000Z",
+      "updated_at": "2026-05-14T04:02:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/1ef523f1-f938-49c3-9b68-4cfa80dcbe23?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A51%3A42Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-1.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A59Z&ske=2026-08-01T20%3A51%3A42Z&sks=b&skv=2018-11-09&sig=tGbXLxLCSd%2B%2F%2F%2BgBEbwDOyeS7qwBIbQrNNO4EMnCwoE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMiwibmJmIjoxNzg1NjE1MjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.t6TfhpNitjvdWocHje3Fnos8Cvsc95hS2aHvi8_pX0s&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-1.6.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4157,
+      "hub_id": 9986,
+      "version": "1.4.2",
+      "description": "<p>- Blocked swapping within the scav inventory, on the post-raid transfer screen <em>only</em>. Due to a bug in the server (fixed in 3.9.0), this would cause a server error that would force a client restart.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/1.4.2",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 1899,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-19T21:43:36.000000Z",
+      "created_at": "2024-05-19T21:43:36.000000Z",
+      "updated_at": "2026-05-14T04:03:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/24a4f6a8-cd6e-4354-a7aa-fe1f952a6a43?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A52%3A05Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-1.4.2.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A36Z&ske=2026-08-01T20%3A52%3A05Z&sks=b&skv=2018-11-09&sig=TLAwTd9lHY%2BhOzkgrCDVpWZgjJsv6JJbKr5UExA8fNo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMiwibmJmIjoxNzg1NjE1MjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.t6TfhpNitjvdWocHje3Fnos8Cvsc95hS2aHvi8_pX0s&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-1.4.2.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4308,
+      "hub_id": 9794,
+      "version": "1.3.4",
+      "description": "<ul>\n<li>Fix nested mod stats not showing buttpad stats, because of course buttpads are somehow special 🍑</li>\n<li>Fix BSG not knowing how to display MOA correctly and rounding deltas to the nearest integer</li>\n<li>Fix Show/Hide mod stats not updating in other windows if you had multiple inspect panels open</li>\n<li>Fix quickslot bindings persisting on items that are swapped to non-bindable places (compatible with Use Items Anywhere) 4️⃣5️⃣6️⃣</li>\n<li>Fix mods swapping with weapons when adding the mod would increase the size of the weapon beyond available room</li>\n<li>Fix items not being hovered after swapping, so you would have to mouse-off then mouse-over them again to interact 🖱️</li>\n<li>Inspect panel shows stat difference when swapping mods, both dragging onto the slot or dragging the slotted item over a different item in your stash or inventory</li>\n<li>Fix non-fatal exception that got logged when you tried to swap a container into itself</li>\n<li>Confirm compatible with 3.8.1 ✅</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1342/ui-fixes/1.3.4",
+      "content_length": null,
+      "spt_version_constraint": "3.8.1",
+      "downloads": 2144,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-06T23:16:22.000000Z",
+      "created_at": "2024-05-06T23:16:22.000000Z",
+      "updated_at": "2026-05-14T04:06:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09c9279882a29edb9b18c0054376ef7476a5717dc9785d6d6c59616ffd4d173e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/788704178/90c36153-5a21-450b-a83f-165b99c2ce77?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A08Z&rscd=attachment%3B+filename%3DTyfon-UIFixes-1.3.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A34Z&ske=2026-08-01T20%3A50%3A08Z&sks=b&skv=2018-11-09&sig=%2F4mUAoon59AcbPvIiprCRDpdvxIzcJNLQvJFdvQugzY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwMiwibmJmIjoxNzg1NjE1MjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.t6TfhpNitjvdWocHje3Fnos8Cvsc95hS2aHvi8_pX0s&response-content-disposition=attachment%3B%20filename%3DTyfon-UIFixes-1.3.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 479,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:09.214Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "type": "addon",
+  "id": 21,
+  "name": "anOrangeDoggo's SAIN Presets",
+  "slug": "anorangedoggos-sain-presets",
+  "teaser": "A collection of personal presets aimed for fun gunfights for varying levels of players",
+  "thumbnail": "https://forge-static.sp-tarkov.com/addons/JoLISyUMDpgUbHt6jwKG1BJjIutS4R8an9TzzRxZ.png",
+  "downloads": 3326,
+  "description": "<h1>anOrangeDoggo’s SAIN Presets</h1>\n<p>Just want to share the repo of my presets along with the commit history in the off chance it might help people make their own. I might make a wiki or something, idk. SoonTM. Maybe never.</p>\n<p>If you have questions, try look through the commit history. Or, search through the Discord conversations. Many topics related to the core gameplay aspects are mostly already answered.</p>\n<p>I also want to give a shout-out to Solarint, the maker of SAIN, and all the maintainers and contributors for the amazing mod, and the SPT devs for years of SPT support.</p>\n<h2>How Are These Compared to XYZ</h2>\n<p>My presets are all Default SAIN through and through, so you should be expecting standard SAIN experience in the bot behavior department.</p>\n<p>The only things I made significant changes to are related to aiming, shooting, and hearing stuff. And a bit on the vision speed and some other stuff I probably forget. Again, it’s all in the commit history.</p>\n<p>Many areas are standardized to Default, with mostly aiming and shooting varied for Hard and Challenging. Challenging is more difficult than Hard (I nO EnGlIsH SpOkE) as it offers substantially tighter shot grouping and faster aim time. Hard is essentially Default with basic knobs turned a bit more.</p>\n<p>Overall, I don’t really know. I haven’t played any other presets for weeks if not months now on top of jumping in and out of other games. All I can say is that they all should be easier than Twitch Players in the sense that they don’t give bots eagle eyes and extreme reaction time, and harder than SAIN’s Default because bots shoot more accurately. That leaves only one way to find out.</p>\n<p>Or, check out my gameplay of Challenging 0.2.1 (YMMV, obviously):</p>\n<div class=\"youtube-lite\" data-video-id=\"LN3b77atI2c\" data-embed-url=\"https://www.youtube-nocookie.com/embed/LN3b77atI2c?autoplay=1\"><img src=\"https://i.ytimg.com/vi/LN3b77atI2c/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<p>Note that bots walking around with their guns down aren’t part of my presets or SAIN. It’s an in-development mod by the creator of <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2003/hollywoodfx\" rel=\"noreferrer noopener\">HollywoodFX</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2201/hollywoodcam\" rel=\"noreferrer noopener\">HollywoodCam</a>. I highly recommend these mods.</p>\n<p>Here’s a gameplay with just SAIN, Acid’s bot mods, and other QoL, item, etc mods of my choice. I think this setup should be pretty close to what average SPT enjoyers have.</p>\n<div class=\"youtube-lite\" data-video-id=\"6WG1O9xDt0I\" data-embed-url=\"https://www.youtube-nocookie.com/embed/6WG1O9xDt0I?autoplay=1\"><img src=\"https://i.ytimg.com/vi/6WG1O9xDt0I/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<h2>Before You Install</h2>\n<p><strong>DO NOT</strong> report any bug or strange behaviour to SAIN’s maintainers during the use of my presets.</p>\n<p><em>DO NOT</em> view my presets in the in-game GUI. Simply select one without expanding/droping down anything. Some of the values are outside of the acceptable ranges and, upon revealing through the GUI, will be clamped to what are actually allowed. Although, unless you hit Save or Export All, it should not be affecting the presets. SAIN will work just fine even if some of the values are a bit odd.</p>\n<p>Nothing less of another mod will save you from head-eyes if that’s your kryptonite. I personally increase the head’s health to 85 via Server Value Modifier, so I can survive small to intermediate, high pen rounds. But anything bigger than that I’m cooked.</p>\n<p>If you find any issues, like bots not moving, are blind and/or deaf, etc, chances are you already have that before you even download the presets. Make sure everything is up-to-date and your standard SAIN is already working normally. <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2315/ombarella\" rel=\"noreferrer noopener\">Ombarella</a> is known to make bots go blind if not being configured correctly. I personally don’t use it.</p>\n<h2>Installation</h2>\n<p>If you download directly from the Forge, you should get the latest version of each preset all bundled in one zip and properly structured. You can extract the zip directly into your SPT folder.</p>\n<p>If you’re on the GitHub page, on the right side, under Releases, click Tags. Then download any version <code>0.2.0</code> or newer of the source code of your choosing preset. Then extract <code>anOrangeDoggo - &lt;difficulty&gt;</code> to your SAIN’s preset folder.</p>\n<p>The path should look like this: <code>&lt;SPT&gt;\\BepInEx\\plugins\\SAIN\\Presets\\&lt;Preset Folder&gt;</code>. For example, <code>SPT 4.0\\BepInEx\\plugins\\SAIN\\Presets\\anOrangeDoggo - Hard</code>.</p>\n<p>Since I have many presets available at once, each will have its own versioning to track the development, which is also independent of the others. The versioning of the bundle on the Forge will be incremented only when I decide to include any new version of a preset and thus does not represent the actual versioning.</p>\n<h2>See Also</h2>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1895/sain-twitch-players\" rel=\"noreferrer noopener\">Twitch Players</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1933/live-like-experience-sain-preset\" rel=\"noreferrer noopener\">Live Like Experience</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2374/try-to-act-human-sain-preset-unsupported\" rel=\"noreferrer noopener\">Try To Act Human</a></p>\n<p>and other presets since SPT 3.8-3.9 (don’t use them in 3.11 or 4.0, though).</p>\n<p>I learned a lot from these presets by going through their repo. Be sure to check them out, too!</p>\n<h2>Recommended Mods</h2>\n<p>I have my mod list on the GitHub page and I recommend them all. However, some of them directly impact my experience with bots. For example:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system\" rel=\"noreferrer noopener\">Acid’s Progressive Bot System</a> affects bots’ gears and thus how each Personality will be assigned. Better gears means higher chance of Chad and GigaChad, for example.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2097/abps-acids-bot-placement-system\" rel=\"noreferrer noopener\">Acid’s Bot Placement System</a> controls how bots spawn. The default settings should work just fine.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1925/nerfbotgrenades\" rel=\"noreferrer noopener\">NerfBotGrenades</a> since SAIN’s grenade settings aren’t working yet.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2190/recoil-rework\" rel=\"noreferrer noopener\">Recoil Rework</a> BSG’s recoil is boring. I use <code>1.0</code> for vertical recoil.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1431/dynamic-maps\" rel=\"noreferrer noopener\">Dynamic Maps</a> easily ESP your way to gunfights! Also invaluable for preset tuning.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/701/fontaines-fov-fix\" rel=\"noreferrer noopener\">Fontaine’s FOV Fix</a> I do enjoy zoom-in feature of Arma and Insurgency. This makes iron sights usable at longer ranges. By default, it does not do any zoom when you ADS.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1831/agony-sfx\" rel=\"noreferrer noopener\">Agony SFX</a> bullet wounds aren’t ant bites.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1760/audio-accessibility-indicators\" rel=\"noreferrer noopener\">Audio Accessibility Indicators</a> if you’re playing at night, or have trouble hearing things in Tarkov in general.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1575/increase-climb-height\" rel=\"noreferrer noopener\">Increase Climb Height</a> in case you want to out-maneuver the bots.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/addon/21/anorangedoggos-sain-presets",
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "mod_id": 791,
+  "is_detached": false,
+  "detached_at": null,
+  "published_at": "2026-01-03T06:00:00.000000Z",
+  "created_at": "2026-01-03T06:00:33.000000Z",
+  "updated_at": "2026-07-28T10:03:22.000000Z",
+  "owner": {
+    "id": 28315,
+    "name": "CuriousVoidling",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/90c87da4d31bec052704f013d3c3d38021a7028f_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-03-09T14:04:03.000000Z",
+    "updated_at": "2026-08-01T19:52:29.000000Z"
+  },
+  "additional_authors": [],
+  "mod": {
+    "id": 791,
+    "hub_id": 1062,
+    "guid": "me.sol.sain",
+    "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+    "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+    "teaser": "Bots that don't suck.",
+    "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+    "downloads": 1240976,
+    "favourites_count": 436,
+    "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+    "fika_compatibility": true,
+    "featured": true,
+    "contains_ads": false,
+    "contains_ai_content": false,
+    "shows_profile_binding_notice": false,
+    "cheat_notice": false,
+    "category_id": 5,
+    "published_at": "2023-03-09T02:46:00.000000Z",
+    "created_at": "2023-03-09T02:46:50.000000Z",
+    "updated_at": "2026-08-01T16:40:06.000000Z",
+    "owner": {
+      "id": 27463,
+      "name": "Solarint",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-23T17:11:59.000000Z",
+      "updated_at": "2026-07-10T04:50:24.000000Z"
+    },
+    "additional_authors": [
+      {
+        "id": 27605,
+        "name": "DrakiaXYZ",
+        "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+        "cover_photo_url": null,
+        "created_at": "2023-02-26T18:51:50.000000Z",
+        "updated_at": "2026-08-01T19:31:53.000000Z"
+      },
+      {
+        "id": 52282,
+        "name": "ArchangelWTF",
+        "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+        "cover_photo_url": null,
+        "created_at": "2024-05-20T14:55:34.000000Z",
+        "updated_at": "2026-08-01T16:40:09.000000Z"
+      }
+    ],
+    "category": {
+      "id": 5,
+      "hub_id": 22,
+      "title": "Bots",
+      "slug": "bots",
+      "description": ""
+    }
+  },
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/powerCasualUser/SAIN-Presets/tree/dev/challenging",
+      "label": "Challenging (Harder)"
+    },
+    {
+      "url": "https://github.com/powerCasualUser/SAIN-Presets/tree/dev/hard",
+      "label": "Hard"
+    },
+    {
+      "url": "https://github.com/powerCasualUser/SAIN-Presets",
+      "label": "Main Page"
+    }
+  ],
+  "versions": [
+    {
+      "id": 48,
+      "version": "0.2.0",
+      "description": "<h2>All Presets</h2>\n<ul>\n<li>Update presets to SAIN v4.4.0.</li>\n<li>Revert boosted audio distance from previous version of SAIN. It is not necessary anymore in SAIN v4.4.0.</li>\n<li>Adjust audio occlusion multipliers and (new) base footstep distances to make final sound ranges closer to what my ears can hear.</li>\n<li>Reduce max footstep distances and hear chances. (Experimental. Not sure how it will effect bots if at all.)</li>\n</ul>\n<h2>Challenging</h2>\n<ul>\n<li>Bump scatter bonus for red dots and optics, especially the latter.</li>\n</ul>\n<p>This version contains:</p>\n<ul>\n<li>Default v0.3.0</li>\n<li>Hard v0.3.0</li>\n<li>Challenging v0.3.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/21/anorangedoggos-sain-presets/0.2.0",
+      "content_length": 253168,
+      "mod_version_constraint": "~4.4.0",
+      "downloads": 2923,
+      "published_at": "2026-02-06T20:04:00.000000Z",
+      "created_at": "2026-02-06T20:04:25.000000Z",
+      "updated_at": "2026-07-28T10:03:22.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0e0fa9c4d5cfcc98e27385fbc5865c39fbb0e2717e879ac6479f80f66ba977ae",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1lymxVLgFHRYigWUcFH4z-7tJZierBlDl&export=download"
+      }
+    },
+    {
+      "id": 26,
+      "version": "0.1.0",
+      "description": "<p>Initial release of development builds.</p>\n<p>Audio distance in this version is boosted specifically for SAIN v4.3.1. If you use this version in SAIN v4.4.0+, revert global hearing distance to default.</p>\n<p>This version contains:</p>\n<ul>\n<li>Default v0.2.0</li>\n<li>Hard v0.2.0</li>\n<li>Challenging v0.2.1</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/21/anorangedoggos-sain-presets/0.1.0",
+      "content_length": 251807,
+      "mod_version_constraint": "4.3.1",
+      "downloads": 403,
+      "published_at": "2026-01-03T06:03:00.000000Z",
+      "created_at": "2026-01-03T06:03:43.000000Z",
+      "updated_at": "2026-07-28T09:59:25.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6da823de5033f8bf760ac35991656b52b44531cd6d97b9950441e1045e9c995d",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=14Ogj1DcLzumt3EEyoQMjsIPDdjcWIC1l&export=download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:10:49.811Z",
+    "discoveredBy": "addon-index",
+    "error": null
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2752,
+  "hub_id": null,
+  "guid": "com.maschine.dualsidedoorbreach",
+  "name": "DualSideDoorBreach",
+  "slug": "dualsidedoorbreach",
+  "teaser": "Don't tell me whether I should push or pull this door.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/lAKZzwW1hClmoOO8lDDbu8q3Hv4syMxL19PtLTZ5.png",
+  "downloads": 2176,
+  "favourites_count": 32,
+  "description": "<p>Tarkov doors have opinions. Hinge side only. Swing into your face. Locked for no reason. This mod disagrees.</p>\n<p>Breach doors from <strong>either side</strong> and have them swing <strong>away from you</strong> instead of into your face. Works with the normal F-menu breach action and with <strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2214/doordash\" rel=\"noreferrer noopener\">DoorDash by tarkin</a></strong> sprint-ram breaching.</p>\n<p>Vanilla only lets you breach from the hinge side and always kicks the door open in a fixed direction. This mod removes that restriction for normal doors while keeping vanilla behaviour for special one-way breach doors.</p>\n<hr />\n<h2>Features</h2>\n<ul>\n<li><strong>Dual-side breaching</strong> — breach operable doors from the front or back (F-menu and DoorDash)</li>\n<li><strong>Smart swing direction</strong> — doors open away from the side you are breaching from</li>\n<li><strong>One-way breach doors preserved</strong> — factory-style breach-only doors, still only work from the correct side</li>\n<li><strong>Locked doors with keys</strong> — require the matching key in your inventory to breach locked doors, and consume a key charge on breach</li>\n<li><strong>DoorDash compatible</strong> — optional compatibility patches</li>\n<li><strong>Lightweight</strong> — logic only runs during door interaction, no map-wide scanning</li>\n</ul>\n<hr />\n<h2>Highly recommended mod</h2>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2214/doordash\" rel=\"noreferrer noopener\">DoorDash by tarkin</a> allows sprint-ram breaching of doors</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/maschine34675/DualSideDoorBreach/blob/main/example.gif?raw=true\" alt=\"example\" /></p>\n<h2>Installation</h2>\n<ul>\n<li>As usual, unzip to your SPT directory</li>\n</ul>\n<hr />\n<h2>Configuration</h2>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Section</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>Enabled</code></td>\n<td>General</td>\n<td><code>true</code></td>\n<td>Master toggle for dual-side breaching</td>\n</tr>\n<tr>\n<td><code>AdjustOpenDirection</code></td>\n<td>General</td>\n<td><code>true</code></td>\n<td>Swing the door away from the breaching player</td>\n</tr>\n<tr>\n<td><code>AllowNonBreachableDoors</code></td>\n<td>General</td>\n<td><code>true</code></td>\n<td>Also allow breaching doors flagged as non-breachable in map data</td>\n</tr>\n<tr>\n<td><code>RequireMatchingKey</code></td>\n<td>Locked Doors</td>\n<td><code>true</code></td>\n<td>Locked doors need the matching key in your inventory to breach</td>\n</tr>\n<tr>\n<td><code>ConsumeKeyOnBreach</code></td>\n<td>Locked Doors</td>\n<td><code>true</code></td>\n<td>Use one charge of the matching key when breaching a locked door</td>\n</tr>\n<tr>\n<td><code>DoorDash</code></td>\n<td>Compatibility</td>\n<td><code>true</code></td>\n<td>Allow DoorDash sprint-ram from both sides (requires DoorDash)</td>\n</tr>\n</tbody>\n</table>\n<hr />\n<h2>Potential quirks</h2>\n<ul>\n<li>I’m pretty sure I’ve covered all edge cases, but if you encounter any doors that behave strangely, let me know.</li>\n<li>Depending on map layout, doors can clip through the walls if opened in the “unintended” direction.</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2752/dualsidedoorbreach",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to find the correct classes/methods to patch in the game’s source code. The thumbnail is AI generated.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-06-18T17:51:00.000000Z",
+  "created_at": "2026-06-18T17:43:21.000000Z",
+  "updated_at": "2026-07-28T09:38:57.000000Z",
+  "owner": {
+    "id": 109459,
+    "name": "maschine",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2xAHR3ttkN7Su6wHEefYq1aNQJLqsN3CqsMwuBpH_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-04-10T00:02:34.000000Z",
+    "updated_at": "2026-08-01T17:06:08.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/maschine34675/DualSideDoorBreach",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14103,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<ul>\n<li><strong>Added wrong-side resistance</strong> - increase the amount of kicks it takes to breach a door against its swing direction (default off)</li>\n<li><strong>Added breach without key</strong> - key-locked doors can be breached without their key, chance increases on each failed attempt (default off)</li>\n<li><strong>Added Fika support</strong> - important: install the mod on every machine, including the headless host</li>\n</ul>\n<p>See full <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/maschine34675/DualSideDoorBreach/blob/main/CHANGELOG.md\" rel=\"noreferrer noopener\">CHANGELOG.md</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2752/dualsidedoorbreach/1.1.0",
+      "content_length": 10684,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 928,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T18:35:00.000000Z",
+      "created_at": "2026-07-16T18:45:45.000000Z",
+      "updated_at": "2026-07-28T09:38:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/27f02ef694c0533ca2885242a785348cb469db21e96868da64d12eecad0326b5?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1273569819/9606a6fc-62a7-43b9-9621-a0bd3ecba67e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A24Z&rscd=attachment%3B+filename%3Dmaschine-DualSideDoorBreach-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A28Z&ske=2026-08-01T21%3A18%3A24Z&sks=b&skv=2018-11-09&sig=LaUr%2F9EKReTl5om%2BM%2FIRdX3C40vO9wQ%2B5lKZvaZexJg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&response-content-disposition=attachment%3B%20filename%3Dmaschine-DualSideDoorBreach-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13801,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2752/dualsidedoorbreach/1.0.0",
+      "content_length": 9494,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 1248,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-06-18T17:43:00.000000Z",
+      "created_at": "2026-06-18T17:47:21.000000Z",
+      "updated_at": "2026-07-28T09:16:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c73e287de060c1154ef5d599ac5c5bd7bcca0cd4d4b5ffb040d1ce63ddb82b2",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1273569819/a959f426-75b3-4351-a0b6-94c9bdf78759?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A47Z&rscd=attachment%3B+filename%3Dmaschine-DualSideDoorBreach-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A11Z&ske=2026-08-01T21%3A24%3A47Z&sks=b&skv=2018-11-09&sig=82tBMUPuHku99GeIwrWR7XrZ8mo2xw%2FuDhWG5ALvEDo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&response-content-disposition=attachment%3B%20filename%3Dmaschine-DualSideDoorBreach-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 39,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:27.968Z",
+    "discoveredBy": "seed"
+  }
+}

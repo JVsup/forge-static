@@ -1,0 +1,1131 @@
+{
+  "type": "mod",
+  "id": 2821,
+  "hub_id": null,
+  "guid": "com.sipto.roguesvraiders",
+  "name": "Raiders Vs Rogues",
+  "slug": "raiders-vs-rogues",
+  "teaser": "In a world of uncertainty, you can never be sure what you'll come across next. In true Tarkov fashion, Rogues and Raiders are now roaming the entire region. New brains",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/hCuQTC0CeInaUNUXCClzcekPFaI6nHIrYCrtSJc9.png",
+  "downloads": 2863,
+  "favourites_count": 17,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3>Overview</h3>\n<p>Adds roaming Rogue and Raider warbands that patrol, take ground and hunt across the map. They sit on top of the normal bot population and never eat scav or PMC spawn slots.</p>\n<h3>How they behave</h3>\n<p>Squads are a leader plus two to four others, three to five bodies. Each rolls separately for whether it starts on the map or arrives later, at roughly a 40/60 split, and the latecomers turn up between the 10% and 60% mark of the raid clock, scaled to that map’s timer. The place keeps changing after the first ten minutes.</p>\n<p>Rogues and Raiders are hostile to each other, and to the custom factions if you run them. How they treat you follows the <strong>Friendliness</strong> setting, which defaults to faction-authentic — Rogues keep their Lighthouse manners and warn USEC before shooting, BEAR gets no warning, Raiders shoot everyone.</p>\n<h3>Where they roam</h3>\n<table>\n<thead>\n<tr>\n<th>Faction</th>\n<th>Maps</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Rogues:</strong>    Customs, Woods, Shoreline, Lighthouse</td>\n<td></td>\n</tr>\n<tr>\n<td><strong>Raiders:</strong>    Reserve, both Factories, Interchange, Labs</td>\n<td></td>\n</tr>\n<tr>\n<td><strong>Both:</strong>    Streets, both Ground Zero tiers</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<p>Overlap maps roll for each faction independently, so those are where the two actually run into each other.</p>\n<h3>How hard they hit</h3>\n<p>Difficulty sits at impossible, weapons come in at 92–100% durability, armour spawns within 5 durability points of full, ammo is weighted 60/25/10 across the top three penetrating rounds per calibre with nothing below that ever rolled, and gear is gated to armour class 4 and up.</p>\n<p>Armour is stated in points rather than a percentage on purpose. SPT only applies a percentage band to armour on bots it considers PMCs, and <code>exUsec</code>/<code>pmcBot</code> aren’t in that set — so their armour starts at the item’s full durability and comes off by a flat roll of 0–5 points. What that means as a percentage depends on the piece: 5 points off a 15-durability helmet is a lot, off an 85-durability shield it’s nothing.</p>\n<p>Understand this before you tune it: the durability, ammo and gear upgrades are faction-wide. They rewrite the shared exUsec and pmcBot data, so the ordinary Rogues and Raiders already on the map get them too, not just the squads this adds. Each has its own switch, so turn off what you don’t want. Difficulty is separate — <code>forceHardestDifficulty</code> is what pushes the vanilla waves onto the same tier.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h3>Requirements</h3>\n<ul>\n<li><strong>DrakiaXYZ-BigBrain</strong> — required.</li>\n<li><strong>SAIN</strong> — optional, read by reflection rather than referenced. Without it squads still spawn and roam, they just fight on the vanilla brain.</li>\n<li><strong>DrakiaXYZ-Waypoints</strong> — optional, but its expanded navmesh noticeably improves patrol coverage.</li>\n<li><strong>Fika</strong> — only for co-op.</li>\n</ul>\n<p>A missing dependency logs a warning rather than crashing you out.</p>\n<h3>Steps</h3>\n<ol>\n<li>Download the archive.</li>\n<li>Extract it into your SPT folder — the one holding <code>SPT.Server.exe</code> and <code>BepInEx</code>.</li>\n<li>Merge the <code>user</code> and <code>BepInEx</code> folders when Windows asks.</li>\n<li>Restart the SPT server.</li>\n</ol>\n<h3>Fika</h3>\n<p>The server mod goes with the SPT server, and the client plugin goes on whichever machine owns the raid, headless included. Everyone else needs nothing.</p>\n<p>Squad sizes assume the <strong>As Online</strong> bot amount setting.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><h3>Server — <code>user/mods/RoguesVRaidersServer/config.jsonc</code></h3>\n<p>Restart the server after editing.</p>\n<ul>\n<li><strong>Where they spawn</strong> — <code>rogueMaps</code>, <code>raiderMaps</code>, <code>overlapMaps</code>, plus <code>chanceOverrides</code> for per-map tuning</li>\n<li><strong>How many</strong> — <code>escortAmount</code>, a list rolled per squad</li>\n<li><strong>When</strong> — <code>startSpawnShare</code>, <code>midRaidEarliest</code>, <code>midRaidLatest</code></li>\n<li><strong>How hard</strong> — <code>difficulty</code>, <code>forceHardestDifficulty</code>, <code>upgradeDurability</code>, <code>upgradeAmmo</code>, <code>ammoRankWeights</code>, <code>upgradeGearTier</code>, <code>minArmorClass</code></li>\n</ul>\n<p><code>forceHardestDifficulty</code> does less than the name suggests: it only pushes the vanilla exUsec and pmcBot waves onto the same difficulty tier. Switching it off still leaves the gear and ammo upgrades reaching vanilla spawns — those are governed by <code>upgradeDurability</code>, <code>upgradeAmmo</code> and <code>upgradeGearTier</code> instead.</p>\n<h3>Client — F12, section <em>Rogues V Raiders</em></h3>\n<p>Enable, Rogue Squads, Raider Squads, Friendliness, Roaming Objectives, Objective Layer Priority, Lockdown POIs, Lockdown Delay, Broad AI Hostility, Hunt and Takeover, Min Spawn Distance, Alive Bot Ceiling, Force Spawn Over Bot Cap, Scale Chance By Level, Verbose Logs.</p>\n<h3>Level scaling overrides the config</h3>\n<p><strong>Scale Chance By Level</strong> is on by default, and while it’s on the level curve replaces every chance number you set — <code>rogueChance</code>, <code>raiderChance</code>, <code>overlapChance</code> and the per-map overrides alike. That curve is 10% at level 15, +5% every 5 levels, capped at 25%.</p>\n<p>Set a chance in the config, see nothing change, that’s why. Turn the toggle off and your numbers take over.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><h3>Acid’s Bot Placement System</h3>\n<p>ABPS rebuilds <code>BossLocationSpawn</code> from scratch at boot and after every raid, which wipes anything anyone else injected. Handled — the injector re-runs on raid start, after ABPS’s pass and before the raid snapshot is taken. Nothing for you to configure.</p>\n<h3>ORBIT</h3>\n<p>Keep ORBIT’s <strong>Vanilla raiders (RESTART)</strong> set to <code>true</code>. With it true, ORBIT leaves exUsec and pmcBot alone. Flip it false and ORBIT starts driving the same bots this does, and the two will fight over the mover.</p>\n<h3>SAIN</h3>\n<p>Soft integration. SAIN keeps running its own targeting, aiming and personality on these squads the same as any other exUsec or pmcBot.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2821/raiders-vs-rogues",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was utilized to create the Mod Photo as well as audit the mod.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-07-16T00:40:00.000000Z",
+  "created_at": "2026-07-16T01:21:26.000000Z",
+  "updated_at": "2026-07-30T06:02:06.000000Z",
+  "owner": {
+    "id": 117959,
+    "name": "Sipto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-07-13T07:04:33.000000Z",
+    "updated_at": "2026-08-01T17:46:06.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CameronsWorks/RoguesVRaiders",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14292,
+      "hub_id": null,
+      "version": "1.6.0",
+      "description": "<h1>Rogues V Raiders 1.6.0</h1>\n<p><strong>Warband squads now spawn at least 200 m from every player</strong>, measured when they actually spawn — at\nthe exact points they take, not the zone’s centre, and not where people stood at raid start.</p>\n<ul>\n<li>The F12 slider is now <strong>Min Distance From Players (m)</strong> (0–500, default 200). It replaces <em>Min Spawn\nDistance</em>, whose old saved value is ignored — everyone starts on the new default.</li>\n<li>The scheduler still holds a squad while a player is near its zone, so most spawns land well past the\nfloor. A zone that never opens up — someone camping it on a small map — fields its squad at the\nfarthest points it has after five minutes rather than skipping it, so Factory and Labs keep their\nraiders.</li>\n<li>Squads without a named zone, which previously skipped the distance check entirely, are covered too:\nthe floor is enforced at point selection, wherever the squad ends up spawning.</li>\n</ul>\n<h2>Files</h2>\n<p><code>RoguesVRaiders-1.6.0.zip</code>\nSHA-256: <code>D42C9D7233B27BCF2875827712A157C5176F8C96C2C59D547F9E0B3E5BE3EA59</code></p>\n<h2>VirusTotal</h2>\n<p>All three DLLs clean, 0/74:</p>\n<ul>\n<li><code>RoguesVRaiders.dll</code>\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/b29bd42ab3669610e003426c202dc84f192489d6dff1facd23a3b3a70038ec3b\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/b29bd42ab3669610e003426c202dc84f192489d6dff1facd23a3b3a70038ec3b</a></li>\n<li><code>RoguesVRaiders.Core.dll</code>\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb</a></li>\n<li><code>RoguesVRaidersServer.dll</code>\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791</a></li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2821/raiders-vs-rogues/1.6.0",
+      "content_length": 59310,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 430,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-30T01:03:00.000000Z",
+      "created_at": "2026-07-30T01:06:28.000000Z",
+      "updated_at": "2026-07-30T06:02:05.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240946,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88733,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23348,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11394,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb",
+          "label": "Core"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/7f24e199-8bad-4911-85c1-aa4641ce0955?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A46Z&rscd=attachment%3B+filename%3DRoguesVRaiders-1.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A06Z&ske=2026-08-01T21%3A22%3A46Z&sks=b&skv=2018-11-09&sig=2ChFs4FlkJKb2AbBre1iB%2BPUG8U1WRVZNwrXUObvK%2Fs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14251,
+      "hub_id": null,
+      "version": "1.5.0",
+      "description": "<p>Faction mods now actually fight the warbands, both ways round.</p>\n<ul>\n<li><strong>Third-party factions are hostile to Rogues <em>and</em> Raiders, and they to it.</strong> Every faction mod decides for itself who its bots fight, and they don’t agree with each other. UNTAR, for one, ships counting neither Rogues nor Raiders an enemy — so a UNTAR patrol and a warband could share a map as neutrals and walk straight past each other. RUAF, by contrast, already had it wired both ways. Whichever faction mods you have installed, their bots and both warbands are now hostile to each other from the moment they spawn, rather than relying on this mod catching up to them mid-raid.</li>\n</ul>\n<p>The game decides hostility by role, so this reaches ordinary Lighthouse Rogues and Reserve Raiders as well, not only the squads this mod adds. Set <code>customFactionHostility</code> to <code>false</code> in the server config to leave every faction mod’s own wiring exactly as it shipped, or list individual bot type names in <code>customFactionExclusions</code> to spare just those.</p>\n<h2>Install</h2>\n<p>Extract into your SPT folder, the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>. Merge <code>SPT</code> and <code>BepInEx</code> when Windows asks, then restart the server. That puts <code>RoguesVRaidersServer</code> in <code>SPT/user/mods/</code> and <code>RoguesVRaiders</code> in <code>BepInEx/plugins/</code>.</p>\n<p><strong>If you have tuned your config, back it up first.</strong> The archive ships a default <code>config.jsonc</code>, and extracting over an existing install will overwrite yours.</p>\n<p>Upgrading from 0.1.1 or earlier: those builds put the server mod in <code>user\\mods\\RoguesVRaidersServer</code> at the install root, where the server never read it. Delete that stray <code>user</code> folder - the real one is <code>SPT\\user\\mods\\RoguesVRaidersServer</code>.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2821/raiders-vs-rogues/1.5.0",
+      "content_length": 59310,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 487,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-27T07:55:00.000000Z",
+      "created_at": "2026-07-27T07:56:19.000000Z",
+      "updated_at": "2026-07-30T06:02:06.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240946,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88733,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23348,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11394,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bce307c7f690d2c458c3f4b6ed42b6249028c4509a459e0b87fe55ec5e98e2df",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/58485f7523b13438945e8417c39362d2e256068b2275fb6d7970c33ca25d655c",
+          "label": "Core"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/d143916b60328ef3008c0203329d3e764adc595cf7a28cfd6622543389f17447",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/7f24e199-8bad-4911-85c1-aa4641ce0955?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A46Z&rscd=attachment%3B+filename%3DRoguesVRaiders-1.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A06Z&ske=2026-08-01T21%3A22%3A46Z&sks=b&skv=2018-11-09&sig=2ChFs4FlkJKb2AbBre1iB%2BPUG8U1WRVZNwrXUObvK%2Fs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14152,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<p>Co-op hardening. Only matters on a Fika host running other spawn mods, but there’s no reason to skip it.</p>\n<ul>\n<li><strong>Squad waves can no longer be torn by overlapping raids.</strong> On a host with more than one group, one raid ending while another starts could have this mod and Wedge rewriting the same map’s spawn-wave list at the same moment. Those rewrites now lock on the map itself — the same convention Wedge uses, so the two queue instead of colliding.</li>\n</ul>\n<p>Numbering jumps straight from 0.1.3 to 1.4.0. Nothing was released in between; this is the same mod, just off the 0.x line.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2821/raiders-vs-rogues/1.4.0",
+      "content_length": 53348,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 876,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T19:00:00.000000Z",
+      "created_at": "2026-07-19T19:00:54.000000Z",
+      "updated_at": "2026-07-28T09:42:25.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240946,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88733,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23348,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11394,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1174af5dbdd415bd959f4cd9045a54a75f9f395f19fb4a9dc5410582b4d5445e",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/0d3ca9008f7555331240c1ffba320343987b0ce99711b166fa3dcf96661141d9",
+          "label": "Core"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/4b1664b2509cfd39eb84b7ba9a7a8e344b078eaab5eeb69084a28b1b6c25d9ba",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/c6681180-6b1a-4c80-bd02-0d9295472d02?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A12Z&rscd=attachment%3B+filename%3DRoguesVRaiders-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A09Z&ske=2026-08-01T21%3A08%3A12Z&sks=b&skv=2018-11-09&sig=7tOUVKvolX0bRMOJJdkexlzhrNIOYDYJ1%2BOK3fuiE38%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14096,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>check description</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2821/raiders-vs-rogues/1.0.0",
+      "content_length": 50669,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 857,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T06:14:00.000000Z",
+      "created_at": "2026-07-16T01:23:34.000000Z",
+      "updated_at": "2026-07-28T09:38:45.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240946,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88733,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23348,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11394,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aab1123a82835e435e9446734ca991bfd5cd92d1c0a731e62b2c13e1956f4efb",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/892d8b129526a2fa060fa089f00005b0af63facb58e94703a3294143dbe48ec3",
+          "label": "Core"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/286a1fb630ae2f289469adca1ff6dc8806cbf312e2442e02f4db3f7e0f4dc908",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/af7380a4-8319-43e7-907e-1d1bc625c151?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A17Z&rscd=attachment%3B+filename%3DRoguesVRaiders-0.1.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A26Z&ske=2026-08-01T21%3A09%3A17Z&sks=b&skv=2018-11-09&sig=Jc0bs1dpG839TLs0VyPGa76ACgPlWbhtZe6YNF0R0Qk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-0.1.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14138,
+      "hub_id": null,
+      "version": "0.1.3",
+      "description": "<p>Bug fixes. Worth taking if you run this at all, and especially if you run Waypoints.</p>\n<ul>\n<li><strong>Squad members no longer judder on the spot.</strong> Followers were being re-issued a move order every single frame, and that order carried a flag that has the game teleport a bot to its nearest cover node whenever it can’t path to where it was sent. A follower’s formation slot lands somewhere unreachable often enough that this showed up in raid as bots stuttering instead of following. It’s more noticeable with <strong>DrakiaXYZ-Waypoints</strong> installed, since the wider navmesh produces more of those spots. Orders are now throttled per bot, and issued without the flag that teleports.</li>\n<li><strong>A bad config value no longer stops your server from starting.</strong> An empty <code>escortAmount</code>, a chance of 5000, a <code>null</code> where a list belongs — any of those used to throw during boot, and because nothing upstream catches it, the whole SPT server refused to start behind a stack trace that pointed nowhere near this mod. Values are now checked as they load: anything unusable clamps into range or reverts to its default and says which in the server log, and a config that can’t be used at all leaves this mod inert for the session instead of taking the server down with it.</li>\n<li><strong>SAIN integration fails the right way round.</strong> It now tells “SAIN isn’t installed” apart from “SAIN is installed but a version change made it unreadable”, and in the second case hands movement back to SAIN rather than fighting it for control of the bot.</li>\n<li>The server DLL no longer carries build-machine folder paths.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2821/raiders-vs-rogues/0.1.3",
+      "content_length": 53330,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 213,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T02:52:00.000000Z",
+      "created_at": "2026-07-19T02:53:00.000000Z",
+      "updated_at": "2026-07-28T09:41:21.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240946,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88733,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 1594,
+          "hub_id": 2180,
+          "guid": "com.acidphantasm.progressivebotsystem",
+          "name": "APBS - Acid's Progressive Bot System",
+          "slug": "apbs-acids-progressive-bot-system",
+          "teaser": "Fully customizable progression system. By default, all AI will level with you, have appropriate gear for their level, and might be a tad more dangerous due to their progression. Everyone has something worth stealing or scavenging!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/2180.png",
+          "downloads": 208907,
+          "favourites_count": 217,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2024-07-26T20:03:00.000000Z",
+          "created_at": "2024-07-26T20:03:35.000000Z",
+          "updated_at": "2026-07-28T09:14:00.000000Z",
+          "owner": {
+            "id": 48110,
+            "name": "acidphantasm",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-04-11T21:22:35.000000Z",
+            "updated_at": "2026-08-01T18:53:12.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13756,
+              "hub_id": null,
+              "version": "2.2.1",
+              "description": "<h3><strong>This version will only work for SPT ~4.0.9+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>WebConfig toggle to use dynamic mod weapon importing</li>\n<li>WebConfig toggle to use dynamic mod equipment importing</li>\n<li>WebConfig toggle &amp; slider to control mod equipment import values for Scavs</li>\n<li>WebConfig sliders for dynamic importing</li>\n<li>WebConfig debug toggle to log import tuning details when using dynamic (also a bot to check against and tier)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Updated ItemImportService logic adjusted to handle using static or dynamic importing</li>\n<li>Updated forward compatible config loading to remove unused keys</li>\n<li>Updated default config values</li>\n<li>Updated update notice to only compare major versions</li>\n<li>Changed tiering logic for attachments to be stat band based instead of hard thresholds</li>\n<li>Added charging handles to mod import tiering logic</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved namespace naming because someone was complaining about it</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1594/apbs-acids-progressive-bot-system/2.2.1",
+              "content_length": 1018244,
+              "spt_version_constraint": "~4.0.9",
+              "downloads": 24295,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-06-12T05:23:00.000000Z",
+              "created_at": "2026-06-12T05:24:07.000000Z",
+              "updated_at": "2026-07-28T09:14:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2706,
+          "hub_id": null,
+          "guid": "com.chazut.orbit",
+          "name": "ORBIT",
+          "slug": "orbit",
+          "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+          "downloads": 23348,
+          "favourites_count": 196,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": true,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2026-06-04T06:56:00.000000Z",
+          "created_at": "2026-05-27T21:33:27.000000Z",
+          "updated_at": "2026-07-28T09:24:43.000000Z",
+          "owner": {
+            "id": 53567,
+            "name": "Chazut",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2024-06-11T18:31:06.000000Z",
+            "updated_at": "2026-08-01T14:44:30.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13966,
+              "hub_id": null,
+              "version": "1.2.1",
+              "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+              "content_length": 206097,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 11394,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-02T20:39:00.000000Z",
+              "created_at": "2026-07-02T20:39:21.000000Z",
+              "updated_at": "2026-07-28T09:24:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9ba8ccd9cd19103564b798b3c26c7e35b0cde603e472f33f32925266f326f6d9",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/892d8b129526a2fa060fa089f00005b0af63facb58e94703a3294143dbe48ec3",
+          "label": "Core"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/002721a486cb702c1fb4be7ae05bc17d702ce0bfc46bd83c491329f6128e718b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/e4ca0029-dd23-4d27-b85f-458af1ec5a39?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A17Z&rscd=attachment%3B+filename%3DRoguesVRaiders-0.1.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A40Z&ske=2026-08-01T21%3A26%3A17Z&sks=b&skv=2018-11-09&sig=MiZbvhEkieUNRYGpC7f1%2Bgp7mk5EV9SGeeAXRMN54IE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-0.1.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 34,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:51:37.399Z",
+    "discoveredBy": "seed"
+  }
+}

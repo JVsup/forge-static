@@ -1,0 +1,191 @@
+{
+  "type": "mod",
+  "id": 2510,
+  "hub_id": null,
+  "guid": "com.fanteeek.fikasync",
+  "name": "FikaSync",
+  "slug": "fikasync",
+  "teaser": "A simple tool for sync your game profile with friends via GitHub.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/R0sRHZVdisBr8oYUIf0vucOAidMX2KdTu1ZLUonT.png",
+  "downloads": 3514,
+  "favourites_count": 17,
+  "description": "<p><strong>FikaSync</strong> is an automated tool developed for me and my friends. It allows you and your friends to easily synchronize game profiles when launching a server via a private GitHub repository. (The repository acts as cloud storage for all your profiles.)</p>\n<h2>Features</h2>\n<ul>\n<li><strong>No Manual File Transfers:</strong> Eliminates the need to manually send profiles to the host or transfer them back to clients after the game. Each player’s progress is automatically updated on the server.</li>\n<li><strong>.fikaignore Support</strong>: Full control over your shared data. List specific profile files or directories in a .fikaignore file (similar to .gitignore) to prevent them from being uploaded to the shared repository (e.g., for keeping a solo profile private).</li>\n</ul>\n<h2>How It Works</h2>\n<ol>\n<li>The host launches FikaSync. The tool downloads the latest profiles from the repository, ensuring that the host’s local profiles are up to date for all participants. It then automatically launches SPT.Server and SPT.Launcher.</li>\n<li>Play together enjoy the session. All local profiles are saved as usual.</li>\n<li>After the session, the host closes FikaSync. The tool automatically commits all changes made to the profiles and sends them back to the shared repository.</li>\n<li>If the host changes to another person, the host launches FikaSync. It will download the latest new profiles from the repository to your local computer, saving your progress.</li>\n</ol>\n<h2>Prerequisites</h2>\n<ol>\n<li>Need to install <a target=\"_blank\" class=\"external-link\" href=\"https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-9.0.9-windows-x64-installer\" rel=\"noreferrer noopener\">.NET 9</a> <em>(If you have a working SPT, you don’t need it.)</em></li>\n<li>A <strong>Private GitHub Repository</strong> to store the profiles. <em>(Only one person needs to create a repository.)</em></li>\n<li>A <strong>GitHub Fine-grained Personal Access Token</strong> with <strong>Contents</strong> -&gt; <strong>Read and Write</strong> permissions (scoped specifically to your repository).</li>\n</ol>\n<h3>How to Create Private Repository</h3>\n<ol>\n<li>You need to be loggined in Github</li>\n<li>Go here <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/new\" rel=\"noreferrer noopener\">Create repository</a></li>\n<li>Give any name to the repository</li>\n<li>Choose visibility to <strong>Private</strong></li>\n<li>Click <strong>Create repository</strong></li>\n</ol>\n<h2>How to get Fine-grained Personal Access Token</h2>\n<ol>\n<li>You need to be loggined in Github</li>\n<li>Go here <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/settings/personal-access-tokens/\" rel=\"noreferrer noopener\">Personal Access Tokens</a></li>\n<li>Click <strong>Generate a new token</strong></li>\n<li>Give it any name</li>\n<li>Select the token expiration date (usually 30 days, after which it will expire)</li>\n<li>Below, select Only select repositories and choose your repository (if you don’t have it, you need <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/new\" rel=\"noreferrer noopener\">Create repository</a>)</li>\n<li>Below, add the <strong>Contents</strong> permission</li>\n<li>For the contents permission, make sure that <strong>Read and Write</strong> rights are enabled!</li>\n<li>Click the <strong>Generate token</strong> button</li>\n</ol>\n<h2>FAQ</h2>\n<p><strong>Q: Do my friends need to create repositories and configure FikaSync?</strong></p>\n<p><strong>A:</strong> No, only one person needs to create the repository! When you first launch FikaSync, it will ask for a GitHub token and the repository URL (it will then be saved in the .env file, where you can edit it if necessary). Once everything is set up, you can simply send your friends the ready-made .env file, which will already contain the token and repository link. (The .env file is located in the same directory as FikaSync.exe.)</p>\n<p><strong>Q: Do I need FikaSync if my friends and I have a separate dedicated PC/VPS with SPT Server running 24/7?</strong></p>\n<p><strong>A:</strong> No, you don’t need it. It’s necessary for those who have different hosts. Today, a friend with a powerful PC launches a server, tomorrow you want to play alone, but with up-to-date profiles, without transferring your profile from his PC to yours.</p>\n<h2>Getting Started</h2>\n<h3>1. Installation</h3>\n<p>Download the latest <code>FikaSync.exe</code>\n<strong>Important:</strong> Place the executable inside your <strong>root game folder</strong> (right next to <code>EscapeFromTarkov.exe</code>).</p>\n<h3>2. Configuration</h3>\n<p>When you first launch the app, you will be prompted to enter your GitHub token and repository URL or you can create a file named <code>.env</code> next to the executable (<code>.exe</code>). Open it with Notepad and add your settings:</p>\n<pre><code># Your GitHub Fine-grained Token\nGITHUB_PAT=github_pat_...\n\n# The HTTPS URL of your private repository\nREPO_URL=https://github.com/YourUsername/Your-Repo-Name\n</code></pre>\n<h2>Usage</h2>\n<ol>\n<li>Run <code>FikaSync.exe</code>.</li>\n<li>Wait for the tool to sync profiles and launch the server.</li>\n<li>Play the game!</li>\n<li>When you are done playing, close the game and <strong>press [ENTER]</strong> in the FikaSync console window to upload your progress to the repository.</li>\n</ol>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2510/fikasync",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2025-12-23T11:41:00.000000Z",
+  "created_at": "2025-12-23T07:00:05.000000Z",
+  "updated_at": "2026-07-28T07:57:16.000000Z",
+  "owner": {
+    "id": 97943,
+    "name": "fanteeek",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/0UkPCsNoHKDP32vvPmfcPoJCuL6jeaM0088gzc6l_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-12-23T05:44:40.000000Z",
+    "updated_at": "2026-07-15T08:16:23.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/fanteeek/fikasync",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12923,
+      "hub_id": null,
+      "version": "0.3.5",
+      "description": "<h1>Changes</h1>\n<h3>ADDED</h3>\n<ul>\n<li>Added InnerException output</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2510/fikasync/0.3.5",
+      "content_length": 952879,
+      "spt_version_constraint": "~4",
+      "downloads": 0,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-26T21:51:00.000000Z",
+      "created_at": "2026-01-26T20:51:17.000000Z",
+      "updated_at": "2026-07-28T07:57:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/883b43058ee1faf61cb2fdfb25e0fcf70dc496d859e07fe1fd958aa4917ae608?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f6b6cbd2-d65c-47aa-b893-2751930cebef?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A55Z&rscd=attachment%3B+filename%3DFikaSync.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A01Z&ske=2026-08-01T21%3A12%3A55Z&sks=b&skv=2018-11-09&sig=ZByuOFZ7yEcYO0q5t%2B4GZ9WHaNB0GiqJTmcmLnTeBFU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12922,
+      "hub_id": null,
+      "version": "0.3.5",
+      "description": "<h1>Changes</h1>\n<h3>ADDED</h3>\n<ul>\n<li>Added InnerException output</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2510/fikasync/0.3.5",
+      "content_length": 952879,
+      "spt_version_constraint": "~4",
+      "downloads": 2396,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-26T20:00:00.000000Z",
+      "created_at": "2026-01-26T20:50:45.000000Z",
+      "updated_at": "2026-07-28T07:57:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZmY5NzVkODg2YmI3ZWY3NTlmYTk5MDA4OTQyYzUxYWY6MTc2OTQ2MDU3MQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f6b6cbd2-d65c-47aa-b893-2751930cebef?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A55Z&rscd=attachment%3B+filename%3DFikaSync.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A01Z&ske=2026-08-01T21%3A12%3A55Z&sks=b&skv=2018-11-09&sig=ZByuOFZ7yEcYO0q5t%2B4GZ9WHaNB0GiqJTmcmLnTeBFU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12807,
+      "hub_id": null,
+      "version": "0.3.4",
+      "description": "<h1>Changes</h1>\n<h3>ADDED</h3>\n<ul>\n<li>Added support for SPT 3.11.x file structure</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2510/fikasync/0.3.4",
+      "content_length": 952882,
+      "spt_version_constraint": "~4",
+      "downloads": 464,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-06T23:14:00.000000Z",
+      "created_at": "2026-01-06T22:14:30.000000Z",
+      "updated_at": "2026-07-28T07:49:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/861b1b8f4125291d53e3b9acbdb60ab660261aa580fad1b30ab31894a3ad2d43?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/443f5d70-a0be-4b2d-b92d-bc6abe4b44f1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A30Z&rscd=attachment%3B+filename%3DFikaSync.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A26Z&ske=2026-08-01T21%3A08%3A30Z&sks=b&skv=2018-11-09&sig=rEhUQB6eCB3FBY6hKFWf11vnDnosmtozinr%2Byefci6s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12676,
+      "hub_id": null,
+      "version": "0.3.3",
+      "description": "<h1>Changes</h1>\n<h3>FIXED</h3>\n<ul>\n<li>Fixed issue when new created repository was empty</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2510/fikasync/0.3.3",
+      "content_length": 963439,
+      "spt_version_constraint": "~4",
+      "downloads": 505,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-25T20:37:00.000000Z",
+      "created_at": "2025-12-25T19:37:07.000000Z",
+      "updated_at": "2026-07-28T07:13:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZGRmZWNhNjNjNTEyZGQ1ZmZmY2EzYTMwMDk1ZTI0MTE6MTc2NjY5MTQxNQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f0545358-0798-4fb9-9983-5bcd61cad7f0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A08Z&rscd=attachment%3B+filename%3DFikaSync.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A00Z&ske=2026-08-01T21%3A14%3A08Z&sks=b&skv=2018-11-09&sig=Kp3hB0DtBOZ9x9lQPeSy6wkZWZdJU4SbXLrllB7vTcI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MywibmJmIjoxNzg1NjE1ODUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.SK9zz-txcvEze8sjtcvbfXsqa_Hd0Iq-yV-IoQWDfiQ&response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12658,
+      "hub_id": null,
+      "version": "0.3.2",
+      "description": "<h1>Changes</h1>\n<h3>MODIFIED</h3>\n<ul>\n<li>Change release on git from <code>.exe</code> to <code>.7z</code></li>\n<li>Seamless auto-updater for 7zip files from Release.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2510/fikasync/0.3.2",
+      "content_length": 962344,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 149,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-23T07:11:00.000000Z",
+      "created_at": "2025-12-23T08:40:14.000000Z",
+      "updated_at": "2026-07-28T07:07:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/27a43c6533fa449e19dde5f957543741216deddd36d2d291deb52bd12abbad1b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/c1d2d450-c674-4cf8-8da0-47bdf700b86c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A20Z&rscd=attachment%3B+filename%3DFikaSync.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A39Z&ske=2026-08-01T21%3A20%3A20Z&sks=b&skv=2018-11-09&sig=2JxsnhPYcvsANhZyAbYUPP23ft9SNaNHYOUszr%2FePpQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NCwibmJmIjoxNzg1NjE1ODU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pWITp8_ZBenZmUbLdE4MfEbCKiiA7_VieqNGQDHATK4&response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 31,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:14.499Z",
+    "discoveredBy": "seed"
+  }
+}

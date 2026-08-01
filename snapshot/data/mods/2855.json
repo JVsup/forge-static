@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2855,
+  "hub_id": null,
+  "guid": "com.sipto.devtools",
+  "name": "Dev Tools",
+  "slug": "dev-tools",
+  "teaser": "A testing kit for mod work: stand in the fire while you read your logs, mag-dump without reloading, and watch every bot on the map through the walls. For building mods, not for beating raids.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/z9w02g1FrM1WVekh5GBy1mB9m6bri8pNnWSSXIxZ.png",
+  "downloads": 656,
+  "favourites_count": 8,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3>Overview</h3>\n<p>The kit I use to test my own mods without the game getting in the way: build the situation you need, hold it still, and read exactly what happened. Everything is off by default and lives in F12.</p>\n<p>It isn’t a passive overlay. It spawns, freezes and kills bots, steers your own shots and hands you items — a workbench, not something to take into a raid you care about.</p>\n<h3>Staying alive while you work</h3>\n<ul>\n<li><strong>Invincible</strong> — no health or armor damage.</li>\n<li><strong>Weapon Godmode</strong> — the held mag stays topped up, no durability loss, no malfunctions.</li>\n<li><strong>Movement Godmode</strong> — infinite stamina, no carry-weight penalty.</li>\n</ul>\n<h3>Building the situation</h3>\n<ul>\n<li><strong>Spawn any bot at your crosshair</strong> — pick the type, difficulty and count. The type list is read from the running game, so modded factions are in it without the mod knowing they exist. Bots come through the game’s own spawn pipeline, so they get real loadouts, brains and grouping, and they land on walkable ground where you’re looking.</li>\n<li><strong>Spawn any item</strong> — a searchable catalogue of everything the client knows about, modded items included, filtered by category. Click to have it placed in your inventory, marked found-in-raid.</li>\n<li><strong>Freeze Bots</strong> holds them where they stand, <strong>Bots Ignore Me</strong> drops you off their target list, and <strong>Kill All Bots</strong> clears the board between tests.</li>\n</ul>\n<h3>Reading the result</h3>\n<ul>\n<li><strong>Limb Aim Assist</strong> steers your shots onto a chosen body part, so your aim isn’t part of the experiment. Only the direction changes — real ballistics, so armor, penetration and pellet spread all behave.</li>\n<li><strong>Hit Log</strong> prints what each hit did: the damage that reached flesh, whether the round beat the armor or was stopped, and the armor damage left behind.</li>\n<li><strong>Bot Loadout Inspector</strong> shows a bot’s whole generated kit — weapons with fitted mods, armor, stacks and condition — so you can check a loadout config without killing and looting the body.</li>\n<li><strong>Performance Overlay</strong> — frames per second, frame time and the live bot count.</li>\n</ul>\n<h3>Seeing through walls</h3>\n<ul>\n<li>\n<p><strong>ESP</strong> draws bots in your choice of <strong>Box</strong>, <strong>Skeleton</strong>, <strong>Chams</strong> — a whole-silhouette through-wall highlight tinted per limb by HP — or plain <strong>Labels</strong>, with name, HP and range.</p>\n</li>\n<li>\n<p>Custom-faction bots read as their actual faction — RUAF, UNTAR, Black Division, Wedge and the rest, with a faction’s escort tagged GUARD — resolved live from MoreBotsAPI when it’s installed, with a baked name table behind it.</p>\n</li>\n<li>\n<p>Through a magnified optic the box/skeleton/label overlays bow out: scopes render through a camera of their own, so screen-projected shapes can’t line up inside the glass. Chams still work zoomed in, and red dots and irons keep the full overlay.</p>\n</li>\n</ul>\n<h3>Getting around, and the world</h3>\n<ul>\n<li><strong>Freecam</strong> flies you anywhere, through anything, and puts you back where you started. <strong>Waypoints</strong> save a spot and jump you back to it later.</li>\n<li><strong>Time Of Day</strong> moves the raid clock and the sun with it, and <strong>Weather</strong> gives you fog, rain, cloud and wind — both for optics, night vision and glare work.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h3>Requirements</h3>\n<p><strong>Nothing.</strong> One optional integration, detected at runtime and ignored if absent:</p>\n<table>\n<thead>\n<tr>\n<th>Mod</th>\n<th>GUID</th>\n<th>What you lose without it</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>MoreBotsAPI</td>\n<td><code>com.morebotsapi.tacticaltoaster</code></td>\n<td>Live faction names on the ESP. Custom bots still label off the known ID ranges.</td>\n</tr>\n</tbody>\n</table>\n<h3>Steps</h3>\n<ol>\n<li>Download the archive.</li>\n<li>Extract it into your SPT folder — the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>.</li>\n<li>Merge when Windows asks. <code>DevTools</code> lands in <code>BepInEx/plugins</code>.</li>\n<li>Launch. Everything is off until you flip it in F12.</li>\n</ol>\n<p>Client-side only. Nothing goes in <code>user/mods</code>.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>In-game <strong>F12</strong>, or edit <code>BepInEx/config/com.sipto.devtools.cfg</code>.</p>\n<p>Around fifty settings across eleven sections. The ones worth knowing before you start:</p>\n<table>\n<thead>\n<tr>\n<th>Section</th>\n<th>Setting</th>\n<th>Default</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Immunity</td>\n<td>Invincible / Weapon Godmode / Movement Godmode</td>\n<td>off</td>\n<td>Damage, ammo and durability, stamina and weight</td>\n</tr>\n<tr>\n<td>ESP</td>\n<td>Enable ESP</td>\n<td>off</td>\n<td>Style: Box / Skeleton / Chams / Labels. Max Distance 0 is no limit</td>\n</tr>\n<tr>\n<td>Aim</td>\n<td>Limb Aim Assist</td>\n<td>off</td>\n<td>Target Limb, Aim FOV, and whether it steers every shot or only ADS</td>\n</tr>\n<tr>\n<td>Freecam</td>\n<td>Freecam + key</td>\n<td>off</td>\n<td>Fly Speed in m/s; Shift is four times it, Ctrl a quarter</td>\n</tr>\n<tr>\n<td>Bots</td>\n<td>Bots Ignore Me / Freeze Bots / Kill All key</td>\n<td>off</td>\n<td>Freeze and Kill All act on the host’s bots</td>\n</tr>\n<tr>\n<td>Spawning</td>\n<td>Bot Type / Difficulty / Count / key</td>\n<td>assault, normal, 1</td>\n<td>Type list is read from the running game</td>\n</tr>\n<tr>\n<td>World</td>\n<td>Time Of Day, Override Weather</td>\n<td>12:00, off</td>\n<td>Fog ~0–0.05, cloud −1 to 1.2 — the game’s own ranges, not 0–1</td>\n</tr>\n<tr>\n<td>Waypoint</td>\n<td>Save / Go To keys</td>\n<td>unbound</td>\n<td>The saved spot survives a restart</td>\n</tr>\n<tr>\n<td>Items</td>\n<td>Item Browser Key</td>\n<td>unbound</td>\n<td>Search, filter by category, click to spawn</td>\n</tr>\n<tr>\n<td>Inspect</td>\n<td>Bot Loadout Inspector, Performance Overlay</td>\n<td>off</td>\n<td>Panel position, width, font and height cap are yours</td>\n</tr>\n<tr>\n<td>Hit Log</td>\n<td>Show Hit Log</td>\n<td>off</td>\n<td>Lines kept and seconds visible</td>\n</tr>\n</tbody>\n</table></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p>Client-side only — no server mod, nothing in <code>user/mods</code>, and nothing networked.</p>\n<p>It does drive the raid when you ask it to: it spawns, freezes and kills bots, steers your own shots and hands you items. Bots belong to the host, so on a co-op server those bot controls act for everyone in the raid, not just you. It’s a testing tool — keep it out of raids you care about, and out of co-op raids other people care about.</p>\n<p>In a Fika group only you need it installed.</p>\n<p>Built against SPT 4.0.13.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2855/dev-tools",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to create this Mod Cover Photo as well as audit</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": true,
+  "category_id": 17,
+  "published_at": "2026-07-28T20:00:00.000000Z",
+  "created_at": "2026-07-28T20:01:05.000000Z",
+  "updated_at": "2026-07-30T18:02:09.000000Z",
+  "owner": {
+    "id": 117959,
+    "name": "Sipto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-07-13T07:04:33.000000Z",
+    "updated_at": "2026-08-01T17:46:06.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CameronsWorks/DevTools",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14297,
+      "hub_id": null,
+      "version": "1.8.0",
+      "description": "<h1>Dev Tools 1.8.0</h1>\n<p>1.0.0 was just godmode and an ESP. This turns it into a full test bench: spawn what you want, freeze it,\nshoot it where you choose, and read exactly what happened.</p>\n<p>Everything is off by default, client-side, and lives under F12. Nothing is networked — no server mod,\nno packets — but it does drive the raid when you ask it to, and bots belong to the host, so on a co-op\nserver bot spawning, freezing and killing act for everyone in the raid.</p>\n<h2>Shooting and damage</h2>\n<ul>\n<li><strong>Limb Aim Assist</strong> — steer your shots onto a chosen body part (head, thorax, stomach, either arm or\nleg) of the bot nearest your crosshair. Only the shot direction changes; the round keeps its real\nballistics, so armor zones, penetration and pellet spread all behave. Your view never moves. An\n<strong>Aim FOV</strong> cone decides what counts as the target, and <strong>Trigger</strong> picks between steering every\nshot or only shots fired while aiming down sights.</li>\n<li><strong>Hit Log</strong> — what each hit actually did: body part, the damage that reached flesh, whether the round\nbeat the armor (with its penetration value) or was stopped, plus armor damage, target and range.\nPenetrating and blocked hits are coloured differently.</li>\n</ul>\n<h2>Spawning</h2>\n<ul>\n<li><strong>Spawn any bot at your crosshair</strong> — pick a type, difficulty and count, press a key. The type list\nis read from the running game, so modded factions appear automatically without this mod knowing they\nexist. Bots come through the game’s own spawn pipeline, so they get real loadouts, brains and\ngrouping, and they are placed on walkable ground at your aim point.</li>\n<li><strong>Spawn any item</strong> — a searchable catalogue of every item the client knows about, modded items\nincluded. Filter by category, click to have it placed in your inventory.</li>\n</ul>\n<h2>Bots</h2>\n<ul>\n<li><strong>Bots Ignore Me</strong> — drop off every bot’s target list, including bots already hunting you. They carry\non fighting each other.</li>\n<li><strong>Freeze Bots</strong> — they stop thinking, moving and shooting where they stand. Toggling off resumes\nthem; nothing is reset.</li>\n<li><strong>Kill All Bots</strong> — clear the map between tests.</li>\n<li><strong>Bot Loadout Inspector</strong> — aim at a bot and read its whole generated kit: weapons with their fitted\nmods, armor, rig, helmet, stacks, and condition. For checking a loadout config came out the way you\nwrote it, without killing the bot and looting the body. Positionable, so it need not sit on your\nminimap.</li>\n</ul>\n<h2>Getting around and seeing</h2>\n<ul>\n<li><strong>Freecam</strong> — fly anywhere, through anything. It flies you rather than a detached camera, so the\nview, mouse look and HUD behave normally; toggling off returns you to where you took off from.</li>\n<li><strong>Waypoints</strong> — save a spot and teleport back to it later. Survives a restart.</li>\n<li><strong>ESP</strong> gains a text-only <strong>Labels</strong> style and a <strong>Show Distance</strong> toggle.</li>\n</ul>\n<h2>World</h2>\n<ul>\n<li><strong>Time Of Day</strong> moves the raid clock and the sun with it, for optics, night vision and glare work.</li>\n<li><strong>Weather</strong> — fog, rain, cloud and wind, using the game’s own override, so switching it off restores\nwhatever the raid rolled.</li>\n<li><strong>Performance Overlay</strong> — frames per second, frame time and the live bot count.</li>\n</ul>\n<h2>Notes</h2>\n<p>Everything is a testing aid and defaults to off; nothing changes unless you turn it on. Keep it out of\nraids you care about, and out of co-op raids other people care about.</p>\n<h2>Files</h2>\n<p><code>DevTools-1.8.0.zip</code>\nSHA-256: <code>9366EE5A470B1801A8C0EA149E2AFA208EA3715ACB6400F5D10642FC005D737E</code></p>\n<h2>VirusTotal</h2>\n<p><code>DevTools.dll</code> — clean, 0/74:\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/2926ec9b5ba0d5412c7d9385344da6ca96cf0ddfd8f40cec0ba1ce4c513457ce\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/2926ec9b5ba0d5412c7d9385344da6ca96cf0ddfd8f40cec0ba1ce4c513457ce</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2855/dev-tools/1.8.0",
+      "content_length": 40298,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 418,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-30T07:06:00.000000Z",
+      "created_at": "2026-07-30T07:06:36.000000Z",
+      "updated_at": "2026-07-30T18:02:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2926ec9b5ba0d5412c7d9385344da6ca96cf0ddfd8f40cec0ba1ce4c513457ce",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1314414234/f9f284b9-d46b-42ae-9d03-2ee453f4adf8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A41Z&rscd=attachment%3B+filename%3DDevTools-1.8.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A37Z&ske=2026-08-01T21%3A02%3A41Z&sks=b&skv=2018-11-09&sig=e%2FYwOgoThu%2Fzd8zPn44rlJF2Ta9OaAD5vvbaldIZ1S0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DDevTools-1.8.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14274,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Check mod description</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2855/dev-tools/1.0.0",
+      "content_length": 17034,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 238,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T20:01:00.000000Z",
+      "created_at": "2026-07-28T20:01:52.000000Z",
+      "updated_at": "2026-07-29T06:02:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1c48d539f298fcd74e30bd59a7c7639fd859d6a00367bde39cf4c8b73daa01fa",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1314414234/89a03907-5fc6-45f2-963d-b3152195dd26?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A47Z&rscd=attachment%3B+filename%3DDevTools-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A19Z&ske=2026-08-01T21%3A20%3A47Z&sks=b&skv=2018-11-09&sig=Sb00e6muFOsnsYI03CzuNhRUlaKpfxNOYxOJbCWhaZA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DDevTools-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 2,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:00.196Z",
+    "discoveredBy": "seed"
+  }
+}

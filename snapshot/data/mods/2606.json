@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 2606,
+  "hub_id": null,
+  "guid": "com.pein.recoilrework2",
+  "name": "Recoil Rework (Rewrite)",
+  "slug": "recoil-rework-rewrite",
+  "teaser": "A caliber-based replacement of Tarkov's vanilla recoil",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/MPTSes6poROVC3Y0uhLPT58Bp4EFjKCEMdOHhtk8.png",
+  "downloads": 7167,
+  "favourites_count": 23,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Information</div>\n<div class=\"tab-content\"><h3>Introduction</h3>\n<p>Tarkov’s vanilla system feels weightless, this full recoil replacement mod attempts to improve it. Recoil is now mostly based on your weapon’s caliber, which makes weapons of the same caliber/platform perform similarly across the board. As an added benefit it also makes things easier to balance, which wasn’t really possible before with the Legacy version of Recoil Rework. The mod also overhauls visual recoil and makes things more wibbly-wobbly and stuff.</p>\n<p>The mod is still in it’s early stages so any feedback is welcome.</p>\n<h3>Why not update the original Recoil Rework?</h3>\n<p>I wanted to keep the original Recoil Rework readily available for those that prefer it or need it for some other reason. The two mods also have a very different approach to handling recoil so I think a new release is warranted. Do not install both versions (Legacy &amp; Rewrite), only pick one!</p>\n<h3>Preview</h3>\n<div class=\"youtube-lite\" data-video-id=\"0f-D8fl14Ps\" data-embed-url=\"https://www.youtube-nocookie.com/embed/0f-D8fl14Ps?autoplay=1\"><img src=\"https://i.ytimg.com/vi/0f-D8fl14Ps/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<h3>Installation</h3>\n<p>Drag and drop. Like any other mod.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://i.imgur.com/wByb5Ln.gif\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/wByb5Ln.gif\" alt=\"wByb5Ln.gif\" /></a></p>\n<h3>Known Issues</h3>\n<ul>\n<li>Sprinting while in left stance messes up your weapon position for the rest of the raid (fixed in 1.0.1)</li>\n<li>Inspection screen recoil values lie to you</li>\n<li>Only certain attachments (grips and muzzle devices) currently contribute towards recoil reduction. This is due to bullpups being incapable of having stocks, upper receivers and such.</li>\n<li>Some weapons cause busy hands in the hideout and you’ll have to restart your game if this happens. Probably an invisible <code>nullref</code> somewhere, I wouldnt know.</li>\n<li>Probably something else, let me know!</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><h3>Compatibility</h3>\n<p>The mod is compatible with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2512/wtt-content-backport\" rel=\"noreferrer noopener\">WTT-Content Backport</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2246/wtt-armory\" rel=\"noreferrer noopener\">WTT-Armory</a> out of the box. However, if you’d like to add your own custom calibers then you can do so within the server mod in <code>SPT/user/mods/RecoilReworkServer/Config/CaliberData/</code>. You can also modify weapon data in <code>SPT/user/mods/RecoilReworkServer/Config/WeaponData/</code>. There are plenty of examples, so go wild!</p>\n<p>Example caliber data:</p>\n<pre><code>// example_caliber.jsonc\n{\n    \"CaliberOne\": {\n        \"BaseVerticalKick\": 40,\n        \"BaseHorizontalKick\": 30,\n        \"BaseRollKick\": 250,\n        \"BaseBackwardsRecoil\": 4\n    },\n    \"CaliberTwo\": {\n        \"BaseVerticalKick\": 20,\n        \"BaseHorizontalKick\": 15,\n        \"BaseRollKick\": 120,\n        \"BaseBackwardsRecoil\": 4\n    }\n}\n</code></pre>\n<p>Example weapon data:</p>\n<pre><code>// example_weapon.jsonc\n[\n    {\n        // use either weaponId or weaponIds. DO NOT USE BOTH!\n        \"weaponId\": \"5fb64bc92b1b027b1f50bcf2\"\n        \"weaponIds\": [\n            \"5fb64bc92b1b027b1f50bcf2\",\n            \"5fc3f2d5900b1d5091531e57\"\n        ],\n        // caliber multipliers for the specified weapons, in case a weapon has a special recoil mitigation system\n        \"weaponRecoilModifiers\": {\n            \"VerticalKickMultiplier\": 0.3,\n            \"HorizontalKickMultiplier\": 0.25\n        },\n        // you can override any vanilla weapon properties here\n        \"overrideProperties\": {\n            // really nice recoil pivot value\n            \"RecoilCenter\": {\n                \"x\": 0.05,\n                \"y\": -0.3,\n                \"z\": 0\n            }\n        }\n    }\n]\n</code></pre></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Recommended Mods</div>\n<div class=\"tab-content\"><h3>A small list of mods I would recommend using alongside Recoil Rework:</h3>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix/\" rel=\"noreferrer noopener\">Fontaine’s FOV Fix</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2176-better-rear-sights/\" rel=\"noreferrer noopener\">Better Rear Sights</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2683-hollywoodfx/\" rel=\"noreferrer noopener\">HollywoodFX</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2949-eye-relief-tweak/\" rel=\"noreferrer noopener\">Eye Relief Tweak</a></li>\n</ul>\n<p>… and a few others, but I’m gatekeeping them.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2606/recoil-rework-rewrite",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-02-25T07:50:00.000000Z",
+  "created_at": "2026-02-25T22:02:31.000000Z",
+  "updated_at": "2026-08-01T16:25:00.000000Z",
+  "owner": {
+    "id": 12179,
+    "name": "pein",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=p&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/0nesldn7JSutui4nqPF0GyFFSoQKV6zImNcy5brD.jpg",
+    "created_at": "2021-12-14T17:06:03.000000Z",
+    "updated_at": "2026-08-01T19:41:02.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/peinwastaken/SPTRecoilRework-rewrite",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14111,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h2>Before installing the update please delete old files (server + client mods and client config <code>BepInEx/config/com.pein.recoilrework2.cfg</code>)</h2>\n<ul>\n<li>Spray penalty system rework, weapons should feel nicer to shot from hipfire</li>\n<li>Added camera recoil (GASP)</li>\n<li>Added config options for camera recoil, stance recoil multipliers and more</li>\n<li>Added automatic weapon kick compensation during full-auto</li>\n<li>Smoothed camera recoil and hopefully better matched them to recoil visuals</li>\n<li>Rebalanced almost all caliber data</li>\n<li>Added weapon-specific recoil data to… more weapons!</li>\n<li>Added (crappy) bullpup detection and handling</li>\n<li>Improved recoil recovery behavior</li>\n<li>Fixed tremors not working</li>\n<li>Fixed camera recoil not working while mounted</li>\n<li>Made recoil better, just to you know. I just added this additional rotating things.. just to have more. yeah</li>\n<li>And probably more that I’ve certainly forgotten about… feels way nicer though!</li>\n</ul>\n<p>this update is mostly focused on polish, improved recoil feel and cleaning up some long-standing issues, such as the lack of tremor effects when having broken arms. what remains left are the proper display of weapon stats and proper attachment rebalancing and handling of bullpups (because this is a hack!). i will go over the feedback again and make another update in the near future, or disappear again. we’ll see</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2606/recoil-rework-rewrite/1.1.0",
+      "content_length": 28542,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 967,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-17T10:17:00.000000Z",
+      "created_at": "2026-07-17T10:19:00.000000Z",
+      "updated_at": "2026-08-01T16:25:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5f17262302149e5eab38fe32425c5e5899dc8310f4eeaba7eb6d995a6dac5eca?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117245213/0be0b659-e809-4eed-bc78-0ddb8085928c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A14Z&rscd=attachment%3B+filename%3DRecoilRework.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A55Z&ske=2026-08-01T21%3A11%3A14Z&sks=b&skv=2018-11-09&sig=lnNyLV%2FYmLSPqnKldIiZ7I0%2FW0liiKECIJyIBtd6iBQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&response-content-disposition=attachment%3B%20filename%3DRecoilRework.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13162,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>Fixed an issue where the player animator would incorrectly activate left stance when leaving the sprint state</li>\n<li>Fixed left stance animation fps dependency</li>\n<li>Slightly touched up the left stance transition</li>\n</ul>\n<p>oops</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2606/recoil-rework-rewrite/1.0.1",
+      "content_length": 36719,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 6052,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-26T13:37:00.000000Z",
+      "created_at": "2026-02-26T13:38:10.000000Z",
+      "updated_at": "2026-07-28T08:06:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d823c755c3deb5cb905937a87116fcbd74ef58a9a62722dae37d9aa3af487c37?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117245213/51d4bbaa-15c7-44ed-b85e-4cc85aa3f171?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A56Z&rscd=attachment%3B+filename%3DRecoilRework.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A21Z&ske=2026-08-01T21%3A14%3A56Z&sks=b&skv=2018-11-09&sig=r5lo5AOtQDWM8c8rP0zPpZ7ZF1HO4g86b6496dQHEA4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&response-content-disposition=attachment%3B%20filename%3DRecoilRework.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13161,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<ul>\n<li>Initial release</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2606/recoil-rework-rewrite/1.0.0",
+      "content_length": 36381,
+      "spt_version_constraint": "~4.0",
+      "downloads": 148,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-26T05:49:00.000000Z",
+      "created_at": "2026-02-26T05:50:02.000000Z",
+      "updated_at": "2026-07-28T08:06:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/711c49bd66356a7be37d8b20d36f4bad42ae44446cf3f32b76b06d6e6d334d1b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117245213/48912726-cf32-4803-8299-89d13f662787?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A05Z&rscd=attachment%3B+filename%3DRecoilRework.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A47Z&ske=2026-08-01T21%3A13%3A05Z&sks=b&skv=2018-11-09&sig=Plc97lFSLDiU9VXCPNIea5Pm%2FYTRFL4eckDUfwYotJ8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&response-content-disposition=attachment%3B%20filename%3DRecoilRework.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 63,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:51:42.907Z",
+    "discoveredBy": "seed"
+  }
+}

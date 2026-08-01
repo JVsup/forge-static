@@ -1,0 +1,216 @@
+{
+  "type": "mod",
+  "id": 2779,
+  "hub_id": null,
+  "guid": "com.vultify.coolerstims",
+  "name": "Cooler Stims ",
+  "slug": "cooler-stims",
+  "teaser": "Five custom stims, each built for a different way to play — entry fragging, sustained healing, tanking, looting, limb repair. Now with their own models, icons, and in-hands skins. Everything configurable.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/c52dz3FSEi4wE6cBDU41qHHhvxenpF4YGCCiUaBO.png",
+  "downloads": 3404,
+  "favourites_count": 25,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><p>Five custom stims, each built around a different way to play. These stims add variety to the game where years of the same stims became stale.</p>\n<p>Every stim has its own model, icon, and injector skin — in the stash, on the ground, and in your hands when you use it.</p>\n<h3>The Stims</h3>\n<ul>\n<li><strong>APEX</strong> — the entry fragger. Perception and attention way up, a Quantum Tunnelling rush, and a health skill buff while it lasts.</li>\n<li><strong>AEGIS</strong> — 9.5 HP/sec of steady healing. Pop it before a push instead of hiding in a bush with a Salewa.</li>\n<li><strong>IRON</strong> — damage resistance for when you know you’re about to get shot and plan to disagree with the outcome.</li>\n<li><strong>ARGUS</strong> — the loot goblin special. Search speed, attention, and energy up, with a tunnel-vision comedown when it wears off.</li>\n<li><strong>GRAFT</strong> — a 5-charge trauma auto-injector that fixes blacked and fractured limbs like a CMS, with HealthRate and EnergyRate buffs on top.</li>\n</ul>\n<h3>Getting them</h3>\n<p>Therapist sells them at higher loyalty levels, they’re on the flea, and they spawn as loose loot and in medical containers.</p>\n<p>Numbers not to your taste? <code>config.json</code> has every buff value, duration, price, and loyalty level.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Install Instructions</div>\n<div class=\"tab-content\"><ol>\n<li>Extract the archive</li>\n<li>Drop BOTH the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root directory (1.4.0 adds a client plugin — the mod needs both halves)</li>\n<li>Buy from Therapist, hit the flea, or find them in raid</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Known Limitations / Bugs</div>\n<div class=\"tab-content\"><ul>\n<li>None currently known. If you find one, please report it (see Support tab).</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>Found a bug or have a question? Leave a comment on this mod’s page, or reach out in my thread on the SPT Discord: <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1521972310595338260\" rel=\"noreferrer noopener\">https://discord.com/channels/875684761291599922/1521972310595338260</a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2779/cooler-stims",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to Create the profile picture of the Mod.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2026-06-26T23:00:00.000000Z",
+  "created_at": "2026-06-26T22:46:20.000000Z",
+  "updated_at": "2026-07-28T09:41:19.000000Z",
+  "owner": {
+    "id": 52241,
+    "name": "Vultify",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/4457233962ecb2b7d1e522ec0ad81c03210096ee_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-05-20T01:39:49.000000Z",
+    "updated_at": "2026-08-01T19:18:27.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Vultify/CoolerStims",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14137,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<h2>Added</h2>\n<ul>\n<li>Custom models and icons for all five stims — no more reused vanilla donor looks</li>\n<li>APEX — red/orange with circuit accents</li>\n<li>AEGIS — white/green with heartbeat motif</li>\n<li>IRON — gunmetal with heat-tinted cap</li>\n<li>ARGUS — violet/yellow with radar plate</li>\n<li>GRAFT — clinical white/red with dose windows</li>\n<li>Stash icons, inspect view, and in-world models all use the new skins</li>\n<li>New client plugin (<code>CoolerStimsClient.dll</code>) — the custom skins now also show on the injector in your hands during the use animation</li>\n<li>Fixes stims previously showing random vanilla stim skins when used</li>\n<li>New F12 toggle to turn the in-hands skins on/off</li>\n</ul>\n<h2>Install</h2>\n<ul>\n<li>Extract the ENTIRE zip into your SPT root folder — both the <code>BepInEx</code> and <code>SPT</code> folders (1.4.0 adds a client half)</li>\n<li>Upgrading from 1.3.0 is safe in place, nothing needs deleting</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.4.0",
+      "content_length": 10020817,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1384,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-18T21:35:32.000000Z",
+      "created_at": "2026-07-18T21:35:18.000000Z",
+      "updated_at": "2026-07-28T09:41:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f47e5bb587c1360f03e26e60011e83b2f700ae38210e83928ae64a1237527dc2?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/b7a859a8-6997-4847-baeb-e38deeff3d28?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A50Z&rscd=attachment%3B+filename%3DCoolerStims-v1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A31Z&ske=2026-08-01T21%3A05%3A50Z&sks=b&skv=2018-11-09&sig=P%2B1h%2F9lWP7kUzx1DxWsmKb%2BrS1Tbt97z%2FN%2FLvbyft94%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DCoolerStims-v1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14062,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<h2>Changes</h2>\n<ul>\n<li>Added ARGUS Perception Stim: sharpens attention, perception, and search speed for looting/salvage, with an energy boost and a tunnel-vision comedown</li>\n<li>Added GRAFT Trauma Injector: a multi-dose auto-injector that restores destroyed/fractured limbs (like CMS/Surv12) while also granting HealthRate, EnergyRate, and HandsTremor buffs</li>\n<li>GRAFT: 5 charges, treats one destroyed limb per use</li>\n<li>Both added to loot tables and loose loot</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.3.0",
+      "content_length": 14614,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 514,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-12T18:54:00.000000Z",
+      "created_at": "2026-07-12T18:54:25.000000Z",
+      "updated_at": "2026-07-28T09:37:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/874d4e7e5f4c0658b6f4ae5b4f2caf383a6419aee95aee2917d3bc7321370ed8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/f4825945-8333-4cb9-8fd6-237cd20fe83c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A20Z&rscd=attachment%3B+filename%3DCoolerStims-v1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A25Z&ske=2026-08-01T21%3A18%3A20Z&sks=b&skv=2018-11-09&sig=x8uYKSpgdh9jftccgGOAD1C8Xcpa60vwuE7wUTtxPqw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DCoolerStims-v1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13929,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<ul>\n<li>AEGIS healing rate increased from 2.5 to 9.5 HP/sec</li>\n<li>APEX trader price updated to 84,379 roubles</li>\n<li>AEGIS trader price updated to 105,836 roubles</li>\n<li>IRON flea price updated to 179,975 roubles</li>\n<li>Added config.json for user-customizable buff values, durations, trader prices, and loyalty levels</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.2.0",
+      "content_length": 12791,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 853,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-29T03:20:00.000000Z",
+      "created_at": "2026-06-29T03:22:50.000000Z",
+      "updated_at": "2026-07-28T09:22:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4fc5bbd034e1c210e852b9de140f95087db485e48c20469d5c44009a9b620973?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/c2bb718f-000e-482b-adda-ee0e067e6bc0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A52Z&rscd=attachment%3B+filename%3DCoolerStims-v1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A21Z&ske=2026-08-01T21%3A20%3A52Z&sks=b&skv=2018-11-09&sig=RSP3F9cRzc%2Bsp1sO5vAY3Jf%2B2biF5qA1i6hQGqDvdKQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DCoolerStims-v1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13903,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<ul>\n<li>Adjusted handbook prices to balance flea market offer prices (APEX: 42,000 | AEGIS: 50,000 | IRON: 55,000)</li>\n</ul>\n<p>^ These prices won’t reflect on the Flea market and will be higher, there’s a multiplier system through Ragfair based on the Handboook price, But they were wayyy too high before for my taste, especially IRON stim.</p>\n<ul>\n<li>Updated Therapist prices to match new handbook values</li>\n<li>Changed APEX and AEGIS to Therapist Loyalty Level 4</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.1.1",
+      "content_length": 9252,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 311,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-27T15:16:00.000000Z",
+      "created_at": "2026-06-27T15:16:26.000000Z",
+      "updated_at": "2026-07-28T09:21:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fffb7f22521a3b92dd4882a2d4c0cb6444f3faf138ad3ed56a0398cef49f1cbf?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/a3c894d8-8a68-4ec5-8c1b-e97ebe05c1b7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A21Z&rscd=attachment%3B+filename%3DCoolerStims.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A24Z&ske=2026-08-01T21%3A26%3A21Z&sks=b&skv=2018-11-09&sig=aOcIy2fcgJ2wHPE9KELkEP6yD%2FZo3O7t92r1VInswZs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DCoolerStims.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13899,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h2>v1.1.0 Changes</h2>\n<ul>\n<li><strong>Fixed flea market</strong> — Stims can now be purchased from the flea market without errors</li>\n<li><strong>Fixed loot spawns</strong> — Custom stims now properly spawn in Medcases, Medbag SMU06, and Medical supply crates across all maps</li>\n<li><strong>Fixed loose loot</strong> — Stims now share spawn points with vanilla stims at every stim spawn location</li>\n<li><strong>Balanced spawn rates</strong> — Loot weights tuned</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.1.0",
+      "content_length": 9287,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 220,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-27T04:28:00.000000Z",
+      "created_at": "2026-06-27T04:34:57.000000Z",
+      "updated_at": "2026-07-28T09:21:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aa631f9c2f5319f83ac1f73d365ec2d81656600f78bd8a1350a64d8bf12e9a5a/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/7a2f5a7d-7943-4cac-ba24-89ba21ca2e24?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A34Z&rscd=attachment%3B+filename%3DCoolerStims.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A26Z&ske=2026-08-01T21%3A06%3A34Z&sks=b&skv=2018-11-09&sig=vy6deHuhKgj5%2Fxb%2FGWKIfLJ9SCANsOj8y104Bh8oesM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DCoolerStims.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13895,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>-Added 3 New Stims</p>\n<p>-APEX Combat Stim\n-AEGIS Medical Stim\n-IRON Endurance Stim</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2779/cooler-stims/1.0.0",
+      "content_length": 9292,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 122,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-26T23:03:00.000000Z",
+      "created_at": "2026-06-26T22:57:02.000000Z",
+      "updated_at": "2026-07-28T09:21:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bcba91102a102ddead9e1372d21cc57b04f7ff2de426de80ea1d4926ec8e50fb?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281754216/cd06fa64-d9b5-4b56-915a-13c11d4f809f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A13Z&rscd=attachment%3B+filename%3DCoolerStims.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A30Z&ske=2026-08-01T21%3A06%3A13Z&sks=b&skv=2018-11-09&sig=zYMVni%2F0QuxEoOPhUwDYmhrRiTr%2Fszmlv4MljijNOtw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DCoolerStims.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 28,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:44:26.105Z",
+    "discoveredBy": "seed"
+  }
+}

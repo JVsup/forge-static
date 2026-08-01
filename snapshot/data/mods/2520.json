@@ -1,0 +1,129 @@
+{
+  "type": "mod",
+  "id": 2520,
+  "hub_id": null,
+  "guid": "com.hideoutrecipeframework.core",
+  "name": "Hideout Recipe Framework",
+  "slug": "hideout-recipe-framework",
+  "teaser": "Allows you to easily create custom Hideout recipes",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/S9FgfUA5IUoaKEF89Ec3AzmIHuNLgL2Jgze5EVuL.png",
+  "downloads": 1115,
+  "favourites_count": 4,
+  "description": "<h2>Hideout Recipe Framework</h2>\n<p>This mod exists to solve one specific problem: adding new hideout crafting recipes without touching Tarkov’s database or writing backend code.</p>\n<p>Hideout Recipe Framework lets you define <strong>brand new hideout crafts using simple JSON files</strong>. On server startup, those recipes are loaded and injected directly into the hideout production system. Nothing is overridden, patched, or written to disk — vanilla content is left alone.</p>\n<p>The goal is to make custom recipes easy, readable, and safe to maintain.</p>\n<h3>What it does</h3>\n<ul>\n<li>Adds new hideout recipes at server startup</li>\n<li>Recipes are defined entirely in JSON</li>\n<li>Supports:\n<ul>\n<li>Station + level requirements</li>\n<li>Item inputs (consumed)</li>\n<li>Tool requirements (not consumed)</li>\n<li>Generator fuel requirements</li>\n</ul>\n</li>\n<li>Uses deterministic IDs so recipes are stable across restarts</li>\n</ul>\n<h3>What it does <em>not</em> do</h3>\n<ul>\n<li>Does not modify or replace vanilla recipes</li>\n<li>Does not edit the database on disk</li>\n</ul>\n<h3>How it works</h3>\n<p>At startup, the mod reads all recipe JSON files from the <code>Recipes</code> folder, validates them, converts them into Tarkov’s internal recipe format, and appends them to the hideout production list. From the game’s perspective, they behave exactly like native recipes.</p>\n<h3>Intended use</h3>\n<p>This is meant as a small framework for:</p>\n<ul>\n<li>Modders who want to ship custom crafts</li>\n<li>Server owners who want lightweight customization</li>\n<li>Anyone who doesn’t want to maintain database edits across updates</li>\n</ul>\n<p>The code is intentionally simple and readable so it’s easy to extend or build on.</p>\n<h2>Installation</h2>\n<ol>\n<li>Download the mod archive.</li>\n<li>Open the archive.</li>\n<li>Drag the <code>SPT</code> folder from the archive into your existing SPT installation<br />\n(the folder where <code>EscapeFromTarkov.exe</code> is located).</li>\n<li>Launch the game and enter the Hideout.</li>\n<li>Verify that a new recipe appears in the <strong>Lavatory</strong> for crafting large Tushonka cans.</li>\n<li>Once verified, exit the game.</li>\n<li>Review the provided recipe format documentation and create any additional crafts you want.</li>\n</ol>\n<p>All recipes are loaded at server startup. A restart is required after adding or changing recipe files.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://files.catbox.moe/eyynee.gif\" alt=\"Installation Demo\" /></p>\n<h3>Compatibility</h3>\n<ul>\n<li>SPT 4.0.x</li>\n<li>Server-side only</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2520/hideout-recipe-framework",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 6,
+  "published_at": "2025-12-29T21:54:00.000000Z",
+  "created_at": "2025-12-29T22:00:21.000000Z",
+  "updated_at": "2026-07-28T07:19:26.000000Z",
+  "owner": {
+    "id": 1849,
+    "name": "Arcus56",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/a6rtlpMsHAzPNJ2ds3LuKZXmwQA0kDw8giDRpZsb_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2021-01-10T23:10:09.000000Z",
+    "updated_at": "2026-07-10T04:49:26.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 6,
+    "hub_id": 23,
+    "title": "Hideout",
+    "slug": "hideout",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/arcustarkov-sys/hideout-recipe-framework",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12717,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>JSON Syntax</li>\n<li>instructions Update</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2520/hideout-recipe-framework/1.0.1",
+      "content_length": 11247,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1035,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-30T07:32:00.000000Z",
+      "created_at": "2025-12-30T07:32:40.000000Z",
+      "updated_at": "2026-07-28T07:19:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bdd12444d8c8c4bb1c95d6f8cd7f04a74a6d5c0969e83a3245985385c90acd35",
+          "label": "HideoutRecipeFramework.dll"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1124917384/239529a6-cfcd-4e34-b298-bea527ee430a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A23Z&rscd=attachment%3B+filename%3DHideoutRecipeFramework.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A21Z&ske=2026-08-01T21%3A23%3A23Z&sks=b&skv=2018-11-09&sig=zEbZSTiKwqhYMO7QL8SzKh3XCvVZU%2FuKVVlMGFa1DMs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DHideoutRecipeFramework.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12712,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<ul>\n<li>Initial upload</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2520/hideout-recipe-framework/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 80,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-29T17:24:00.000000Z",
+      "created_at": "2025-12-29T22:15:36.000000Z",
+      "updated_at": "2025-12-29T22:27:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bdd12444d8c8c4bb1c95d6f8cd7f04a74a6d5c0969e83a3245985385c90acd35?nocache=1",
+          "label": "HideoutRecipeFramework.dll"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/57bec5df4635b92ee8a5dd67a7e521a76ae54c95345a0beb3cd40e0eb64a338d?nocache=1",
+          "label": "Intructions.txt"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/011a990cabc95d79d04555425a76b7fa8336dedf4381b7e0303c1c1c319b3480?nocache=1",
+          "label": "exampleRecipe"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/d8d247427ac64143498332146f998af258a6311cb50c21b2eee8ddecc72e3b93?nocache=1",
+          "label": "exampleRecipe_02"
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/arcustarkov-sys/hideout-recipe-framework",
+        "reason": "HTTP 404 for https://github.com/arcustarkov-sys/hideout-recipe-framework/releases/download/v1.0.0/HideoutRecipeFramework.zip"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 6,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:56.133Z",
+    "discoveredBy": "seed"
+  }
+}

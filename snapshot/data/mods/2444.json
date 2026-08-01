@@ -1,0 +1,145 @@
+{
+  "type": "mod",
+  "id": 2444,
+  "hub_id": null,
+  "guid": "com.landonk89.hevsuitmod",
+  "name": "Half-Life HEV Suit",
+  "slug": "half-life-hev-suit",
+  "teaser": "This aims to bring the HEV suit from Half-Life to Tarkov.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/DPH64L4Iee3CZblQ9yNX4g8DXfjlrz7Xob8x3uc5.jpg",
+  "downloads": 1452,
+  "favourites_count": 0,
+  "description": "<div class=\"youtube-lite\" data-video-id=\"MZgB-auivGY\" data-embed-url=\"https://www.youtube-nocookie.com/embed/MZgB-auivGY?autoplay=1\"><img src=\"https://i.ytimg.com/vi/MZgB-auivGY/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<p>This is an early ALPHA version of the mod, I plan to continue working on it as long as I’m able but progress may be slow.</p>\n<p>Working right now:</p>\n<ul>\n<li>Hud mostly works (suit counter uses tactical vest slot, tested with strandhogg).</li>\n<li>Taking damage will display the direction it came from and type (like bullets, barbed wire, fire, etc etc)</li>\n<li>Major injuries will play a voiceline and automatically inject a relevant stim like morphine (doesn’t need to be on your pmc)</li>\n<li>A crosshair shows where your bullets will hit in the world and highlight red when over a player/bot</li>\n<li>Flashlight, toggled with ‘J’ by default (configurable in settings)</li>\n<li>Picking up items in the world will display a notification icon on the right side</li>\n<li>Weapon selection will show an icon and ammo level of the weapon at the top</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2444/half-life-hev-suit",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2025-11-13T19:27:00.000000Z",
+  "created_at": "2025-11-13T19:28:35.000000Z",
+  "updated_at": "2026-07-28T07:01:17.000000Z",
+  "owner": {
+    "id": 85474,
+    "name": "Landonk89",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=L&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-10-08T02:19:49.000000Z",
+    "updated_at": "2026-04-14T14:04:45.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 13,
+    "hub_id": 16,
+    "name": "The Unlicense",
+    "link": "https://choosealicense.com/licenses/unlicense/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/landonk89/HEVSuitAssets",
+      "label": ""
+    },
+    {
+      "url": "https://github.com/landonk89/HEVSuitMod",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12490,
+      "hub_id": null,
+      "version": "0.1.2",
+      "description": "<p>v0.1.2 Fixes/Changes</p>\n<ul>\n<li>Fixed another bug where weapons that don’t use magazines could break the player’s ability to change weapons or interact with things</li>\n<li>HUD health counter will now correctly normalize non standard health values</li>\n<li>Rewrote sentence parser to be 10x faster</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2444/half-life-hev-suit/0.1.2",
+      "content_length": 5460232,
+      "spt_version_constraint": "4.0.3",
+      "downloads": 686,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-30T16:46:00.000000Z",
+      "created_at": "2025-11-30T16:46:30.000000Z",
+      "updated_at": "2026-07-28T07:01:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/de52d61fa37cb9a8dfb6c716489723fbdfe7dc08a6f68aa9cc2d1389cad4e3e6?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1Mrxq21c0vuA1dRtk23nn_buxGAridia8&export=download"
+      }
+    },
+    {
+      "id": 12353,
+      "hub_id": null,
+      "version": "0.1.1",
+      "description": "<p>v0.1.1 Patch notes</p>\n<p>Fixes/Changes</p>\n<ul>\n<li>Prevent death until total health reaches zero since the suit is packed with advanced armor and medical systems.</li>\n<li>Fixed a bug in the ammo counter component where weapons without magazines could break the player’s ability to change weapons or interact with things.</li>\n<li>Fixed a bug in the crosshair component where swapping weapons could cause a null reference exception.</li>\n<li>Fixed possible divide by zero in hud health/suitpower counters</li>\n</ul>\n<p>Known Issues</p>\n<ul>\n<li>Ammo counter doesn’t update when single reloading certain weapons (SKS, shotguns, revolvers)</li>\n<li>Some voices lines are missing/incomplete</li>\n<li>Automatic stim when seriously injured may not work in some cases</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2444/half-life-hev-suit/0.1.1",
+      "content_length": 5460019,
+      "spt_version_constraint": "4.0.3",
+      "downloads": 349,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-17T17:48:00.000000Z",
+      "created_at": "2025-11-17T17:48:54.000000Z",
+      "updated_at": "2026-07-28T06:44:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/8962325d6f7a4dfe118e202940b06a4ea08fb569b00ffd69b932f9d0dcf4b50d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1b7ed0ltao09o1X-XkdbUKCoLiauVQs9y&export=download"
+      }
+    },
+    {
+      "id": 12308,
+      "hub_id": null,
+      "version": "0.1.0",
+      "description": "<p>This is the first public alpha version, please comment with any bugs/questions/concerns</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2444/half-life-hev-suit/0.1.0",
+      "content_length": 5459290,
+      "spt_version_constraint": "4.0.3",
+      "downloads": 417,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-13T19:46:00.000000Z",
+      "created_at": "2025-11-13T19:46:46.000000Z",
+      "updated_at": "2026-07-28T06:34:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/89a980c2a45965b22f6d220a8d966636d97b220eac81bd5353bb697440c19b2f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1dGtJA5jdUIhAjzRSjAQc-SJd2Ldp_XLh&export=download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:39.218Z",
+    "discoveredBy": "seed"
+  }
+}

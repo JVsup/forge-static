@@ -1,0 +1,307 @@
+{
+  "type": "mod",
+  "id": 2632,
+  "hub_id": null,
+  "guid": "com.windersvista.srvrg",
+  "name": "SPT Realism Value Range Generator",
+  "slug": "spt-realism-value-range-generator",
+  "teaser": "SPT Realism Value Range Generator is a bilingual GUI/CLI tool for editing realism rules, generating patch output, auditing results, and reproducing SPT Realism tuning workflows at scale.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/MS1n1rVT5qIH2mxjyhif5EaIqnyM4maDz597FpxI.png",
+  "downloads": 74,
+  "favourites_count": 0,
+  "description": "<h1>SPT Realism Value Range Generator v1.2</h1>\n<p><strong>The author is Chinese and has never handled a gun. The generator’s numerical ranges are primarily based on personal in-game feel, wiki entries, and AI suggestions. Therefore, any suggestions regarding the numerical values ​​are welcome in the comments section.</strong></p>\n<p>SPT Realism Value Range Generator is a toolset designed specifically for SPT Realism Mod 1.6.4.</p>\n<p>When the Realism mod is updated to SPT4, this program will be updated accordingly.</p>\n<h2>compatible mods / 兼容的MOD all for 3.11.4</h2>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1278/wtt-pack-n-strap\" rel=\"noreferrer noopener\">WTT - Pack ‘n’ Strap</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1125/tactical-gear-component\" rel=\"noreferrer noopener\">Tactical Gear Component</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2098/spt-battlepass\" rel=\"noreferrer noopener\">SPT Battlepass</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2246/wtt-armory\" rel=\"noreferrer noopener\">WTT- Armory 1.2.1</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1373/sig-sauer-mcx-virtus-multi-carlibre-rifle\" rel=\"noreferrer noopener\">Sig Sauer MCX VIRTUS multi carlibre rifle</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2215/eukyres-ak-50-backport\" rel=\"noreferrer noopener\">Eukyre’s AK-50 backport</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2224/50-bmg-expansion-and-remaster\" rel=\"noreferrer noopener\">50 BMG Expansion and Remaster</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2170/resonant-ak-from-codmw2019-reupload\" rel=\"noreferrer noopener\">Resonant AK from COD:MW2019 - ReUpload</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1018/mag-tape\" rel=\"noreferrer noopener\">Mag Tape</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/985/blackcore\" rel=\"noreferrer noopener\">BlackCore</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1263/epics-all-in-one\" rel=\"noreferrer noopener\">Epic’s All in One 3.1.4</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2288/ecos-attachment-emporium\" rel=\"noreferrer noopener\">Eco’s Attachment Emporium 1.2.1</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2195/ecot-eukyres-consortium-of-things#versions\" rel=\"noreferrer noopener\">ECOT - Eukyre’s Consortium of Things 1.1.0</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1023/wtt-artem\" rel=\"noreferrer noopener\">WTT- Artem 2.1.2</a></li>\n<li>Echoes of Tarkov - Requisitions (outdate)</li>\n<li>Raid Overhaul (outdate)</li>\n</ul>\n<h2>English</h2>\n<h3>Overview</h3>\n<p>This project consolidates the GUI editor, CLI generator, rule files, item exception management, and output auditing into one .NET solution.</p>\n<h3>Main Features</h3>\n<ul>\n<li>Generate Realism patches quickly.</li>\n<li>Use a logical rule system and value ranges to standardize generated patch values.</li>\n<li>Allow users to adjust the value ranges themselves.</li>\n<li>Generate patch values through a pseudorandom seed-based system.</li>\n<li>Use rules/item_exceptions.json to customize exceptions for specific item properties, allowing flexible stat design without breaking overall balance.</li>\n<li>Provide an audit feature to automatically check whether generated patches violate the rules.</li>\n<li>Support reading and generating six different item mod data structure styles used around version 3.11.4.</li>\n</ul>\n<h3>Quick Start</h3>\n<ol>\n<li>Put your source JSON files under input.</li>\n<li>Launch the GUI or run the CLI generator.</li>\n<li>Review generated files under output.</li>\n<li>Run the audit if you want a rule-violation report.</li>\n</ol>\n<p>Common audit parameters:</p>\n<ul>\n<li>–output-dir</li>\n<li>–report-file</li>\n<li>–include-ok</li>\n<li>–include-template-exports</li>\n<li>–fail-on-violations</li>\n</ul>\n<h3>Directory Layout</h3>\n<p>The program uses the repository root as its default data root.</p>\n<ul>\n<li>input</li>\n<li>现实主义物品模板</li>\n<li>output</li>\n<li>audit_reports</li>\n<li>rules</li>\n</ul>\n<h3>Current Behavior Notes</h3>\n<ul>\n<li>output is not cleared as a whole directory before each run; only current target files are overwritten.</li>\n<li>each generation samples fresh values within the configured ranges, so repeated runs can produce different numeric results for the same item.</li>\n<li>output preserves input source order so generated files follow the source file item order for easier manual review.</li>\n<li>consumable and ordinary cosmetic items are outside the generation scope.</li>\n<li>Item exceptions are exempted per field during audit instead of skipping whole items.</li>\n</ul>\n<h3>Item Exceptions</h3>\n<p>The Item Exceptions window supports searching generated items by Name, loading their current top-level fields, editing allowed fields, and saving per-item overrides into rules/item_exceptions.json.</p>\n<h2>中文</h2>\n<p><strong>作者是个中国人，没摸过枪，生成器的数值范围主要依靠游戏内个人手感/wiki百科/AI的建议。所以如果有任何对于数值的建议，欢迎在评论区留言。</strong></p>\n<p>SPT 现实主义数值范围编辑生成器 是专门为SPT Realism Mod 1.6.4设计的工具集。</p>\n<p>当现实主义MOD更新到SPT4后，本程序将同步更新。</p>\n<h3>简介</h3>\n<p>本项目将 GUI 编辑器、CLI 生成器、规则文件、例外物品管理和输出检修统一收拢到同一个 .NET 解决方案中。</p>\n<h3>主要功能</h3>\n<ul>\n<li>可快捷地生成现实主义补丁</li>\n<li>使用一套符合逻辑的规则体系和数值范围来规范生成的补丁数值</li>\n<li>数值范围可由用户自行调整</li>\n<li>补丁的数值由随机种子系统进行伪随机生成</li>\n<li>通过 rules/item_exceptions.json，可对个别物品的属性进行例外定制。在不破坏数值平衡的情况下，可随意设计属性。</li>\n<li>检修功能，可自动化检查生成的补丁是否违反规则。</li>\n<li>支持读取和生成3.11.4版本时期六种不同编写习惯的物品MOD数据结构。</li>\n</ul>\n<h3>快速开始</h3>\n<ol>\n<li>将待处理 JSON 放入 input。</li>\n<li>启动 GUI，或直接运行 CLI 生成器。</li>\n<li>在 output 中检查生成结果。</li>\n<li>如果需要规则检查报告，再运行检修。</li>\n</ol>\n<p>常用检修参数:</p>\n<ul>\n<li>–output-dir</li>\n<li>–report-file</li>\n<li>–include-ok</li>\n<li>–include-template-exports</li>\n<li>–fail-on-violations</li>\n</ul>\n<h3>目录约定</h3>\n<p>程序默认以仓库根目录为数据根。</p>\n<ul>\n<li>input</li>\n<li>现实主义物品模板</li>\n<li>output</li>\n<li>audit_reports</li>\n<li>rules</li>\n</ul>\n<h3>当前行为说明</h3>\n<ul>\n<li>output 不会在每次运行前整目录清空，只覆盖当前目标文件。</li>\n<li>每次生成都会在配置范围内重新采样，因此同一物品在重复生成时可能出现不同数值结果。</li>\n<li>output 会保留输入源顺序，生成结果按源文件中的条目顺序写出，便于人工核对。</li>\n<li>consumable 和普通 cosmetic 不在物品生成范围内。</li>\n<li>item_exceptions 在检修时按字段豁免，而不是整件物品跳过。</li>\n</ul>\n<h3>例外物品</h3>\n<p>例外物品窗口支持按 Name 搜索已生成物品、读取当前顶层字段、编辑允许字段，并将每个物品的覆盖规则保存到 rules/item_exceptions.json。</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2632/spt-realism-value-range-generator",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-03-17T16:59:00.000000Z",
+  "created_at": "2026-03-17T16:45:33.000000Z",
+  "updated_at": "2026-07-07T16:59:17.000000Z",
+  "owner": {
+    "id": 34843,
+    "name": "windersvista",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/c692e394d9528976f984d7dbe42e8ccb34bbab4f_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-08-02T11:48:32.000000Z",
+    "updated_at": "2026-08-01T17:51:18.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Samuel-Windersvista/Realism-patch-Generator-Csharp",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13316,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<p>v2.1\nProject Refactoring</p>\n<p>Refactored the entire project, reorganizing the generator, rule loading, template recognition, and output disk creation processes.</p>\n<p>Removed the incomplete auditing functionality.</p>\n<p>v2.1\n项目重构</p>\n<p>重构整个项目，重新梳理生成器、规则加载、模板识别与输出落盘流程。</p>\n<p>删除功能不完善的审计功能。</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2632/spt-realism-value-range-generator/2.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 54,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-26T15:10:00.000000Z",
+      "created_at": "2026-03-26T15:11:16.000000Z",
+      "updated_at": "2026-05-14T09:15:12.000000Z",
+      "dependencies": [
+        {
+          "id": 416,
+          "hub_id": 606,
+          "guid": null,
+          "name": "SPT Realism Mod",
+          "slug": "spt-realism-mod",
+          "teaser": "Realistic Overhaul of SPT designed around making the game experience as realistic and hardcore as possible. Highly configurable!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/606.png",
+          "downloads": 447845,
+          "favourites_count": 31,
+          "detail_url": "https://forge.sp-tarkov.com/mod/416/spt-realism-mod",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2022-03-24T19:34:05.000000Z",
+          "created_at": "2022-03-24T19:34:05.000000Z",
+          "updated_at": "2026-07-13T18:15:21.000000Z",
+          "owner": {
+            "id": 6053,
+            "name": "Fontaine",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/8006b0b5a2c55430260a5ee57ae5eb204508134d_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2021-07-01T15:35:08.000000Z",
+            "updated_at": "2026-08-01T16:41:05.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12424,
+              "hub_id": null,
+              "version": "1.6.4",
+              "description": "<h2>SPT Realism Mod v1.6.4 for SPT 3.11</h2>\n<p>Note: please see the “known issues” section at the bottom of this post before reporting issues.</p>\n<h3>Changes:</h3>\n<ul>\n<li>Added config option for stance SFX volume</li>\n</ul>\n<h3>Fixes:</h3>\n<ul>\n<li>Fixed loud sound effect when transitioning stances</li>\n</ul>\n<p><strong>Known Issues:</strong></p>\n<ul>\n<li>Balancing is always on-going.</li>\n<li>Continuous healing is not compatible with the medical system, recommended to disable it.</li>\n<li>Using limb selector to heal (hotkey + scroll) can cause strange animation issues and potentially bugs.</li>\n<li>Glock 18C recoil is bugged, BSG issue.</li>\n<li>High ready sprint animation bugs out sometimes, BSG issue (haven’t seen it happen in 3.11 yet).</li>\n<li>Can hit self with melee in the legs.</li>\n<li>SPT/EFT is cursed.</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/416/spt-realism-mod/1.6.4",
+              "content_length": null,
+              "spt_version_constraint": "~3.11.0",
+              "downloads": 11635,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-24T16:26:00.000000Z",
+              "created_at": "2025-11-24T17:32:02.000000Z",
+              "updated_at": "2026-05-14T08:18:33.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fa65105d05e23e6a8e28e0619d4a444978a9479aabf05a437a000ce1e93a50c3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1183200469/549c687f-0e4c-4f46-89ad-09d76e7c6195?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A36Z&rscd=attachment%3B+filename%3DRealismPatchGenerator-v2.1-win-x64-fd.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A12Z&ske=2026-08-01T21%3A15%3A36Z&sks=b&skv=2018-11-09&sig=YkEHZxsRDik8%2Bld%2FGb0vEg5x7oVBPn9FZVIyPDCJ1a0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIxMCwibmJmIjoxNzg1NjE1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.GYVzDUPNdCX8sUBhgqwZ0Uz8MSk2jfnJ8PcnSPwIxrw&response-content-disposition=attachment%3B%20filename%3DRealismPatchGenerator-v2.1-win-x64-fd.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13284,
+      "hub_id": null,
+      "version": "1.22.0",
+      "description": "<h2>v1.22</h2>\n<h3>Adjustments</h3>\n<ul>\n<li>\n<p>Removed CLI command line, only GUI remains.</p>\n</li>\n<li>\n<p>Optimized GUI layout.</p>\n</li>\n</ul>\n<h3>Fixes</h3>\n<ul>\n<li>\n<p>Fixed the issue of overlapping search tooltip text and buttons in the Exception Items window in the English interface.</p>\n</li>\n<li>\n<p>Fixed the issue where the column size of the Exception Items window was too wide when first opened, requiring manual dragging to restore the proper proportions.</p>\n</li>\n<li>\n<p>Fixed the issue where SplitContainer crashed during the initialization phase of the Exception Items window in the release version due to a conflict between the minimum panel width and the default column spacing.</p>\n</li>\n</ul>\n<h3>Verification</h3>\n<ul>\n<li>Added integration tests to confirm that the same seed will generate completely identical output.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2632/spt-realism-value-range-generator/1.22.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11",
+      "downloads": 10,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-19T12:42:00.000000Z",
+      "created_at": "2026-03-19T13:00:23.000000Z",
+      "updated_at": "2026-05-14T09:14:00.000000Z",
+      "dependencies": [
+        {
+          "id": 416,
+          "hub_id": 606,
+          "guid": null,
+          "name": "SPT Realism Mod",
+          "slug": "spt-realism-mod",
+          "teaser": "Realistic Overhaul of SPT designed around making the game experience as realistic and hardcore as possible. Highly configurable!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/606.png",
+          "downloads": 447845,
+          "favourites_count": 31,
+          "detail_url": "https://forge.sp-tarkov.com/mod/416/spt-realism-mod",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2022-03-24T19:34:05.000000Z",
+          "created_at": "2022-03-24T19:34:05.000000Z",
+          "updated_at": "2026-07-13T18:15:21.000000Z",
+          "owner": {
+            "id": 6053,
+            "name": "Fontaine",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/8006b0b5a2c55430260a5ee57ae5eb204508134d_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2021-07-01T15:35:08.000000Z",
+            "updated_at": "2026-08-01T16:41:05.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12424,
+              "hub_id": null,
+              "version": "1.6.4",
+              "description": "<h2>SPT Realism Mod v1.6.4 for SPT 3.11</h2>\n<p>Note: please see the “known issues” section at the bottom of this post before reporting issues.</p>\n<h3>Changes:</h3>\n<ul>\n<li>Added config option for stance SFX volume</li>\n</ul>\n<h3>Fixes:</h3>\n<ul>\n<li>Fixed loud sound effect when transitioning stances</li>\n</ul>\n<p><strong>Known Issues:</strong></p>\n<ul>\n<li>Balancing is always on-going.</li>\n<li>Continuous healing is not compatible with the medical system, recommended to disable it.</li>\n<li>Using limb selector to heal (hotkey + scroll) can cause strange animation issues and potentially bugs.</li>\n<li>Glock 18C recoil is bugged, BSG issue.</li>\n<li>High ready sprint animation bugs out sometimes, BSG issue (haven’t seen it happen in 3.11 yet).</li>\n<li>Can hit self with melee in the legs.</li>\n<li>SPT/EFT is cursed.</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/416/spt-realism-mod/1.6.4",
+              "content_length": null,
+              "spt_version_constraint": "~3.11.0",
+              "downloads": 11635,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-24T16:26:00.000000Z",
+              "created_at": "2025-11-24T17:32:02.000000Z",
+              "updated_at": "2026-05-14T08:18:33.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8e866b6635d936f4685d6773d96045350677ccb2c1aa630c9efb505b087c62ac/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1183200469/4808d9ee-c55e-4ebd-8bd7-4675fe454270?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A44Z&rscd=attachment%3B+filename%3DRealismPatchGenerator-v1.22.0-win-x64-fd.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A57Z&ske=2026-08-01T21%3A13%3A44Z&sks=b&skv=2018-11-09&sig=q0pDqapK0zPt%2BgB6S5lrOFdnj53S8C4UkehBHM2khQw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIxMCwibmJmIjoxNzg1NjE1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.GYVzDUPNdCX8sUBhgqwZ0Uz8MSk2jfnJ8PcnSPwIxrw&response-content-disposition=attachment%3B%20filename%3DRealismPatchGenerator-v1.22.0-win-x64-fd.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13279,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h1>v1.2 Release Notes / v1.2 更新说明</h1>\n<h2>Highlights / 主要更新</h2>\n<ul>\n<li>Generation now uses a fresh runtime seed by default, so repeated runs can resample values within the configured ranges</li>\n<li>生成器现在默认使用新的运行时随机种子，因此重复生成时会在配置范围内重新采样</li>\n<li>CLI generation now supports a –seed parameter so the same run can be reproduced when needed</li>\n<li>CLI 生成命令现已支持 –seed 参数，便于在需要时复现同一轮生成结果</li>\n<li>GUI generation now supports an optional seed input, including quick clear and reuse of the most recently used generation seed</li>\n<li>GUI 现在也支持可选种子输入，并提供快速清空以及回填最近一次实际使用的种子的能力</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2632/spt-realism-value-range-generator/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "3.11.4",
+      "downloads": 10,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-17T17:01:00.000000Z",
+      "created_at": "2026-03-17T16:54:43.000000Z",
+      "updated_at": "2026-05-14T09:13:58.000000Z",
+      "dependencies": [
+        {
+          "id": 416,
+          "hub_id": 606,
+          "guid": null,
+          "name": "SPT Realism Mod",
+          "slug": "spt-realism-mod",
+          "teaser": "Realistic Overhaul of SPT designed around making the game experience as realistic and hardcore as possible. Highly configurable!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/606.png",
+          "downloads": 447845,
+          "favourites_count": 31,
+          "detail_url": "https://forge.sp-tarkov.com/mod/416/spt-realism-mod",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2022-03-24T19:34:05.000000Z",
+          "created_at": "2022-03-24T19:34:05.000000Z",
+          "updated_at": "2026-07-13T18:15:21.000000Z",
+          "owner": {
+            "id": 6053,
+            "name": "Fontaine",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/8006b0b5a2c55430260a5ee57ae5eb204508134d_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2021-07-01T15:35:08.000000Z",
+            "updated_at": "2026-08-01T16:41:05.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12424,
+              "hub_id": null,
+              "version": "1.6.4",
+              "description": "<h2>SPT Realism Mod v1.6.4 for SPT 3.11</h2>\n<p>Note: please see the “known issues” section at the bottom of this post before reporting issues.</p>\n<h3>Changes:</h3>\n<ul>\n<li>Added config option for stance SFX volume</li>\n</ul>\n<h3>Fixes:</h3>\n<ul>\n<li>Fixed loud sound effect when transitioning stances</li>\n</ul>\n<p><strong>Known Issues:</strong></p>\n<ul>\n<li>Balancing is always on-going.</li>\n<li>Continuous healing is not compatible with the medical system, recommended to disable it.</li>\n<li>Using limb selector to heal (hotkey + scroll) can cause strange animation issues and potentially bugs.</li>\n<li>Glock 18C recoil is bugged, BSG issue.</li>\n<li>High ready sprint animation bugs out sometimes, BSG issue (haven’t seen it happen in 3.11 yet).</li>\n<li>Can hit self with melee in the legs.</li>\n<li>SPT/EFT is cursed.</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/416/spt-realism-mod/1.6.4",
+              "content_length": null,
+              "spt_version_constraint": "~3.11.0",
+              "downloads": 11635,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-24T16:26:00.000000Z",
+              "created_at": "2025-11-24T17:32:02.000000Z",
+              "updated_at": "2026-05-14T08:18:33.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/af34c19b9a5f788d3294dd809b8e8310d281daad29c7ec6cb26c6cd0db6788a7?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1183200469/7ef17861-3b96-4879-93f6-55e445e58823?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A33Z&rscd=attachment%3B+filename%3DRealismPatchGenerator-v1.2.0-win-x64-fd.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A00Z&ske=2026-08-01T21%3A07%3A33Z&sks=b&skv=2018-11-09&sig=dWHD%2BrpkH0IpZspjQ0zxw0BFkiQ51VnX2N3DhGSTlKE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIxMCwibmJmIjoxNzg1NjE1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.GYVzDUPNdCX8sUBhgqwZ0Uz8MSk2jfnJ8PcnSPwIxrw&response-content-disposition=attachment%3B%20filename%3DRealismPatchGenerator-v1.2.0-win-x64-fd.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:05:45.417Z",
+    "discoveredBy": "mod:1958",
+    "error": null
+  }
+}

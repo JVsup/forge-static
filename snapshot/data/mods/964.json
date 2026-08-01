@@ -1,0 +1,136 @@
+{
+  "type": "mod",
+  "id": 964,
+  "hub_id": 1314,
+  "guid": null,
+  "name": "SPT ModOrganizer Integration",
+  "slug": "spt-modorganizer-integration",
+  "teaser": "Simple extension for the Basic_Game plugin to make SPT compatible with ModOrganizer.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1314.png",
+  "downloads": 9694,
+  "favourites_count": 0,
+  "description": "<p><strong>Note:</strong> if you are running <strong>Windows 24H2</strong>, you will NEED to install fixed usvfs files. If you don’t, no mods will load and they will read something like “Mod: (mod-name) is missing package.json …”. Download the .zip from <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ModOrganizer2/modorganizer/issues/2174#issuecomment-2558511974\" rel=\"noreferrer noopener\">this comment, “usvfs_0.5.7.0.zip”</a>, and overwrite the usvfs files in modorganizer base directory.</p>\n<p>If you know what this is, you probably know why you want it. If not, i recommend giving <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1702-sp-eft-manager/\" rel=\"noreferrer noopener\">SP-EFT Manager</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/35179-schrader/\" rel=\"noreferrer noopener\">Schrader</a> a try. It has many more SPT-specific features in mind, and is probably easier to understand for first timers</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">What is this?</div>\n<div class=\"tab-content\"><p>Simple extension for the Basic_Game plugin to make SPT compatible with ModOrganizer.</p>\n<p>You will need ModOrganizer (Github page listed under dependencies) to use this.</p>\n<p>It has automatic handling of most “normally” packed archives (archives containing bepinex plugins or mods containing a package.json).</p>\n<p>If you know what ModOrganizer is, and you used it before then youll know why I made this.</p>\n<p>It was mostly a project i made for myself but A couple of people on discord asked for it so I figured I’d share.</p>\n<p><em>Screenshot of MO2 with regular SPT mods installed</em></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p><strong>How do i install it?</strong></p>\n<p>First, install <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ModOrganizer2/modorganizer/releases/tag/v2.5.0\" rel=\"noreferrer noopener\">ModOrganizer 2.5.0</a>, then extract the archive of this mod to the base directory of the MO (ModOrganizer) install.</p>\n<p>Do <em><strong>not</strong></em> install MO2 <em>inside</em> of the SPT directory, neither as portable or full install. In the current version, the entire spt directory is indexed by MO2. This means MO2 will be indexing itself, which causes all sorts of permissions errors in many cases. In future versions, this will not be a problem. Keep it in mind for now though</p>\n<p>When you launch MO2, you just have to point it at your SPT directory, where SPT.Server.exe and SPT.Launcher.exe are.</p>\n<p><strong>Note:</strong> In order to ensure the VFS can control the file system, your user folder should be <em>empty.</em> Your user directory not being empty will lead to problems with how the game accesses files inside the VFS and can cause your profiles not to save, configs not to load and etc. <em>keep your user dir empty.</em></p>\n<p>When launching the game, you must use the option in the dropdown that looks like this:</p>\n<p><em>It makes sure both the server and the client can be ran at the same time and both have access to the VFS.</em></p>\n<p><strong>How do I use SVM/Realism configurator/Load order editor etc.?</strong></p>\n<p>In order to use configurators like this, you have to add them as an executable in the ui. Configurators must be ran <em>through</em> MO. Not in the physical folder.</p>\n<p>If you need help with this, DM me on Discord (Archon001) or leave a comment on the mod and I’ll try my best to get you going.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/964/spt-modorganizer-integration",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2023-07-03T15:43:05.000000Z",
+  "created_at": "2023-07-03T15:43:05.000000Z",
+  "updated_at": "2026-07-13T18:08:20.000000Z",
+  "owner": {
+    "id": 28316,
+    "name": "Archon",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/933BdgVTc4fJLL62am2psydfXvezBBTf8n1e8lns_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-03-09T14:05:22.000000Z",
+    "updated_at": "2026-07-10T04:50:26.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/Archondev/sptMO2",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 2728,
+      "hub_id": 11802,
+      "version": "1.1.4",
+      "description": "<p>A fix for ModOrganizer 2.5.1+. Should work just fine with older versions as well.<br />\nThanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/67372-gipphe/\" rel=\"noreferrer noopener\">Gipphe!</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/964/spt-modorganizer-integration/1.1.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3472,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-09-23T10:44:12.000000Z",
+      "created_at": "2024-09-23T10:44:12.000000Z",
+      "updated_at": "2026-05-14T03:29:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/518dc92d0529a1c0b5e764c7f6da0f5279938f32203aad23fe3f95330bbd4428",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://codeload.github.com/Archondev/sptMO2/zip/refs/tags/1.1.4"
+      }
+    },
+    {
+      "id": 3736,
+      "hub_id": 10517,
+      "version": "1.1.3",
+      "description": "<p>Update for 3.9.0 with rebrand</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/964/spt-modorganizer-integration/1.1.3",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 1545,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T23:42:22.000000Z",
+      "created_at": "2024-07-06T23:42:22.000000Z",
+      "updated_at": "2026-07-13T18:04:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/518dc92d0529a1c0b5e764c7f6da0f5279938f32203aad23fe3f95330bbd4428",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    },
+    {
+      "id": 4458,
+      "hub_id": 9617,
+      "version": "1.1.2",
+      "description": "<p><strong>THIS IS THE LAST VERSION FOR 3.8.X AND BELOW.</strong></p>\n<p>If you are playing on a version which has executables named AKI.Launcher.exe or AKI.Server.exe, this is the version you need.</p>\n<p><strong>Small bugfix.</strong></p>\n<ul>\n<li>Fix case for instances where executables may be case sensitive. Thanks to ‘GJ (not other J’s)’</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/964/spt-modorganizer-integration/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 1695,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-25T01:08:08.000000Z",
+      "created_at": "2024-04-25T01:08:08.000000Z",
+      "updated_at": "2026-07-13T18:05:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/518dc92d0529a1c0b5e764c7f6da0f5279938f32203aad23fe3f95330bbd4428",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:03:04.719Z",
+    "discoveredBy": "mod:2799",
+    "error": null
+  }
+}

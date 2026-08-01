@@ -1,0 +1,166 @@
+{
+  "type": "mod",
+  "id": 2612,
+  "hub_id": null,
+  "guid": "ciallo.supersprintjump",
+  "name": "Super Sprint and Jump",
+  "slug": "super-sprint-and-jump",
+  "teaser": "Adjust run speed and jump height with hotkey. Move faster or jump higher up to 20x",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/NNUfxr0IQ9ZuluXg1MKeASuFzqtnT8CNalxfL0N3.png",
+  "downloads": 3572,
+  "favourites_count": 8,
+  "description": "<h1>All functions in F12 menu</h1>\n<p>Won’t affect bots.</p>\n<ul>\n<li><strong>Multiply sprint speed x1.0~20.0</strong><br />\nDue to physical effect, actual speed is limited to not higher than 1.5~2.0x.</li>\n<li><strong>Sprint speed overlimit</strong><br />\nBreak the physical limit but buggy:<br />\nSpeed &gt;5x will get uphill obstacled sometimes, and downhill floated that can’t jump.<br />\nSpeed &gt;10x could break physical collision, may run into ground and die (please stop sprint before hit on hill or wall).</li>\n<li><strong>Walk acceleration</strong><br />\nAlso speed up normal walking.</li>\n<li><strong>Multiply jump height x1.0~20.0</strong><br />\nSprinting jump distance depends on Sprint Speed coef, which is recommanded higher than jump coef*0.5.<br />\nSpeed overlimit won’t affect jump, you could set high sprint speed but disable overlimit.</li>\n<li><strong>No fall damage</strong><br />\nFall damage is automatically divided by jump height coef, and you can further remove it by this.</li>\n<li><strong>Hotkeys and HUD</strong><br />\nYou can set hotkey for +- speed or height conveniently.<br />\nThe current multiplier values are shown on bottom left (near stamina HUD)</li>\n</ul>\n<h1>Suggestion</h1>\n<p>If you just want to play normally but travel faster between position, only set sprint speed x2.0 is good.</p>\n<h1>Compatible</h1>\n<ul>\n<li>Conflict with JiangHu, or other mod changing sprint speed or jump height. I don’t know which one will cover another. Test on your own!</li>\n<li>In Fika server, this only affect your client</li>\n</ul>\n<h3>How to install</h3>\n<p>Download the zip and copy(drag) the BepInEx folder in package, to your SPT main folder (where EscapeFromTarkov.exe locates)</p>\n<h3>To uninstall</h3>\n<p>Just remove the dll file in YourSPT/BepInEx/plugins/SuperSprintJump.dll</p>\n<h1>Reference</h1>\n<p>Thanks <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2274/jiang-hu\" rel=\"noreferrer noopener\">JiangHu</a> for speed patch method.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2612/super-sprint-and-jump",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-03-01T21:25:00.000000Z",
+  "created_at": "2026-03-01T21:26:03.000000Z",
+  "updated_at": "2026-07-28T08:08:25.000000Z",
+  "owner": {
+    "id": 85525,
+    "name": "ciallomako",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/AxbAZF3TgLUKDCQMaNKaj6a9kBK77qgTKj3eablM_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/SQlBgVI3HKcFWbwal9Z9AZPPv30tg1Luy9Pr17zh_1280w.webp",
+    "created_at": "2025-10-10T02:17:24.000000Z",
+    "updated_at": "2026-07-31T17:40:25.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Klamist/SPTIncreaseSprintJump",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13228,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>v1.2.1<br />\nAdd an option to accelerate normal walking speed.</p>\n<p>v1.2<br />\nCan change sprint &amp; jump multiplier with hotkeys.<br />\nAdd a HUD to show current multiplier values.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2612/super-sprint-and-jump/1.2.1",
+      "content_length": 5778,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 2890,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-08T17:09:00.000000Z",
+      "created_at": "2026-03-08T17:09:05.000000Z",
+      "updated_at": "2026-07-28T08:08:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/d9bb79ee282b0e479a0de3483dd34b0939547970dc147f41a15758e2685c01b5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/54e71f9b-f040-47a0-a641-0aa328df0bbb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A38Z&rscd=attachment%3B+filename%3DSuperSprintJump_v1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A48Z&ske=2026-08-01T21%3A08%3A38Z&sks=b&skv=2018-11-09&sig=F3lNnEgUjoztfqUs%2FUv1uhtQXdiAilxYOgG5Ew7K66Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13224,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Add hotkeys to adjust sprint and jump coef.<br />\nAdd HUD at bottom left to show current values.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2612/super-sprint-and-jump/1.2.0",
+      "content_length": 5678,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 78,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-08T02:03:00.000000Z",
+      "created_at": "2026-03-08T02:03:16.000000Z",
+      "updated_at": "2026-07-28T08:08:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/34fc7d612b782a708110a91f2d8a85d1ee04a5172f6bb68657744cafc8c7e04f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/c9fedb25-2c9c-4ff4-925a-235181af4d7e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A53Z&rscd=attachment%3B+filename%3DSuperSprintJump_v1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A45Z&ske=2026-08-01T21%3A07%3A53Z&sks=b&skv=2018-11-09&sig=Jc4R21QkFp7teFOIMa%2Byo7VM2A5W2s9uiZUyo84nF3w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13188,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>Add new option to break the sprint speed limit, but is buggy (see description page of mod)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2612/super-sprint-and-jump/1.1.0",
+      "content_length": 4443,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 455,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-02T09:29:00.000000Z",
+      "created_at": "2026-03-02T09:29:24.000000Z",
+      "updated_at": "2026-07-28T08:07:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/307f5b3d299fc2c77479b49514944611c1b006e43c78c450d33acd3a28d9c9ce",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/a60cbdb8-d33b-4b4f-ad63-845b96717a94?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A33Z&rscd=attachment%3B+filename%3DSuperSprintJump_v1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A47Z&ske=2026-08-01T21%3A12%3A33Z&sks=b&skv=2018-11-09&sig=zwmWByfGT%2BE6LnKUoHZo4M%2FAOPG4APK26eKcb30%2BmoI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13186,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>v1.0.0 for SPT 4.0.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2612/super-sprint-and-jump/1.0.0",
+      "content_length": 4040,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 149,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-01T21:26:00.000000Z",
+      "created_at": "2026-03-01T21:26:56.000000Z",
+      "updated_at": "2026-07-28T08:07:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/be49912386972aeac7ef359632c6ac05e9aee548f1a64dcf1d25edbafb449eab",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/30a7d0c1-145f-4e8a-b854-ab8aa9fd5739?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A09Z&rscd=attachment%3B+filename%3DSuperSprintJump_v1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A03Z&ske=2026-08-01T21%3A19%3A09Z&sks=b&skv=2018-11-09&sig=Pan4NL5YiB4pCcMcLHff2UgsG%2Bd5aTZ7JrRl%2FOHPc2Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIwOCwibmJmIjoxNzg1NjE1OTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rL3iCe6dcpwyAc5o74e-oKm_NE-MilK4v1C53PEydiI&response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 2,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:31.467Z",
+    "discoveredBy": "seed"
+  }
+}

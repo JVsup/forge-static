@@ -1,0 +1,142 @@
+{
+  "type": "mod",
+  "id": 2648,
+  "hub_id": null,
+  "guid": "com.suntion.allgoodstrader",
+  "name": "AllGoodsTrader",
+  "slug": "allgoodstrader",
+  "teaser": "This mod adds four bilingual traders. Traders buy most items; equipment trader offers repair & insurance. Automatically handles rocket ammo & ammo boxes. Dynamic registration. Pricing supports three modes with configurable multiplier.",
+  "thumbnail": "",
+  "downloads": 2699,
+  "favourites_count": 9,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><p>This mod adds a complete full-goods trader system to the game, featuring four types of traders: Weapon Trader, Equipment Trader, Consumable Trader, and Barter Trader. It supports bilingual (Chinese and English) names, descriptions, and avatar path configurations. All traders have the ability to purchase items, while the Equipment Trader also offers repair and insurance services. The Equipment Trader can sell helmets, vests, armor, backpacks, and other equipment, and the Barter Trader allows the purchase of any secure container.</p>\n<p>In terms of item handling, the mod enhances special items: rocket launchers are automatically paired with rockets and calculate total price, ammunition boxes automatically traverse slots to fill ammunition and set stack counts, and items with mandatory slots will be randomly filled with compatible items by default. The system includes built-in statistics tracking to monitor success counts for secure containers, special items, items with slots, and ordinary items, and outputs debug logs for critical operations such as rocket launcher handling, recording overall item addition success rates and categorical statistics.</p>\n<p>The pricing system supports three modes: using only handbook prices, using average flea market prices, or automatically selecting the lower of the two (default). A global price adjustment multiplier (default 1.2) is also configurable. All settings are automatically loaded from <code>config.json</code> with fallback to default values. All static resources of the mod are centralized in the <code>/data/</code> directory for easy deployment and management.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><p>该模组为游戏添加了完整的全货物商人系统，包含武器商、装备商、消耗品商和杂物商四类商人，支持中英双语名称、描述及头像路径配置。所有商人具备购买功能、装备商人具备维修和投保功能，其中装备商可出售头盔、胸挂、护甲、背包等装备，杂货商人可购买任意安全箱。</p>\n<p>在物品处理方面，模组针对特殊物品进行了增强：火箭筒可自动配套火箭弹并计算总价，弹药盒能自动遍历插槽填充弹药并设置堆叠数量，带有必备插槽的物品会默认随机填充匹配物品。系统内置统计机制，可追踪安全箱、特殊物品、有槽位物品和普通物品的成功计数，并为火箭发射器等关键操作输出调试日志，记录整体物品添加成功率及分类统计。</p>\n<p>价格体系支持三种模式：仅使用手册价格、使用跳蚤市场平均价格、自动取两者最小值（默认），并可配置全局价格调整系数（默认1.2）。所有配置通过 <code>config.json</code> 自动加载，支持默认值回退。模组的所有静态资源集中于 <code>/data/</code> 目录下，便于部署与管理。</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2648/allgoodstrader",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2026-03-31T15:10:00.000000Z",
+  "created_at": "2026-03-31T15:07:12.000000Z",
+  "updated_at": "2026-07-28T08:19:35.000000Z",
+  "owner": {
+    "id": 85431,
+    "name": "Suntion",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-10-06T15:34:17.000000Z",
+    "updated_at": "2026-07-10T04:52:14.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/SunYanbox/AllGoodsTrader",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13377,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Core Architecture &amp; Configuration Overhaul</h3>\n<ul>\n<li><strong>Configuration-driven system</strong>: Added unified configuration service for global mod settings (price modes, multipliers) and customizable trader settings</li>\n<li><strong>Dynamic trader registration</strong>: Removed hardcoded trader initialization; now automatically loads traders from JSON files in <code>traders/</code> folder</li>\n<li><strong>Smart default handling</strong>: System automatically applies default insurance/repair templates based on trader’s toggle settings when not explicitly configured</li>\n<li><strong>JSONC in config files are not supported</strong></li>\n</ul>\n<h3>Enhanced Features</h3>\n<ul>\n<li><strong>Individual trader control</strong>: Each of the four core traders (weapons, equipment, consumables, barter items) now has its own config file, allowing independent control over:\n<ul>\n<li>Enable/disable status</li>\n<li>Repair service toggle</li>\n<li>Insurance service toggle</li>\n<li>All overridable properties mentioned in the <code>data/data.jsonc</code> file</li>\n</ul>\n</li>\n</ul>\n<h3>Breaking Changes</h3>\n<ul>\n<li><strong>Config file migration</strong>: The old single <code>data/config.json</code> has been split into:\n<ul>\n<li>Global config: <code>data/config.json</code></li>\n<li>Individual trader configs: <code>data/traders/{id}.jsonc</code></li>\n</ul>\n</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>核心架构与配置重构</h3>\n<ul>\n<li><strong>配置驱动系统</strong>：新增统一配置服务，管理全局模组设置（价格模式、倍率）和商人定制化配置</li>\n<li><strong>动态商人注册</strong>：移除硬编码的商人初始化逻辑，现在自动扫描 <code>traders/</code> 文件夹下的 JSON 文件动态加载商人</li>\n<li><strong>智能默认值处理</strong>：当配置文件未明确设置保险/维修配置时，系统根据商人的开关属性自动应用默认模板</li>\n<li><strong>配置文件不支持JSONC格式</strong></li>\n</ul>\n<h3>功能增强</h3>\n<ul>\n<li><strong>独立商人控制</strong>：四种核心商人（武器配件商、装备商、消耗品商、杂物商）现在拥有独立配置文件，可分别控制：\n<ul>\n<li>启用/禁用状态</li>\n<li>维修功能开关</li>\n<li>保险功能开关</li>\n<li><code>data/data.jsonc</code>文件提到的所有可重写属性</li>\n</ul>\n</li>\n</ul>\n<h3>破坏性变更</h3>\n<ul>\n<li><strong>配置文件迁移</strong>：原有的单一 <code>data/config.json</code> 已拆分为：\n<ul>\n<li>全局配置：<code>data/config.json</code></li>\n<li>独立商人配置：<code>data/traders/{id}.jsonc</code></li>\n</ul>\n</li>\n</ul></div></div></div>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2648/allgoodstrader/1.0.0",
+      "content_length": 595914,
+      "spt_version_constraint": "~4.0.8",
+      "downloads": 2412,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-04-05T16:53:00.000000Z",
+      "created_at": "2026-04-05T16:58:25.000000Z",
+      "updated_at": "2026-07-28T08:19:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/517963b4ae8812ea7077b4a61ed9ed85882cf9faa7a4b4bcf72070d626729bd6/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1196074395/7b58b55c-bb69-47ae-919a-0dee58c00e1f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A27%3A09Z&rscd=attachment%3B+filename%3DAllGoodsTrader-1.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A26%3A31Z&ske=2026-08-01T20%3A27%3A09Z&sks=b&skv=2018-11-09&sig=RpO8UR1yccoqEv0GzpNeVnN7lnhWfYERyKWx0oVzDbk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzIxOCwibmJmIjoxNzg1NjEyOTE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Hcw3aetOdirxG7THdlFIluxD__adcZohh7wbgHFnSCs&response-content-disposition=attachment%3B%20filename%3DAllGoodsTrader-1.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13334,
+      "hub_id": null,
+      "version": "0.5.0",
+      "description": "<div class=\"tabset\"><div id=\"tabset-2-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><ul>\n<li>Merchant names, descriptions, etc. have been changed (Chinese version only)</li>\n<li>Merchants can purchase items from players</li>\n<li>Merchants can perform repairs</li>\n<li>Merchants can provide insurance services</li>\n<li>Equipment merchant can sell helmets, plate carriers, body armor, etc.</li>\n<li>Support for adjusting price calculation logic\n<ul>\n<li>Handbook: Uses only the handbook price</li>\n<li>AvgRagfair: Uses the average flea market price</li>\n<li>Auto: Uses the minimum value between handbook price and average flea market price (default)</li>\n</ul>\n</li>\n<li>Support for multilingual merchants</li>\n<li>Items with mandatory slots will be randomly filled with compatible items by default</li>\n</ul></div></div>\n<div id=\"tabset-2-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><ul>\n<li>商人名称、描述等改变（仅中文部分）</li>\n<li>商人可购买物品</li>\n<li>商人可维修</li>\n<li>商人可投保</li>\n<li>装备商人可出售头盔、插板胸挂、护甲等</li>\n<li>支持调整价格计算逻辑\n<ul>\n<li>Handbook: 仅手册价格</li>\n<li>AvgRagfair: 平均跳蚤价格</li>\n<li>Auto: Min（手册价格，平均跳蚤价格）（默认）</li>\n</ul>\n</li>\n<li>支持多语言商人</li>\n<li>有必备插槽的物品将默认随机填充匹配物品</li>\n</ul></div></div></div>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2648/allgoodstrader/0.5.0",
+      "content_length": 593311,
+      "spt_version_constraint": "~4.0.8",
+      "downloads": 281,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-31T15:10:00.000000Z",
+      "created_at": "2026-03-31T15:08:50.000000Z",
+      "updated_at": "2026-07-28T08:17:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9c1adf4d575ca02676c585bf1f79c57369617bc9414339be5e7072b1abbc3d8a/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1196074395/e07a29f1-6331-417b-a64b-2b13069bb961?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A12%3A23Z&rscd=attachment%3B+filename%3DAllGoodsTrader-0.5.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A11%3A35Z&ske=2026-08-01T20%3A12%3A23Z&sks=b&skv=2018-11-09&sig=vtn8sMNo0AkDMZzmrGuxc6l4wMhthRwIF97yIv80zIY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzIxOSwibmJmIjoxNzg1NjEyOTE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q-xPBuFYQbYXOm4j4KHsqGKWjx5wvA-fqxaZBETzNyc&response-content-disposition=attachment%3B%20filename%3DAllGoodsTrader-0.5.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13335,
+      "hub_id": null,
+      "version": "0.4.3",
+      "description": "<div class=\"tabset\"><div id=\"tabset-3-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><p><strong>This version only has Chinese language</strong></p>\n<ul>\n<li>\n<p>Updated SPT dependency library version to 4.0.8</p>\n</li>\n<li>\n<p>Removed redundant code</p>\n</li>\n<li>\n<p>Code cleanup and optimization, properly handled most warnings</p>\n</li>\n<li>\n<p>Minimum supported SPT version raised to 4.0.4</p>\n</li>\n<li>\n<p>Fixed incorrect metadata URL in the mod</p>\n</li>\n<li>\n<p>Fixed an issue where weapon and配件 trader interface failed to display properly in SPT 4.0.11</p>\n</li>\n</ul></div></div>\n<div id=\"tabset-3-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><ul>\n<li>\n<p>更新SPT的依赖库版本至4.0.8</p>\n</li>\n<li>\n<p>移除了冗余代码</p>\n</li>\n<li>\n<p>代码清理与优化，正确处理大部分警告</p>\n</li>\n<li>\n<p>支持的SPT版本提升到至少4.0.4</p>\n</li>\n<li>\n<p>修复了模组元数据url提供错误的问题</p>\n</li>\n<li>\n<p>修复了SPT 4.0.11中枪械与配件商人交易界面无法正常显示的问题</p>\n</li>\n</ul></div></div></div>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2648/allgoodstrader/0.4.3",
+      "content_length": 593178,
+      "spt_version_constraint": "~4.0.8",
+      "downloads": 6,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-31T15:11:00.000000Z",
+      "created_at": "2026-03-31T15:11:18.000000Z",
+      "updated_at": "2026-07-28T08:16:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/640df20047d03df3d5f15124e212d4f54dec819ff3b7bb3db258f45110a3d235/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1086946516/c0865afa-188b-40d5-9340-0a0ca210b90c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A35%3A06Z&rscd=attachment%3B+filename%3Dallgoodstrader-0.4.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A35%3A04Z&ske=2026-08-01T20%3A35%3A06Z&sks=b&skv=2018-11-09&sig=Q1JZV3Gi1o7GoDuaVg2ig1n0FU%2FmO2FfaFNL1sDBc7A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzIxOSwibmJmIjoxNzg1NjEyOTE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q-xPBuFYQbYXOm4j4KHsqGKWjx5wvA-fqxaZBETzNyc&response-content-disposition=attachment%3B%20filename%3Dallgoodstrader-0.4.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 12,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:35:17.630Z",
+    "discoveredBy": "seed"
+  }
+}

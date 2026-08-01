@@ -1,0 +1,269 @@
+{
+  "type": "mod",
+  "id": 755,
+  "hub_id": 1012,
+  "guid": "com.platinum.theblacklist",
+  "name": "The Blacklist - flea market enhancements",
+  "slug": "the-blacklist-flea-market-enhancements",
+  "teaser": "Disables the BSG blacklist in the flea market. Rebalances the prices of blacklisted ammo like Igolnik. Speeds up sell times for offers. Additional configs to set flea prices for any item in the game.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1012.jpeg",
+  "downloads": 153274,
+  "favourites_count": 58,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p><strong>Features:</strong></p>\n<p>- Disables the ‘BSG Blacklist’ in the flea market so you can buy/sell high end ammo and gear again.</p>\n<p>- Rebalances the price of ammo depending on their stats (details below). The default flea prices for high end ammo were too low, Igolnik was cheaper than some low level bullets.</p>\n<p>- Rebalances the price of some blacklisted guns.</p>\n<p>- Configuration to make cheap offers made by you sell faster.</p>\n<p>- Configuration to reduce number of items for sale on the flea market to simulate scarcity.</p>\n<p>- Configuration to add an extra offer slot.</p>\n<p>- Configuration to allow you to set a custom price override for items on the flea market.</p>\n<p>- Configuration to blacklist any item on the flea market.</p>\n<p><strong>Ammo pricing:</strong></p>\n<p>Pricing for high end ammo is based on their penetration power and damage. Higher the pentration and damage, higher the price. Formula:</p>\n<p>newPrice = advancedConfig.baselineBulletPrice * penetrationMultiplier * damageMultiplier * config.blacklistedAmmoAdditionalPriceMultiplier;</p>\n<p>To increase the price of the previously blacklisted ammo across the board, simply increase the <em>blacklistedAmmoAdditionalPriceMultiplier</em> setting in config.json.</p>\n<p>Enable <em>useBalancedPricingForAllAmmo</em> in config.json to apply the above formula to all bullets and shotgun rounds.</p>\n<p><strong>Custom flea market pricing:</strong></p>\n<p>You can change the flea pricing of any item using the customItemConfigs[] setting in config.json.</p>\n<p>First, get the item._id from <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/search</a></p>\n<p>Then add a new entry to customItemConfigs, following the existing pattern:</p>\n<p>{</p>\n<p>“itemId”: “5c0a840b86f7742ffa4f2482”, // item._id you just got from above</p>\n<p>“fleaPriceMultiplier”: 1.5, // the new price will be the existing price times this number</p>\n<p>“fleaPriceOverride”: 42069 // if you add a value for this, this will be the flea market value, ignoring the multiplier above</p>\n<p>}</p>\n<p><strong>Blacklist items:</strong></p>\n<p>Similarly, you can blacklist any item using the above customItemConfigs. Just find the itemId and set property “blacklisted” to true.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p><strong>Installation</strong>:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/34vXXDj.gif\" alt=\"\" />\n(In the GIF it says ‘Live Flea Prices’, but the installation is the same)</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configurations</div>\n<div class=\"tab-content\"><p>The configs have comments or notes about each of the settings so they should be quite self-explanatory. Let me know if you want more details about a certain config.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/755/the-blacklist-flea-market-enhancements",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2023-02-11T11:16:00.000000Z",
+  "created_at": "2023-02-11T11:16:55.000000Z",
+  "updated_at": "2026-07-28T07:07:45.000000Z",
+  "owner": {
+    "id": 24114,
+    "name": "Platinum",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/4MlciHHHllHCzejbvjQcb9aOAgN7tDS49WVdG0ey_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2022-12-13T07:53:54.000000Z",
+    "updated_at": "2026-07-10T04:50:17.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 52282,
+      "name": "ArchangelWTF",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-05-20T14:55:34.000000Z",
+      "updated_at": "2026-08-01T16:40:09.000000Z"
+    }
+  ],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ArchangelWTF/spt-the-blacklist",
+      "label": "C#"
+    },
+    {
+      "url": "https://github.com/gndworks/spt-the-blacklist",
+      "label": "Node"
+    }
+  ],
+  "versions": [
+    {
+      "id": 12662,
+      "hub_id": null,
+      "version": "3.0.1",
+      "description": "<ul>\n<li>Added a missing dogtag that was not blacklisted on the flea</li>\n<li>Added an option to allow only Found in Raid items to be sold to the flea</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/3.0.1",
+      "content_length": 21126,
+      "spt_version_constraint": "~4.0",
+      "downloads": 25879,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-24T15:00:00.000000Z",
+      "created_at": "2025-12-24T14:57:47.000000Z",
+      "updated_at": "2026-07-28T07:07:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e4711d571daa838fbc1e019ef55879bf560bb92a819d953995ceb6930084f10c",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/945806265/f46d6634-bcdc-41dd-8eee-530f24f23619?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A30Z&rscd=attachment%3B+filename%3Dplatinum-theblacklist-3.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A16Z&ske=2026-08-01T21%3A03%3A30Z&sks=b&skv=2018-11-09&sig=kKBFmlCLISs7aTJ3WNXOHmRNJSbc11OuDOJ0Yl7GasY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist-3.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12006,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<ul>\n<li>Updated to SPT 4.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/3.0.0",
+      "content_length": 20920,
+      "spt_version_constraint": "~4.0",
+      "downloads": 12709,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-24T14:49:00.000000Z",
+      "created_at": "2025-10-24T14:50:00.000000Z",
+      "updated_at": "2026-07-28T06:08:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZTk5ODY0MmRjNTQzNWFhN2Y5YWMxNGVmNzRhNDhhNDA6MTc2MTMxNzM1Mw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/945806265/104b6fb0-9164-4895-a3e7-36dfaf0a68d6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A38Z&rscd=attachment%3B+filename%3Dplatinum-theblacklist-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A24Z&ske=2026-08-01T21%3A19%3A38Z&sks=b&skv=2018-11-09&sig=8vmkXRLLCm2%2BTUGCpEvsLoAAa9dKaQd205C2NI5KByM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1020,
+      "hub_id": 13767,
+      "version": "2.0.4+b",
+      "description": "<p>Beta/Untested.</p>\n<p>Try fix blacklisted items not being allowed to be sold on Flea Market.</p>\n<p>For SPT 3.11</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/2.0.4+b",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 21993,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-24T08:06:40.000000Z",
+      "created_at": "2025-03-24T08:06:40.000000Z",
+      "updated_at": "2026-05-14T02:03:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/896436054/0c46eb3e-3e8e-424f-9278-fcb6f8394ca7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A49Z&rscd=attachment%3B+filename%3Dplatinum-theblacklist.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A32Z&ske=2026-08-01T21%3A26%3A49Z&sks=b&skv=2018-11-09&sig=dPhy12ytKcorksSAVogflROtYJUXeVenIL3JDRI09m8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1068,
+      "hub_id": 13715,
+      "version": "2.0.3+b",
+      "description": "<p>Updated for SPT 3.11. Beta/Untested.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/2.0.3+b",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1297,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-21T11:00:05.000000Z",
+      "created_at": "2025-03-21T11:00:05.000000Z",
+      "updated_at": "2026-05-14T02:03:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/896436054/708b056c-3222-4823-8a8e-9e7f7d1ab425?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A51Z&rscd=attachment%3B+filename%3Dplatinum-theblacklist.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A27Z&ske=2026-08-01T21%3A11%3A51Z&sks=b&skv=2018-11-09&sig=RWG8260uH6X4W1qNJgS48sKQ3YR20yM%2FfqcnVqCJQ%2Bw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2282,
+      "hub_id": 12328,
+      "version": "2.0.2+b",
+      "description": "<p>Updated to SPT 3.10 by <a target=\"_blank\" class=\"external-link\" href=\"https://dev.sp-tarkov.com/Archangel\" rel=\"noreferrer noopener\">Archangel</a> (again, thanks for your help!)<br />\nBeta release because I havent functionally tested it.<br />\nBlacklisted new dogtags.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/2.0.2+b",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 19079,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-27T09:53:23.000000Z",
+      "created_at": "2024-11-27T09:53:23.000000Z",
+      "updated_at": "2026-07-13T18:02:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    },
+    {
+      "id": 3423,
+      "hub_id": 10898,
+      "version": "2.0.1",
+      "description": "<p>Updated for SPT 3.9.X</p>\n<p>All credits to <a target=\"_blank\" class=\"external-link\" href=\"https://dev.sp-tarkov.com/Archangel\" rel=\"noreferrer noopener\">Archangel</a> who did the work.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/2.0.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 20226,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-17T11:43:02.000000Z",
+      "created_at": "2024-07-17T11:43:02.000000Z",
+      "updated_at": "2026-07-13T18:04:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    },
+    {
+      "id": 4862,
+      "hub_id": 9144,
+      "version": "2.0.0",
+      "description": "<p>Updated for SPT-AKI 3.8.*</p>\n<ul>\n<li>Overhauled most of the code</li>\n<li>Fix issue where prices weren’t being updated properly due to async load in v1</li>\n<li>Removed logic surrounding armour prices because of the new armour system</li>\n<li>Added bunch of extra features to the configs</li>\n<li>Updated pricing of most blacklisted ammo</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 17698,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-03T08:48:58.000000Z",
+      "created_at": "2024-04-03T08:48:58.000000Z",
+      "updated_at": "2026-07-13T18:05:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    },
+    {
+      "id": 6055,
+      "hub_id": 7620,
+      "version": "1.3.1",
+      "description": "<p>Updated SPT-AKI version to 3.7.*</p>\n<p>Feel free to use existing v1.3.0 mod if you have made changes to your configs.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/1.3.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.7.0",
+      "downloads": 15531,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-09T09:06:47.000000Z",
+      "created_at": "2023-10-09T09:06:47.000000Z",
+      "updated_at": "2026-07-13T18:07:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    },
+    {
+      "id": 6577,
+      "hub_id": 6941,
+      "version": "1.3.0",
+      "description": "<p>For SPT-AKI 3.5.* &amp; 3.6.* &amp; 3.7.*</p>\n<p>Changelog:</p>\n<ul>\n<li>Updated ammo price calculation so mid-tier blacklisted ammo like M856A1 starts around 1000 roubles. Works well with the SPT Realism mod as there is a bigger variance with all the ammo types.</li>\n<li>Added config.useBalancedPricingForAllAmmo that balances the price for all ammo. Effectively, it makes non blacklisted ammo a little bit more expensive on the flea. Default off.</li>\n</ul>\n<p>If you have updated your config.json significantly already, I recommend you copy your changes and paste them back into the updated config.json. Sorry for any inconvenience.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/755/the-blacklist-flea-market-enhancements/1.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.7.0",
+      "downloads": 3934,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-08-02T09:57:07.000000Z",
+      "created_at": "2023-08-02T09:57:07.000000Z",
+      "updated_at": "2026-07-13T18:08:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 134,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:43.920Z",
+    "discoveredBy": "seed"
+  }
+}

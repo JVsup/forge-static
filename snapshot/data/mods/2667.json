@@ -1,0 +1,416 @@
+{
+  "type": "mod",
+  "id": 2667,
+  "hub_id": null,
+  "guid": "com.fiodor.pipdisabler",
+  "name": "Picture in Picture Disabler",
+  "slug": "picture-in-picture-disabler",
+  "teaser": "FPS maxxxing and PiP scopes begone",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/3VfNC0kP1YGZy8X01VrVgJfL3lF0Tfk8Ck41kScY.png",
+  "downloads": 22542,
+  "favourites_count": 78,
+  "description": "<p>Tired of losing 20 FPS when aiming with optic scopes ? Boy do I have some good news for you.<br />\nBe prepared for some jank, if the performance gain is worth it is up to you !</p>\n<hr />\n<h1>What does it do ?:</h1>\n<p>When aiming with an optic scope this mod disables the optic camera, zooms the whole screen, scales the models and cuts through the meshes.<br />\nDepending on the scenarios I gain between 15 to 50 FPS.<br />\nWorks with mod scopes, reverts to vanilla PiP system with NVG and thermal scopes.</p>\n<hr />\n<h1>F12 menu:</h1>\n<h2>General:</h2>\n<ul>\n<li>Depth of Field</li>\n<li>Near blur when using NVGs aka real life fixed focal distance</li>\n<li>FOV fix like behaviour (1x is your base game settings FOV)</li>\n<li>Global scope and reticle scaling multiplier</li>\n<li>FOV transition duration</li>\n</ul>\n<h2>Whitelist and blacklist system:</h2>\n<p>Select a key for the system you want to use.<br />\nWhile ADS, press the key to add that scope to the corresponding list.<br />\nTo remove a scope, press the key while ADS.</p>\n<ul>\n<li>Whitelist = Only use the scopes in the list.</li>\n<li>Blacklist = Let the scopes added to the list use the vanilla PiP system.</li>\n</ul>\n<h2>Jank:</h2>\n<ul>\n<li>Multiple hacks to alleviate the jankiness.</li>\n</ul>\n<h2>Graphics:</h2>\n<ul>\n<li>Auto Lodbias changes when aiming, multiplies the magnification level by a value you can choose.</li>\n<li>Manual LODbias, will override the auto if set to anything else than zero.</li>\n<li>There’s an option to keep the LODbias until you open your inventory/search a container. It helps alleviate the tree crossfade but has a performance cost.</li>\n</ul>\n<h2>Per scope settings:</h2>\n<ul>\n<li>Vignette settings, those only work if vignette is enabled globally.</li>\n</ul>\n<p><strong>The following settings only take effect once you’ve saved them by pressing the dedicated key while ADS:</strong></p>\n<ul>\n<li>Per scope reticle size.</li>\n<li>For variable reticles you can set the minimum and maximum size.</li>\n<li>Scaling multipliers if you think that a specific scope is too big or too small for you.</li>\n</ul>\n<hr />\n<h1>Illustrations:</h1>\n<h2>Streets of Tarkov:</h2>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Fiodorwellfme/PiP-Disabler/blob/main/images/Streets_Off.png?raw=true\" alt=\"\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Fiodorwellfme/PiP-Disabler/blob/main/images/Streets_On.png?raw=true\" alt=\"\" /></p>\n<h2>Shoreline:</h2>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Fiodorwellfme/PiP-Disabler/blob/main/images/Vanilla.png?raw=true\" alt=\"\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Fiodorwellfme/PiP-Disabler/blob/main/images/Mod.png?raw=true\" alt=\"\" /></p>\n<p>My specs: 9800x3D, 7900XTX, 96 GB DDR5.</p>\n<hr />\n<h1>Installation:</h1>\n<ol>\n<li>\n<p>Open the downloaded zip file.</p>\n</li>\n<li>\n<p>Drag the BepInEx folder from the zip file into your SPT folder.</p>\n</li>\n</ol>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/afNPjAw.gif\" alt=\"\" /></p>\n<hr />\n<h1>Support:</h1>\n<p>Discord thread in the SPT discord : <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1482076311903146054\" rel=\"noreferrer noopener\">https://discord.com/channels/875684761291599922/1482076311903146054</a></p>\n<h3>Epic’s All in One is supported up to 4.0.7, 4.0.8 breaks the modded scopes so be sure to blacklist them.</h3>\n<h3>If something looks wrong and you have Fontaine’s FOVfix, make sure you’ve updated it to 4.0.1.</h3>\n<h3>ScopeUpdateBackport is not supported, you’ll have to mess with the per-scope settings if you want to use it.</h3>\n<hr />\n<h1>Thanks:</h1>\n<p>The whole SPT and Fika teams for making this awesome project.<br />\nDrakia for the original gif and his config order automatizer.<br />\n7bpencil for his initial attempt.<br />\nFontaine for his work on the FOV and the ribcage scaling.</p>\n<hr />\n<h1>Disclaimer:</h1>\n<p>After having thought about it for a while I’m going to retire from modding for the time being.</p>\n<p>I’m relying way too much on AI to do most of the heavy work. Whenever I see AI art I can’t stop myself from being disgusted by it and I’ve come to feel the same way about AI mods.\nHence why I’ve decided to stop modding altogether and dedicate the free time I have to learn C# and Unity.</p>\n<p>The only thing I’ll keep updated will be the per-scope config for PiP-Disabler.</p>\n<p>If anyone wants to maintain my mods they’re free to do so !\nAlthough PiP-Disabler is an absolute mess and would probably need to be rewritten from the ground up to be maintainable…</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2667/picture-in-picture-disabler",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>I’ll have to completely rewrite this without using AI, relied way too much on it initially.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-04-19T09:22:00.000000Z",
+  "created_at": "2026-04-19T09:29:04.000000Z",
+  "updated_at": "2026-07-28T09:07:21.000000Z",
+  "owner": {
+    "id": 97183,
+    "name": "Fiodor",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=F&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-12-18T08:15:12.000000Z",
+    "updated_at": "2026-08-01T17:53:27.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Fiodorwellfme/PiP-Disabler",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13741,
+      "hub_id": null,
+      "version": "1.5.0",
+      "description": "<h2>Added</h2>\n<ul>\n<li>\n<p>New toggle in config for FOV Fix Behaviour aka 1x FOV is Equal to player settings FOV.<br />\n2 global weapon/reticle multipliers so users can set the scaling they feel comfortable with.<br />\nAdded at the behest of tooobles and ms. r3mains</p>\n</li>\n<li>\n<p>Added dual Kawase blur to mimic DOF and NVG focal distance<br />\nThanks to Borkel for giving me the idea via his NVG mod (go download it it’s awesome).\n<img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Fiodorwellfme/PiP-Disabler/blob/main/images/Blur.png?raw=true\" alt=\"alt text\" /></p>\n</li>\n<li>\n<p>Changing per scope vignette settings now applies them instantly.</p>\n</li>\n</ul>\n<h2>Fixed</h2>\n<ul>\n<li>Fixed reticle/scope effects display when using supersampling.\nThanks to Piirakka and bruh1045(ADOOO) for reporting it</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.5.0",
+      "content_length": 90511,
+      "spt_version_constraint": "~4",
+      "downloads": 7981,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-11T09:02:00.000000Z",
+      "created_at": "2026-06-11T09:10:02.000000Z",
+      "updated_at": "2026-07-28T09:07:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/861d54bce84f62b770c510b7a0fcd2584542747bcadc2fb8c0146d8fe227b96f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/1e6debeb-3e66-410d-8a7f-82c1da1d34c8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A45Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A15Z&ske=2026-08-01T21%3A21%3A45Z&sks=b&skv=2018-11-09&sig=J%2FW6xQBk3kD6%2BcwAbHBijmAlCb15ifcQsoZJviv7ljo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MiwibmJmIjoxNzg1NjE1OTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q8KlIslyyenAm0_4NP1B4vrLUxV9jsVbxBDvkjba1ME&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13629,
+      "hub_id": null,
+      "version": "1.4.1",
+      "description": "<h2>Fixed:</h2>\n<p>Bypassed scopes triggered FOV restore to game settings FOV when switching magnification modes.<br />\nThey don’t anymore :)</p>\n<p>Thanks to Aerhyce for noticing and providing logs !</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.4.1",
+      "content_length": 79303,
+      "spt_version_constraint": "~4",
+      "downloads": 3675,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-21T13:22:00.000000Z",
+      "created_at": "2026-05-21T13:24:14.000000Z",
+      "updated_at": "2026-07-28T09:01:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/037cc2b6b8e2fd92fcba6e77c4cb841cf656e8cbca65c04dca31e0cd311d6622?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/9c9262e2-e1b8-4872-b05e-8135c70aea83?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A03Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A42Z&ske=2026-08-01T21%3A25%3A03Z&sks=b&skv=2018-11-09&sig=3j71bq1bnIBlrD8RaMt63FRd2XnhnE4Nd4nrAEmaAqY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MiwibmJmIjoxNzg1NjE1OTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q8KlIslyyenAm0_4NP1B4vrLUxV9jsVbxBDvkjba1ME&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13623,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<h2>Added:</h2>\n<ul>\n<li>Firing with bolt rifles now bypasses the camera alignment while cycling the bolt aka no more camera skidaddling (once again).</li>\n</ul>\n<h2>Fixed:</h2>\n<ul>\n<li>Fixed RAPTAR rangefinder, the display mesh was getting cut and the scaling caused the raycast to collide with the player’s body.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.4.0",
+      "content_length": 79303,
+      "spt_version_constraint": "~4",
+      "downloads": 375,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-20T18:56:00.000000Z",
+      "created_at": "2026-05-20T18:57:21.000000Z",
+      "updated_at": "2026-07-28T08:59:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9f991b78658cb70ce7ee42c09bc0af38e378535ae41f46d3b9f8e91830d70e66?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/bc885e34-fea9-42ac-98d4-9c4260c397bf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A28Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A27Z&ske=2026-08-01T21%3A05%3A28Z&sks=b&skv=2018-11-09&sig=2onYq8DIoza8Y9%2F8S2YRQdN0pMULX26YTJl4qQm0PN0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MiwibmJmIjoxNzg1NjE1OTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q8KlIslyyenAm0_4NP1B4vrLUxV9jsVbxBDvkjba1ME&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13591,
+      "hub_id": null,
+      "version": "1.3.1",
+      "description": "<p>Fixed the blurry grass that was caused by the recoil compensation patch.<br />\nTurns out moving the main camera can do some bad things to the way upscalers work…</p>\n<p>Also fixed the TA01NSN scopes!</p>\n<p>Done spamming the mod release channel, sorry for making you redownload.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.3.1",
+      "content_length": 77816,
+      "spt_version_constraint": "~4",
+      "downloads": 1746,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-13T21:42:00.000000Z",
+      "created_at": "2026-05-13T21:50:21.000000Z",
+      "updated_at": "2026-07-28T08:54:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MDUxYjBiNmM5M2UzYzY0ZTgzN2FiZmExYjBhZDAzMDY6MTc3ODcwOTAwMw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/21df10ee-0721-421b-a80c-024db223bab1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A23Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A33Z&ske=2026-08-01T21%3A18%3A23Z&sks=b&skv=2018-11-09&sig=DdgyzJ85YupO7whVOAQXmu1lF7gcobjRkXJAxcC5rqs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13590,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<h3>Additions:</h3>\n<ul>\n<li>Per scope multipliers for scaling and reticle size for users to customize according to their liking.</li>\n<li>Implemented shader to allow for reticle tinting while rendering it after the upscaling.</li>\n<li>Added visual compensation for recoil (previously the scope disappeared below the screen), going full auto with a 20x scope still doesn’t produce nice effects but it’s easier to control your recoil with low magnification scopes.</li>\n</ul>\n<h3>Changes:</h3>\n<ul>\n<li>Moved scope effects to afterForwardAlpha.</li>\n<li>Optimized mod by removing unnecessary scene scanning.</li>\n</ul>\n<h3>Fixes:</h3>\n<ul>\n<li>Repaired the auto-bypass for mounted grenade launcher and rangefinder.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.3.0",
+      "content_length": 77024,
+      "spt_version_constraint": "~4",
+      "downloads": 162,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-13T16:41:00.000000Z",
+      "created_at": "2026-05-13T16:44:30.000000Z",
+      "updated_at": "2026-07-28T08:54:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/Nzc0ZjgyMjVmYTI1YTQ4NGZjM2IwMzMxNzA1NWEyMDA6MTc3ODY5MDUyNg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/ae5e7bfb-5788-45f2-a1f3-6523a194815f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A31Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A13Z&ske=2026-08-01T21%3A19%3A31Z&sks=b&skv=2018-11-09&sig=LL%2FYduYWhvUQi5xz%2B7bzIxLk4An458FcwXoE3CWS81c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13572,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>Due to BSG jank, using a bipod bypassed the mod.<br />\nIt doesn’t <del>until the next regression</del> anymore.</p>\n<p>Happy Sunday gaming !</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.2.1",
+      "content_length": 63920,
+      "spt_version_constraint": "~4",
+      "downloads": 1167,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-10T11:49:00.000000Z",
+      "created_at": "2026-05-10T11:50:47.000000Z",
+      "updated_at": "2026-07-28T08:37:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/dbc2ab14b7ba2bae2f204d1d2ebe7e2c336540ed74a76a79a85873ef0edc7e59?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/c67fbc07-db11-4cf0-ab51-eddaef2a0e2c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A33Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A16Z&ske=2026-08-01T21%3A04%3A33Z&sks=b&skv=2018-11-09&sig=HV7MX2QAEalitdSeY0BYAPVt%2BbQ5Sp1Z0vLnEY68FBc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13565,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h3>New fix to the transition between sprinting and ADS:</h3>\n<p>Now compares alignment between scope and main camera axis.<br />\nCustomizable alignment angle.<br />\nShould <em>definitely</em> fix the camera skiddadling</p>\n<h3>LOD bias adjustments:</h3>\n<p>LOD bias is now FOV driven and refreshed per frame.<br />\nClamped between LOD set in game settings and 20 as a maximum.<br />\nIf user chooses a manual value then it overrides everything.</p>\n<p>Improved per scope settings.</p>\n<p>Have a nice weekend !</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.2.0",
+      "content_length": 63917,
+      "spt_version_constraint": "~4",
+      "downloads": 856,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-08T14:09:00.000000Z",
+      "created_at": "2026-05-08T14:10:32.000000Z",
+      "updated_at": "2026-07-28T08:33:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NzAxNGE1YTFmYjI3OTU1YmU4OGQwNjU2YjA0Y2QxMjM6MTc3ODI0OTM1MQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/3d713aeb-db25-4b01-86ad-b271f52b9a35?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A47Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A09Z&ske=2026-08-01T21%3A09%3A47Z&sks=b&skv=2018-11-09&sig=XeiC%2FXprC1i%2Bp08%2FXLjvHTrDcD96CZ%2FJAySifgWWlGg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OCwibmJmIjoxNzg1NjE1OTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m9HywKuBTnGn3LGyaTM_8qU0BblQDDi7YZhsBHXCpxA&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13545,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>Added sprint into ADS and stance change bypassing.<br />\nNo more camera skidaddling.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.1.0",
+      "content_length": 63489,
+      "spt_version_constraint": "~4",
+      "downloads": 915,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-05T17:03:00.000000Z",
+      "created_at": "2026-05-05T17:04:37.000000Z",
+      "updated_at": "2026-07-28T08:32:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/M2Q1ZmEwNTdiMDIzYmJiNzQ3YjMzYzA3MzY5NjA5NDc6MTc3ODAwMDYwMw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/1416eeaa-3847-4e16-b6a7-2bb793797d06?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A30Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A02Z&ske=2026-08-01T21%3A00%3A30Z&sks=b&skv=2018-11-09&sig=k6Q7KW3e83fa8VtE0iHiv0NUgwwhn0XABK%2B07RmdKQ0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OCwibmJmIjoxNzg1NjE1OTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m9HywKuBTnGn3LGyaTM_8qU0BblQDDi7YZhsBHXCpxA&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13542,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<ul>\n<li>\n<p>Implemented variable scopes compatibility.</p>\n<ul>\n<li>Added optional weapon movement suppression while scoped:\n<ul>\n<li>fire-mode switch animation suppression;</li>\n<li>magnification switch movement suppression;</li>\n<li>mod-toggle trigger movement suppression during scope mode changes.</li>\n<li>Added optional recoil return-to-zero behavior through the new <code>Force Recoil Return To Zero</code> setting.</li>\n<li>Added a weapon-root Z offset correction that applies while aiming through supported optics at low FOV values.</li>\n</ul>\n</li>\n<li>Added mesh-reticle controls:\n<ul>\n<li>minimum and maximum mesh reticle scale;</li>\n<li>normalized mesh reticle scale;</li>\n<li>screen-space minimum stroke rendering for thin mesh reticles.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>Added new vanilla optic suppression patches so PiP render textures, optic camera enablement, and optic SSAA/lens paths are skipped while the mod is active, while bypassed optics can still fall back to vanilla behavior.</p>\n</li>\n<li>\n<p>Added scope blacklist support, including a configurable blacklist string and hotkey for toggling entries.</p>\n</li>\n<li>\n<p>Added per-scope override fields for mesh-reticle scale limits, vignette opacity/radius/softness, and weapon-root search expansion.</p>\n</li>\n<li>\n<p>Added toggleable debug logging.</p>\n</li>\n<li>\n<p>Custom meshcutting settings for everry fucking scope</p>\n</li>\n<li>\n<p>Reworked reticle rendering around stencil-based lens masking so reticles render only inside visible lens areas when stencil support is available.</p>\n</li>\n</ul>\n<p>It’s been 3 long months…</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/1.0.0",
+      "content_length": 53830,
+      "spt_version_constraint": "~4",
+      "downloads": 676,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-04T15:10:00.000000Z",
+      "created_at": "2026-05-04T15:10:56.000000Z",
+      "updated_at": "2026-07-28T08:31:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MGQxM2ZiMmRiODNmZmY5OWEwYzI5ZjY2Yzg4NGNkYjk6MTc3NzkwNzQyMg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/1e1f8d01-2f82-4e20-8bbb-73651f3ab7e3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A50Z&rscd=attachment%3B+filename%3DPiP-Disabler.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A41Z&ske=2026-08-01T21%3A08%3A50Z&sks=b&skv=2018-11-09&sig=3zCV2jus9CKpvTKl95Uz5aUDxD1lKFlPt9DI7JxXRZY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OSwibmJmIjoxNzg1NjE1OTU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ea7uMh_9rYBsu23qhQIkdX1-sAymCpsGgFxzg4x6miE&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13466,
+      "hub_id": null,
+      "version": "0.9.0",
+      "description": "<p>I lied.</p>\n<p>Fixed per scope settings and added a permanent LODbias change option:<br />\nWhen exiting scope, the LODbias that was applied during ADS remains applied until you open your inventory.<br />\nOn my setup it has a negligible performance impact and beats staring at the ugly tree billboards.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/0.9.0",
+      "content_length": 54593,
+      "spt_version_constraint": "~4",
+      "downloads": 3911,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-20T15:36:00.000000Z",
+      "created_at": "2026-04-20T15:38:52.000000Z",
+      "updated_at": "2026-07-28T08:24:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f87b8d6d296af2f68f84ae72b7903c6791c130c4925fb30fcdfe3ca068ada19f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/738ba272-6a7f-488c-8ded-e901ac045b1a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A59Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A07Z&ske=2026-08-01T21%3A15%3A59Z&sks=b&skv=2018-11-09&sig=MWxD1xD0iKO48pHEw6pg49A7F6Kq2aRk9SKjIfkd9mI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2MSwibmJmIjoxNzg1NjE1OTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Eu1oqh61gw8VBbVlEt5789LlJ6bM1p4ncHMqVWOyMe0&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13465,
+      "hub_id": null,
+      "version": "0.8.1",
+      "description": "<p>Removed bypass of FOVfix’s sensitivity patch, fixing the sensitivity being all over the place for hybrid scopes and scopes with backup ironsights.<br />\nSorry for chaining updates, was a lil bit too happy when I managed to make the compatibility fixes and was too eager to release them.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/0.8.1",
+      "content_length": 54576,
+      "spt_version_constraint": "~4",
+      "downloads": 175,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-20T11:28:00.000000Z",
+      "created_at": "2026-04-20T11:30:22.000000Z",
+      "updated_at": "2026-07-28T08:24:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NmQwYTRmMjkwZmU0NDkxN2YwYjhhMjkwYmU0MjgzZDk6MTc3NjY4NDU0Ng==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/8cd7e985-e8e9-4b64-a25f-9f921bfa99c6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A47Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A08Z&ske=2026-08-01T21%3A00%3A47Z&sks=b&skv=2018-11-09&sig=uCSTUgtofr3lzQU5M2ByuygJLxiGS4QXbL%2FfcoJb0wY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2MSwibmJmIjoxNzg1NjE1OTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Eu1oqh61gw8VBbVlEt5789LlJ6bM1p4ncHMqVWOyMe0&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13464,
+      "hub_id": null,
+      "version": "0.8.0",
+      "description": "<p>Added Fontaine and DERP compatibility patches.<br />\nFixed whitelist being broken if you pressed the key without being ADS.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/0.8.0",
+      "content_length": 54595,
+      "spt_version_constraint": "~4",
+      "downloads": 75,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-20T09:28:00.000000Z",
+      "created_at": "2026-04-20T09:29:27.000000Z",
+      "updated_at": "2026-07-28T08:24:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTJhYmQ3MDI5ZjZmYzZjMDVjZWZlZDRmYzcwNjc3NTg6MTc3NjY3NzM0Nw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/c7b77813-8a74-46ab-9061-ac85717f66cf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A34Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A09Z&ske=2026-08-01T21%3A07%3A34Z&sks=b&skv=2018-11-09&sig=pAkgkTEo8gN%2BMVl8l67gVhVokaJ9t%2BaJQD6sQi349jY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2MSwibmJmIjoxNzg1NjE1OTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Eu1oqh61gw8VBbVlEt5789LlJ6bM1p4ncHMqVWOyMe0&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13460,
+      "hub_id": null,
+      "version": "0.7.1",
+      "description": "<p>Scope effects now hide and restore correctly while reloading with the bypass enabled.<br />\nChanged the default reload bypass modifier.<br />\nSome settings renaming/removing.<br />\nCleared up some more AI jank.</p>\n<p>Next up will be Fontaine + DERP compatibility</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/0.7.1",
+      "content_length": 53358,
+      "spt_version_constraint": "~4",
+      "downloads": 469,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-19T15:36:00.000000Z",
+      "created_at": "2026-04-19T15:37:45.000000Z",
+      "updated_at": "2026-07-28T08:24:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NmVmOTMxZTliYWU3YzQyMDhmMzliNzg4ODdiYjNkODI6MTc3NjYxMzAyNw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/79f058a6-b7d4-439a-a4e8-3939326ba3dd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A41Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A09Z&ske=2026-08-01T21%3A06%3A41Z&sks=b&skv=2018-11-09&sig=%2F%2B8hFSdsN8mIKUFIYt4Gsi9OLVeD7SD2H5RoXQjoa98%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2NCwibmJmIjoxNzg1NjE1OTY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fkDCIrnzrA7wmcELHz3l2_tsz4qJa7uxzPy2hD0amsQ&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13458,
+      "hub_id": null,
+      "version": "0.7.0",
+      "description": "<p>Initial public testing.<br />\nReport issues on github or discord or in comments.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2667/picture-in-picture-disabler/0.7.0",
+      "content_length": 54170,
+      "spt_version_constraint": "~4",
+      "downloads": 359,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-19T09:32:00.000000Z",
+      "created_at": "2026-04-19T09:34:50.000000Z",
+      "updated_at": "2026-07-28T08:24:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/13ee59d9afb46163cc5ad213a06758ef5d78876b186384c85ec7232a1c7f0d9d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1177696492/8be3e2d8-75c3-42e8-b62c-09a31dd58ca1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A26Z&rscd=attachment%3B+filename%3DPiP-Disabler.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A47Z&ske=2026-08-01T21%3A03%3A26Z&sks=b&skv=2018-11-09&sig=4Tmt11LizK9dRyGSvpnA8OSyYl6xTnJOOnpjst0ZGJ4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2NCwibmJmIjoxNzg1NjE1OTY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fkDCIrnzrA7wmcELHz3l2_tsz4qJa7uxzPy2hD0amsQ&response-content-disposition=attachment%3B%20filename%3DPiP-Disabler.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 90,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:34.669Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "type": "mod",
+  "id": 2107,
+  "hub_id": 2793,
+  "guid": null,
+  "name": "Arcade Mode",
+  "slug": "arcade-mode",
+  "teaser": "Tired of losing a kit after one raid? Have I got the mod for you! Highly customizeable end-raid system for in-raid deaths.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2793.png",
+  "downloads": 3412,
+  "favourites_count": 0,
+  "description": "<p><em>DOES NOT WORK WITH FIKA</em></p>\n<p><em>SPT 3.11 IS THE TARGETED VERSION</em></p>\n<p>Possible Changes</p>\n<ul>\n<li>\n<p><strong>Multiple Death Behaviors:</strong></p>\n<p>Choose between randomized item loss <strong>or</strong> reset your inventory to whatever it was when you dropped in.</p>\n</li>\n<li>\n<p><strong>Durability Damage System:</strong></p>\n<p>Choose whether your Kit wears down on failed raids.<br />\nChoose whether weapons and armor lose durability on failed raids, default is lasts about 5 runs before breaking beyond repair.</p>\n</li>\n<li>\n<p><strong>Secure Container Overhaul:</strong></p>\n<p>Choose whether Items in your secure container retain or lose their FIR status on death. You can put that last set of bolts in it to keep FIR for the hideout, even if you die!</p>\n</li>\n<li>\n<p><strong>Scav Changes:</strong></p>\n<p>Customize Scav cooldown behavior.<br />\nMake it so you can do a Scav run whenever you login, or allow a Scav run immediately after Scav death.</p>\n</li>\n<li>\n<p><strong>Insurance Tweaks:</strong></p>\n<p>Customize the time for insurance returns, defaults to about 1 raid and you get your stuff back.<br />\nYou can see in the config, it’s all customizable!</p>\n</li>\n</ul>\n<h3>Config</h3>\n<p>Most features are tweakable in src/config.json. Most of the fields are documented and self-explanatory. Hopefully no guesswork needed.</p>\n<h3>Compatibility</h3>\n<p>This mod replaces endLocalRaid function and the startLocalRaid function. It <strong>will not</strong> work with others that overwrite those as it relies on hooks scattered throughout the protected source functions. Mods that hook into pre/post-raid behavior (after or before the referenced functions) should still work dandy 👍.</p>\n<p>Everything else is Vanilla. I really love the game, I just can’t stand the dying.</p>\n<p>Preview of the config file so you can see what all the mod will do.</p>\n<p>{ “OnDeathBehavior”: { “DoRandomItemLossOnDeath”: { “Comment”: “Lose a percentage of items on death - ENABLED BY DEFAULT”, “Comment_PS”: “Only one behavior will be active at a time, ‘DoRandomItemLossOnDeath’ comes first *- “, “Comment_PS_PS”: “-* in da’ code so if it is enabled it will over-write any other behavor options”, “Enabled”: false, “ItemLossPercentages”: { “Bag”: { “min”: 20, “max”: 50 }, “Vest”: { “min”: 0, “max”: 20 }, “Pocket”: { “min”: 20, “max”: 100 } }, “DoDurabilityLoss”: true, “DurabilityLossPercentages”: { “Helmet”: { “min”: 5, “max”: 10 }, “Vest”: { “min”: 5, “max”: 10 }, “PrimaryWeapon”: { “min”: 15, “max”: 25 }, “SecondaryWeapon”: { “min”: 10, “max”: 25 }, “HolsterWeapon”: { “min”: 10, “max”: 25 } }, “RemoveFIR”: { “SecureContainerItems”: false, “Helmet”: true, “Backpack”: true, “BackpackItems”: true, “Vest”: true, “VestItems”: true, “PocketItems”: true, “PrimaryWeapon”: true, “SecondaryWeapon”: true, “HolsterWeapon”: true } }, “ResetToPreRaidInventory”: { “Comment”: “Inventory reset to pre-raid, no item loss or degradation, health damage *-”, “Comment_PS”: “-* rep, stats, normal after raid stuff stays”, “Enabled”: true, “SecureContainerBehavior”: { “Comment”: “Remove FIR status and reset items in your SecureContainer, disabled by default”, “ResetItems”: false, “RemoveFIR”: false } } }, “ScavChanges”: { “Comment”: “It’s the honor system for just quitting and reseting the scav timer.”, “Comment_PS”: “I like to treat Scavs as a throwaway/warmup and I usually run around till I die *-”, “Comment_PS_PS”: “-* I know I’m crazy, hence the config”, “Enabled”: true, “MaxCooldownRangeInMinutes”: { “min”: 5, “max”: 10 }, “InstantCooldownOnDeath”: false, “InstantCooldownOnLogin”: true }, “InsuranceChanges”: { “Comment”: “About one raid, then you can go back to ya old kit.”, “Comment_PS”: “Vanilla insurance return time is 129600 to 172800. That’s 36-48 hours in seconds”, “Enabled”: true, “EnableReturnTimeOverride”: true, “MaxReturnRangeInMinutes”: { “min”: 10, “max”: 20 }, “KeepInMailBoxForever”: true, “InsuranceAlwaysWorks”: false } }</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2107/arcade-mode",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2025-04-20T06:46:00.000000Z",
+  "created_at": "2025-04-20T06:46:09.000000Z",
+  "updated_at": "2026-07-07T16:59:07.000000Z",
+  "owner": {
+    "id": 77358,
+    "name": "IAmZane",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=I&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-04-20T04:48:07.000000Z",
+    "updated_at": "2025-12-10T04:56:22.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Zane-Reisbig/N1-Custom-Death",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 728,
+      "hub_id": 14094,
+      "version": "1.1.1+beta",
+      "description": "<p>Fixes an issue in the after-death logic that caused it to fire on every raid, ignoring whether the player had lived or died.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2107/arcade-mode/1.1.1+beta",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2349,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-25T18:59:47.000000Z",
+      "created_at": "2025-04-25T18:59:47.000000Z",
+      "updated_at": "2026-05-14T01:55:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/969431188/e68cb34b-bba1-4a8c-8437-d9b6e14331da?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A43Z&rscd=attachment%3B+filename%3Dme-custom-end-raid.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A02Z&ske=2026-08-01T21%3A12%3A43Z&sks=b&skv=2018-11-09&sig=9tyoBjzRWMd%2FSXD9QvQeesv8SEBLp4CT%2FPtdkhscTRM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk0NCwibmJmIjoxNzg1NjE1NjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.d--Ms1X24AzMH9Mdw7iROI2YmwqyK30-LVmFqR-wYPI&response-content-disposition=attachment%3B%20filename%3Dme-custom-end-raid.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:03:59.216Z",
+    "discoveredBy": "mod:1537",
+    "error": null
+  }
+}

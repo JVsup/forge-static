@@ -1,0 +1,192 @@
+{
+  "type": "mod",
+  "id": 2614,
+  "hub_id": null,
+  "guid": "com.rz.customprofiles",
+  "name": "RZCustomProfiles",
+  "slug": "rzcustomprofiles",
+  "teaser": "Profile template manager.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/32xyvFVK2NIrQ2oEDa6b7Ln9dtR2MYRiCIbPiT6V.png",
+  "downloads": 1440,
+  "favourites_count": 5,
+  "description": "<blockquote>\n<p>Define custom profile editions that appear in the SPT launcher at character creation, each with their own starting items, trader standings and more.</p>\n</blockquote>\n<p><em>This is part of my personal suite of mods that I use to run my server.</em></p>\n<p><em>All in all a pretty boring mod, but the basics deserve a clean foundation, so here it is.</em></p>\n<hr />\n<hr />\n<hr />\n<h2>⚫ How it works</h2>\n<p>The mod runs at server startup and registers your custom profiles into SPT’s profile template system. When a player creates a new character in the launcher, your editions appear alongside (or instead of) the vanilla SPT ones.</p>\n<p>Each profile is defined by a separate <code>.json</code> file dropped in the <code>profiles/</code> folder. All files are loaded automatically, just drop and go.</p>\n<p>Global settings (unlocks, blacklists, enabled base profiles) are controlled via <code>masterConfig.json</code>.</p>\n<hr />\n<hr />\n<hr />\n<h2>⚫ masterConfig.json</h2>\n<p><em>Applied at server start, globally for all profiles.</em></p>\n<ul>\n<li><strong><code>EnabledBaseProfiles</code></strong> — List of vanilla SPT profiles to keep visible in the launcher alongside your custom ones.</li>\n<li><strong><code>UnlockAllOutfits</code></strong> — Unlocks all Ragman outfits.</li>\n<li><strong><code>UnlockHideoutCustomizations</code></strong> — Unlocks hideout customization items by category. Set a category to <code>false</code> to leave it locked.</li>\n<li><strong><code>UnlockJaeger</code></strong> — Unlocks Jaeger by default.</li>\n<li><strong><code>UnlockRef</code></strong> — Unlocks Ref by default.</li>\n<li><strong><code>ExaminedCategoryBlacklist</code></strong> — Excludes all items belonging to the listed categories.</li>\n<li><strong><code>ExaminedBlacklist</code></strong> — Excludes specific items by TPL.</li>\n</ul>\n<hr />\n<hr />\n<hr />\n<h2>⚫ Profile files</h2>\n<h3>Identity</h3>\n<ul>\n<li><strong><code>Enabled</code></strong> — Whether this profile is registered and visible in the launcher.</li>\n<li><strong><code>BaseProfile</code></strong> — Vanilla SPT profile to clone as a base (same indices as <code>EnabledBaseProfiles</code>).</li>\n<li><strong><code>Name</code></strong> — Profile name shown in the launcher.</li>\n<li><strong><code>Description</code></strong> — Profile description shown in the launcher.</li>\n</ul>\n<hr />\n<h3>Progression</h3>\n<ul>\n<li><strong><code>AllItemsExamined</code></strong> — Examine all handbook items on character creation. Respects <code>ExaminedCategoryBlacklist</code> and <code>ExaminedBlacklist</code>.</li>\n<li><strong><code>MaxLevel</code></strong> — Start at max level.</li>\n<li><strong><code>StartingLevel</code></strong> — Start at a specific level (1 to max). Ignored if <code>MaxLevel</code> is true. <code>null</code> = leave unchanged from base profile.</li>\n<li><strong><code>StartingPrestigeLevel</code></strong> — Starting prestige level (1–4). <code>null</code> = no prestige applied.</li>\n<li><strong><code>MaxSkills</code></strong> — Max out all skills.</li>\n<li><strong><code>SkillOverrides</code></strong> — Override specific skills individually (values 0–51). Ignored if <code>MaxSkills</code> is true.</li>\n</ul>\n<hr />\n<h3>Inventory</h3>\n<ul>\n<li><strong><code>ClearEquipment</code></strong> — Wipe equipped items from the base profile.</li>\n<li><strong><code>ClearStash</code></strong> — Wipe stash items from the base profile before injecting additional items.</li>\n<li><strong><code>SecureContainer</code></strong> — Override the starting secure container.</li>\n<li><strong><code>AdditionalStartingItems</code></strong> — Items injected into the stash on character creation. If <code>ClearStash</code> is false, they are added on top of whatever the base profile already contains. For items with required slots (weapons, armor…), missing children are resolved automatically from the database.</li>\n</ul>\n<hr />\n<h3>Traders</h3>\n<ul>\n<li><strong><code>TradersLoyalty</code></strong> — Per-trader standing and sales sum, keyed by trader ID.</li>\n</ul>\n<hr />\n<h3>Hideout</h3>\n<ul>\n<li><strong><code>HideoutStartingLevels</code></strong> — Starting level for each hideout area.</li>\n</ul>\n<blockquote>\n<p>💡 <code>HideoutStartingLevels</code> entries are optional : delete any area you don’t want to override.</p>\n</blockquote>\n<hr />\n<hr />\n<hr />\n<p><em>If you made it this far without falling asleep, you earned a cat picture.</em></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://media1.popsugar-assets.com/files/thumbor/lWUURoKYv9B2XqBJ8WGzUsllkLs=/0x0:2003x2003/fit-in/1584x1584/filters:format_auto():upscale()/2019/09/23/864/n/1922243/74b4f2275d89208a0f2ad4.00493766_.jpg\" alt=\"cat\" /></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2614/rzcustomprofiles",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-03-03T21:35:00.000000Z",
+  "created_at": "2026-03-03T19:52:07.000000Z",
+  "updated_at": "2026-07-28T08:09:51.000000Z",
+  "owner": {
+    "id": 105867,
+    "name": "RemzDNB",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SILVz01a0uIhADQ4hPlz624eOhWll3wkPf8DlRZx_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-02-23T05:15:38.000000Z",
+    "updated_at": "2026-07-10T04:54:58.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/remzdnb/RZ-SPTMods",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13231,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<ul>\n<li>Added UnlockHideoutCustomizations</li>\n<li>General cleanup</li>\n<li>Final version, I’m done with this pain in the ass mod</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2614/rzcustomprofiles/1.1.0",
+      "content_length": 28139,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1195,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-08T19:15:00.000000Z",
+      "created_at": "2026-03-08T19:22:20.000000Z",
+      "updated_at": "2026-07-28T08:09:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a2f949a177218a53d718de8bb5948831eea781f22f749ea6f6feb1a52e2d0600?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=12ODJA6TkORZTfaimRiUKR7ySw_mAqwt0&export=download"
+      }
+    },
+    {
+      "id": 13222,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<ul>\n<li>Added StartingPrestigeLevel in profile configs</li>\n<li>Fixed broken TradersLoyalty settings</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2614/rzcustomprofiles/1.0.3",
+      "content_length": 26322,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 34,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-07T21:33:00.000000Z",
+      "created_at": "2026-03-07T21:35:32.000000Z",
+      "updated_at": "2026-07-28T08:09:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZThjNWE1ODk4NzBhYjU3ZDg1MjRjYjI3M2RkMmVmMWM6MTc3MjkxOTIyNQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1q-EIlsFNleYS9P60rZK-oxhutY_lCV8t&export=download"
+      }
+    },
+    {
+      "id": 13215,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<ul>\n<li>Lib dependency removed for real this time, sorry about that</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2614/rzcustomprofiles/1.0.2",
+      "content_length": 24924,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 68,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-06T16:34:00.000000Z",
+      "created_at": "2026-03-06T16:35:38.000000Z",
+      "updated_at": "2026-07-28T08:08:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d8aa48c0c09183c91058da77601a6fd560f464b31d3f9664252338bd6bcce822?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1hIZoLQ-2AYGCOmWR4qpM-X77hIyRnZSt&export=download"
+      }
+    },
+    {
+      "id": 13210,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>Added <code>StartingLevel</code> profile option</li>\n<li>Added <code>SkillOverrides</code> profile option</li>\n<li>Added missing hideout areas in profile files</li>\n<li>ExamineAll feature moved from CustomEconomy</li>\n<li>Removed dependency on RZShared, you can delete it if updating.</li>\n<li>Please create new profile configs from the update exampleConfig.json</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2614/rzcustomprofiles/1.0.1",
+      "content_length": 24943,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 35,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-05T18:49:00.000000Z",
+      "created_at": "2026-03-05T18:55:29.000000Z",
+      "updated_at": "2026-07-28T08:08:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZjQ5OTE4ZTZkN2NkODU0OTYxNGQ3MGY2M2FmM2VkY2M6MTc3MjczNjU3OQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1dpvhEeb6Zs6PU03JtgB7MoYdnZb4TyJs&export=download"
+      }
+    },
+    {
+      "id": 13202,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>uwu</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2614/rzcustomprofiles/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 108,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-03T21:13:00.000000Z",
+      "created_at": "2026-03-03T21:17:06.000000Z",
+      "updated_at": "2026-03-03T21:39:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZDJjZjUxNDczMGJkN2JlMDQ5ODNlNDBlNTAyOWE2NWE6MTc3MjU3MjM2OA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/remzdnb/RZ-SPTMods",
+        "reason": "HTTP 404 for https://drive.usercontent.google.com/download?id=1warOMYIinJGQY9-qbR5G4mh95eCdDf22&export=download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 6,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:51:23.501Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "type": "mod",
+  "id": 2806,
+  "hub_id": null,
+  "guid": "io.cebarks.convoy",
+  "name": "Convoy",
+  "slug": "convoy",
+  "teaser": "the client side companion app for quartermaster",
+  "thumbnail": "",
+  "downloads": 256,
+  "favourites_count": 1,
+  "description": "<h1>Check out <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/cebarks/quartermaster/\" rel=\"noreferrer noopener\">Quartermaster!</a></h1>\n<p>the client-side companion app for the Quartermaster control panel.</p>\n<h2>Features</h2>\n<h3>Currently only syncs client mods from the server to the client.</h3>\n<h4>How it works</h4>\n<ol>\n<li>Fetches the mod catalog from your Quartermaster server (with ETag caching)</li>\n<li>Diffs against local state to determine what needs to be installed, updated, or removed</li>\n<li>Downloads changed mods as a batch ZIP, extracts, and verifies SHA-256 hashes</li>\n<li>Prompts for a restart if any BepInEx plugin files changed (they’re already loaded by the time Convoy runs)</li>\n</ol>\n<h3>Planned Features</h3>\n<ul>\n<li>optional mod groups</li>\n<li>per-user mods that are managed and updated by the server, then pushed to the user</li>\n<li>server-authorative mod configs</li>\n<li>client setting backup (keybinds, graphics settings, etc.</li>\n</ul>\n<p>Feel free to open an issue on github for any bugs or feature requests!</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2806/convoy",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Portions of this codebase were implemented with the assistance of LLM-based tools (Claude Code). All architecture, design decisions, and direction were done by a human (Senior Product Security Engineer w/ 10+ years of coding experience), the LLM was used as an implementation aid under continuous human supervision and review.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-07-08T00:01:00.000000Z",
+  "created_at": "2026-07-08T00:01:52.000000Z",
+  "updated_at": "2026-07-28T09:38:47.000000Z",
+  "owner": {
+    "id": 69382,
+    "name": "cebarks",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/rpqWUQKmjsTpI2O4QSXpI8tNGgLirEmZSvCoAlpv_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-12-11T22:18:28.000000Z",
+    "updated_at": "2026-07-31T21:30:37.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 7,
+    "hub_id": 9,
+    "name": "GNU AGPLv3",
+    "link": "https://choosealicense.com/licenses/agpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/cebarks/convoy",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14097,
+      "hub_id": null,
+      "version": "0.5.1",
+      "description": "<p>fix broken .dll build</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2806/convoy/0.5.1",
+      "content_length": 24275,
+      "spt_version_constraint": "~4",
+      "downloads": 153,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T04:38:00.000000Z",
+      "created_at": "2026-07-16T04:35:54.000000Z",
+      "updated_at": "2026-07-28T09:38:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/ad9aaf4b96fd70bc423d818b54efdc9876841b60e7ade36201f25f1de0a84264?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1292801884/6d5b3326-de96-4f13-940c-db59c6e8bb96?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A38Z&rscd=attachment%3B+filename%3DConvoy.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A39Z&ske=2026-08-01T21%3A26%3A38Z&sks=b&skv=2018-11-09&sig=OajqV8%2FzdRgk4M6zjtDcwJAknf45nkPkiS3uwzgvL%2F0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.56a6aWhbdNHjDtNKfEa-1uF-P8soarAYfCmfS2cNzS0&response-content-disposition=attachment%3B%20filename%3DConvoy.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14078,
+      "hub_id": null,
+      "version": "0.5.0",
+      "description": "<p>Configurable keybind panel (F10)\nStatus Tab</p>\n<pre><code>Convoy, Quartermaster, and SPT version display\nServer URL and last sync result with color coding (green/yellow/red)\nInstalled mods grouped by group with file counts\nSync Now button\n</code></pre>\n<p>Mods Tab</p>\n<pre><code>Collapsible Required and Optional sections\nToggle optional groups on/off\nPer-mod checkboxes within enabled groups\n\"Changes pending\" indicator\nSync Now button\n</code></pre>\n<p>Other Changes</p>\n<pre><code>Group-enabled state now persisted in state.json (no longer in BepInEx config)\nPanel auto-closes during sync confirmation\nKeybind configurable via BepInEx config (Convoy &gt; Panel Keybind)\nRemoved all F12 debug entries (version, sync result, server URL, Sync Now toggle)\n</code></pre>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2806/convoy/0.5.0",
+      "content_length": 24163,
+      "spt_version_constraint": "~4.0",
+      "downloads": 34,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-14T04:27:00.000000Z",
+      "created_at": "2026-07-14T04:29:31.000000Z",
+      "updated_at": "2026-07-28T09:38:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/175749782b1d53f5f17a397b689b3ce29e7e5c8050693c89773677221a4dc5d7?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1292801884/3d275b13-4de5-4045-9a29-239957dfa102?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A27%3A03Z&rscd=attachment%3B+filename%3DConvoy.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A37Z&ske=2026-08-01T21%3A27%3A03Z&sks=b&skv=2018-11-09&sig=R%2BCEm37h%2FxnNlRxFfzr%2B4i1nG9mYfdSk79LtyS6kjwo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.56a6aWhbdNHjDtNKfEa-1uF-P8soarAYfCmfS2cNzS0&response-content-disposition=attachment%3B%20filename%3DConvoy.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14047,
+      "hub_id": null,
+      "version": "0.4.0",
+      "description": "<p>feat: sync reporting and progress tracking</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2806/convoy/0.4.0",
+      "content_length": 15095,
+      "spt_version_constraint": "~4",
+      "downloads": 28,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-11T02:17:00.000000Z",
+      "created_at": "2026-07-11T02:17:32.000000Z",
+      "updated_at": "2026-07-28T09:36:42.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/0cc974e153844678853fa1d6a922c12663ef4ca65e1fe516909fe8dd98acd202?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1292801884/6e2792aa-e5be-40f2-8531-4a3ecacd61c2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A15Z&rscd=attachment%3B+filename%3DConvoy.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A22Z&ske=2026-08-01T21%3A22%3A15Z&sks=b&skv=2018-11-09&sig=FsIT52jMwhcSz2I0NyewdgA1BFkRrXOC2WUcwz%2BeKEY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.56a6aWhbdNHjDtNKfEa-1uF-P8soarAYfCmfS2cNzS0&response-content-disposition=attachment%3B%20filename%3DConvoy.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14022,
+      "hub_id": null,
+      "version": "0.3.0",
+      "description": "<ul>\n<li>send sync report to Quartermaster server</li>\n<li>Add live sync progress</li>\n<li>bitrate-based timeout for mod downloads</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2806/convoy/0.3.0",
+      "content_length": 15100,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 41,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-08T06:34:00.000000Z",
+      "created_at": "2026-07-08T06:35:07.000000Z",
+      "updated_at": "2026-07-28T09:35:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-fe1b2fb1b8ce4ee6d32e62c195e29d17e6fffa5d0dcaa55fe792f59f4ee40073-2d5d9a03",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1292801884/d2353892-d1e5-4085-8db9-5b8b54bc4d0c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A48Z&rscd=attachment%3B+filename%3DConvoy.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A34Z&ske=2026-08-01T21%3A00%3A48Z&sks=b&skv=2018-11-09&sig=cndUZairrwr%2BQ1QqkLwXFNkJbemBtaYmXkkAi6tu51c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.o0HJuSWgYbQKnQAHJ_KSxLqe8VTHD6fp3c9ZWaMz11Q&response-content-disposition=attachment%3B%20filename%3DConvoy.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:44:24.947Z",
+    "discoveredBy": "seed"
+  }
+}

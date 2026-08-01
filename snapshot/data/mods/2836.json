@@ -1,0 +1,117 @@
+{
+  "type": "mod",
+  "id": 2836,
+  "hub_id": null,
+  "guid": "com.xenyx.adjustinsuranceprices",
+  "name": "Adjust Insurance Prices",
+  "slug": "adjust-insurance-prices",
+  "teaser": "Easily adjust insurance prices globally, or by item category.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/WaOucVxDPhiAWTlHk3ZdbQKB9VYY5YgVAmAlYRDE.png",
+  "downloads": 137,
+  "favourites_count": 0,
+  "description": "<p>Ever feel like insurance cost is insignificant, or cheese deaths with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2394/instant-insurance\" rel=\"noreferrer noopener\">Instant Insurance</a> (like me) so you get everything back instantly, but want there to be some penalty for dying? This mod lets you adjust how much traders charge to insure your items globally, or by item category.</p>\n<h3>What you can configure in <code>config.jsonc</code></h3>\n<p>Set a global multiplier for all items, and optionally override it for any of these categories:</p>\n<ul>\n<li>Weapons</li>\n<li>Weapon attachments</li>\n<li>Night vision / thermal headwear</li>\n<li>Body armor (vests)</li>\n<li>Armor plates</li>\n<li>Rigs (armored and unarmored)</li>\n<li>Backpacks</li>\n<li>Helmets &amp; hats</li>\n<li>Helmet attachments</li>\n<li>Face masks &amp; covers</li>\n<li>Headsets</li>\n<li>Eyewear</li>\n</ul>\n<p>Any category you don’t override uses the global multiplier, so you only need to configure what you care about. You can even make insurance cheaper if you’re really down bad. Accepted values range from 0.1× to 25×.</p>\n<h3>Why so many categories?</h3>\n<p>Tarkov groups a lot of gear under a few broad parent types, so a single “armor”\nsetting would group helmets, plates, eyewear and face covers all together.\nI also noticed some items are deceptive, such as night vision counting as a weapon mod.</p>\n<h3>Installation (server)</h3>\n<ul>\n<li>Extract the contents of the <code>.zip</code> into your SPT directory so it merges into <code>SPT/user/mods/</code>.</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2836/adjust-insurance-prices",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p><strong>AI usage</strong>: AI (Claude) was used during development as an assistant, primarily for:</p>\n<ul>\n<li>\n<p>Code review and debugging.</p>\n</li>\n<li>\n<p>Analyzing the game’s item database to map base-class hierarchies for item categories.</p>\n</li>\n</ul>\n<p>I have several years of programming experience across multiple languages, and have a complete understanding of the code used in this mod. The mod’s concept and design are my own.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2026-07-21T12:11:00.000000Z",
+  "created_at": "2026-07-21T13:15:57.000000Z",
+  "updated_at": "2026-07-28T09:48:06.000000Z",
+  "owner": {
+    "id": 116424,
+    "name": "Xenyx",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/k4StBOEOGNTiZ6TE65PzjqwqD0D31HvjMskAbWEY_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-06-20T07:14:17.000000Z",
+    "updated_at": "2026-08-01T14:06:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/XenyxNZ/AdjustInsurancePrices",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14207,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h1>Important</h1>\n<p>The <code>config.jsonc</code> from version 1.0.0 is <strong>not</strong> compatible with this version. You will have to re-input your custom values into the new config file supplied with this release.</p>\n<h2>Changes</h2>\n<ul>\n<li>\n<p>Added new insurance price override categories for armored and unarmored versions of rigs, face covers and headwear (helmets/hats). Previously, all armored and unarmored items of these types were grouped together.</p>\n</li>\n<li>\n<p>Added config file versioning, so the use of old/unsupported config files with newer mod versions will warn the user at server start.</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2836/adjust-insurance-prices/1.1.0",
+      "content_length": 10808,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 87,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-24T05:17:00.000000Z",
+      "created_at": "2026-07-24T05:18:53.000000Z",
+      "updated_at": "2026-07-28T09:48:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/cb21315afefb16636877b154725a1d7c0657ea376e471f516f0e57edacd284ce",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1307615979/895d4da4-f47c-4cf2-af69-e3534d0ec525?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A24%3A10Z&rscd=attachment%3B+filename%3DAdjustInsurancePrices-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A23%3A56Z&ske=2026-08-01T20%3A24%3A10Z&sks=b&skv=2018-11-09&sig=KmTsZFn%2B4%2BYDRsto43ARgxbfLX%2FggNA5uBtp6KeBbek%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEyMiwibmJmIjoxNzg1NjEyODIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1bUUH-4ig3miRUwUQHpjgyAue5sI3wYh-02I1byLJgE&response-content-disposition=attachment%3B%20filename%3DAdjustInsurancePrices-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14179,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial 1.0.0 release.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2836/adjust-insurance-prices/1.0.0",
+      "content_length": 8967,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 50,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-21T13:27:00.000000Z",
+      "created_at": "2026-07-21T13:27:07.000000Z",
+      "updated_at": "2026-07-28T09:46:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ff11024e269fdf12fda361de2d514d71849d8ddb9e87474f2b87c09fd6ef59f3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1307615979/10833178-d98e-4edf-96e2-a56cde9a3ce6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A28%3A51Z&rscd=attachment%3B+filename%3DAdjustInsurancePrices-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A28%3A40Z&ske=2026-08-01T20%3A28%3A51Z&sks=b&skv=2018-11-09&sig=GBKckIDwRv9TXDhteCMQn0WsibY%2BmKCBvwGhfGfGUWs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEyMywibmJmIjoxNzg1NjEyODIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9pf01yTrzWPZg_I4aXcI-wJOSBrywhNZr2P2C6lmMA&response-content-disposition=attachment%3B%20filename%3DAdjustInsurancePrices-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 2,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:33:42.211Z",
+    "discoveredBy": "seed"
+  }
+}

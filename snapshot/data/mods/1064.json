@@ -1,0 +1,292 @@
+{
+  "type": "mod",
+  "id": 1064,
+  "hub_id": 1463,
+  "guid": "li.barlog.andern",
+  "name": "Andern",
+  "slug": "andern",
+  "teaser": "Rebalance game by make PMC use good gear and weapon.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1463.jpg",
+  "downloads": 50986,
+  "favourites_count": 27,
+  "description": "<p>Idea of this mod is to rebalance the game for better single player experience.</p>\n<ul>\n<li>Gives PMC bots decent weapon from handmade presets.</li>\n<li>Gives PMC good gear. Every PMC wear armor, helmet, rig, headphones, face cover and glasses.</li>\n<li>Generates PMC with levels in configurable range.</li>\n<li>Add trader that sell you couple weapon modules to make weapon until level 15 a bit less crap. And sells you keys for quests witch hard to find because of high randomness of loot in the game.</li>\n<li>Mod allows to change Flea Market access level. Config parameter <code>fleaMinUserLevel</code>. You can increase it to level 42 to add more sense to looting because with Flea you can easy just buy everything your need for craft and hideout update.</li>\n</ul>\n<p>Weapon and gear split by tiers. Tiers is described in <strong>preset/_name/preset.json</strong> file.</p>\n<p>Bots get random weapon from presets. Also bots use specified ammo for each caliber from presets.</p>\n<p>For example list of ammo for tier one weapon presets is in file one/ammo.json</p>\n<p>Preset made in the game and then exported with <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/184-spt-aki-profile-editor/\" rel=\"noreferrer noopener\">SPT-AKI Profile Editor</a></p>\n<p>You can make your own preset. Just be sure that ammo.json contain record for weapon caliber.</p>\n<p>Mod supports any weapon: shotguns, pistols, revolvers, grenade launchers etc.</p>\n<p>At night raids tactical device replaced to infrared one.</p>\n<p>At night raids all PMC wear helmets with night vision googles.</p>\n<p>PMC wear gear from <strong>gear.json</strong> for their level.</p>\n<p><strong>PMC Bots Level configuration</strong></p>\n<p>By default pmc bots generates in range from player level - <strong>PmcBotLevelDownDelta</strong> to player level + <strong>PmcBotLevelUpDelta</strong></p>\n<p>if <strong>UseFixedPmcBotLevelRange</strong> true then pmc bots level in fixed range from <strong>PmcBotMinLevel</strong> to <strong>PmcBotMaxLevel</strong></p>\n<p><strong>Settings for bot generation on maps</strong></p>\n<p>Works only if <strong>MapBotSettings</strong> set to true.</p>\n<p><strong>MapBossChanceAdjustment</strong> add or remove percent for existing boss chance. For example if map boss chance is 35 and you set this parameter to 20 then boss chance will be 35 + 20.</p>\n<p><strong>MapMakePmcAlwaysHostile</strong> by default in SPT-AKI 20% chance that PMC is friendly to player. This setting set this chance to 0.</p>\n<p><strong>MapPmcBrainsAsLive</strong> pmc uses only pmcUSEC and pmcBEAR brains.</p>\n<p><strong>MapScavsAlwaysHasBackpack</strong> Regualr scavs always has backpack.</p>\n<p><strong>MapScavsAlwaysHasArmor</strong> Regular scavs always has (their crap) armor.</p>\n<p><strong>MapScavsAlwaysHasHeadwear</strong> Regular scavs always has (their crap) headwaear.</p>\n<p><strong>MapPlayerScavsBossBrainsOff</strong> Player scavs only use pmcBot brains.</p>\n<p><strong>Other settings</strong></p>\n<p><strong>PmcBackpackWeaponDisable</strong> disables chance that PMC can have extra weapon in their backpack.</p>\n<p><strong>EmissaryPmcBotsDisable</strong> disables chance that PMC can have any type of accounts other than user (purple, green names etc).</p>\n<p><strong>SeasonalEventsDisable</strong> disables all seasonal events like halloween etc.</p>\n<p><strong>InsuranceDecreaseReturnTime</strong> decrease return time for Prapor (2 - 3 hours) and Therapist (1 - 2 hours).</p>\n<p><strong>InsuranceIncreaseStorageTime</strong> increase storage time for Prapor and Therapist (14 days).</p>\n<p><strong>fleaBlacklistDisable</strong> disables Flea blacklist.</p>\n<p><strong>RandomizeSeason</strong> season set randomly after every raid.</p>\n<p><strong>PlayerScavAlwaysHasBackpack</strong> if true player scav always spawns with backpack.</p>\n<p><strong>PpCoinsOnPmcAndScavs</strong> regualar scavs and pmc always has GP Coins in their backpaks.</p>\n<p><strong>LegaMedalOnBosses</strong> bosses has Lega Medal in their pockets.</p>\n<p><strong>RemoveAllTradersItemsFromFlea</strong> removes all item from default traders from Flea except barter, food and keys.</p>\n<p><strong>WeeklyBossEventDisable</strong> disables weekly boss 100% spawn event</p>\n<p><strong>CheeseQuests</strong> disables gear and weapon conditions for same quests. For example DMR allowed for any quest required bolt action rifle.</p>\n<p><strong>ScavCaseLootValueMultiplier</strong> increases loot value for scav case</p>\n<p><strong>ReducePenaltiesFromLargeMagazines</strong> reduces penalties for large magazines</p>\n<p><strong>Installation</strong></p>\n<ul>\n<li>Put folder <strong>BarlogM-Andern</strong> from zip file into your <strong>user/mods</strong> folder</li>\n</ul>\n<p><strong>Known issues</strong></p>\n<ul>\n<li>Mod does not work with <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1400-algorithmic-level-progression/\" rel=\"noreferrer noopener\">Algorithmic Level Progression</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/\" rel=\"noreferrer noopener\">Realism</a></li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1064/andern",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2023-09-23T04:08:00.000000Z",
+  "created_at": "2023-09-23T00:08:52.000000Z",
+  "updated_at": "2026-07-28T09:03:35.000000Z",
+  "owner": {
+    "id": 34614,
+    "name": "Barlog_M",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/728735d6623562a97ccfe0f0a06dd4c208c1ae58_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-07-29T15:20:32.000000Z",
+    "updated_at": "2026-07-10T04:50:40.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/barlog-m/spt-andern",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13666,
+      "hub_id": null,
+      "version": "3.2.0",
+      "description": "<ol>\n<li>Fix from Bzden4ik for PMC bots spawning without armor/rig/backpack</li>\n<li>RandomizeSeason config option now a list (you can remove WINTER for example)</li>\n<li>ReducePenaltiesFromLargeMagazines config option reduces penalties for large magazines</li>\n<li>ScavCaseLootValueMultiplier config option increases loot value for scav case</li>\n<li>Removed high penetration ammo from tier 4 bots</li>\n<li>Tier 4 AKM build can have AK AK-EVO stock</li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/3.2.0",
+      "content_length": 248687,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 3355,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-05-31T14:17:00.000000Z",
+      "created_at": "2026-05-31T14:18:43.000000Z",
+      "updated_at": "2026-07-28T09:03:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/947bc2a7f8ecafac7377e252af9f63b1440286a48be2ed8ddf4ca7462018a7bb",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/07fc0ae3-dd86-42db-b249-1c397e0e3a09?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A56Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A30%3A27Z&ske=2026-08-01T20%3A30%3A56Z&sks=b&skv=2018-11-09&sig=KQLT1uvqNFfdalxG7jEs%2BZUhOc9oQ95KFmO94WRvKSg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI3NiwibmJmIjoxNzg1NjEyOTc2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sV11Sz9IFOqegXFl3_HQwGj2hvYbWZQ_py_l9PEF7TY&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13156,
+      "hub_id": null,
+      "version": "3.1.1",
+      "description": "<p>Some bug fixes. For example with presets without tactical device.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/3.1.1",
+      "content_length": 246723,
+      "spt_version_constraint": "~4.0",
+      "downloads": 4386,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-02-24T23:50:00.000000Z",
+      "created_at": "2026-02-24T23:51:53.000000Z",
+      "updated_at": "2026-07-28T08:06:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/88c047037b390f7c7e04ef3da94fa8feb38b68868d5dad4ca9d73d0d6cc4c35b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/cb90e079-fe5e-4847-83b6-0bd6bf895fce?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A11%3A54Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A11%3A34Z&ske=2026-08-01T20%3A11%3A54Z&sks=b&skv=2018-11-09&sig=IT2bd9NDQ52o4gk%2FNgRhS3sJ8weJMHuSbAc41BK0MgM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI3NywibmJmIjoxNzg1NjEyOTc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yWxmKsFr03NqMixvJYFjz0wL2tqUIWvCMwK64Jw-Osw&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12459,
+      "hub_id": null,
+      "version": "3.1.0",
+      "description": "<ol>\n<li>Removed all scopes from presets because they drastically affect performance with SAIN</li>\n<li>Returned feature <code>CheeseQuests</code></li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/3.1.0",
+      "content_length": 246319,
+      "spt_version_constraint": "~4.0",
+      "downloads": 5640,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-28T07:03:00.000000Z",
+      "created_at": "2025-11-28T07:03:19.000000Z",
+      "updated_at": "2026-07-28T06:58:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-208a415f702ab07e500e30729d6369ba5a1221f9aa86346ae2a316c178ac0a2b-24a49231",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/201f4a63-9c33-4c6f-9a59-5a0242426381?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A19%3A11Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A18%3A58Z&ske=2026-08-01T20%3A19%3A11Z&sks=b&skv=2018-11-09&sig=z4DAZD%2FCYyMA1Sp0bimKM35gr8hWZHvReuXwnQ50QqI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI3NywibmJmIjoxNzg1NjEyOTc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yWxmKsFr03NqMixvJYFjz0wL2tqUIWvCMwK64Jw-Osw&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12004,
+      "hub_id": null,
+      "version": "3.0.1",
+      "description": "<ol>\n<li>Added some gear from Ref</li>\n<li>Added chad’s gear as regular just with less chance</li>\n<li>Ammo rebalance</li>\n<li>Return options MapBossPartisanDisable and MapBossGoonsDisable</li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/3.0.1",
+      "content_length": 336113,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3817,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-24T10:57:00.000000Z",
+      "created_at": "2025-10-24T10:57:09.000000Z",
+      "updated_at": "2026-07-28T06:08:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-b1bf5414f22343131aa28c3cddfc5c18ded61bf7287ef74e57510817fd4b1e0f-4097a0f4",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/b67c447d-27d9-4d71-8469-d95e18716e77?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A36%3A27Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A36%3A16Z&ske=2026-08-01T20%3A36%3A27Z&sks=b&skv=2018-11-09&sig=AoEWJ%2BA5HVQ%2B8yEnztOvVdwjcOdhGkMQZDflv8MILhE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI3OCwibmJmIjoxNzg1NjEyOTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9rinLyD82HyvJt7yB7nRhlb3IjavEw9UjsbwsW6iCzE&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11833,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<p>Support of SPTarkov 4.0\nRemoved a banch of unnecessary functionality.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/3.0.0",
+      "content_length": 334991,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2714,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T20:25:00.000000Z",
+      "created_at": "2025-10-13T20:25:40.000000Z",
+      "updated_at": "2026-07-28T06:03:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/49e668d3dadda5db08158f7c2339fa57d91ff95ad8fc58f6abb84938563636f3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/ab720cbc-1f5e-416f-a998-508e795d3f4f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A13%3A30Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A13%3A01Z&ske=2026-08-01T20%3A13%3A30Z&sks=b&skv=2018-11-09&sig=kZhMaM6rq5JvqiH4Duskj6iuH%2FFWcpP4rvbaV%2FpUED0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI3OSwibmJmIjoxNzg1NjEyOTc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.stJMkEMFMmy8VjDohVZMDUGya5sfLm5LcK9h_Fwdzak&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 196,
+      "hub_id": 14681,
+      "version": "2.5.9",
+      "description": "<p>Set <strong>season</strong> and <strong>seasonRandom</strong> both to false disable any season manipulation by this mod.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/2.5.9",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2069,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-27T18:53:02.000000Z",
+      "created_at": "2025-07-27T18:53:02.000000Z",
+      "updated_at": "2026-05-14T01:40:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/1f0ea29d-3ad9-442b-a16e-86acb9f4a509?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A59Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A30%3A59Z&ske=2026-08-01T20%3A30%3A59Z&sks=b&skv=2018-11-09&sig=WpGj%2BRxh07nn670G3BQmCcnt1LSe3i5l2n0XVupXf88%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI4MCwibmJmIjoxNzg1NjEyOTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.em_s09lWgbDjmpiMH8tb86DGHbEmIO-jom6ybH26MUI&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1152,
+      "hub_id": 13625,
+      "version": "2.5.0",
+      "description": "<ul>\n<li>SP-Tarkov 3.11 support</li>\n<li>Config parameter to disable Partisan</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/2.5.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 504,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T20:02:36.000000Z",
+      "created_at": "2025-03-16T20:02:36.000000Z",
+      "updated_at": "2026-05-14T02:06:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/cc55b465-5fb0-4646-ba2f-59af862c74fd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A33%3A41Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A33%3A26Z&ske=2026-08-01T20%3A33%3A41Z&sks=b&skv=2018-11-09&sig=ix66LkkFI9l5%2BEZqPbQuF8MZiATZxu8iHMWbIop13xY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI4MCwibmJmIjoxNzg1NjEyOTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.em_s09lWgbDjmpiMH8tb86DGHbEmIO-jom6ybH26MUI&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3574,
+      "hub_id": 10712,
+      "version": "2.3.0",
+      "description": "<ul>\n<li>SPT 3.9.0 support</li>\n<li>Keys and Cards spawn decreased</li>\n<li>Option snow replaced with season</li>\n<li>New option seasonRandom</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/2.3.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 1497,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-10T17:40:10.000000Z",
+      "created_at": "2024-07-10T17:40:10.000000Z",
+      "updated_at": "2026-05-14T03:53:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/ebb692ed-4ace-4ab4-ada9-0a8834cecc82?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A35%3A12Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A34%3A52Z&ske=2026-08-01T20%3A35%3A12Z&sks=b&skv=2018-11-09&sig=Lfk6NK8uAx04OWYi9dhSL4h1dnsAehF8HnT%2FuCWlsRo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI4MSwibmJmIjoxNzg1NjEyOTgxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.eqe3gPiUrJXkPFhvT8iPeVOfRxj5TdM0UpiEc1r0MBI&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4931,
+      "hub_id": 9064,
+      "version": "2.0.0",
+      "description": "<p>1. Support for APT-AKI 3.8.0</p>\n<p>2. Live preset is gone (sorry)</p>\n<p>3. More veraity on modules in Meta preset</p>\n<p>4. Meta preset is not only about silenced weapon any more</p>\n<p>5. Trader sells only keys you need for some quests</p>\n<p>6. mapBotBrainsTuning slightly decreases PMC and Raider accuracy.</p>\n<p>7.mapBotDisablePmcTalkativeness disables PMC talkativeness for normal difficulty.</p>\n<p>8.fleaBlacklistDisable disables Flea blacklist.</p>\n<p>9.snow enables snow.</p>\n<p>10.disableBtr disables BTR.</p>\n<p>11.playerScavAlwaysHasBackpack if true player scav always spawns with backpack.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 530,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-02T02:15:34.000000Z",
+      "created_at": "2024-04-02T02:15:34.000000Z",
+      "updated_at": "2026-05-14T04:20:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/fb6400f5-be5f-4d09-8ba5-9e77c8051a17?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A06Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A35Z&ske=2026-08-01T20%3A26%3A06Z&sks=b&skv=2018-11-09&sig=iOaA8ggnf7KcELCEsMOS9FTaFD5HZPlADZCiRWHitnw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI4MiwibmJmIjoxNzg1NjEyOTgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cyGZOgGLR07ncsJe6eIQNvPShf6PTUp_gb4qpd7mWXc&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5530,
+      "hub_id": 8301,
+      "version": "1.2.1",
+      "description": "<p><strong>fixBossSpecialLoot</strong> feature removed. It fixed in SPT-AKI 3.7.3</p>\n<p>Mk-18 build in <strong>test</strong> preset for those who love pain.</p>\n<p>brains preset <strong>fair</strong> with best brains for PMC (in my opinion)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1064/andern/1.2.1",
+      "content_length": null,
+      "spt_version_constraint": "3.7.3",
+      "downloads": 63,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-11-19T21:31:40.000000Z",
+      "created_at": "2023-11-19T21:31:40.000000Z",
+      "updated_at": "2026-05-14T04:26:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/694936518/c5c3f384-d758-4d30-aebd-c30dc2c4f5d8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A31Z&rscd=attachment%3B+filename%3DBarlogM-Andern.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A26%3A19Z&ske=2026-08-01T20%3A26%3A31Z&sks=b&skv=2018-11-09&sig=MgXUxTg1J5XQZr9B2ywY5TWPRTI1%2BA%2FGw8V4LnhQb%2Bc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzI4MywibmJmIjoxNzg1NjEyOTgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.08RF_Re3zCo9KthRO43Pc_LbWn8gEt5MhN370znfcAQ&response-content-disposition=attachment%3B%20filename%3DBarlogM-Andern.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 26,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:36:15.799Z",
+    "discoveredBy": "seed"
+  }
+}

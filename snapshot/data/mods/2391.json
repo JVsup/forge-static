@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 2391,
+  "hub_id": null,
+  "guid": "com.waldfee.spt.fairbothealth",
+  "name": "Fair Bot Health",
+  "slug": "fair-bot-health",
+  "teaser": "Boss HP is stupid. Make them hurt again.",
+  "thumbnail": "",
+  "downloads": 18455,
+  "favourites_count": 25,
+  "description": "<p>Bosses, raiders, etc. have way too much health.\nThis mod sets the health values of all bots that have higher HP than the player to the player’s values (including an optional multiplier).</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2391/fair-bot-health",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2025-10-21T16:16:00.000000Z",
+  "created_at": "2025-10-21T16:16:33.000000Z",
+  "updated_at": "2026-07-28T06:07:56.000000Z",
+  "owner": {
+    "id": 86063,
+    "name": "waldfee",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=w&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-10-20T13:31:59.000000Z",
+    "updated_at": "2026-07-31T13:09:58.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/waldfee/SPT-FairBotHealth",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 11992,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>Fix a stupid bug that resulted in all bots having 1 HP on all body parts.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2391/fair-bot-health/1.0.2",
+      "content_length": 9977,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 17474,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-23T15:29:00.000000Z",
+      "created_at": "2025-10-23T15:29:41.000000Z",
+      "updated_at": "2026-07-28T06:07:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/03d10146eef4c1b902dcf4a26736842828d8c998771fc9dbba88aa5e2bdb504b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1080544270/928f6522-7424-4504-b19d-ecae3d1f75be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A11Z&rscd=attachment%3B+filename%3DFairBotHealth-1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A35Z&ske=2026-08-01T20%3A59%3A11Z&sks=b&skv=2018-11-09&sig=J5jZhraCxDmjvJkD0e9bvaI1KTsmRnuzo8%2FRCr4qCfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOCwibmJmIjoxNzg1NjE1ODM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fy4YTMrnXEgij0bMGDnhPEMA4o6ZA9FfSzrpX-D5dWA&response-content-disposition=attachment%3B%20filename%3DFairBotHealth-1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11986,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Added config support. You can now set the multiplier used for bot health.\nThe default config uses a 1x multiplier and the behaviour will be the same as version 1.0.0</p>\n<ul>\n<li>\n<p>Example 1</p>\n<ul>\n<li>Player Stomach = 70HP</li>\n<li>Boss Stomach = 200HP</li>\n<li>Multiplier = 2.0</li>\n<li>Boss Stomach after mod ajustments = 140HP (70 x 2)</li>\n</ul>\n</li>\n<li>\n<p>Example 2</p>\n<ul>\n<li>Player Stomach = 70HP</li>\n<li>Boss Stomach = 200HP</li>\n<li>Multiplier = 0.5</li>\n<li>Boss Stomach after mod ajustments = 35HP (70 x 0.5)</li>\n</ul>\n</li>\n<li>\n<p>Example 3</p>\n<ul>\n<li>Player Stomach = 70HP</li>\n<li>Random bot Stomach = 60HP</li>\n<li>Multiplier = 1.0</li>\n<li>Boss Stomach after mod ajustments = 60HP (unchanged because it is lower than Player Stomach * multiplier)</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2391/fair-bot-health/1.0.1",
+      "content_length": 9988,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 165,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-23T06:55:00.000000Z",
+      "created_at": "2025-10-23T06:55:32.000000Z",
+      "updated_at": "2026-07-28T06:07:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/14320413b7a89dfeadfbfd136dd87b18558218569f2ff27ac54dec1f2af3824d",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1080544270/eefce6ea-7aa4-4735-a188-793fd2b54ce1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A29Z&rscd=attachment%3B+filename%3DFairBotHealth-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A45Z&ske=2026-08-01T21%3A20%3A29Z&sks=b&skv=2018-11-09&sig=qWtML7FczNWdCiMPyR22JaWloY6Rr7N31XjMzVEcnCM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOCwibmJmIjoxNzg1NjE1ODM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fy4YTMrnXEgij0bMGDnhPEMA4o6ZA9FfSzrpX-D5dWA&response-content-disposition=attachment%3B%20filename%3DFairBotHealth-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11962,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial version</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2391/fair-bot-health/1.0.0",
+      "content_length": 5858,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 816,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-21T16:17:00.000000Z",
+      "created_at": "2025-10-21T16:18:24.000000Z",
+      "updated_at": "2026-07-28T06:06:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad7c799aff3e4f07f9bfea09edb565ea31e48c1d3f24b638432a68826e810549",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1080544270/c8b34cbc-d244-42bb-b343-e291cc260fbb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A34Z&rscd=attachment%3B+filename%3DFairBotHealth-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A07Z&ske=2026-08-01T21%3A09%3A34Z&sks=b&skv=2018-11-09&sig=9NfB%2ByMueyvx5yHoK4uP%2FRXCSTpAKCBsNB32jiWkOrU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOCwibmJmIjoxNzg1NjE1ODM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fy4YTMrnXEgij0bMGDnhPEMA4o6ZA9FfSzrpX-D5dWA&response-content-disposition=attachment%3B%20filename%3DFairBotHealth-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 64,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:03.589Z",
+    "discoveredBy": "seed"
+  }
+}

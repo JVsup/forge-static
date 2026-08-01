@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2629,
+  "hub_id": null,
+  "guid": "com.noctide.watchdog",
+  "name": "WATCHDOG - The Headless Client Operations Suite",
+  "slug": "watchdog-the-headless-client-operations-suite",
+  "teaser": "A simple Executable that allows for enhanced control for FIKA Servers, particularly Headless Clients. ",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/94dZBYICoG2BPb09RyRgsUrEikngWSSNX3uCv1TY.png",
+  "downloads": 621,
+  "favourites_count": 6,
+  "description": "<p><strong>COMMENTS ASKING FOR TROUBLESHOOTING SUPPORT, OR COMMENTS POSTING ERROR CODES WILL BE DELETED FROM HERE ON. IF YOU ENCOUNTER AN ERROR, PLEASE CLICK THE LINK BELOW TO JOIN MY NEW SUPPORT SERVER.</strong></p>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://discord.gg/VT6nB53VYC\" rel=\"noreferrer noopener\">https://discord.gg/VT6nB53VYC</a></li>\n</ul>\n<h1>WATCHDOG v2.1.2 – SPT/FIKA Operations Suite</h1>\n<p><strong>WATCHDOG</strong> is a lightweight, set-and-forget utility built to manage and stabilize an <strong>SPTarkov + Project FIKA</strong> server environment.</p>\n<p>It monitors both the <strong>SPT Server executable</strong> and the <strong>FIKA Headless Client</strong>, fully automating startup, shutdown, crash recovery, and scheduled restarts according to your settings.</p>\n<p><strong>This tool is designed specifically for 24/7 dedicated servers running on a separate machine</strong> (second PC, mini-PC, old laptop, etc.).<br />\nIt is <strong>not</strong> intended for local single-PC setups, if you run everything on your main gaming PC, this program is overkill.</p>\n<h2>Installation</h2>\n<ol>\n<li>Download the release from this page.</li>\n<li>Extract the files anywhere on your <strong>dedicated server machine</strong>.</li>\n<li>Run <code>WATCHDOG.exe</code>.</li>\n</ol>\n<p>No files need to be placed in your game folder.<br />\n<strong>Windows only</strong> some features will not work on other operating systems.</p>\n<h2>Quick Setup</h2>\n<ol>\n<li>Open WATCHDOG and go to the <strong>Settings</strong> tab (left sidebar).</li>\n<li>Set your <strong>Server Executable</strong> and <strong>HeadlessManager Executable</strong> paths.</li>\n<li>Configure the runtime settings:\n<ul>\n<li><strong>Headless Start Delay</strong> (seconds) — Recommended: 30–60 seconds (gives the server time to fully load, heavier mod load = more time needed).</li>\n<li><strong>Scheduled Restart Interval</strong> (hours) — Default 24. Heavily modded servers are recommended every 4–12 hours for stability and memory cleanup.</li>\n<li><strong>Monitor Check Interval</strong> (seconds) — How often the program checks process health (5–30 seconds recommended).</li>\n</ul>\n</li>\n<li>Enable any options you want (auto-restart on crash, minimize to tray, start with Windows, Discord notifications, etc.).</li>\n<li>Return to the <strong>Dashboard</strong> and click <strong>Save Config</strong>.</li>\n</ol>\n<h2>Main Features</h2>\n<p><strong>Dashboard</strong><br />\nCore control panel showing live status cards, recent activity log, quick controls, and update checker.</p>\n<p><strong>Additions Tab</strong><br />\nSimple tracker for mods, version updates, config changes, etc. Useful when installing multiple mods at once.</p>\n<p><strong>Issue Tracker</strong><br />\nDesigned for servers where friends or clients have remote access. They can RDP in and log issues directly; you can review and fix them later.</p>\n<p><strong>Appearance Dropdown</strong>\nChoose an App Color Scheme that matches your liking if the Default Scheme isn’t your Speed!</p>\n<p><strong>Discord Webhook Integration</strong><br />\nReceive real-time notifications in your Discord server:</p>\n<ul>\n<li>Monitor start/stop</li>\n<li>Crash + auto-restart</li>\n<li>Scheduled restarts</li>\n<li>Next restart time</li>\n</ul>\n<p>Perfect for keeping your players informed without constant messages.</p>\n<h2>Status Cards</h2>\n<ul>\n<li>Server, Headless, and Monitor status (green = running, red = stopped)</li>\n<li>Next Scheduled Restart time</li>\n</ul>\n<h2>Set &amp; Forget</h2>\n<p>Once configured:</p>\n<ul>\n<li>Click <strong>Start Monitor</strong> on the Dashboard.</li>\n<li>The server and headless client launch automatically.</li>\n<li>WATCHDOG keeps everything alive 24/7, auto-restarts on crashes, and performs scheduled restarts.</li>\n<li>If tray mode is enabled, it minimizes to the system tray. Right-click → <strong>Show</strong> to restore it.</li>\n</ul>\n<p><strong>Important:</strong> Always use the <strong>Stop Monitor</strong> button to shut everything down cleanly. Manually closing processes will cause WATCHDOG to relaunch them.</p>\n<h2>Discord Webhook Setup (Recommended)</h2>\n<ol>\n<li>In your Discord server, create a text channel.</li>\n<li>Right-click the channel → <strong>Edit Channel</strong> → <strong>Integrations</strong> → <strong>Webhooks</strong> → <strong>New Webhook</strong>.</li>\n<li>Copy the Webhook URL.</li>\n<li>In WATCHDOG Settings, enable Discord notifications and paste the URL.</li>\n<li>Restart the Monitor, messages will start appearing.</li>\n</ol>\n<p><strong>⚠ Never share your webhook URL publicly.</strong></p>\n<h2>Notes &amp; Clarifications</h2>\n<ul>\n<li>This program shines when the server machine is <strong>not</strong> directly accessible (no easy monitor/keyboard &amp; mouse switching).</li>\n<li>If your dedicated machine is always right next to you &amp; accessible, it’s still nice QoL, but the real value is for true remote 24/7 setups.</li>\n<li><strong>VirusTotal &amp; Windows Defender flags</strong>: Some vendors &amp; Windows Clients flag the .exe due to process monitoring and auto-restart behavior. These are false positives. The full source code is public.</li>\n</ul>\n<h2>Support</h2>\n<p>I’m relatively new to coding, so bugs can happen.<br />\nIf you run into issues, Join the Discord &amp; submit a report with:</p>\n<ul>\n<li>A clear description of the problem</li>\n<li>Your <code>watchdog.log</code> file (located in `%APPDATA%\\WATCHDOG, but just click “Open Log Folder in the WATCHDOG Dashboard!)</li>\n</ul>\n<p>Constructive reports only, please don’t spam.\nThis started as a private tool for me and my friends. I released it publicly so others running dedicated SPT/FIKA servers can benefit too.</p>\n<h2>Disclosure:</h2>\n<p>AI was used in order to assist/streamline processes when creating this Mod. I used AI as a “Co-Pilot” only, and the Mod was NOT entirely written or assembled by AI.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2629/watchdog-the-headless-client-operations-suite",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-03-19T18:51:00.000000Z",
+  "created_at": "2026-03-16T00:12:29.000000Z",
+  "updated_at": "2026-07-28T08:10:35.000000Z",
+  "owner": {
+    "id": 107451,
+    "name": "NOCTIDE",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/YjYiRBhenDJqzhYz1QershWMKcsQa9YOC0xU2YQa_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-03-15T22:44:59.000000Z",
+    "updated_at": "2026-08-01T05:02:48.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 16,
+    "hub_id": 19,
+    "name": "Creative Commons BY-NC-ND 4.0",
+    "link": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/apb0618-debug/SPTWATCHDOG/blob/2.1.2/WATCHDOG_v2.1.2.py",
+      "label": "v2.1.2"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13285,
+      "hub_id": null,
+      "version": "2.1.2",
+      "description": "<h1>WATCHDOG v2.1.2</h1>\n<h2>Changelog</h2>\n<ul>\n<li>\n<p>Added selectable UI color schemes:</p>\n<ul>\n<li>Default</li>\n<li>Blue Steel</li>\n<li>Night Tide</li>\n<li>Gunmetal</li>\n<li>Crimson Tide</li>\n<li>Neon</li>\n</ul>\n</li>\n<li>\n<p>Added a new <strong>Appearance</strong> section in Settings with a <strong>Color Scheme</strong> dropdown.</p>\n</li>\n<li>\n<p>Theme changes now preview in-app and save with your config.</p>\n</li>\n<li>\n<p>Status colors remain consistent across all themes for clarity.</p>\n</li>\n<li>\n<p>Reworked UI styling so each theme applies cleanly across the app.</p>\n</li>\n<li>\n<p>Fixed and hardened <strong>Minimize to Tray</strong> behavior.</p>\n</li>\n<li>\n<p>Added extra stability improvements around:</p>\n<ul>\n<li>tray visibility and restore behavior</li>\n<li>stop/restart edge cases</li>\n<li>malformed stored data handling</li>\n<li>heavy logging responsiveness</li>\n</ul>\n</li>\n<li>\n<p>No major core feature changes were made.</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2629/watchdog-the-headless-client-operations-suite/2.1.2",
+      "content_length": 48416728,
+      "spt_version_constraint": "4.0.0",
+      "downloads": 481,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-19T18:50:00.000000Z",
+      "created_at": "2026-03-19T18:49:07.000000Z",
+      "updated_at": "2026-07-28T08:10:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ef8b2a277640a275446b4317f9a20f2cf25a15e3f6be8714c2abb433af274fd5?nocache=1",
+          "label": "v2.1.2"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1182775771/2845db74-ec58-4ad9-9e59-5f97ee2ec775?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A08Z&rscd=attachment%3B+filename%3DWATCHDOG.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A24Z&ske=2026-08-01T21%3A22%3A08Z&sks=b&skv=2018-11-09&sig=jP9rnH%2FtCm9%2B3M1JEiHY4HN%2FFKR6WHP51oFy1o2MRdc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzcwOSwibmJmIjoxNzg1NjE1OTA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UCY_ZaO4I-rO_VE0A_xHmMy94o0tVQFdvr1C3Ef4p0A&response-content-disposition=attachment%3B%20filename%3DWATCHDOG.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 5,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:46.440Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "type": "mod",
+  "id": 2394,
+  "hub_id": null,
+  "guid": "com.ozen.instantinsurance",
+  "name": "Instant Insurance",
+  "slug": "instant-insurance",
+  "teaser": "Receive your insured items immediately after death!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/R9be2kXENr7Znt6JtoEaWNzJAQvrIfpQxucNy9uP.png",
+  "downloads": 28714,
+  "favourites_count": 38,
+  "description": "<p>Prapor and Therapist’s teams have been reorganized — they’re now faster and more efficient at recovering your items, delivering them straight to your equipment.</p>\n<hr />\n<blockquote class=\"is-warning\">\n<p><em><strong>NOTICE</strong></em>: This mod processes insurance immediately <em><strong>ONLY AFTER DEATH</strong></em>. When surviving a raid, your items dropped in-raid goes through the <em>regular</em> insurance system.</p>\n<p><em><strong>NOTICE</strong></em>: Be sure to <em><strong>insure</strong></em> the items you want to keep.</p>\n</blockquote>\n<hr />\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><h4>Configuration</h4>\n<p>In the configuration file <code>config.json</code></p>\n<ul>\n<li><code>SimulateItemsBeingTaken</code> - If enabled, items can be taken before the insurer can retrieve your item. Chance to keep an item depends on which trader you insured your item from, (Prapor: <code>85%</code>; Therapist: <code>95%</code>, default server settings). Default is <code>true</code></li>\n<li><code>LoseInsuranceOnItemAfterDeath</code> - If enabled, insurance status will be lost on death. Default is <code>true</code></li>\n<li><code>LoseAmmoInMagazines</code> - If enabled, ammo that is loaded into an insured magazine will NOT be kept. Default is <code>false</code></li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h4>Installation</h4>\n<ul>\n<li>Extract the contents of the .zip archive into your SPT directory</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"Installation\" />\nThank you <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27605/drakiaxyz\" rel=\"noreferrer noopener\">DrakiaXYZ</a> for the gif</p>\n<h4>Recommended Mods</h4>\n<ul>\n<li>Mods that alter insurance prices and/or insurance return percentages. It is recommended to increase insurance prices to balance the changes done by this mod. <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/236/server-value-modifier-svm\" rel=\"noreferrer noopener\">SVM</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/3972/ghostfenixx\" rel=\"noreferrer noopener\">GhostFenixx</a>, and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1547/trader-qol\" rel=\"noreferrer noopener\">TraderQOL</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/41131/mattdokn\" rel=\"noreferrer noopener\">Mattdokn</a> provides options for changing insurance related options</li>\n</ul>\n<h4>Compatibility</h4>\n<ul>\n<li>Tested to be compatible with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2326/project-fika\" rel=\"noreferrer noopener\">Project Fika</a></li>\n<li><strong>Incompatible</strong> with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2032/nocheese\" rel=\"noreferrer noopener\">NoCheese</a> as of version 1.0.3</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">FAQs</div>\n<div class=\"tab-content\"><h4>FAQs:</h4>\n<h4>Why am I losing <em><strong>some</strong></em> of my items even though <code>SimulateItemsBeingTaken</code> is <code>false</code>?</h4>\n<ul>\n<li>Insurance is processed immediately <em><strong>ONLY AFTER DEATH</strong></em>. When surviving a raid, your items dropped in-raid goes through the <em>regular</em> insurance system</li>\n<li>You can still lose items if they’re uninsured</li>\n<li>Inspect your server logs, they contain information on how your items were processed after the raid ends</li>\n</ul>\n<h4>I’m still losing my items in laboratory, is there a way to change this?</h4>\n<ul>\n<li><code>SimulateItemsBeingTaken</code> is overridden if insurance is disabled on the map. You can use <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/236/server-value-modifier-svm\" rel=\"noreferrer noopener\">SVM</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/3972/ghostfenixx\" rel=\"noreferrer noopener\">GhostFenixx</a> to enable insurance inside laboratory, <code>Raid Settings -&gt; Misc -&gt; Working insurance inside Laboratory</code> is checked</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><h4>Support</h4>\n<p>If you find bugs, or have feature suggestions, feel free to post them on the comment section, or open an issue on GitHub, or most preferably through the <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1374428464999829555\" rel=\"noreferrer noopener\">SPT Discord, <code>ozen</code></a></p></div></div></div>\n<hr />\n<h3>Changes from Insurance Plus</h3>\n<p>A huge thank you to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/41131/mattdokn\" rel=\"noreferrer noopener\">Mattdokn</a> for allowing me to continue his work on <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1545/insurance-plus\" rel=\"noreferrer noopener\">Insurance Plus</a>.</p>\n<ul>\n<li>Simulate items being taken. Some items might still get sent by mail when the container that holds the item is taken, but not the item itself</li>\n<li>Uses SPT methods to simulate items being taken, thank you SPT team!</li>\n<li>Ported to the new SPT C# Server</li>\n</ul>\n<hr />\n<p>If you enjoy my work, you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/ozenm\" rel=\"noreferrer noopener\">buy me a coffee</a> ☕</p>\n<p>\n<em><strong>Policy Notice:</strong> Insurance scamming is not tolerated. Those items dropped in-raid will be processed through the regular insurance system.</em></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2394/instant-insurance",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2025-10-22T16:09:00.000000Z",
+  "created_at": "2025-10-22T15:22:17.000000Z",
+  "updated_at": "2026-07-28T06:21:15.000000Z",
+  "owner": {
+    "id": 77756,
+    "name": "ozen",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1aglmhPJvrzyi93w0EuTd1OMEZeGAtUt15niHWWU_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-04-23T14:40:25.000000Z",
+    "updated_at": "2026-08-01T18:41:28.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 143,
+      "name": "JustNU",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/416246047183d117c8f2af8646fe2ee65c0ab446_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/1d1cb2b8cd2eff5cb4cf47bbe5d919c16736cfd5.png",
+      "created_at": "2020-08-07T00:23:14.000000Z",
+      "updated_at": "2026-07-10T04:56:42.000000Z"
+    },
+    {
+      "id": 41131,
+      "name": "Mattdokn",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/89604c57f05fe3a50ae9cee0fb450fe70fa1a8c1_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/1adc5c0f9967a60f96e9eab432644a0329932c81_1280w.webp",
+      "created_at": "2023-11-25T01:52:38.000000Z",
+      "updated_at": "2026-07-25T18:31:36.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ozen-m/SPT-InstantInsurance",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12293,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<p>Fixed:</p>\n<ul>\n<li>Items are kept even when insurance is disabled for the map (Labs)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2394/instant-insurance/1.0.3",
+      "content_length": 13281,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 25098,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-12T16:42:00.000000Z",
+      "created_at": "2025-11-12T16:42:31.000000Z",
+      "updated_at": "2026-07-28T06:21:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d9a89985c537eef1c22dc44fb3a8b25e6152c5b1dae8f62910c834be2f14011f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1081220165/5c2d590d-820e-4bdc-9d4c-b74d8a561816?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A00Z&rscd=attachment%3B+filename%3Dozen-InstantInsurance-1.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A18Z&ske=2026-08-01T21%3A04%3A00Z&sks=b&skv=2018-11-09&sig=FbtxDX%2FbHV5CK4TBP0nnnw4Fw6eLX3tmpp6afet9ieA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3Dozen-InstantInsurance-1.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12261,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>Fixed:</p>\n<ul>\n<li>Insured item not sent by mail when parent container is not insured</li>\n</ul>\n<p>Modified:</p>\n<ul>\n<li>Log count of items kept/removed to console</li>\n<li>General code cleanup</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2394/instant-insurance/1.0.2",
+      "content_length": 13082,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 469,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-10T05:55:00.000000Z",
+      "created_at": "2025-11-10T05:55:16.000000Z",
+      "updated_at": "2026-07-28T06:19:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/88b6e074e6b846c97effc141e4fc261c72e163cdc10253cda14eebb6d77c4590?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1081220165/2d03fb08-6863-4003-a945-946b21b2c969?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A31Z&rscd=attachment%3B+filename%3Dozen-InstantInsurance-1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A43Z&ske=2026-08-01T21%3A23%3A31Z&sks=b&skv=2018-11-09&sig=SZgqc6jbsifCwAvqMgnyXLqIYjWkkXs1veagT3zXtOI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3Dozen-InstantInsurance-1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11991,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Fixed:</p>\n<ul>\n<li>Ammo inside magazines is still lost when SimulateItemsBeingTaken is false</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2394/instant-insurance/1.0.1",
+      "content_length": 13333,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2658,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-23T13:10:00.000000Z",
+      "created_at": "2025-10-23T13:10:37.000000Z",
+      "updated_at": "2026-07-28T06:07:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4763ad3645c09cdab775d2ef92f32582c4fc605eec28ddd70375fd946966a3bb?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1081220165/22489a13-0f7d-4bd2-8e6d-6b1bdd6446f0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A14Z&rscd=attachment%3B+filename%3Dozen-InstantInsurance-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A02Z&ske=2026-08-01T21%3A22%3A14Z&sks=b&skv=2018-11-09&sig=1Pi8LG0HCvEE%2Bl%2F1w7c20OiI6g4zy29pEdotGDak%2FpI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3Dozen-InstantInsurance-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11978,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2394/instant-insurance/1.0.0",
+      "content_length": 13348,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 489,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-22T16:10:00.000000Z",
+      "created_at": "2025-10-22T16:09:37.000000Z",
+      "updated_at": "2026-07-28T06:07:27.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fe72808f8e3066e099c8cc1171bf071dbfda8ca41c59cce6de27834e51cbf46e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1081220165/a7ead5f2-9a8a-4f4e-b0e3-f786f9a18b8b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A31Z&rscd=attachment%3B+filename%3Dozen-InstantInsurance.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A32Z&ske=2026-08-01T21%3A01%3A31Z&sks=b&skv=2018-11-09&sig=7WazUrdPppY%2B%2BU7LFmfti%2BEKvjShJWu%2BZr%2F1mpiBhhI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MSwibmJmIjoxNzg1NjE1ODQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6rv2bCk8jdzbjpKLgzIHOjyWstRznhwGjz1PJ0MaOC4&response-content-disposition=attachment%3B%20filename%3Dozen-InstantInsurance.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 58,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:47:18.739Z",
+    "discoveredBy": "seed"
+  }
+}

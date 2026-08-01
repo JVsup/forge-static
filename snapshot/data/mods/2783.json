@@ -1,0 +1,191 @@
+{
+  "type": "mod",
+  "id": 2783,
+  "hub_id": null,
+  "guid": "com.vultify.fastgrenadethrow",
+  "name": "Fast Grenade Throw",
+  "slug": "fast-grenade-throw",
+  "teaser": "Brings back the classic instant grenade throw with dedicated key binds for overhand and underhand quick throws.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/EodL3DCMnBkrjfkHRmGizPqFDnHv4EKhWFcclLrj.jpg",
+  "downloads": 2670,
+  "favourites_count": 24,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><p>Brings back the classic instant grenade quick throw from earlier Tarkov patches. Press a key and your grenade flies — no equipping, no holding, no waiting.</p>\n<h3>Features</h3>\n<ul>\n<li><strong>Instant overhand throw</strong> — one key press, grenade gone</li>\n<li><strong>Instant underhand throw</strong> — separate keybind for low trajectory tosses</li>\n<li><strong>Your normal grenade key is untouched</strong> — no conflicts with vanilla controls</li>\n<li><strong>Backpack, armband, and secure container support</strong> — finds grenades anywhere on you, not just your rig/pockets</li>\n<li><strong>Use Items Anywhere compatible</strong> — detects UIA and hooks into its slot system instead of conflicting with it</li>\n</ul>\n<h3>How it works</h3>\n<p>The mod uses the game’s built-in QuickGrenadeThrowHandsController — the same system BSG originally built for fast throws. It automatically finds the highest-priority grenade you’re carrying and throws it instantly, then returns you to your previous weapon.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Install Instructions</div>\n<div class=\"tab-content\"><ol>\n<li>Extract the archive</li>\n<li>Drop the <code>BepInEx</code> folder into your SPT root directory</li>\n<li>Launch the game — default keybinds are <strong>G</strong> (overhand) and <strong>H</strong> (underhand), configurable via F12</li>\n</ol>\n<p>⚠️ <strong>Recommendation:</strong> If your normal grenade keybind is also G, change one of them to avoid conflicts. Either rebind your vanilla grenade key in-game, or change the quick throw key in the F12 config menu.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Known Limitations / Bugs</div>\n<div class=\"tab-content\"><ul>\n<li><strong>Conflicts with Janky’s Visual Assist:</strong> its Grenade Arc feature overrides the real throw with its own predicted trajectory, which can be stale during a quick throw. Symptom: the grenade appears to vanish, then explodes far away instead of where thrown. <strong>Workaround:</strong> disable “Grenade Arc” in Janky’s Visual Assist’s F12 settings.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>Found a bug or have a question? Leave a comment on this mod’s page, or reach out in my thread on the SPT Discord:\n<a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1521972310595338260\" rel=\"noreferrer noopener\">https://discord.com/channels/875684761291599922/1521972310595338260</a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2783/fast-grenade-throw",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to make mod profile picture.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-06-27T17:10:00.000000Z",
+  "created_at": "2026-06-27T17:08:39.000000Z",
+  "updated_at": "2026-07-28T09:23:23.000000Z",
+  "owner": {
+    "id": 52241,
+    "name": "Vultify",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/4457233962ecb2b7d1e522ec0ad81c03210096ee_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-05-20T01:39:49.000000Z",
+    "updated_at": "2026-08-01T19:18:27.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Vultify/FastGrenadeThrow",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13947,
+      "hub_id": null,
+      "version": "1.0.4",
+      "description": "<ul>\n<li>\n<p>Fixed phantom grenade throws — the mod was using a broad inventory sweep that bypassed the game’s own system, so grenades were thrown but never removed from inventory</p>\n</li>\n<li>\n<p>Fixed wrong grenade being selected — the same broad sweep returned grenades in an unpredictable order that didn’t match the HUD, causing a different grenade to be thrown than the one displayed</p>\n</li>\n<li>\n<p>Added automatic <strong>Use Items Anywhere</strong> detection — without this both mods would fight over the same grenade selection code, potentially causing conflicts or one overriding the other</p>\n</li>\n<li>\n<p>Added debug logging toggle in F12 — there was previously no way to see what the mod was doing internally, making user-reported issues difficult to diagnose</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2783/fast-grenade-throw/1.0.4",
+      "content_length": 6524,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1960,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-01T01:35:00.000000Z",
+      "created_at": "2026-07-01T01:41:55.000000Z",
+      "updated_at": "2026-07-28T09:23:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c5173b4d94971092a9082ff22714a32c3e4b92b6511cbb3b773bd004eabcc7ea?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1282357759/372be8d4-9baa-4c9c-93fb-d15f73af3a8c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A31Z&rscd=attachment%3B+filename%3DFastGrenadeThrow-v1.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A16Z&ske=2026-08-01T21%3A19%3A31Z&sks=b&skv=2018-11-09&sig=6snTx3x%2FXfeODJ0Cj%2B5Mhe9ZUEl9hK52J2s2fg%2FWTwU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DFastGrenadeThrow-v1.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13927,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<p>Fixed Model 7290 Flash Bang releasing from waist level during quick throw. The flashbang now releases from hand height like all other grenades.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2783/fast-grenade-throw/1.0.3",
+      "content_length": 4761,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 254,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-29T01:14:00.000000Z",
+      "created_at": "2026-06-29T01:17:29.000000Z",
+      "updated_at": "2026-07-28T09:22:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e0e94051d97609b6217954b449b6691de21cd8d4f8446bf7437ef948f74c6e6d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1282357759/b2d7a3d0-561f-4f27-ab43-e27d7337c12a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A29Z&rscd=attachment%3B+filename%3DFastGrenadeThrow-v1.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A06Z&ske=2026-08-01T21%3A00%3A29Z&sks=b&skv=2018-11-09&sig=EeFnEPIIhrQ1tm3CqoqXE%2FPAwI9%2FbJ6rdFkG0QRrNDw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DFastGrenadeThrow-v1.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13912,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<ul>\n<li>Fixed weapon not returning after spamming throw key</li>\n<li>Fixed version display mismatch in F12 menu</li>\n<li>Includes all previous fixes (walking throw, modded equipment support)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2783/fast-grenade-throw/1.0.2",
+      "content_length": 4087,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 247,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-28T05:14:00.000000Z",
+      "created_at": "2026-06-28T05:16:18.000000Z",
+      "updated_at": "2026-07-28T09:22:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e51d433eeb02d22b06d1adf141fee3e4fe004bf18a0a8015439c882fe3ab725a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1282357759/1b188e96-637c-423d-9aa1-62a3c8e73a25?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A27%3A53Z&rscd=attachment%3B+filename%3DFastGrenadeThrow.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A27%3A26Z&ske=2026-08-01T21%3A27%3A53Z&sks=b&skv=2018-11-09&sig=hRowQH35ygbnbUmiNuyZ%2FX7s68p6t7lKsfJ6Ouy4aag%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.C8Vi74L-rHMnlllUEQ4lY2GQYTRnL1RaNGBgcOgeT2M&response-content-disposition=attachment%3B%20filename%3DFastGrenadeThrow.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13907,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>Fixed quick throw not working while walking (WASD movement)</li>\n<li>Grenades are now found in all equipment slots including modded belts and custom rigs</li>\n<li>Fixed potential double-trigger conflict</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2783/fast-grenade-throw/1.0.1",
+      "content_length": 4009,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 132,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-27T20:17:00.000000Z",
+      "created_at": "2026-06-27T20:17:41.000000Z",
+      "updated_at": "2026-07-28T09:21:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f893237a48cd973ad4b417e55395e15c6184b58fe66f92bf58fc786c55b297b6?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1282357759/442eae5a-b724-40f7-99df-d78a0953e2f6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A03Z&rscd=attachment%3B+filename%3DFastGrenadeThrow.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A03Z&ske=2026-08-01T21%3A11%3A03Z&sks=b&skv=2018-11-09&sig=z1AE9G8y0sSV5TSbNtxCvchEv9TYIiVZW54QCBTwTdg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DFastGrenadeThrow.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13905,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release — brings back the OG instant grenade throw with dedicated overhand and underhand quick throw key binds. Configurable via F12.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2783/fast-grenade-throw/1.0.0",
+      "content_length": 4009,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 77,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-27T17:09:00.000000Z",
+      "created_at": "2026-06-27T17:10:47.000000Z",
+      "updated_at": "2026-07-28T09:21:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/06e01d6d67915a30936b74f96e2e8c5bd5e078afcb106c3860eae18a6dce3d60?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1282357759/a28953b4-5026-4dd8-bcfe-9fc0ed5d1702?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A05Z&rscd=attachment%3B+filename%3DFastGrenadeThrow.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A30Z&ske=2026-08-01T21%3A11%3A05Z&sks=b&skv=2018-11-09&sig=0%2Bao%2BudfyXEbnQjMdPU8W1nrsA%2Ff4LOWRjO9M3l%2B6Nc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&response-content-disposition=attachment%3B%20filename%3DFastGrenadeThrow.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 15,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:06.701Z",
+    "discoveredBy": "seed"
+  }
+}

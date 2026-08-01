@@ -1,0 +1,262 @@
+{
+  "type": "mod",
+  "id": 1706,
+  "hub_id": 2327,
+  "guid": "com.fryciarz7.spt.hpl",
+  "name": "Health Per Level",
+  "slug": "health-per-level",
+  "teaser": "Increase health depending on player level",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2327.png",
+  "downloads": 37647,
+  "favourites_count": 34,
+  "description": "<p>Original mod by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/22851-capataina/\" rel=\"noreferrer noopener\">Capataina</a> found <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1423-health-per-level/\" rel=\"noreferrer noopener\">here</a>, updated by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/45400-mnstr/\" rel=\"noreferrer noopener\">MNSTR</a> found <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1690-health-per-level-reboot/\" rel=\"noreferrer noopener\">here</a>.</p>\n<p><em><strong>If they decide they want to continue development on the mod and want mine removed I will</strong></em> but until then I will be taking it over and iterating on it.</p>\n<p><strong>Description:</strong></p>\n<p>Config has since been split into two parts which all hinges on the first line of “split_PMC_and_Scav”; if it is set to <em>false</em> then the mod will only use the PMC values for everything.</p>\n<p>Pretty simple, it increases your maximum health depending on the level of the player. The base amount is as follows:</p>\n<p>Chest: <strong>2</strong></p>\n<p>Head: <strong>2</strong></p>\n<p>Left Arm: <strong>3</strong></p>\n<p>Left Leg: <strong>3</strong></p>\n<p>Right Arm: <strong>3</strong></p>\n<p>Right Leg: <strong>3</strong></p>\n<p>Stomach: <strong>2</strong></p>\n<p>Total: <strong>18</strong> health per increment (the default is <strong>every 5 levels</strong>)</p>\n<p>Mod also takes into consideration your Health skill level. For every increment (by default <strong>every 1 skill level</strong>) you get additional <strong>7</strong> HP (by default, as there are 7 body parts).</p>\n<p>This is <strong>turned on</strong> by default and can be configured for both PMC and Scav in config file → “health_per_health_skill_level”.</p>\n<p>Increment and HP values are configurable:</p>\n<ul>\n<li>How many skill levels per increment: “health_skill_levels_per_increment”,</li>\n<li>How many HP per body part: “health_skill_&lt;bodypart&gt;”.</li>\n</ul>\n<p>Alternative Health Boost</p>\n<p>Big thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/32305-teacrab131/\" rel=\"noreferrer noopener\">TeaCrab131</a> for developing alternative method of health boost. Currently 3.11 doesn’t have any AI mod yet, the bots are very aggressively trying to aim for the head, so a head_boost multiplier is added so players have a bit more leeway when it comes to surviving head shots. Disabled by default.</p>\n<p>Added option for Alternative mode of adding bonus health.</p>\n<ul>\n<li>Each part of the body has a customized base health</li>\n<li>Each part of the body receives bonus health at <strong>different level intervals</strong></li>\n<li>Health skill provides a skill level x percentage boost to the customized base health</li>\n<li>Health skill level bonus is now a multiplier on the Alternative Base Health Preset</li>\n<li>Head HP modifier to help surviving aimbots (default x 3.0)</li>\n<li>Staggered health bonus per nth-level:\n<ul>\n<li>Every 3 level: Arm HP <strong>+3</strong></li>\n<li>Every 5 level: Stomach HP <strong>+7</strong> and Leg HP <strong>+5</strong></li>\n<li>Every 7 level: Head HP <strong>+5</strong>, Thorax HP <strong>+7</strong></li>\n</ul>\n</li>\n</ul>\n<p>Alt BaseLv. 21Lv. 51Lv. 99 (+)SkillEliteABSOLUTE MAXThorax90+41+49+100 (98)+60+120310Head30 (90)+15+35+75 (70)+15 (45)+30 (90)135 (255)Stomach90+28+70+135 (133)+37+75300Arms60+21+51+100 (99)+22+45205Legs75+20+50+100 (95)+30+60235 Currently this mod changes HP of player only, not AIs.</p>\n<p>This mod changes HP of AIs as well, configurable and enabled by default.</p>\n<p><strong>Config:</strong></p>\n<p>To change health values go to config/config.json5</p>\n<ul>\n<li>Whether or not the health values for PlayerScav and PMC should be split/independent of each other,</li>\n<li>Should the mod keep bleeding chance somewhat consistent,</li>\n<li>Should the mod increase your resistance to bleeding <strong>by a very small margin</strong>,</li>\n<li>How many levels until health increase (default is 5),</li>\n<li>How much to increase each body part by per increment,</li>\n<li>The base health of the PMC/Scav as well,</li>\n<li>Should it consider your Health skill level,</li>\n<li>How many Health skill levels until health increase (default is 1),</li>\n<li>How much to increase each body part by per Health skill increment.</li>\n</ul>\n<p><strong>Installation:</strong></p>\n<p>Unzip <em>capatainamnstrfryciarz7-healthperlevel.zip</em> into your SPT folder</p>\n<p>Uninstallation:</p>\n<p>If you are willing to remove this mod, first disable the mod in it’s config file and start the server and the game so the health pools are restored to default.</p>\n<p>Want to support my work? Buy me a Coffee <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/fryciarz7/tip\" rel=\"noreferrer noopener\">ko-fi/fryciarz7</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1706/health-per-level",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-09-02T09:33:00.000000Z",
+  "created_at": "2024-09-02T09:33:06.000000Z",
+  "updated_at": "2026-07-28T08:10:23.000000Z",
+  "owner": {
+    "id": 499,
+    "name": "fryciarz7",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ccf11793b77a66f80c3f48681fd843817cec2a96_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/Ny86wIzIcrlEaynXtVVKFxwdH226UflXIb2ahje5_2560w.webp",
+    "created_at": "2020-12-27T13:29:08.000000Z",
+    "updated_at": "2026-08-01T04:07:22.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 19621,
+      "name": "Capataina",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=C&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2022-06-14T05:28:36.000000Z",
+      "updated_at": "2025-09-26T15:32:37.000000Z"
+    },
+    {
+      "id": 42161,
+      "name": "MNSTR",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/63ed734b6e442d78d0084f5b08a0efc06859e234_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-12-14T01:05:33.000000Z",
+      "updated_at": "2026-07-10T04:50:56.000000Z"
+    }
+  ],
+  "license": {
+    "id": 5,
+    "hub_id": 7,
+    "name": "Creative Commons BY-NC-SA 3.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/fryciarz7/HealthPerLevel/tree/master",
+      "label": "3.11"
+    },
+    {
+      "url": "https://github.com/fryciarz7/HealthPerLevel-CSharp",
+      "label": "4.0"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13277,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<p>Now, every time you level-up your Metabolism skill, your Energy and Hydration stat also increases.\nBy default both go by 1 every 1 Metabolism level.</p>\n<p>Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/100820/fallen7633\" rel=\"noreferrer noopener\">fallen7633</a> for suggesting this.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/2.1.0",
+      "content_length": 18704,
+      "spt_version_constraint": "~4.0.11",
+      "downloads": 8225,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-17T10:23:00.000000Z",
+      "created_at": "2026-03-17T10:25:44.000000Z",
+      "updated_at": "2026-07-28T08:10:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/639f563a99b4d21807969171e120d1b36242752c84d4ba82380893287cec21c1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/724ba840-9387-4424-aa1a-6bb5d968f3a7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A37Z&rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A24Z&ske=2026-08-01T21%3A07%3A37Z&sks=b&skv=2018-11-09&sig=Bi0mVrYOVxKsuKmwQ3nYQrgBzr5eujJ3fChLQAvkVW4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12877,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<ul>\n<li>Implements default health restore feature\n<ul>\n<li>requires game start to restore and save <em>new</em> values</li>\n</ul>\n</li>\n<li>changes int to float for health values\n<ul>\n<li>values are rounded <strong>down</strong></li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/2.0.3",
+      "content_length": 14128,
+      "spt_version_constraint": "~4.0.11",
+      "downloads": 2843,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-19T10:41:00.000000Z",
+      "created_at": "2026-01-19T10:41:48.000000Z",
+      "updated_at": "2026-07-28T07:54:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/46a73c6b2fa17ebe51cb241774ddc5014c2a76b492e83cb212bbd042a1e7f6c0",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/451f67d7-4684-4022-aacf-03aeb70e91c1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A27Z&rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A34Z&ske=2026-08-01T20%3A56%3A27Z&sks=b&skv=2018-11-09&sig=gEc4UXC35ySJBqBlZjSNUGtNaN89%2F7tkpm%2FWNqJBr58%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12861,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<p>Changes the method of health update midgame to a completely different approach. This method might not update health when completing tasks.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/2.0.2",
+      "content_length": 18549,
+      "spt_version_constraint": "~4.0.11",
+      "downloads": 625,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-15T10:28:00.000000Z",
+      "created_at": "2026-01-15T10:28:16.000000Z",
+      "updated_at": "2026-07-28T07:51:52.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c952f50b3e5aab2790c575ef6059c7fd6172017cab51ee616f5406836a325af3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/17c45884-ca29-4231-b0d8-a9eb6b06f182?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A19Z&rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A43Z&ske=2026-08-01T20%3A50%3A19Z&sks=b&skv=2018-11-09&sig=q7Ta7%2BM%2FuXAW0DDvNMmQJdNZL43gPT8RgXNGrvraHuw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 609,
+      "hub_id": 14238,
+      "version": "1.2.1",
+      "description": "<ul>\n<li>updates types and references</li>\n<li>[bugfix] Fixed Bot’s Health Changes</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/1.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 7694,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-13T09:04:45.000000Z",
+      "created_at": "2025-05-13T09:04:45.000000Z",
+      "updated_at": "2026-05-14T01:52:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/850631921/8fa0f709-2ff5-466f-9fd2-c6df4f1dc09d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A33Z&rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A50Z&ske=2026-08-01T21%3A10%3A33Z&sks=b&skv=2018-11-09&sig=rir1ubgbTqU7SPjfj7lPySGpiMWU4vc2yhhhnFjUVgc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 904,
+      "hub_id": 13890,
+      "version": "1.2.0",
+      "description": "<ul>\n<li>Added alternative method of getting bonus HP. by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/32305-teacrab131/\" rel=\"noreferrer noopener\">TeaCrab131</a>\n<ul>\n<li>Each part of the body has a customized base health</li>\n<li>Because currently 3.11 doesn’t have any AI mod yet, the bots are very aggressively trying to aim for the head, so a head_boost multiplier is added so players have a bit more leeway when it comes to surviving head shots.</li>\n<li>Each part of the body receives bonus health at different level intervals</li>\n<li>Health skill provides a skill level x percentage boost to the customized base health</li>\n<li>Added related configurations to Config Json, default false.</li>\n</ul>\n</li>\n<li>checks for Personal Traner and displayes an error by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/3530-fryciarz7/\" rel=\"noreferrer noopener\">fryciarz7</a>\n<ul>\n<li>same way it does for Realism, but this time you cannot disable this message. These mods are conflicting.</li>\n</ul>\n</li>\n<li>README.MD for alternative method + elite/max level bonus + value adjustment. by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/32305-teacrab131/\" rel=\"noreferrer noopener\">TeaCrab131</a>\n<ul>\n<li>Head HP modifier to help surviving aimbots (default x 3.0)</li>\n<li>Staggered health bonus per nth-level:\n<ul>\n<li>Every 3 level: Arm HP +3</li>\n<li>Every 5 level: Stomach HP +7 and Leg HP +5</li>\n<li>Every 7 level: Head HP +5, Thorax HP +7</li>\n</ul>\n</li>\n<li>Health skill level bonus is now a multiplier on the Alternative Base Health Preset</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3158,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-01T04:31:57.000000Z",
+      "created_at": "2025-04-01T04:31:57.000000Z",
+      "updated_at": "2026-05-14T02:01:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/850631921/0e7a6106-b310-4eaf-84da-33cdd88825b2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A29Z&rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A04Z&ske=2026-08-01T21%3A05%3A29Z&sks=b&skv=2018-11-09&sig=Ev6lrr1A9HyS99jict1sYiuBLWQFnAK0U9e83LIJHoc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 979,
+      "hub_id": 13810,
+      "version": "1.1.2",
+      "description": "<p>Update to 3.11</p>\n<p>I am currently taking a break from SPT and checked on the mod out of curiosity. Stuff seems to work fine.</p>\n<p>Please report issues over GitHub if you find something.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1066,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-26T11:49:39.000000Z",
+      "created_at": "2025-03-26T11:49:39.000000Z",
+      "updated_at": "2026-05-14T02:02:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/850631921/1d5431f5-925c-4f7f-b865-6078068ddf49?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A40Z&rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A28Z&ske=2026-08-01T20%3A50%3A40Z&sks=b&skv=2018-11-09&sig=y0xKLv5VaA5GzVPpiWAPMbGpt87zt%2Fu%2FuQhrv%2BNYYYQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2335,
+      "hub_id": 12272,
+      "version": "1.0.7",
+      "description": "<p>updates to 3.10</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1706/health-per-level/1.0.7",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1231,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-26T18:50:07.000000Z",
+      "created_at": "2024-11-26T18:50:07.000000Z",
+      "updated_at": "2026-05-14T03:19:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/850631921/eeaa31f2-7fed-458c-8b4a-ffe74e0ba19a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A36Z&rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A25Z&ske=2026-08-01T20%3A50%3A36Z&sks=b&skv=2018-11-09&sig=VlZ%2BPk8qAZIpDJ1kFkftkM1CeYrCoE5pD6kq0fc8rFs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY2MywibmJmIjoxNzg1NjE1MzYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yoVsfzTRkUKtCcEo-_BN2dQutYiTZSDpSoPvAxSx0Z4&response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 41,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:49.951Z",
+    "discoveredBy": "seed"
+  }
+}

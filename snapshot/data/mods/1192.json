@@ -1,0 +1,582 @@
+{
+  "type": "mod",
+  "id": 1192,
+  "hub_id": 1673,
+  "guid": "nameless.raidoverhaul",
+  "name": "Raid Overhaul",
+  "slug": "raid-overhaul",
+  "teaser": "An overhaul to how raids function including raid timer being tied to your system time with an (almost) endless raid length, random events occurring throughout your raids, and a new themed trader to help you make your way through Tarkov.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/8E3El1l9JDJiEc3tydl0FYIVdHtPvMpzJZZL2RdX.jpg",
+  "downloads": 30013,
+  "favourites_count": 38,
+  "description": "<p>To start, I want to give a huge thanks to Kobrakon (<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/642/immersive-raids\" rel=\"noreferrer noopener\">Immersive Raids</a>) for the base of features that I’ve worked off of and CJ for being patient and helping me get this all up and running (teaching me tons along the way). Absolute legends and none of this would’ve been possible without them!!</p>\n<p>Hope you enjoy! ♥</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><ul>\n<li>Almost unlimited raid timer</li>\n<li>Events that will happen periodically throughout your raids</li>\n<li>A body cleanup service that is configurable in the f12 menu alongside a backpack drop chance config</li>\n<li>A deafness effect that can cause concussion and ear ringing depending on the ammo/weapon you’re firing without ear protection on</li>\n<li>Slower hydration and energy decay</li>\n<li>Added in quests to get modified versions of the secure containers with more storage space</li>\n<li>A new trader, the “Requisition Office”, that sells an assortment of useful items/equipment including some new weapons and equipment, and 3 new currencies “Special Request Forms”, “Requisition Slips” and “Requisition Coins” to buy them with (they can also be found in raid).</li>\n<li>More QoL options that are listed in the “Config” tab</li>\n<li>A custom boss “Legion” with a dynamic spawn chance that can be found all across Tarkov alongside his Legionnaire followers</li>\n</ul>\n<p>Most of these can be tweaked in the F12 menu or the server config in user/mods/RaidOverhaul/RO-Config.exe</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Events</div>\n<div class=\"tab-content\"><p>Currently Implemented events are</p>\n<ul>\n<li>Airdrop event where an airdrop will be brought in</li>\n<li>Heart attack event (LOL) which will break your arm and deal a set amount of damage to your thorax alongside some short debuffs. If disabled will play a Joke event which will give a notification and then choose another random event</li>\n<li>Healing Event and Armor Repair event where you will be healed to full health and all equipped armor will be fully repaired respectively</li>\n<li>Blackout event where all lights and power switches will be turned off for a set amount of time</li>\n<li>Power switch event where a random power switch on the map will be activated</li>\n<li>Door unlock event where a random door on the map will be unlocked and opened</li>\n<li>Skill event which has a chance to either gain or lose a single level in a random skill</li>\n<li>Metabolism event which has a chance to either, disable energy and hydration loss completely, decrease energy and hydration drain by 20%, or increase energy and hydration drain by 20%</li>\n<li>Trader event which will shift your standing with a random trader up by 0.1 or down by 0.05</li>\n<li>Malfunction event which will make malfunctions significantly more likely to happen for a minute</li>\n<li>Weight event which will double the weight of all items you have in your inventory for a few minutes</li>\n<li>Berserk event which will give you buffs to weapon stats (ergonomics and recoil control) for a short period of time. This event will be expanded upon in a future update</li>\n<li>Shopping Spree event which will up your rep with every trader by 1 for a set period of time. After which it will be reverted back to normal</li>\n<li>Exfil Lockdown event locks down all exfils for 10 minutes, after which they become available again</li>\n<li>Artillery Event calls in mortar strikes on your position 30 seconds after the event starts</li>\n<li>Invasion Event spawns in a random boss with their followers in a random zone on the map</li>\n<li>Exfil menu (hotkey configurable in the BepInEx menu) that allows you to spend any of the new Requisition currencies to either call the train for exfil on supported maps, call for an exfil with a delay (cheaper option), exfil immediately (expensive option), or exfil a set amount of gear/loot that you choose in the UI which you will receive in a message from the Req Shop post raid.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><ol>\n<li>\n<p>Open the 7zip file with 7zip</p>\n</li>\n<li>\n<p>Drag both the BepInEx and user folders into your base SPT directory</p>\n</li>\n</ol>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/vKRw58b.gif\" alt=\"vKRw58b.gif\" /></p>\n<p>I know this is SAIN but the same will apply here (thanks Drakia for the GIF )</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">To Uninstall</div>\n<div class=\"tab-content\"><p>To remove Raid Overhaul and prevent any errors you need to remove the mod files from the user/mods folder, BepInEx/plugins and BepInEx/patchers.</p>\n<p>As for what files/folder to remove</p>\n<p>Prepatch –&gt; this is located in your “BepInEx/patchers” folder and you need to remove the “RO-Prepatch.dll”</p>\n<p>Plugin –&gt; this is in your “BepInEx/plugins” folder and you need to remove the entire “RaidOverhaul” folder</p>\n<p>Server –&gt; this will be the “user/mods” portion. You need to remove the “RaidOverhaul” folder here as well</p>\n<p>Bot Configs (If you’re using SAIN) –&gt; BepInEx/plugins/SAIN/Default Bot Config Values/Legion.json\n–&gt; BepInEx/plugins/SAIN/Default Bot Config Values/Legionnaire.json</p>\n<p>You can also just delete the whole Default Bot Config Values folder and let SAIN regenerate it</p>\n<p>–&gt;\n–&gt;\n–&gt;\nBOOM you’ve uninstalled the mod and not borked everything</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Recommended Mods</div>\n<div class=\"tab-content\"><p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2097/abps-acids-bot-placement-system\" rel=\"noreferrer noopener\">ABPS - Acid’s Bot Placement System</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1109/questing-bots\" rel=\"noreferrer noopener\">Questing Bots</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/812/looting-bots\" rel=\"noreferrer noopener\">Looting Bots</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement\" rel=\"noreferrer noopener\">SAIN - Solarint’s AI Modifications - Full AI Combat System Replacement</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1140/quest-tracker\" rel=\"noreferrer noopener\">Quest Tracker</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2389/expanded-task-text\" rel=\"noreferrer noopener\">Expanded Task Text</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2383/skills-extended\" rel=\"noreferrer noopener\">Skills Extended</a></p>\n<p>I was going to put an explanation for each of these but they’re all amazing mods that I think combine well with this, so check them out if you haven’t already</p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Config</div>\n<div class=\"tab-content\"><p>The config files are all located in the server side of the mod at “user/mods/RaidOverhaul/config/*.json” and can be edited either manually or with the RO-Config.exe in the server mods base directory.</p>\n<p>The RO-Config.exe must stay located in the root server mod directory so it can find the config files but you can make a shortcut wherever you want</p>\n<p>MAIN MOD CONFIG</p>\n<pre><code>// ── Raid &gt; Boss &amp; Spawns\n\n\"EnableCustomBoss\": bool,    // Enable the custom boss \"Legion\" to spawn in your raids. Beating and turning in his headgear is required to unlock the Requisitions Office trader. If disabled, the trader quest will be changed to be completeable without Legion.\n\"EnableRequisitionOffice\": bool,    // Enables the new trader. The Req Office uses new currencies to trade for almost any item in the game. The trader assort is randomly generated each server start and item prices are all either the flea or handbook price of the item to keep in line with base game balance.\n\"UseLegionGlobalSpawnChance\": bool,    // This lets you set a custom percent chance that Legion will spawn in your raids as opposed to using a progressive spawn chance. If disabled, the spawn chance will slowly tick up until you eventually beat the boss and it resets to its base spawn percentage.\n\"GlobalSpawnChance\": int,    // The chance that Legion will spawn in raid if \"Use Legion Global Spawn Chance\" is enabled.\n\"EnableCustomItems\": bool,    // Enables the custom items created for the mod in your game. These are available as a mix of in-raid loot and trader purchases. Legion's gear and the custom currency/containers are not affected by this option.\n\n// ── Raid &gt; Quality of Life\n\n\"BackupProfile\": bool,    // Let this mod save a backup of your profile into a folder in the mod folder in the case of a game breaking issue or if you just want to revert to a previous point in your playthrough.\n\"SaveQuestItems\": bool,    // Allow your character to save quest items on death. This counts for all items that go into the quest items box in your inventory.\n\"NoRunThrough\": bool,    // Disables the run through status in your raids.\n\"LootableMelee\": bool,    // Allows you to loot melee weapons off of dead players/scavs etc.\n\"LootableArmbands\":bool,    // Allows you to loot armbands off of dead players/scavs etc.\n\"EnableExtendedRaids\": bool,    // Lets you set a custom max time limit for your raids.\n\"TimeLimit\": int, // The max length of your raids in minutes if \"Enable Extended Raids\" is enabled.\n\"HolsterAnything\": bool,    // Allows you to holster any weapon in your sidearm slot.\n\"LowerExamineTime\": bool,    // Lowers the examine time on all items loaded before this mod. Makes examine time almost instant\n\"SpecialSlotChanges\": bool,    // Lets you put anything into your special slots. A bit game breaking but great if you want to be the biggest loot goblin around.\n\"ChangeBackpackSizes\": bool,    // Changes the internal sizes of most of the backpacks in the game. Makes them all slightly (massively for boss backpacks) bigger. Useful if you intend on staying and looting in raid a lot longer with Extended Raids enabled.\n\"ModifyEnemyBotHealth\": bool,    // Changes all enemy bot health to be the same as the player. Makes life less stressful when you run into a boss or raiders an hour+ into a raid.\n\n// ── Raid &gt; Energy and Hydration Settings\n\n\"ReduceFoodAndHydroDegradeEnabled\": bool,    // Enables the multipliers for Hydration and Energy decay.\n\"EnergyDecay\": int,    // Energy decay will be multiplied by this amount. e.g. 1.5 = 50% more energy loss, 0.5 = 50% less.\n\"HydroDecay\": int,    // Hydration decay will be multiplied by this amount. e.g. 1.5 = 50% more hydration loss, 0.5 = 50% less.\n\n// ── Raid &gt; Weather and Season Settings\n\n\"WeatherChangesEnabled\": bool,    // Enables the weather and season options below.\n\"AllSeasons\": bool,    // Randomizes the weather/season each time you start the game.\n\"NoWinter\": bool,    // Randomizes the weather/season each time you start the game, excluding Winter.\n\"SeasonalProgression\": bool,    // Progresses through each season in sequence. The mod keeps track of how many raids you've completed and will progress to the next season every couple of raids.\n\"WinterWonderland\": bool,    // Sets the in-game season to Winter.\n\n// ── Map/Loot &gt; Loot Changes\n\n\"LootChangesEnabled\": bool,    // Enable the loot multipliers for each type of loot on all maps.\n\"StaticLootMultiplier\": int,    // The multiplier for loot found in containers.\n\"LooseLootMultiplier\": int,    // The multiplier for loot found on the ground/out in the world on the map.\n\"MarkedRoomLootMultiplier\": int,   // The multiplier for loot found in marked rooms.\n\n// ── Map/Loot &gt; Airdrop Changes\n\n\"ChangeAirdropValuesEnabled\": bool,    // Enable the changes to airdrop chances.\n\"Customs\": int,    // The percent chance to get an airdrop on Customs.\n\"Woods\": int,    // The percent chance to get an airdrop on Woods.\n\"Lighthouse\": int,    // The percent chance to get an airdrop on Lighthouse.\n\"Interchange\": int,    // The percent chance to get an airdrop on Interchange.\n\"Shoreline\": int,    // The percent chance to get an airdrop on Shoreline.\n\"Reserve\": int,    // The percent chance to get an airdrop on Reserve.\n\"Streets\": int,    // The percent chance to get an airdrop on Streets.\n\"GroundZero\": int,    // The percent chance to get an airdrop on Ground Zero.\n\n// ── Traders\n\n\"DisableFleaBlacklist\": bool,    // Disable the flea blacklist, which allows all items to be bought and sold on the flea market.\n\"Ll1Items\": bool,    // Set all of the Requisition Shop's items to be available at Loyalty Level 1 as opposed to being spread across all tiers.\n\"RemoveFirRequirementsForQuests\": bool,    // Remove the found-in-raid requirements to turn items in for all quests (not just for the Req Shop).\n\n// ── Traders &gt; Insurance Changes\n\n\"InsuranceChangesEnabled\": bool,    // Enable the trader insurance time tweaks.\n\"PraporMinReturn\": int,    // The minimum time for Prapor to return your insurance items.\n\"PraporMaxReturn\": int,    // The maximum time for Prapor to return your insurance items.\n\"TherapistMinReturn\": int,    // The minimum time for Therapist to return your insurance items.\n\"TherapistMaxReturn\": int,    // The maximum time for Therapist to return your insurance items.\n\n// ── Stack Tuning &gt; Basic Stack Changes\n\n\"BasicStackTuningEnabled\": bool,    // Enable the basic changes to ammo stack size. Cannot be used with Advanced Stack Changes — only have one enabled.\n\"StackMultiplier\": int,    // The multiplier for ammo max stack size. The vanilla stack size for all ammo will be multiplied by this number.\n\n// ── Stack Tuning &gt; Advanced Stack Changes\n\n\"AdvancedStackTuningEnabled\": bool,    // Enable the advanced changes to ammo stack size. Cannot be used with Basic Stack Changes — only have one enabled.\n\"ShotgunStack\": int,     // The total max stack size for shotgun ammo. Not a multiplier.\n\"FlaresAndUbgl\": int,    // The total max stack size for flare and UBGL ammo. Not a multiplier.\n\"SniperStack\": int,       // The total max stack size for sniper ammo. Not a multiplier.\n\"SmgStack\": int,             // The total max stack size for SMG ammo. Not a multiplier.\n\"RifleStack\": int,         // The total max stack size for rifle ammo. Not a multiplier.\n\n// ── Stack Tuning &gt; Money Stack Changes\n\n\"MoneyStackMultiplierEnabled\": bool,    // Enable the changes to money stack size.\n\"MoneyMultiplier\": int,    // The multiplier for money max stack size. The vanilla stack size will be multiplied by this number.\n\n// ── Player &gt; Weight Changes\n\n\"WeightChangesEnabled\": bool,    // Enable the weight multiplier.\n\"WeightMultiplier\": int,    // The multiplier for your total PMC weight.\n\n// ── Player &gt; Pocket Changes\n\n\"PocketChangesEnabled\": bool,    // Enable the changes to your PMC pocket size.\n\"Pocket1Vertical\": int,    // The total vertical size for your first pocket slot.\n\"Pocket1Horizontal\": int,    // The total horizontal size for your first pocket slot.\n\"Pocket2Vertical\": int,    // The total vertical size for your second pocket slot.\n\"Pocket2Horizontal\": int,    // The total horizontal size for your second pocket slot.\n\"Pocket3Vertical\": int,    // The total vertical size for your third pocket slot.\n\"Pocket3Horizontal\": int,    // The total horizontal size for your third pocket slot.\n\"Pocket4Vertical\": int,    // The total vertical size for your fourth pocket slot.\n\"Pocket4Horizontal\": int,    // The total horizontal size for your fourth pocket slot.\n</code></pre>\n<p><strong>EVENT WEIGHTING CONFIG</strong></p>\n<p>The numbers here are their relative chances to be pulled in relation to the rest of the events</p>\n<pre><code>// ── Random Raid Events &gt; In-Raid Event Weightings\n\n\"DamageEvent\": int,    // Weight for the Heart Attack random event.\n\"AirdropEvent\": int,    // Weight for the Airdrop random event.\n\"BlackoutEvent\": int,    // Weight for the Blackout random event.\n\"JokeEvent\": int,    // Weight for the Joke random event.\n\"HealEvent\": int,    // Weight for the Heal random event.\n\"ArmorEvent\": int,    // Weight for the Armor Repair random event.\n\"SkillEvent\": int,    // Weight for the Skill Point random event.\n\"MetabolismEvent\": int,    // Weight for the Metabolism random event.\n\"MalfunctionEvent\": int,    // Weight for the Malfunction random event.\n\"TraderEvent\": int,    // Weight for the Trader Reputation random event.\n\"BerserkEvent\": int,    // Weight for the Berserk random event.\n\"WeightEvent\": int,    // Weight for the Player Weight random event.\n\"MaxLLEvent\": int,    // Weight for the Max Loyalty Level random event.\n\"LockdownEvent\":int,    // Weight for the Lockdown random event.\n\"ArtilleryEvent\": int,    // Weight for the Artillery random event.\n\"InvasionEvent\": int,    // Weight for the Invasion random event.\n\"RandomEventRangeMinimum\": int,     // The minimum time into a raid before a random event can trigger.\n\"RandomEventRangeMaximum\": int,     // The maximum time into a raid before a random event can trigger.\n\n// ── Random Raid Events &gt; Unlock Event Weightings\n\n\"SwitchToggle\": int,    // Weight for the Power Switch Toggle unlock event.\n\"DoorUnlock\": int,    // Weight for the Door Unlock event.\n\"KeycardUnlock\": int,    // Weight for the Keycard Unlock event.\n\"DoorEventRangeMinimum\": int,    // The minimum time into a raid before a door unlock event can trigger.\n\"DoorEventRangeMaximum\": int    // The maximum time into a raid before a door unlock event can trigger.\n</code></pre></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Issues</div>\n<div class=\"tab-content\"><p>As a result of me going on my little hiatus I have disabled comments on my modpages.</p>\n<p>I always appreciate the support and love but I needed to take a wee break from the flood of notifications</p>\n<p>As such, all issues can be reported on my GitHub issues section for RO found here</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/KillerDJLang/RaidOverhaul-csharp/issues\" rel=\"noreferrer noopener\">Raid Overhaul Github 4.x.x</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/KillerDJLang/Raid-Overhaul/issues\" rel=\"noreferrer noopener\">Raid Overhaul Github ~3.11</a></p></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Credits</div>\n<div class=\"tab-content\"><p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/7008-kobrakon/?highlight=kobrakon\" rel=\"noreferrer noopener\">Kobrakon</a> for the original <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/876-immersive-raids/\" rel=\"noreferrer noopener\">Immersive Raids</a> mod this is based off of</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/37201-dirtbikercj/?highlight=dirtbik\" rel=\"noreferrer noopener\">CJ</a> for helping me out a ton early on and answering all sorts of dumb questions</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/32691-jehree/?highlight=jehree\" rel=\"noreferrer noopener\">Ducky</a> for the Fika wrapper code idea which helped me a ton in getting everything synced up for Fika</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/necrodream\" rel=\"noreferrer noopener\">necrodream</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/black-envelope-286bc5d673eb465a98d00a451f7260ed\" rel=\"noreferrer noopener\">model</a> I used for the special request forms</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/Qwestgamp.\" rel=\"noreferrer noopener\">Qwestgamp</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/military-container-free-0baa1161466f4b50a775c12625565104\" rel=\"noreferrer noopener\">model</a> I used for the new storage crate</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/RadioactiveAG\" rel=\"noreferrer noopener\">RadioactiveAG</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/gold-dragon-coin-001-rag-6467afed3bce4317b326159e8eecbb87\" rel=\"noreferrer noopener\">model</a> I used for the requisition coins</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/divadan\" rel=\"noreferrer noopener\">divadan</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/corrupted-metal-armor-0bfaa972710241b69de124e77cd46a5c\" rel=\"noreferrer noopener\">model</a> I used for the new legion facemask and armor</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/Rovex833\" rel=\"noreferrer noopener\">Rovex</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/lone-dragon-plate-carrier-5241973849324c2db77a77a51efe07d1\" rel=\"noreferrer noopener\">model</a> I used for the lone dragon plate carrier</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/qkuslic1\" rel=\"noreferrer noopener\">Quinn</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/oakley-kitchen-sink-backpack-model-c2440ae21b14485095ba3da4d947f1ee\" rel=\"noreferrer noopener\">model</a> I used for the new oakley backpack</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/amadions\" rel=\"noreferrer noopener\">Karnaval</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/free-armor-plate-carrier-gameready-metahuman-39d3b162b14444d487eb39186268e7a7\" rel=\"noreferrer noopener\">model</a> I used for the new rhino plate carrier</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/FoFLaFe\" rel=\"noreferrer noopener\">FoFlaFe</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/army-wallet-free-3d-model-54d38c6c8d824edf908c7c9adbb61143\" rel=\"noreferrer noopener\">model</a> I used for the army wallet</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/skysentry\" rel=\"noreferrer noopener\">Sky Sentry</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/ammo-pouch-military-f52f785634ca42009f4e5172f6faaf12\" rel=\"noreferrer noopener\">model</a> I used for the ammo pouch</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/carlosvasc670\" rel=\"noreferrer noopener\">carlosvasc670</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/sci-fi-medkit-139314307c144fb7989d713c60f7bd10\" rel=\"noreferrer noopener\">model</a> I used for the large medical carrying case</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/Maxime66410\" rel=\"noreferrer noopener\">Maxime66410</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/medkit-scp-f4556c26a80d481ea575aebd6a53de80\" rel=\"noreferrer noopener\">model</a> I used for the medium medical carrying case</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/dominikborovicka\" rel=\"noreferrer noopener\">dominikborovicka</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/dirty-red-medkit-0c37f7910746402ca5bb62899843bcd2\" rel=\"noreferrer noopener\">model</a> I used for the small medical carrying case</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.cgtrader.com/designers/plaggy\" rel=\"noreferrer noopener\">plaggy</a> for the <a target=\"_blank\" class=\"external-link\" href=\"https://www.cgtrader.com/free-3d-models/household/household-tools/keys-iron\" rel=\"noreferrer noopener\">model</a> I used for the small keytool</p>\n<p>Much love all around</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1192/raid-overhaul",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-04-10T07:37:00.000000Z",
+  "created_at": "2023-12-20T21:01:35.000000Z",
+  "updated_at": "2026-07-28T08:21:17.000000Z",
+  "owner": {
+    "id": 37025,
+    "name": "nameless♥",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/0883084a142f94ac0f0d618f89c64666f23b8eaf_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/2ab3dbb21db5a094bafddcfcdabfa1f5e2237ef8_1280w.webp",
+    "created_at": "2023-09-14T14:15:06.000000Z",
+    "updated_at": "2026-07-27T02:07:17.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 33963,
+      "name": "Cj",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/d727d6bd8dc4933bd46485123affaace57e0a5dc_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/abb3c8031fdcdc84c3d7e7624209ec44a3b48a80.jpg",
+      "created_at": "2023-07-14T19:01:21.000000Z",
+      "updated_at": "2026-08-01T17:03:48.000000Z"
+    }
+  ],
+  "license": {
+    "id": 16,
+    "hub_id": 19,
+    "name": "Creative Commons BY-NC-ND 4.0",
+    "link": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/KillerDJLang/Raid-Overhaul",
+      "label": "3.11 LTS"
+    },
+    {
+      "url": "https://github.com/KillerDJLang/RaidOverhaul-csharp",
+      "label": "4.x.x C#"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13412,
+      "hub_id": null,
+      "version": "3.0.3",
+      "description": "<p>Small hotfix</p>\n<ul>\n<li>Added achievement for killing Legion + 3 Legionnaires. More additions will be added down the road.</li>\n<li>Removed VIP keycard and Skeleton Key functionality temporarily. Could cause some weird interactions in combination with other mods and wasn’t working exactly how I wanted it to yet. Will get reworked in the future. The items themselves haven’t been removed in case someone already has them (to avoid borking profiles) but they aren’t acquirable for now.</li>\n<li>Removed some orphaned code.</li>\n</ul>\n<p>Folder layout has stayed the same so you can just overwrite the old files. Configs haven’t changed so you can skip overwriting those if you feel so inclined. Or just back them up and overwrite the new ones. Or just make the changes again. The world is your oyster.</p>\n<p>Back to the void ♥</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1192/raid-overhaul/3.0.3",
+      "content_length": 129268476,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 8811,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-11T00:43:00.000000Z",
+      "created_at": "2026-04-11T00:43:53.000000Z",
+      "updated_at": "2026-07-28T08:21:17.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255747,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309264,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13398,
+              "hub_id": null,
+              "version": "2.0.17",
+              "description": "<ul>\n<li>fixed hideout crafts service not supporting anything but arrays /bonk</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.17",
+              "content_length": 151817,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 4870,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-08T13:26:00.000000Z",
+              "created_at": "2026-04-08T13:26:58.000000Z",
+              "updated_at": "2026-07-28T08:20:36.000000Z"
+            },
+            {
+              "id": 13391,
+              "hub_id": null,
+              "version": "2.0.16",
+              "description": "<ul>\n<li>Added new helper to slothelper to add ids by name</li>\n<li>Added fix custom item sort order patch (thanks Pein! ❤ )</li>\n<li>Added new “Salvage” zones to possible quest types</li>\n<li>Added locales for the salvage zone interactions</li>\n<li>Fixed hideout crafts not supporting .jsonc /bonk</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.16",
+              "content_length": 151472,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 1465,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-07T22:15:00.000000Z",
+              "created_at": "2026-04-07T22:16:03.000000Z",
+              "updated_at": "2026-07-28T08:20:01.000000Z"
+            },
+            {
+              "id": 12977,
+              "hub_id": null,
+              "version": "2.0.15",
+              "description": "<ul>\n<li>Implemented random loot container support for customitemserviceextended</li>\n<li>Added save method to confighelper</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.15",
+              "content_length": 141736,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 49017,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-02-02T21:52:00.000000Z",
+              "created_at": "2026-02-02T21:52:47.000000Z",
+              "updated_at": "2026-07-28T07:58:57.000000Z"
+            },
+            {
+              "id": 13416,
+              "hub_id": null,
+              "version": "2.0.18",
+              "description": "<ul>\n<li>added new itemservice helper for adding items to blacklist</li>\n<li>fixed nuget package forcibly including the en.json locale for the salvage zones in your project /bonk</li>\n<li>fixed slothelper method and added support for creating new slot info</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.18",
+              "content_length": 157079,
+              "spt_version_constraint": "~4.0.2",
+              "downloads": 17220,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-11T22:24:00.000000Z",
+              "created_at": "2026-04-11T22:25:48.000000Z",
+              "updated_at": "2026-07-28T08:21:24.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82567,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12304,
+              "hub_id": null,
+              "version": "1.1.0",
+              "description": "<h1>MoreBotsAPI 1.1.0 for SPT 4.0.X, tested with latest Fika for 4.0.4 (Coop and Headless)</h1>\n<p>I have tested both Coop and Headless on the latest Fika for SPT 4.0.4 and both my faction mods alongside this API work on it. When using Fika, MAKE SURE you have the client part (BepInEx folder, plugins and patchers) of my mods installed on the host, clients, and headless. Also, make sure you update to the latest WTT Common Lib that supports Fika now.</p>\n<ul>\n<li>Added some new API server functionality.</li>\n<li>Added new server config for debug logs and increasing bot cap on all maps by an int.</li>\n<li>By default this mod now increases the bot cap on all maps for 10 to account for the new factions. If you use a spawning mod, it is best to set this new value in the new server config to 0 and let those mods change the bot cap if they do.</li>\n<li>Added new server logger that only logs debug stuff if config value is set. (Should fix the warn messges that don’t cause problems from showing)</li>\n<li>Added show bot zones as a debug option (just shows the names at the center of spawnpoints).</li>\n<li>Fixed potential client error when checking for custom WildSpawnTypes.</li>\n<li>Changed license to CC BY-NC-SA 4.0</li>\n</ul>\n<p>VT link: <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1</a></p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/1.1.0",
+              "content_length": 34650,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 39186,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-11-13T03:57:00.000000Z",
+              "created_at": "2025-11-13T03:57:24.000000Z",
+              "updated_at": "2026-07-28T06:26:36.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7804e9606da9432eb6dfec6ac2bc504b1200dde81c76ae28fcd51796a569756b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1127863171/c7e132ba-9746-495c-b3eb-fe4af09f9f61?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A16Z&rscd=attachment%3B+filename%3DRaid-Overhaul.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A53Z&ske=2026-08-01T20%3A55%3A16Z&sks=b&skv=2018-11-09&sig=wq1gnYGCR5dvz3zE4eLxI0c4T1cPlabDdsCbWdX2r%2Bg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxODcyNSwibmJmIjoxNzg1NjE1MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cHbAPmRmUuYzatFr7tCgmeLaJt1_hKHITWutQlizNoc&response-content-disposition=attachment%3B%20filename%3DRaid-Overhaul.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13409,
+      "hub_id": null,
+      "version": "3.0.2",
+      "description": "<p>ADDITIONS</p>\n<ul>\n<li>Added in new legionnaire bot type that should spawn with and follow legion as his guards.</li>\n<li>Added legion/legionnaire support for SAIN. They should now be added to the presets/configs properly and not break everything. Will probably add custom layers to them in the future but idc enough to do it right now. They work perfectly well with the normal layers. You can tweak them in SAINs bot tab and they will 100% destroy you lol</li>\n<li>Finished full invasion event implementation. Only allowed to run once per raid (you can modify the weightings in the server config and disable it in the BepInEx menu if you’re so inclined). The event spawns in a random boss with their guards to make things a little more hectic. It doesn’t modify waves so it won’t conflict with spawn mods since it hooks right into the bot spawner and force spawns the boss + guards. This does however add the bots even if it goes over your bot cap. That can slow down waves since you’ll need to drop back below the cap for them to continue spawning or add to your performance overhead with the additional bots. (Most noticeable with Kaban since it’s him plus 6 guards lol)</li>\n</ul>\n<p>CHANGELOG</p>\n<ul>\n<li>Changed config app to WPF instead of Winforms. Should be easier to maintain than the old format (winforms pissed me off to no end. I hate winforms….) and runs smoother.</li>\n<li>Update bots and items to load from MoreBotsAPI and WTT-CommonLib respectively. Easier to maintain and allows me to expand features more easily without reworking tons of systems. Also much less for me to maintain so I don’t need to dread updates as much in the future.</li>\n<li>Adjusted weight for currencies to be 0 and properly added them to the money handbook category. No more 90kg stacks of coins lol. Especially if you’re bringing stuff in raid for the exfil UI system.</li>\n<li>Increased trader grid size to compensate for the amount of items that can be added since it now loads later in postDb. Should catch presets and items from other mods that load before it. (PostDb +10)</li>\n<li>Some fixes to Legion loadouts/config. You’ll see overlap with Legionnaire names since I just threw in the phonetic alphabet but loadouts should be plenty varied. Legion still has his normal loadout with just a bit more variety for his non custom items and lots of additions to his actual loot gen pool.</li>\n<li>Fixed slow load issue that I was chasing my tail over (apparently raid times were changed to minutes from seconds and I missed it lol. Trying to make raid times 999 * 60 really fucks with loading times). Exfils should stay open properly during especially long raids.</li>\n<li>Fixed issues with legion and season progression not tracking properly. Also fixed weird edge case with legion chance going past 100 and getting wonky (spoiler alert, I forgor the if block)</li>\n<li>Switched grid layout for rhino.</li>\n<li>Tweaked how stock randomization works for the req shop. Should now only randomize on restock as opposed to attempting it anytime the trader api was called.</li>\n<li>Fixed some bugs with the exfil UI. SHOULD (?) now properly open/close for everyone? Idk, I never ran into the issue and couldn’t reproduce it but I tried to make it a little more ironclad. Also fixed the special req forms being consumed on opening the transfer menu as opposed to when actually transferring the items. Should now only use them when you’ve selected the items to send and actually hit the transfer items button. No more wasting tons of money to get the form and it getting eaten before you can do anything.</li>\n<li>Fixed some small bugs with other events and some minor optimizations.</li>\n<li>Theres probably more stuff I’m forgetting but this was essentially another full rewrite after the last full rewrite I did so they got overshadowed by the bigger stuff and lost between my dev builds.</li>\n</ul>\n<p>FOLDER LAYOUTS CHANGED!!! If you still have a previous version installed you’ll need to remove the old version completely before installing this version.</p>\n<ul>\n<li>Just check the uninstall tab here and make sure you’ve removed the server side and both client side parts of this mod.</li>\n</ul>\n<p>Now back to the void………………………………….. ♥</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1192/raid-overhaul/3.0.2",
+      "content_length": 128994624,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 362,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-10T12:25:00.000000Z",
+      "created_at": "2026-04-10T12:25:11.000000Z",
+      "updated_at": "2026-07-28T08:21:03.000000Z",
+      "dependencies": [
+        {
+          "id": 1426,
+          "hub_id": 1976,
+          "guid": "com.arys.unitytoolkit",
+          "name": "UnityToolkit",
+          "slug": "unitytoolkit",
+          "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+          "thumbnail": "",
+          "downloads": 255747,
+          "favourites_count": 132,
+          "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2024-05-20T21:40:00.000000Z",
+          "created_at": "2024-05-20T21:40:32.000000Z",
+          "updated_at": "2026-07-28T06:08:57.000000Z",
+          "owner": {
+            "id": 13652,
+            "name": "Arys",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+            "created_at": "2022-01-18T19:35:58.000000Z",
+            "updated_at": "2026-08-01T15:51:41.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12026,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+              "content_length": 500753,
+              "spt_version_constraint": ">=4.0.0",
+              "downloads": 47062,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-10-25T20:46:00.000000Z",
+              "created_at": "2025-10-25T20:48:51.000000Z",
+              "updated_at": "2026-07-28T06:08:57.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309264,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13398,
+              "hub_id": null,
+              "version": "2.0.17",
+              "description": "<ul>\n<li>fixed hideout crafts service not supporting anything but arrays /bonk</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.17",
+              "content_length": 151817,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 4870,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-08T13:26:00.000000Z",
+              "created_at": "2026-04-08T13:26:58.000000Z",
+              "updated_at": "2026-07-28T08:20:36.000000Z"
+            },
+            {
+              "id": 13391,
+              "hub_id": null,
+              "version": "2.0.16",
+              "description": "<ul>\n<li>Added new helper to slothelper to add ids by name</li>\n<li>Added fix custom item sort order patch (thanks Pein! ❤ )</li>\n<li>Added new “Salvage” zones to possible quest types</li>\n<li>Added locales for the salvage zone interactions</li>\n<li>Fixed hideout crafts not supporting .jsonc /bonk</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.16",
+              "content_length": 151472,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 1465,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-07T22:15:00.000000Z",
+              "created_at": "2026-04-07T22:16:03.000000Z",
+              "updated_at": "2026-07-28T08:20:01.000000Z"
+            },
+            {
+              "id": 12977,
+              "hub_id": null,
+              "version": "2.0.15",
+              "description": "<ul>\n<li>Implemented random loot container support for customitemserviceextended</li>\n<li>Added save method to confighelper</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.15",
+              "content_length": 141736,
+              "spt_version_constraint": "~4.0.1",
+              "downloads": 49017,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-02-02T21:52:00.000000Z",
+              "created_at": "2026-02-02T21:52:47.000000Z",
+              "updated_at": "2026-07-28T07:58:57.000000Z"
+            },
+            {
+              "id": 13416,
+              "hub_id": null,
+              "version": "2.0.18",
+              "description": "<ul>\n<li>added new itemservice helper for adding items to blacklist</li>\n<li>fixed nuget package forcibly including the en.json locale for the salvage zones in your project /bonk</li>\n<li>fixed slothelper method and added support for creating new slot info</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.18",
+              "content_length": 157079,
+              "spt_version_constraint": "~4.0.2",
+              "downloads": 17220,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-11T22:24:00.000000Z",
+              "created_at": "2026-04-11T22:25:48.000000Z",
+              "updated_at": "2026-07-28T08:21:24.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82567,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12304,
+              "hub_id": null,
+              "version": "1.1.0",
+              "description": "<h1>MoreBotsAPI 1.1.0 for SPT 4.0.X, tested with latest Fika for 4.0.4 (Coop and Headless)</h1>\n<p>I have tested both Coop and Headless on the latest Fika for SPT 4.0.4 and both my faction mods alongside this API work on it. When using Fika, MAKE SURE you have the client part (BepInEx folder, plugins and patchers) of my mods installed on the host, clients, and headless. Also, make sure you update to the latest WTT Common Lib that supports Fika now.</p>\n<ul>\n<li>Added some new API server functionality.</li>\n<li>Added new server config for debug logs and increasing bot cap on all maps by an int.</li>\n<li>By default this mod now increases the bot cap on all maps for 10 to account for the new factions. If you use a spawning mod, it is best to set this new value in the new server config to 0 and let those mods change the bot cap if they do.</li>\n<li>Added new server logger that only logs debug stuff if config value is set. (Should fix the warn messges that don’t cause problems from showing)</li>\n<li>Added show bot zones as a debug option (just shows the names at the center of spawnpoints).</li>\n<li>Fixed potential client error when checking for custom WildSpawnTypes.</li>\n<li>Changed license to CC BY-NC-SA 4.0</li>\n</ul>\n<p>VT link: <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1</a></p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/1.1.0",
+              "content_length": 34650,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 39186,
+              "fika_compatibility": "compatible",
+              "published_at": "2025-11-13T03:57:00.000000Z",
+              "created_at": "2025-11-13T03:57:24.000000Z",
+              "updated_at": "2026-07-28T06:26:36.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a1c6b633917a3ad9d60aa9440622041d6944296dabfab391d0ddb6bcfeee0901?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1127863171/03a3571f-a41c-4888-a128-b9c1b7ef3923?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A57Z&rscd=attachment%3B+filename%3DRaid-Overhaul.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A04Z&ske=2026-08-01T21%3A08%3A57Z&sks=b&skv=2018-11-09&sig=pbeSDoqFgKFgpCFEBRdpwMnBAEfqpmfxanIl5o8VUIQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxODcyNSwibmJmIjoxNzg1NjE1MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cHbAPmRmUuYzatFr7tCgmeLaJt1_hKHITWutQlizNoc&response-content-disposition=attachment%3B%20filename%3DRaid-Overhaul.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 737,
+      "hub_id": 14085,
+      "version": "2.7.1",
+      "description": "<p><strong>LTS Build 1</strong></p>\n<ul>\n<li>Should have restored compatibility with Fika? Needs more testing but I haven’t had any issues.</li>\n<li>Fixed exfil lockdown event not actually locking the zones.</li>\n<li>Restored time changes. Defaults to enabled but can be changed in the f12 menu. (Not tested across fika instances, will probably be wonky if you’re in different timezones since I’m not doing any syncing for it but I wanted to push this before I disappear again)</li>\n<li>Fixed legion bugs. Mostly related to rig layouts being borked.</li>\n<li>Added new bundles for the rhino, legion armor and legion facemask. Also replaced the custom nice comm backpack with a new oakley backpack and the armless osprey with a new rig. Easier for me to remake them with new assets than keep updating the old ones.</li>\n<li>Added in a new smaller version of the keytool and an upgraded army wallet.</li>\n<li>Fixed custom key and keycard not working. Used a similar implementation to Boogles skeleton key since I don’t have the time or energy to do this all from scratch so all credit should go their way</li>\n<li>Corrected the casing in import paths for consistency courtesy of forcedroidbrain. Should resolve any errors related to botInfo.json pathing.</li>\n<li>Maybe some other shit, I can’t remember. This has been in the oven for a while lol</li>\n</ul>\n<p>Due to the large amount of bugs in and around 3.11.3 + the urge to experiment with more bundles I came back to finish this update. However, I’m still going to be on an indefinite hiatus so don’t expect any releases/updates for quite a while. Feel free to put in pr’s on my github if you find anything broken but I probably won’t be getting to it in a timely manner lol. I really appreciate all the support nonetheless</p>\n<p>That’s all for now, enjoy</p>\n<p>Back to the void</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1192/raid-overhaul/2.7.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 20840,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-24T15:36:23.000000Z",
+      "created_at": "2025-04-24T15:36:23.000000Z",
+      "updated_at": "2026-05-14T01:56:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/115c167e762d62247cd1c3be1770ab8ca0f4379f458c9a207f061ae017e8d4b5/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/728145014/11fa3e2f-a301-40a5-a0d5-ac873fce3291?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A51Z&rscd=attachment%3B+filename%3DRaidOverhaul.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A15Z&ske=2026-08-01T21%3A08%3A51Z&sks=b&skv=2018-11-09&sig=aWTX%2FKZC8qRv3jOBSbn1rYPsQ%2B5G4eNwnaRLQLeib3k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjkyNSwibmJmIjoxNzg1NjE1MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.A3o8uD4XmFRGXwgYiee63So0tC1D1xfNmdiQqGyO188&response-content-disposition=attachment%3B%20filename%3DRaidOverhaul.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 74,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:51:26.584Z",
+    "discoveredBy": "seed"
+  }
+}

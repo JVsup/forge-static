@@ -1,0 +1,271 @@
+{
+  "type": "mod",
+  "id": 1173,
+  "hub_id": 1643,
+  "guid": "li.barlog.unda",
+  "name": "Unda",
+  "slug": "unda",
+  "teaser": "Another bots wave generator",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1643.jpeg",
+  "downloads": 22882,
+  "favourites_count": 11,
+  "description": "<p>This is another bot waves generator mod.</p>\n<p>Inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1002-betterspawnsplus/\" rel=\"noreferrer noopener\">BetterSpawnsPlus</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1059-moar-bots-spawning-difficulty/\" rel=\"noreferrer noopener\">MOAR</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/878-swag-donuts-dynamic-spawn-waves-and-custom-spawn-points/\" rel=\"noreferrer noopener\">SWAG + Donuts</a>.</p>\n<p>Any of this mods can do more and do it better.</p>\n<p>This mod is meant to be as simple as possible.</p>\n<p>If you happy with big spawn mods don’t use this one. I made it mostly for myself to keep game as close as possible to vanila SPT-AKI and fix issue when PMC spawns among Scavs and immidently kill each other.</p>\n<p>This mod realize only one algorithm for spawns with minimal settings.</p>\n<p>For PMC</p>\n<p>Amount of PMC is <strong>locationData.base.MinPlayers</strong>. Splits by random size groups from 1 to <strong>config.maxPmcGroupSize</strong>. PMC spawns as a bosses in beginnig of raid (game spawn them in first 60 seconds).\nGame spawns PMC at real PMC spawns points.</p>\n<p>For Scavs</p>\n<p>Maximum amount of regular scavs on a map (locationData.base.BotMax - amount of marksman scavs) split by random size groups from 0 to <code>config.maxScavGroupSize</code> randomly spreaded by spawn zones.</p>\n<p>Scavs spawns in 3 general waves:</p>\n<ul>\n<li>normal difficulty between 60 seconds and +120 seconds.</li>\n<li>normal difficulty between <code>raidLength / 4</code> and +120 seconds.</li>\n<li>hard difficulty between <code>raidLength / 2</code> and +120 seconds.</li>\n</ul>\n<p><strong>PMC and Scavs waves and groups generate after each raid from scratch.</strong></p>\n<p>Since PMC bots count as bots in game, mod increases MaxBots value for most maps by random value between <code>MinPlayers / 2</code> and <code>MinPlayers + 1</code>.</p>\n<p><strong>ChanceForQuietRaid</strong> option changes percent when MaxBots value for map does not increase.</p>\n<p>For small maps like Factory, Laboratory and Reserve by random value between <code>MaxPlayers / 2</code> and <code>MaxPlayers - 1</code>.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1173/unda",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2025-10-13T20:28:00.000000Z",
+  "created_at": "2023-11-30T05:57:28.000000Z",
+  "updated_at": "2026-07-28T09:03:38.000000Z",
+  "owner": {
+    "id": 34614,
+    "name": "Barlog_M",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/728735d6623562a97ccfe0f0a06dd4c208c1ae58_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-07-29T15:20:32.000000Z",
+    "updated_at": "2026-07-10T04:50:40.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/barlog-m/spt-unda",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13667,
+      "hub_id": null,
+      "version": "3.1.0",
+      "description": "<ol>\n<li>Scav distribution algorithms are back and fixed</li>\n<li>Config option ‘ChanceForQuietRaid’</li>\n<li>Sniper scavs spawn almost every time</li>\n<li>Removed PMCs from Labyrinth</li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/3.1.0",
+      "content_length": 16133,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 2027,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-05-31T15:01:00.000000Z",
+      "created_at": "2026-05-31T14:43:44.000000Z",
+      "updated_at": "2026-07-28T09:03:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/0bf977551738cf7aa84524cae57644faf0fb93bc8d4119cc293b263dbbfb1c7e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/a48591fc-83ee-4c0b-9b18-a281b472b27c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A47%3A42Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A46%3A50Z&ske=2026-08-01T20%3A47%3A42Z&sks=b&skv=2018-11-09&sig=3tAO8NUiY4IdeuCLq%2FRXKS9ozXcf1oZ6bJU5lfT7UEw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12460,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<p>Mod only makes PMC spawns at the beginning of the raid and not respawn after death. And do nothing with scavs waves.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/3.0.0",
+      "content_length": 12931,
+      "spt_version_constraint": "~4.0",
+      "downloads": 5152,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-11-28T07:08:00.000000Z",
+      "created_at": "2025-11-28T07:08:10.000000Z",
+      "updated_at": "2026-07-28T06:58:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-717210d55cbba2396b345bd9336a64f47a89d03fc757b618e7a6436d0b0769cf-138e6449",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/a384086c-b54f-4abc-8c6b-67cf49cda002?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A45Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A28Z&ske=2026-08-01T21%3A01%3A45Z&sks=b&skv=2018-11-09&sig=WKzPGR2DcPnDBLsNnK5bkFQnlnKOFWkXmnngfsvqwY0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12400,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<p>Remove scavs from Labyrinth</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/2.0.2",
+      "content_length": 15972,
+      "spt_version_constraint": "~4.0",
+      "downloads": 541,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-22T13:27:00.000000Z",
+      "created_at": "2025-11-22T13:27:56.000000Z",
+      "updated_at": "2026-07-28T06:44:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-ffc91e31bf9f30b80298b464a979d51490f054a4ff60e7ac5df4ee407f0b0873-cce8da52",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/5e604fb2-04dc-4492-a721-5eb8dfe5fedc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A33Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A00Z&ske=2026-08-01T21%3A07%3A33Z&sks=b&skv=2018-11-09&sig=L2%2B1EfpkFUOdRaed50OHc2DXx%2F6gSkeCSNmhPyh9cT0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12082,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<p>Fix PMC bots does not spawn in some locations on some maps</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/2.0.1",
+      "content_length": 15939,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1329,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-30T05:00:00.000000Z",
+      "created_at": "2025-10-30T05:00:33.000000Z",
+      "updated_at": "2026-07-28T06:11:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/9a0739955bbe3447ad4f7789fa7a61b33dc31348072d39699e9d92e506f94e43",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/3bb766fa-319e-452a-b094-a3ee246c5277?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A03Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A48%3A23Z&ske=2026-08-01T20%3A49%3A03Z&sks=b&skv=2018-11-09&sig=IJUgLs100UXtrvna0a1N%2BXp8JWkwo4eI9KRbYa1z0KE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11834,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>SPTarkov 4.0 support</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/2.0.0",
+      "content_length": 15938,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2372,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T20:30:00.000000Z",
+      "created_at": "2025-10-13T20:30:59.000000Z",
+      "updated_at": "2026-07-28T06:03:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/40f0e436e93414615af7cfd6c559726a7c8d1a679313f1bf3d6f782809561d97?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/4131cd6c-8444-4b26-8e04-82356ae60b9f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A22Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A17Z&ske=2026-08-01T20%3A50%3A22Z&sks=b&skv=2018-11-09&sig=cbqrjYeK%2Bx3Dq2H3K%2FLEeNh1vbR4DdCsB460Ixes1js%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 813,
+      "hub_id": 13994,
+      "version": "1.5.2",
+      "description": "<p>Fixed sniper scavs spawn on Streets</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/1.5.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3390,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-11T23:52:15.000000Z",
+      "created_at": "2025-04-11T23:52:15.000000Z",
+      "updated_at": "2026-05-14T01:58:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/75d5cc49-9d24-4097-8fa0-772353491b94?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A33Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A37Z&ske=2026-08-01T20%3A55%3A33Z&sks=b&skv=2018-11-09&sig=78zik5DKAmthTLlkqg18XAiJHZctcIK9s%2FF%2FpECTyzY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMywibmJmIjoxNzg1NjE1MTEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-NNUZ-Z2nFcb7tM7WKP0uF02w9hFFnteJSUrzxSaWkg&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1154,
+      "hub_id": 13623,
+      "version": "1.4.0",
+      "description": "<p>SP-Tarkov 3.11 support</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 311,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T19:55:39.000000Z",
+      "created_at": "2025-03-16T19:55:39.000000Z",
+      "updated_at": "2026-05-14T02:06:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/96151c09-6a27-4b07-9861-3df87a6fab61?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A06Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A08Z&ske=2026-08-01T20%3A55%3A06Z&sks=b&skv=2018-11-09&sig=LVLmK93FjiYPGuN%2Bpthu1QdIAk7IIAupUevk3WTucSQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxNSwibmJmIjoxNzg1NjE1MTE1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VzueiLCQqEgewToizafN4_Vuf48bWjqWEoizTd7uwaA&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3576,
+      "hub_id": 10709,
+      "version": "1.2.0",
+      "description": "<ul>\n<li>SPT 3.9.0 support</li>\n<li>Removed changes for total bots amount</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 790,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-10T17:33:52.000000Z",
+      "created_at": "2024-07-10T17:33:52.000000Z",
+      "updated_at": "2026-05-14T03:53:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/b1dc892d-faf3-4ae9-b54d-af3508efbb71?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A59Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A25Z&ske=2026-08-01T20%3A55%3A59Z&sks=b&skv=2018-11-09&sig=RRTWoooS5V6lCbBZBIvELEx0k9%2B2TUkAYvdVB5vLq7k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQyMiwibmJmIjoxNzg1NjE1MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DG9JuWakdh5_-0u4HnrdV9G2CnMCKCAPMIgqUFzkb6A&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4932,
+      "hub_id": 9063,
+      "version": "1.1.0",
+      "description": "<p>Support for SPT-AKI 3.8.0</p>\n<p>New option streetsQuietRaids</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1173/unda/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 1076,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-02T02:05:15.000000Z",
+      "created_at": "2024-04-02T02:05:15.000000Z",
+      "updated_at": "2026-05-14T04:20:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/724407825/ec634991-2b50-4cf5-acc4-1a535351a953?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A04Z&rscd=attachment%3B+filename%3DBarlogM-Unda.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A54Z&ske=2026-08-01T21%3A00%3A04Z&sks=b&skv=2018-11-09&sig=qcJxJYXD9ZJ5E5d3i%2BTln4%2B4Is4XwKMxZx2vf26igKM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQyMiwibmJmIjoxNzg1NjE1MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DG9JuWakdh5_-0u4HnrdV9G2CnMCKCAPMIgqUFzkb6A&response-content-disposition=attachment%3B%20filename%3DBarlogM-Unda.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 11,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:19.150Z",
+    "discoveredBy": "seed"
+  }
+}

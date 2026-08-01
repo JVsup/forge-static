@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2589,
+  "hub_id": null,
+  "guid": "de.tosox.magretentionreload",
+  "name": "Mag Retention Reload",
+  "slug": "mag-retention-reload",
+  "teaser": "No more feeding the floor with magazines! This simple mod makes every reload a proper mag-retention reload.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/A1QV32OOejU2SrtWijVASx6BLNViQ41s4VP47bu1.png",
+  "downloads": 1033,
+  "favourites_count": 5,
+  "description": "<blockquote>\n<h6>A similar mag retention feature is already part of ‘UI Fixes’ by Tyfon.</h6>\n<h6>I originally started working on this mod without knowing that it existed there and by the time I found out, my version was already mostly finished.</h6>\n<h6>This mod keeps the behavior simple and does not add any reload time penalties which may be preferable depending on your setup.</h6>\n</blockquote>\n<blockquote>\n<h5>⚠️ For this mod to take effect properly, turn off ‘Reload Magazines In-Place’ in UI Fixes ⚠️</h5>\n</blockquote>\n<h2>📜 Description</h2>\n<p><strong>Mag Retention Reload</strong> is a mod for <em>Single Player Tarkov</em> that adds proper magazine retention to weapon reloads by automatically stowing the old magazine back into the rig if possible instead of dropping it.</p>\n<hr />\n<h2>✨ Features</h2>\n<ul>\n<li>Swaps the old magazine into the slot the new magazine was taken from</li>\n<li>Prevents unnecessary magazine drops during normal reloads if the magazine fits in the rig</li>\n<li>Works with both the reload hotkey and the inventory context menu</li>\n</ul>\n<hr />\n<h2>📁 Installation</h2>\n<ul>\n<li>Download the latest release</li>\n<li>Copy the <code>BepInEx</code> folder into your SPT folder</li>\n<li>Start the game</li>\n</ul>\n<hr />\n<h2>🤝 Fika</h2>\n<p>When playing with <strong>Fika</strong>, every client in the raid, <strong>including the headless client</strong>, should run this mod, otherwise you will run into syncing issues.\nEach client applies the retention itself while mirroring the other players’ reloads. A client without the mod disagrees about where the old magazine ended up, which leaves magazines that look like they are lying on the ground but cannot be picked up.</p>\n<p>Hosts can enforce this by adding the plugin GUID to <code>client.mods.required</code> in the Fika server config, so mismatched clients are rejected when joining instead of silently desyncing:</p>\n<pre><code>\"required\": [ \"de.tosox.magretentionreload\" ]\n</code></pre>\n<hr />\n<h2>📷 Preview</h2>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/Tosox/SPT-MagRetentionReload/blob/master/readme-res/reload.gif?raw=true\" alt=\"\" /></p>\n<hr />\n<h2>🙏 Acknowledgements</h2>\n<p>Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Lacyway\" rel=\"noreferrer noopener\"><strong>Lacyway</strong></a> for putting up with all my questions</p>\n<hr />\n<h2>📄 License</h2>\n<p>Distributed under the MIT License. See <code>LICENSE</code> for more information.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2589/mag-retention-reload",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 13,
+  "published_at": "2026-07-31T15:38:00.000000Z",
+  "created_at": "2026-02-13T16:18:32.000000Z",
+  "updated_at": "2026-08-01T16:50:26.000000Z",
+  "owner": {
+    "id": 79394,
+    "name": "Tosox",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/tAww2g8u6oEwIXCe2oIEv40ZD1KOqdY5JV03LVbl_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-05-24T17:22:53.000000Z",
+    "updated_at": "2026-08-01T19:11:18.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 13,
+    "hub_id": 76,
+    "title": "Weapons",
+    "slug": "weapons",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Tosox/SPT-MagRetentionReload",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14309,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<ul>\n<li>Fixed compatibility with FIKA</li>\n<li>Fixed losing insurance on gear due to de-syncs</li>\n<li>Fixed mag-retention reloads when triggered via the context menu</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2589/mag-retention-reload/1.1.0",
+      "content_length": 5030,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 308,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-31T15:12:00.000000Z",
+      "created_at": "2026-07-31T15:13:36.000000Z",
+      "updated_at": "2026-08-01T16:50:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4a4b01db5e600c2a08ddee4425f95a69cb4927adf6437c6691ebb4e3abeedd4b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144494827/c44eea7a-c0dc-4a3c-a3ef-7e185f308a60?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A38Z&rscd=attachment%3B+filename%3DTosox.MagRetentionReload-v1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A44Z&ske=2026-08-01T20%3A58%3A38Z&sks=b&skv=2018-11-09&sig=eH35xaxSJHh%2BlFBplcZcw8%2BarVRwm8ExCbpDxX3EMO4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&response-content-disposition=attachment%3B%20filename%3DTosox.MagRetentionReload-v1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13066,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<ul>\n<li>Initial release</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2589/mag-retention-reload/1.0.0",
+      "content_length": 4912,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 725,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-02-13T17:16:00.000000Z",
+      "created_at": "2026-02-13T17:16:06.000000Z",
+      "updated_at": "2026-08-01T16:50:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e433eac550f59a7d34d7a6d741783c53f81e93e36572acb811e4e6fc834ff895",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144494827/e0300354-f72c-4ce4-b675-341d11f05448?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A02Z&rscd=attachment%3B+filename%3DTosox.MagRetentionReload-v1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A54Z&ske=2026-08-01T21%3A10%3A02Z&sks=b&skv=2018-11-09&sig=A4P3WoDWGFMrejiUj3PUWibZX%2FBYrmiee4cs9JzCZzE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&response-content-disposition=attachment%3B%20filename%3DTosox.MagRetentionReload-v1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 7,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:08.985Z",
+    "discoveredBy": "seed"
+  }
+}

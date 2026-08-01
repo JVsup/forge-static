@@ -1,0 +1,442 @@
+{
+  "type": "mod",
+  "id": 2567,
+  "hub_id": null,
+  "guid": "com.matsix.cloudsix",
+  "name": "CloudSix - Volumetric Clouds",
+  "slug": "cloudsix-volumetric-clouds",
+  "teaser": "Replaces Tarkov's clouds with volumetric clouds using a custom shader built from the ground up",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/mHtUoteF4VJBkBLxcWOFpUF6eKUGLBUEonqEkrSC.png",
+  "downloads": 15010,
+  "favourites_count": 39,
+  "description": "<p><strong>CloudSix</strong></p>\n<p>This is a total replacement of Tarkov’s built in clouds.</p>\n<p>Support my work on Ko-fi: <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/matsix\" rel=\"noreferrer noopener\">https://ko-fi.com/matsix</a></p>\n<p>After over analyzing my clouds in VR, I wrote a custom over engineered volumetric cloud shader that works in VR and flatscreen.</p>\n<p>These clouds wouldn’t have been possible without the paper from Guerrilla Games on how they did the clouds in Horizon Zero Dawn - <a target=\"_blank\" class=\"external-link\" href=\"https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn\" rel=\"noreferrer noopener\">https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn</a></p>\n<p>My main focus with these clouds was keeping them visually stable and very optimized because I wanted them to work well in VR too. They could still use some improving, a lot of improving can be done just with the values I locked behind in advanced settings. You can also increase the primary steps/light steps higher by going into advanced. By default, this runs at half res, 64 primary steps on clouds and 6 light steps. I don’t believe there’s a big performance impact here unless you’re on older hardware.</p>\n<p><strong>Features:</strong></p>\n<ul>\n<li>Weather affects density</li>\n<li>Wind affects cloud speed</li>\n<li>Physically based volumetrics aware of sun/moon position</li>\n<li>Procedural coloring based on Tarkov’s atmospherics</li>\n<li>Well optimized - it performs well in VR also</li>\n<li>Ground shadows based on cloud position</li>\n</ul>\n<p>Pictures:\n<a target=\"_blank\" class=\"external-link\" href=\"https://imgur.com/a/Z1Nh2P1\" rel=\"noreferrer noopener\">https://imgur.com/a/Z1Nh2P1</a></p>\n<div class=\"youtube-lite\" data-video-id=\"9V9tFikvMuY\" data-embed-url=\"https://www.youtube-nocookie.com/embed/9V9tFikvMuY?autoplay=1\"><img src=\"https://i.ytimg.com/vi/9V9tFikvMuY/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2567/cloudsix-volumetric-clouds",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-03-29T04:11:00.000000Z",
+  "created_at": "2026-01-29T06:35:10.000000Z",
+  "updated_at": "2026-07-28T08:32:11.000000Z",
+  "owner": {
+    "id": 62969,
+    "name": "matsix",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=m&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-09-01T23:20:29.000000Z",
+    "updated_at": "2026-08-01T17:37:38.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/matsixx/CloudSix",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13549,
+      "hub_id": null,
+      "version": "3.0.5",
+      "description": "<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Fixed an issue with eye adaptation being disabled causing the scene to be overly dark sometimes</li>\n<li>Added an option in f12 for manual exposure control when eye adaption is disabled</li>\n<li>Eye adaptation can now be enabled/disabled mid-raid</li>\n<li>Adjusted default terrain shadow density</li>\n<li>Added an option in f12 for manual control of shadow density</li>\n<li>Adjusted how ambient coloring works, should be less blue during day and darker at night</li>\n<li>Fixed an issue with cloud wind direction not actually being random at the start of each raid, it should work properly now</li>\n<li>Fixed an issue where during high cloud coverage, the top of some clouds would appear too dark</li>\n<li>Adjusted a few default shader values</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.5",
+      "content_length": 7062447,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 6490,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-06T03:55:00.000000Z",
+      "created_at": "2026-05-06T03:57:23.000000Z",
+      "updated_at": "2026-07-28T08:32:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5369ed8e934f6fe29b00d13f5137a2109a6e9d8916af6f7f10a4cb07de9e05ea?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/2be3424d-2462-49f7-ba43-ab94a006b90c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A01Z&rscd=attachment%3B+filename%3DCloudSix-3.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A15Z&ske=2026-08-01T21%3A23%3A01Z&sks=b&skv=2018-11-09&sig=XRTyaqVugXbbxhE5bWkPYQ3kzug615dIek7GyDUzREc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13537,
+      "hub_id": null,
+      "version": "3.0.4",
+      "description": "<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Improved cloud terrain shadow intensity, you should always get a shadow now when the sun is behind a cloud (the shadow intensity will be based on the density of the part of the cloud the sun is behind)</li>\n<li>Fixed an issue where the shadows being casted by the clouds were reversed, i.e. if the sun was behind a cloud in front of you on the right of the screen, you would get a shadow on the left rather than on the right</li>\n<li>Adjusted some shader values to improve the look of the clouds (reminder you can adjust pretty much everything I do if you enable the advanced bepinex settings)</li>\n<li>Adjusted default wind values, clouds should move a bit faster now</li>\n<li>Added settings to adjust the min and max wind speed. Max speed is when tarkov’s wind is at its strongest, min obviously when it’s at its lowest. Tarkov’s wind changes dynamically. So, keep in mind, if you make the gap between these speeds too small/big you may have some strange side effects</li>\n<li>Various performance optimizations to the shader that may or may not help to keep your GPU from melting</li>\n</ul>\n<p><strong>WARNING: Updates to this mod will always reset your config for it due to changes to the shader and other things requiring config values to be adjusted.</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.4",
+      "content_length": 7061300,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 704,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-02T19:54:00.000000Z",
+      "created_at": "2026-05-02T19:56:52.000000Z",
+      "updated_at": "2026-07-28T08:32:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f3c182aa47faf9cf769eb99af4daa276c9871a71535be00066e91bb4158b30ef?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/43a299f9-b9d0-4b3b-8fdc-d3f4136a8c83?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A00Z&rscd=attachment%3B+filename%3DCloudSix-3.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A23Z&ske=2026-08-01T21%3A24%3A00Z&sks=b&skv=2018-11-09&sig=qav9%2Fq75xyPxdeGAEHYhVkWDQVONLcbcrMFgMsZO0C4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13510,
+      "hub_id": null,
+      "version": "3.0.3",
+      "description": "<p><strong>Hotfix Changelog:</strong></p>\n<ul>\n<li>… forgot to update plugin version… sorry lol</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.3",
+      "content_length": 7062202,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 665,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-28T22:17:00.000000Z",
+      "created_at": "2026-04-28T22:18:42.000000Z",
+      "updated_at": "2026-07-28T08:26:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ODBlOTE4MGMzMjliZDExYmFhZDE0OWY1NjgyNTNmMTU6MTc3NzQxNDY4NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/8afc98ff-67c9-4258-ba45-51588e69cab6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A37Z&rscd=attachment%3B+filename%3DCloudSix-3.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A48Z&ske=2026-08-01T20%3A59%3A37Z&sks=b&skv=2018-11-09&sig=csrnn%2FljYQM9NHLBzpVY4sTtoheAbaK4W2WXA7%2FaYDA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13509,
+      "hub_id": null,
+      "version": "3.0.2",
+      "description": "<p><strong>Hotfix Changelog:</strong></p>\n<ul>\n<li>Fixes cloud brightness during high coverage at night</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.2",
+      "content_length": 7062205,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 50,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-28T20:55:00.000000Z",
+      "created_at": "2026-04-28T20:55:56.000000Z",
+      "updated_at": "2026-07-28T08:25:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/3c8fb65ec9f9a19e55e22b3123c3cc24f9202b16add40e6f3dcc1daf24182743?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/0581f1df-c82b-400e-a38a-fd110c2486c9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A10Z&rscd=attachment%3B+filename%3DCloudSix-3.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A55Z&ske=2026-08-01T20%3A58%3A10Z&sks=b&skv=2018-11-09&sig=%2FikOKkdCU9CyStCd9Fqx3ZRPw2ifyvvrZm5wPt67U2U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13507,
+      "hub_id": null,
+      "version": "3.0.1",
+      "description": "<p><strong>Hotfix Changelog:</strong></p>\n<ul>\n<li>Eye adaptation being disabled should now work in all situations (it was still happening when going in/out of some buildings)</li>\n<li>Fixed cloud terrain shadows not appearing right at start of the raid (it may still take a few seconds to initiate but it shouldn’t take upwards of 1-2 minutes anymore)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.1",
+      "content_length": 7062191,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 79,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-28T18:51:00.000000Z",
+      "created_at": "2026-04-28T18:52:23.000000Z",
+      "updated_at": "2026-07-28T08:25:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2378e7e855ea7cf0a087146469c132494d281eba52d8b4c12d664946c0ce11c7?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/594a10f6-04a3-4fde-89b6-4931a0f41c2b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A26Z&rscd=attachment%3B+filename%3DCloudSix-3.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A19Z&ske=2026-08-01T21%3A15%3A26Z&sks=b&skv=2018-11-09&sig=aVMV6wp52ksWnbdT34RADae7BoDr2Kj2vNErMYUMM8E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13498,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<p><strong>NOTE:</strong> Pictures in the imgur link in description have been updated to show the latest clouds</p>\n<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Rewrote the shader pretty much from the ground up again</li>\n<li>New and improved lighting on all aspects - ambient scattering, cloud density, shading</li>\n<li>Perspective/scale actually feels proper now</li>\n<li>WAY more variety in cloud shapes/position</li>\n<li>Randomized cloud wind direction every start of raid</li>\n<li>Removed clouds from maps that shouldn’t have clouds (this includes factory)</li>\n<li>Improved high clouds, they just look better and their coverage increases/decreases along with cumulus clouds</li>\n<li>Ambient color is now pulled directly from the sky and it has made the clouds blend with the sky way better</li>\n<li>Ground shadows! Yes, the clouds now will cast shadows on the ground (sometimes it takes a few seconds at raid start to kick in, this happens on base tarkov too, not sure why it happens)</li>\n<li>So much more that I can’t think of</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/3.0.0",
+      "content_length": 7062246,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 606,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-27T01:51:00.000000Z",
+      "created_at": "2026-04-27T01:52:32.000000Z",
+      "updated_at": "2026-07-28T08:25:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9080f2d124c51111011f00cf947d288b167d937a993f634817a8289c820ebde4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/47642a03-b770-414f-bd06-ccd8474520be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A49Z&rscd=attachment%3B+filename%3DCloudSix-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A58Z&ske=2026-08-01T21%3A03%3A49Z&sks=b&skv=2018-11-09&sig=LewVMZ59iqquRDOnEW7xNKfxtPJmFfwUZCcflorgwgQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13324,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p><strong>NOTE: If you run VR and are struggling with performance, this might not be good to use. Use the 2D clouds version 1.0.7. You could also try lowering the primary steps to 32-48 and light steps to 8-12. Anything lower and it’s just not worth it.</strong></p>\n<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Rewrote the shader from the ground up and is now using ray marched volumetrics</li>\n<li>Simplified the scripting of the clouds due to them being physically based, very little custom controller work is needed</li>\n<li>Added a config menu in f12, most settings are hidden in advanced, including where you can increase volumetric quality steps even higher. I hid them to avoid people crashing their PC’s. All the other settings, I don’t recommend touching unless you want to try improving the look of them, a lot of the settings are <em>very</em> sensitive</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/2.0.0",
+      "content_length": 4548740,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 2227,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-29T04:12:00.000000Z",
+      "created_at": "2026-03-29T04:13:09.000000Z",
+      "updated_at": "2026-07-28T08:16:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/995ea1f4620779d4525cc014175f33dbe3384c8a32565a6df99142e67c532ee0?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/452b0125-0442-49af-bfeb-d989dc1e729b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A51Z&rscd=attachment%3B+filename%3DCloudSix-2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A32Z&ske=2026-08-01T21%3A03%3A51Z&sks=b&skv=2018-11-09&sig=SK12hjwyp9MtUpvFmpbfqbauOw6tbqcMApl3qJvu5lE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MywibmJmIjoxNzg1NjE1ODgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.327PA_aBsNpr-xVr5A9xKCecR-cpQG-pY6NbNoGiWyI&response-content-disposition=attachment%3B%20filename%3DCloudSix-2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13250,
+      "hub_id": null,
+      "version": "1.0.7",
+      "description": "<p><strong>Hotfix Changelog:</strong></p>\n<ul>\n<li>Clouds no longer get cut off as bad at the horizon</li>\n<li>Adjust brightness a bit on clouds during day time</li>\n<li>Added a dither to the shader to help smooth out color banding specifically during night time</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.7",
+      "content_length": 1838290,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 862,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-12T18:23:00.000000Z",
+      "created_at": "2026-03-12T18:23:25.000000Z",
+      "updated_at": "2026-07-28T08:09:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/db56659ae0df2d88dff9ca8f56ba3df315a973a855e03f04fdeebb561251d941?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/0cdc052b-c7d4-4b8b-8b9b-14d9145d1ba3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A10Z&rscd=attachment%3B+filename%3DCloudSix-1.0.7.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A27Z&ske=2026-08-01T21%3A10%3A10Z&sks=b&skv=2018-11-09&sig=7hqhk3EP4O8sbpn7vHXnTR4YZ7rkRo8moGDkFJwCfzo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.7.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13233,
+      "hub_id": null,
+      "version": "1.0.6",
+      "description": "<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Changed where clouds are getting initiated</li>\n<li>Changed min and max cloud speed - cloud movement will be a lot more noticeable now especially during fast wind days</li>\n<li>Re-did a lot of coloring/timing on the clouds to have longer lasting sunsets/sunrises</li>\n<li>Night clouds have been improved</li>\n<li>Improved shading on clouds, they should appear like they have more depth now</li>\n<li>Overcast clouds improved, shouldn’t be blown out white anymore</li>\n</ul>\n<p>Keep in mind, a lot of the coloring and brightness also heavily relies on what your postfx settings are. These clouds were made with postfx disabled to have a base look to the clouds.</p>\n<p>Pictures (with my PostFx): <a target=\"_blank\" class=\"external-link\" href=\"https://imgur.com/a/wIIcLDI\" rel=\"noreferrer noopener\">https://imgur.com/a/wIIcLDI</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.6",
+      "content_length": 1837284,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 406,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-09T06:24:00.000000Z",
+      "created_at": "2026-03-09T06:25:11.000000Z",
+      "updated_at": "2026-07-28T08:09:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8eb0a57ff4db828c5fe9f80e1480b1c4e4ffacede839e64dbb9036a9502c76ca?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/25caf39d-7f18-4d6a-9ce6-fe374856834b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A55Z&rscd=attachment%3B+filename%3DCloudSix-1.0.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A58Z&ske=2026-08-01T21%3A22%3A55Z&sks=b&skv=2018-11-09&sig=%2BqPCF1CeZbZKEUacAlqR642wAxxoV54omirgtJ%2B1HZE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13097,
+      "hub_id": null,
+      "version": "1.0.5",
+      "description": "<p><strong>Update Changelog:</strong></p>\n<ul>\n<li>Adjustments to cloud color, there’s now a base night color</li>\n<li>Adjustment to moon color, there’s now a base moon color</li>\n<li>The clouds color should now be a bit deeper/vibrant based on sky/sun color</li>\n</ul>\n<p>This should improve compatibility with Hollywood Graphics moon brightness</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.5",
+      "content_length": 1836946,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 895,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-17T01:19:00.000000Z",
+      "created_at": "2026-02-17T01:19:30.000000Z",
+      "updated_at": "2026-07-28T08:04:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/00479d2f771cdcc28307e39dfc8f3fdeb22ba5d06b4527d688e0333c458805fd?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/894e33b9-724a-4140-a555-82add6377648?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A39Z&rscd=attachment%3B+filename%3DCloudSix-1.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A03Z&ske=2026-08-01T21%3A20%3A39Z&sks=b&skv=2018-11-09&sig=Bcl21REHoP1ZvbXFb1NB45jVjvYHI%2Bs5bj4en2xCCOA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12954,
+      "hub_id": null,
+      "version": "1.0.4",
+      "description": "<p>Changelog:</p>\n<ul>\n<li>Fixed clouds not showing in scopes</li>\n</ul>\n<p><strong>NOTE: Re-download if you use anything that tracks version number, the version number in the plugin should be correct now</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.4",
+      "content_length": 1836758,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 1298,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-30T20:41:00.000000Z",
+      "created_at": "2026-01-30T20:42:04.000000Z",
+      "updated_at": "2026-07-28T07:58:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2b119f7dcff665667b573550fddf46c877b24f65286cfa19561b70bc3627efbe?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/34310cdb-4e15-4b80-8bdc-41067ef99f10?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A26Z&rscd=attachment%3B+filename%3DCloudSix-1.0.4fixed.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A43Z&ske=2026-08-01T21%3A11%3A26Z&sks=b&skv=2018-11-09&sig=j2LtgMQHBVB4B4UODlwNqNRJ6%2FEcKln%2Bgtqe61KIvww%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.4fixed.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12945,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<p>Changelog:</p>\n<ul>\n<li>Restored Tarkov’s cloud terrain shadows</li>\n<li>Fixed some minor bugs in code that wasn’t noticeable in game</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.3",
+      "content_length": 1836531,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 249,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-30T04:21:00.000000Z",
+      "created_at": "2026-01-30T04:21:36.000000Z",
+      "updated_at": "2026-07-28T07:58:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f82ffbc10695b097d8cbbe0692a6a7d9c25a4cbf7699db2d8b68f06580b39711?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/5e7783a6-c347-4c6c-ad2e-e636456ea035?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A05Z&rscd=attachment%3B+filename%3DCloudSix-1.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A56Z&ske=2026-08-01T21%3A22%3A05Z&sks=b&skv=2018-11-09&sig=e8YSM%2BFo0gdLDOJjX%2B9VZxJc6atQE0X2bRmpNCuWLjQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12942,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>Changelog:</p>\n<ul>\n<li>Added a check to keep clouds from re-instantiating this should resolve the cloud flash issue</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.2",
+      "content_length": 1836623,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 160,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-29T18:23:00.000000Z",
+      "created_at": "2026-01-29T18:24:04.000000Z",
+      "updated_at": "2026-07-28T07:57:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/34bdb7d437461478cd04d439f0c6b187f50247433acb30695147ad5fc4988f98?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/5a7c3b0a-749c-42b5-9d36-2d98bbad4e79?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A03Z&rscd=attachment%3B+filename%3DCloudSix-1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A58Z&ske=2026-08-01T21%3A07%3A03Z&sks=b&skv=2018-11-09&sig=6NNacmb1llDGcM8jiW8ltM15Rm8NGZRxoM%2B127tIEqo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12941,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Changelog:</p>\n<ul>\n<li>Adjusted when the cloud commandbuffer is drawn</li>\n</ul>\n<p>Not sure why this update caused that Wacatac false positive to trip up in virustotal. Literally just moved a line of code… Goes to show how inaccurate that specific virus check is.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.1",
+      "content_length": 1836927,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 106,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-29T15:37:00.000000Z",
+      "created_at": "2026-01-29T15:37:37.000000Z",
+      "updated_at": "2026-07-28T07:57:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/3cd789e27f67036111df734a2366637257f2b08d7dc6f0a165175c768c1ec1ef?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/3d8db314-021b-4a37-a04d-3dd3d7996fb4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A18Z&rscd=attachment%3B+filename%3DCloudSix-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A48Z&ske=2026-08-01T20%3A59%3A18Z&sks=b&skv=2018-11-09&sig=5APP7sQau5Cgprs4PWWldOSxgbMtTOrWloZimwlA3wo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12937,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release, no changelog.</p>\n<p>Let me know what you think, feedback is always great.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2567/cloudsix-volumetric-clouds/1.0.0",
+      "content_length": 1836991,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 213,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-29T06:37:00.000000Z",
+      "created_at": "2026-01-29T06:38:44.000000Z",
+      "updated_at": "2026-07-28T07:57:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0355c6bd123c6ed7c038ec3963e0b52907e8f1dbf288bb15e06d53cd8190b1cd?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/a7629c87-5d6b-44c3-bbd2-ee13e61b960f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A15Z&rscd=attachment%3B+filename%3DCloudSix-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A23Z&ske=2026-08-01T21%3A25%3A15Z&sks=b&skv=2018-11-09&sig=TYfZMuEd%2F9rm7yP1sB1WrkhQnY6YmrxPwt1jyLqNKSQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 83,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:42:37.577Z",
+    "discoveredBy": "seed"
+  }
+}

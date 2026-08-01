@@ -1,0 +1,118 @@
+{
+  "type": "mod",
+  "id": 1096,
+  "hub_id": 1517,
+  "guid": null,
+  "name": "Keep Your Equipment",
+  "slug": "keep-your-equipment",
+  "teaser": "Keep your original equipment when you die as a PMC in a raid.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1517.png",
+  "downloads": 8053,
+  "favourites_count": 0,
+  "description": "<h1>Keep Your Equipment</h1>\n<h2>Description</h2>\n<p>Originally forked from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/262-never-lose-equipments/\" rel=\"noreferrer noopener\">Never Lose Equipments</a> by Revingly and bluwatch, code adapted for SPT 3.7.0 and refactored.</p>\n<ul>\n<li>Retain all equipment you loaded in with post-death. (Default Behavior)\n<ul>\n<li>Opt to recover only starting gear post-death without keeping raid-found items by enabling “keepOriginalEquipment”.</li>\n<li>Configuration for secured container contents during this process is available via “keepSecuredContainer”.</li>\n</ul>\n</li>\n<li>Items acquired during a raid (in pockets, rig, backpack, or container) can be kept post-death but lose the FIR status if “enableFoundInRaid” is set to true.</li>\n<li>Keep map keys like Labs keycards upon successful raid exit</li>\n<li>Insure and drop items during a raid for insurance fraud purposes.</li>\n</ul>\n<h2>Installation instructions</h2>\n<p>Download the archive from the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/captainfoam/SPT-KeepYourEquipment/releases\" rel=\"noreferrer noopener\">releases page</a> and extract into the user/mods folder.</p>\n<h2>Configurable values</h2>\n<ul>\n<li><strong>keepOriginalEquipment</strong>: true/false (Default: true)\n<ul>\n<li>Regain all original gear if you die during a raid.</li>\n</ul>\n</li>\n<li><strong>keepSecuredContainer</strong>: true/false (Default: true, keepOriginalEquipment must also be set to true)\n<ul>\n<li>Decides if the secured container contents are reset post-death. Note: potential for item duplication exists if raid items are moved to the secured container.</li>\n</ul>\n</li>\n<li><strong>enableFoundInRaid</strong>: true/false (Default: false)\n<ul>\n<li>Set to true to retain FIR status for raid-acquired items post-death.</li>\n</ul>\n</li>\n<li><strong>keepMapKeys</strong>: true/false (Default: true)\n<ul>\n<li>Normally, the game will consume your Labs keycard on a successful raid. By default, this mod will keep your keycard, because you’re already using this mod to keep your original equipment, so why not?</li>\n</ul>\n</li>\n</ul>\n<h2>Encountered a bug or want a feature?</h2>\n<ul>\n<li>Please <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/captainfoam/SPT-KeepYourEquipment/issues\" rel=\"noreferrer noopener\">create an issue</a> in the project page and I’ll take a look!</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1096/keep-your-equipment",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2023-10-11T03:05:54.000000Z",
+  "created_at": "2023-10-11T03:05:54.000000Z",
+  "updated_at": "2026-07-07T16:58:50.000000Z",
+  "owner": {
+    "id": 38386,
+    "name": "captainfoam",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80830acd24f3fcdaab6c9ede2f115bff16a3940f_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-10-10T23:10:25.000000Z",
+    "updated_at": "2026-07-10T04:50:48.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 4725,
+      "name": "Revingly",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/04243f694d21217b550889d3a1a137ea8bf2beac_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2021-05-05T08:02:21.000000Z",
+      "updated_at": "2026-07-10T04:49:35.000000Z"
+    },
+    {
+      "id": 31768,
+      "name": "bluwatch",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=b&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2023-05-31T11:36:56.000000Z",
+      "updated_at": "2025-09-26T15:34:27.000000Z"
+    }
+  ],
+  "license": {
+    "id": 14,
+    "hub_id": 17,
+    "name": "University of Illinois/NCSA Open Source License",
+    "link": "https://choosealicense.com/licenses/ncsa/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/captainfoam/SPT-KeepYourEquipment",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 5496,
+      "hub_id": 8346,
+      "version": "1.3.2+alpha",
+      "description": "<p><strong>For SPT 3.7.3</strong></p>\n<p>This <em>should</em> work, I did some preliminary testing but needs more testing. Use at your own risk!</p>\n<p>Changelog:</p>\n<ul>\n<li>3.7.3 Compatibility</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1096/keep-your-equipment/1.3.2+alpha",
+      "content_length": null,
+      "spt_version_constraint": "~3.7.0",
+      "downloads": 3999,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-11-24T04:57:50.000000Z",
+      "created_at": "2023-11-24T04:57:50.000000Z",
+      "updated_at": "2026-05-14T04:26:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/703317019/57d0133d-fa62-48cc-86ad-e6c213761c14?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A56Z&rscd=attachment%3B+filename%3DKeepYourEquipment-1.3.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A41Z&ske=2026-08-01T21%3A06%3A56Z&sks=b&skv=2018-11-09&sig=wJXfyBLwapZBl0Sett0%2B4aqdl6%2B0ok3Ynpgp70tX1SI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5MSwibmJmIjoxNzg1NjE1MDkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7xapkAx8nO5eJbou4iIJSCCcfrzTG9wmzhOnEDBlDCc&response-content-disposition=attachment%3B%20filename%3DKeepYourEquipment-1.3.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5887,
+      "hub_id": 7833,
+      "version": "1.3.1",
+      "description": "<p><strong>For SPT 3.7.1</strong></p>\n<p>Changelog:</p>\n<ul>\n<li>Fix issue with setting inventory on successful raid</li>\n</ul>\n<p>For those who can’t upgrade to SPT 3.7.1 yet, use version 1.2.4 instead.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1096/keep-your-equipment/1.3.1",
+      "content_length": null,
+      "spt_version_constraint": "3.7.1",
+      "downloads": 2087,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-15T03:02:25.000000Z",
+      "created_at": "2023-10-15T03:02:25.000000Z",
+      "updated_at": "2026-05-14T04:29:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/703317019/5c21c49a-0703-4334-ae9f-c4306741fbe5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A50Z&rscd=attachment%3B+filename%3DKeepYourEquipment-1.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A29Z&ske=2026-08-01T21%3A08%3A50Z&sks=b&skv=2018-11-09&sig=fJkX3Apnl%2Fiz%2Fhe5fgXGXnXxE%2FoYqA%2Fw4h1hDFixel4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5MSwibmJmIjoxNzg1NjE1MDkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7xapkAx8nO5eJbou4iIJSCCcfrzTG9wmzhOnEDBlDCc&response-content-disposition=attachment%3B%20filename%3DKeepYourEquipment-1.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:02:07.496Z",
+    "discoveredBy": "mod:812",
+    "error": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2442,
+  "hub_id": null,
+  "guid": "com.swiftxp.spt.servermemorycleaner",
+  "name": "Server Memory Cleaner",
+  "slug": "server-memory-cleaner",
+  "teaser": "Read the mod description. It won’t make your system cleverer. Just fix the oddly specific problem it was built for.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/rQVP03XWEOBQnfz9f7cGUvc9yQSnfLY09tsPcqkx.png",
+  "downloads": 6687,
+  "favourites_count": 10,
+  "description": "<hr />\n<blockquote>\n<p>⚠️ <strong>Important cosmic disclaimer:</strong></p>\n<p>This mod does <strong>not</strong>, under any circumstances, boost performance, increase FPS, or imbue your server with the vigor of a caffeinated gazelle. It is <strong>only</strong> for people experiencing the specific memory issue described below.</p>\n<p>If you install it “just in case”, the universe will not punish you, but I might sigh loudly.</p>\n</blockquote>\n<hr />\n<hr />\n<blockquote>\n<p><strong>Instead of installing this mod, please see the pinned comment by Shynd. It’s a much cleaner solution! But I’ll keep the mod up in case the “System.GC.ConserveMemory” configuration is not working for you.</strong></p>\n</blockquote>\n<hr />\n<p>I run an SPT-Server 4.x instance on a modest little Linux-based VServer with <strong>4 GB of memory</strong>, bravely hosting sessions for friends and myself. Over time, I noticed that the server behaved like a dragon guarding treasure: <strong>it hoarded memory and refused to give any of it back</strong>, even when the system was gasping for air.</p>\n<p>After some investigation, this turned out to be a quirk of <strong>.NET</strong>, not a widespread SPT issue.<br />\nAnd because telling .NET to stop misbehaving is roughly as effective as asking a black hole to please not eat things, I built this mod.</p>\n<p>Its entire purpose is to <strong>force the server to clean up memory</strong> at configurable intervals (every <strong>5 minutes</strong> by default). Each cleanup may cause a tiny lag spike — a brief hiccup in spacetime — but this is still preferable to the server collapsing in a heap after several hours of enthusiastic hoarding.</p>\n<p>For good measure, our server also restarts every <strong>24 hours</strong>, because at some point even a digital machine deserves a nap.</p>\n<p>This mod is not a fix. It is a <strong>workaround</strong>, a band-aid, a polite nudge to the .NET garbage collector. If anything else on your server goes wrong, this mod should be the <strong>first thing you uninstall</strong> and the <strong>last thing you reinstall</strong>, in that order.</p>\n<hr />\n<p>One more time for those at the back: <strong>Do not install this mod for performance improvements.</strong> Only use it if you are experiencing the <em>exact</em> memory problem described above.</p>\n<p>To install, simply extract the <code>.zip</code> or <code>.7z</code> file into your SPT(-Server) directory.</p>\n<p>After installation, your file structure should look like this:</p>\n<pre><code>C:\\yourSPTfolder\\SPT\\user\\mods\\com.swiftxp.spt.servermemorycleaner\\SwiftXP.SPT.ServerMemoryCleaner.Server.dll\nC:\\yourSPTfolder\\SPT\\user\\mods\\com.swiftxp.spt.servermemorycleaner\\config\\config.json\n</code></pre>\n<p>You can adjust the cleanup interval in:</p>\n<pre><code>C:\\yourSPTfolder\\SPT\\user\\mods\\com.swiftxp.spt.servermemorycleaner\\config\\config.json\n</code></pre>\n<hr />\n<h2><strong>Additional technical details</strong></h2>\n<p>SPT-Server 4.x is powered by the <strong>.NET Framework</strong>, a managed runtime environment that handles memory in much the same way a well-intentioned but occasionally confused robot might — automatically, efficiently, and sometimes disastrously.</p>\n<p>Objects <strong>85,000 bytes or larger</strong> are placed into a special area called the <strong>Large Object Heap (LOH)</strong>.<br />\nThe LOH is only cleaned during a <strong>full (generation 2) garbage collection</strong>, and by default it is <strong>not compacted</strong>, meaning that over time it can swell and fragment like an overstuffed suitcase.</p>\n<p>This mod periodically instructs .NET to:</p>\n<ul>\n<li>Perform a full garbage collection (including the LOH)</li>\n<li>Compact the LOH (politely, but firmly)</li>\n</ul>\n<p>The SPT team has already taken steps to make memory use more efficient, and for most users the .NET Garbage Collector does a perfectly fine job on its own. However, on our Linux-based VServer, the LOH behaves… strangely. Thus, this mod.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2442/server-memory-cleaner",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2025-11-12T21:14:00.000000Z",
+  "created_at": "2025-11-12T21:19:13.000000Z",
+  "updated_at": "2026-07-28T06:22:04.000000Z",
+  "owner": {
+    "id": 84437,
+    "name": "swiftxp",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=s&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-09-09T13:48:33.000000Z",
+    "updated_at": "2026-07-27T07:49:38.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/swiftxp-hub/spt-server-memory-cleaner/",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12299,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2442/server-memory-cleaner/1.0.0",
+      "content_length": 5807,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 6687,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-12T21:19:00.000000Z",
+      "created_at": "2025-11-12T21:20:04.000000Z",
+      "updated_at": "2026-07-28T06:22:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/87c89dc722cc061734679c9f5774c789fa8e712335738263ba53b543ad45b032?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1088315404/86e63ced-46e4-4fa0-82a9-5aaf8f40c0b6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A32Z&rscd=attachment%3B+filename%3Dswiftxp-servermemorycleaner-1.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A44Z&ske=2026-08-01T21%3A23%3A32Z&sks=b&skv=2018-11-09&sig=hAs95daT4Ld42VOrb9G6vI74mJsw8Kza8T%2FlPZxBx5U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NSwibmJmIjoxNzg1NjE1ODQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.s6jrXHTGr7KM7Mjh0pY7TGUlWs2pI9ht4cuRej_R1eY&response-content-disposition=attachment%3B%20filename%3Dswiftxp-servermemorycleaner-1.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 17,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:52:50.243Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "type": "mod",
+  "id": 2778,
+  "hub_id": null,
+  "guid": "com.vastth.deaglespindraw",
+  "name": "Always Deagle Special Draw",
+  "slug": "always-deagle-special-draw",
+  "teaser": "Always triggers the special Desert Eagle spin animation when drawing the weapon.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/z0dUg3FtgykresrUclj48ZOvoYlHBcNjFP4wvvVZ.png",
+  "downloads": 956,
+  "favourites_count": 6,
+  "description": "<h1>Always Deagle Special Draw</h1>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/5LMpYEA.gif\" alt=\"Always Deagle Special Draw Preview\" /></p>\n<p><strong>Always Deagle Special Draw</strong> is a lightweight BepInEx client-side plugin that triggers the Desert Eagle’s special spinning draw animation every time you switch to it.</p>\n<p>By default, <em>Escape from Tarkov</em> only plays the Desert Eagle’s special draw animation under specific internal conditions. This mod changes that behavior, making the stylish spin animation consistent and predictable: whenever you equip or switch to a Desert Eagle, the special draw animation will play automatically.</p>\n<h2>What This Mod Does</h2>\n<p>This mod forces the Desert Eagle to use its special spinning draw animation when the weapon is drawn.</p>\n<p>In simple terms:</p>\n<ul>\n<li>Draw the Desert Eagle → special spinning animation plays</li>\n<li>No mastery requirement</li>\n</ul>\n<p>The goal of this mod is purely visual and stylistic. It does not add any new weapons, change weapon stats, or rebalance the Desert Eagle.</p>\n<h2>Features</h2>\n<ul>\n<li>Always triggers the Desert Eagle’s special draw animation</li>\n<li>Does not change weapon damage, recoil, ergonomics, durability, ammo, or ballistics</li>\n<li>Designed only to affect the Desert Eagle’s draw behavior</li>\n<li>Includes protection logic for empty-chamber and empty-weapon draw states</li>\n<li>Configurable through the BepInEx config file</li>\n</ul>\n<h2>Why Use This Mod?</h2>\n<p>The Desert Eagle has one of the most recognizable and stylish special draw animations in the game, but its original trigger conditions are restrictive and inconsistent.</p>\n<p>This mod makes the animation reliable.</p>\n<p>If you want the Desert Eagle to look more stylish every time you pull it out, this mod does exactly that.</p>\n<h2>Installation</h2>\n<p>Extract the downloaded archive directly into your SPT game root folder.</p>\n<p>The final file path should look like this:</p>\n<p>BepInEx/plugins/AlwaysDeagleSpecialDraw.dll</p>\n<p>For example, if your game is installed at:</p>\n<p>D:/SPT/</p>\n<p>then the plugin should be located at:</p>\n<p>D:/SPT/BepInEx/plugins/AlwaysDeagleSpecialDraw.dll</p>\n<h2>Configuration Notes</h2>\n<h3>Preserve Empty Chamber Magazine Draw</h3>\n<p>When the Desert Eagle’s chamber is empty but the installed magazine contains ammo, the original chambering behavior is preserved.</p>\n<p>This helps avoid forcing the spin animation in situations where the game should naturally play a chambering-related draw animation.</p>\n<h3>Preserve Empty Weapon Draw State</h3>\n<p>When the chamber is empty and there is no positive ammo signal from the magazine, the original empty-weapon animation state is preserved.</p>\n<p>This helps protect animation behavior related to slide-lock, empty magazines, and reloading.</p>\n<h3>Restore Weapon Level After Chambering Delay</h3>\n<p>Controls how long the plugin waits before restoring the weapon animation level after an empty-chamber draw.</p>\n<p>This is mainly used to avoid interfering with later reload animations.</p>\n<h2>Compatibility</h2>\n<p>This is a client-side BepInEx plugin.</p>\n<p>It is intended to be installed on the game client where you want the Desert Eagle special draw animation behavior to apply.</p>\n<p>This mod should not affect server-side progression, inventory, traders, quests, AI, loot, or weapon balancing.</p>\n<p>For Fika or co-op setups, install it on the client where the visual draw behavior is needed.</p>\n<h2>Known Notes</h2>\n<p>The mod includes safeguards for empty-chamber and empty-weapon states, but animation behavior may still vary depending on weapon state, magazine state, and other animation-related mods.</p>\n<p>If you use other mods that patch weapon animations, reload logic, or firearm controller behavior, please test compatibility in your own setup.</p>\n<h2>Credits</h2>\n<p>Created for players who want the Desert Eagle to always feel as stylish as it looks.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2778/always-deagle-special-draw",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-06-26T16:30:00.000000Z",
+  "created_at": "2026-06-26T16:40:27.000000Z",
+  "updated_at": "2026-07-28T09:21:28.000000Z",
+  "owner": {
+    "id": 2632,
+    "name": "vastth",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/7Epv4iDOIfRi6XbxozhzlTj4nPNK1Jh79sHQkyGR_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2021-02-03T03:47:02.000000Z",
+    "updated_at": "2026-08-01T00:34:49.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/vastth/Deagle-Spin-Always",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13898,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Fixed the issue where the Desert Eagle would jam when quickly reloading with an empty magazine!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2778/always-deagle-special-draw/1.0.1",
+      "content_length": 6563,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 981,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-27T02:47:00.000000Z",
+      "created_at": "2026-06-27T02:47:52.000000Z",
+      "updated_at": "2026-07-28T09:21:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/14b886b7e33d2c5692ef83ec86e43835ca58608e3495193e3fd3282a1b00787d/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1281510541/e86e111b-3299-44c7-b4ff-5f3e9eb00caa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A34%3A35Z&rscd=attachment%3B+filename%3DAlwaysDeagleSpecialDraw-1.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A33%3A48Z&ske=2026-08-01T20%3A34%3A35Z&sks=b&skv=2018-11-09&sig=ZSWT%2FGXPFv0ORtgPW2C3MmbC9ivLMTf0IckDGuJhQ2M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzIyMiwibmJmIjoxNzg1NjEyOTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HCn3JoGd8Mcb0YbvF3Bi9bWbHPHFGXs_l2wWXF6NIog&response-content-disposition=attachment%3B%20filename%3DAlwaysDeagleSpecialDraw-1.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 14,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:35:21.317Z",
+    "discoveredBy": "seed"
+  }
+}

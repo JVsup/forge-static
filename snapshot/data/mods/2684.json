@@ -1,0 +1,166 @@
+{
+  "type": "mod",
+  "id": 2684,
+  "hub_id": null,
+  "guid": "com.kairo.pocketroulette",
+  "name": "Pocket Roulette",
+  "slug": "pocket-roulette",
+  "teaser": "Pocket Roulette turns the start of every raid into a tiny gambling problem. When you load in, the mod spins the wheel and tries to sneak random loot into your pockets. ",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Gi3Pdq8bfUCpQgYUTt9LJJoc6W1twdfHzB3xefbr.png",
+  "downloads": 1674,
+  "favourites_count": 8,
+  "description": "<p>Pocket Roulette turns the start of every raid into a tiny gambling problem. When you load in, the mod spins the wheel and tries to sneak random loot into your pockets. Sometimes it’s a snack, sometimes it is ammo, sometimes it’s something stupidly rare that makes your neurons go brr.</p>\n<p><strong>Everything is configurable</strong>: reward chance, number of rolls, item weights, rarity modes, stack ranges, scav support, ground drops, and notification messages. Run it as a balanced bonus system, a cursed slot machine, or a full chaos button for your server.</p>\n<p>Doesn’t add any custom items so your profile stays safe when you uninstall. I’m not trying to brick your profile or anything lol.</p>\n<p>Go spin the pocket wheel big man.</p>\n<hr />\n<h3>Fika Compatibility</h3>\n<p>I never had any issues with Fika, but I might’ve just gotten lucky lol.</p>\n<p>It should work with or without Fika. Each player in the raid rolls their own pocket item independently.</p>\n<hr />\n<h3>Configuration</h3>\n<p>Edit <code>SPT/user/mods/PocketRoulette/config/config.json</code>.</p>\n<p>Stuff you’ll probably touch:</p>\n<ul>\n<li>mode: ‘mixed’, ‘garbage’, ‘useful’, ‘jackpot’, or ‘chaos’</li>\n<li>itemCount: how many times Pocket Roulette rolls at raid start</li>\n<li>chancePercent: 0-100 chance that Pocket Roulette even does anything</li>\n<li>enableNotification: show or hide the raid-start notification</li>\n<li>debugLogging: show detailed server logs for item sync and ground registration</li>\n<li>allowClientOverrides: lets players opt into their own BepInEx/F12 client config instead of the server config</li>\n<li>allowGroundDrop: if it doesn’t fit in your pockets, drop it at your feet (or discard/skip it)</li>\n<li>scavEnabled: let your scav also hit the pocket casino</li>\n<li>itemPool: weighted list of existing EFT item template IDs</li>\n<li>itemPool.minCount / itemPool.maxCount: stack amount range for that reward, clamped to the item’s real max stack size</li>\n</ul>\n<p>You can also mess with all the funny messages it spits out if you’re bored.</p>\n<p>By default the server config is the authority, which keeps Fika/multiplayer fair. basically, the server and client need each other’s consent for a player to use their own F12 config. if the server allows overrides, each client can still choose to use the server config or their own custom config.</p>\n<p>Client side item pools and messages live in <code>BepInEx/plugins/PocketRoulette/PocketRoulette.ClientConfig.json</code>.</p>\n<hr />\n<h3>Modes</h3>\n<p>Modes pick a rarity tier first, then use each item’s weight inside that rarity.</p>\n<ul>\n<li>mixed: mostly trash and okay stuff, tiny chance for something actually good</li>\n<li>garbage: you’re eating crayons and loving it</li>\n<li>useful: actually gives you decent stuff most of the time</li>\n<li>jackpot: loaded dice for rich kids</li>\n<li>chaos: every rarity has equal chance. Good luck :)</li>\n</ul>\n<hr />\n<h3>Known Issues</h3>\n<ul>\n<li>If your pockets are already full at raid start, a few items just refuse to spawn in the world for some reason. They vanish into the void instead. No clue why, don’t ask me I’m not smart.</li>\n</ul>\n<hr />\n<p><em>if you have any issues and would like to report a bug, etc. please contact me on discord: <strong>kairosmind</strong></em></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2684/pocket-roulette",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 3,
+  "published_at": "2026-05-06T22:26:00.000000Z",
+  "created_at": "2026-05-07T04:51:24.000000Z",
+  "updated_at": "2026-07-28T09:04:04.000000Z",
+  "owner": {
+    "id": 111967,
+    "name": "kairo",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/tbhwCtukBQNfr6ohCzw5pS8zJqI840vBU2Z40aTn_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-05-06T21:04:57.000000Z",
+    "updated_at": "2026-08-01T04:41:34.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 3,
+    "hub_id": 19,
+    "title": "Scripting",
+    "slug": "scripting",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/mindofkairo/PocketRoulette",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13682,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<h2>v1.2.1</h2>\n<hr />\n<h3>Fixed</h3>\n<ul>\n<li>Rewards now register properly with the server without jamming them straight into your profile first (this should stop those annoying duplicate item ID errors after raids)</li>\n<li>Added a safety check that refuses to register a reward if its generated item ID already exists in the profile.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2684/pocket-roulette/1.2.1",
+      "content_length": 58652,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 772,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-02T08:21:00.000000Z",
+      "created_at": "2026-06-02T08:21:49.000000Z",
+      "updated_at": "2026-07-28T09:04:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/433885e77c3efbbf985a8d70f756438ed0bb8534c580d66dd32c038ce53327c4",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1231381774/6677b444-643c-479b-9042-0cbb559ddf75?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A19Z&rscd=attachment%3B+filename%3DPocketRoulette-1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A01Z&ske=2026-08-01T21%3A04%3A19Z&sks=b&skv=2018-11-09&sig=GiPvOW2c96d%2BS4UPrcIEQwnpeqYd2n7iOVx%2FUQtoLB8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPocketRoulette-1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13611,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h2>v1.2.0</h2>\n<h3>Added</h3>\n<ul>\n<li>Server authorized BepInEx/F12 client config overrides.</li>\n<li>New server option <code>allowClientOverrides</code>, defaulting to false.</li>\n<li>New client <code>Allow Client Config</code> toggle plus local settings for odds, item count, mode, scav rewards, and ground drops.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2684/pocket-roulette/1.2.0",
+      "content_length": 58057,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 322,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-18T04:54:00.000000Z",
+      "created_at": "2026-05-18T04:55:10.000000Z",
+      "updated_at": "2026-07-28T08:59:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b84de6d26c2c335730fac24fc83eb126ac8a68806f671648fcc3409ab281f4aa",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1231381774/17567f14-ae1f-46b8-883c-5fff9452ac51?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A48Z&rscd=attachment%3B+filename%3DPocketRoulette1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A23Z&ske=2026-08-01T21%3A10%3A48Z&sks=b&skv=2018-11-09&sig=o93iKavScDU%2BjrvrpVolE%2B57sq5r0dTmy8i2JicmLOs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPocketRoulette1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13566,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h2>v1.1.0</h2>\n<hr />\n<h3>Added</h3>\n<ul>\n<li>You can now choose how many times it rolls at raid start (multi-roll raids show a summary notification.)</li>\n<li>Per-item stack ranges (with smart limits so it doesn’t give you 9000 bolts)</li>\n<li>Reward chance setting. (0-100%)</li>\n<li>Debug logging toggle.</li>\n<li>Scav raid enable/disable option.</li>\n<li>Optional ground drops when pockets are full.</li>\n<li>Config now reloads automatically like a big boy</li>\n<li>Config validation that actually tells you if you messed up</li>\n<li>More customizable notification messages.</li>\n</ul>\n<h3>Changed</h3>\n<ul>\n<li>Now picks rarity first, then item inside it (feels way better imo)</li>\n<li>Server/Fika sync should be more stable</li>\n<li>Console is no longer yelling at you every raid</li>\n</ul>\n<h3>Fixed</h3>\n<ul>\n<li>Stacked items look clean in notifications now</li>\n<li>Missed rewards no longer appear as “best finds.”</li>\n<li>Bad config edits no longer explode everything</li>\n<li>No more duplicate items from sync retries</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2684/pocket-roulette/1.1.0",
+      "content_length": 51096,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 421,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-08T13:30:00.000000Z",
+      "created_at": "2026-05-08T16:17:06.000000Z",
+      "updated_at": "2026-07-28T08:33:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8cdf75353dcfcb34e600cf7eb3f1c5ee6df3d9107e8acea93ee3e1e8ff670ed3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1231381774/5bcd4920-e98d-4373-aebb-3b386bdc3d4e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A51Z&rscd=attachment%3B+filename%3DPocketRoulette-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A43Z&ske=2026-08-01T21%3A05%3A51Z&sks=b&skv=2018-11-09&sig=IEKKAql60NUfNMhE6RnlRQ91pmeaaX%2FjG294qVpB%2BfM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3DPocketRoulette-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13559,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<ul>\n<li>Fika Support (I hope)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2684/pocket-roulette/1.0.0",
+      "content_length": 36043,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 159,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-07T05:26:00.000000Z",
+      "created_at": "2026-05-07T05:26:16.000000Z",
+      "updated_at": "2026-07-28T08:33:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/db8f17ee0254088d59bd8d5f687c056a74d6360f11a6c745f22abdb386fa5b5d/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1231381774/ec07e34b-4b6e-4d1e-af84-34281a5e5eab?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A11Z&rscd=attachment%3B+filename%3DPocketRoulette-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A02Z&ske=2026-08-01T21%3A25%3A11Z&sks=b&skv=2018-11-09&sig=m4usKioh9iUbMH8TNOOFTXGps2fUpnpb0ZZ4216gzVo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OCwibmJmIjoxNzg1NjE1OTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m9HywKuBTnGn3LGyaTM_8qU0BblQDDi7YZhsBHXCpxA&response-content-disposition=attachment%3B%20filename%3DPocketRoulette-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 4,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:49.345Z",
+    "discoveredBy": "seed"
+  }
+}

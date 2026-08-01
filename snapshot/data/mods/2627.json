@@ -1,0 +1,192 @@
+{
+  "type": "mod",
+  "id": 2627,
+  "hub_id": null,
+  "guid": "com.vonbraunz.bountyboard",
+  "name": " Bounty Board — Dynamic PMC Contracts ",
+  "slug": "bounty-board-dynamic-pmc-contracts",
+  "teaser": "A dynamic bounty contract system with a rotating list of PMC targets. Hunt them down, bring back their dogtag, and collect your reward.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/AZAgmmNMwUZFv9VJWAWpLPpXurIuGwlVSkXMzvP2.jpg",
+  "downloads": 10016,
+  "favourites_count": 34,
+  "description": "<h1>Bounty Board — SPT 4.0.13</h1>\n<p>A dynamic bounty contract system for <strong>Single Player Tarkov (SPT) 4.0.13</strong>. A new “Bounty Board” contact appears in your in-game messenger with a rotating list of PMC targets. Hunt them down, bring back their dogtag, and collect your reward.</p>\n<p><strong>New in 2.0.0</strong> — PMC Hunters can now be sent after <em>you</em>. Survive enough raids and someone puts a contract on your head.</p>\n<hr />\n<h2>Features</h2>\n<h3>Bounty System</h3>\n<ul>\n<li><strong>Bounty Board contact</strong> appears in your messenger alongside Commando and SPT Friend</li>\n<li><strong>Randomized PMC targets</strong> generated from the real SPT bot name pool each cycle</li>\n<li><strong>Live HUD notifications</strong> — get an in-raid alert the moment a bounty target spawns, and another when they’re eliminated</li>\n<li><strong>Claim rewards</strong> by typing a command after extracting with a target’s dogtag in your stash</li>\n<li><strong>Auto-rotating cycle</strong> — when all contracts are completed, a fresh set of targets is immediately generated</li>\n<li><strong>Timed refresh</strong> — bounty cycle resets every 24 hours regardless of completion (configurable)</li>\n<li><strong>Persistent state</strong> — bounty progress is saved to disk and survives server restarts</li>\n</ul>\n<h3>Hunter System (New in 2.0.0)</h3>\n<ul>\n<li><strong>Escalating threat</strong> — hunter PMCs can spawn in your raids, starting at 25% chance and increasing by 5% per survived raid</li>\n<li><strong>Death resets</strong> — die in raid and the hunter chance resets back to 25%</li>\n<li><strong>Same-faction pairs</strong> — 2 PMC hunters spawn as a group (same faction so they don’t fight each other)</li>\n<li><strong>Delayed entry</strong> — hunters arrive ~3 minutes into the raid, giving you time to get moving</li>\n<li><strong>Contract alert</strong> — receive a notification when hunters are dispatched after you</li>\n<li><strong>Kill confirmation</strong> — notification fires when you eliminate a hunter, with a kill counter</li>\n<li><strong>Fully configurable</strong> — faction, difficulty, spawn delay, escort count, base chance, and scaling all set via <code>config.json</code></li>\n</ul>\n<h3>Intel Scanner (New in 2.0.0)</h3>\n<ul>\n<li><strong>Press O in-raid</strong> to scan for active bounty targets and hunter status</li>\n<li>Shows target names if spotted, and whether hunters are active with a kill counter</li>\n<li>Scan key is configurable via BepInEx config</li>\n</ul>\n<hr />\n<h2>Compatibility</h2>\n<ul>\n<li>Bot Callsigns - Reloaded</li>\n<li>[SAIN] Twitch Players</li>\n</ul>\n<p>No known incompatibilities.</p>\n<hr />\n<h2>Installation</h2>\n<p>The release zip contains both the server mod and BepInEx client mod — fully drag-and-drop:</p>\n<ol>\n<li>Download <code>BountyBoard.zip</code></li>\n<li>Extract and drag the <code>SPT</code> and <code>BepInEx</code> folders into your SPT install root</li>\n<li>Start the server — the Bounty Board contact will appear the next time you log in</li>\n</ol>\n<p><strong>What goes where:</strong></p>\n<pre><code>&lt;SPT Root&gt;/\n├── SPT/user/mods/BountyBoard-drb/\n│   ├── BountyBoard.dll       &lt;- server mod\n│   └── config.json\n└── BepInEx/plugins/\n    └── BountyBoard.Client.dll  &lt;- client mod\n</code></pre>\n<h3>Server Mod Only</h3>\n<p>If you don’t want in-raid notifications or the hunter system, copy just the <code>BountyBoard-drb</code> folder into <code>SPT/user/mods/</code>. The bounty board messenger commands work without the client mod. Note: hunter spawns will still be injected but the client-side chance roll and stripping won’t occur — disable hunters in <code>config.json</code> if running server-only.</p>\n<hr />\n<h2>HUD Notifications</h2>\n<p>When the BepInEx client mod is installed, you’ll receive native EFT-style notifications during raids:</p>\n<ul>\n<li><strong>BOUNTY TARGET SPOTTED</strong> — fires when a bounty target PMC spawns in your raid</li>\n<li><strong>BOUNTY COLLECTED</strong> — fires when a bounty target is eliminated</li>\n<li><strong>CONTRACT ALERT</strong> — fires when hunter PMCs are dispatched after you (~3 min into raid)</li>\n<li><strong>HUNTER ELIMINATED</strong> — fires when you take out a hunter, with kill count (e.g. 1/2)</li>\n</ul>\n<h3>Intel Scanner (O Key)</h3>\n<p>Press <strong>O</strong> at any time in-raid to get a status report:</p>\n<ul>\n<li>Names of any active bounty targets currently alive in the raid</li>\n<li>Whether hunters are active and how many you’ve eliminated</li>\n</ul>\n<h3>Client Mod Configuration</h3>\n<p>Settings are available in the BepInEx configuration manager (F12 in-game) under <code>BountyBoard.Client</code>:</p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Bounty State Path</td>\n<td><em>(auto)</em></td>\n<td>Path to <code>bounty_state.json</code> — only change if your install is non-standard</td>\n</tr>\n<tr>\n<td>Hunter State Path</td>\n<td><em>(auto)</em></td>\n<td>Path to <code>hunter_state.json</code> — tracks raids survived for hunter spawn chance</td>\n</tr>\n<tr>\n<td>Scan Target Key</td>\n<td><code>O</code></td>\n<td>Keybind for the in-raid intel scanner</td>\n</tr>\n</tbody>\n</table>\n<hr />\n<h2>Usage</h2>\n<p>Open the <strong>Bounty Board</strong> contact in your in-game messenger and type:</p>\n<table>\n<thead>\n<tr>\n<th>Command</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>bounty list</code></td>\n<td>Show the current active kill contracts and reward info</td>\n</tr>\n<tr>\n<td><code>bounty claim</code></td>\n<td>Scan your stash for matching dogtags and collect any earned rewards</td>\n</tr>\n</tbody>\n</table>\n<h3>How it works</h3>\n<ol>\n<li>Check <code>bounty list</code> to see your current targets</li>\n<li>Find and kill a target PMC in raid — you’ll get a HUD alert when they spawn</li>\n<li>Extract with their <strong>dogtag in your stash</strong> (not inside a container)</li>\n<li>Message the Bounty Board and type <code>bounty claim</code></li>\n<li>Reward mail arrives with your configured currency and a random bonus item</li>\n</ol>\n<hr />\n<h2>Configuration</h2>\n<p>Edit <code>config.json</code> in the mod folder (<code>SPT/user/mods/BountyBoard-drb/</code>):</p>\n<pre><code>{\n  \"TargetCount\": 3,\n  \"RefreshHours\": 24,\n  \"Rewards\": {\n    \"CurrencyTpl\": \"5449016a4bdc2d6f028b456f\",\n    \"CurrencyAmount\": 1000000,\n    \"MedicalItems\": [\n      \"544fb45d4bdc2dee738b4568\",\n      \"590c678286f77426c9660122\",\n      \"590c661e86f7741e566b646a\",\n      \"5d02778e86f774203e7dedbe\",\n      \"590c657e86f77412b013051d\"\n    ]\n  },\n  \"Hunters\": {\n    \"Enabled\": true,\n    \"BaseChance\": 25,\n    \"ChancePerSurvival\": 5,\n    \"MaxChance\": 100,\n    \"EscortCount\": 1,\n    \"Difficulty\": \"hard\",\n    \"SpawnDelay\": 180,\n    \"Faction\": \"pmcUSEC\"\n  }\n}\n</code></pre>\n<h3>Bounty Settings</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Description</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>TargetCount</code></td>\n<td>Number of targets per bounty cycle</td>\n<td><code>3</code></td>\n</tr>\n<tr>\n<td><code>RefreshHours</code></td>\n<td>Hours before the cycle resets regardless of completion (<code>0</code> to disable)</td>\n<td><code>24</code></td>\n</tr>\n<tr>\n<td><code>Rewards.CurrencyTpl</code></td>\n<td>Item template ID of the currency reward</td>\n<td>Roubles</td>\n</tr>\n<tr>\n<td><code>Rewards.CurrencyAmount</code></td>\n<td>Stack size of the currency reward</td>\n<td><code>1000000</code></td>\n</tr>\n<tr>\n<td><code>Rewards.MedicalItems</code></td>\n<td>Pool of item template IDs for the bonus reward</td>\n<td>High-tier medicals</td>\n</tr>\n</tbody>\n</table>\n<h3>Hunter Settings</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Description</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>Hunters.Enabled</code></td>\n<td>Enable/disable the hunter system entirely</td>\n<td><code>true</code></td>\n</tr>\n<tr>\n<td><code>Hunters.BaseChance</code></td>\n<td>Starting hunter spawn chance (%)</td>\n<td><code>25</code></td>\n</tr>\n<tr>\n<td><code>Hunters.ChancePerSurvival</code></td>\n<td>Additional chance per survived raid (%)</td>\n<td><code>5</code></td>\n</tr>\n<tr>\n<td><code>Hunters.MaxChance</code></td>\n<td>Maximum hunter spawn chance (%)</td>\n<td><code>100</code></td>\n</tr>\n<tr>\n<td><code>Hunters.EscortCount</code></td>\n<td>Number of escort hunters (total hunters = 1 leader + escorts)</td>\n<td><code>1</code></td>\n</tr>\n<tr>\n<td><code>Hunters.Difficulty</code></td>\n<td>Bot difficulty: <code>easy</code>, <code>normal</code>, <code>hard</code>, <code>impossible</code></td>\n<td><code>hard</code></td>\n</tr>\n<tr>\n<td><code>Hunters.SpawnDelay</code></td>\n<td>Seconds into raid before hunters spawn</td>\n<td><code>180</code></td>\n</tr>\n<tr>\n<td><code>Hunters.Faction</code></td>\n<td>Hunter faction: <code>pmcUSEC</code> or <code>pmcBEAR</code></td>\n<td><code>pmcUSEC</code></td>\n</tr>\n</tbody>\n</table>\n<h3>Currency Template IDs</h3>\n<table>\n<thead>\n<tr>\n<th>Currency</th>\n<th>Template ID</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Roubles</td>\n<td><code>5449016a4bdc2d6f028b456f</code></td>\n</tr>\n<tr>\n<td>Dollars</td>\n<td><code>5696686a4bdc2da3298b456a</code></td>\n</tr>\n<tr>\n<td>Euros</td>\n<td><code>569668774bdc2da2298b4568</code></td>\n</tr>\n</tbody>\n</table>\n<p>Changes take effect on the next server restart.</p>\n<hr />\n<h2>Rewards</h2>\n<p>Each completed bounty contract pays out:</p>\n<ul>\n<li>Configurable currency and amount (default: 1,000,000 roubles)</li>\n<li>One random item from the configurable bonus pool (default: high-tier medicals)</li>\n</ul>\n<hr />\n<h2>Changelog</h2>\n<h3>2.0.0 — “The Hunted”</h3>\n<ul>\n<li>Added Hunter system: PMC hunters can spawn in your raids with escalating chance based on raids survived</li>\n<li>Added Intel Scanner: press O in-raid to check for bounty targets and hunter status</li>\n<li>Restructured project into proper Server/Client solution with combined release zip</li>\n<li>Removed debug test keys (F8/F9)</li>\n</ul>\n<h3>1.2.0</h3>\n<ul>\n<li>Added BepInEx companion client mod for in-raid HUD notifications</li>\n<li>Bounty target spotted and collected notifications</li>\n<li>Dogtag detection improvements</li>\n</ul>\n<h3>1.0.0 — Initial Release</h3>\n<ul>\n<li>Bounty Board messenger contact with list/claim commands</li>\n<li>Randomized PMC targets from bot name pool</li>\n<li>Configurable rewards and cycle timing</li>\n<li>Persistent state across server restarts</li>\n</ul>\n<hr />\n<h2>License</h2>\n<p>MIT</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2627/bounty-board-dynamic-pmc-contracts",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 7,
+  "published_at": "2026-03-13T15:50:00.000000Z",
+  "created_at": "2026-03-13T16:00:13.000000Z",
+  "updated_at": "2026-07-28T08:16:41.000000Z",
+  "owner": {
+    "id": 33232,
+    "name": "Dr.Braun",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/FwoeVuqST8kfALlA0bHCz2WNDHVIgKLdpDWvZljN_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-06-26T20:02:01.000000Z",
+    "updated_at": "2026-07-31T03:43:13.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 7,
+    "hub_id": 24,
+    "title": "Quests",
+    "slug": "quests",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Vonbraunz/SPT-BountyBoard",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13327,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<hr />\n<h2>v2.0.1 — Hotfix</h2>\n<p>This patch addresses several bugs introduced in v2.0.0’s hunter system and resolves a compatibility issue that prevented the mod from loading on some SPT 4.0.13 installs.</p>\n<hr />\n<h3>Bug Fixes</h3>\n<p><strong>Hunter kill counter overflow</strong>\nThe hunter eliminated notification could display counts beyond the actual number of hunters (e.g. <code>7/2</code>). PMC kills after all hunters were dead continued incrementing the counter. Both the counter and the hunter detection slot are now capped correctly.</p>\n<p><strong>Mod failing to load / TypeLoadException on raid start</strong>\nNotifications are now resolved entirely at runtime via reflection with no compile-time type references.</p>\n<p><strong>Bot spawning mod interference (ABPS / DONUTS / SWAG)</strong>\nThe hunter detection window was too wide (±60s), causing PMC waves from other bot spawning mods to be misidentified as hunters. The window is now tightened to ±15s around the fingerprinted spawn time</p>\n<p><strong>Hunter count hardcoded on client</strong>\nThe client was hardcoding hunter count and spawn chance values instead of reading from <code>config.json</code>. Changes to <code>EscortCount</code>, <code>SpawnDelay</code>, <code>BaseChance</code>, <code>ChancePerSurvival</code>, and <code>MaxChance</code> in the config now take effect without a recompile.</p>\n<hr />\n<h3>Changes</h3>\n<ul>\n<li><strong>O key scan</strong>: Hunter status now shows <code>Hunters in raid.</code> or <code>No hunters this raid.</code> — kill count removed</li>\n<li><strong>Debug menu</strong> (F12): Added <em>Force Hunters</em> toggle to guarantee hunter spawns every raid for testing</li>\n</ul>\n<hr />\n<h3>Notes</h3>\n<p>The <code>HunterStripPatch</code> (which removes hunter spawns when the roll fails) is logging a warning on some installs — investigation ongoing. Hunters still function correctly when the roll succeeds. If you see <code>Could not find BossLocationSpawn list</code> in your BepInEx log, hunters may occasionally spawn even when the roll fails; this does not affect any other functionality.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2627/bounty-board-dynamic-pmc-contracts/2.0.1",
+      "content_length": 28371,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 8031,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-29T18:36:00.000000Z",
+      "created_at": "2026-03-29T19:37:09.000000Z",
+      "updated_at": "2026-07-28T08:16:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4208110aad60a62210d1183000f427d0a2124ee71958d232ed6a83c51f3faedf?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1180920337/60d7c014-794b-46ae-9132-009d3998e10d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A03%3A01Z&rscd=attachment%3B+filename%3DBountyBoard-2.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A02%3A59Z&ske=2026-08-01T20%3A03%3A01Z&sks=b&skv=2018-11-09&sig=tOcwb0hkBLhHz8Cgnq0Jc7HyZI2cbdiR76Gs4amyFTQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3MSwibmJmIjoxNzg1NjEyNTcxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IZENwPxqsUuTuGrxAM_MZMUBOTDxQNeNN7VgtKlbDXw&response-content-disposition=attachment%3B%20filename%3DBountyBoard-2.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13323,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p><strong>BountyBoard v2.0.0 — “The Hunted”</strong></p>\n<p>Survive enough raids and someone puts a contract on your head. PMC hunters now stalk the maps looking for you — and the longer your survival streak, the more likely they are to show up.</p>\n<p><strong>New: Hunter System</strong></p>\n<ul>\n<li>PMC hunter pairs spawn in your raids with an escalating chance (25% base, +5% per survived raid)</li>\n<li>Die and the chance resets — survive and the pressure builds</li>\n<li>Hunters arrive ~3 minutes into raid as a same-faction duo on hard difficulty</li>\n<li>Receive a contract alert when hunters are dispatched, and kill confirmations as you take them out</li>\n<li>Fully configurable: faction, difficulty, spawn delay, chance scaling, and more</li>\n</ul>\n<p><strong>New: Intel Scanner</strong></p>\n<ul>\n<li>Press O in-raid to check for active bounty targets and hunter status at any time</li>\n</ul>\n<p><strong>Fika Compatible</strong></p>\n<ul>\n<li>Soft dependency on Fika — hunter spawning is automatically handled by the host client</li>\n<li>All players in a Fika session receive bounty and hunter notifications</li>\n</ul>\n<p><strong>Other Changes</strong></p>\n<ul>\n<li>Removed debug test keys (F8/F9)</li>\n<li>Version bump across all assemblies</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2627/bounty-board-dynamic-pmc-contracts/2.0.0",
+      "content_length": 26841,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 241,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-29T02:03:00.000000Z",
+      "created_at": "2026-03-29T02:03:20.000000Z",
+      "updated_at": "2026-07-28T08:16:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/d953320f9e2ca919818c0225732647df8158b35e233b21f49d1264671561b2dd?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1180920337/4d3bd2b7-98df-4186-8168-991be4aa2581?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A38Z&rscd=attachment%3B+filename%3DBountyBoard-2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A26%3A34Z&ske=2026-08-01T20%3A26%3A38Z&sks=b&skv=2018-11-09&sig=BjU%2BmRvTNrDBq2dZNHm8rv1%2FoKI%2BnMu%2BZEj5bkfGPug%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3MiwibmJmIjoxNzg1NjEyNTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.SPWVTZtdc75rkGCAFYZial6iBfYK_HMrK-2LMeb1Mu8&response-content-disposition=attachment%3B%20filename%3DBountyBoard-2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13260,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h2>What’s New in v1.2.0</h2>\n<h3>BepInEx Companion Mod</h3>\n<p>Bounty Board now ships with a native BepInEx client plugin — <strong>BountyBoard.Client</strong> — that hooks directly into the EFT HUD and alerts you to bounty targets in real time.</p>\n<h4>In-Raid Notifications</h4>\n<table>\n<thead>\n<tr>\n<th>Notification</th>\n<th>Trigger</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>⚠ <strong>BOUNTY TARGET SPOTTED</strong></td>\n<td>A bounty target PMC spawns in your raid (including late waves)</td>\n</tr>\n<tr>\n<td>☠ <strong>BOUNTY COLLECTED</strong></td>\n<td>A bounty target is eliminated</td>\n</tr>\n</tbody>\n</table>\n<h4>How It Works</h4>\n<ul>\n<li>Reads <code>bounty_state.json</code> at the start of each raid</li>\n<li>Tracks all active (non-completed) targets</li>\n<li>Hooks <code>GameWorld.OnPersonAdd</code> to catch every spawn — no targets slip through</li>\n<li>Fires each notification <strong>once per target per raid</strong></li>\n</ul>\n<h4>Zero Setup</h4>\n<p>No configuration needed for a standard SPT 4.0.13 install. Drop the zip, drag and drop, play.</p>\n<blockquote>\n<p>The server mod continues to work standalone without the client if you prefer no HUD notifications.</p>\n</blockquote>\n<hr />\n<h3>Installation</h3>\n<p>Download <code>BountyBoard-1.2.0.zip</code>, extract, and drag the <code>SPT</code> and <code>BepInEx</code> folders into your SPT root.</p>\n<pre><code>&lt;SPT Root&gt;/\n├── SPT/user/mods/BountyBoard-drb/\n│   ├── BountyBoard.dll\n│   └── config.json\n└── BepInEx/plugins/\n    └── BountyBoard.Client.dll\n</code></pre>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2627/bounty-board-dynamic-pmc-contracts/1.2.0",
+      "content_length": 22218,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1295,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-03-14T21:32:00.000000Z",
+      "created_at": "2026-03-14T21:34:24.000000Z",
+      "updated_at": "2026-07-28T08:10:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a6c7ca35a146c2b4fdb27f1541df9092c63d2c11dbc469e55786f148dd26e86e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1180920337/8cb77c25-f57b-4291-a8f4-c004bf3555ab?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A24%3A23Z&rscd=attachment%3B+filename%3DBountyBoard-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A23%3A41Z&ske=2026-08-01T20%3A24%3A23Z&sks=b&skv=2018-11-09&sig=mt%2F7LpsTsYsm%2B%2FaXQXyIHxKSc2emNETAKkCY6GuF1xw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3MywibmJmIjoxNzg1NjEyNTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ig8WuxYu3t6zvwd8mBnayB93FhrBoHRNWflsYVAuTZI&response-content-disposition=attachment%3B%20filename%3DBountyBoard-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13256,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h2>What’s New</h2>\n<h3>Config System</h3>\n<p>A <code>config.json</code> file is now included in the mod root. All major settings are now configurable</p>\n<h3>Timed Refresh</h3>\n<p>Bounty cycles now automatically reset after 24 hours regardless of completion status. Interval is configurable via <code>RefreshHours</code> in <code>config.json</code>.</p>\n<h3>Custom Rewards</h3>\n<p>Currency type, currency amount, and the bonus item pool are now fully overridable via item template IDs. Want to pay out in euros, dollars, or a GPU? Just swap the <code>CurrencyTpl</code>.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2627/bounty-board-dynamic-pmc-contracts/1.1.0",
+      "content_length": 13361,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 346,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-13T19:49:00.000000Z",
+      "created_at": "2026-03-13T19:49:50.000000Z",
+      "updated_at": "2026-07-28T08:09:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d9ed1dc7b0752e88930c93b7578a7f8498245504506098d79975bccee2be1de2",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1180920337/964be8a3-5984-44c8-bf08-1f2c734d7353?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A18%3A31Z&rscd=attachment%3B+filename%3DBountyBoard-drb.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A17%3A58Z&ske=2026-08-01T20%3A18%3A31Z&sks=b&skv=2018-11-09&sig=ZnqwjN06pQGsWH5pRu%2B8gd6YKZa91ZBPbGl3aP7Zd2E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3NCwibmJmIjoxNzg1NjEyNTc0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.szFPoI_aq_gk35DkVMl4WGcif_izBvgZ0rT3d_iXbPM&response-content-disposition=attachment%3B%20filename%3DBountyBoard-drb.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13255,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h2>Initial release</h2>\n<p>Introduce the Bounty Board, a server-side mod designed to add high-stakes objectives to your raids. Track down specific PMC targets from the SPT bot pool, secure their dogtags, and claim your rewards through the in-game messenger.</p>\n<h2>Key Features in this Release:</h2>\n<p>Messenger Integration: A new “Bounty Board” contact appears alongside your existing traders.</p>\n<p>Dynamic Targets: PMC targets are randomized every cycle.</p>\n<p>Automated Rewards: Use the bounty claim command to trade dogtags for Rubles and high-tier medical supplies.</p>\n<p>Full Persistence: Your progress and active bounties survive server restarts.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2627/bounty-board-dynamic-pmc-contracts/1.0.0",
+      "content_length": 12570,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 103,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-13T16:04:00.000000Z",
+      "created_at": "2026-03-13T16:04:14.000000Z",
+      "updated_at": "2026-07-28T08:09:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f92a0250f158bcccbbcf38785ed9a4c4407960a5a73cb14595f6ad13fa009e3d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1180920337/98a98dbe-b7d0-4c0d-a381-c4f46539ff4b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A19%3A02Z&rscd=attachment%3B+filename%3DBountyBoard-drb.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A18%3A37Z&ske=2026-08-01T20%3A19%3A02Z&sks=b&skv=2018-11-09&sig=vX9p9VizpzXQtQ3YmSJJdVpMwYqh52hsgUZ2tqHXGhw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3NSwibmJmIjoxNzg1NjEyNTc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2v7yCPmvn4E6SRoJcyZDJRGnsf4t--T0r_Bg3xLGMlw&response-content-disposition=attachment%3B%20filename%3DBountyBoard-drb.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 88,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:29:30.004Z",
+    "discoveredBy": "seed"
+  }
+}

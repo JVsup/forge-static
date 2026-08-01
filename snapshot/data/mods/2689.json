@@ -1,0 +1,191 @@
+{
+  "type": "mod",
+  "id": 2689,
+  "hub_id": null,
+  "guid": "com.sgtlaggy.itempropertybackport",
+  "name": "Item Property Backport",
+  "slug": "item-property-backport",
+  "teaser": "Get live item stat/balance changes!",
+  "thumbnail": "",
+  "downloads": 5559,
+  "favourites_count": 40,
+  "description": "<h2>Updated: July 16 2026</h2>\n<p>To update, delete <code>db/items.json</code> and it will be re-downloaded.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Properties</div>\n<div class=\"tab-content\"><h3>Generic</h3>\n<ul>\n<li>CanSellOnRagfair    (BSG flea blacklist)</li>\n<li>ConflictingItems    (item incompatibility)</li>\n</ul>\n<h3>Weapons, mods</h3>\n<ul>\n<li>Accuracy</li>\n<li>Ergonomics</li>\n<li>Loudness</li>\n<li>Recoil</li>\n<li>Velocity</li>\n<li>CameraSnap</li>\n<li>CenterOfImpact</li>\n<li>DeviationCurve</li>\n<li>DeviationMax</li>\n<li>RecoilAngle</li>\n<li>RecolDispersion   (not misspelled)</li>\n<li>RecoilForceBack</li>\n<li>RecoilForceUp</li>\n</ul>\n<h3>Magazines</h3>\n<ul>\n<li>CheckTimeModifier</li>\n<li>LoadUnloadModifier</li>\n<li>MalfunctionChance</li>\n</ul>\n<h3>Ammo</h3>\n<ul>\n<li>AmmoAccr        (accuracy)</li>\n<li>AmmoRec         (recoil)</li>\n<li>ArmorDamage</li>\n<li>BallisticCoeficient</li>\n<li>BulletMassGram</li>\n<li>Damage</li>\n<li>DurabilityBurnModificator</li>\n<li>FragmentationChance</li>\n<li>HeatFactor</li>\n<li>HeavyBleedingDelta</li>\n<li>InitialSpeed</li>\n<li>LightBleedingDelta</li>\n<li>MalfFeedChance</li>\n<li>MalfMisfireChance</li>\n<li>PenetrationChanceObstacle</li>\n<li>PenetrationPower</li>\n<li>PenetrationPowerDiviation  (not misspelled)</li>\n<li>StackMaxSize</li>\n</ul>\n<h3>Armor, rigs, helmets, glasses</h3>\n<ul>\n<li>ArmorClass</li>\n<li>ArmorColliders</li>\n<li>ArmorMaterial</li>\n<li>ArmorType</li>\n<li>BlindnessProtection</li>\n<li>BlocksEarpiece</li>\n<li>BluntThroughput</li>\n<li>DeafStrength</li>\n<li>Durability</li>\n<li>MousePenalty           (turn speed)</li>\n<li>RepairCost</li>\n<li>RicochetParams</li>\n<li>SpeedPenaltyPercent</li>\n<li>WeaponErgonomicPenalty</li>\n</ul>\n<h3>Headphones</h3>\n<ul>\n<li>AmbientVolume</li>\n<li>CompressorAttack</li>\n<li>CompressorGain</li>\n<li>CompressorRelease</li>\n<li>CompressorThreshold</li>\n<li>RolloffMultiplier</li>\n<li>Distortion</li>\n<li>DryVolume</li>\n</ul>\n<h3>Nightvision</h3>\n<ul>\n<li>DiffuseIntensity</li>\n<li>Intensity</li>\n<li>NoiseIntensity</li>\n<li>NoiseScale</li>\n</ul>\n<h3>Keys</h3>\n<ul>\n<li>MaximumNumberOfUsages</li>\n</ul>\n<h3>Meds</h3>\n<ul>\n<li>MedUseTime</li>\n<li>MaxHpResource</li>\n<li>EffectsDamage</li>\n</ul>\n<h3>Food</h3>\n<ul>\n<li>MaxResource</li>\n</ul>\n<h3>Meds, Food</h3>\n<ul>\n<li>EffectsHealth</li>\n<li>Buffs</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Config</div>\n<div class=\"tab-content\"><ul>\n<li><code>ExcludeProperties</code>: Each property can be individually excluded. See Properties tab or the included <code>properties.md</code> file for a list of property names.</li>\n<li><code>IncludeItems</code>: Apply changes only to specified items. Ignores <code>ExcludeItems</code>.</li>\n<li><code>ExcludeItems</code>: Apply changes to all items except specified.</li>\n<li><code>AllPrices</code>: Update prices for all items</li>\n<li><code>UnblacklistedPrices</code>: Update prices only for items that are newly available on the flea market</li>\n<li><code>UpdateGunsmith</code>: Apply changes to Gunsmith tasks</li>\n</ul>\n<p>Use the <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search\" rel=\"noreferrer noopener\">SPT Item Finder</a> to find item IDs for lists.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><ul>\n<li>Fully compatible with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2512/wtt-content-backport\" rel=\"noreferrer noopener\">WTT Content Backport</a></li>\n<li>Supercedes <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2668/attachmentbackport\" rel=\"noreferrer noopener\">RuKira’s AttachmentBackport</a></li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Recommended Mods</div>\n<div class=\"tab-content\"><ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1131/live-flea-prices\" rel=\"noreferrer noopener\">Live Flea Prices</a> can keep item prices up to date with live.</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1343/skipper\" rel=\"noreferrer noopener\">Skipper</a> <em>may</em> be required to complete some Gunsmith or similar tasks.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Data Source</div>\n<div class=\"tab-content\"><p>Data is sourced from <a target=\"_blank\" class=\"external-link\" href=\"https://tarkov.dev/\" rel=\"noreferrer noopener\">tarkov.dev</a>. I’ll do my best to keep the data up to date with notable changes, keep an eye on the date above. Feel free to comment if I’m over a week late to an update.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2689/item-property-backport",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-05-12T23:50:00.000000Z",
+  "created_at": "2026-05-12T23:40:58.000000Z",
+  "updated_at": "2026-07-28T09:39:03.000000Z",
+  "owner": {
+    "id": 50076,
+    "name": "sgtlaggy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/S7wTCtKyPp2VJq7EYaE6x5KjtGrn3DEwK1gmB5iu_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-30T05:20:41.000000Z",
+    "updated_at": "2026-08-01T19:44:13.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/sgtlaggy/spt-item-property-backport",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14106,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<p>Changed item file format, new data is no longer compatible with older mod versions.</p>\n<p>Added <code>RemoveAmmoboxFleaLimit</code> config setting. SPT limits ammo boxes to 0-3 offers while all other items are 7-30. Setting this option will remove the override so they match other items.</p>\n<p>Added support for food, meds, and armor properties:\nMedUseTime\nEffectsDamage\nEffectsHealth\nBuffs\nMaxHpResource (meds)\nMaxResource (food)\nArmorClass\nArmorColliders\nArmorMaterial\nArmorType\nDurability\nRepairCost\nRicochetParams</p>\n<p>Fixed <code>properties.md</code> typo (<code>WeaponErgonomicPenalty</code>) and missing properties (<code>DeafStrength</code>, <code>BlocksEarpiece</code>).</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2689/item-property-backport/1.4.0",
+      "content_length": 128665,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1117,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T21:11:00.000000Z",
+      "created_at": "2026-07-16T21:11:21.000000Z",
+      "updated_at": "2026-07-28T09:39:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7123221002a0be543caa5b63a2fa6517bf05b5ca5253502b262cc112037a10ad?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1217324596/ef284379-ea1c-4a4f-b3dc-05b7aee74920?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A18Z&rscd=attachment%3B+filename%3DItemPropertyBackport-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A32Z&ske=2026-08-01T21%3A07%3A18Z&sks=b&skv=2018-11-09&sig=ExgHNuZm7gsNTLRTBp%2FpiltGLObqvSUa%2FSNh4QzHa3k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OSwibmJmIjoxNzg1NjE1OTU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ea7uMh_9rYBsu23qhQIkdX1-sAymCpsGgFxzg4x6miE&response-content-disposition=attachment%3B%20filename%3DItemPropertyBackport-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13681,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<p>Added config options to update item base (handbook) and flea prices.</p>\n<p>By default this is limited only to items that were unblacklisted but can be expanded to all items.</p>\n<p>LiveFleaPrices will take priority if installed.</p>\n<p>Updated data as usual.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2689/item-property-backport/1.3.0",
+      "content_length": 121119,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2318,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-02T07:28:00.000000Z",
+      "created_at": "2026-06-02T07:28:44.000000Z",
+      "updated_at": "2026-07-28T09:03:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/52179e57af1535fd90b74246df8579fc163bb63728c8fd877099e602a9d6b366?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1217324596/c3875fab-ecef-4ea1-9d64-c24d9237a07f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A59Z&rscd=attachment%3B+filename%3DItemPropertyBackport-1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A21Z&ske=2026-08-01T21%3A24%3A59Z&sks=b&skv=2018-11-09&sig=x9Q%2BRgKYr6W4nj9dFdGSzvfOogyYV7%2B6NUbQSmxzEFI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OSwibmJmIjoxNzg1NjE1OTU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ea7uMh_9rYBsu23qhQIkdX1-sAymCpsGgFxzg4x6miE&response-content-disposition=attachment%3B%20filename%3DItemPropertyBackport-1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13657,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Add a config option to modify Gunsmith quests to latest values so Skipper is not necessary, enabled by default.</p>\n<p>This also makes an attempt to change the values listed in the quest description by simple replacement, only tested English. Some text may be misleading or confusing depending on value changed like “must weigh no more than 0 kg,” just ignore that condition.</p>\n<p>Requires the new config file or just the new config value:</p>\n<pre><code>\"UpdateGunsmith\": true\n</code></pre>\n<p>Note: Quest data included at time of upload was written by hand using the Fandom wiki for reference as tarkov.dev quests have not been updated with the April 20th ergo/recoil rebalance.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2689/item-property-backport/1.2.0",
+      "content_length": 56983,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 724,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-27T01:44:00.000000Z",
+      "created_at": "2026-05-27T01:46:14.000000Z",
+      "updated_at": "2026-07-28T09:03:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/667cd1adb94bc2f72a5c65393b1428fadf5c4e41dcdefd88c4d1de38b46e013e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1217324596/981848b8-4df7-43d1-a585-eeef0e0aead8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A34Z&rscd=attachment%3B+filename%3DItemPropertyBackport-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A26Z&ske=2026-08-01T21%3A06%3A34Z&sks=b&skv=2018-11-09&sig=gTGffruaqC13kRAFlsn6IgZ3tAaG6Lvpq%2FJ%2BlhNp5Gc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OSwibmJmIjoxNzg1NjE1OTU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ea7uMh_9rYBsu23qhQIkdX1-sAymCpsGgFxzg4x6miE&response-content-disposition=attachment%3B%20filename%3DItemPropertyBackport-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13609,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>Refactored to support many new properties. See the mod description for a list of all currently known/supported properties.</p>\n<p>The config file has been changed with renamed keys that work largely the same, though excluding specific properties is now a list instead of simple toggles.</p>\n<p>A <code>properties.md</code> file is also now present in the mod folder for offline reference of properties if you wish to exclude them. This is the same list that is in the mod description and also includes short JSON examples for anyone not familiar.</p>\n<p>As the new properties include magazine check time and load/unload modifiers, it now provides all properties from <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2668/attachmentbackport\" rel=\"noreferrer noopener\">AttachmentBackport</a>.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2689/item-property-backport/1.1.0",
+      "content_length": 52161,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 760,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-18T00:47:00.000000Z",
+      "created_at": "2026-05-18T00:32:09.000000Z",
+      "updated_at": "2026-07-28T08:59:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f74600fb9a90ff7232fef543132ea8cfecd6156b706e67ff8a54f1a0fca3a40b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1217324596/ea7a2ca5-88b0-4560-bfd2-13b3cfa53429?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A03Z&rscd=attachment%3B+filename%3DItemPropertyBackport-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A18Z&ske=2026-08-01T21%3A10%3A03Z&sks=b&skv=2018-11-09&sig=y7H7rwKPyragwBST8qyAMV6Qai8ZU0UMzMThvdNM8a0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2MiwibmJmIjoxNzg1NjE1OTYyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.w7YxicUGPUQv7zxMxGK7dXCWNzvgwlbHXcN9B4oNfu8&response-content-disposition=attachment%3B%20filename%3DItemPropertyBackport-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13586,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Includes data from May 8th update.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2689/item-property-backport/1.0.0",
+      "content_length": 52743,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 640,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-12T23:51:00.000000Z",
+      "created_at": "2026-05-12T23:44:02.000000Z",
+      "updated_at": "2026-07-28T08:54:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2e55af1aa89f99d060421abb61cbe3d2c0f67a56558043fc84e295e999ea9dda?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1217324596/3099008f-94df-4d96-abfc-b2089022272e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A31Z&rscd=attachment%3B+filename%3DItemPropertyBackport-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A02Z&ske=2026-08-01T21%3A25%3A31Z&sks=b&skv=2018-11-09&sig=9jh0NXFnEZCQ19Nno1d%2Bg9MpQafzULVAXjhgwbKUKd4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI2MiwibmJmIjoxNzg1NjE1OTYyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.w7YxicUGPUQv7zxMxGK7dXCWNzvgwlbHXcN9B4oNfu8&response-content-disposition=attachment%3B%20filename%3DItemPropertyBackport-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 105,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:47:31.747Z",
+    "discoveredBy": "seed"
+  }
+}

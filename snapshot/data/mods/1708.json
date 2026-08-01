@@ -1,0 +1,94 @@
+{
+  "type": "mod",
+  "id": 1708,
+  "hub_id": 2329,
+  "guid": null,
+  "name": "BatterySystem",
+  "slug": "batterysystem",
+  "teaser": "Electronics now require drainable batteries.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2329.jpg",
+  "downloads": 1770,
+  "favourites_count": 0,
+  "description": "<p><strong>Huge thank you to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1295-batterysystem/\" rel=\"noreferrer noopener\">Jiro for making this mod</a>!</strong></p>\n<p><strong><strong>This mod is not mine, I have only refactored the code &amp; fixed some of the largest issues!</strong></strong></p>\n<p><strong>Features</strong></p>\n<ul>\n<li>All Headsets, Tactical devices, Sights &amp; Thermal/NVGs now require batteries and have a slot reserved for them. Batteries are drained over time when the item is equipped and in use.</li>\n<li>Without batteries Sights lose their reticle (you can still see through them!) and NVDs &amp; tactical devices won’t work.</li>\n<li>Bots have batteries in their gear &amp; backpacks. Lower level enemies generally have more drained batteries.</li>\n<li>Several crafts in the hideout make it possible to recharge &amp; make batteries.</li>\n<li>Device description lets you know which battery type is required, but generally headphones always take AAs, Sights take either AAs or CR2032s, Holographic sights (like EOTECHs) and flashlights take CR123s.</li>\n</ul>\n<p><strong>Replaces Existing items:</strong></p>\n<p>D Size Batteries =&gt; CR2032 Batteries</p>\n<p>Rechargable Batteries =&gt; CR123 Batteries</p>\n<p><strong>Installation</strong></p>\n<ol>\n<li><strong>Install like normal:</strong> Drop the extracted user/ and BepInEx/ folders into your SPT installation folder.</li>\n<li><strong>Refresh Item Icons:</strong> After starting the Server, in Launcher click Settings &gt; Clean Temp files.</li>\n</ol>\n<p><strong>Compability</strong></p>\n<p><strong>BatterySystem conflicts with any mod that modifies D Size Battery or Rechargable Battery.</strong></p>\n<p><strong>Any mod that alters hearing (such as a deafening effect) won’t probably work well with unpowered headsets. I recommend disabling BatterySystem for headsets in the F12-menu.</strong></p>\n<h3><strong>Adding compatibility for custom electronics such as collimators:</strong></h3>\n<ol>\n<li>Open up order.json in your SPT-AKI/user/mods/order.json</li>\n<li>Add the folder names of your mods that add electronics. Add Jiro-BatterySystem after them:</li>\n</ol>\n<p>JSON: order.json</p>\n<p>{ “order”: [ “CustomSightModFolderName”, “AnotherCustomSightFolderName”, “Jiro-BatterySystem” ] } Custom electronics default to using CR2032 batteries.</p>\n<p>Written permission from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/35452-jiro/\" rel=\"noreferrer noopener\">Jiro</a> to publish this updated version:</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1708/batterysystem",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2024-09-04T11:49:57.000000Z",
+  "created_at": "2024-09-04T11:49:57.000000Z",
+  "updated_at": "2026-07-07T16:59:01.000000Z",
+  "owner": {
+    "id": 59606,
+    "name": "birgere",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/65130a95cd76115695a028f146bf8b6c25cc48e6_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-07-26T19:38:43.000000Z",
+    "updated_at": "2026-07-10T04:51:27.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 32217,
+      "name": "Jiro",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/cbf96dd5248825562ac11a1e91a226e81d89acf6_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/6e7d8749caa49f8c5a3db714978c4a25e1eaee40.jpg",
+      "created_at": "2023-06-10T12:51:27.000000Z",
+      "updated_at": "2026-07-10T04:56:55.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/Birgerev/BatterySystemMod/tree/master",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 2884,
+      "hub_id": 11616,
+      "version": "1.6.0",
+      "description": "<p><strong>Tested with SPT 3.9.4</strong></p>\n<ul>\n<li>Updated to work with SPT 3.9.4</li>\n<li>Fixed bug where game would soft lock when you entered a Mounted Firearms</li>\n<li>Reworked battery spawning to be compatible with Realism Mod (Bots will now have batteries)</li>\n<li>Headphones that attaches to helmets now use batteries</li>\n<li>Tactical devices attached to helmets now use batteries</li>\n<li>Flashlights &amp; Lasers are now always turned off (not only visually) when out of battery, which should fix desync &amp; bots seeing lights that dont have batteries</li>\n<li>Some work on WIP feature “folding” backup sights (not working yet)</li>\n<li>Refractored almost all code (should be a lot easier to add new features now)</li>\n</ul>\n<p>^ Work since Jiro’s last update</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1708/batterysystem/1.6.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1770,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-09-04T11:49:57.000000Z",
+      "created_at": "2024-09-04T11:49:57.000000Z",
+      "updated_at": "2026-05-14T03:42:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/656c83b28fd91c77151182e1d509ec83bd01d3e0b59dd74b93fce0bad27eb693",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/834976981/505437b3-ce43-4b68-aea1-ef90e4331401?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A42Z&rscd=attachment%3B+filename%3DBatterySystem-v1.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A28Z&ske=2026-08-01T21%3A07%3A42Z&sks=b&skv=2018-11-09&sig=k6%2B9Au9DaXkYX0Lf5tDdSt6TN5pbfwmvV2dhH3TwIiA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MSwibmJmIjoxNzg1NjE1MzUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fPq4h55TjT18Qdb6IGx1MU4weX3b1AdZCgBQPYdwuZs&response-content-disposition=attachment%3B%20filename%3DBatterySystem-v1.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:56:53.996Z",
+    "discoveredBy": "mod:2513"
+  }
+}

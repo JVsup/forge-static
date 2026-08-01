@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2853,
+  "hub_id": null,
+  "guid": "com.sipto.universalsensitivity",
+  "name": "Universal Sensitivity",
+  "slug": "universal-sensitivity",
+  "teaser": "Tarkov turns your mouse down every time you sprint, jump, crouch or go prone — and never tells you. One sensitivity, everywhere, with free look finally on your mouse instead of the engine's.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/LStOtoUjvQy3QerzAJDdn3jSQK7snAEP6658eY2P.png",
+  "downloads": 421,
+  "favourites_count": 3,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3>Overview</h3>\n<p>One mouse sensitivity, everywhere. The game quietly scales your look speed down while you sprint, jump, crouch, go prone or sit in the transitions between poses, and drains it further with your stamina mid-sprint. This removes all of it: turning at a dead sprint feels exactly like turning while standing.</p>\n<p>Jumping needed two extra fixes, because mid-air the game doesn’t just cut your sensitivity. It eases your body toward where you’re looking instead of taking the turn outright, and it caps how far any single frame is allowed to rotate — which is why slow drags felt right while fast flicks came out clipped. Both are corrected: an airborne flick lands the frame you make it.</p>\n<p>Free look is brought in line too. Vanilla alt-look ignores your sensitivity setting entirely and runs at a speed the engine hardwires; here it rides your sensitivity, stepped up 3x.</p>\n<h3>What it deliberately leaves alone</h3>\n<p>Gear. Heavy armor and helmets that slow your turns still do, scopes keep their aim sensitivity, and the weight system is untouched — including everything weight does to the jump itself: height, takeoff timing, the overweight penalty. The game runs gear through a separate path from the action penalties, so the cut is clean.</p>\n<p>There’s nothing to configure; the numbers are the point.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h3>Requirements</h3>\n<p><strong>Nothing.</strong> No dependencies, no integrations.</p>\n<h3>Steps</h3>\n<ol>\n<li>Download the archive.</li>\n<li>Extract it into your SPT folder — the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>.</li>\n<li>Merge when Windows asks. <code>UniversalSensitivity</code> lands in <code>BepInEx/plugins</code>.</li>\n<li>Launch.</li>\n</ol>\n<p>Client-side only. Nothing goes in <code>user/mods</code>, and in a Fika group only you need it.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p>Everything is gated to your own player, so bots and Fika teammates turn exactly as they always did.</p>\n<p>Don’t run it alongside <strong>Sprint Sensitivity Fixer</strong> — this covers everything that mod does, and they’d both compensate the same sprint.</p>\n<p>Built against SPT 4.0.13 on stable named classes only — no obfuscated hooks.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2853/universal-sensitivity",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was utilized to create the Mod Photo as well as audit the mod.</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-07-28T01:41:00.000000Z",
+  "created_at": "2026-07-28T01:41:31.000000Z",
+  "updated_at": "2026-07-28T18:02:53.000000Z",
+  "owner": {
+    "id": 117959,
+    "name": "Sipto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-07-13T07:04:33.000000Z",
+    "updated_at": "2026-08-01T17:46:06.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CameronsWorks/UniversalSensitivity",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14266,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>check mod description</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2853/universal-sensitivity/1.0.0",
+      "content_length": 5702,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 421,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T01:41:00.000000Z",
+      "created_at": "2026-07-28T01:42:03.000000Z",
+      "updated_at": "2026-07-28T18:02:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8622ba25c166b4a063ed91d16f86a4d47b786b361ec62d0ef2aceb633b79c866",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1314414170/04459bdb-a196-4af7-857c-f69cf6c2a936?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A10Z&rscd=attachment%3B+filename%3DUniversalSensitivity-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A27Z&ske=2026-08-01T21%3A07%3A10Z&sks=b&skv=2018-11-09&sig=c7exJmE6qfRhaJscbO2wBcnyBE1a17Cgx%2Bk182XItpA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DUniversalSensitivity-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 5,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:23.209Z",
+    "discoveredBy": "seed"
+  }
+}

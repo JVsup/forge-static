@@ -1,0 +1,97 @@
+{
+  "type": "mod",
+  "id": 813,
+  "hub_id": 1097,
+  "guid": null,
+  "name": "LooseKeyModifier",
+  "slug": "loosekeymodifier",
+  "teaser": "After recent complaints about keys not spawning in looseloot i decided to make a quick and dirty modifier that you can configure to your liking",
+  "thumbnail": "",
+  "downloads": 6656,
+  "favourites_count": 0,
+  "description": "<p><strong>No support will be given. You are on your own.</strong></p>\n<p><strong>No plans of updating of it ever needs it.</strong></p>\n<p>Config Settings and what they do.</p>\n<p>-- Loose Loot Keys –</p>\n<p><strong>relativeProbabilityThreshold: 3</strong> Anything lower than relativeProbabilityThreshold Will be modified by the Multiplier below. Should probably leave this alone if you dont know what this means.</p>\n<p><strong>relativeProbabilitymultiplier: 20</strong> Multiplier mentioned above</p>\n<p><strong>LooseKeyPileProbability</strong>: 0.10, This alters spawn point probabilites lower than this setting and leaving higher probabilities alone. (Loose Loot Spawn Point)</p>\n<p>-- Loose Loot KeyCard –</p>\n<p><strong>AlterKeyCardProbability</strong>: true, If enabled keycard spawn probabilities will be changed</p>\n<p><strong>LooseKeycardProbability</strong>: 0.02 This alters spawn point probabilites lower than this setting and leaving higher probabilities alone. (Loose Loot Spawn Point)</p>\n<p>-- Container Keys –</p>\n<p><strong>drawerStaticRelativeProbability</strong>: 1658 This value is based of the chance of the “Yotota Key” Spawning inside of a drawer anything below this value will get changed to the number. I have halved the value so keys are half as likely to spawn Yotota Key. Based off 3.7 loot values mileage may vary</p>\n<p><strong>jacketStaticRelativeProbability</strong>: 829 This value is based of the chance of the “Yotota Key” Spawning inside of a jacket anything below this value will get changed to the number. Based off 3.7 loot values mileage may vary</p>\n<p>Due to the way the LooseLoot Generation happens on map start there is also a chance that it will never pick that spawnpoint pile even when lootPileProbability is at 1(100%) to get around this increase your loose loot map multiplier with ur aio of choice.</p>\n<p>Slight oversight. If the staticRelativeProbabilty is too high keys that are usually really rare in some containers might become super common be careful adjusting this number. Consider lowering it slot to compensate.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/813/loosekeymodifier",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2023-03-23T20:26:33.000000Z",
+  "created_at": "2023-03-23T20:26:33.000000Z",
+  "updated_at": "2026-07-13T18:09:14.000000Z",
+  "owner": {
+    "id": 26188,
+    "name": "Kaeno",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=K&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2023-01-28T16:18:10.000000Z",
+    "updated_at": "2026-07-29T20:59:34.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 1450,
+      "name": "chomp",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/8b5553070151eb62e0d18c268f338c0ed4c71368_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2021-01-10T12:20:24.000000Z",
+      "updated_at": "2026-08-01T17:41:34.000000Z"
+    },
+    {
+      "id": 9668,
+      "name": "CWX",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6c471bf012d488dbee6c4c67b5e81bbd404551f9_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2021-09-25T23:47:26.000000Z",
+      "updated_at": "2026-07-10T04:49:48.000000Z"
+    }
+  ],
+  "license": {
+    "id": 14,
+    "hub_id": 17,
+    "name": "University of Illinois/NCSA Open Source License",
+    "link": "https://choosealicense.com/licenses/ncsa/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://dev.sp-tarkov.com/Kaeno/LooseKeyModifier",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 6145,
+      "hub_id": 7502,
+      "version": "1.0.3",
+      "description": "<p>Changed Container adjustment code to only do Drawers and Jackets. So you don’t notice really rare keys popping up in places you don’t usually get them</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/813/loosekeymodifier/1.0.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.7.0",
+      "downloads": 2975,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-02T12:20:17.000000Z",
+      "created_at": "2023-10-02T12:20:17.000000Z",
+      "updated_at": "2026-07-13T18:07:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/sp-tarkov"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:44.518Z",
+    "discoveredBy": "mod:592"
+  }
+}

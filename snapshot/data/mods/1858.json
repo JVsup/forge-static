@@ -1,0 +1,300 @@
+{
+  "type": "mod",
+  "id": 1858,
+  "hub_id": 2509,
+  "guid": "flir.enemymarkers",
+  "name": "Enemy Markers",
+  "slug": "enemy-markers",
+  "teaser": "Simply a Marker that shows the enemies with a \"v\" shaped marker. Can also display the distance from the enemy.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2509.png",
+  "downloads": 17697,
+  "favourites_count": 13,
+  "description": "<p><strong>I (APerson) AM NOT THE ORIGINAL CREATOR OF THIS MOD</strong></p>\n<p>This mod gives you the ability to spot an enemy and have a Marker showing where they are for <strong>5 Seconds</strong>.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://gitlab.com/flir063-spt/enemymarkers/-/raw/master/resources/scav.png?ref_type=heads&amp;inline=false\" alt=\"scav scoped\" /></p>\n<p>Configurable:</p>\n<p>Marker character</p>\n<p>Size</p>\n<p>Distance / Radius from center</p>\n<p>Color by “player” category (Bear/Usec/Scav/Boss …)</p>\n<p>To install just unzip at the root of your SPT folder and it will create a <code>BepInEx\\\\plugins\\\\flir.enemymarkers</code> directory for you</p>\n<h3>If you want to help in the development of this mod you are welcome to propose merge requests or issues on its project page: <a target=\"_blank\" class=\"external-link\" href=\"https://gitlab.com/flir063-spt/enemymarkers\" rel=\"noreferrer noopener\">https://gitlab.com/flir063-spt/enemymarkers</a></h3>\n<p>Do not make requests somewhere else than gitlab as I would not see them, I (flir) am not the “author” of this mod, just an additional author.</p>\n<p>Special Thx to Level-Yellow-316 on Reddit for originally making this mod.</p>\n<p>Known Issues</p>\n<p>none ATM</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1858/enemy-markers",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-11-28T23:35:00.000000Z",
+  "created_at": "2024-11-28T23:35:10.000000Z",
+  "updated_at": "2026-07-28T06:27:20.000000Z",
+  "owner": {
+    "id": 46667,
+    "name": "APerson",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-03-18T04:26:48.000000Z",
+    "updated_at": "2026-08-01T11:16:16.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 69402,
+      "name": "flir",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/c6b09b9b0ec85eafdaed4a0fcd100ec77d72d939_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-12-12T12:24:24.000000Z",
+      "updated_at": "2026-08-01T13:39:00.000000Z"
+    }
+  ],
+  "license": {
+    "id": 13,
+    "hub_id": 16,
+    "name": "The Unlicense",
+    "link": "https://choosealicense.com/licenses/unlicense/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://gitlab.com/flir063-spt/enemymarkers",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12333,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<p>Features</p>\n<ul>\n<li>Added optional light sources above detected characters. The lights follow the same visibility rules as markers. Disabled by default with configurable intensity and range settings.</li>\n</ul>\n<p>Bug Fixes</p>\n<ul>\n<li>Fixed bug where marker colors could change for the same character when entering and exiting ghost mode. Colors are now cached when markers are created and restored when exiting ghost mode.</li>\n<li>Fixed bug where markers would permanently show incorrect colors due to race condition at marker creation. Player profile data (Side, Role) may be incomplete when OnPersonAdd fires, causing wrong color assignment. Color is now validated and recalculated on first visibility when player data is fully loaded.</li>\n<li>Fixed bug where ghost marker character would not update from “v” to “x” immediately when entering ghost mode. The marker character now changes instantly when losing line of sight, instead of waiting for the player to move.</li>\n<li>Fixed bug where ghost markers remained visible when the marker toggle key was pressed. Ghost markers now correctly respect the visibility toggle state (default: Y key), hiding along with live markers when toggled off.</li>\n<li>Fixed bug where markers would briefly appear white before showing the correct color. Color is now explicitly reapplied when markers become visible to ensure Unity TextMesh properly renders the assigned color.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.3.0",
+      "content_length": 13801,
+      "spt_version_constraint": "~4.0",
+      "downloads": 9212,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-15T23:53:00.000000Z",
+      "created_at": "2025-11-15T23:53:55.000000Z",
+      "updated_at": "2026-07-28T06:27:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/9a9338b5499c90390d8b2a09a60824d6d8331d7dff9bfcc97d8cd3413115f02a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.3.0/flir.enemymarkers-v1.3.0.zip"
+      }
+    },
+    {
+      "id": 12307,
+      "hub_id": null,
+      "version": "1.1.3",
+      "description": "<p>Fixed ghost marker distance calculation</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.1.3",
+      "content_length": 12420,
+      "spt_version_constraint": "~4.0",
+      "downloads": 259,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-13T16:31:00.000000Z",
+      "created_at": "2025-11-13T16:31:56.000000Z",
+      "updated_at": "2026-07-28T06:26:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-69cdf565078ead4bbd6ae8809e2cfe4155f06d06e5a9c05b673b92182208cb2b-e45dbbc2",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.1.3/flir.enemymarkers-v1.1.3.zip"
+      }
+    },
+    {
+      "id": 12300,
+      "hub_id": null,
+      "version": "1.1.2",
+      "description": "<p>Added an option to have markers become ghosts when the tracked character goes behind cover. Showing the last know position for 5 seconds. This is a less OP option than active tracking.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.1.2",
+      "content_length": 12443,
+      "spt_version_constraint": "~4.0",
+      "downloads": 143,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-12T22:38:00.000000Z",
+      "created_at": "2025-11-12T22:38:35.000000Z",
+      "updated_at": "2026-07-28T06:22:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-345ef5cf2860a95ca6994cf0481e161bbd863b5dd2c5bbadd40c0a5edd260746-b8f6549c",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.1.2/flir.enemymarkers-v1.1.2.zip"
+      }
+    },
+    {
+      "id": 12279,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<p>Added foliage masking as an option</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.1.1",
+      "content_length": 11861,
+      "spt_version_constraint": "~4.0",
+      "downloads": 161,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-11T14:22:00.000000Z",
+      "created_at": "2025-11-11T13:51:41.000000Z",
+      "updated_at": "2026-07-28T06:20:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/ba115c299ac95bf2e9414e95919be732a6add37c88bcfa7910add8a5924f0f2c?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/246071419/download"
+      }
+    },
+    {
+      "id": 12274,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>This is an important version as it changes the way we create and display markers altogether:</p>\n<ul>\n<li>removed gui markers and replaced them with 3D objects. This\nfixes all issues with scopes DLSS or whatever.</li>\n<li>Added new keybinding to toggle distance display.</li>\n<li>Added new options for scaling the markers.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.1.0",
+      "content_length": 11738,
+      "spt_version_constraint": "~4.0",
+      "downloads": 145,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-10T22:27:00.000000Z",
+      "created_at": "2025-11-10T22:27:18.000000Z",
+      "updated_at": "2026-07-28T06:20:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-33c4afb86d8c95ba8ef82ff857cfe91385830a841c23b9680afad9e00c4ebf66-18b86076",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/245822695/download"
+      }
+    },
+    {
+      "id": 12243,
+      "hub_id": null,
+      "version": "1.0.8",
+      "description": "<p>Added keybinding to toggle markers on/off</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.0.8",
+      "content_length": 11644,
+      "spt_version_constraint": "~4.0",
+      "downloads": 241,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-09T00:13:00.000000Z",
+      "created_at": "2025-11-09T00:13:50.000000Z",
+      "updated_at": "2026-07-28T06:18:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/812b50ad9ebb1d87e08acd6e53d72c4de3e02add0059fca7b0268dda3267a72a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/245393067/download"
+      }
+    },
+    {
+      "id": 12187,
+      "hub_id": null,
+      "version": "1.0.7",
+      "description": "<ul>\n<li>Added a fix to support DLSS</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.0.7",
+      "content_length": 11058,
+      "spt_version_constraint": "~4.0",
+      "downloads": 327,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-05T21:33:00.000000Z",
+      "created_at": "2025-11-05T21:33:58.000000Z",
+      "updated_at": "2026-07-28T06:15:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/bdd21e50afa68a4d81e8d0b5cadd98ae5fe1d6a8134360ea33712e4506fdcd7d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/244514215/download"
+      }
+    },
+    {
+      "id": 12183,
+      "hub_id": null,
+      "version": "1.0.6",
+      "description": "<p>Ported to SPT4</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.0.6",
+      "content_length": 10831,
+      "spt_version_constraint": "~4.0",
+      "downloads": 51,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-05T20:32:00.000000Z",
+      "created_at": "2025-11-05T20:32:04.000000Z",
+      "updated_at": "2026-07-28T06:15:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/75cb3f5bb75b66fa53b59c6a2fb507b079c373152de6ac0259ed949bed686084?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/244504264/download"
+      }
+    },
+    {
+      "id": 666,
+      "hub_id": 14162,
+      "version": "1.0.4",
+      "description": "<p>With this version the mod works for more than one raid. \\o/</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1858/enemy-markers/1.0.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 4129,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-04T12:43:26.000000Z",
+      "created_at": "2025-05-04T12:43:26.000000Z",
+      "updated_at": "2026-05-14T01:37:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/8ce7e1203f2d9d0ea391ccd5fe50614ad355017fd249467bbbf061c4f72b344d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/flir063-spt/enemymarkers/-/package_files/190903230/download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 14,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:45.595Z",
+    "discoveredBy": "seed"
+  }
+}

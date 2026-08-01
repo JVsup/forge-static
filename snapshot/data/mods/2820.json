@@ -1,0 +1,2806 @@
+{
+  "type": "mod",
+  "id": 2820,
+  "hub_id": null,
+  "guid": "com.sipto.wedge",
+  "name": "Wedge",
+  "slug": "wedge",
+  "teaser": "Every boss in Tarkov sits in his room and waits for you to come to him. You learn his corner, you clear it on your terms, you move on. Wedge doesn't wait. Wedge is already walking toward you, and he didn't come alone.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/fHrmeuFK3FrEJonw8hi05YoelaemRjunLef6u4fL.png",
+  "downloads": 10098,
+  "favourites_count": 58,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3>Overview</h3>\n<p><strong>THIS IS 100% COMPATIBLE WITH THE BLACKOUT MOD FROM VULTIFY AS WELL</strong></p>\n<p>Adds The Wedge, the Black Division boss from EFT 1.0.5, and his guard squad to most maps. He gets his own spawn type and his own brain rather than being a reskinned existing boss.</p>\n<p>He does not add the Icebreaker map. He’s the boss from it; the map itself is a whole other job.</p>\n<h3>The fight</h3>\n<p>He pushes toward the nearest player instead of camping, opens with flash and smoke on the approach, and then hands the gunfight to SAIN so he still shoots like something you know how to read. His Black Division Operator escort spawns in the same zone and rushes with him, so the squad arrives together rather than trickling in one at a time. His smoke grenades from Icebreaker are not backported yet so I’ve put regular smokes on him for now.</p>\n<p>880 health, roughly double a PMC, and his gear spawns at near-perfect durability.</p>\n<h3>His kit</h3>\n<p><strong>NOW INCLUDES HIS ACTUAL CLOTHING AND GEAR</strong></p>\n<p>Authentic to 1.0.5 EFT. Spiritus LV-119 plate carrier, Team Wendy EXFIL with L3Harris PVS-31A night vision on a Wilcox mount, and an Avon M53A1 gas mask. Weapons are the SCAR-H, SA58, MDR or MP7, with a USP .45 sidearm and a SOG tomahawk.</p>\n<h3>Spawn chance</h3>\n<p>Scales with level — 10% at 15, another 5% every 5 levels, capped at 25%. So level 20 is 15%, level 30 and up is 25%.</p>\n<p>Solo that’s your level. In Fika it averages everyone who’s pinged the server in the last 15 minutes, so one high-level player doesn’t drag the lobby’s odds up on their own.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h3>Requirements</h3>\n<h3>Requirements</h3>\n<p>Install all four of these first. None of them are optional — Wedge will not run without them.</p>\n<table>\n<thead>\n<tr>\n<th>Mod</th>\n<th>GUID</th>\n<th>Why</th>\n<th>If it’s missing</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>MoreBotsAPI</strong></td>\n<td><code>com.morebotsapi.tacticaltoaster</code></td>\n<td>Supplies the custom boss role Wedge spawns as. There’s no role without it.</td>\n<td>Wedge’s server mod references it directly and won’t load.</td>\n</tr>\n<tr>\n<td><strong>WTT-ContentBackport</strong></td>\n<td><code>com.wtt.contentbackport</code></td>\n<td>Every piece of his Black Division gear and clothing comes from it.</td>\n<td>His kit doesn’t exist and he can’t be generated.</td>\n</tr>\n<tr>\n<td><strong>DrakiaXYZ-BigBrain</strong></td>\n<td><code>xyz.drakia.bigbrain</code></td>\n<td>The rush layer registers against it.</td>\n<td>BepInEx skips the plugin entirely — he’d spawn with no brain.</td>\n</tr>\n<tr>\n<td><strong>Black Division</strong></td>\n<td><code>com.blackdiv.tacticaltoaster</code></td>\n<td>The faction he leads; his guards are its soldiers and share its content.</td>\n<td>His server mod won’t load.</td>\n</tr>\n</tbody>\n</table>\n<p>Both MoreBotsAPI and WTT-ContentBackport ship in several parts (plugin, patcher, server mod) — install them\nwhole, don’t cherry-pick files. Two things worth knowing:</p>\n<ul>\n<li><strong>MoreBotsAPI needs DrakiaXYZ-BigBrain itself</strong>, so it’s required twice over.</li>\n<li><strong>WTT-ContentBackport’s server half needs WTT-ServerCommonLib</strong> (<code>com.wtt.commonlib</code>), and installing it\nnormally brings <strong>WTT-ClientCommonLib</strong> along too. Both are part of the WTT set rather than extra\ndownloads. Wedge uses WTT-ServerCommonLib directly as well, to register the names the end-of-raid screen\nshows for him and his guards.</li>\n</ul>\n<p>Optional:</p>\n<table>\n<thead>\n<tr>\n<th>Mod</th>\n<th>GUID</th>\n<th>What you lose without it</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>SAIN</td>\n<td>—</td>\n<td>The gunfight. He still spawns, rushes and throws grenades, he just fights on the vanilla brain. Found by reflection, so no assembly reference — if the interop fails he logs a warning and carries on.</td>\n</tr>\n<tr>\n<td>Fika</td>\n<td><code>com.fika.core</code></td>\n<td>Co-op, and the group-average spawn scaling with it.</td>\n</tr>\n</tbody>\n</table>\n<h3>Fika</h3>\n<p>The server mod goes with the SPT server. The client plugin and prepatcher go on whichever machine owns the raid, headless included.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><h3>Server — <code>user/mods/Wedge/config.jsonc</code></h3>\n<p>Restart the server after editing.</p>\n<table>\n<thead>\n<tr>\n<th>Key</th>\n<th>Default</th>\n<th>What it does</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>levelScaling</code></td>\n<td>true</td>\n<td>Off falls back to <code>flatChance</code></td>\n</tr>\n<tr>\n<td><code>baseLevel</code> / <code>baseChance</code></td>\n<td>15 / 10</td>\n<td>Where the curve starts</td>\n</tr>\n<tr>\n<td><code>chancePerStep</code> / <code>stepLevels</code></td>\n<td>5 / 5</td>\n<td>+5% every 5 levels</td>\n</tr>\n<tr>\n<td><code>chanceCap</code></td>\n<td>25</td>\n<td>Ceiling</td>\n</tr>\n<tr>\n<td><code>flatChance</code></td>\n<td>15</td>\n<td>Only used with scaling off</td>\n</tr>\n<tr>\n<td><code>groupScaling</code></td>\n<td>true</td>\n<td>Co-op: average the session instead of the host alone</td>\n</tr>\n<tr>\n<td><code>groupWindowMinutes</code></td>\n<td>15</td>\n<td>How recent a ping counts toward that average</td>\n</tr>\n<tr>\n<td><code>escortAmount</code></td>\n<td>3</td>\n<td>Guards</td>\n</tr>\n<tr>\n<td><code>singleZone</code></td>\n<td>true</td>\n<td>Keeps him and the escort arriving together</td>\n</tr>\n<tr>\n<td><code>debugLogs</code></td>\n<td>false</td>\n<td>Verbose server logging</td>\n</tr>\n</tbody>\n</table>\n<p><code>enabledMaps</code> lists where he can turn up: Reserve, Streets, Customs, both Factories, Interchange, Labs, Lighthouse, both Ground Zero tiers, Shoreline, Woods and Labyrinth. Delete an entry to switch that map off.</p>\n<h3>Client — F12, section <em>Wedge</em></h3>\n<ul>\n<li><strong>Enable</strong> — master switch for his client-side behaviour</li>\n<li><strong>Aggressive Rush</strong> — he and his guards push the nearest player when not already in a SAIN firefight</li>\n<li><strong>Grenade Barrage</strong> — flash and smoke on approach</li>\n<li><strong>Rush Radius (m)</strong> — caps how far he’ll chase, so he doesn’t sprint the map from spawn</li>\n<li><strong>Layer Priority</strong> — advanced. Leave it alone unless you know what you’re doing; it has to stay below SAIN’s combat layers at 20+, or he’ll rush when he should be shooting.</li>\n</ul></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2820/wedge",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was utilized to create the Mod Photo as well as audit the mod.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-07-16T01:12:00.000000Z",
+  "created_at": "2026-07-16T01:12:52.000000Z",
+  "updated_at": "2026-07-30T06:02:05.000000Z",
+  "owner": {
+    "id": 117959,
+    "name": "Sipto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-07-13T07:04:33.000000Z",
+    "updated_at": "2026-08-01T17:46:06.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CameronsWorks/Wedge",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14291,
+      "hub_id": null,
+      "version": "2.2.1",
+      "description": "<h1>Wedge 2.2.1</h1>\n<p>Housekeeping release. No gameplay changes.</p>\n<p><strong>⚠ WTT-ContentBackport must now be 1.1.1 or newer.</strong></p>\n<h2>What changed</h2>\n<ul>\n<li><strong>Dropped the M8230’s two asset bundles</strong> (<code>assets/content/weapons/m8230/client_assets.bundle</code> and\n<code>.../m8230/textures/client_assets.bundle</code>). ContentBackport 1.1.1 ships both itself — its own M8230\ncontainer had always declared them as dependencies without providing them, which is why Wedge\ncarried copies. Once both mods shipped the same bundle, whichever loaded second printed a red\n<code>Unable to add bundle:</code> line at server start. Harmless (the first copy wins and the grenade works\neither way), but it reads like a broken install. Download drops from 25 MB to 14 MB.</li>\n<li><strong>Dependency floor raised to WTT-ContentBackport &gt;= 1.1.1</strong> (was 1.1.0). On an older ContentBackport\nthose bundles resolve to nothing, so the server refuses to load Wedge rather than run a boss whose\ngrenade is invisible. Update ContentBackport first; Wedge itself extracts over your install as usual.</li>\n</ul>\n<p>If you saw those two lines on 2.2.0 with a current ContentBackport, this is the tidy-up.</p>\n<h2>Files</h2>\n<p><code>Wedge-2.2.1.zip</code>\nSHA-256: <code>BDADAE465EBE7F31A980F270A20976F446744D10F21D9A48B84AFB961FDE22B0</code></p>\n<h2>VirusTotal</h2>\n<p>All three DLLs clean, 0/74:</p>\n<ul>\n<li><code>Wedge.Client.dll</code>\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8</a></li>\n<li><code>Wedge.Server.dll</code>\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93</a></li>\n<li><code>Wedge.Prepatch.dll</code> (byte-identical to the 2.1.0/2.2.0 build)\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0</a></li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.2.1",
+      "content_length": 13965523,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1461,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-30T01:01:00.000000Z",
+      "created_at": "2026-07-30T01:02:30.000000Z",
+      "updated_at": "2026-07-30T06:02:05.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14284,
+              "hub_id": null,
+              "version": "1.1.2",
+              "description": "<ul>\n<li>fixed airframe chops missing texture bundle</li>\n<li>blacklisted new keycards and keys from pmc loot/rewards</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.1.2",
+              "content_length": 4148941929,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 13184,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-29T14:33:00.000000Z",
+              "created_at": "2026-07-29T14:33:43.000000Z",
+              "updated_at": "2026-07-29T18:02:19.000000Z"
+            },
+            {
+              "id": 14277,
+              "hub_id": null,
+              "version": "1.1.1",
+              "description": "<ul>\n<li>fixed 30al/45al modslot issue</li>\n<li>fixed placeholder handbook ids in some item configs</li>\n<li>fixed comtac helmet headphone modslots</li>\n<li>fixed several helmet presets not being added</li>\n<li>added missing bundles for a few bundles</li>\n<li>added new streamer items to streamer case</li>\n<li>added new streamer items to container loot</li>\n<li>blacklisted more bad items</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.1.1",
+              "content_length": 4148165412,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 3468,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-28T22:25:00.000000Z",
+              "created_at": "2026-07-28T22:25:21.000000Z",
+              "updated_at": "2026-07-29T06:02:09.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/1c393308-ad93-4e02-ad6b-277d3a150e2e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A21Z&rscd=attachment%3B+filename%3DWedge-2.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A14Z&ske=2026-08-01T21%3A10%3A21Z&sks=b&skv=2018-11-09&sig=tupW5BxHIzQ3m8Vzd324iEl5J8vGivhQmFZOtSH5%2BKo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&response-content-disposition=attachment%3B%20filename%3DWedge-2.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14250,
+      "hub_id": null,
+      "version": "2.2.0",
+      "description": "<p>He keeps his distance, wears ContentBackport’s own gear, and the download drops to less than half.</p>\n<p><strong>⚠ WTT-ContentBackport must be 1.1.0 or newer</strong> (installing it normally brings WTT-ServerCommonLib 2.0.22+, which is also required). His cover, clothing, voice and MP7 parts now come from ContentBackport’s copies, and on anything older the server refuses to load Wedge rather than run half a boss. Update it first; Wedge itself extracts over your install as usual.</p>\n<ul>\n<li><strong>He spawns away from you.</strong> His squad only takes a spawn zone at least 200 m from where everyone is standing at raid start — no more opening a raid with the whole squad next door. It’s an F12 slider (0–500 m); a map with nothing that far simply uses the farthest zone it has.</li>\n<li><strong>He stands down for Black Division.</strong> A raid that has already drawn a Black Division patrol is theirs — Wedge sits it out rather than fielding the faction twice. F12 toggle if you’d rather meet both at once; they’re allies either way and never fight each other.</li>\n<li><strong>ContentBackport’s gear, properly.</strong> The covered helmet is the real arrangement now — a stock Team Wendy EXFIL wearing ContentBackport’s MultiCam Black cover — and his MP7 carries their SF3P flash hider and the full FAB Defense ARS stock, buttstock included, which the old kit was missing. Old Wedge items in your stash stay valid.</li>\n<li><strong>The gas wash is white</strong>, matching 1.0.5, and the M8230’s cook and throw paths got another layer of armour against the vanishing-grenade report.</li>\n<li><strong>F12 grew three sections</strong> — <em>Spawns</em> (the whole chance curve, party averaging, spawn delay, the distance floor, the stand-down toggle), <em>Balance</em> (guards by party size, his and his escort’s health) and <em>Maps</em> (a checkbox per map). On a co-op server the host’s settings are the ones that count. The Lab is in the list, off by default — and stays off while Blackout is installed, since its own Wedge already garrisons the place.</li>\n<li><strong>Weapons rebuilt.</strong> Every gun generates as a proper preset build instead of a parts lottery, and his guards carry Black Division’s own roster.</li>\n<li><strong>He and his guards can no longer turn on each other</strong> — the friendly-fire report is fixed at the root, and the squad survives split spawns.</li>\n<li>Seven bundles ContentBackport now ships were dropped from the download: <strong>63 MB → 25 MB</strong>.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.2.0",
+      "content_length": 25099850,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1598,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-27T07:35:00.000000Z",
+      "created_at": "2026-07-27T07:36:06.000000Z",
+      "updated_at": "2026-07-28T18:02:37.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14284,
+              "hub_id": null,
+              "version": "1.1.2",
+              "description": "<ul>\n<li>fixed airframe chops missing texture bundle</li>\n<li>blacklisted new keycards and keys from pmc loot/rewards</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.1.2",
+              "content_length": 4148941929,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 13184,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-29T14:33:00.000000Z",
+              "created_at": "2026-07-29T14:33:43.000000Z",
+              "updated_at": "2026-07-29T18:02:19.000000Z"
+            },
+            {
+              "id": 14277,
+              "hub_id": null,
+              "version": "1.1.1",
+              "description": "<ul>\n<li>fixed 30al/45al modslot issue</li>\n<li>fixed placeholder handbook ids in some item configs</li>\n<li>fixed comtac helmet headphone modslots</li>\n<li>fixed several helmet presets not being added</li>\n<li>added missing bundles for a few bundles</li>\n<li>added new streamer items to streamer case</li>\n<li>added new streamer items to container loot</li>\n<li>blacklisted more bad items</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.1.1",
+              "content_length": 4148165412,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 3468,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-28T22:25:00.000000Z",
+              "created_at": "2026-07-28T22:25:21.000000Z",
+              "updated_at": "2026-07-29T06:02:09.000000Z"
+            },
+            {
+              "id": 14223,
+              "hub_id": null,
+              "version": "1.1.0",
+              "description": "<p>MAJOR UPDATE - REQUIRES LATEST COMMONLIB 2.0.22</p>\n<ul>\n<li>added all missing items and clothing up to 7/25/2026 (NOTE: SOME THINGS WERE OMITTED LIKE NOTES, TAPES, RECORDER, ETC). If these items were omitted their bundles are still present if someone needs them for a personal project.</li>\n<li>tons of bug fixes, too many to count</li>\n<li>added patch to fence plate randomization to fix the weird logic (will be removed in 4.1)</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.1.0",
+              "content_length": 4134244480,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 10385,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T20:13:00.000000Z",
+              "created_at": "2026-07-25T20:13:43.000000Z",
+              "updated_at": "2026-07-28T09:55:27.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1d706aa6dd998e4f9a409b4de6da93dcc757c1de50d928b1cf48a79612031164",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/29fb4c1a9e8595917a5a7e6309513aee9335d6e4a4aa74310f253ad138453464",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/ce9d8f05-0272-4647-9020-1233cc862b4f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A20Z&rscd=attachment%3B+filename%3DWedge-2.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A51Z&ske=2026-08-01T21%3A25%3A20Z&sks=b&skv=2018-11-09&sig=6JGAhmj%2FEWPDUUY79%2FTxdJdP8dTyXxIUAKLFOMdteGs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&response-content-disposition=attachment%3B%20filename%3DWedge-2.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14175,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<ul>\n<li><strong>He and Black Division are one side now.</strong> His squad and any other Black Division patrol treat each other as allies instead of trading fire on sight.</li>\n<li><strong>He’s hostile to everyone else</strong> — scavs, the scav bosses and their guards, PMCs, raiders, rogues, cultists, the Partisan, and the infected. If you run <strong>RUAF</strong> or <strong>UNTAR</strong>, he fights those too. The BTR he leaves alone.</li>\n<li><strong>He’s no longer a scav boss for Fence.</strong> Killing him or his guards as a player scav costs you no Fence standing — he’s an invading faction like Raiders or Rogues, not a scav boss.</li>\n<li><strong>Loot cleanup.</strong> His guards carry the normal four-pocket rig instead of his own boss pockets, the keycard holder case only turns up on Wedge (one at most, not four), euros are capped at 5k, and stims at one to three.</li>\n</ul>\n<p>No new requirements. RUAF and UNTAR are optional — nothing changes if you don’t run them.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.1.0",
+      "content_length": 63362093,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 3101,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-21T03:54:00.000000Z",
+      "created_at": "2026-07-21T03:55:35.000000Z",
+      "updated_at": "2026-07-28T09:44:03.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0ac7522984b3cf6a5782b2d08ef969a6b3684cef6b24fcac62f09c2edf30594f",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/e712272f90a4a07cede064aeaffbc1acc284bca083bb86340e39697a023079b3",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/96b2e2c4-a366-4e53-b758-42945b22afac?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A21Z&rscd=attachment%3B+filename%3DWedge-2.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A18%3A22Z&ske=2026-08-01T21%3A19%3A21Z&sks=b&skv=2018-11-09&sig=N2Gzg4BBKpI0LvWsQ%2FFJeVTW9VP8TB1KG5fzQA7kgTc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&response-content-disposition=attachment%3B%20filename%3DWedge-2.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14166,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<p>The profile-error fix. If your server greeted you with a red wall about your profile being invalid over an item it didn’t recognise — the covered EXFIL, the goggles, a Model 8230 — this is that bug. Nothing about how he plays has changed.</p>\n<p><strong>What it was.</strong> The mod registered his items <em>after</em> SPT’s boot-time profile check, so any Wedge gear you kept — worn, stashed, or in the mail — read as an orphaned modded item once per server start. The gear was always fine in play; the boot check just ran before the mod had said the items exist.</p>\n<p><strong>Updating is the whole fix.</strong> The invalid flag never reaches your profile file, so if you only ever saw the error, your gear is still there — update and the red wall is gone.</p>\n<p><strong>If you enabled <code>removeModItemsFromProfile</code></strong> (the workaround SPT’s own error text suggests): those items were deleted from the profile, and attachments go with their parent — that’s how a helmet takes the goggles with it. They’re not coming back; set it back to <code>false</code>, update, and take a new set off the man himself.</p>\n<p>Coming from 0.1.x, read the 2.0.0 notes too: that version added <strong>Black Division</strong> as a new required mod.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.0.2",
+      "content_length": 63359412,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 348,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-20T19:52:00.000000Z",
+      "created_at": "2026-07-20T19:52:55.000000Z",
+      "updated_at": "2026-07-28T09:43:10.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a7d64548b01381470a496bbe8fffc4ac7c19fbf72c49fb8a396da0baef3ceb72",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/691d68bc9abc1e29ecded7e9ab44acee3cb9e72cc6645858a83ea817dabcb47d",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/20f2e651f0753eda87a4880217bde76c2b8a5f052e65b7848e36736a35e978ae",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/c730e6c1-7362-40a5-af6a-618e797234e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A30Z&rscd=attachment%3B+filename%3DWedge-2.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A16Z&ske=2026-08-01T21%3A01%3A30Z&sks=b&skv=2018-11-09&sig=UqcVMyTnKxzJtw4CjlsYFWZFmM1PqE63TKUuuwlWhh0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbkmgWoNnTURDGthWBi8K46JZlgYPoF3X8pZ4OsMtm0&response-content-disposition=attachment%3B%20filename%3DWedge-2.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14151,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<p>A fix to how the mod identifies itself. Nothing about how he plays has changed. <strong>Should now be identified as verified</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.0.1",
+      "content_length": 63358990,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 882,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T18:22:00.000000Z",
+      "created_at": "2026-07-19T18:23:19.000000Z",
+      "updated_at": "2026-07-28T09:42:32.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/960ffd4a9952b81da2b86d96e5310c2dfec15ef775975c6502a376ef2c50454b",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/691d68bc9abc1e29ecded7e9ab44acee3cb9e72cc6645858a83ea817dabcb47d",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/fa2547554ff7ecc0a99c70c92e56b8ec6357023e62ddd22cb314957094280e31",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/1db53121-b546-4642-9a58-c0fad0f62c2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A38Z&rscd=attachment%3B+filename%3DWedge-2.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A08Z&ske=2026-08-01T21%3A22%3A38Z&sks=b&skv=2018-11-09&sig=1AjtkJS9F3EakStMjZ87dqcDN9p85zn6Jc%2F%2FiIvLqGo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbkmgWoNnTURDGthWBi8K46JZlgYPoF3X8pZ4OsMtm0&response-content-disposition=attachment%3B%20filename%3DWedge-2.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14149,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>Leads with the fixes, since those matter most if you already run him:</p>\n<ul>\n<li><strong>The raid-end crash is fixed.</strong> If you were hitting <code>[Wedge] raid-end reinject failed: session id provided was empty</code> at the end of a raid — and stuck because taking him off breaks your profile — update rather than remove and it’s gone.</li>\n<li><strong>His Model 8230 grid icon</strong> no longer shows as the smoke grenade it was cloned from.</li>\n<li><strong>Kit fixes</strong> — his meds, ammo and pockets all generate correctly now, and guard counts scale with the size of your party.</li>\n</ul>\n<p>Assets now included:</p>\n<ul>\n<li><strong>His actual 1.0.5 art.</strong> The Black Division stand-in is gone. He wears his own head, fur-lined coat and trousers and speaks with his own voice, and his covered Team Wendy EXFIL, PVS-31A, Avon M53A1 gas mask and Model 8230 gas grenade are his own models.</li>\n<li><strong>The gas is real.</strong> The 8230 leaves a cloud that drains anyone caught in it without a filter, stings the eyes and sets you coughing. A full-face mask shuts it out; a respirator keeps it out of your lungs but not your eyes. Editable in F12.</li>\n<li><strong>A squad, not a scatter.</strong> He calls orders his guards act on — cover, hold, push — and the escort spawns in his zone and rushes in with him.</li>\n<li><strong>His face and voice are playable</strong> for your own PMC in character creation.</li>\n</ul>\n<p><strong>New requirement:</strong> he now needs Black Division (<code>com.blackdiv.tacticaltoaster</code>) installed alongside the others — see the requirements below.</p>\n<p><strong>Known issues / where it differs from 1.0.5</strong></p>\n<p>0.16.9 has no CS-gas mechanic of its own, so a few things are the closest the engine allows rather than a 1:1 recreation:</p>\n<ul>\n<li><strong>The gas cloud and its sting aren’t the authentic 1.0.5 gas.</strong> The cloud is built on the game’s own smoke-grenade system and the effect — damage, blurred and tunnelled vision, coughing — is layered on top. It reads and plays as gas, but the exact look and feel differ from the real thing.</li>\n<li><strong>No gas tripwires.</strong> In 1.0.5 he can lay gas-grenade tripwires; the engine won’t let a bot place that kind of hazard here, so he throws the gas instead.</li>\n<li><strong>The SOG tomahawk is in his kit, not a melee move.</strong> Bot melee isn’t cleanly exposed in this build, so expect gunfights rather than a tomahawk rush.</li>\n<li>He turns up on the existing maps, not the Icebreaker map — that’s a separate job.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/2.0.0",
+      "content_length": 63358986,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 88,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T17:16:00.000000Z",
+      "created_at": "2026-07-19T17:23:40.000000Z",
+      "updated_at": "2026-07-28T09:42:39.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        },
+        {
+          "id": 2511,
+          "hub_id": null,
+          "guid": "com.blackdiv.tacticaltoaster",
+          "name": "WTT - Black Division [REDACTED] Home",
+          "slug": "wtt-black-division-redacted-home",
+          "teaser": "[REDACTED]",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/ZFIiCkmETKFUGGbnyR522ogkJMyEpZdJylpwllq2.png",
+          "downloads": 69436,
+          "favourites_count": 188,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-12-26T01:46:00.000000Z",
+          "created_at": "2025-12-24T05:41:17.000000Z",
+          "updated_at": "2026-08-01T17:00:06.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 30890,
+              "name": "GrooveypenguinX",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-05-07T19:55:52.000000Z",
+              "updated_at": "2026-08-01T13:47:25.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13984,
+              "hub_id": null,
+              "version": "1.1.3",
+              "description": "<h1>1.1.3 - Crash fix</h1>\n<ul>\n<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>\n</ul>\n<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2511/wtt-black-division-redacted-home/1.1.3",
+              "content_length": 1301433,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 14434,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-04T03:22:00.000000Z",
+              "created_at": "2026-07-04T03:22:39.000000Z",
+              "updated_at": "2026-07-28T09:25:17.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d87b736791ae799b93fcf317334152a4a344846562c7bd35e483b6b34e20e672",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/14e51f02043a2cba10ceba795a21864e81fa456e3c617a0fb0e0697d0a34ac1e",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/95c168264b04388c0d1c543f770a40b8f63ac2b12112d558c436f5ab325b9eb0",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/8ac5244a-a3dc-4a2b-8954-4db14a82b01d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A21Z&rscd=attachment%3B+filename%3DWedge-2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A17Z&ske=2026-08-01T21%3A17%3A21Z&sks=b&skv=2018-11-09&sig=2FUJ%2BJSrXCxJkFFdzoCHx7YTx3tFHybl77gfMYWuNE4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._k8-1VeTmvUM34UF49tMQVpvUgcF1-mvLFB9Mxmk9Zo&response-content-disposition=attachment%3B%20filename%3DWedge-2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14098,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>fixed broken install + name on death screen</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/1.0.1",
+      "content_length": 200742,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 2325,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T06:13:00.000000Z",
+      "created_at": "2026-07-16T06:10:22.000000Z",
+      "updated_at": "2026-07-28T09:38:51.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d74a749e7da87164af591e9824a8e2d884306e6c3ee1c82c198e6b12fffe34f4",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/6562727a2cc66ae04ea6542a2c7a52452ccd55a182f24b61ef2db64d02181a3b",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/dbf9d2c08baa65e9072553728d247ae8ccae1270f8e28792d698b3af6d091e25",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/c86bf090-80c5-4b4f-a6b8-bb21d96507bc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A14Z&rscd=attachment%3B+filename%3DWedge-0.1.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A37Z&ske=2026-08-01T21%3A21%3A14Z&sks=b&skv=2018-11-09&sig=B5dpr89WRc6G9aQpLNpBzgcRJlnhdZRRcB%2BxXJeVCPY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OSwibmJmIjoxNzg1NjE2MDc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rIAO9nplAIlzr0rUe9eA6yTeOsrBVEiv31As0Autex0&response-content-disposition=attachment%3B%20filename%3DWedge-0.1.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14095,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>check description.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2820/wedge/1.0.0",
+      "content_length": 197453,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 295,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T01:15:00.000000Z",
+      "created_at": "2026-07-16T01:16:43.000000Z",
+      "updated_at": "2026-07-28T09:38:43.000000Z",
+      "dependencies": [
+        {
+          "id": 2426,
+          "hub_id": null,
+          "guid": "com.morebotsapi.tacticaltoaster",
+          "name": "MoreBotsAPI",
+          "slug": "morebotsapi",
+          "teaser": "API for making the implementation of custom bots easier",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+          "downloads": 82569,
+          "favourites_count": 228,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2025-11-06T06:48:00.000000Z",
+          "created_at": "2025-11-06T06:36:01.000000Z",
+          "updated_at": "2026-08-01T17:03:13.000000Z",
+          "owner": {
+            "id": 7768,
+            "name": "TacticalToaster",
+            "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+            "cover_photo_url": null,
+            "created_at": "2021-08-11T22:12:09.000000Z",
+            "updated_at": "2026-08-01T17:04:19.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13531,
+              "hub_id": null,
+              "version": "2.0.1",
+              "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+              "content_length": 44942,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 39523,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-05-01T22:44:00.000000Z",
+              "created_at": "2026-05-01T22:45:17.000000Z",
+              "updated_at": "2026-08-01T17:03:12.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 2512,
+          "hub_id": null,
+          "guid": "com.wtt.contentbackport",
+          "name": "WTT - Content Backport",
+          "slug": "wtt-content-backport",
+          "teaser": "The moment you've all been waiting for....",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/55TZW6CnHJHPtEYdFvuJWmHazdFuhlCiMLfsbagQ.jpg",
+          "downloads": 356486,
+          "favourites_count": 441,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2512/wtt-content-backport",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": true,
+          "cheat_notice": false,
+          "category_id": 2,
+          "published_at": "2025-12-26T03:52:00.000000Z",
+          "created_at": "2025-12-26T03:52:16.000000Z",
+          "updated_at": "2026-07-29T18:02:19.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            },
+            {
+              "id": 36153,
+              "name": "EpicRangeTime",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/80209a4aec54836a03e10eeabd944d2668084215_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/e92f6113cef81fe9a7ad58950e63d8fb25468163_1280w.webp",
+              "created_at": "2023-08-26T03:19:00.000000Z",
+              "updated_at": "2026-08-01T11:04:57.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13487,
+              "hub_id": null,
+              "version": "1.0.7",
+              "description": "<p>HOTFIX</p>\n<ul>\n<li>changed slothelper methods to ensure the slot exists before pushing to it</li>\n<li>stopped overriding the twitch case entirely and safely added the new streamer items</li>\n<li>val 4 sounds have been updated to their new sounds</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2512/wtt-content-backport/1.0.7",
+              "content_length": 3490550189,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 95787,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T12:14:00.000000Z",
+              "created_at": "2026-04-25T12:15:28.000000Z",
+              "updated_at": "2026-07-17T00:16:30.000000Z"
+            }
+          ],
+          "category": {
+            "id": 2,
+            "hub_id": 79,
+            "title": "Overhauls",
+            "slug": "overhauls",
+            "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240951,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88736,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9582ae607c6227837a69d126e2f02e9b304ddd1c9b2171c3b65f84b0babd02f0",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/0792c969fc55d7df283198fb4bbbfc3e2715ed44417693cf01b955d6e3651a5c",
+          "label": "Pre-Patch"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/67bea12b51a9120fa289795da990a2bacb211b4237d84af3d1b79cc010d53782",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/9b815667-fc44-4e03-996a-0b7b3dbd0fd2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A04Z&rscd=attachment%3B+filename%3DWedge-0.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A02Z&ske=2026-08-01T21%3A15%3A04Z&sks=b&skv=2018-11-09&sig=MGplK%2BwYeY4X3pwkA5DTfParoHt3TomOGMdzMRm6Oo0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OSwibmJmIjoxNzg1NjE2MDc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rIAO9nplAIlzr0rUe9eA6yTeOsrBVEiv31As0Autex0&response-content-disposition=attachment%3B%20filename%3DWedge-0.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 65,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:08.469Z",
+    "discoveredBy": "seed"
+  }
+}

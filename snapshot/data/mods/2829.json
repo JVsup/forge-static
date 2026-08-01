@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2829,
+  "hub_id": null,
+  "guid": "notdifficult.miyukimainmenumusic",
+  "name": "Miyuki MainMenu Music",
+  "slug": "miyuki-mainmenu-music",
+  "teaser": "This simple mod adds music to the menu (without replacing the game music)",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/0F7zERA58IembJF5K9IVUjiZHLjnwUdok608ZtTF.png",
+  "downloads": 323,
+  "favourites_count": 4,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">What This Mod Does?</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/notdifficult/SPT-Miyuki-MainMenu-Music/main/!-Other/PLayer01.png\" alt=\"prev\" /></p>\n<ul>\n<li>This simple mod adds music to the menu (without replacing the game music)</li>\n<li>Plays a random song at startup</li>\n<li>Supports playlists</li>\n<li>Supports changing playlists by pressing keys</li>\n<li>Supports changing music by pressing keys</li>\n<li>Supports pausing and stopping music by pressing keys</li>\n<li>Stops playback in raid</li>\n<li>Add ur music and musicfolder in <code>BepInEx\\plugins\\MiyukiMainMenuMusic\\music</code> (mp3 only)</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">settings</div>\n<div class=\"tab-content\"><p>Press F12 open mod settings</p>\n<ul>\n<li>\n<p>You can change the volume</p>\n</li>\n<li>\n<p>You can change the control buttons</p>\n</li>\n<li>\n<p>You can change the UI Timer <code>(wait 2.0.1)</code></p>\n</li>\n<li>\n<p>You can Enable Or Disable UI <code>(wait 2.0.1)</code></p>\n</li>\n<li>\n<p>You can view the current Song name <code>Debug info</code></p>\n</li>\n<li>\n<p>You can view the current Folder name <code>Debug info</code></p>\n</li>\n<li>\n<p>You can view the current Song ID <code>Debug info</code></p>\n</li>\n<li>\n<p>You can view the current Folder ID <code>Debug info</code></p>\n</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/afNPjAw.gif\" alt=\"Installation\" /></p>\n<ol>\n<li>\n<p>download the latest release zip.</p>\n</li>\n<li>\n<p>Extract the zip so that <code>MiyukiMainMenuMusic</code> ends up in:</p>\n<pre><code>BepInEx/plugins/  &gt;&gt; MiyukiMainMenuMusic &lt;&lt;\n</code></pre>\n</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">important!</div>\n<div class=\"tab-content\"><blockquote>\n<p>I just wanted to add my own music to the menu.</p>\n</blockquote>\n<blockquote>\n<p>It does not replace the default music, you can mute it in the game settings.</p>\n</blockquote>\n<blockquote>\n<p>Please report any errors or bugs you find, I will try to fix them.</p>\n</blockquote>\n<blockquote>\n<p>This mod does not break the game or cause irreversible changes, and it should be compatible with all possible mods!</p>\n</blockquote>\n<blockquote>\n<p>in theory, it should work with both old and future versions. Please let me know if you have installed it on older versions.</p>\n</blockquote>\n<blockquote>\n<p>currently, every mod action is logged in the console, it doesn’t affect the FPS, but if it bothers you, please let me know, I will disable the logs in the next versions or add a switch in the settings</p>\n</blockquote></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2829/miyuki-mainmenu-music",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 12,
+  "published_at": "2026-07-19T09:44:00.000000Z",
+  "created_at": "2026-07-19T09:43:39.000000Z",
+  "updated_at": "2026-07-28T11:33:47.000000Z",
+  "owner": {
+    "id": 41623,
+    "name": "NotDifficult",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/Sg0E8H2HAACLmuoMicYQljfkTiJ1ETyE77PkMLJt_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/JhfGZwLhpAlqAdNBGOSdJP21vHv3ALT6qaPsaoWT_1280w.webp",
+    "created_at": "2023-12-04T07:34:55.000000Z",
+    "updated_at": "2026-08-01T05:35:17.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 12,
+    "hub_id": 75,
+    "title": "Audio",
+    "slug": "audio",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/notdifficult/SPT-Miyuki-MainMenu-Music",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14213,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<blockquote>\n<ul>\n<li>The script has been almost completely reset.</li>\n<li>The script method has been completely changed from scenes to game status.</li>\n<li>Added “Player in menu” status (needed to start music when the game is first launched)</li>\n<li>Added “Player loaded into raid” status (needed to pause music when the raid loads after the “Get ready” message)</li>\n<li>Added “Player left raid” status (not currently used, music will play in the menu).</li>\n</ul>\n</blockquote>\n<blockquote>\n<ul>\n<li>Added Create Player function.</li>\n<li>Added Scan Music Folder function.</li>\n<li>Added Generate Folder and Music ID function (for playlists).</li>\n<li>Added Get FID of the current track.</li>\n<li>Added Get MID of the current track.</li>\n</ul>\n</blockquote>\n<blockquote>\n<ul>\n<li>Added Music Stop function.</li>\n<li>Added Music Random function (will randomly play a track when the game starts).</li>\n<li>Added Music Play function.</li>\n<li>Added Music Next function.</li>\n<li>Added Music Back function.</li>\n<li>Added Music Pause function.</li>\n<li>Added Change function. Playlist: go to the next folder</li>\n<li>Added the Change playlist function: go to the previous folder</li>\n<li>Added the Rescan function</li>\n</ul>\n</blockquote>\n<blockquote>\n<ul>\n<li>Added buttons to the settings (for all the functions above)</li>\n<li>Added the option to write to a JSON file to avoid rescanning each time\n(If SUDDENLY you encounter errors about new music not being added, delete this file; it will be recreated)</li>\n</ul>\n</blockquote>\n<blockquote>\n<ul>\n<li>Added information to the config manager</li>\n<li>Current track FID</li>\n<li>Current track MID</li>\n<li>Total number of songs found</li>\n<li>Number of folders found</li>\n<li>Path to the music folder</li>\n<li>Name of the currently playing file</li>\n<li>Name of the currently playing folder</li>\n</ul>\n</blockquote>\n<blockquote>\n<ul>\n<li>Added a volume slider to the config manager</li>\n</ul>\n</blockquote>\n<p><code>Please report any bugs you may encounter</code></p>\n<p><code>please report if console logs are bothering you</code></p>\n<p><code>please report anything that is missing.</code></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2829/miyuki-mainmenu-music/2.0.0",
+      "content_length": 141385,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 124,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-24T20:02:00.000000Z",
+      "created_at": "2026-07-24T20:03:21.000000Z",
+      "updated_at": "2026-07-28T09:48:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f74ebd506929627504a601be0effd4622a55954dd5e53029c0446a5dd9fdbfdc?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1302849988/625c29ac-83a9-4702-8431-4231c8261d1f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A57Z&rscd=attachment%3B+filename%3DMiyukiMainMenuMusic-V2-0-0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A56Z&ske=2026-08-01T21%3A09%3A57Z&sks=b&skv=2018-11-09&sig=a26gSXO7VsDr4G4r7F2MRKzzy48THWdAizkn90huPOc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&response-content-disposition=attachment%3B%20filename%3DMiyukiMainMenuMusic-V2-0-0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14147,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>1.0.0 Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2829/miyuki-mainmenu-music/1.0.0",
+      "content_length": 135965,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 199,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T09:44:00.000000Z",
+      "created_at": "2026-07-19T09:44:44.000000Z",
+      "updated_at": "2026-07-28T09:42:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f74ebd506929627504a601be0effd4622a55954dd5e53029c0446a5dd9fdbfdc?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1302849988/510d0c78-1e96-4aa4-b9f4-786ad9d7a946?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A19Z&rscd=attachment%3B+filename%3DMiyukiMainMenuMusic-V1-0-0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A58Z&ske=2026-08-01T21%3A04%3A19Z&sks=b&skv=2018-11-09&sig=A5O%2Bolg2ZB2M49t8y8I8WuJn3OqNEFyn2RgDVhoBCKY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&response-content-disposition=attachment%3B%20filename%3DMiyukiMainMenuMusic-V1-0-0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 2,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:42.957Z",
+    "discoveredBy": "seed"
+  }
+}

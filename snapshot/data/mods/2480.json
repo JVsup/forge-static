@@ -1,0 +1,392 @@
+{
+  "type": "mod",
+  "id": 2480,
+  "hub_id": null,
+  "guid": "com.slpf.barteritemsstacks",
+  "name": "BarterItemsStacks",
+  "slug": "barteritemsstacks",
+  "teaser": "A simple mod that changes the stack size for barter items. And a little more…",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/TnF3r4yN7ZOq6jYyUVv6NuzLvXTVKXqP9ctvMsVj.jpg",
+  "downloads": 33336,
+  "favourites_count": 70,
+  "description": "<p><strong>The mod allows changing the maximum stack size for items. And a little more…</strong></p>\n<p>Now allows modifying the following item parameters:</p>\n<ul>\n<li>Maximum stack size</li>\n<li>Maximum resource value</li>\n<li>Height and width</li>\n<li>Weight</li>\n<li>Price</li>\n</ul>\n<p>Stack size and resource values are supported for barter items, medical items, special items, repair kits, food and drinks.  All other parameters should work for all items without any problems.</p>\n<p><strong>Sorting items with resources into stacks may not work correctly due to conflicts with other mods. I can’t track down issues across all mods, so I’ve removed them from the default config. Add them manually and test yourself.</strong></p>\n<p>Config can be edited at:</p>\n<ul>\n<li><code>https://127.0.0.1:6969/bis</code></li>\n</ul>\n<p>Parent IDs can be used to assign properties to item groups. Properties are applied only to direct children. Item IDs take priority over parent IDs.</p>\n<pre><code>Some parents' IDs:\n57864a66245977548f04a81f - Electronics\n6759673c76e93d8eb20b2080 - Flyers\n57864e4c24597754843f8723 - Flammable materials\n590c745b86f7743cc433c5f2 - Others\n57864ee62459775490116fc1 - Batteries\n57864ada245977548638de91 - Building materials\n57864a3d24597754843f8721 - Jewelry\n57864c8c245977548867e7f1 - Medical supplies\n5448e8d04bdc2ddf718b4569 - Food\n5448e8d64bdc2dce718b4568 - Drinks\n567849dd4bdc2d150f8b456e - Maps\n5448f3a64bdc2d60728b456a - Injectors\n5448f3ac4bdc2dce718b4569 - Injury treatment\n5448f3a14bdc2d27728b4569 - Drugs\n5448f39d4bdc2d0a728b4568 - Medkits\n543be5dd4bdc2deb348b4569 - Money\n5448ecbe4bdc2d60728b4568 - Info items\n5447e0e74bdc2d3c308b4567 - Special items\n66abb0743f4d8b145b1612c1 - Multitools\n616eb7aea207f41933308f46 - Repair kits\n57864bb7245977548b3b66c2 - Tools\n\nOther can be found on any wiki.\nMost of them won't work correctly with stack size and max resource.\n</code></pre>\n<p><strong>Price changes require a server restart. Config reload doesn’t work.\nHeight and width changes require clearing cache. Press the “Clean Temp Files” in SPT Launcher.\nFor all other parameters, only a client restart is required.</strong></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2480/barteritemsstacks",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2025-12-01T08:20:00.000000Z",
+  "created_at": "2025-12-01T08:22:36.000000Z",
+  "updated_at": "2026-07-28T07:57:00.000000Z",
+  "owner": {
+    "id": 92651,
+    "name": "xvotex",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=x&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-11-29T08:59:04.000000Z",
+    "updated_at": "2026-07-07T12:21:51.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/slpf/BarterItemsStacks",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12915,
+      "hub_id": null,
+      "version": "1.3.2",
+      "description": "<ul>\n<li>Config is now auto-generated if missing.</li>\n<li>Sorting should now work correctly, accounting for stack size and resource amount.</li>\n<li>Changed patches for UIFixes and StashManagementHelper. Should work better. Hopefully.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.3.2",
+      "content_length": 2594285,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 18471,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-26T16:23:00.000000Z",
+      "created_at": "2026-01-26T16:28:17.000000Z",
+      "updated_at": "2026-07-28T07:57:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/102149d7ce1cec9d06ebb8e27d9edd24bfd55ae51c65a4673b68c9badcffa529?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/6e26f35e-4541-4cd8-a951-71955d0aa482?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A21%3A40Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.2.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A21%3A28Z&ske=2026-08-01T20%3A21%3A40Z&sks=b&skv=2018-11-09&sig=1K%2FdQjWEFnfwP21YmcpU9yAq8MniZ6TfXrpbkyvOkkc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.2.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12883,
+      "hub_id": null,
+      "version": "1.3.1",
+      "description": "<ul>\n<li>Added compatibility with StashManagementHelper</li>\n<li>Items with resource have been removed from the config.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.3.1",
+      "content_length": 2592173,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 959,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-22T12:36:00.000000Z",
+      "created_at": "2026-01-20T11:46:10.000000Z",
+      "updated_at": "2026-07-28T07:55:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/27737f16aee1b3543345d0652f5e774d5197bc37a5e7aee22d6327054dd972a4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/78c6d857-cc48-4dec-875e-eb7f7f89289f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A37%3A30Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A36%3A37Z&ske=2026-08-01T20%3A37%3A30Z&sks=b&skv=2018-11-09&sig=JgmvBq%2F%2FXABljR85%2BZe24RrYa5LQjr0pGmI8Ucg1ZlU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12878,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<ul>\n<li>Added height, width, weight multiplier and price multiplier.</li>\n<li>Added a web page for config.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.3.0",
+      "content_length": 2742651,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 402,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-19T14:53:00.000000Z",
+      "created_at": "2026-01-19T14:15:28.000000Z",
+      "updated_at": "2026-07-28T07:55:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/47040108431b3df47a8a9df942e34c9e0bedee8717f8e834ed21c77b667c3d3a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/00dd0dd9-4fff-4f0e-a13e-20e5f48a915d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A22%3A42Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A22%3A01Z&ske=2026-08-01T20%3A22%3A42Z&sks=b&skv=2018-11-09&sig=nY0gqsf%2FAIDvHWLB5X6IwdzmK9JddYSBpUR0YH4jNdU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12752,
+      "hub_id": null,
+      "version": "1.2.5",
+      "description": "<ul>\n<li>added settings to enable stacking fir and non-fir items</li>\n<li>added IDs to the config from the CornerStore</li>\n<li>removed the patch that allowed stacks to be placed in special slots (does not work correctly)</li>\n<li>removed the patch that changed the checkmark’s position (completely)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.5",
+      "content_length": 43178,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2979,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-03T06:37:00.000000Z",
+      "created_at": "2026-01-03T06:37:48.000000Z",
+      "updated_at": "2026-07-28T07:26:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/cd013a86b99dc421b0f219b557a20c36d518a2330955b79747abf1f580185061?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/a0f17cdd-4f58-4eb9-a09e-28eb2df2d603?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A22%3A00Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.5.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A21%3A47Z&ske=2026-08-01T20%3A22%3A00Z&sks=b&skv=2018-11-09&sig=8VN%2B1E5m8INdq0iaBJ3LAqTtjPH00mUmMWKmAXezRCM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.5.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12652,
+      "hub_id": null,
+      "version": "1.2.4",
+      "description": "<p>Returned the checkmark to its place.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.4",
+      "content_length": 32014,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2945,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-22T16:49:00.000000Z",
+      "created_at": "2025-12-22T16:49:39.000000Z",
+      "updated_at": "2026-07-28T07:07:29.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1ee45439785d063fe40210ecd71b55fd0715e1ab782ce3a9f9e4e0ff77e832e6?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/9c11b3e5-fe59-4748-a943-87820fe35923?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A21Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A26%3A00Z&ske=2026-08-01T20%3A26%3A21Z&sks=b&skv=2018-11-09&sig=UDwiZCwgSjvsX8jjndfwgFndeJfG5kJKJPVthByq5iU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12644,
+      "hub_id": null,
+      "version": "1.2.3",
+      "description": "<ul>\n<li>Now you can add parent IDs to the config.</li>\n<li>Quests with placement and protection should work correctly</li>\n<li>Staksize indicator is now above the resources.</li>\n<li>Сheckmarker is now under the item name.</li>\n<li>Stack can now be put in a special slot. (but you can’t combine in these slots, unfortunately.)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.3",
+      "content_length": 32078,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 523,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-21T11:07:00.000000Z",
+      "created_at": "2025-12-21T11:07:55.000000Z",
+      "updated_at": "2026-07-28T07:06:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1ecd48d8303cfc724c3b0c347ad35bfb7308e46fe91d155201ad8e40a2dd27f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/ca4bf590-adbb-4fa3-9f6a-2dc54defa115?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A20%3A30Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A19%3A35Z&ske=2026-08-01T20%3A20%3A30Z&sks=b&skv=2018-11-09&sig=T%2BzhSCWJTHCIZwAPBx5fXQpmLOnHeCJ0izIEcGDH780%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12609,
+      "hub_id": null,
+      "version": "1.2.2",
+      "description": "<ul>\n<li>Changed the config loading a bit (added a rollback).</li>\n<li>Added compatibility with UI Fixes. Sorting didn’t work under certain conditions.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.2",
+      "content_length": 29969,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1199,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-16T15:23:00.000000Z",
+      "created_at": "2025-12-16T15:23:06.000000Z",
+      "updated_at": "2026-07-28T07:05:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/095b1c65e8afe0f2994d06b401d126aee6640d815de6900847225e67e0a8f225?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/46cd8ab8-760b-4d47-ac03-c8301cab81eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A38%3A09Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.2.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A37%3A51Z&ske=2026-08-01T20%3A38%3A09Z&sks=b&skv=2018-11-09&sig=4SNF9Cx8NciY%2FSi0p97HFhRgFa4QlnufMCd2JKuFQpE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.2.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12608,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<ul>\n<li>Removed the upper limit for values in the config. It’s all on your conscience.</li>\n<li>Added additional commented IDs to the config for convenience.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.1",
+      "content_length": 28840,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 100,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-16T11:41:00.000000Z",
+      "created_at": "2025-12-16T11:41:23.000000Z",
+      "updated_at": "2026-07-28T07:06:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a965c9ba2834b59646469de57e05f3d719535737b48a23b9ca421b021f2fe457?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/94a53fe6-3d63-415d-92e7-dfa5fd705984?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A17%3A43Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A17%3A28Z&ske=2026-08-01T20%3A17%3A43Z&sks=b&skv=2018-11-09&sig=lUewG1%2FplX%2Fu5puAXGUQt84wiS4nHoawPkZlVhNCIk0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12601,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Now a little bit more than just for barter items.</p>\n<ul>\n<li>Slightly reworked the config.</li>\n<li>The config now automatically updates after saving. (But you need to restart the game client.)</li>\n<li>You can now set the maximum resource value.</li>\n<li>Fuel/filter/amulet now take one item from the stack.</li>\n<li>Now only items with the maximum resource value are stacked.</li>\n<li>Added a restriction on using a item with a resource from a stack.</li>\n<li>You can no longer place a stack in the Cultist Circle.</li>\n<li>Quests that require placing items now remove one item from the stack.</li>\n<li>Added a check for MedKitComponent, FoodDrinkComponent and RepairKitComponent.</li>\n<li>Added compatibility with the MergeConsumables mod.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.2.0",
+      "content_length": 27459,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 389,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-15T15:06:00.000000Z",
+      "created_at": "2025-12-15T15:06:32.000000Z",
+      "updated_at": "2026-07-28T07:05:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/74fa8f697e0a320f75eebed2a479f911f83204a17ed488ca97423b66d53b74be?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/cb0bb70e-1b61-4901-a7b3-a81fb207eccd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A01Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A38Z&ske=2026-08-01T20%3A30%3A01Z&sks=b&skv=2018-11-09&sig=6hY7OCK0cA27191t%2BgXGwIpxQgP5gA6v%2BMfIkrFvUZI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12545,
+      "hub_id": null,
+      "version": "1.1.2",
+      "description": "<p>FIR/nonFIR no longer stack</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.1.2",
+      "content_length": 16611,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2182,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-07T20:15:00.000000Z",
+      "created_at": "2025-12-07T20:15:58.000000Z",
+      "updated_at": "2026-07-28T07:02:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b13041991e9526ca7e8b53740de7d5eeca1cbfebf80326ad2c459050f9d4d735?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/e61f3ef7-5a84-40cf-8929-333442dd59a3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A15%3A15Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.1.2.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A14%3A48Z&ske=2026-08-01T20%3A15%3A15Z&sks=b&skv=2018-11-09&sig=M99RMyCOtkw08maeDN1VNQg%2FiwrdkflNqSUxmkUXPDM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.1.2.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12542,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<p>Disabled merge patch because it breaks the highlighting of items. For now, FIR and nonFIR stacks still do not work correctly.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.1.1",
+      "content_length": 16384,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 115,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-07T17:25:00.000000Z",
+      "created_at": "2025-12-07T17:25:18.000000Z",
+      "updated_at": "2026-07-28T07:02:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1352304274dc7a5a3f9f9aea0794a0c75111df70b0f4155ba72cf23319902968",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/55505b88-f1a8-4ece-a068-0a15482f0b0f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A35%3A12Z&rscd=attachment%3B+filename%3DBarterItemsStacks.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A34%3A25Z&ske=2026-08-01T20%3A35%3A12Z&sks=b&skv=2018-11-09&sig=XwyZGaHe5D%2BI0p3k8jhXumtmgqWI%2F4emhvktBbgWF1o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12540,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<ul>\n<li>FIR and non-FIR items no longer stack.</li>\n<li>Resource items now display their quantity.</li>\n<li>Resource items can now only be stacked with the same quantity.</li>\n<li>Hideout now consumes the required number of items from the stack.</li>\n<li>HideoutInProgress should work correctly.</li>\n<li>Added several items to items.jsonc.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.1.0",
+      "content_length": 15446,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 56,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-07T16:34:00.000000Z",
+      "created_at": "2025-12-07T16:34:12.000000Z",
+      "updated_at": "2026-07-28T07:02:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f4400f4636c9d9cdb0980fddd37829826f68b39957908e266593f2f90a1d8e11?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/419270cd-f719-48bb-902b-c76352d720b5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A34%3A58Z&rscd=attachment%3B+filename%3DBarterItemsStacks-1.1.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A34%3A17Z&ske=2026-08-01T20%3A34%3A58Z&sks=b&skv=2018-11-09&sig=qAXXhcCjAth2ut6NLDMxfqBJR1f1Iyzr3qOzEub0eM4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.1.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12496,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2480/barteritemsstacks/1.0.0",
+      "content_length": 9354,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3016,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-01T08:32:00.000000Z",
+      "created_at": "2025-12-01T08:29:02.000000Z",
+      "updated_at": "2026-07-28T06:59:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ddec034989188d6c43f48058868a72cc15e0cc27cdcb9245f22c1a0c5003566b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/9bf621fb-6866-45b5-85e7-d37503d14373?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A38%3A14Z&rscd=attachment%3B+filename%3DBarterItemsStacks.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A37%3A46Z&ske=2026-08-01T20%3A38%3A14Z&sks=b&skv=2018-11-09&sig=pbcuM5REWy%2FtgSXIwHNixddzqv%2Bb992q750dOJidvL0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3NCwibmJmIjoxNzg1NjEzMTc0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.g9oza6TxyJUIfe3qdEbcpKd1xBSZV3DSyUm58oFLoyw&response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 113,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:39:31.468Z",
+    "discoveredBy": "seed"
+  }
+}

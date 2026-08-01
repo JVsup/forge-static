@@ -1,0 +1,145 @@
+{
+  "type": "mod",
+  "id": 2369,
+  "hub_id": null,
+  "guid": "com.jero.jerobackpack",
+  "name": "Jero Backpack",
+  "slug": "jero-backpack",
+  "teaser": "Increases backpack inventory space by resizing grids. Supports custom sizes and blacklist.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/8j2pvyZ97yZzh70iPUDk55hmw4vmgQBxrmgH1PNC.png",
+  "downloads": 19336,
+  "favourites_count": 11,
+  "description": "<h1>Jero’s Backpack Rework</h1>\n<p><em>Inspired by Josh Mate’s Better Backpacks mod.</em></p>\n<p>This mod automatically resizes backpack grids to provide more logical inventory space. <strong>Automatically detects all backpacks by Parent ID</strong>, working with vanilla and modded backpacks.</p>\n<hr />\n<h2>Configuration</h2>\n<h3>Default Size Mappings</h3>\n<table>\n<thead>\n<tr>\n<th align=\"center\">Old HxV &gt;</th>\n<th align=\"center\">New HxV</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td align=\"center\">6x8</td>\n<td align=\"center\"><strong>6x11</strong></td>\n</tr>\n<tr>\n<td align=\"center\">6x7</td>\n<td align=\"center\"><strong>6x10</strong></td>\n</tr>\n<tr>\n<td align=\"center\">5x7</td>\n<td align=\"center\"><strong>5x10</strong></td>\n</tr>\n<tr>\n<td align=\"center\">5x6</td>\n<td align=\"center\"><strong>5x8</strong></td>\n</tr>\n<tr>\n<td align=\"center\">3x8</td>\n<td align=\"center\"><strong>4x9</strong></td>\n</tr>\n<tr>\n<td align=\"center\">5x5</td>\n<td align=\"center\"><strong>5x7</strong></td>\n</tr>\n<tr>\n<td align=\"center\">5x4</td>\n<td align=\"center\"><strong>5x6</strong></td>\n</tr>\n<tr>\n<td align=\"center\">4x5</td>\n<td align=\"center\"><strong>5x6</strong></td>\n</tr>\n<tr>\n<td align=\"center\">4x4</td>\n<td align=\"center\"><strong>4x6</strong></td>\n</tr>\n<tr>\n<td align=\"center\">2x7</td>\n<td align=\"center\"><strong>3x7</strong></td>\n</tr>\n<tr>\n<td align=\"center\">4x3</td>\n<td align=\"center\"><strong>4x4</strong></td>\n</tr>\n<tr>\n<td align=\"center\">3x4</td>\n<td align=\"center\"><strong>4x4</strong></td>\n</tr>\n<tr>\n<td align=\"center\">3x3</td>\n<td align=\"center\"><strong>4x3</strong></td>\n</tr>\n<tr>\n<td align=\"center\">4x2</td>\n<td align=\"center\"><strong>4x3</strong></td>\n</tr>\n<tr>\n<td align=\"center\">3x2</td>\n<td align=\"center\"><strong>3x3</strong></td>\n</tr>\n</tbody>\n</table>\n<h3>Modify size mappings in <code>config.json</code>.</h3>\n<p><strong>Important</strong>: When modifying <code>config.json</code>, only change <code>NewHorizontal</code> and <code>NewVertical</code> values. <strong>Do not modify <code>OldHorizontal</code> and <code>OldVertical</code></strong> - these are used as keys to match backpacks and changing them will break the mapping.</p>\n<h3>Custom Sizes (<code>item.json</code>)</h3>\n<p>Set specific sizes for individual backpacks:</p>\n<pre><code>{\n    \"Backpacks\": {\n        \"itemId\": { \"ItemName\": \"Name\", \"Horizontal\": 6, \"Vertical\": 11 }\n    }\n}\n</code></pre>\n<h3>Blacklist (<code>blacklist.json</code>)</h3>\n<p>Exclude backpacks from resizing:</p>\n<pre><code>{\n    \"Blacklist\": {\n        \"itemId\": { \"ItemName\": \"Name\" }\n    }\n}\n</code></pre>\n<p><strong>Note</strong>: Backpacks with multiple grids are automatically skipped and cannot be resized.</p>\n<hr />\n<p>⚠️ Clean Installation Required</p>\n<p>Please delete the old mod folder before installing this version!</p>\n<p>📁<strong>Installation</strong></p>\n<ul>\n<li>Drag folder from zip file directly into your SPT install folder</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/34vXXDj.gif\" alt=\"Install Mod\" /></p>\n<hr />\n<h2>Compatibility</h2>\n<p>This mod directly edits the properties of vanilla items. It will <strong>conflict</strong> with any other mod that also alters the stats of these same backpacks. It should be compatible with everything else.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2369/jero-backpack",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2025-10-14T19:21:00.000000Z",
+  "created_at": "2025-10-14T21:41:42.000000Z",
+  "updated_at": "2026-07-28T06:33:53.000000Z",
+  "owner": {
+    "id": 85115,
+    "name": "jero",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/S3xbcVn1Z2wUbF1tNALLJ5mXMJbuusPyc7wW2i2W_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-09-27T15:50:38.000000Z",
+    "updated_at": "2026-07-10T04:52:10.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/silviohmartins/JeroBackpack",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12343,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<p>JeroBackpack v3.0.0</p>\n<hr />\n<p>Main changes:</p>\n<pre><code>Automatic backpack detection by Parent ID\nAutomatically works with backpacks from other mods\nNew size mapping system\nSupport for item.json (customizations) and blacklist.json\n</code></pre>\n<p>The new version includes all updated configuration files.</p>\n<hr />\n<p>⚠️ Clean Installation Required</p>\n<p>Please delete the old mod folder before installing this version!</p>\n<hr />\n<p>VirusTotal:</p>\n<p>jerobackpack.7z\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1</a></p>\n<p>jerobackpack.dll\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2369/jero-backpack/3.0.0",
+      "content_length": 7070,
+      "spt_version_constraint": "4.0.0",
+      "downloads": 13008,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-17T02:42:00.000000Z",
+      "created_at": "2025-11-17T02:43:11.000000Z",
+      "updated_at": "2026-07-28T06:33:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1",
+          "label": ".7z"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1",
+          "label": ".dll"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/c2112e5a-3dbc-4448-8316-33aec22ea199?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A41Z&rscd=attachment%3B+filename%3Djerobackpack.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A20Z&ske=2026-08-01T21%3A10%3A41Z&sks=b&skv=2018-11-09&sig=57%2BEw%2BrQX1Gf9JZ4IPip9wfxvK7aDxmqwA3p8Pv8tH0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3Djerobackpack.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11857,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>Introduce external JSON configuration</p>\n<p>This refactor fundamentally changes how the mod is configured by moving all backpack size data from a hardcoded dictionary into an external config/config.json file.</p>\n<pre><code>Allows users to easily customize backpack sizes without recompiling the mod.\nThe mod now reads all settings from the JSON file on server startup.\nAdded a non-functional 'ItemName' field to the config for better readability and user experience.\nBumps the mod version to 2.0.0 to reflect this significant breaking change.\n</code></pre>\n<p>VirusTotal:</p>\n<p>jerobackpack.zip\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1</a></p>\n<p>jerobackpack.dll\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/4042a04719810efc8fe162c0ad2b055d792e5778d482d1d7d2c1380f15dd2a6c?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/4042a04719810efc8fe162c0ad2b055d792e5778d482d1d7d2c1380f15dd2a6c?nocache=1</a></p>\n<p>config.json\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/97950452fe5798cd64257d7934bf0b595d30d627efda87f76a65769d32c37d7b?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/97950452fe5798cd64257d7934bf0b595d30d627efda87f76a65769d32c37d7b?nocache=1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2369/jero-backpack/2.0.0",
+      "content_length": 18049,
+      "spt_version_constraint": "4.0.2",
+      "downloads": 5152,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-15T19:13:00.000000Z",
+      "created_at": "2025-10-15T19:13:47.000000Z",
+      "updated_at": "2026-07-28T06:03:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/bfad8e01-f67c-441e-a8b1-72d3e4115069?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A05Z&rscd=attachment%3B+filename%3Djerobackpack.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A14Z&ske=2026-08-01T21%3A00%3A05Z&sks=b&skv=2018-11-09&sig=I%2B5h0b0c9vhHe3HR2fIlomKKSpWBIjIL2njAAC6lilQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3Djerobackpack.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11846,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Rework on backpack sizes</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2369/jero-backpack/1.0.0",
+      "content_length": 18049,
+      "spt_version_constraint": "4.0.0",
+      "downloads": 1176,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-14T22:00:00.000000Z",
+      "created_at": "2025-10-14T22:00:12.000000Z",
+      "updated_at": "2026-07-28T06:03:50.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b067fc00d3295f3b831d13a4bd5ab1c749b802e57b8e2529dc4d09bb1b4134ff",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/bfad8e01-f67c-441e-a8b1-72d3e4115069?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A05Z&rscd=attachment%3B+filename%3Djerobackpack.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A14Z&ske=2026-08-01T21%3A00%3A05Z&sks=b&skv=2018-11-09&sig=I%2B5h0b0c9vhHe3HR2fIlomKKSpWBIjIL2njAAC6lilQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3Djerobackpack.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 19,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:47:49.211Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "type": "mod",
+  "id": 1237,
+  "hub_id": 1725,
+  "guid": "com.musicmaniac.consumablesgalore",
+  "name": "Consumables Galore",
+  "slug": "consumables-galore",
+  "teaser": "Easily create your stims and foods in-game. Tool that comes pre-packed with some new and old stims and foods.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1725.png",
+  "downloads": 9393,
+  "favourites_count": 2,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><p>This has content. This can be used as dependency.</p>\n<p>Welcome to Consumables Galore. Easy way to add stims and foods into your games. Even you can create a stim/food/drink now! And Stims Galore has following functions:</p>\n<ul>\n<li>Newly created items are properly added to flea</li>\n<li>(Optional) Added to trader of your choosing</li>\n<li>(Optional) Added to all quests that require similar stims to be found/turned in</li>\n<li>(Optional) You can even make crafts for them.</li>\n<li>(Optional) Added to spawnpoints so they can spawn on maps</li>\n<li>All items are on on-need basis. Don’t want items to be in the game? Just delete it’s file.</li>\n</ul>\n<p>Comes prepacked with</p>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://escapefromtarkov.fandom.com/wiki/Meldonin_injector?oldid=217109\" rel=\"noreferrer noopener\">Old Meldonin</a> (called “Meldonin v13.5 Injector”)</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://escapefromtarkov.fandom.com/wiki/%22Obdolbos%22_cocktail_injector?direction=prev&amp;oldid=242248\" rel=\"noreferrer noopener\">Old Odbolbos</a> (called “Obdolbos v13 Injector”)</li>\n<li>Elephant, a stim that combines Mule + SR3D-E.H.E.T.S. (which allows you to have your carry weight be boosted to big boy values, since you can’t stack carry weight multipliers in base game so you gotta combine 2 stims into one to benefit from carry weight modifiers from both)</li>\n<li>Couple of stims from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1084-more-stim-injectors/#overview\" rel=\"noreferrer noopener\">More Stim Injectors</a></li>\n<li>Adrenaline+, Propital+, and SJ6+ injector</li>\n<li>Another like 4 stims and 4 pills</li>\n<li>Couple of drinks and foods.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Setup, Config</div>\n<div class=\"tab-content\"><p>Installation is very simple, just drop the folder into your user/mods category.<br />\nConfig is done on per-item basis. Each item is a json file located in items folder. In there you can edit a whole lot of things. If you need help figuring the config, just check next tab.</p>\n<p>If you don’t like the item, just delete the item file from items folder. Make sure that you don’t have them in your inventory/stash</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">How to add your own stims</div>\n<div class=\"tab-content\"><p>Mod loads all items that it finds in items folder. 1 item per file.</p>\n<p>USE PROVIDED ITEMS AS REFERENCE POINTS FOR YOUR OWN ITEMS</p>\n<p>If you come up with cool items, comment with your item file and I maybe can add it.</p>\n<p>Now towards json itself, lets have a look at prepackaged Elephant stim:</p>\n<p>{ “cloneOrigin”: “5ed51652f6c34d2cc26336a1”, “id”: “683288cde5644e24a54ccd03”, “fleaPrice”: 190000, “handBookPrice”: 200000, “includeInSameQuestsAsOrigin”: true, “addSpawnsInSamePlacesAsOrigin”: true, “spawnWeightComparedToOrigin”: 0.5, “Buffs”: [ … } “cloneOrigin” - the base game item that we gonna use as baseline for our stim. This means we’ll use it’s model, animation, sound, properties, etc. To find id you wanna use, use <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search/\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/search/</a> . You’re interested in “_id” which can be found at very top.</p>\n<p>“id” - id of our new items. Gotta be unique, and use MongoIDs</p>\n<p>“fleaPrice” - flea price of our item. Accepted values: “asOriginal”, value between 0-10, value above 10. “asOriginal” uses same flea price as stim we copying from. Useful for variations of existing drugs (check Meldonin v13.5 or Obdolbos v.13 files), value between 0 and 10 is treated as multiplier. So if you set it to 1.6 price will be 1.6 times of original price. Anything above 10 is treated as flat value in roubles.</p>\n<p>“handBookPrice” - absolutely same system.<br />\n“includeInSameQuestsAsOrigin” - if set to true, this adds new item to all quests where you need to find/hand in as our original is. For example, if you make new item that’s based on vanilla one but with better/worse/slightly different effects you can set it so quests that require original also accept this stim.</p>\n<p>“addSpawnsInSamePlacesAsOrigin” - adds stim into same spawn locations as origin item.</p>\n<p>spawnWeightComparedToOrigin - weight multiplier relative to original item spawn weight. &lt;1 means your item is more rare. &gt;1 means your item is more common.</p>\n<p>“Buffs”: [ { “BuffType”: “StaminaRate”, “Chance”: 1, “Delay”: 1, “Duration”: 1800, “Value”: 0.5, “AbsoluteValue”: true, “SkillName”: “” }, { “BuffType”: “SkillRate”, “Chance”: 1, “Delay”: 1, “Duration”: 1800, “Value”: 10, “AbsoluteValue”: true, “SkillName”: “Endurance” }, … ], “Buffs”: - very simple, it’s an array of buffs/debuffs that your item gives. To find a reference, go to Aki_Data/Server/database/globals.json and ctrl+f for “Buffs”: { it will get you to the very top of list of buffs used by game, including stims. Just browse that. Buffs in item json must be in same format as Buffs in globals. Use provided items as reference point.</p>\n<p>“locales”: { “en”: { “name”: “Elephant Injector”, “shortName”: “Elephant”, “description”: “A crazy mix of M.U.L.E. stimulant injector and SR3D-E.H.E.T.S. Injector, which effectively combines effects of 2 stims together.” } }, “trader”: { “traderId”: “54cb57776803fa99248b456e”, “loyaltyReq”: 4, “price”: 195000, “amountForSale”: 10 }, “locales” - understandable.</p>\n<p>“trader” - (OPTIONAL) here you can add 1 trader that will sell your stim. In all provided files traderId is therapist. If you wanna use someone else - gotta provide their id. Rest of fields are self-explaining.</p>\n<p>“craft”: { “_id”: “68328f662e75163b48102359”, “areaType”: 7, “requirements”: [ { “areaType”: 7, “requiredLevel”: 3, “type”: “Area” }, { “templateId”: “5ed51652f6c34d2cc26336a1”, “count”: 1, “isFunctional”: false, “isEncoded”: false, “type”: “Item” }, { “templateId”: “ehets_stim”, “count”: 1, “isFunctional”: false, “isEncoded”: false, “type”: “Item” }, { “templateId”: “5d1b3a5d86f774252167ba22”, “count”: 2, “isFunctional”: false, “isEncoded”: false, “type”: “Item” } ], “productionTime”: 10400, “needFuelForAllProductionTime”: false, “locked”: false, “endProduct”: “683288cde5644e24a54ccd03”, “continuous”: false, “count”: 1, “productionLimitCount”: 0, “isEncoded”: false } “craft”: - (OPTIONAL) this is where you can add 1 craft recipe for your new item. Take a note that id must be unique, area type 7 is medstation. In requirement you can put what is required for craft. Area level, items, tools. “templateId” is items consumed. “endProduct” must be your item id. Rest is self-explanatory. You can browse base game crafts in Aki_Data/Server/database/hideout/production.json.<br />\nUse <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search/\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/search/</a> for ID finding.</p>\n<p>Adrenaline Plus has some extra stuff to look at.</p>\n<p>“MaxResource”: 2, “BackgroundColor”: “red”, “effects_health”: { “Energy”: { “value”: -10 } }, “effects_damage”: { “Contusion”: { “delay”: 0, “duration”: 110, “fadeOut”: 20 }, “Pain”: { “delay”: 0, “duration”: 30, “fadeOut”: 20 } }, The effects_health and effects_damage are there for ppl also to use, check <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search/\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/search/</a> for different stims to see what they do.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Using this as dependency</div>\n<div class=\"tab-content\"><p>Wanna add stims/food/drinks to your mod but don’t wanna bother with figuring it out or just want to save coding time? Use this as dependency. When shipping your mod, just include in it empty folder MusicManiac-ConsumablesGalore/items/ with your items inside and link to this as dependency.</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Credits and stuff</div>\n<div class=\"tab-content\"><p>Big thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/11181-rainbowpc/\" rel=\"noreferrer noopener\">RainbowPC</a> and his <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/697-lots-of-loot/\" rel=\"noreferrer noopener\">Lots of Loot</a> as I directly took their function that digs inside loot tables. Made my life much easier by saving me a good hour of figuring out how to dig through them.<br />\nAnother thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/29193-papershredder432/\" rel=\"noreferrer noopener\">papershredder432</a> and his <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1084-more-stim-injectors/\" rel=\"noreferrer noopener\">More Stim Injectors</a> as I took some stims from there.</p>\n<p>Also thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/10646-riisn/\" rel=\"noreferrer noopener\">Riisn</a> for providing a good amount of 15 items for the mod</p>\n<p>Huge thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/48626/awoo\" rel=\"noreferrer noopener\">Awoo</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/59864/amightytank\" rel=\"noreferrer noopener\">AmightyTank</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/82969/rana-hamza\" rel=\"noreferrer noopener\">Rana Hamza</a> for updating the mod in my absence from SPT modding.</p></div></div></div>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://i.imgur.com/g1nHL3K.png\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/g1nHL3K.png\" alt=\"g1nHL3K.png\" /></a></p>\n<p>If you wanna be true homie or say thanks for time I’ve spent modding the game, feel free to send me a coffee on kofi</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/musicmaniac\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e11d5cf697cee7ca5b65d9_Button-p-500.png\" alt=\"61e11d5cf697cee7ca5b65d9_Button-p-500.png\" /></a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1237/consumables-galore",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2024-01-23T21:46:00.000000Z",
+  "created_at": "2024-01-23T21:46:16.000000Z",
+  "updated_at": "2026-08-01T18:02:16.000000Z",
+  "owner": {
+    "id": 31382,
+    "name": "MusicManiac",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ca9efbb42b4e3190891e87b23f064c0faf5d31aa_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-05-22T00:57:24.000000Z",
+    "updated_at": "2026-08-01T13:07:53.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 48626,
+      "name": "Awoo",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=A&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2024-04-19T22:13:08.000000Z",
+      "updated_at": "2025-09-26T15:37:26.000000Z"
+    },
+    {
+      "id": 59864,
+      "name": "AmightyTank",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ca455d7c3c3a7a3a5f0c349de15469a9aedb1443_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-07-29T05:47:41.000000Z",
+      "updated_at": "2026-08-01T13:42:04.000000Z"
+    },
+    {
+      "id": 82969,
+      "name": "Rana Hamza",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/K6kms49Pw8i6rqx2shGYWf28KCsQR7D8mUTDsAI4_256w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/j4M8y3E7lTn8Il0eqjUDN8B7wRjzD2MYZQxVX3qg.jpg",
+      "created_at": "2025-08-07T21:05:24.000000Z",
+      "updated_at": "2026-08-01T19:34:59.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/mHamzaIqbal1998/ConsumablesGalore-Ported",
+      "label": "Github"
+    }
+  ],
+  "versions": [
+    {
+      "id": 14329,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>Full rewrite for SPT 4.0 (C#/.NET 9)</p>\n<ul>\n<li>Ported from TypeScript to the new SPT 4.0 C# server API</li>\n<li>All 24 original consumables included and working</li>\n<li>Same features: buffs, trader sales, hideout crafts, loot spawns, quest integration</li>\n<li>Requires SPT 4.0.x (tested on 4.0.13)</li>\n</ul>\n<p>Original author note: big thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/82969/rana-hamza\" rel=\"noreferrer noopener\">Rana Hamza</a> for updating the mod to latest version &lt;3</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/2.0.0",
+      "content_length": 59484,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 51,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-08-01T12:57:00.000000Z",
+      "created_at": "2026-08-01T12:58:23.000000Z",
+      "updated_at": "2026-08-01T18:02:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/a200c79f7085f48ee0faf8009c97fcc29db5d911ede03dc71600a60177455919?nocache=1",
+          "label": "VirusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1319094864/4ad6bd99-42af-4bbf-98df-51716fe3fb87?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A17Z&rscd=attachment%3B+filename%3DConsumablesGalore-Ported.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A53Z&ske=2026-08-01T21%3A00%3A17Z&sks=b&skv=2018-11-09&sig=Z2YvBObavDRrgjb%2BMmcUnMIBKXZNR9fzF%2BJYK3MuA7E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQzMCwibmJmIjoxNzg1NjE1MTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.va8n5xumdQg3BYy0cntFOxc61A87-mQqq3NOwDOuNg4&response-content-disposition=attachment%3B%20filename%3DConsumablesGalore-Ported.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 524,
+      "hub_id": 14333,
+      "version": "1.4.3",
+      "description": "<p>Fixes:</p>\n<p>Updated PropitalPlus and Added Update Checking Feature</p>\n<p>Added a config</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.4.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3621,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-25T21:07:55.000000Z",
+      "created_at": "2025-05-25T21:07:55.000000Z",
+      "updated_at": "2026-05-14T01:50:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/990070804/69f312fc-174b-4e50-9724-d38eb6db10e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A14Z&rscd=attachment%3B+filename%3DConsumablesGalore-3.11-1.4.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A16Z&ske=2026-08-01T20%3A50%3A14Z&sks=b&skv=2018-11-09&sig=3qU0yTJNCofOE9l8HOp07zDXegbiVadsH%2Br6y1qVTGc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQzMCwibmJmIjoxNzg1NjE1MTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.va8n5xumdQg3BYy0cntFOxc61A87-mQqq3NOwDOuNg4&response-content-disposition=attachment%3B%20filename%3DConsumablesGalore-3.11-1.4.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 528,
+      "hub_id": 14329,
+      "version": "1.4.2",
+      "description": "<p>Fixes -</p>\n<ol>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/AlmightyTank/ConsumablesGalore/commit/1419e18ba70a7a84ae90de560c155664d6f9683b\" rel=\"noreferrer noopener\">Change quest requirements</a></strong></li>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/AlmightyTank/ConsumablesGalore/commit/1cac536a197bf24b24386fa865587fff023d6f3e\" rel=\"noreferrer noopener\">Update mod.ts</a></strong></li>\n<li><strong><strong><strong><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/AlmightyTank/ConsumablesGalore/commit/fa3169b9b9c05957e317ab334dbe5b6c1bd4fd6f\" rel=\"noreferrer noopener\">Crafting bug fixed in 3.11 update</a></strong></strong></strong></li>\n<li><strong><strong><strong><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/AlmightyTank/ConsumablesGalore/commit/48a419d59d9e926561c59c78b3d0d62217b4e760\" rel=\"noreferrer noopener\">Fixing crafting recipes of OG Stims</a></strong></strong></strong></li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.4.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 227,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-25T15:02:28.000000Z",
+      "created_at": "2025-05-25T15:02:28.000000Z",
+      "updated_at": "2026-05-14T01:50:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/990070804/ae0d24df-becb-49ab-9031-24860891ee8f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A06Z&rscd=attachment%3B+filename%3DConsumablesGalore-3.11-1.4.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A28Z&ske=2026-08-01T20%3A50%3A06Z&sks=b&skv=2018-11-09&sig=C3sKVwimQJRfrMloYPxQ127KqKY47gThRXGeHB3MMoM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQzMCwibmJmIjoxNzg1NjE1MTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.va8n5xumdQg3BYy0cntFOxc61A87-mQqq3NOwDOuNg4&response-content-disposition=attachment%3B%20filename%3DConsumablesGalore-3.11-1.4.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 529,
+      "hub_id": 14328,
+      "version": "1.4.0",
+      "description": "<p>SPT-3.11.X Support</p>\n<p>FIxed:</p>\n<p>Made the mod work for 3.11.x</p>\n<p>Added:</p>\n<p>Propital+ and SJ6+ Stim Injecter</p>\n<p>Installation: download MusicManiac-ConsumablesGalore and drop folder from it into your user/mods folder.</p>\n<p>VirusTotal - <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/url/adb37983cf7c355c689a10d0d710db571859b2b6aac72fa2524b6c4e64ab4643\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/url/adb37983cf7c355c689a10d0d710db571859b2b6aac72fa2524b6c4e64ab4643</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 188,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-25T13:10:34.000000Z",
+      "created_at": "2025-05-25T13:10:34.000000Z",
+      "updated_at": "2026-05-14T01:50:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/990070804/bcc2af8a-f360-4bbd-8e53-b0e73347a2d8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A46%3A54Z&rscd=attachment%3B+filename%3DConsumablesGalore-3.11-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A46%3A07Z&ske=2026-08-01T20%3A46%3A54Z&sks=b&skv=2018-11-09&sig=GsH7T1Ho50r7VbaH7JsyeWigOqcWgyYozyX2NwYf4Uc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQzMCwibmJmIjoxNzg1NjE1MTMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.va8n5xumdQg3BYy0cntFOxc61A87-mQqq3NOwDOuNg4&response-content-disposition=attachment%3B%20filename%3DConsumablesGalore-3.11-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2711,
+      "hub_id": 11820,
+      "version": "1.3.1",
+      "description": "<p>SPT-3.9.X</p>\n<p>Something was fixed. Or added. Something like that. Thanks to Awoo</p>\n<p>Installation: download MusicManiac-ConsumablesGalore and drop folder from it into your user/mods folder.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.3.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1010,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-09-26T12:56:28.000000Z",
+      "created_at": "2024-09-26T12:56:28.000000Z",
+      "updated_at": "2026-07-13T18:03:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/MusicManiac/ConsumablesGalore/releases"
+      }
+    },
+    {
+      "id": 3526,
+      "hub_id": 10779,
+      "version": "1.3.0",
+      "description": "<p>SPT-3.9.X</p>\n<p>Installation: download MusicManiac-ConsumablesGalore and drop folder from it into your user/mods folder.</p>\n<p>I wasn’t even planning to update these in some time but someone was nice to me on ko-fi so here ya go</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1191,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-12T16:58:53.000000Z",
+      "created_at": "2024-07-12T16:58:53.000000Z",
+      "updated_at": "2026-07-13T18:04:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/MusicManiac/ConsumablesGalore/releases"
+      }
+    },
+    {
+      "id": 4399,
+      "hub_id": 9682,
+      "version": "1.1.0",
+      "description": "<p>Version bump to 3.8.x</p>\n<p>Added some extra options for stims</p>\n<p>Installation: drop folder into your user/mods folder.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1237/consumables-galore/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 523,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-30T11:15:16.000000Z",
+      "created_at": "2024-04-30T11:15:16.000000Z",
+      "updated_at": "2026-07-13T18:05:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/MusicManiac/ConsumablesGalore/releases"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 3,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:44:20.590Z",
+    "discoveredBy": "seed"
+  }
+}

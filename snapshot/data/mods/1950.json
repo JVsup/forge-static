@@ -1,0 +1,241 @@
+{
+  "type": "mod",
+  "id": 1950,
+  "hub_id": 2622,
+  "guid": "com.tyfon.weaponcustomizer",
+  "name": "Weapon Customizer",
+  "slug": "weapon-customizer",
+  "teaser": "Personalize your weapon! Adjust rails and attachment positioning.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2622.png",
+  "downloads": 113150,
+  "favourites_count": 124,
+  "description": "<p>Weapon Customizer</p>\n<p>This is my rifle. There are many like it, but this one is mine.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p>This mod allows you to adjust the positions of some of your weapon attachments. This is a purely aesthetic mod - it has no effect on weapon statistics.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/878zo9Q.gif\" alt=\"878zo9Q.gif\" /></p>\n<h3>How to use</h3>\n<p>Modify a gun with the context menu -&gt; Modding screen, and you will be able to click and drag the white dot on each attachment. If it changes color, it’s adjustable. If not, it’s not.</p>\n<p><strong>Movement axis</strong></p>\n<p>By default, movement will be along the same axis as the gun - from the muzzle to the stock.</p>\n<ul>\n<li>SHIFT-drag will move the attachment up and down on the vertical axis.</li>\n<li>CTRL-drag will move the attachment to the left and right of the gun.</li>\n</ul>\n<p>These secondary directions <em>usually</em> don’t make any sense but occasionally you may find an attachment that needs these adjustments.</p>\n<p><strong>Rotation</strong></p>\n<p>You can rotate attachments by holding ALT and dragging the dot to the left or right. Similar to movement, you can also hold down CTRL or SHIFT to rotate around different axes.</p>\n<h4><strong>Resetting</strong></h4>\n<p>You can reset an attachment to its default position by right clicking the dot, or reset all attachments by clicking “Revert” in the upper right corner.</p>\n<h4><strong>In Raid</strong></h4>\n<p>By default the modding screen is only available out of raid. In the F12 menu you may enable the option to show up in raid, and optionally require a multitool. Note that this is a stripped down version of the modding screen, and you can only use it to customize attachment positions, not swap out attachments [dev note - changing attachments caused a lot of issues].</p>\n<h4><strong>No limits</strong></h4>\n<p>Note that there is nothing currently enforcing the laws of physics - you can drag attachments into space, or inside of other attachments, and they will stay there. The only way to solve this would be an exhaustive list of every attachement’s dimensions (which wouldn’t support extra mod content), or a very complicated and likely wrong on-the-fly analysis of where items can be moved to. Use your own judgement.</p>\n<p><strong>Foregrips</strong></p>\n<p>You can adjust foregrips forward and backwards. The operator’s hand will stay on the grip. Note that rotation can easily cause extreme weirdness of the arm.</p>\n<p><strong>Tactical devices</strong></p>\n<p>Similarly, you can move lights and lasers and such. Moving them too far back will likely cause shadows!</p>\n<p><strong>Scopes and optics</strong></p>\n<p>Scopes can be moved, but be aware that when aiming, different scopes behave differently. Moving iron sights, reflex sights, etc., will affect how the scope appears and how it lines up. Sniper scopes are handled differently by the game, and will still fill the screen the same amount, regardless of position, unless you have Fontaine’s FOV Fix.</p>\n<p><strong>Strongly recommend <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix/\" rel=\"noreferrer noopener\">Fontaine’s FOV Fix</a>!</strong></p>\n<p><strong>Stocks</strong></p>\n<p>Stocks are adjustable, but this will not affect how far off your chest the weapon is held.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p>Like almost every mod here, extract the zip archive into your SPT directory.</p>\n<p>Recommend using <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7zip</a> to extract and install this mod.</p>\n<p>Example (thanks DrakiaXYZ for the gif)</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"3N6gTe2.gif\" /></p>\n<h3>Uninstallation</h3>\n<p>To uninstall, simply delete <strong>Tyfon.WeaponCustomizer.dll</strong> from <strong>&lt;your SPT folder&gt;/BepInEx/plugins,</strong> and the <strong>Tyfon.WeaponCustomizer.Server</strong> folder from <strong>&lt;your SPT folder&gt;/SPT/user/mods</strong></p>\n<p>This mod can be uninstalled at any time without affecting your profile.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>There are 3 settings available in the F12 menu:</p>\n<ul>\n<li>\n<p><strong>Customize Weapons in Raid:</strong> Enable the Modding context menu in raid for unequipped weapons. Optionally require a multitool.</p>\n</li>\n<li>\n<p><strong>Step Size</strong>: Move attachments in discrete pixel amounts, if you prefer that</p>\n</li>\n<li>\n<p><strong>Move Everything:</strong> Allow every single gun part to be moveable, even when it makes no sense at all. Have fun</p>\n</li>\n</ul>\n<p>The customizations you make to your weapons are saved in:</p>\n<p><code>SPT/user/mods/Tyfon.WeaponCustomizer.Server/customizations.json</code></p>\n<p>It’s safe to delete this file if you want to discard all of your customizations. Do not edit it unless you are 100% sure of what you are doing.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Troubleshooting</div>\n<div class=\"tab-content\"><p><strong>Q: I made a change while testing in the hideout firing range, and it didn’t apply to the gun!</strong></p>\n<p><strong>A:</strong> Put your weapon away and bring it back out. Sometimes the games caches the old model.</p>\n<p><strong>Q: I found a bug !</strong></p>\n<p>A: Open an <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/tyfon7/WeaponCustomizer/issues\" rel=\"noreferrer noopener\">issue</a> or make a comment here. Please include logs if possible!</p></div></div></div>\n<p>If you’d like to support my work, you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/tyfon\" rel=\"noreferrer noopener\">buy me a coffee</a> ☕</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1950/weapon-customizer",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 13,
+  "published_at": "2025-01-06T22:11:00.000000Z",
+  "created_at": "2025-01-06T22:11:59.000000Z",
+  "updated_at": "2026-07-28T08:05:20.000000Z",
+  "owner": {
+    "id": 46005,
+    "name": "Tyfon",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/63c0fc245b25b135a26465ea268ebdd8a35b62d0_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-02-27T23:21:18.000000Z",
+    "updated_at": "2026-08-01T17:45:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 13,
+    "hub_id": 76,
+    "title": "Weapons",
+    "slug": "weapons",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/tyfon7/WeaponCustomizer",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13122,
+      "hub_id": null,
+      "version": "3.0.3",
+      "description": "<ul>\n<li>Hide the transfer button during inapplicable states (constructing, upgrading, etc)</li>\n<li>Fixed errors stemming from other mods overwriting default json serialization</li>\n<li>Better error handling/logging</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/3.0.3",
+      "content_length": 34957,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 26718,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-19T19:55:00.000000Z",
+      "created_at": "2026-02-19T19:55:34.000000Z",
+      "updated_at": "2026-07-28T08:05:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8fe3b9e5ccc9350b52d6f725c234b6b882a3e2c4d3e64a0693b986a9aacfd757",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/5cc95e5e-0554-43dd-8f6c-8e7361d88ff3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A53Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-3.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A50Z&ske=2026-08-01T21%3A09%3A53Z&sks=b&skv=2018-11-09&sig=s8GXIhB%2B9KckXpyIpBn3p6lAbyvfOqwiOBcxUkuOU1E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxNywibmJmIjoxNzg1NjE1NTE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.D_Km1zKhOAtdVXXlxi_2f-jH0btM53zPlMngoQttKDM&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-3.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12511,
+      "hub_id": null,
+      "version": "3.0.2",
+      "description": "<p>Update client GUID to match server\n(no user facing changes)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/3.0.2",
+      "content_length": 34469,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 14362,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-03T22:34:00.000000Z",
+      "created_at": "2025-12-03T22:34:58.000000Z",
+      "updated_at": "2026-07-28T06:59:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/66f83e559b321a02ad6c62c3f0fb63e5db7897135ff676ac94278104ed5e99f8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/41101bca-f33f-4bfb-8359-49d8ff1385f7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A40Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-3.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A50Z&ske=2026-08-01T20%3A55%3A40Z&sks=b&skv=2018-11-09&sig=gB6HRdBVT3V5I%2Fcang2U6vxUtR1%2FxJAQNcjEX%2FYSUQA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxNywibmJmIjoxNzg1NjE1NTE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.D_Km1zKhOAtdVXXlxi_2f-jH0btM53zPlMngoQttKDM&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-3.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12085,
+      "hub_id": null,
+      "version": "3.0.1",
+      "description": "<p>Fix returned insurance weapons losing their customization (thanks AcidPhantasm!)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/3.0.1",
+      "content_length": 34787,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 7200,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-30T18:34:00.000000Z",
+      "created_at": "2025-10-30T18:34:33.000000Z",
+      "updated_at": "2026-07-28T06:11:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bd58f4f73d9030759c8831cf388731f7ac858b8ce543658e585e92dd9d7a97a9",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/08c5ef37-7c8d-4706-a15a-b856c5935db4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A57Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-3.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A19Z&ske=2026-08-01T20%3A59%3A57Z&sks=b&skv=2018-11-09&sig=IwXLIRqIP3h0L%2BpnQFKV6ehkO%2FB5PqKf3O6RYIUTssU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxNywibmJmIjoxNzg1NjE1NTE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.D_Km1zKhOAtdVXXlxi_2f-jH0btM53zPlMngoQttKDM&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-3.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11907,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<p>Updated for SPT 4.0</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/3.0.0",
+      "content_length": 34270,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3159,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-18T22:18:00.000000Z",
+      "created_at": "2025-10-18T22:19:00.000000Z",
+      "updated_at": "2026-07-28T06:05:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/781b18bb40bbbb9b87efdc2c6af1b8250f839e9316d2e3a521ed03e1f0d27eec",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/4106e3c8-2cc6-43a9-896f-7aa1719deb7f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A14Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A54Z&ske=2026-08-01T21%3A06%3A14Z&sks=b&skv=2018-11-09&sig=srjuqWOQ%2BOccqA1zTc5wiRNyUEZ10j0I04aCaWYOYtU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxOCwibmJmIjoxNzg1NjE1NTE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0ttlG1rwhfd02WLrjtiHzJLAcgPua-J9Yzwj1WV1qWY&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 750,
+      "hub_id": 14068,
+      "version": "2.0.1",
+      "description": "<p>- Fix non-fatal error that can occur on first launch</p>\n<p>- In-raid modding menu is now only available on guns (ha)</p>\n<p>- Disabling the “Move Everything” option now takes effect immediately, without a client restart</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/2.0.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 31928,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-22T18:59:10.000000Z",
+      "created_at": "2025-04-22T18:59:10.000000Z",
+      "updated_at": "2026-05-14T01:56:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/991b3d2530eb79a9e1f84300286b698f60902a0ad8062c42f50eb12541142ceb",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/69593594-3b3a-4561-a2d7-0009078a6058?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A06Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-2.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A46Z&ske=2026-08-01T21%3A11%3A06Z&sks=b&skv=2018-11-09&sig=tpAYdErUq2LtUacISrHLgskxssV3p4OYo9qfxxEsqH4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxOCwibmJmIjoxNzg1NjE1NTE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0ttlG1rwhfd02WLrjtiHzJLAcgPua-J9Yzwj1WV1qWY&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-2.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1183,
+      "hub_id": 13593,
+      "version": "2.0.0",
+      "description": "<p>Updated for SPT 3.11 🚀</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 8363,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T04:02:24.000000Z",
+      "created_at": "2025-03-16T04:02:24.000000Z",
+      "updated_at": "2026-05-14T02:07:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/991b3d2530eb79a9e1f84300286b698f60902a0ad8062c42f50eb12541142ceb",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/0d3100cf-0c4a-4173-a09b-1a5cc967d410?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A32Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A59Z&ske=2026-08-01T20%3A56%3A32Z&sks=b&skv=2018-11-09&sig=5hsx7JtYRJpzIHulz553YhVsjMBeh0vvws6cfUeQHMk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxOCwibmJmIjoxNzg1NjE1NTE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0ttlG1rwhfd02WLrjtiHzJLAcgPua-J9Yzwj1WV1qWY&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1289,
+      "hub_id": 13477,
+      "version": "1.4.0",
+      "description": "<ul>\n<li>Added rotation! Hold ALT while dragging the dots to rotate the attachment. Hold down SHIFT or CTRL as well to rotate on other axes. Some things to note:\n<ul>\n<li>Which axis rotates is usually consistent but some mods are already rotated internally so the axis might not be what you expect</li>\n<li>Rotating foregrips will almost certainly cause weirdness with the character’s arm</li>\n<li>Special care will be required with sights and lasers to keep them lined up</li>\n</ul>\n</li>\n<li>Updated customizations.json format, previous versions ARE compatible</li>\n<li>Try/catch calls to the server so failures are a bit more graceful</li>\n<li>Reverting many customizations at once are now batched into a single /weaponcustomizer/save call, avoiding race conditions</li>\n</ul>\n<p>Note: This is the last version that works with SPT 3.10.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1950/weapon-customizer/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 4595,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-04T18:12:20.000000Z",
+      "created_at": "2025-03-04T18:12:20.000000Z",
+      "updated_at": "2026-05-14T02:08:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/991b3d2530eb79a9e1f84300286b698f60902a0ad8062c42f50eb12541142ceb",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/912601120/5fac7ec1-4021-4d3f-bdf4-dee8abc7934f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A46Z&rscd=attachment%3B+filename%3DTyfon-WeaponCustomizer-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A26Z&ske=2026-08-01T21%3A01%3A46Z&sks=b&skv=2018-11-09&sig=CiuV%2BhhSGOUtE8lGAT1dT6lvpTH9Q1VK3atMabAT8RU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgyMCwibmJmIjoxNzg1NjE1NTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HEapV1DhdDY2YAFRPWMHTZd6V9QPljTZ5lHsi9syqWg&response-content-disposition=attachment%3B%20filename%3DTyfon-WeaponCustomizer-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 244,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:05.987Z",
+    "discoveredBy": "seed"
+  }
+}

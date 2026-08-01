@@ -1,0 +1,86 @@
+{
+  "type": "mod",
+  "id": 1792,
+  "hub_id": 2433,
+  "guid": null,
+  "name": "Insurance Fraud",
+  "slug": "insurance-fraud",
+  "teaser": "If you discard any insured gear during a raid, it will come back to you with a 100% return rate.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2433.jpg",
+  "downloads": 1554,
+  "favourites_count": 0,
+  "description": "<h3>Insurance Fraud</h3>\n<p>This mod <em>generously</em> simulates insurance fraud in live EFT by ensuring that all discarded insured gear will return back to you with 100% return rates (imagine you hid it in a bush or something).</p>\n<p>By default, SPT insurance works through percentage rates that are set to 75% and 85% if you insure through Prapor or Therapist respectively. This rate will still apply for all insured gear that is equipped if you die in a raid, but any other insured gear that was dropped or moved to a container outside the inventory will be affected by this mod.</p>\n<h2>Compatibility</h2>\n<p>The mod is compatible with <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2115-insurance-plus/\" rel=\"noreferrer noopener\">Insurance Plus</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2141-insurance-tweaks/\" rel=\"noreferrer noopener\">Insurance Tweaks</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm\" rel=\"noreferrer noopener\">Server Value Modifier</a>. It is not compatible with the Insurance component of <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/#tab_dd136f044abee9ded916306e67d4ac3ee2ee8b4f\" rel=\"noreferrer noopener\">SPT Realism</a>.</p>\n<h2>Background</h2>\n<p>I was interested in making a mod like this so that I can feel better about dropping my guns in raid and found a lot of good direction on what and where to edit from looking through the source code of <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2115-insurance-plus/\" rel=\"noreferrer noopener\">Insurance Plus</a> by Mattdokn. Thanks a lot!</p>\n<h2>Install</h2>\n<p>Extract directly into the SPT folder. Mod folder can be located in user/mods/.</p>\n<h2>Specifics</h2>\n<p>The mod overrides functions in /spt/src/services/InsuranceService.ts and /spt/src/controllers/InsuranceController.ts. The mod extends the Item class with an additional property (dropped: boolean) and uses it as a flag for gear that’s missing in post-raid gear, creating some conditionals that will move the gear through the deletion helper functions without getting deleted. After the insurance package is handled, the dropped property is cleaned up on all items.</p>\n<p>Any mods that do not modify the above functions in InsuranceService.ts and InsuranceController.ts should be compatible, but let me know if any issues are being experienced.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1792/insurance-fraud",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2024-10-26T01:42:50.000000Z",
+  "created_at": "2024-10-26T01:42:50.000000Z",
+  "updated_at": "2026-07-07T16:59:02.000000Z",
+  "owner": {
+    "id": 30644,
+    "name": "penguingreentea",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/5ddfedade170b7a8d9c0a7b05593930758168cf1_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-04-28T20:54:22.000000Z",
+    "updated_at": "2026-07-10T04:50:32.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/ibxccc123/SPT-InsuranceFraud",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 2546,
+      "hub_id": 12022,
+      "version": "1.0.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/1792/insurance-fraud/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1554,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-10-26T01:42:50.000000Z",
+      "created_at": "2024-10-26T01:42:50.000000Z",
+      "updated_at": "2026-05-14T03:24:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/baa9abd6d144502fada3ddab838b9f4fdc2e6fa5ed2f161f6be37ceeab5096fe?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/878264204/0d71e082-1be0-4522-ac83-be99052cebf7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A40Z&rscd=attachment%3B+filename%3Dpenguingreentea-insurancefraud-1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A40Z&ske=2026-08-01T21%3A07%3A40Z&sks=b&skv=2018-11-09&sig=pO9qgpx6091CudGpraynMd4HAMxx3pMKo6vA7VSK%2FnI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc2NywibmJmIjoxNzg1NjE1NDY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2lAYCdqxQXPAwdEtCS3ThgybkCKJHk8oDztDNKi9ZFc&response-content-disposition=attachment%3B%20filename%3Dpenguingreentea-insurancefraud-1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:03:48.901Z",
+    "discoveredBy": "mod:1280",
+    "error": null
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "type": "mod",
+  "id": 2199,
+  "hub_id": 2902,
+  "guid": "redlaser42.betterheadsetdescriptions",
+  "name": "Better Headset Descriptions",
+  "slug": "better-headset-descriptions",
+  "teaser": "Adds headset stats to their descriptions",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2902.png",
+  "downloads": 8220,
+  "favourites_count": 20,
+  "description": "<p>This mod will add the Hearing Range and Ambient Reduction stats of headsets into the item’s description.</p>\n<p>Now you can easily compare the effects of headsets.</p>\n<p>Pre-3.0 I used the stats found in <a target=\"_blank\" class=\"external-link\" href=\"https://www.reddit.com/r/Tarkov/comments/1jo1do4/headset_comparison_chart_as_of_3302025_credit_to/\" rel=\"noreferrer noopener\">this </a>thread. Those metrics lacked a lot of context and were tested before a Tarkov audio change and modded headsets could not be easily tested and added to the config.</p>\n<p>In 3.0, the headset stat/details are based on the server headset item description. Headset item templates contain a number of complicated stats related to audio processing. Such as, <a target=\"_blank\" class=\"external-link\" href=\"https://imgur.com/y0Ewkaj\" rel=\"noreferrer noopener\">https://imgur.com/y0Ewkaj</a></p>\n<p>I was not going to try and understand and compare these stats between every headset, so I went to DnSpy and copied every class related to headset audio processing and feed it to an LLM. I then provided every headset template description for it to compare, rank, and output a descriptive text which helps put the stats into game context.\nHere are the results:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/VosBWW8.png\" alt=\"Alt Text\" /></p>\n<p>I highly recommend <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1860-ui-fixes/\" rel=\"noreferrer noopener\">UI Fixes</a> to make the text fit appropriately.</p>\n<p>This config contains headsets from WTT - Content Backport 1.0.7. but it is not required.</p>\n<p>The LLM was very fiddly. I do not intend to go back and check it’s work but know they can make mistakes.\nIf you have a modded headset you want to create a config for and you are reading this before the free AI collapse, you can provide the server item template to this chat and it may or may not give you one, idk how that works. <a target=\"_blank\" class=\"external-link\" href=\"https://chatgpt.com/share/6a5ccbfb-1158-83ea-aafa-d1656c654906\" rel=\"noreferrer noopener\">https://chatgpt.com/share/6a5ccbfb-1158-83ea-aafa-d1656c654906</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2199/better-headset-descriptions",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>This project used AI to analyze client audio processing classes, used that context to analyze and compare headset item template descriptions, and output it’s summary of each headset to a formatted text that is used in the config file. AI did not write the server plugin.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 9,
+  "published_at": "2025-06-23T20:12:00.000000Z",
+  "created_at": "2025-06-23T20:12:55.000000Z",
+  "updated_at": "2026-07-28T09:43:42.000000Z",
+  "owner": {
+    "id": 51899,
+    "name": "redlaser42",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/334fd164f2c5b4783f7d47cf4cf3fa3350de7da4_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/cfc15f6f6e631c159e27f82a1f2517a093990e13_1280w.webp",
+    "created_at": "2024-05-15T18:12:45.000000Z",
+    "updated_at": "2026-07-31T13:01:45.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 9,
+    "hub_id": 20,
+    "title": "Locales",
+    "slug": "locales",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/redlaser42/SPT-Better-Headset-Descriptions/tree/main",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14168,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<ul>\n<li>Total rewrite. See new description</li>\n<li>Added WTT - Content Backport headsets</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2199/better-headset-descriptions/3.0.0",
+      "content_length": 8436,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1262,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-20T21:03:00.000000Z",
+      "created_at": "2026-07-20T21:07:25.000000Z",
+      "updated_at": "2026-07-28T09:43:42.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ae302979808b63830753ecb6db0af5c68ea4e81944b072acfab2e0388db973a6?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1303196757/73a027a4-ee3d-4586-b016-d349a07231a2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A34%3A27Z&rscd=attachment%3B+filename%3DBetter.Headset.Descriptions.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A33%3A46Z&ske=2026-08-01T20%3A34%3A27Z&sks=b&skv=2018-11-09&sig=kzuwgb8%2Bj%2FxBSpm6Qhis95YOXLe4r3m1COvTXevUhAI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OSwibmJmIjoxNzg1NjEzMTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZEY_jdB4BTOU8HGSVqNT4zYsyV7WtfqMWHdph7T7R0c&response-content-disposition=attachment%3B%20filename%3DBetter.Headset.Descriptions.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14105,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<ul>\n<li>Updated for 4.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2199/better-headset-descriptions/2.0.0",
+      "content_length": 6821,
+      "spt_version_constraint": "~4",
+      "downloads": 655,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-16T20:08:00.000000Z",
+      "created_at": "2026-07-16T20:09:49.000000Z",
+      "updated_at": "2026-07-28T09:39:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8119c0943fa3eb65d842cd8d114d43e5ed2f3418b189c4c78689efd96d4b35ae?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1303196757/1e0bb947-43ae-4d92-b120-52239a715b4c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A16Z&rscd=attachment%3B+filename%3DBetter.Headset.Descriptions.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A31Z&ske=2026-08-01T20%3A30%3A16Z&sks=b&skv=2018-11-09&sig=5QVvsamt6cqjSdYQelgFpelHTOQQiFn4YhGbuVdi0hM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OSwibmJmIjoxNzg1NjEzMTg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZEY_jdB4BTOU8HGSVqNT4zYsyV7WtfqMWHdph7T7R0c&response-content-disposition=attachment%3B%20filename%3DBetter.Headset.Descriptions.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 366,
+      "hub_id": 14506,
+      "version": "1.0.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/2199/better-headset-descriptions/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 6303,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-06-23T20:12:55.000000Z",
+      "created_at": "2025-06-23T20:12:55.000000Z",
+      "updated_at": "2026-07-13T18:00:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7f8d41fa9ae85cf9ede6b2d8c2aca9d0e9437739f3e09422a06e1c08b5e39b21?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.google.com/file/d/1idw6jsByiEbsYOAbxgzpcwkc_v0_-UtF/view?usp=sharing"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 49,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:39:49.006Z",
+    "discoveredBy": "seed"
+  }
+}

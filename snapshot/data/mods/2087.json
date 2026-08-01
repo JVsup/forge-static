@@ -1,0 +1,110 @@
+{
+  "type": "mod",
+  "id": 2087,
+  "hub_id": 2772,
+  "guid": "com.lightoftheworld.lightsvoiceactingframework",
+  "name": "Light's Voice Acting framework",
+  "slug": "lights-voice-acting-framework",
+  "teaser": "Add your own audio files and voicelines to your trader!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2772.png",
+  "downloads": 645,
+  "favourites_count": 2,
+  "description": "<p>This mod allows you to add customs sounds, voicelines, etc. to trader interactions, including:</p>\n<p>-Buying an item</p>\n<p>-Selling an item</p>\n<p>-Accepting a quest</p>\n<p>-Completing (turning in) a quest</p>\n<p><strong>This mod is intended to be utilized alongside custom traders, though it functions as a standalone.</strong></p>\n<p><strong>USERS:</strong></p>\n<p>Simply download this mod, extract into your root Tarkov folder, and then follow the instructions given by the mod you are combining this with for implementing their voicelines (ideally, you would be extracting into the root folder or into the BepInEx-&gt;plugins folder). There is a config file located in the LightsVoiceActing folder within plugins that allows you to disable the quest sounds and / or transaction sounds individually.</p>\n<p><strong>MODDERS:</strong></p>\n<p>Adding voicelines, sounds, or whatever you want is incredibly easy! Here is all you need to do on your end:</p>\n<p>Step 1:</p>\n<p>Create a .wav file with whatever voice or sound you wish. It has to be a .wav</p>\n<p>Step 2:</p>\n<p>If you are creating a <strong>QUEST</strong> sound file: Begin the filename with that quest’s id and place it in LightsVoiceActing-&gt;SoundFiles-&gt;QuestVoicelines</p>\n<p>If you are creating a <strong>TRANSACTION</strong> sound file: Begin the filename with the trader’s id and place it in LightsVoiceActing-&gt;SoundFiles-&gt;BuySellVoicelines</p>\n<p>Step 3:</p>\n<p>Place an underscore _ after the id, and add the following suffix based on when the sound is meant to play:</p>\n<p><strong>PURCHASE FROM TRADER:</strong> BuyVoice# (Adjust the number as needed) Example: 54cb50c76803fa8b248b4571_BuyVoice1.wav</p>\n<p>**SELLING TO TRADER:**SellVoice# (Adjust the number as needed) Example: 5a7c2eca46aef81a7ca2145d_SellVoice3.wav</p>\n<p>**ACCEPT QUEST:**AcceptVoice Example: 675f8d2a30cca3c591eb2374_AcceptVoice.wav</p>\n<p><strong>COMPLETE QUEST:</strong> CompleteVoice Example: 675f8d2a30cca3c591eb2374_CompleteVoice.wav</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2087/lights-voice-acting-framework",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2025-04-07T21:32:35.000000Z",
+  "created_at": "2025-04-07T21:32:35.000000Z",
+  "updated_at": "2026-08-01T16:06:39.000000Z",
+  "owner": {
+    "id": 21928,
+    "name": "LightoftheWorld",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/3f57316eb57284f8f2c42b487889d3d09b7237bc_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2022-08-22T23:09:32.000000Z",
+    "updated_at": "2026-08-01T17:38:08.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/Light-of-the-World/SPT-VoiceActing",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12263,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>“Hey, I have an idea! Let’s update the mod nobody is using first, instead of the mods we know people are actually using!”\n“Great idea, Light!”</p>\n<p>Updated for 4.0.0. No other changes.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2087/lights-voice-acting-framework/2.0.0",
+      "content_length": 292875,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 243,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-10T07:31:00.000000Z",
+      "created_at": "2025-11-10T07:31:30.000000Z",
+      "updated_at": "2026-08-01T16:06:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e039ba47799bf42a41076c8b7d3d9e56aef3e029874908566313711e0b336dd2?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/962232495/c2e48cb1-bb45-4cbe-8877-cd7541bcfae3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A09Z&rscd=attachment%3B+filename%3DLightsVoiceActingFramework200.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A20Z&ske=2026-08-01T21%3A18%3A09Z&sks=b&skv=2018-11-09&sig=kvl%2FiPQhKHZOV8SY0k7eVH4Wet77wdMe68vBs0Q1fQE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTkyMywibmJmIjoxNzg1NjE1NjIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ELrQobCUY8veE2RuD0PAHNJbE8eQCiJaX6FrdSjAeps&response-content-disposition=attachment%3B%20filename%3DLightsVoiceActingFramework200.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 848,
+      "hub_id": 13955,
+      "version": "1.0.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/2087/lights-voice-acting-framework/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 402,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-07T21:32:35.000000Z",
+      "created_at": "2025-04-07T21:32:35.000000Z",
+      "updated_at": "2026-07-13T18:01:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c110ee0caf4ec65d0ce644a79efcbde74a90276088c34939423af69613ec79f7?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/Light-of-the-World/SPT-VoiceActing/releases/tag/1.0"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:48:43.202Z",
+    "discoveredBy": "seed"
+  }
+}

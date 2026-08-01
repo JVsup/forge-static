@@ -1,0 +1,266 @@
+{
+  "type": "mod",
+  "id": 784,
+  "hub_id": 1054,
+  "guid": "com.danw.hardcorerules",
+  "name": "Hardcore Rules",
+  "slug": "hardcore-rules",
+  "teaser": "Is SPT getting too easy? Too much nice gear collecting dust in your stash? Fix that problem with a hardcore playthrough similar to DeadlySlob's hardcore rules for live Tarkov.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1054.jpg",
+  "downloads": 11032,
+  "favourites_count": 8,
+  "description": "<p>Is SPT getting too easy? Too much nice gear collecting dust in your stash? Fix that problem with a hardcore playthrough similar to <a target=\"_blank\" class=\"external-link\" href=\"https://www.twitlonger.com/show/n_1sr500b\" rel=\"noreferrer noopener\">DeadlySlob’s hardcore rules for live Tarkov</a>. I was inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/129/fins-hardcore-options\" rel=\"noreferrer noopener\">Fin’s Hardcore Options</a> and made a new version that simply implements the hardcore rulesets by DeadlySlob and other streamers.</p>\n<p>To start a new hardcore playthrough, create a new profile in the SPT launcher using the “Hardcore Playthrough” edition this mod adds. By default, this mod will be active when a profile using the “Hardcore Playthrough” edition is loaded, and it will be deactivated when any other profile edition is loaded.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/dwesterwick/SPTHardcoreRules/refs/heads/master/Assets/NewProfileHardcorePlaythrough.jpg\" alt=\"Hardcore Playthrough profile type image\" /></p>\n<p>If you’re using an existing hardcore profile from a previous version of this mod (that was compatible with SPT 3.9.x), you can still use it if you do one of the following:</p>\n<ul>\n<li>Set <strong>use_for_all_profiles=true</strong> in <em>config.json</em> to apply the hardcore ruleset to all profiles, regardless of their edition</li>\n<li>Change <strong>info.edition</strong> to <strong>“Hardcore Playthrough”</strong> (case-sensitive) in the JSON data for your profile. <strong>Always make a backup before manually changing your profile!</strong></li>\n</ul>\n<p><strong>If you’re using <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2326/project-fika\" rel=\"noreferrer noopener\">Fika</a>, do not mix players who are using hardcore profiles with players who are not.</strong> This will result in trader inventories and flea-market item availability not working correctly for some players.</p>\n<p>This mod is highly customizable, so you can change the configuration to match the level of difficulty you want. Here are the settings you can change in the <strong>config.json</strong> file in this mod:</p>\n<ul>\n<li><strong>services.flea_market.enabled</strong>: if this is <em>false</em>, you can’t list new offers, and there won’t be any player offers. You can only use the flea-market interface to browse trader offers.</li>\n<li><strong>services.flea_market.only_barter_offers</strong>: if you’ve enabled the flea market, you can set this to <em>false</em> to disable all offers using currency.</li>\n<li><strong>services.disable_trader_repairs</strong>: Only repair kits can be used for repairs.</li>\n<li><strong>services.disable_insurance</strong>: All items will be blacklisted from insurance, and the insurance screen will not be displayed when loading into a raid. In case you want to turn this off and on during a playthrough, this will not remove insurance for any items that were previously insured.</li>\n<li><strong>services.disable_post_raid_healing</strong>: Disables Therapist’s post-raid healing, but the screen will still be shown so you can review the damage you received during the raid.</li>\n<li><strong>services.disable_scav_raids</strong>: Disables Scav raids.</li>\n<li><strong>traders.disable_fence</strong>: Allows you to remove all of Fence’s offers. You can still sell items to Fence.</li>\n<li><strong>traders.disable_starting_gifts</strong>: Prapor and Mechanic no longer give you starting gifts.</li>\n<li><strong>traders.barters_only</strong>: Removes all trader offers using currency unless they’re explicitly whitelisted below.</li>\n<li><strong>traders.allow_GPCoins</strong>: Allows trader offers for GP coins to be considered barter offers. As of SPT 3.9.0, GP coins are considered currency.</li>\n<li><strong>traders.whitelist_only</strong>: Removes all trader offers unless they’re explicitly whitelisted in this mod.</li>\n<li><strong>traders.whitelist_items</strong>: If only barters are allowed, use this to whitelist items (or parents of items) even if they’re not barters. You can find ID’s for items using <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/search/\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/search/</a> or find them in <em>[SPT install directory]\\SPT\\SPT_Data\\database\\templates\\items.json</em>.</li>\n<li><strong>traders.whitelist_traders</strong>: An array of the ID’s of traders that will not have their offers modified. Trader ID’s can be viewed when the server starts if <strong>debug.enabled=true</strong>.</li>\n<li><strong>secureContainer.only_use_whitelists_in_this_mod</strong>: If this is <em>true</em>, you can’t put anything in secure containers unless you explicitly whitelist them. If this is <em>false</em>, the following whitelists are ignored and the default EFT ones are used instead. This restriction also applies to items contained within the one you’re trying to put in your secure container. For example, you can put a docs case in your secure container, but you cannot put a docs case containing currency in your secure container. Similarly, you can put a docs case containing examined keys into your secure container while in your stash, but you cannot do this in-raid. If you remove a docs case containing examined keys from your secure container while in-raid, you’ll need to remove all the examined keys before you’ll be allowed to put the docs case back into your secure container. For this reason, be careful about unexamined keys! If you examine them and then remove them from your secure container, you’ll be unable to put them back in while you’re in-raid.</li>\n<li><strong>secureContainer.whitelist.global</strong>: The items (or parents of items) in this whitelist are applied all the time.</li>\n<li><strong>secureContainer.whitelist.inHideout</strong>: The items in this whitelist are applied only while not in-raid.</li>\n</ul>\n<p>The following items are whitelisted for trader offers by default:</p>\n<ul>\n<li>All currency (you can exchange RUB for USD, etc. as much as you want)</li>\n<li>All inventory containers (item cases, Scav junkboxes, etc.)</li>\n<li>All special items (markers, signal jammers, etc.)</li>\n<li>All maps</li>\n<li>Green and yellow flares</li>\n</ul>\n<p>The following items are whitelisted for putting in your secure container by default:</p>\n<ul>\n<li>All keys and keycards (but they must not be examined when in raid)</li>\n<li>Key tool</li>\n<li>Gingy keychain</li>\n<li>Keycard holder</li>\n<li>S I C C case</li>\n<li>Documents case</li>\n</ul>\n<p>Good luck!</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/784/hardcore-rules",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2023-03-04T04:26:00.000000Z",
+  "created_at": "2023-03-04T04:26:54.000000Z",
+  "updated_at": "2026-07-28T08:06:56.000000Z",
+  "owner": {
+    "id": 27632,
+    "name": "DanW",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=D&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2023-02-27T02:34:15.000000Z",
+    "updated_at": "2026-08-01T12:13:14.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/dwesterwick/SPTHardcoreRules",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13187,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<ul>\n<li>Updated for SPT 4.0</li>\n</ul>\n<p><em>Config.json</em> files from previous releases are not compatible.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/3.0.0",
+      "content_length": 35812,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1410,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-02T03:46:00.000000Z",
+      "created_at": "2026-03-02T03:47:28.000000Z",
+      "updated_at": "2026-07-28T08:06:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/468bae2116b8398964e625629fe1bb2aa0c9bde16f545f37ba25afc1f6e404d7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/66401d57-1475-4984-94bc-0d3596c151b8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A42Z&rscd=attachment%3B+filename%3DHardcoreRules-3.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A26Z&ske=2026-08-01T21%3A08%3A42Z&sks=b&skv=2018-11-09&sig=sOBSbKlIC1s0V9rqUCxEZbapJxIRApoZvETq%2FTsqHv4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DHardcoreRules-3.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 306,
+      "hub_id": 14566,
+      "version": "2.2.1",
+      "description": "<ul>\n<li>\n<p>Added null checks when filtering trader assorts to help with troubleshooting mod conflicts</p>\n</li>\n<li>\n<p>Only show Info messages if debug.enabled=true</p>\n</li>\n<li>\n<p>Changed from using FileSystem to FileSystemSync</p>\n</li>\n<li>\n<p>Bug fix for exceptions if a trader’s started, success, or fail assorts are null</p>\n</li>\n</ul>\n<p><em>Config.json</em> files from the 2.2.0 release are compatible.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/2.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1933,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-04T14:19:58.000000Z",
+      "created_at": "2025-07-04T14:19:58.000000Z",
+      "updated_at": "2026-05-14T01:42:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/99e4307b-b02b-4d1e-9aad-d63594278844?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A16Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A43Z&ske=2026-08-01T21%3A14%3A16Z&sks=b&skv=2018-11-09&sig=gS7V5kyQlV%2Bv7A1s0lAvLtP129DVbjDppFAJ7R50QXs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1050,
+      "hub_id": 13734,
+      "version": "2.2.0",
+      "description": "<ul>\n<li>Updated for SPT 3.11</li>\n<li>Renamed disable_prapor_starting_gifts to disable_starting_gifts in <em>config.json</em> and made it also disable Mechanic’s starting gift</li>\n</ul>\n<p><em>Config.json</em> files from previous releases are not compatible.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/2.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1045,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-22T17:00:03.000000Z",
+      "created_at": "2025-03-22T17:00:03.000000Z",
+      "updated_at": "2026-05-14T02:03:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/5b29f753-8e16-4d9d-a83b-ff8720ca0d8f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A13Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A15Z&ske=2026-08-01T21%3A23%3A13Z&sks=b&skv=2018-11-09&sig=OjM9k3LNmvp9S1lYKRHpnYnDwiG5lNwdfB3GaftRz%2BY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2164,
+      "hub_id": 12472,
+      "version": "2.1.0",
+      "description": "<ul>\n<li>Updated for SPT 3.10.0</li>\n<li>Refactoring and minor performance improvements</li>\n</ul>\n<p><em>Config.json</em> files from the 2.0.0 - 2.0.2 releases are compatible.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/2.1.0",
+      "content_length": null,
+      "spt_version_constraint": "3.10.0",
+      "downloads": 608,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-04T02:49:51.000000Z",
+      "created_at": "2024-12-04T02:49:51.000000Z",
+      "updated_at": "2026-05-14T03:14:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/656b6e7b-f10c-4404-aef9-c07ca1fc37bf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A27Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A18%3A41Z&ske=2026-08-01T21%3A19%3A27Z&sks=b&skv=2018-11-09&sig=v7nnM8xuBb7uqNJVniGSmNGLZgFBlhBGSpqlMhVY3j8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3676,
+      "hub_id": 10592,
+      "version": "1.4.0",
+      "description": "<ul>\n<li>Updated to SPT 3.9.0</li>\n<li>Bug fix for Scav runs being available after creating a new profile until restarting the game</li>\n</ul>\n<p><em>Config.json</em> files from the 1.2.0 through 1.3.2 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 293,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-08T03:48:22.000000Z",
+      "created_at": "2024-07-08T03:48:22.000000Z",
+      "updated_at": "2026-05-14T03:55:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/da6f75dd-e3a1-4177-a2ae-cb3ed84f0f43?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A30Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A18Z&ske=2026-08-01T21%3A03%3A30Z&sks=b&skv=2018-11-09&sig=5gfTDaNTyi4jKjb75ONZRUkj6Xn187mSFp%2B0GuHZOYs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3737,
+      "hub_id": 10516,
+      "version": "1.3.2",
+      "description": "<ul>\n<li>Added config option to disable Prapor’s starting gifts (enabled by default)</li>\n<li>Bug fix for allowing SPT 3.9.0</li>\n</ul>\n<p><em>Config.json</em> files from the 1.2.0 through 1.3.1 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/1.3.2",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 150,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T23:28:02.000000Z",
+      "created_at": "2024-07-06T23:28:02.000000Z",
+      "updated_at": "2026-05-14T03:55:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/c63fb5ad-2bb7-434d-acd3-808e97159c11?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A27%3A08Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A32Z&ske=2026-08-01T21%3A27%3A08Z&sks=b&skv=2018-11-09&sig=WSdPVPGtPtluaisGYCKP5VHAGrWm%2FOkOnlI163tIjAE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4874,
+      "hub_id": 9130,
+      "version": "1.3.0",
+      "description": "<p><strong>Changes in 1.3.0 HF1:</strong></p>\n<ul>\n<li>Increased minimum SPT-AKI version to 3.8.0</li>\n</ul>\n<p><strong>Changes in 1.3.0:</strong></p>\n<ul>\n<li><strong>Updated for SPT-AKI 3.8.0</strong></li>\n<li><strong>Whitelisted yellow flares to purchase from traders</strong></li>\n<li>Removed the version number from the directory name in \\user\\mods\\</li>\n<li>Updated client code to be version-agnostic, so it will (hopefully) be compatible with future SPT versions too</li>\n<li>Updated server code per Lint recommendations</li>\n</ul>\n<p><em>Config.json</em> files from the 1.2.0 through 1.2.2 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/1.3.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 394,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-03T03:51:51.000000Z",
+      "created_at": "2024-04-03T03:51:51.000000Z",
+      "updated_at": "2026-05-14T04:19:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/71446ac8-1cba-472c-8c1a-00db6b30e498?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A04Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A09Z&ske=2026-08-01T21%3A11%3A04Z&sks=b&skv=2018-11-09&sig=xkUDn57UI2KSAQqlsF6wX76MqCxEpNcU5x1j93nEBfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5886,
+      "hub_id": 7834,
+      "version": "1.2.2",
+      "description": "<ul>\n<li>Updated for SPT-AKI 3.7.1</li>\n<li>Bug fix for cash offers eventually returning to the flea market when <strong>services.flea_market.only_barter_offers=true</strong></li>\n</ul>\n<p><em>Config.json</em> files from the 1.2.0 and 1.2.1 releases are compatible.</p>\n<p>Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/12229-bayard/\" rel=\"noreferrer noopener\">Bayard</a> for help with testing!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/784/hardcore-rules/1.2.2",
+      "content_length": null,
+      "spt_version_constraint": "3.7.1",
+      "downloads": 529,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-15T03:04:39.000000Z",
+      "created_at": "2023-10-15T03:04:39.000000Z",
+      "updated_at": "2026-05-14T04:29:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/608477626/8e87c408-c7e4-46e6-8a3c-dd20282cb3eb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A03Z&rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules-1.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A54Z&ske=2026-08-01T21%3A15%3A03Z&sks=b&skv=2018-11-09&sig=YJcCh6j8am5aavuVMU3KlKJ9HtAlOFj%2F6zBU%2BUM5xjE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules-1.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 15,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:43.463Z",
+    "discoveredBy": "seed"
+  }
+}

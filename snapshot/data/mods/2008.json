@@ -1,0 +1,571 @@
+{
+  "type": "mod",
+  "id": 2008,
+  "hub_id": 2688,
+  "guid": "net.hakugyokurou.transmog",
+  "name": "Transmog",
+  "slug": "transmog",
+  "teaser": "Change the appearance of your current equipment or hide them.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2688.png",
+  "downloads": 11977,
+  "favourites_count": 14,
+  "description": "<p><em>TLDR for those familiar with WoW: This is a transmogrification mod for EFT.</em></p>\n<p>This mod allows you to change the appearance of your PMC/Scav equipment (for equippable items, not tactical clothing).</p>\n<p><strong>Requirements:</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1278-custom-interactions/\" rel=\"noreferrer noopener\">Custom Interactions</a></p>\n<p><strong>Description:</strong></p>\n<p>A new context menu has been added to all equippable items. Right-click on an item in the inventory screen, and you will find a “Transmog” menu with several options:</p>\n<p><em>Set as [equipment type]:</em> Force this item to be displayed on your character, regardless of what your character actually has equipped.</p>\n<p><em>Hide [equipment type]:</em> Hide any similar equipment you character has equipped.</p>\n<p><em>Reset [equipment type]:</em> Cancel the effects applied to that equipment type.</p>\n<p><strong>Example:</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://imgur.com/r5JAKt8\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/r5JAKt8.png\" alt=\"r5JAKt8.png\" /></a></p>\n<p>If you right-click on a Scav Vest in your inventory (you don’t need to own it. you can perform this operation while viewing items in traders, flea markets, or even hideout crafting recipes), you will see the Transmog menu and three options:</p>\n<p>If you select <em>“Set as Vest”</em>, your character will always visually wear a Scav Vest.</p>\n<p>If you select <em>“Hide Vest”</em>, any vest on your character will become invisible.</p>\n<p>If you select <em>“Reset Vest”</em>, the effects mentioned above will be reverted.</p>\n<p><strong>Notes:</strong></p>\n<p>To simplify the menu, the Scav transmog options are not displayed by default. If you want to apply transmog on your Scav, press F12 to show the BepInEx settings menu, then find Transmog, and then enable “Show Scav in transmog menu”.</p>\n<p><strong>Limitations:</strong></p>\n<p>This mod only works on your PMC and your Scav, not on bots. If you want to hide the bots equipment, try kmyuhkyuk’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/654-hide-dress/\" rel=\"noreferrer noopener\">Hide Dress</a>.</p>\n<p><strong>Known problems:</strong></p>\n<p>After transmoging headgears, the toggleable parts on the helmet (night vision goggles, face shields) will always be opened.</p>\n<p><strong>Future plans:</strong></p>\n<p>Change the appearance of bots equipment, but I’m not sure yet. This will require a new menu to manage equipment transmog.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2008/transmog",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2025-02-10T22:20:00.000000Z",
+  "created_at": "2025-02-10T22:20:18.000000Z",
+  "updated_at": "2026-07-28T07:19:07.000000Z",
+  "owner": {
+    "id": 48410,
+    "name": "szszss",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/e605ccfa2d14bc3d6984f62dfc8899814baa1758_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-16T16:08:07.000000Z",
+    "updated_at": "2026-07-10T04:51:07.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/szszss/EFT.Transmog",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12706,
+      "hub_id": null,
+      "version": "1.3.1",
+      "description": "<p><em>This update is credited to <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/szszss/EFT.Transmog/pull/2\" rel=\"noreferrer noopener\">@Oriontacocat</a></em></p>\n<p>Better WTT - Pack ‘n’ Strap compatibility.</p>\n<p>Code support for Fika compatibility. It requires <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/addon/13/transmog-fika-compatibility-module\" rel=\"noreferrer noopener\">an additional Fika addon</a>.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.3.1",
+      "content_length": 15430,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 4820,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-29T13:01:00.000000Z",
+      "created_at": "2025-12-29T12:55:11.000000Z",
+      "updated_at": "2026-07-28T07:19:07.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11897,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Compiled for client version 0.16.9.0.40087</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.8.0",
+              "content_length": 10860,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 13368,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-18T17:41:00.000000Z",
+              "created_at": "2025-10-18T17:41:32.000000Z",
+              "updated_at": "2026-07-28T06:05:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7c681f77ab8d937fdc49e822b0f177562255f5f24d131247fb9aed5accabeee1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/42f59fd0-571a-41f0-8576-ec65771a8238?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A36Z&rscd=attachment%3B+filename%3DTransmog-1.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A18Z&ske=2026-08-01T21%3A01%3A36Z&sks=b&skv=2018-11-09&sig=x2YMIfr7WCayZPeN09GgZ9BiLL90wfDI9azTPLqbgHs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MiwibmJmIjoxNzg1NjE1NTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sd12gIAcnemAJpS2o2NUFpW0nswuE9pdiW5djLunZkA&response-content-disposition=attachment%3B%20filename%3DTransmog-1.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12593,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<p><em>This update is credited to <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/szszss/EFT.Transmog/pull/1\" rel=\"noreferrer noopener\">@sakuranosakana</a></em></p>\n<p>Support SPT-Aki 4.0.x (EFT 0.16.9)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.3.0",
+      "content_length": 14550,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 656,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-12-14T01:24:00.000000Z",
+      "created_at": "2025-12-14T01:25:12.000000Z",
+      "updated_at": "2026-07-28T07:05:18.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11897,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Compiled for client version 0.16.9.0.40087</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.8.0",
+              "content_length": 10860,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 13368,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-18T17:41:00.000000Z",
+              "created_at": "2025-10-18T17:41:32.000000Z",
+              "updated_at": "2026-07-28T06:05:00.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/206112ab750f7e1cd5b804ca4ff836e652b2a3ec02bab37cc22c4205ee406844",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/85eeb2ea-e234-4c05-9ad8-7028ec449525?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A54%3A40Z&rscd=attachment%3B+filename%3DTransmog-1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A19Z&ske=2026-08-01T20%3A54%3A40Z&sks=b&skv=2018-11-09&sig=D2P0T34Rb%2FbmJEcsqT%2F9n8EC%2BQR5CqvjkMuTNYZPUgg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MiwibmJmIjoxNzg1NjE1NTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sd12gIAcnemAJpS2o2NUFpW0nswuE9pdiW5djLunZkA&response-content-disposition=attachment%3B%20filename%3DTransmog-1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12705,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p><em>Backport from 1.3.1. It runs on SPT 3.11.</em></p>\n<p>Better WTT - Pack ‘n’ Strap compatibility.</p>\n<p>Code support for Fika compatibility. It requires an additional Fika addon.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 173,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-29T13:00:00.000000Z",
+      "created_at": "2025-12-29T12:46:44.000000Z",
+      "updated_at": "2026-05-14T08:45:59.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 997,
+              "hub_id": 13792,
+              "version": "1.7.0",
+              "description": "<p>Compiled for client version 0.16.1.3.35392</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.7.0",
+              "content_length": null,
+              "spt_version_constraint": "~3.11.0",
+              "downloads": 12215,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-03-25T07:33:00.000000Z",
+              "created_at": "2025-03-25T07:33:15.000000Z",
+              "updated_at": "2026-05-14T02:02:56.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/908c0b1dc4feb18704a0b6e238656290c927150161ee9b2fc7b2036a756282cc",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/2e2c639d-821c-40cd-879c-26173b18381d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A32Z&rscd=attachment%3B+filename%3DTransmog-1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A34Z&ske=2026-08-01T20%3A59%3A32Z&sks=b&skv=2018-11-09&sig=mPzHB7Gcx7ck5RkzPvOW%2FZnn00uvV6n2zaiU5UWZDFg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MiwibmJmIjoxNzg1NjE1NTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sd12gIAcnemAJpS2o2NUFpW0nswuE9pdiW5djLunZkA&response-content-disposition=attachment%3B%20filename%3DTransmog-1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 835,
+      "hub_id": 13969,
+      "version": "1.2.0",
+      "description": "<p>Support SPT-Aki 3.11.x (EFT 0.16.1)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3885,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-04-09T00:48:00.000000Z",
+      "created_at": "2025-04-09T00:48:01.000000Z",
+      "updated_at": "2026-05-14T01:59:57.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 997,
+              "hub_id": 13792,
+              "version": "1.7.0",
+              "description": "<p>Compiled for client version 0.16.1.3.35392</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.7.0",
+              "content_length": null,
+              "spt_version_constraint": "~3.11.0",
+              "downloads": 12215,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-03-25T07:33:00.000000Z",
+              "created_at": "2025-03-25T07:33:15.000000Z",
+              "updated_at": "2026-05-14T02:02:56.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/49c8c51c121e35f88f52c3ab5b5f5a8761bdc738d1da4003c913b0e331cb0e31",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/4b34c375-741a-4f7f-bb28-264ad463040b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A40Z&rscd=attachment%3B+filename%3DTransmog-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A44Z&ske=2026-08-01T21%3A01%3A40Z&sks=b&skv=2018-11-09&sig=wEFgvLL%2Basz7qGXARD9HUS4ipvB%2FbIOgDUoaGG0lUsk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MywibmJmIjoxNzg1NjE1NTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.33GRFSUsk0Lye3pQ_5xg9f2mvvXAi3Xavjh7R3LkhQQ&response-content-disposition=attachment%3B%20filename%3DTransmog-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 836,
+      "hub_id": 13968,
+      "version": "1.1.1",
+      "description": "<p>Allow disabling transmog for Scavs in the matchmaking screen so you can see their actual equipment.</p>\n<p>Fixed hide equipment button for Scavs.</p>\n<p><em>This version is for SPT-Aki 3.10.x (EFT 0.15.5)</em></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.1.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 261,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-04-09T00:47:00.000000Z",
+      "created_at": "2025-04-09T00:47:21.000000Z",
+      "updated_at": "2026-05-14T01:59:58.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 2178,
+              "hub_id": 12454,
+              "version": "1.6.0",
+              "description": "<p>Note to mod developers: View source code to see the changes in usage.</p>\n<p>Compiled for client version 0.15.5.1.33420</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.6.0",
+              "content_length": null,
+              "spt_version_constraint": "~3.10.0",
+              "downloads": 20397,
+              "fika_compatibility": "unknown",
+              "published_at": "2024-12-02T14:13:00.000000Z",
+              "created_at": "2024-12-02T14:13:14.000000Z",
+              "updated_at": "2026-05-14T03:14:58.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/49c8c51c121e35f88f52c3ab5b5f5a8761bdc738d1da4003c913b0e331cb0e31",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/f50f62fd-eaeb-4beb-ac3c-1145ec6900e1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A55Z&rscd=attachment%3B+filename%3DTransmog-1.1.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A28Z&ske=2026-08-01T21%3A03%3A55Z&sks=b&skv=2018-11-09&sig=WccgU4bC6qGIbabaRSRsacY52B1QUbrj7S5VndDsIu8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MywibmJmIjoxNzg1NjE1NTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.33GRFSUsk0Lye3pQ_5xg9f2mvvXAi3Xavjh7R3LkhQQ&response-content-disposition=attachment%3B%20filename%3DTransmog-1.1.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1405,
+      "hub_id": 13357,
+      "version": "1.1.0",
+      "description": "<p>Support SPT-Aki 3.10.x (EFT 0.15.5)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1918,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-02-10T22:21:00.000000Z",
+      "created_at": "2025-02-10T22:21:14.000000Z",
+      "updated_at": "2026-05-14T02:22:54.000000Z",
+      "dependencies": [
+        {
+          "id": 938,
+          "hub_id": 1278,
+          "guid": "com.icyclawz.custominteractions",
+          "name": "Custom Interactions",
+          "slug": "custom-interactions",
+          "teaser": "(Library)\r\nAdd custom context menu items to existing context menus, including adding custom submenus.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1278.png",
+          "downloads": 45980,
+          "favourites_count": 37,
+          "detail_url": "https://forge.sp-tarkov.com/mod/938/custom-interactions",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-06-23T14:24:00.000000Z",
+          "created_at": "2023-06-23T14:24:46.000000Z",
+          "updated_at": "2026-07-28T06:05:00.000000Z",
+          "owner": {
+            "id": 31543,
+            "name": "IcyClawz",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6cbf3ac470387423baf33591cb102396de5cc3d0_128w.webp",
+            "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/54e97f2ed2ecaf7e15d24a13e2dadf69cde55488_1280w.webp",
+            "created_at": "2023-05-26T10:06:34.000000Z",
+            "updated_at": "2026-07-26T16:27:36.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 2178,
+              "hub_id": 12454,
+              "version": "1.6.0",
+              "description": "<p>Note to mod developers: View source code to see the changes in usage.</p>\n<p>Compiled for client version 0.15.5.1.33420</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/938/custom-interactions/1.6.0",
+              "content_length": null,
+              "spt_version_constraint": "~3.10.0",
+              "downloads": 20397,
+              "fika_compatibility": "unknown",
+              "published_at": "2024-12-02T14:13:00.000000Z",
+              "created_at": "2024-12-02T14:13:14.000000Z",
+              "updated_at": "2026-05-14T03:14:58.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/49c8c51c121e35f88f52c3ab5b5f5a8761bdc738d1da4003c913b0e331cb0e31",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/13082260-a102-4536-b807-a8ed2d6cb0ee?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A54Z&rscd=attachment%3B+filename%3DTransmog-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A37Z&ske=2026-08-01T20%3A57%3A54Z&sks=b&skv=2018-11-09&sig=iKUlXIxh9qIcwf44ibcX1O11%2FPy7a4W1XsE7KnKnU5A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0MywibmJmIjoxNzg1NjE1NTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.33GRFSUsk0Lye3pQ_5xg9f2mvvXAi3Xavjh7R3LkhQQ&response-content-disposition=attachment%3B%20filename%3DTransmog-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1406,
+      "hub_id": 13356,
+      "version": "1.0.0",
+      "description": "<p><em>This requires Custom Interactions 1.5.0, which is no longer supported.</em></p>\n<p>Support SPT-Aki 3.9.x (EFT 0.14.9)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2008/transmog/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 264,
+      "fika_compatibility": "incompatible",
+      "published_at": "2025-02-10T22:20:00.000000Z",
+      "created_at": "2025-02-10T22:20:18.000000Z",
+      "updated_at": "2026-05-14T02:22:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/49c8c51c121e35f88f52c3ab5b5f5a8761bdc738d1da4003c913b0e331cb0e31",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/930230670/a898e979-890e-4e5f-b259-7e663587f75d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A47Z&rscd=attachment%3B+filename%3DTransmog-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A27Z&ske=2026-08-01T21%3A12%3A47Z&sks=b&skv=2018-11-09&sig=P%2BP4xjRRhfkyhe98NgNTzE35TMVfHSNVGa29V8gTO2A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg0NSwibmJmIjoxNzg1NjE1NTQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YQLyCAEJ2pJHL_pRH3tBxxXIDlC9IwS46un1gxXPpcc&response-content-disposition=attachment%3B%20filename%3DTransmog-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 23,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:01.447Z",
+    "discoveredBy": "seed"
+  }
+}

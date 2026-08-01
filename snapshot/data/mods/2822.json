@@ -1,0 +1,117 @@
+{
+  "type": "mod",
+  "id": 2822,
+  "hub_id": null,
+  "guid": "com.ananascharles.statdeltapreview",
+  "name": "AC's Stat Delta Preview",
+  "slug": "acs-stat-delta-preview",
+  "teaser": "Stop buying attachments just to find out what they do. Hover a weapon mod and see its real stat impact before you install it.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/ztE7ulVa2I3c1oYcdeBxCHWOnfS7t2y7S6PfJgs9.png",
+  "downloads": 1559,
+  "favourites_count": 22,
+  "description": "<h1>Stat Delta Preview — know before you install</h1>\n<p><strong>Hover an attachment. See exactly what it gains, what it costs, and how it changes your weapon.</strong></p>\n<p>No spreadsheets. No buying parts just to test them. No mental recoil math.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">WHAT IT DOES</div>\n<div class=\"tab-content\"><ul>\n<li><strong>Real weapon comparison</strong> — uses the weapon open in the modding screen, your most recently inspected weapon, or a compatible equipped weapon.</li>\n<li><strong>Understands replacements</strong> — if the attachment would replace an installed part, the preview shows the net difference instead of misleading standalone values.</li>\n<li><strong>Before → after totals</strong> — ergonomics and recoil show the current and resulting weapon values.</li>\n<li><strong>Clear color coding</strong> — improvements are green; losses are red. Lower recoil is correctly treated as an improvement.</li>\n<li><strong>Useful everywhere</strong> — hover attachments in your stash, inventory, or trader offers.</li>\n<li><strong>Always has a fallback</strong> — without a compatible weapon, it shows the attachment’s standalone contributions.</li>\n<li><strong>Lightweight</strong> — calculations happen on hover, not every frame.</li>\n</ul>\n<p>Previewed stats:</p>\n<ul>\n<li>Ergonomics</li>\n<li>Recoil</li>\n<li>Velocity</li>\n<li>Accuracy</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">INSTALLATION</div>\n<div class=\"tab-content\"><ol>\n<li>Download the release archive.</li>\n<li>Extract it into your SPT root folder — the one containing <code>EscapeFromTarkov.exe</code>.</li>\n<li>Launch SPT and hover any weapon attachment.</li>\n</ol>\n<p>Expected install path:</p>\n<pre><code>BepInEx/plugins/AnanasCharles-StatDeltaPreview/StatDeltaPreview.dll\n</code></pre>\n<p><strong>Client mod only — no server mod required.</strong></p>\n<p><strong>Requirements:</strong></p>\n<ul>\n<li>SPT <strong>4.0.13</strong></li>\n<li>No additional dependencies</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">CONFIGURATION</div>\n<div class=\"tab-content\"><p>Use F12 Configuration Manager or edit:</p>\n<pre><code>BepInEx/config/com.ananascharles.statdeltapreview.cfg\n</code></pre>\n<p><code>Enabled</code> toggles the preview on or off.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">SCREENSHOTS</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/Gf5dFndW/02.png\" alt=\"01\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/fYsYsKMQ/03.png\" alt=\"02\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/HfJh5DRv/image.png\" alt=\"03\" /></p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">LIMITATIONS</div>\n<div class=\"tab-content\"><ul>\n<li>Covers weapon attachments represented by EFT’s <code>Mod</code> item type.</li>\n<li>Previews ergonomics, recoil, velocity, and accuracy — not zoom, magazine capacity, weight, durability, or every special attachment effect.</li>\n<li>Velocity and accuracy totals depend on ammunition, so those stats are shown as signed percentage changes rather than misleading before/after totals.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">SOURCE &amp; LICENSE</div>\n<div class=\"tab-content\"><p>Source: <a target=\"_blank\" class=\"external-link\" href=\"https://codeberg.org/AnanasCharles/SPT-StatDeltaPreview\" rel=\"noreferrer noopener\">Codeberg</a>\nLicense: MIT</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2822/acs-stat-delta-preview",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI tooling (Claude) was used as a research and coding assistant during development,\nalways under human direction:</p>\n<ul>\n<li><strong>Reverse-engineering support</strong> — decompiling and digging through the game’s assemblies\nto find the right systems to build on (the BTR’s passenger/seat handling, EFT’s physics\nscheduler, lamp and audio systems), so the mod uses the same mechanisms the game itself\nuses instead of fragile hacks.</li>\n<li><strong>Code drafting and debugging</strong> — implementation drafts and log analysis during the\nbuild-test-fix loop.</li>\n</ul>\n<p>All feature decisions, in-game testing, tuning (driving feel, camera, seat and light\nplacement), asset selection and preparation, and release validation were done by hand.\nEvery change shipped only after being tested in the game; several AI-proposed approaches\nwere rejected or reworked based on those tests. The 3D model, sounds, and artwork are not\nAI-generated.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-07-17T00:19:00.000000Z",
+  "created_at": "2026-07-17T00:21:42.000000Z",
+  "updated_at": "2026-07-28T09:39:11.000000Z",
+  "owner": {
+    "id": 88887,
+    "name": "AnanasCharles",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/txZXFT0D25wM3LEQZFbKIiuACn7blW11h6s46OjE_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-11-10T11:19:47.000000Z",
+    "updated_at": "2026-07-31T23:14:44.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://gitlab.com/AnanasCharles/deltastatpreview/",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14112,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h1>Stat Delta Preview v1.1.0</h1>\n<p>A major preview upgrade: hover an attachment to see the assembled weapon, the exact part being changed, and the resulting weapon-level statistics before modifying the live inventory.</p>\n<h2>Highlights</h2>\n<ul>\n<li>Renders the assembled weapon with a green outline around the candidate attachment.</li>\n<li>Shows a separate <strong>CHANGED PART</strong> card for quick identification.</li>\n<li>Identifies the exact weapon, source window, target slot, and old-to-new part exchange.</li>\n<li>Resolves weapon context from the modding screen, active weapon preview, inspect window, or compatible equipped weapon.</li>\n<li>Uses a cloned weapon as the source of truth; the live inventory is never modified.</li>\n<li>Adds explicit before → after values, signed changes, and semantic direction indicators: <code>↑</code> improvement, <code>↓</code> regression, <code>—</code> unchanged.</li>\n<li>Expands coverage to ergonomics, vertical/horizontal recoil, accuracy/MOA, muzzle velocity, weight, sighting range, magazine capacity and loaded rounds, magazine handling/check/feed values, durability burn, heat, cooling, loudness, and effective distance.</li>\n<li>Restores correct same-template and equipped-item replacement deltas.</li>\n<li>Adds a 100 ms configurable hover debounce, cooperative render cancellation, and a bounded 24-entry icon cache.</li>\n<li>Adds configuration for panel scale, cursor offsets, opacity, outline thickness, weapon-image visibility, and unchanged-stat visibility.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2822/acs-stat-delta-preview/1.1.0",
+      "content_length": 26268,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1349,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-17T11:54:00.000000Z",
+      "created_at": "2026-07-17T11:57:18.000000Z",
+      "updated_at": "2026-07-28T09:39:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZDgyZGIyNWM1N2RhMWI4MmVmNjZmZTY0ZjcwNGExMTQ6MTc4NDI4OTM0NA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84537629/uploads/f2a2bfaeb0872ee5a4b717300190b2e9/StatDeltaPreview-v1.1.0.zip"
+      }
+    },
+    {
+      "id": 14108,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p><strong>Know what an attachment will do before you buy or install it.</strong></p>\n<p>Hover a weapon mod in your inventory, stash, or a trader offer to see a compact, color-coded stat preview beside the cursor.</p>\n<h2>Highlights</h2>\n<ul>\n<li>Previews <strong>Ergonomics, Recoil, Velocity, and Accuracy</strong>.</li>\n<li>Compares against the weapon currently open in the modding screen.</li>\n<li>Falls back to the most recently inspected weapon, then a compatible equipped weapon.</li>\n<li>Detects installed-part replacements and shows the <strong>net gain or loss</strong>.</li>\n<li>Shows before → after totals for ergonomics and recoil.</li>\n<li>Shows green improvements and red regressions, with lower recoil correctly treated as better.</li>\n<li>Falls back to standalone attachment stats when no compatible weapon is available.</li>\n<li>Works across inventory, stash, and trader item views.</li>\n<li>Lightweight, event-driven implementation with no idle polling.</li>\n<li>Hover panel now closes correctly when the inventory is closed.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2822/acs-stat-delta-preview/1.0.0",
+      "content_length": 10011,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 210,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-17T00:30:00.000000Z",
+      "created_at": "2026-07-17T00:31:36.000000Z",
+      "updated_at": "2026-07-28T09:39:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bccc5750115398943fb913e482c85fefd1ef836be00a6d074464d6b82d796470?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84537629/uploads/8ca6f0b87e10f019f63bbfee6f812f44/StatDeltaPreview-v1.0.0.zip"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 16,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:30:30.012Z",
+    "discoveredBy": "seed"
+  }
+}

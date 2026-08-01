@@ -1,0 +1,151 @@
+{
+  "type": "mod",
+  "id": 1090,
+  "hub_id": 1509,
+  "guid": "com.rairai.colorconverterapi.eft",
+  "name": "Color Converter API",
+  "slug": "color-converter-api",
+  "teaser": "Client-side mod to allow using hexcode colors for your items! Custom background colors for your items, or any color tracer you want!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1509.jpg",
+  "downloads": 96015,
+  "favourites_count": 132,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Mod Info</div>\n<div class=\"tab-content\"><p><strong>Color Converter API</strong></p>\n<p>An SPT module mod that extends the functionality of the client, allowing the server to use raw hexcode color values for fields that ordinarily can only support BSG-created color enums.</p>\n<p>This mod should be forward-compatible with all new client releases for EFT (unless something very, very significant changes) and does NOT need to be updated.</p>\n<p><strong>Please note that on its own, this mod does nothing! It allows OTHER mods to use the full color spectrum where BSG uses the predefined color enums.</strong></p>\n<p><strong>License</strong></p>\n<p>Do not reupload or redistribute anywhere <em>without explicit permission</em> - please instead link to this mod page as part of your dependencies.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">How to install</div>\n<div class=\"tab-content\"><ol>\n<li>Simply extract the zip file contents into your root SPT folder (where EscapeFromTarkov.exe is).</li>\n<li>Your BepInEx/plugins folder should now contain the file <code>RaiRai.ColorConverterAPI.dll</code>  inside.</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Usage (for modders)</div>\n<div class=\"tab-content\"><p>You can check to see if the plugin exists in your server mod’s source code any way you’d like, but an easy copy-paste check is here:</p>\n<p>Typescript (SPT  &lt; 4.0)</p>\n<pre><code>private static IsPluginLoaded(): boolean { \n    const fs = require('fs'); const pluginName = \"rairai.colorconverterapi.dll\"; // Fails if there's no ./BepInEx/plugins/ folder \n    try { \n        const pluginList = fs.readdirSync(\"./BepInEx/plugins\").map(plugin =&amp;gt; plugin.toLowerCase()); \n        return pluginList.includes(pluginName); \n    } catch { \n        return false; \n    } \n} \n</code></pre>\n<p>Csharp (SPT &gt;= 4.0)</p>\n<pre><code>internal bool GetColorPlugin()\n{\n    var modPath = _modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());\n    var bepinexPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(modPath, @\"..\\..\\..\\..\\BepInEx\\\"));\n\n    var file = Directory.GetFiles(bepinexPath, \"RaiRai.ColorConverterAPI.dll\", SearchOption.AllDirectories);\n    return file.Any();\n}\n</code></pre>\n<p>You can handle the result of this function however you’d like. Once you have validated that the plugin exists, you can proceed to fill in the fields for color in your item database with hexcodes in lieu of a color enum.</p>\n<p>For example:</p>\n<p>“TracerColor”: “#FF00FF”,</p>\n<p>“BackgroundColor”: “#2A2AFF”,</p>\n<p>Short 3-byte hexcode colors are also supported like so:</p>\n<p>“BackgroundColor”: “#F90”,</p>\n<p>Which will be interpreted as:</p>\n<p>“BackgroundColor”: “#FF9900”,</p>\n<p>As of version 1.1.0, you can optionally pass a fourth hex value for an Alpha (otherwise, it is treated as FF/255).</p>\n<p>“BackgroundColor”: “#FF2AFF99”,</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Changelog</div>\n<div class=\"tab-content\"><ul>\n<li>July 10th, 2024:\n<ul>\n<li>Refactor to module changes for SPT 3.9.0+.</li>\n<li>Added support for alpha values for hex codes.</li>\n</ul>\n</li>\n</ul></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1090/color-converter-api",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": true,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2023-10-08T22:06:00.000000Z",
+  "created_at": "2023-10-08T22:06:19.000000Z",
+  "updated_at": "2026-07-28T06:00:49.000000Z",
+  "owner": {
+    "id": 3576,
+    "name": "RaiRaiTheRaichu",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/b7b8eb01816280f8cac17bf8bcafd05c6ed66378_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2021-03-25T12:16:15.000000Z",
+    "updated_at": "2026-07-24T07:57:15.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 4843,
+      "name": "Terkoiz",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/8ac461c503955b1142399451ed9ea40a98b249c2_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/f8a971452d0197f3022defe4715119532fbca03c.jpg",
+      "created_at": "2021-05-11T08:06:10.000000Z",
+      "updated_at": "2026-07-26T13:21:50.000000Z"
+    }
+  ],
+  "license": {
+    "id": 14,
+    "hub_id": 17,
+    "name": "University of Illinois/NCSA Open Source License",
+    "link": "https://choosealicense.com/licenses/ncsa/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/RaiRaiTheRaichu/ColorConverterAPI",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 3085,
+      "hub_id": 11331,
+      "version": "1.1.1",
+      "description": "<p><strong>Confirmed working on SPT 4.0.0+.</strong></p>\n<p>Changelog:</p>\n<p>Fixed case-sensitive string parsing for color enum.\n(Error “Failed to read JSON value for TaxonomyColor” for certain mods.)</p>\n<p>Hey! Thanks for downloading, if you’d like to support my work, you’re more than welcome to support me at the link below or follow along at my Ko-Fi page here:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/rairaitheraichu\" rel=\"noreferrer noopener\">https://ko-fi.com/rairaitheraichu</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1090/color-converter-api/1.1.1",
+      "content_length": 4836,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 79448,
+      "fika_compatibility": "compatible",
+      "published_at": "2024-08-13T23:31:00.000000Z",
+      "created_at": "2024-08-13T23:31:41.000000Z",
+      "updated_at": "2026-07-28T06:00:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/89156218df729072b59150440641477c9ad2d24fe3600b1f8c325f48243483ac?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/702210418/96244ddc-5acf-45a4-b7b1-dd4f6ba4ee7b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A12Z&rscd=attachment%3B+filename%3DRaiRai.ColorConverterAPI.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A08Z&ske=2026-08-01T21%3A08%3A12Z&sks=b&skv=2018-11-09&sig=wPU8aMyE%2BeSBYehi5Vl0BkuOW9i6bqJP%2FKS9YlAlOR0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM4OSwibmJmIjoxNzg1NjE1MDg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lj_rvnFotgKokXjDjNmNjT1Q0YEmVp03FE6gxSoTLm8&response-content-disposition=attachment%3B%20filename%3DRaiRai.ColorConverterAPI.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3564,
+      "hub_id": 10722,
+      "version": "1.1.0",
+      "description": "<p>Changelog:</p>\n<p>Refactor to module changes for SPT 3.9.0+.</p>\n<p>Added support for alpha values for hex codes.</p>\n<p>Hey! Thanks for downloading, if you’d like to support my work, you’re more than welcome to support me at the link below or follow along at my Ko-Fi page here:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/rairaitheraichu\" rel=\"noreferrer noopener\">https://ko-fi.com/rairaitheraichu</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1090/color-converter-api/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": ">3.9.0 <4.0.0",
+      "downloads": 3536,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-10T20:44:00.000000Z",
+      "created_at": "2024-07-10T20:44:00.000000Z",
+      "updated_at": "2026-05-23T15:00:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/89156218df729072b59150440641477c9ad2d24fe3600b1f8c325f48243483ac?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/702210418/f9a635b2-27b7-44ca-b604-d838e3a5ef49?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A48%3A22Z&rscd=attachment%3B+filename%3DRaiRai.ColorConverterAPI.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A48%3A22Z&ske=2026-08-01T20%3A48%3A22Z&sks=b&skv=2018-11-09&sig=MXUEcfgUKyMg70KQOmSAja6a%2FpuReziOPRf8apDiGug%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM4OSwibmJmIjoxNzg1NjE1MDg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lj_rvnFotgKokXjDjNmNjT1Q0YEmVp03FE6gxSoTLm8&response-content-disposition=attachment%3B%20filename%3DRaiRai.ColorConverterAPI.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 6065,
+      "hub_id": 7607,
+      "version": "1.0.0",
+      "description": "<p>(Reupload due to broken permissions.)</p>\n<p>Link not working? Try downloading from here:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://dev.sp-tarkov.com/RaiRaiTheRaichu/ColorConverterAPI/releases\" rel=\"noreferrer noopener\">https://github.com/RaiRaiTheRaichu/ColorConverterAPI/releases</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://dev.sp-tarkov.com/RaiRaiTheRaichu/ColorConverterAPI/releases\" rel=\"noreferrer noopener\">https://dev.sp-tarkov.com/RaiRaiTheRaichu/ColorConverterAPI/releases</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1090/color-converter-api/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": ">3.7.0 <3.9.0",
+      "downloads": 13031,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-09T01:48:00.000000Z",
+      "created_at": "2023-10-09T01:48:40.000000Z",
+      "updated_at": "2026-05-23T18:07:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/89156218df729072b59150440641477c9ad2d24fe3600b1f8c325f48243483ac?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/702210418/feed59cd-904e-41ba-bfeb-967bd34c875b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A05Z&rscd=attachment%3B+filename%3DRaiRai.ColorConverterAPI.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A00Z&ske=2026-08-01T21%3A10%3A05Z&sks=b&skv=2018-11-09&sig=F%2FkGiwMF2Y2uRf%2BTadVV0xEFnJ4cByRk7XnQr7dBLuE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM4OSwibmJmIjoxNzg1NjE1MDg5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lj_rvnFotgKokXjDjNmNjT1Q0YEmVp03FE6gxSoTLm8&response-content-disposition=attachment%3B%20filename%3DRaiRai.ColorConverterAPI.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 262,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:42:38.893Z",
+    "discoveredBy": "seed"
+  }
+}

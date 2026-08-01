@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2647,
+  "hub_id": null,
+  "guid": "com.vonbraunz.uiscale",
+  "name": "UI Scaling",
+  "slug": "ui-scaling",
+  "teaser": "BepInEx client plugin that unlocks UI scaling to properly fill the screen at higher resolutions",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Uwo84qN7N33Ehm3BkRpw3gRmlmWQ09stRXh03EOa.jpg",
+  "downloads": 1877,
+  "favourites_count": 17,
+  "description": "<h1>SPT-UIScale</h1>\n<hr />\n<p><strong>NOTE: This was a mod I made because I got side tracked while trying to fix my other mods and a friend of mine playing SPT had a bag that didn’t fit in the UI properly. I probably wont spend anymore time on this unless there’s a major SPT version release</strong></p>\n<hr />\n<p>BepInEx client plugin for SPT 4.0.13 that unlocks UI scaling for the inventory and trader screens. Overrides EFT’s hardcoded 1080p canvas scaling with a configurable percentage, and adjusts panel layouts so the stash and gear panels properly fill the screen at higher resolutions.</p>\n<p><strong>Once custom scale is set youll need to either restart the client or change resolutions for the affect to take place</strong>*</p>\n<hr />\n<h2>Features</h2>\n<ul>\n<li>Configurable UI scale as a percentage of vanilla (50–150%)</li>\n<li>Automatically adjusts when changing resolution in-game</li>\n<li>Inventory screen: gear panel expands to fill available space, stash anchored to the right</li>\n<li>Trader screen: trader items anchored left, stash anchored right, deal panel centered</li>\n<li>Works with any resolution (1440p, 4K, ultrawide, etc.)</li>\n</ul>\n<hr />\n<h2>Installation</h2>\n<ol>\n<li>Download the latest release ZIP</li>\n<li>Extract into your SPT installation directory — the DLL goes to <code>BepInEx/plugins/</code></li>\n<li>Launch SPT</li>\n</ol>\n<hr />\n<h2>Configuration</h2>\n<p>After first launch, edit <code>BepInEx/config/com.vonbraunz.uiscale.cfg</code>:</p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Enabled</strong></td>\n<td><code>true</code></td>\n<td>Toggle the mod on/off without uninstalling</td>\n</tr>\n<tr>\n<td><strong>Scale Percent</strong></td>\n<td><code>100</code></td>\n<td>UI scale as a percentage of vanilla. <code>100</code> = no change, <code>75</code> = 75% size (more grid space), <code>50</code> = half size. Range: 50–150</td>\n</tr>\n<tr>\n<td><strong>Log Canvas Names</strong></td>\n<td><code>false</code></td>\n<td>Debug logging to BepInEx console</td>\n</tr>\n</tbody>\n</table>\n<hr />\n<h3>Recommended values</h3>\n<table>\n<thead>\n<tr>\n<th>Resolution</th>\n<th>Scale Percent</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1080p</td>\n<td>100</td>\n<td>No change (vanilla)</td>\n</tr>\n<tr>\n<td>1440p</td>\n<td>75–85</td>\n<td>More inventory/stash space</td>\n</tr>\n<tr>\n<td>4K</td>\n<td>50–75</td>\n<td>Significantly more grid space</td>\n</tr>\n</tbody>\n</table>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2647/ui-scaling",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-03-31T04:01:00.000000Z",
+  "created_at": "2026-03-31T04:02:18.000000Z",
+  "updated_at": "2026-07-28T08:17:02.000000Z",
+  "owner": {
+    "id": 33232,
+    "name": "Dr.Braun",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/FwoeVuqST8kfALlA0bHCz2WNDHVIgKLdpDWvZljN_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-06-26T20:02:01.000000Z",
+    "updated_at": "2026-07-31T03:43:13.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Vonbraunz/SPT-UIScale",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13332,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h2>What it does</h2>\n<p>Overrides EFT’s hardcoded 1080p UI scaling, giving you more inventory and stash grid space at higher resolutions.</p>\n<h2>Features</h2>\n<ul>\n<li>Configurable scale percentage (50–150% of vanilla)</li>\n<li>Automatically adjusts when changing resolution in-game</li>\n<li>Inventory screen layout fix: gear panel expands, stash anchored right</li>\n<li>Trader screen layout fix: trader items anchored left, stash anchored right</li>\n<li>Works at any resolution (1440p, 4K, ultrawide)</li>\n</ul>\n<h2>Installation</h2>\n<ol>\n<li>Extract the ZIP into your SPT installation directory</li>\n<li>Launch SPT</li>\n<li>Edit In game using F12 then refresh resolution</li>\n</ol>\n<h2>Recommended settings</h2>\n<table>\n<thead>\n<tr>\n<th>Resolution</th>\n<th>Scale Percent</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1080p</td>\n<td>100 (no change)</td>\n</tr>\n<tr>\n<td>1440p</td>\n<td>75–85</td>\n</tr>\n<tr>\n<td>4K</td>\n<td>50–75</td>\n</tr>\n</tbody>\n</table>\n<h2>Requirements</h2>\n<ul>\n<li>SPT 4.0.13</li>\n<li>Client-side only — no server mod needed</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2647/ui-scaling/1.0.0",
+      "content_length": 5458,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1877,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-31T04:03:00.000000Z",
+      "created_at": "2026-03-31T04:06:05.000000Z",
+      "updated_at": "2026-07-28T08:17:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/c5a1f36772804dcd1a77bc7e945b557954c8c1a15e8706f14a445ba6d6959eb8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1196787851/f67df24d-c274-49d7-ade1-8a86c4748f35?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A14Z&rscd=attachment%3B+filename%3DUIScale-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A47Z&ske=2026-08-01T21%3A24%3A14Z&sks=b&skv=2018-11-09&sig=lTZrqJedK%2BcEMgoAdJsCjjGYDqeYC6%2FmPU90A2TUDVY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&response-content-disposition=attachment%3B%20filename%3DUIScale-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 26,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:10.787Z",
+    "discoveredBy": "seed"
+  }
+}

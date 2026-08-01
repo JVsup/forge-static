@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2832,
+  "hub_id": null,
+  "guid": "com.sherrifpowpow.veilsight",
+  "name": "VEILSIGHT",
+  "slug": "veilsight",
+  "teaser": "Darkness should matter.  VeilSight makes Tarkov's lighting affect how quickly enemies confirm you as a target.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/MZeibyZhk0NldCjUrHFT10ND0NiabdOYMT3WAfds.png",
+  "downloads": 2774,
+  "favourites_count": 41,
+  "description": "<p>VEILSIGHT</p>\n<p>Darkness should matter.</p>\n<p>VeilSight makes Tarkov’s lighting affect how quickly enemies confirm you as a target. Stay in shadow and you gain a brief, distance-based detection advantage. Step into strong light or switch on a flashlight and that advantage disappears.</p>\n<p>It is lightweight, predictable, and designed to improve stealth without replacing EFT’s combat AI or making the player invisible.</p>\n<p>FEATURES</p>\n<ul>\n<li>Live exposure based on daylight, darkness, indoor lighting, nearby fixtures, stance, and weapon lights</li>\n<li>A compact amber meter showing your current exposure</li>\n<li>Separate behavior for DIM and DARK conditions</li>\n<li>Distance-scaled delays with guaranteed eventual detection</li>\n<li>Flashlights expose you; lasers do not</li>\n<li>Two straightforward balance presets</li>\n<li>Configurable meter position, size, smoothing, and visibility</li>\n<li>Fail-open safeguards: missing lighting data never grants accidental protection</li>\n</ul>\n<p>BALANCE PRESETS</p>\n<p>Forgiving is the default and provides the full validated stealth effect. It is a good match for easier or slower AI presets.</p>\n<p>Standard shortens the effect by 20% for default or faster AI behavior.</p>\n<p>Both presets stop helping inside 6 metres. VeilSight does not inspect or modify SAIN settings; simply choose the preset that best matches your AI setup.</p>\n<p>EXPOSURE METER</p>\n<p>The meter reads from DARK on the left through DIM to BRIGHT on the right. Its motion is smoothed for readability, but gameplay always uses the latest exposure sample. The meter brightens as your exposure rises and can be moved, resized, or disabled in the configuration.</p>\n<p>INSTALLATION</p>\n<p>Extract the ZIP directly into your main SPT folder. The installed file should be:</p>\n<p>BepInEx/plugins/VeilSight/VeilSight.dll</p>\n<p>Built for SPT 4.0.13. No server-side mod is required.</p>\n<p>CONFIGURATION</p>\n<p>Press F12 in game, open the mod configuration menu, and select VeilSight. Settings can also be edited directly in:</p>\n<p>BepInEx/config/bastudio.veilsight.cfg</p>\n<p>Detailed diagnostics are disabled by default and should only be enabled for troubleshooting or bug reports.</p>\n<p>COMPATIBILITY AND KNOWN LIMITATIONS</p>\n<p>VeilSight was developed and tested in a modded SPT environment including SAIN, Amands’s Graphics, Better Night Skies, Dynamic Maps, Game Panel HUD, and Fontaine’s FOV Fix. HUD overlap can be resolved with the meter position and scale settings.</p>\n<p>Mods that replace the same EFT visibility-confirmation method may conflict. Multiplayer synchronization is outside the scope of version 1.0.0.</p>\n<p>Factory is broadly supported, but some angled ceiling-light shafts are visual effects without a matching physical light signal. VeilSight recognizes their surrounding illumination, but the meter may not react at the exact moment you cross the visible beam. Purely decorative emissive surfaces can have the same limitation when the map provides no corresponding light component.</p>\n<p>Labs, Factory day/night, and Labyrinth receive dedicated handling for their unusual lighting setups.</p>\n<p>TECHNICAL SCOPE</p>\n<p>VeilSight changes only the enemy-to-local-player visibility-confirmation step. It does not replace hearing, searching, aiming, shooting, memory, or general bot behavior. BRIGHT conditions bypass the effect, DIM and DARK use separate capped curves, and stale or invalid exposure data always fails open.</p>\n<p>INSPIRATION</p>\n<p>That’s Lit was an important inspiration for this project. I loved the original mod and have a lot of respect for what it brought to SPT.</p>\n<p>VeilSight is a new, independent implementation built specifically for SPT 4.0.13. It is intended to stand on its own as a performance-conscious replacement for players who want the complete lighting-to-detection experience, rather than an add-on that must run beside the original. Its focused design uses low-frequency sampling, cached scene and weapon lights, one narrow visibility hook, no server component, and no hard dependency on an AI overhaul. That keeps the runtime work small and predictable while still handling the full exposure and delayed-detection loop.</p>\n<p>No code from That’s Lit is included in VeilSight. Apparently, you folks really enjoy lurking in dark corners; Saaame lol.</p>\n<p>LICENSE</p>\n<p>VeilSight was created by Sherrifpowpow and is released under the MIT License. See LICENSE.txt for the full terms.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2832/veilsight",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-07-20T01:30:00.000000Z",
+  "created_at": "2026-07-20T01:41:05.000000Z",
+  "updated_at": "2026-07-28T09:42:55.000000Z",
+  "owner": {
+    "id": 113281,
+    "name": "sheriffpowpow_",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/DMYz7VdgXphWHx6jfnSanWKeKa7B4KlrEYx1p5js_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-05-22T03:36:26.000000Z",
+    "updated_at": "2026-07-31T18:22:23.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Sherrifpowpow/VeilSight/archive/refs/tags/v1.0.0.zip",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14160,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>The ffirst version’s Zip directory entries had zero attributes and omit two parent-directory records; a stricter extractor can therefore mess up the unpacking.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2832/veilsight/1.0.1",
+      "content_length": 16780,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 2750,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-20T02:14:00.000000Z",
+      "created_at": "2026-07-20T02:16:13.000000Z",
+      "updated_at": "2026-07-28T09:42:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/e27cc5a53a6d2acb9b0306da147d18923a96a4a774337a0c4afed3f2fe5bed3b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1306108331/94c00c4d-203c-4992-a595-b8ce83af9ee3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A29Z&rscd=attachment%3B+filename%3DVeilSight-1.0.1-SPT-4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A29Z&ske=2026-08-01T21%3A05%3A29Z&sks=b&skv=2018-11-09&sig=URcpEQjHjlk6dR40FKoA9mSKRjV50vX41sWYT%2F9BE%2Fk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2h1_3-famJDS7sPVL6AHgKhhO5EqK_sb_xxQwaKghdY&response-content-disposition=attachment%3B%20filename%3DVeilSight-1.0.1-SPT-4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14159,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>first iteration</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2832/veilsight/1.0.0",
+      "content_length": 16337,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 24,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-20T01:30:00.000000Z",
+      "created_at": "2026-07-20T01:43:09.000000Z",
+      "updated_at": "2026-07-28T09:42:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/32dee24ec1371910d5bc8ff4865d1ef9fec89edf7eca34f34be3b67f1e5130f5?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1306108331/bbbb25b7-118e-4758-a2ce-d9e20256bc05?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A08Z&rscd=attachment%3B+filename%3DVeilSight-1.0.0-SPT-4.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A04Z&ske=2026-08-01T21%3A17%3A08Z&sks=b&skv=2018-11-09&sig=g1QJqTWFAanrOU2%2FSd9QowTJYQQ7kxOGkeRzHAEUqNo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2h1_3-famJDS7sPVL6AHgKhhO5EqK_sb_xxQwaKghdY&response-content-disposition=attachment%3B%20filename%3DVeilSight-1.0.0-SPT-4.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 36,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:33.955Z",
+    "discoveredBy": "seed"
+  }
+}

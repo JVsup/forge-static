@@ -1,0 +1,301 @@
+{
+  "type": "mod",
+  "id": 2426,
+  "hub_id": null,
+  "guid": "com.morebotsapi.tacticaltoaster",
+  "name": "MoreBotsAPI",
+  "slug": "morebotsapi",
+  "teaser": "API for making the implementation of custom bots easier",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/6Wb2mnMw9FZ5UICdern1nYkwGy7oyIWTtAouIN97.png",
+  "downloads": 82563,
+  "favourites_count": 228,
+  "description": "<h1>MoreBotsAPI for SPT 4.0.X</h1>\n<p>A client and server API that makes making custom bots a little less infuriating. Create a prepatch and server mod that implements this API and you’ll have the basis for introducing new bosses, factions, and any other custom bot you can think of (maybe, this is still Tarkov).</p>\n<h2>Fika compatible confirmed for version 1.1.0. Make sure you install properly on all clients, the host, and headless with the latest dependencies for any mod that implements this API.</h2>\n<h2>DISCLAIMER</h2>\n<p>This repo uses the CC BY-NC-SA 4.0 License. To implement this API in your own mod, please contact me first for permission. This API does a lot and has the potential to break other mods and people’s games when used incorrectly. In addition, overriding another mod’s WildSpawnType enum values or vanilla values will cause MANY problems and create a headache for everyone involved, trying to find out what exactly is going wrong for users. In addition, this will make it easier for me to track what WildSpawnType enums are being used so there’s no future conflicts.\n</p>\n<h2>Features</h2>\n<ol>\n<li>Adds to WildSpawnType enum on client</li>\n<li>Server properly sends custom bot data to client</li>\n<li>Defining custom bot data in a simple format with JSONs on the server</li>\n<li>Defining client-specific data in a client prepatcher</li>\n<li>SAIN compatability with a little setup\n</li>\n</ol>\n<h2>What’s not included</h2>\n<ol>\n<li>Locales, reference SPT server mod examples for that</li>\n<li>Spawning of custom bots, either implement that using the boss spawn system (UNTAR Go Home uses this method) or create your own system</li>\n<li>Custom behaviors, use BigBrain if you intend on creating completely custom behavior not already found in base EFT bots.\n</li>\n</ol>\n<h2>Installation</h2>\n<ol>\n<li>Download a release version from GitHub or SPT Forge.</li>\n<li>Open the .7z file using 7-Zip</li>\n<li>Drag the SPT and BepInEx folders into your main SPT directory, those folders alongside EscapeFromTarkov.exe should already exist.</li>\n</ol>\n<h2>Note on uninstalling when using SAIN</h2>\n<p>Seems I found what causes a non-aggression bug, at least with SAIN and my bot mods. If you uninstall a custom bot mod that uses MoreBotsAPI then SAIN will keep references to the now-removed bots in its Default Bot Config Values folder, causing client errors that prevent SAIN from loading properly for bots and disabling their combat behaviors. Deleting the files in this folder and letting SAIN reset them fixes the problem.</p>\n<h2>Support Me</h2>\n<p>Buy me a Java Monster so when I get back from work I can fix my broken releases at lightning speed. Don’t have to though, I’ll do it for free anyways!\n<a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/tacticaltoaster\" rel=\"noreferrer noopener\">https://ko-fi.com/tacticaltoaster</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2426/morebotsapi",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2025-11-06T06:48:00.000000Z",
+  "created_at": "2025-11-06T06:36:01.000000Z",
+  "updated_at": "2026-08-01T17:03:13.000000Z",
+  "owner": {
+    "id": 7768,
+    "name": "TacticalToaster",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=T&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2021-08-11T22:12:09.000000Z",
+    "updated_at": "2026-08-01T17:04:19.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/TacticalToaster/MoreBotsAPI",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13531,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<p>Removed excessive client logging caused by hunt behaviors</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.1",
+      "content_length": 44942,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 39518,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-01T22:44:00.000000Z",
+      "created_at": "2026-05-01T22:45:17.000000Z",
+      "updated_at": "2026-08-01T17:03:12.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264936,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284371,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/156e99e9571cc46547ef6f89d005f6023988a90fb9f09f205c0254a455aeb744?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/f582981c-eb4f-4406-afd3-a5c0dea83646?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A14Z&rscd=attachment%3B+filename%3Dmorebotsapi-201-release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A54Z&ske=2026-08-01T21%3A18%3A14Z&sks=b&skv=2018-11-09&sig=AMmhB%2BydWalQiQEoxSu3RauA8cR0A02rfI9kF%2BkQjZg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-201-release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13515,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<ul>\n<li>Hunt system (used by my other faction mods, free for use in any).</li>\n<li>Improved SAIN Interop (Use the latest version of SAIN when using this version of the API).</li>\n<li>Overhauled faction system that also exists on client. Factions can be configured to have revenge behavior, where they aggro on players for a configurable amount of raids after being killed by a player.</li>\n<li>Load order for some things have changed, which should fix compatibility issues with ABPS not working with custom bots on first raid/some raids.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/2.0.0",
+      "content_length": 45018,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1696,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-30T04:43:00.000000Z",
+      "created_at": "2026-04-30T04:45:37.000000Z",
+      "updated_at": "2026-07-28T08:30:36.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264936,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284371,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/95905fc78bb4dd402b1dca48aecab34f6819216788ae25d48f363feeae2dbae1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/63f28898-1134-4cde-ac78-04a9cd4ce5d6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A32Z&rscd=attachment%3B+filename%3Dmorebotsapi-200-release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A34Z&ske=2026-08-01T21%3A14%3A32Z&sks=b&skv=2018-11-09&sig=IlzAicWLXmFZ3rbilmyWOSmcDtWtGL2AroZ2R9VyZcU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-200-release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12304,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h1>MoreBotsAPI 1.1.0 for SPT 4.0.X, tested with latest Fika for 4.0.4 (Coop and Headless)</h1>\n<p>I have tested both Coop and Headless on the latest Fika for SPT 4.0.4 and both my faction mods alongside this API work on it. When using Fika, MAKE SURE you have the client part (BepInEx folder, plugins and patchers) of my mods installed on the host, clients, and headless. Also, make sure you update to the latest WTT Common Lib that supports Fika now.</p>\n<ul>\n<li>Added some new API server functionality.</li>\n<li>Added new server config for debug logs and increasing bot cap on all maps by an int.</li>\n<li>By default this mod now increases the bot cap on all maps for 10 to account for the new factions. If you use a spawning mod, it is best to set this new value in the new server config to 0 and let those mods change the bot cap if they do.</li>\n<li>Added new server logger that only logs debug stuff if config value is set. (Should fix the warn messges that don’t cause problems from showing)</li>\n<li>Added show bot zones as a debug option (just shows the names at the center of spawnpoints).</li>\n<li>Fixed potential client error when checking for custom WildSpawnTypes.</li>\n<li>Changed license to CC BY-NC-SA 4.0</li>\n</ul>\n<p>VT link: <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/1.1.0",
+      "content_length": 34650,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 39186,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-13T03:57:00.000000Z",
+      "created_at": "2025-11-13T03:57:24.000000Z",
+      "updated_at": "2026-07-28T06:26:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/e46f52fa-5f19-4359-8cca-0f9d0cc8c61b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A40Z&rscd=attachment%3B+filename%3Dmorebotsapi-110-release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A29Z&ske=2026-08-01T21%3A02%3A40Z&sks=b&skv=2018-11-09&sig=HBM0%2BwwS%2BpTABhwiYBj1PIQaREZGcPKfTKEcza3cAKg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-110-release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12209,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Fixed issue when the player dies they are frozen, the raid doesn’t end, and is essentially a silent crash. That doesn’t happen now. At least shouldn’t, I tested it I swear.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/1.0.1",
+      "content_length": 31382,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1587,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-07T00:49:00.000000Z",
+      "created_at": "2025-11-07T00:49:39.000000Z",
+      "updated_at": "2026-07-28T06:15:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6519684d5258a1fc1cc808def9d0aba32368ba6a58eee5540cd776b3812c9916?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/0e002519-8c8a-4e61-826a-99eb10fafd60?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A28Z&rscd=attachment%3B+filename%3Dmorebotsapi-101-release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A40Z&ske=2026-08-01T21%3A04%3A28Z&sks=b&skv=2018-11-09&sig=itKLAM1bXMKWfua%2B5qdzZ3a%2BOgtaovwfjamuCob3miI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NCwibmJmIjoxNzg1NjE1ODQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fn6MGWx8qpMSlONJc4v07PeaBjXOHI5v5guVkTLKVa4&response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-101-release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12194,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2426/morebotsapi/1.0.0",
+      "content_length": 31274,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 576,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-06T06:55:00.000000Z",
+      "created_at": "2025-11-06T06:55:09.000000Z",
+      "updated_at": "2026-07-28T06:15:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/618f192399e1692627bd4ddbed05bbfd4d1217ed3951a11d7cdcf97bc5cf95a2/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/85962e8f-1152-4546-bea3-306d5f33e29b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A22Z&rscd=attachment%3B+filename%3Dmorebotsapi-100-release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A49Z&ske=2026-08-01T21%3A16%3A22Z&sks=b&skv=2018-11-09&sig=ZSJ45N5wjVONXtiVZIWUzDgt5hL9YX9BY0DGKWC4GGk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NCwibmJmIjoxNzg1NjE1ODQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fn6MGWx8qpMSlONJc4v07PeaBjXOHI5v5guVkTLKVa4&response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-100-release.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 354,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:44.395Z",
+    "discoveredBy": "seed"
+  }
+}

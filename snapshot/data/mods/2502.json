@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 2502,
+  "hub_id": null,
+  "guid": "com.matsix.eotechfix",
+  "name": "EOTech Fix",
+  "slug": "eotech-fix",
+  "teaser": "Aims to fix the long standing accuracy issues with some collimator sights",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/DMi3xaXvUw8AsGb7CObNOpg0VKr5GuSub8W2lKkU.png",
+  "downloads": 10580,
+  "favourites_count": 36,
+  "description": "<p><strong>NOTE: If you are using SPT-VR, you do not need this mod, it’s built into SPT-VR already</strong></p>\n<p>So, before I took over development on the SPT-VR mod, I noticed that a lot of sights, mainly EOTech Holo sights, have an accuracy issue. Something a lot of people have always thought but as far as I know, no one was ever able to fully confirm. Well the VR mod made it VERY apparent. Me and the original dev looked at the material values and I noticed MarkScale, suggested he set it to 1 and use MarkShift to adjust the crosshair instead and what do ya know? It fixed it.</p>\n<p>Basically, the issue with EOTech’s and other sights with accuracy issues, appears to be due to a value on the collimator sight material called “_MarkScale”. I assume BSG uses this value to adjust the size of the crosshair on the sight, the problem is that scaling the crosshair this way results in broken accuracy unless you’re looking directly down the middle of the sight.</p>\n<p>This mod basically forces MarkScale value to 1 and changes another material value called “MarkShift” to adjust the crosshair back to the correct position.</p>\n<p>After having this in the VR mod for a while, I figured I might as well release it as a separate mod because I know I’ve heard a lot of people bring up accuracy issues with these sights on flatscreen too. I imagine this would do wonders for people that use mods that significantly changes gun handling and gun view model.</p>\n<p>I am not sure if this has compatibility issues with any other mods, if it does, please let me know.</p>\n<p>You can support my work on ko-fi: <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/matsix\" rel=\"noreferrer noopener\">https://ko-fi.com/matsix</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2502/eotech-fix",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 15,
+  "published_at": "2025-12-16T00:04:00.000000Z",
+  "created_at": "2025-12-16T00:07:27.000000Z",
+  "updated_at": "2026-07-28T07:06:34.000000Z",
+  "owner": {
+    "id": 62969,
+    "name": "matsix",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=m&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-09-01T23:20:29.000000Z",
+    "updated_at": "2026-08-01T17:37:38.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 15,
+    "hub_id": 78,
+    "title": "Equipment",
+    "slug": "equipment",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/matsixx/EOTechFix",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12631,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>Just fixes the version number in the mod so that mod managers don’t see it as outdated</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2502/eotech-fix/1.0.2",
+      "content_length": 3027,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 9590,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-18T21:39:00.000000Z",
+      "created_at": "2025-12-18T21:39:36.000000Z",
+      "updated_at": "2026-07-28T07:06:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/91f3e7011d7c4e5be0057459f5c4564f7d3c34084771a60d0fa1716e44a53a24?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/ab4f81e3-cf4d-4900-8507-23e0a11267af?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A14Z&rscd=attachment%3B+filename%3DEOTechFix.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A35Z&ske=2026-08-01T21%3A14%3A14Z&sks=b&skv=2018-11-09&sig=UCgJCHMUJmu%2F2lRwXWAp0q2qhnwNmDliKghBb7CPJuc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12606,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>Just an adjustment to the zip directory to be “plugins” instead of “Plugins” for linux users</li>\n<li>Also removed small part of code that was left over from a different mod of mine (it had no effect on anything it was just a value)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2502/eotech-fix/1.0.1",
+      "content_length": 3027,
+      "spt_version_constraint": "4.0.8",
+      "downloads": 930,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-16T02:23:00.000000Z",
+      "created_at": "2025-12-16T02:23:40.000000Z",
+      "updated_at": "2026-07-28T07:05:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/10ebe0e10d53bd557bb621671652697b8f82ce3c73778ce313b37e77444337d8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/189ff6fd-d207-453c-ac1a-859adfc1d8fc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A20Z&rscd=attachment%3B+filename%3DEOTechFix.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A22Z&ske=2026-08-01T21%3A02%3A20Z&sks=b&skv=2018-11-09&sig=Fuffho8Ypib1g3LqGi6j0iLqa%2FR5RXdMw8vZdOR%2BemQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12605,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release, check description for what this mod does</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2502/eotech-fix/1.0.0",
+      "content_length": 3039,
+      "spt_version_constraint": "4.0.8",
+      "downloads": 60,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-16T00:09:00.000000Z",
+      "created_at": "2025-12-16T00:09:41.000000Z",
+      "updated_at": "2026-07-28T07:05:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/cd1d6349af8c8ccc522b6c23b486c0e60fcb516a67a125a3753d1699c5ee12e3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/58a663e8-5019-4070-b79e-c6c5f81102ba?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A25Z&rscd=attachment%3B+filename%3DEOTechFix.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A06Z&ske=2026-08-01T21%3A03%3A25Z&sks=b&skv=2018-11-09&sig=O%2FI2bVeHknYm%2FY2DHR1pK3GZ9RilkpPheHjKyazVKlk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 72,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:39.827Z",
+    "discoveredBy": "seed"
+  }
+}

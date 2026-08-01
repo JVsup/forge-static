@@ -1,0 +1,654 @@
+{
+  "type": "mod",
+  "id": 2310,
+  "hub_id": 3025,
+  "guid": "com.wtt.commonlib",
+  "name": "WTT - CommonLib",
+  "slug": "wtt-commonlib",
+  "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+  "downloads": 309268,
+  "favourites_count": 573,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><p><strong>DISCLAIMER</strong>: <strong>YOU CANNOT INCLUDE THIS MOD IN YOUR RELEASES - ONLY LIST IT AS A DEPENDENCY</strong></p>\n<p><strong>WTT-CommonLib</strong> is a comprehensive modding library for SPT (Single Player Tarkov) that streamlines the creation and integration of custom content in Escape from Tarkov. It automatically handles both server-side database changes and client-side resource loading, allowing mod authors to add new items, quests, loot, character assets, crafting recipes, and more with simple service calls and straightforward JSON configuration.</p>\n<p><strong>Key Features:</strong></p>\n<ul>\n<li>Custom items with helpers to integrate into traders, loot containers, hideout areas, and more</li>\n<li>Custom quests and quest zones</li>\n<li>Character customization (heads, voices, clothing)</li>\n<li>Lootspawn system for random loot items and forced quest items</li>\n<li>Hideout crafting recipes</li>\n<li>Multi-language localization</li>\n<li>Custom buff effects, inventory profiles, weapon presets, rig layouts, and more!</li>\n</ul>\n<p>For detailed implementation guides and full API documentation, see the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md\" rel=\"noreferrer noopener\">README on GitHub</a>.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><hr />\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://i.imgur.com/3N6gTe2.gif\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"vKRw58b.gif\" /></a></p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">What is WTT?</div>\n<div class=\"tab-content\"><p><strong>What is Welcome To Tarkov?</strong></p>\n<p>Welcome To Tarkov (WTT) is a mod for SPT AKI that has been in development for over a year. What started as a small passion project has grown in size to incorporate 15+ core members as well as contributions from other well-known mod authors and friends of WTT alike.</p>\n<p><strong>How does Welcome To Tarkov change the game?</strong></p>\n<p>As a mod, WTT overhauls SPT AKI, touching on almost every vanilla game system, as well as adding completely new systems to the game and its core mechanics. Inspired by open-world hardcore survival projects like STALKER: Anomaly and STALKER: GAMMA, WTT takes SPT’s artificial multiplayer MMO difficulty adders and replaces them with a challenging world economy, loot scarcity rebalancing, a lore friendly quest overhaul, and a map-traveling system built from rewritten portions of the Traveler mod allowing seamless travel between maps. Aside from its changes to the game’s core properties, WTT also adds to the world’s variety of traders, NPC’s, characters, items, and quests:</p>\n<ul>\n<li>Over 1,000 custom bundles adding new weapons, attachments, wearables, containers, food, medical, and barter items.</li>\n<li>New bosses with their own custom gear that will be properly incorporated into WTT’s quest lines.</li>\n<li>New, meaningful traders with their own lore-friendly quests and narrative elements to help the player progress through the story-line of WTT.</li>\n<li>New playable characters and outfits that will add to the player’s customization abilities.</li>\n<li>New quest types incorporating brand new map extraction points, putting the player’s knowledge and familiarization of SPT’s maps to the test.</li>\n</ul>\n<p>Welcome To Tarkov stands as one of the largest mods created for SPT AKI thus far.</p>\n<p><strong>When does Welcome To Tarkov release?</strong></p>\n<p><em>Thursday.</em></p>\n<p><strong>Which Thursday?</strong></p>\n<p><em>TBD</em></p>\n<p><strong>Want to follow our progress?</strong></p>\n<p>You can follow the project through it’s development in our discord here:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://discord.gg/WelcomeToTarkov\" rel=\"noreferrer noopener\">https://discord.gg/WelcomeToTarkov</a></p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">WTT Standalone Mods</div>\n<div class=\"tab-content\"><p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2952-wtt-armory\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/M5K2z6fN/image.png\" alt=\"image.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2823-wtt-corner-store/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/wh6nTSXC/corner.png\" alt=\"corner.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1858-wtt-the-long-lost-heads-of-yojenkz/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/kgCYjkf7/heads.png\" alt=\"heads.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2412-wtt-menu-overhaul/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/wNffZM9s/menu.png\" alt=\"menu.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1790-wtt-pack-n-strap/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/TDYhZx29/packnstrap.png\" alt=\"packnstrap.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2175-wtt-taste-the-rainbow/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/gMXynQ8x/rainbow.png\" alt=\"rainbow.png\" /></a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2085-wtt-w-a-a-c-women-s-advanced-assault-corps/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/H9J2VTk/waac.png\" alt=\"waac.png\" /></a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": true,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2025-09-15T02:44:00.000000Z",
+  "created_at": "2025-09-15T02:44:54.000000Z",
+  "updated_at": "2026-07-28T18:02:31.000000Z",
+  "owner": {
+    "id": 30890,
+    "name": "GrooveypenguinX",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-05-07T19:55:52.000000Z",
+    "updated_at": "2026-08-01T13:47:25.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 22121,
+      "name": "Tron",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+      "created_at": "2022-08-31T05:49:04.000000Z",
+      "updated_at": "2026-08-01T16:41:37.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/WelcomeToTarkov/WTT-CommonLib/",
+      "label": "Commonlib"
+    },
+    {
+      "url": "https://github.com/bmpq/FixPluginTypesSerialization",
+      "label": "FixPluginsTypesSerialization Patcher"
+    }
+  ],
+  "versions": [
+    {
+      "id": 14228,
+      "hub_id": null,
+      "version": "2.0.23",
+      "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+      "content_length": 245746,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 15949,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-26T04:25:00.000000Z",
+      "created_at": "2026-07-26T04:26:24.000000Z",
+      "updated_at": "2026-07-28T18:02:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OTcwYTkyZjZlNjQxODU3ZGJiOTEzM2Y0NmM5NjMxMjE6MTc4NTAzOTk3MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/90b49958-59ed-4d56-9216-e8b764b1ba8f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A11Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.23.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A35Z&ske=2026-08-01T20%3A59%3A11Z&sks=b&skv=2018-11-09&sig=aC92ctpsTRFYPfGv%2FubzAaamhaSj2J1q%2BlY61qSDRdA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.23.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14222,
+      "hub_id": null,
+      "version": "2.0.22",
+      "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+      "content_length": 245907,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 2537,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-25T17:47:00.000000Z",
+      "created_at": "2026-07-25T17:47:29.000000Z",
+      "updated_at": "2026-07-28T09:55:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZDQ0ZjdjNDVkMGEzNzM0ZGIyYTQ3MTc5ZjU1OTVhNWQ6MTc4NTAwMTUwOA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/c55a9268-1cd8-4d5f-8cc4-b752efb22b1b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A49Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.22.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A14Z&ske=2026-08-01T20%3A59%3A49Z&sks=b&skv=2018-11-09&sig=8d5qaqPdCpdEp%2BbJiBycx%2F99VKXzeIkkihdWM7rW3vo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.22.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13486,
+      "hub_id": null,
+      "version": "2.0.20",
+      "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+      "content_length": 167466,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 103393,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-25T04:15:00.000000Z",
+      "created_at": "2026-04-25T04:16:03.000000Z",
+      "updated_at": "2026-07-28T08:25:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c37bb8ee5205432d41cfc3c22c1ec4c3fe509a94b69293c5433ff5e9bcc9974a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cac39e09-0eb5-4e45-9648-83120049c486?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A32Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.20.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A23Z&ske=2026-08-01T20%3A59%3A32Z&sks=b&skv=2018-11-09&sig=BbFvdprKIf4Fxmcl4l%2FtYFtLyq4nGSr0oid9bn27HoU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.20.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13416,
+      "hub_id": null,
+      "version": "2.0.18",
+      "description": "<ul>\n<li>added new itemservice helper for adding items to blacklist</li>\n<li>fixed nuget package forcibly including the en.json locale for the salvage zones in your project /bonk</li>\n<li>fixed slothelper method and added support for creating new slot info</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.18",
+      "content_length": 157079,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 17220,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-11T22:24:00.000000Z",
+      "created_at": "2026-04-11T22:25:48.000000Z",
+      "updated_at": "2026-07-28T08:21:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2465f8b46284ab62dd7514e90ea101c06537c58f33cdeac5814dcfc692df07e3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/f1460ba4-4ed0-4d21-a675-04cadc22a27b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A30Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.18.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A02Z&ske=2026-08-01T21%3A00%3A30Z&sks=b&skv=2018-11-09&sig=awyl4Jo5VPJvaS7hBKh8KebPuZtNT%2BQDgSjQlMgE%2FyM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.18.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13398,
+      "hub_id": null,
+      "version": "2.0.17",
+      "description": "<ul>\n<li>fixed hideout crafts service not supporting anything but arrays /bonk</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.17",
+      "content_length": 151817,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 4870,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-08T13:26:00.000000Z",
+      "created_at": "2026-04-08T13:26:58.000000Z",
+      "updated_at": "2026-07-28T08:20:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YWM5YjljOTM5ZTUwZjkwOWM5YTUwY2E5YjQzNjVhNTc6MTc3NTY1NDcyMg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/76c20e21-13cf-4344-be67-485a003e0d64?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A18Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.17.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A51Z&ske=2026-08-01T21%3A24%3A18Z&sks=b&skv=2018-11-09&sig=BGYNgPxDApKSnQ0cgAUYtmvrPfqTOPspgLSqSLg7lXc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.17.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13391,
+      "hub_id": null,
+      "version": "2.0.16",
+      "description": "<ul>\n<li>Added new helper to slothelper to add ids by name</li>\n<li>Added fix custom item sort order patch (thanks Pein! ❤ )</li>\n<li>Added new “Salvage” zones to possible quest types</li>\n<li>Added locales for the salvage zone interactions</li>\n<li>Fixed hideout crafts not supporting .jsonc /bonk</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.16",
+      "content_length": 151472,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 1465,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-07T22:15:00.000000Z",
+      "created_at": "2026-04-07T22:16:03.000000Z",
+      "updated_at": "2026-07-28T08:20:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MTYyZTNjZTllY2MzMThiOWEzOWRlN2NlNDIzMzQyMjQ6MTc3NTYwMDExNQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/045b74b8-6920-4385-8897-34b0f4f134e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A43Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.16.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A27Z&ske=2026-08-01T21%3A10%3A43Z&sks=b&skv=2018-11-09&sig=E5i4CmAWxHgRUWxdOXB4znSbiXWzTpbluBGTZs8mD88%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.16.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12977,
+      "hub_id": null,
+      "version": "2.0.15",
+      "description": "<ul>\n<li>Implemented random loot container support for customitemserviceextended</li>\n<li>Added save method to confighelper</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.15",
+      "content_length": 141736,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 49017,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-02T21:52:00.000000Z",
+      "created_at": "2026-02-02T21:52:47.000000Z",
+      "updated_at": "2026-07-28T07:58:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ODg3MzEyN2I1ZTVlYjIzMWM2ZTk3ZTgzZTg0MDg2ZGI6MTc3MDA2OTE1Ng==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/09a925a0-6614-4de2-9a5d-07c627aec09c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A42Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.15.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A05Z&ske=2026-08-01T21%3A11%3A42Z&sks=b&skv=2018-11-09&sig=7FkszMllNx2IBmGZ%2FCeCUGg%2Bjoc9%2B914%2FWU6UtsRU68%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.15.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12912,
+      "hub_id": null,
+      "version": "2.0.14",
+      "description": "<p>HOTFIX NUMBER 2 FOR THE DAY REEEEEEE</p>\n<ul>\n<li>fixed caliberhelper from being completely broken. PLEASE DOWNLOAD THIS VERSION IF YOU UPDATED TODAY.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.14",
+      "content_length": 140665,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 8155,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-26T05:01:00.000000Z",
+      "created_at": "2026-01-26T05:01:31.000000Z",
+      "updated_at": "2026-07-28T07:56:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fe34c0c03bf69a2aaf44aeca61d23c233690e0f24780dd64c40b8b8f7ad5d25d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/41ba58e4-7631-453e-9d6b-36447ec93ecb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A50Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.14.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A41Z&ske=2026-08-01T21%3A14%3A50Z&sks=b&skv=2018-11-09&sig=zvwdBIeBZg%2B3DC3A0XclpY7e4TeesmjggXiCQJXkDJE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.14.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12910,
+      "hub_id": null,
+      "version": "2.0.13",
+      "description": "<ul>\n<li>fixed questhelper adding to empty weapon conditions (specifically a punisher part 4 issue)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.13",
+      "content_length": 140891,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 314,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-26T02:14:00.000000Z",
+      "created_at": "2026-01-26T02:14:36.000000Z",
+      "updated_at": "2026-07-28T07:56:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MDBiZTMxZGM2ZWNmOTZlMTY2NzdiYjVhZDg2Mzg5NjY6MTc2OTM5MzY2Mw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/b072bf61-14f6-4113-b6e3-2d425c8b293a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A59Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A01Z&ske=2026-08-01T21%3A21%3A59Z&sks=b&skv=2018-11-09&sig=Cf%2FHywaQx8MujqXe2Q2TOW5sQQH4dF%2FdZkEoCEdXY6E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.13.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12906,
+      "hub_id": null,
+      "version": "2.0.12",
+      "description": "<ul>\n<li>added weapon mod quest helper method</li>\n<li>added CustomDialogueService for custom NPC Dialogues</li>\n<li>changed CaliberHelper to process deferred like modslots (should allow for better compatibility for ammo)</li>\n<li>fixed custom modslot images becoming blurry on low texture settings (Thanks Pein!)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.12",
+      "content_length": 152278,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 391,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-25T22:01:00.000000Z",
+      "created_at": "2026-01-25T22:02:01.000000Z",
+      "updated_at": "2026-07-28T07:56:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZGJiMTQ1YjlkYTM5MGQyNDc5ZGQ0ZDc1YzA0YWU3NTY6MTc2OTM3ODQ5MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/8b8d83f8-7005-4193-82ec-bc9377e9804c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A50Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.12.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A07Z&ske=2026-08-01T21%3A17%3A50Z&sks=b&skv=2018-11-09&sig=U6xPphzTBqqqduB%2F8QUBp7GSRnkKLTnRDrqJ2rCMOzk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.12.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12749,
+      "hub_id": null,
+      "version": "2.0.11",
+      "description": "<p>added helper method for dogtag quests</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.11",
+      "content_length": 149601,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 28470,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-03T04:04:00.000000Z",
+      "created_at": "2026-01-03T04:04:51.000000Z",
+      "updated_at": "2026-07-28T07:26:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MWRhNWRlM2RlYTcyNDY2NDk4ZTY5ZTZkMzZhMWFkMWI6MTc2NzQxMzA1OQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/0bdf86b4-6ebd-412c-991a-29ca947b53c4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A48Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.11.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A53Z&ske=2026-08-01T21%3A07%3A48Z&sks=b&skv=2018-11-09&sig=HaAD6kVB4FdqGAtjQi9qaSjACN5VYtbf%2FTqolMBShMs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.11.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12747,
+      "hub_id": null,
+      "version": "2.0.10",
+      "description": "<ul>\n<li>added questhelper</li>\n<li>force image cache if using fika because of local headless skill issue</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.10",
+      "content_length": 149158,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 343,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-03T03:04:00.000000Z",
+      "created_at": "2026-01-03T03:08:08.000000Z",
+      "updated_at": "2026-07-28T07:26:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MzIzODA1ZmJkMTk1MzJhODZhNzg3MjA3ZWU1OWUyMTg6MTc2NzQwOTQ3NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/742b7365-49ae-47e6-b73a-5dd37d1e5edf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A43Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.10.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A48Z&ske=2026-08-01T21%3A10%3A43Z&sks=b&skv=2018-11-09&sig=ZxqJtjohe9SzXRBsv6ckKFXaTL5iJrEavut4QSSAtTI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.10.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12691,
+      "hub_id": null,
+      "version": "2.0.9",
+      "description": "<p>Fixed Fika loading issue with icons!</p>\n<ul>\n<li>added new ImageManager that works similar to spt’s BundleManager, creating a cache of icons and textures if needed</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.9",
+      "content_length": 147326,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 13701,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-27T19:17:00.000000Z",
+      "created_at": "2025-12-27T19:17:57.000000Z",
+      "updated_at": "2026-07-28T07:13:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZWZmMDFlOWRhNWJlNmNmZjRlNTI0MWViYzdmMDBmOTA6MTc2Njg2MzAzMQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/a138c133-d06a-4f14-a35a-84992503e271?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A21Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.9.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A23Z&ske=2026-08-01T21%3A00%3A21Z&sks=b&skv=2018-11-09&sig=fCnZWamPb79FXlcw%2FcfkmaTedLApRkVuygXR27M%2FMAM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.9.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12677,
+      "hub_id": null,
+      "version": "2.0.8",
+      "description": "<ul>\n<li>added customisation helper methods</li>\n<li>bugfixes</li>\n<li>sanity checks (thanks bushtail)</li>\n<li>more i’m definitely forgetting</li>\n</ul>\n<p>I wonder why commonlib is updating today….</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.8",
+      "content_length": 140469,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 6925,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-26T02:07:00.000000Z",
+      "created_at": "2025-12-26T02:08:10.000000Z",
+      "updated_at": "2026-07-28T07:13:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NzM1ZTc2NGViMmFjNjYwZTVlZDk2ZWE0YWUzM2E1YTY6MTc2NjcxNDgzNw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/31de379b-2033-4a66-a9be-1bbcca6a2aaa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A33Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A08Z&ske=2026-08-01T21%3A19%3A33Z&sks=b&skv=2018-11-09&sig=exjE2c31d%2BwWjHuoNKlzuhr5iYukrxXCmruHobr32bo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12546,
+      "hub_id": null,
+      "version": "2.0.7",
+      "description": "<p>What’s Changed:</p>\n<ul>\n<li>Fixed AddGeneratorFuel by @kittycat2002</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.7",
+      "content_length": 139712,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 16149,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-07T20:51:00.000000Z",
+      "created_at": "2025-12-07T20:51:55.000000Z",
+      "updated_at": "2026-07-28T07:02:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MzFjMDI5NTIzOWZjOGNlYjhhYTQwYWZlMjRiMjkzNWY6MTc2NTE0MDYwNw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cf0e5f84-9f13-4097-a5db-f065f1308047?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A32Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.7.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A59Z&ske=2026-08-01T21%3A13%3A32Z&sks=b&skv=2018-11-09&sig=fX0Uj8vAxlqr2S4SOKr1QnUci5w%2BWiUSpPTekQsTePI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.7.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12519,
+      "hub_id": null,
+      "version": "2.0.6",
+      "description": "<ul>\n<li>Changed bundle loading methods for Static Spawn Service and Audio Service to load using SPT’s BundleManager, should alleviate any fika issues. <strong>THIS WILL REQUIRE ANYONE WHO USES THESE SERVICES TO REGISTER THEIR BUNDLE IN THE BUNDLES.JSON PROPERLY, PLEASE CONSULT THE README</strong></li>\n<li>Implemented new Custom Customization Service, with support for Hideout Customizations such as floors, ceilings, walls, and shooting range marks, as well as normal customization items like dogtags and such.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.6",
+      "content_length": 139755,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 4171,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-04T21:03:00.000000Z",
+      "created_at": "2025-12-04T21:04:25.000000Z",
+      "updated_at": "2026-07-28T07:00:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MmYwNzQxZDBlNzBhYTlkOWY4Zjc0NGU2ODM0ZTA3NzY6MTc2NDg4MjE2MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/1b72927b-9eae-4b1f-91e0-3ea1934ceb6d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A14Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A34Z&ske=2026-08-01T21%3A15%3A14Z&sks=b&skv=2018-11-09&sig=cF4WTBbE4EkGicKndrADCY5coE0AnZK70mn7VodptQ0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12421,
+      "hub_id": null,
+      "version": "2.0.5",
+      "description": "<ul>\n<li>added support for nested folders for quest locales</li>\n<li>added support for multiple crafts per file</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.5",
+      "content_length": 124624,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 12171,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-24T00:22:00.000000Z",
+      "created_at": "2025-11-24T00:25:08.000000Z",
+      "updated_at": "2026-07-28T06:44:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OTliOWVmOWQwZmRiN2E3ZGUxZTMyYTkzNjQ3MWRhZTk6MTc2Mzk0Mzc0NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/d2422fd4-802e-4d17-b614-4ca99876667b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A28Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A10Z&ske=2026-08-01T21%3A20%3A28Z&sks=b&skv=2018-11-09&sig=fsd4NaHvwGy0ARAOrVF7OeXo4yUu6j7QLGCAM7PB2Z8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12292,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<p>Fixed more gameworld.mainplayer references for fika headless compatibility\nAdded packet delivery system for static spawns for fika compatibility</p>\n<p>This version works for fika and spt, it only loads the fika helper assembly if fika is present. This should hopefully fix the last issues for headless crashing on raid start, but if there are still issues let me know!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.4",
+      "content_length": 124266,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 11854,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-12T15:56:00.000000Z",
+      "created_at": "2025-11-12T15:57:23.000000Z",
+      "updated_at": "2026-07-28T06:21:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZjUyOGY4ZjRkM2VlMjM3MzI5MDUzNGU5ZWE2ZDU1MmU6MTc2Mjk2Mjk4OA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/7131fc8c-3271-432f-8c29-cd085c942083?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A19Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A53Z&ske=2026-08-01T20%3A59%3A19Z&sks=b&skv=2018-11-09&sig=Si4DDMxu3mz8XNSFR9wtL4kj%2BweKMcrEQQ6j6HLEZpU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12285,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<ul>\n<li>fixes headless crash when using fika. ONLY NEEDED FOR FIKA HEADLESS USERS</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.3",
+      "content_length": 128475,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 867,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-11T20:41:00.000000Z",
+      "created_at": "2025-11-11T20:41:30.000000Z",
+      "updated_at": "2026-07-28T06:20:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MzAxN2E1NWUyZWZkZmE2NGIxNmJlNTA5ZTYzMTRlODA6MTc2Mjg5MzY3Ng==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/6373f5b9-be01-4abb-9b5d-9eacdc22f0b4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A42Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A48Z&ske=2026-08-01T21%3A21%3A42Z&sks=b&skv=2018-11-09&sig=xWZaGo8KsrdgMcB1S72DLmSB9jLHfEOUdCV8oed3UFs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12281,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<ul>\n<li>added customachievementservice &amp; modslot helpers</li>\n<li>removed debug lines causing confusion when locales/questdata weren’t present</li>\n<li>fixed a major issue with customassortservice adding multiple mods assorts multiple times /bonk</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.2",
+      "content_length": 128458,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 445,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-11T17:21:00.000000Z",
+      "created_at": "2025-11-11T17:21:58.000000Z",
+      "updated_at": "2026-07-28T06:20:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZjI2YjkwNWQzNjg1OGQwY2Y0NzgyODM1YzcxZjNlZDA6MTc2Mjg4MTY2NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cfe750cd-57d3-4cba-a74f-5d1d42a4f653?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A05Z&rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A40Z&ske=2026-08-01T21%3A16%3A05Z&sks=b&skv=2018-11-09&sig=y85r56AEtXXRvGgWoBn0UsNIV0R7%2FQG8pUm1NlTl4VE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12193,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<ul>\n<li>added new helper method for customitemserviceextended for secure filters</li>\n<li>added missing properties to clothing configs for questrequirements and achievementrequirements (skillrequirements will have to wait until next major SPT verison)</li>\n<li>fixed side locked quests not working properly /bonk</li>\n<li>added buyrestrictionmax for trader barters in customitemserviceextended</li>\n<li>added new customaudioservice for facecard and radio audio</li>\n<li>renamed customprofileservice method from add to create for consistency</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.1",
+      "content_length": 90689,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 4681,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-06T06:14:00.000000Z",
+      "created_at": "2025-11-06T06:15:35.000000Z",
+      "updated_at": "2026-07-28T06:15:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/M2JjNTU2ODAzYzE3YjFhYzY4YmYzMWM3OWI3Njk5NWY6MTc2MjQwOTY3MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/28ba3935-5d3e-4eec-a31b-91e9afde878a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A45Z&rscd=attachment%3B+filename%3DWTT-CommonLib-.2.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A25Z&ske=2026-08-01T21%3A02%3A45Z&sks=b&skv=2018-11-09&sig=TEeR1EaOJJr7yj5zTzKVs9oXFAf5U9%2F6MUb1el4qvL8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-.2.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12120,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h2>2.0.0 - Unified API Release</h2>\n<p><strong>Major Update</strong></p>\n<ul>\n<li>Combined client and server CommonLib into unified framework</li>\n<li>New server-side services for custom items, quests, loot, bots, and more</li>\n<li>Custom item template registration with full client instantiation support</li>\n<li>Updated guid: use <code>com.wtt.commonlib</code> dependency</li>\n</ul>\n<p><strong>Breaking Changes</strong></p>\n<ul>\n<li>Update <code>BepInDependency</code> from <code>com.aaaWTT.ClientCommonLib</code> to <code>com.wtt.commonlib</code></li>\n</ul>\n<p><strong>See full documentation on GitHub</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md\" rel=\"noreferrer noopener\">https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.0",
+      "content_length": 81392,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 1831,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-02T01:46:00.000000Z",
+      "created_at": "2025-11-02T01:47:41.000000Z",
+      "updated_at": "2026-07-28T06:13:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b8ab4f97b38e965c3921afb4c1973482219d4c18544a36638a2f0335d409777d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/fd81187b-f3bc-40f5-b76f-29512c84606a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A26Z&rscd=attachment%3B+filename%3DWTT-CommonLib-2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A19Z&ske=2026-08-01T21%3A15%3A26Z&sks=b&skv=2018-11-09&sig=ilQaG%2FAUTvpTpRpqn5Lj6au%2Bh%2Fhq3BJcNrjtaFq3V9k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11606,
+      "hub_id": 15007,
+      "version": "1.0.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 4349,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-09-15T02:44:54.000000Z",
+      "created_at": "2025-09-15T02:44:54.000000Z",
+      "updated_at": "2026-05-14T05:58:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e812490e01d6602d2e41b939f798661e52875c495c582036e2f9cf3de86b3f9d?noca",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1056772576/46cf2bf7-1475-471b-a05c-71b7d9a68811?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A36Z&rscd=attachment%3B+filename%3DWTT-ClientCommonLib.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A56Z&ske=2026-08-01T21%3A15%3A36Z&sks=b&skv=2018-11-09&sig=6dzSgkfad7RGHn4%2ByFJM4QQggeDfzyMFQaq%2FTjxKgtI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DWTT-ClientCommonLib.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 719,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:48.645Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2652,
+  "hub_id": null,
+  "guid": "com.chazut.fairprogression",
+  "name": "Fair Progression",
+  "slug": "fair-progression",
+  "teaser": "Automatically rebalances quest XP to preserve vanilla progression when modded quests are installed.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Y3leQiODN0ENnJ5SPY2xZ2yA6CGqYZsjw6SRM84Z.png",
+  "downloads": 1887,
+  "favourites_count": 7,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><p>Installing quest mods (custom traders, quest overhauls, etc.) adds thousands of extra XP that breaks the vanilla progression curve. You level up too fast, outpacing your trader reputation — you have the level for LL3 gear but haven’t unlocked it yet.</p>\n<p><strong>FairProgression fixes this automatically.</strong> It runs after all mods have loaded, analyzes every quest in the database, and scales XP rewards so the progression curve matches vanilla — no matter how many quest mods you have installed.</p>\n<p><strong>Key features:</strong></p>\n<ul>\n<li>Detects vanilla vs modded quests automatically</li>\n<li>Scales XP per bracket aligned with trader loyalty unlocks (LL2/LL3/LL4 phases)</li>\n<li>Buffs under-rewarded quests where difficulty far exceeds the XP reward</li>\n<li>Analyzes quest objectives (boss kills, map difficulty, restrictions, skills, etc.)</li>\n<li>Detailed dashboard in server logs</li>\n<li>Safe for existing profiles — only modifies rewards in memory</li>\n<li>Works with any quest mod — no configuration needed</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p>Extract the zip in your SPT root folder. Start the server. That’s it.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>Edit <code>SPT/user/mods/FairProgression/config/config.jsonc</code>:</p>\n<ul>\n<li><strong>mode</strong> — <code>\"scale_all\"</code> (default) reduces all quests proportionally. <code>\"scale_modded_only\"</code> only reduces modded quests.</li>\n<li><strong>level_brackets</strong> — <code>\"trader\"</code> (default) auto-computes from vanilla trader loyalty levels. Or use a JSON array like <code>[5, 10, 20, 30, 40]</code>.</li>\n<li><strong>min_coefficient</strong> — <code>0.25</code> (default). Quest XP never drops below 25% of original.</li>\n<li><strong>buff_under_rewarded</strong> — <code>true</code> (default). Increase XP for quests where difficulty far exceeds the reward (capped at x2).</li>\n<li><strong>buff_gap_threshold</strong> — <code>5</code> (default). Minimum level gap between difficulty and XP to trigger a buff.</li>\n<li><strong>enable_dashboard</strong> — <code>true</code> (default). Print the rebalancing dashboard in server logs.</li>\n<li><strong>dry_run</strong> — <code>false</code> (default). Calculate and log everything but don’t modify any rewards.</li>\n<li><strong>verbose</strong> — <code>false</code> (default). Log every modded quest with difficulty scores, per-trader breakdown, and under-rewarded details.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Dashboard</div>\n<div class=\"tab-content\"><p>Every server start, FairProgression logs a dashboard showing exactly what changed:</p>\n<pre><code>[FairProgression] ================================================================\n[FairProgression]  XP Rebalancing Dashboard\n[FairProgression]  Mode: scale_all\n[FairProgression] ================================================================\n[FairProgression]  Quests: 1492 total (558 vanilla, 934 modded)\n[FairProgression]  Vanilla quest XP: 11.0M -&gt; 7.9M (-27.6%)\n[FairProgression]  Modded  quest XP: 24.6M -&gt; 21.4M (-13.1%)\n\n[FairProgression]  Bracket  Van.Q   Van.XP  Mod.Q   Mod.XP    Total  Coeff     After\n[FairProgression]  1-12       167     2.0M    117    256.1k     2.2M  0.885      2.0M\n[FairProgression]  13-20      145     1.8M    116    578.2k     2.4M  0.754      1.8M\n[FairProgression]  21-32      151     3.2M    193      2.1M     5.3M  0.603      3.2M\n[FairProgression]  33-42       55     1.7M    137      3.3M     5.0M  0.334      1.7M\n[FairProgression]  43+         40     2.4M    371     18.4M    20.8M    ---     20.8M\n\n[FairProgression]  Buffed 185 under-rewarded quests (+369.0k XP)\n\n[FairProgression]  Total quest XP: 35.6M -&gt; 29.3M (-17.5%)\n[FairProgression] ================================================================\n</code></pre>\n<p>Enable <code>verbose</code> for a full per-trader and per-quest breakdown with difficulty scores.</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">How It Works</div>\n<div class=\"tab-content\"><p><strong>Install quest mods → FairProgression handles the rest.</strong></p>\n<p>When you add quest mods, the extra XP makes you level up too fast. You reach level 30 but your traders are still LL2 because you haven’t done enough vanilla quests to unlock them.</p>\n<p>FairProgression solves this by:</p>\n<ol>\n<li><strong>Detecting</strong> which quests come from mods and which are vanilla</li>\n<li><strong>Estimating</strong> when you’ll realistically complete each quest based on its objectives, prerequisites, and reward</li>\n<li><strong>Reducing</strong> XP from quests that would over-level you</li>\n<li><strong>Boosting</strong> XP from quests that are harder than their reward suggests</li>\n</ol>\n<p>The XP budget is split into phases matching vanilla trader unlock levels — so your level always stays in sync with what you can actually buy.</p>\n<blockquote>\n<p><strong>Example:</strong> You have 934 modded quests adding 24.6M extra XP. FairProgression scales this down to keep you on the vanilla curve, while buffing 185 quests that were under-rewarded for their difficulty.</p>\n</blockquote>\n<p><strong>Nothing changes on disk.</strong> All adjustments are in memory. Remove the mod and everything goes back to normal. Safe for existing profiles.</p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><ul>\n<li><strong>SPT 4.0</strong></li>\n<li>Compatible with <strong>any mod</strong> that adds quests</li>\n<li>Compatible with <strong>QuestsExtended</strong> (detects placeholder conditions)</li>\n<li>Safe for <strong>existing profiles</strong> — only modifies quest rewards in memory, not on disk</li>\n<li>Adding/removing quest mods: just restart the server</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Issues</div>\n<div class=\"tab-content\"><p>Report them on <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Chazut/FairProgression/issues\" rel=\"noreferrer noopener\">GitHub</a>.</p></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>If you enjoy FairProgression and want to support my work, feel free to buy me a coffee!</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/chazut\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"ko-fi\" /></a></p>\n<p>All my mods are free and open source. Your support keeps me motivated to create more!</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2652/fair-progression",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-04-02T13:25:00.000000Z",
+  "created_at": "2026-04-02T13:26:21.000000Z",
+  "updated_at": "2026-07-28T08:17:30.000000Z",
+  "owner": {
+    "id": 53567,
+    "name": "Chazut",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-06-11T18:31:06.000000Z",
+    "updated_at": "2026-08-01T14:44:30.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Chazut/FairProgression",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13350,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h2>v1.0.0 — Initial Release</h2>\n<p>Keeps your level progression aligned with trader unlocks when playing with quest mods. No more being level 30 with LL2 traders!</p>\n<h3>What it does</h3>\n<ul>\n<li>Automatically detects which quests come from mods</li>\n<li>Scales down XP from quests that would over-level you</li>\n<li>Boosts XP from quests that are harder than their reward suggests</li>\n<li>Aligns XP budgets with vanilla trader loyalty unlock phases (LL2 → LL3 → LL4)</li>\n<li>Analyzes quest difficulty: boss kills, map difficulty, restrictions, one-raid objectives, and more</li>\n</ul>\n<h3>Good to know</h3>\n<ul>\n<li>Works with any quest mod — no configuration needed</li>\n<li>Compatible with QuestsExtended</li>\n<li>Safe for existing profiles — nothing changes on disk</li>\n<li>Check the server logs for a detailed dashboard of all changes</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2652/fair-progression/1.0.0",
+      "content_length": 26853,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1887,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-02T13:31:00.000000Z",
+      "created_at": "2026-04-02T13:31:50.000000Z",
+      "updated_at": "2026-07-28T08:17:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a1ab222bffed42a77150acd73ead00a175c0583758fbd68dd2280e7703d287a8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1199267360/deb7b443-9026-4460-9d27-73dadc6015aa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A27Z&rscd=attachment%3B+filename%3DFairProgression-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A05Z&ske=2026-08-01T21%3A05%3A27Z&sks=b&skv=2018-11-09&sig=nuMFPOjKMa4qbMaG79JAa0HUPz%2F4W394%2B1aqJd3Dimg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&response-content-disposition=attachment%3B%20filename%3DFairProgression-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 24,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:05.697Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "type": "mod",
+  "id": 2547,
+  "hub_id": null,
+  "guid": "com.priscilu.origins",
+  "name": "The Trader Priscilu",
+  "slug": "the-trader-priscilu",
+  "teaser": "Priscilu a custom trader bringing new trading options and fresh progression to your SPT experience.   This updated release for **SPT 4.0.11** refines the original mod by **Reis**, focusing on stability, balance, and seamless integrat",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/49dK3BjBJPTS5ZxYhqPTL1FjuMSLEUyNXOGSCnQf.jpg",
+  "downloads": 11994,
+  "favourites_count": 22,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">IMPORTANT NOTE</div>\n<div class=\"tab-content\"><p>⚠️ ⚠️ ⚠️ <strong>PLEASE READ EVERYTHING CAREFULLY BEFORE INSTALLING.</strong> ⚠️ ⚠️ ⚠️</p>\n<p><strong>Priscilu Origins v2</strong> is a server-side trader mod for <strong>SPT 4.0.11</strong>.</p>\n<p>This mod adds a custom trader called <strong>Priscilu Origins</strong> with a custom avatar, a large custom assortment and several configurable systems.</p>\n<p><strong>Important:</strong>\nThis mod is made for <strong>Single Player Tarkov only</strong>.\nIt is <strong>not</strong> made for live Escape From Tarkov and must not be used with live EFT.</p>\n<ul>\n<li><strong>Mod Name:</strong> <code>Priscilu_Origins_v2</code></li>\n<li><strong>Version:</strong> <code>6.4.0</code></li>\n<li><strong>SPT Version:</strong> <code>~4.0.11</code></li>\n<li><strong>.NET:</strong> <code>9</code></li>\n<li><strong>Author:</strong> Reis</li>\n<li><strong>Update / Contributor:</strong> Anigx</li>\n<li><strong>License:</strong> MIT</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">ABOUT THE MOD</div>\n<div class=\"tab-content\"><p><strong>Priscilu Origins v2</strong> adds a custom trader to SPT.</p>\n<p>The trader includes:</p>\n<ul>\n<li>Custom trader profile</li>\n<li>Custom trader avatar</li>\n<li>Large custom assortment</li>\n<li>Level-based unlock system</li>\n<li>Optional unlock by default</li>\n<li>Flea Market integration option</li>\n<li>Unlimited stock option</li>\n<li>Random out-of-stock option</li>\n<li>Global price multiplier</li>\n<li>Custom item price generation</li>\n<li>Repair service</li>\n<li>Insurance service</li>\n<li>Optional debug logging</li>\n</ul>\n<p>The mod is fully server-side and does not require any client-side files.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">HOW TO INSTALL</div>\n<div class=\"tab-content\"><ol>\n<li>Backup your profile before updating or installing.</li>\n<li>Close the SPT server.</li>\n<li>Delete any previous version of the mod completely.</li>\n<li>Clear your caches if needed.</li>\n<li>Download the mod.</li>\n<li>Extract the ZIP.</li>\n<li>Copy the mod folder into your SPT user mods folder:</li>\n</ol>\n<p><code>&lt;SPT&gt;/user/mods/Priscilu_Origins</code></p>\n<p>For the packaged release ZIP, extract it into your SPT root folder so the final path looks like this:</p>\n<p><code>SPT/user/mods/Priscilu_Origins_v2</code></p>\n<ol start=\"8\">\n<li>Start the SPT server.</li>\n<li>Check the server console for errors.</li>\n</ol>\n<hr /></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">CONFIG</div>\n<div class=\"tab-content\"><p>The main configuration file is:</p>\n<p><code>config/settings.json</code></p>\n<p>Current default settings:</p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th align=\"right\">Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>MinLevel</td>\n<td align=\"right\">5</td>\n</tr>\n<tr>\n<td>UnlockedByDefault</td>\n<td align=\"right\">false</td>\n</tr>\n<tr>\n<td>TraderRefreshMin</td>\n<td align=\"right\">1800</td>\n</tr>\n<tr>\n<td>TraderRefreshMax</td>\n<td align=\"right\">3600</td>\n</tr>\n<tr>\n<td>AddTraderToFleaMarket</td>\n<td align=\"right\">true</td>\n</tr>\n<tr>\n<td>InsurancePriceCoef</td>\n<td align=\"right\">50</td>\n</tr>\n<tr>\n<td>RepairQuality</td>\n<td align=\"right\">0.8</td>\n</tr>\n<tr>\n<td>RandomizeStockAvailable</td>\n<td align=\"right\">false</td>\n</tr>\n<tr>\n<td>OutOfStockChance</td>\n<td align=\"right\">15</td>\n</tr>\n<tr>\n<td>UnlimitedStock</td>\n<td align=\"right\">true</td>\n</tr>\n<tr>\n<td>PriceMultiplier</td>\n<td align=\"right\">1.0127</td>\n</tr>\n<tr>\n<td>DebugLogging</td>\n<td align=\"right\">false</td>\n</tr>\n</tbody>\n</table>\n<p><strong>MinLevel</strong>\nSets the player level required to unlock the trader.</p>\n<p><strong>UnlockedByDefault</strong>\nIf enabled, the trader is unlocked immediately.</p>\n<p><strong>TraderRefreshMin / TraderRefreshMax</strong>\nControls the random restock timer range in seconds.</p>\n<p><strong>AddTraderToFleaMarket</strong>\nAllows Priscilu Origins offers to appear on the Flea Market.</p>\n<p><strong>UnlimitedStock</strong>\nMakes trader offers effectively unlimited.</p>\n<p><strong>PriceMultiplier</strong>\nApplies a global multiplier to trader prices.</p>\n<p><strong>DebugLogging</strong>\nEnables extra logs for troubleshooting.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">CONTENT</div>\n<div class=\"tab-content\"><p>The mod contains the following important files:</p>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Purpose</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>PrisciluOrigins.cs</code></td>\n<td>Main trader loading and configuration logic</td>\n</tr>\n<tr>\n<td><code>TraderUnlockService.cs</code></td>\n<td>Level unlock handling</td>\n</tr>\n<tr>\n<td><code>PrisciluLogger.cs</code></td>\n<td>Debug log handling</td>\n</tr>\n<tr>\n<td><code>config/settings.json</code></td>\n<td>Main user configuration</td>\n</tr>\n<tr>\n<td><code>config/items.json</code></td>\n<td>Generated custom item prices</td>\n</tr>\n<tr>\n<td><code>data/base.json</code></td>\n<td>Trader base data</td>\n</tr>\n<tr>\n<td><code>data/assort.json</code></td>\n<td>Trader assortment</td>\n</tr>\n<tr>\n<td><code>data/Priscilu_Origins.jpg</code></td>\n<td>Trader avatar</td>\n</tr>\n<tr>\n<td><code>package.json</code></td>\n<td>Mod metadata</td>\n</tr>\n</tbody>\n</table>\n<p>The mod can also generate an item price file:</p>\n<p><code>config/items.json</code></p>\n<p>Supported currencies:</p>\n<ul>\n<li>RUB</li>\n<li>USD</li>\n<li>EUR</li>\n<li>OTHER</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">FUTURE PLANS</div>\n<div class=\"tab-content\"><p>Possible future improvements:</p>\n<ul>\n<li>More trader balance adjustments</li>\n<li>More configurable options</li>\n<li>More detailed item price documentation</li>\n<li>Additional assortment tuning</li>\n<li>Better troubleshooting documentation</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">BUG REPORTING</div>\n<div class=\"tab-content\"><p>When reporting a bug, please include:</p>\n<ul>\n<li>Your SPT version</li>\n<li>Your Priscilu Origins v2 version</li>\n<li>A clear description of the issue</li>\n<li>Your server console error, if available</li>\n<li>Your <code>debug.log</code>, if debug logging was enabled</li>\n<li>A list of other installed mods, if the issue may be related to compatibility</li>\n</ul>\n<p>Please make sure you are using the correct SPT version before reporting issues.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">KNOWN ISSUES</div>\n<div class=\"tab-content\"><p>If the server logs show missing soft armor inserts, make sure the slot names in <code>assort.json</code> are written exactly as required.</p>\n<p>Correct slot names:</p>\n<ul>\n<li><code>Soft_armor_front</code></li>\n<li><code>Soft_armor_back</code></li>\n<li><code>Soft_armor_left</code></li>\n<li><code>soft_armor_right</code></li>\n</ul>\n<p>Slot names are case-sensitive.</p>\n<p>If the mod does not load:</p>\n<ol>\n<li>Make sure you are using SPT 4.0.11.</li>\n<li>Make sure the mod folder is inside <code>user/mods</code>.</li>\n<li>Make sure the final folder contains the mod files directly.</li>\n<li>Check the SPT server console for errors.</li>\n<li>Enable <code>DebugLogging</code> in <code>config/settings.json</code>.</li>\n<li>Check <code>debug.log</code> inside the mod folder.</li>\n</ol></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2547/the-trader-priscilu",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2026-01-13T02:07:00.000000Z",
+  "created_at": "2026-01-13T00:53:22.000000Z",
+  "updated_at": "2026-07-28T07:57:08.000000Z",
+  "owner": {
+    "id": 101380,
+    "name": "Anigx",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1N9NlPyMy8GvL4xrkootiva07LfvCJE3zLzmWbq1_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2026-01-11T05:08:37.000000Z",
+    "updated_at": "2026-07-10T04:54:24.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 303,
+      "name": "Reis",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/c06d7fd41510167b4097c6d5f5c0a43023c48928_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2020-10-16T21:47:46.000000Z",
+      "updated_at": "2026-08-01T19:36:54.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CyberByteCraft/Priscilu_Origins_v2",
+      "label": "server"
+    }
+  ],
+  "versions": [
+    {
+      "id": 12921,
+      "hub_id": null,
+      "version": "6.4.0",
+      "description": "<h1>Release Notes - v6.4.0</h1>\n<p>feature requested by <strong>Spicymanp</strong></p>\n<ul>\n<li>insurance multiplier.\nfeature requested by <strong>osfox</strong></li>\n<li>import features from Priscilu: The Trader [TimmyGG Edition]</li>\n</ul>\n<h2>Changes</h2>\n<h3>Configuration Update</h3>\n<ul>\n<li><strong>New Default Settings</strong>: Updated the bundled configuration to match recommended defaults.\n<ul>\n<li><code>MinLevel</code>: 5</li>\n<li><code>TraderRefreshMin</code>: 1800 (30 min)</li>\n<li><code>TraderRefreshMax</code>: 3600 (60 min)</li>\n<li><code>DebugLogging</code>: false</li>\n<li><code>UnlimitedStock</code>: true</li>\n</ul>\n</li>\n</ul>\n<h2>Fixes &amp; Improvements</h2>\n<h2>New Config</h2>\n<pre><code>\"MinLevel\": 5, //[Level Requirement] The minimum level required to access the trader's level 1 loyalty.   \n\"UnlockedByDefault\": false, //[Unlock] If true, the trader is unlocked immediately regardless of level.\n\"TraderRefreshMin\": 1800, //[Restock Timer] Minimum and Maximum time (in seconds) for trader restock. 1800s = 30 min, 3600s = 60 min. The system picks a random time between these two.\n\"TraderRefreshMax\": 3600,\n\"AddTraderToFleaMarket\": true, //[Flea Market] If true, Priscilu's offers appear on the Flea Market search.\n\"InsurancePriceCoef\": 50, // [Insurance] Price multiplier for insurance. 25 = 25%. Higher is more expensive.\n\"RepairQuality\": 0.8, // [Repair] Quality of repairs (0.0 to 1.0). 0.8 is High Quality (loss accumulation is lower).\n\"RandomizeStockAvailable\": false, //[Stock] If true, some items will randomly be out of stock each reset.\n\"OutOfStockChance\": 15, //[Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).\n\"UnlimitedStock\": true, //[Stock] If true, all items have infinite stock. Overrides randomization. Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.    \n\"PriceMultiplier\": 1.0127, //[Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    \n\"DebugLogging\": false //[Debug] Enables detailed logs in the server console for troubleshooting.\n</code></pre>\n<h3>Code Cleanup</h3>\n<ul>\n<li><strong>Removed Inspector</strong>: Deleted unused <code>Inspector/</code> tool from the project source.</li>\n<li><strong>Refactoring</strong>: Renamed <code>TraderUnlockCallback.cs</code> to <code>TraderUnlockService.cs</code> to properly reflect its class name and purpose.</li>\n</ul>\n<hr />\n<p><em>Targeting SPT 4.0.11+</em></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.4.0",
+      "content_length": 176611,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 8805,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-26T19:34:00.000000Z",
+      "created_at": "2026-01-26T19:35:02.000000Z",
+      "updated_at": "2026-07-28T07:57:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a8c9b8cca8fe32fba0a4300d7567bd4b11290db6bdd8c20217ebafd41c069ef3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/a4438031-eb80-412d-9e36-0c38756015f9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A34Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2-v6.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A47Z&ske=2026-08-01T21%3A03%3A34Z&sks=b&skv=2018-11-09&sig=f%2BWDH47WDX5FILFZAWbF0aSI3h33K6ZFgllbGmlpFis%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1OCwibmJmIjoxNzg1NjE1ODU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.tSefBHofNXjQpC6fe7LWta63SU5BuInmYGDMjk5jX4A&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2-v6.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12890,
+      "hub_id": null,
+      "version": "6.3.1",
+      "description": "<h1>Priscilu: Origins - The “Bongo” Update (v6.3.1)</h1>\n<p>A new update is here, featuring the highly requested <strong>M80A1</strong> ammunition and several quality-of-life improvements!</p>\n<h2>What’s New in v6.3.1</h2>\n<ul>\n<li><strong>New Ammo:</strong> The <strong>7.62x51mm M80A1</strong> round is now available at <strong>Loyalty Level 1</strong>.\n<ul>\n<li><strong>Price:</strong> <code>1,180 RUB</code> (Adjusted for balance).</li>\n<li><em>Why?</em> Because <strong>Bongo</strong> asked for it! Enjoy those black tips.</li>\n</ul>\n</li>\n<li><strong>Config Overhaul:</strong> The <a>items.json</a> configuration file now displays <strong>actual English item names</strong> (e.g., “Colt M4A1”) instead of cryptic IDs, making manual adjustments much easier.</li>\n<li><strong>Fixes:</strong>\n<ul>\n<li>Resolved JSON syntax errors to ensure stability.</li>\n<li><strong>Fixed</strong> an issue where prices would revert to old values when regenerating the config.</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.3.1",
+      "content_length": 163988,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 662,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-22T00:06:00.000000Z",
+      "created_at": "2026-01-22T00:06:53.000000Z",
+      "updated_at": "2026-07-28T07:56:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/65168ea25fcdcf3cc20fac0f3fc1dd50c4f923860e5977a8aba04d188c4adf54?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/d650ece3-0279-4064-9aa5-60c2de564b1e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A15Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2-v6.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A04Z&ske=2026-08-01T21%3A20%3A15Z&sks=b&skv=2018-11-09&sig=MicR6WBsDGxmoFnFAJWLspQOHcw%2Fjm53%2BBFOjJQiY1o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MCwibmJmIjoxNzg1NjE1ODYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TxD6ftOorig4wPDLyqwQzAMSsA8uHdi_78DFq8jI6hE&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2-v6.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12882,
+      "hub_id": null,
+      "version": "6.2.6",
+      "description": "<p><strong>Priscilu Origins v6.2.6</strong></p>\n<p><strong>New Features:</strong></p>\n<ul>\n<li><strong>New Configuration System:</strong> All settings are now located in the config folder.</li>\n<li><strong>Custom Item Pricing &amp; Currency:</strong> Individual item prices can now be adjusted in config/items.json. You can also specify the currency for each item (RUB, EUR, USD).</li>\n<li><strong>Level Requirement:</strong> By default, the trader unlocks at <strong>Level 2</strong>. You can adjust the level or set it to be unlocked by default in config/settings.json.</li>\n</ul>\n<p><strong>Bug Fixes:</strong></p>\n<ul>\n<li>The timer is now internally fixed to 1 hour to ensure stability.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.2.6",
+      "content_length": 163946,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 337,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-20T05:06:00.000000Z",
+      "created_at": "2026-01-20T05:06:42.000000Z",
+      "updated_at": "2026-07-28T07:55:50.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2c92060640830a7da84b2f41166dbacf697b05010defc47419e13261874f9746?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/bba395b7-696d-4479-a9e9-92f3792ec517?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A29Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2-v6.2.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A19Z&ske=2026-08-01T21%3A07%3A29Z&sks=b&skv=2018-11-09&sig=ZubsIw2kQtzdiSGL6JPfr9gbsKUc69CPvABg3nJfE5M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MCwibmJmIjoxNzg1NjE1ODYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TxD6ftOorig4wPDLyqwQzAMSsA8uHdi_78DFq8jI6hE&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2-v6.2.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12864,
+      "hub_id": null,
+      "version": "6.1.3",
+      "description": "<p><strong>Bug reported by Ben Maloney</strong></p>\n<ul>\n<li>[Bug] - Trader never restock items.</li>\n</ul>\n<p><strong>Restock Fix</strong></p>\n<ul>\n<li><strong>Unlimited Stock:</strong> All items are now set to unlimited count to ensure permanent availability.</li>\n<li><strong>Speed-Fix:</strong> Looking for a better fix.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.1.3",
+      "content_length": 157499,
+      "spt_version_constraint": "~4.0.11",
+      "downloads": 1114,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-16T00:19:00.000000Z",
+      "created_at": "2026-01-16T00:22:08.000000Z",
+      "updated_at": "2026-07-28T07:51:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/717f888decf672ae2a4897d2d7f8298ace58e8e282e068a3c4f6f816b18cf591?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/a63ad0ae-19cf-4b1d-bc86-f44633b7ad27?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A26Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2-v6.1.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A25Z&ske=2026-08-01T21%3A07%3A26Z&sks=b&skv=2018-11-09&sig=GhLVswaquW0i235TpEfOTc6JEvL11kGQSJzxLdZFAWI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MSwibmJmIjoxNzg1NjE1ODYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Im-7w8txzNyIubakYheZvr2UIbjEkbXhAq0GHrn3cL8&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2-v6.1.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12856,
+      "hub_id": null,
+      "version": "6.1.2",
+      "description": "<p><strong>Fixed Items:</strong></p>\n<ul>\n<li>6B43 Zabralo-Sh body armor (EMR)</li>\n<li>BNTI Gzhel-K body armor</li>\n<li>6B13 assault armor (EMR)</li>\n<li>IOTV Gen4 body armor (Full Protection Kit, MultiCam)</li>\n<li>6B13 M assault armor (Killa Edition)</li>\n<li>BNTI Zhuk body armor (EMR)</li>\n</ul>\n<h2>➕ Added</h2>\n<h3>Weapons</h3>\n<ul>\n<li><strong>TheAKGuy AK-50 (.50 BMG)</strong> — ₽5,000,000</li>\n<li><strong>RShG-2 72.5mm Rocket Launcher</strong> — ₽5,000,000</li>\n</ul>\n<h3>Ammunition</h3>\n<ul>\n<li><strong>.50 BMG M903 SLAP</strong> — ₽50,000</li>\n<li><strong>ShG-2 Assault Rocket</strong> — ₽35,000</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.1.2",
+      "content_length": 165858,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 366,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-14T18:20:00.000000Z",
+      "created_at": "2026-01-14T18:20:22.000000Z",
+      "updated_at": "2026-07-28T07:51:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/97fbab57c45dd639527b0f37452250e2020829214056845f00444554cedd69fb?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/3c4c4dec-d640-4bf5-a8cb-bc7c5143df4d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A03Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2-V6.1.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A24Z&ske=2026-08-01T21%3A14%3A03Z&sks=b&skv=2018-11-09&sig=KNruF8EkSgIbRgDs1wFCwro8T07YNiRIujAlRu06iJg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OCwibmJmIjoxNzg1NjE1ODY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TZhuLN7tPdOjGHL5stIPjcmdWpDxRcPqPQzo0tNnv9g&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2-V6.1.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12841,
+      "hub_id": null,
+      "version": "6.1.1",
+      "description": "<p>Ported and updated from SPT 3.10 to <strong>SPT 4.0.11</strong>.</p>\n<p>This release updates the original <strong>Priscilu: The Trader</strong> mod by <strong>Reis</strong> to ensure full compatibility with the current SPT version.\nFocus was placed on stability, compatibility, and correct trader integration.</p>\n<p>No gameplay rework intended — this is a technical update.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2547/the-trader-priscilu/6.1.1",
+      "content_length": 169950,
+      "spt_version_constraint": "~4.0.11",
+      "downloads": 710,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-13T01:03:00.000000Z",
+      "created_at": "2026-01-13T01:07:02.000000Z",
+      "updated_at": "2026-07-28T07:51:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/664dadef88c4e557e559c4d889f5f49beff37b397784c38203d4999b97457151?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1131983202/91f452a2-46e4-474e-886a-218502c0f6de?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A58Z&rscd=attachment%3B+filename%3DPriscilu_Origins_v2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A59Z&ske=2026-08-01T21%3A23%3A58Z&sks=b&skv=2018-11-09&sig=RQbwdj7XVfvOd50X7UlG2fIbLbrEYalmuuchbuvECu0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OCwibmJmIjoxNzg1NjE1ODY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TZhuLN7tPdOjGHL5stIPjcmdWpDxRcPqPQzo0tNnv9g&response-content-disposition=attachment%3B%20filename%3DPriscilu_Origins_v2.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 20,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:48.143Z",
+    "discoveredBy": "seed"
+  }
+}

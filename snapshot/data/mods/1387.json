@@ -1,0 +1,283 @@
+{
+  "type": "mod",
+  "id": 1387,
+  "hub_id": 1920,
+  "guid": "com.mpstark.simplecrosshair",
+  "name": "Simple Crosshair",
+  "slug": "simple-crosshair",
+  "teaser": "A pointfire/hipfire crosshair for all the non-purists among us.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1920.png",
+  "downloads": 52142,
+  "favourites_count": 43,
+  "description": "<p><strong>Notice:</strong> I’m stepping back from my SPT mods for now and have added some known community authors in the case that I am out of touch, which is very likely to happen in next months. These authors are not obligated to anything, just want to make sure that someone can add a maintainer in the future. My SPT projects were started to keep me occupied after a death in my immediate family and I’ve lost interest in Tarkov for now.</p>\n<p>Makes point-firing much easier, and hey, I don’t judge. Optional (default off) dynamic position mode moves the crosshair to where the gun is pointing instead of being locked into the middle of the screen – works with blind-fire, left shoulder, and Realism stances!</p>\n<p>Auto-hides somewhat intelligently, currently:</p>\n<ul>\n<li>While aiming</li>\n<li>During certain movement actions, like sprinting, breaching a door, or crawling</li>\n<li>When you don’t have a firearm, melee weapon, or grenade in your hands</li>\n<li>On interactions being available or the perception dot is displayed</li>\n<li>When the gesture menu is open</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-SimpleCrosshair/raw/main/Screenshots/crosshair.png\" alt=\"crosshair.png\" /><br />\n<strong>The Default Crosshair (with some boxes)</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-SimpleCrosshair/raw/main/Screenshots/dynamic_crosshair.gif\" alt=\"dynamic_crosshair.gif\" /></p>\n<p><strong>With optional (turned off by default) dynamic positioning!</strong></p>\n<h2>Installation</h2>\n<p>- Drag folder from zip file directly into your SPT-AKI install folder</p>\n<h2>Configuration</h2>\n<ul>\n<li>\n<p><strong>Crosshair Image</strong>: The image to load out of the plugin directory, lists all found .png files on game launch</p>\n</li>\n<li>\n<p><strong>Show Crosshair:</strong> If the crosshair should be shown</p>\n</li>\n<li>\n<p><strong>Crosshair Color</strong>: Adjust the color and opacity of the crosshair</p>\n</li>\n<li>\n<p><strong>Crosshair Size</strong>: Adjust the size of the crosshair. Image will fit into the square bounds.</p>\n</li>\n<li>\n<p><strong>Crosshair X/Y Offset</strong>: Adjust the offset of the crosshair outside of the exact middle. Good for custom crosshairs where the middle of the image is not the aim point.</p>\n</li>\n<li>\n<p><strong>Crosshair Fade Time</strong>: Adjust the fade in/out time on show/hide</p>\n</li>\n<li>\n<p><strong>Enable Dynamic Crosshair Position</strong>: Instead of just being a static image in the direct middle, dynamically reposition with weapon facing</p>\n</li>\n<li>\n<p><strong>Center Radius Behavior</strong>: What to do if the crosshair is/out of the center radius</p>\n<ul>\n<li><strong>Hide Inside</strong>: Hide crosshair when in the center circle, good for only showing when the weapon is obstructed</li>\n<li><strong>Hide Outside</strong>: Hide crosshair when outside the center circle, good for ignoring when weapon is way outside</li>\n</ul>\n</li>\n<li>\n<p><strong>Center Radius</strong>: The radius of a centered circle to do the above behavior on</p>\n<ul>\n<li>Try ~100 with Hide Inside, to act only as a warning</li>\n<li>Try ~300 with Hide Outside, to ignore when the weapon isn’t facing forward</li>\n</ul>\n</li>\n<li>\n<p><strong>Keyboard Shortcut</strong>: A keyboard shortcut to press</p>\n</li>\n<li>\n<p><strong>Shortcut Behavior</strong>: What to do when the keyboard shortcut button is pressed</p>\n<ul>\n<li><strong>Press Toggles</strong>: Shows and hides the crosshair, taking the “Show Crosshair” option as an initial value</li>\n<li><strong>Show While Holding</strong>: Shows the crosshair while the shortcut button is held down. A little wonky right now.</li>\n</ul>\n</li>\n</ul>\n<h2>Recommended Other UI Mods</h2>\n<p>- Tyfon’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1342/ui-fixes\" rel=\"noreferrer noopener\">UI Fixes</a></p>\n<p>- DrakiaXYZ’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1136/equip-from-weapon-rack\" rel=\"noreferrer noopener\">Equip from Weapon Rack</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1341/quick-move-to-containers\" rel=\"noreferrer noopener\">Quick Move to Containers</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1140/quest-tracker\" rel=\"noreferrer noopener\">Quest Tracker</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/824/task-list-fixes\" rel=\"noreferrer noopener\">Task List Fixes</a></p>\n<p>- ChooChoo’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1283/trader-modding-and-improved-weapon-building\" rel=\"noreferrer noopener\">Trader Modding and Improved Weapon Building</a></p>\n<p>- CJ’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2148/stash-search\" rel=\"noreferrer noopener\">Stash Search</a>, which I have contributed to</p>\n<p>- My other mods <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1364/quick-weapon-rack-access\" rel=\"noreferrer noopener\">Quick Weapon Rack Access</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1374/player-encumbrance-bar\" rel=\"noreferrer noopener\">Player Encumbrance Bar</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1387/simple-crosshair",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-05-06T19:05:00.000000Z",
+  "created_at": "2024-05-06T19:05:26.000000Z",
+  "updated_at": "2026-07-28T06:02:16.000000Z",
+  "owner": {
+    "id": 47478,
+    "name": "mpstark",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=m&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-04-04T09:27:41.000000Z",
+    "updated_at": "2025-09-26T15:36:51.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 27605,
+      "name": "DrakiaXYZ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-26T18:51:50.000000Z",
+      "updated_at": "2026-08-01T19:31:53.000000Z"
+    },
+    {
+      "id": 33963,
+      "name": "Cj",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/d727d6bd8dc4933bd46485123affaace57e0a5dc_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/abb3c8031fdcdc84c3d7e7624209ec44a3b48a80.jpg",
+      "created_at": "2023-07-14T19:01:21.000000Z",
+      "updated_at": "2026-08-01T17:03:48.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/DrakiaXYZ/SPT-SimpleCrosshair",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 11772,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<ul>\n<li>Update for SPT 4.0.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.3.0",
+      "content_length": 21278,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 18163,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-11T19:30:03.000000Z",
+      "created_at": "2025-10-11T17:47:18.000000Z",
+      "updated_at": "2026-07-28T06:02:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/d256b91d9e4af58802074857442ebe79e081b2a4a3fee172f2b19f0c16e8c87f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/900196455/1fcb0fc8-5a9d-40e7-b20c-fe8ebb0c05f4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A31Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.3.0-4c3208f3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A49Z&ske=2026-08-01T21%3A08%3A31Z&sks=b&skv=2018-11-09&sig=sn%2FW8saEWsmUgHF%2FN1fPxsNxqSCEjD4sZm3YjUWNW9k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.3.0-4c3208f3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1137,
+      "hub_id": 13640,
+      "version": "1.2.2",
+      "description": "<h2>Changelog</h2>\n<ul>\n<li>Bump version for SPT 3.11</li>\n<li>Fix warning from BepInEx</li>\n</ul>\n<p>SHA-256: 7e0ebee8f267c077a0e6860346560adecf5ad44c8564528c943d24706495a173</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/7e0ebee8f267c077a0e6860346560adecf5ad44c8564528c943d24706495a173\" rel=\"noreferrer noopener\">Virustotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.2.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 11695,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-17T06:16:28.000000Z",
+      "created_at": "2025-03-17T06:16:28.000000Z",
+      "updated_at": "2026-05-14T02:04:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/900196455/89ab4f69-247c-48b9-9bc5-e143f17fc49e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A43Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.2.2-22d009a8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A53Z&ske=2026-08-01T21%3A05%3A43Z&sks=b&skv=2018-11-09&sig=8fcNdBX4vxkxXEIHRRZdgFV5g0ZwP7qnOIXm9om7N4s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.2.2-22d009a8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2107,
+      "hub_id": 12550,
+      "version": "1.2.0",
+      "description": "<h2>Changelog</h2>\n<ul>\n<li>Update for SPT 3.10.x</li>\n</ul>\n<p>SHA-256: 5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6\" rel=\"noreferrer noopener\">Virustotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1707,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-08T06:09:20.000000Z",
+      "created_at": "2024-12-08T06:09:20.000000Z",
+      "updated_at": "2026-05-14T03:13:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/900196455/7cd33e4d-5853-4c87-b875-03c0849df62e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A47%3A38Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.2.0-31cd6bd5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A47%3A37Z&ske=2026-08-01T20%3A47%3A38Z&sks=b&skv=2018-11-09&sig=n2XbHDNCCUL4iVXeY8eLbQpkUN3Wt5kF98azPU%2Bv2mI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.2.0-31cd6bd5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3170,
+      "hub_id": 11221,
+      "version": "1.1.3",
+      "description": "<p>For SPT 3.9.* and above. May work on versions after.</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Duplicate crosshairs appearing</li>\n</ul>\n<p>SHA-256: c63f2cdc47b68b54fca9269fc125e4508c04b9fc6c51e0835bd704cef08508f5</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/c63f2cdc47b68b54fca9269fc125e4508c04b9fc6c51e0835bd704cef08508f5\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.1.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 6414,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-08-06T07:33:33.000000Z",
+      "created_at": "2024-08-06T07:33:33.000000Z",
+      "updated_at": "2026-05-14T03:45:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/796837751/73353274-7095-4eef-805b-60cc8e84378e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A36Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.1.3-0d34777e.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A01Z&ske=2026-08-01T21%3A10%3A36Z&sks=b&skv=2018-11-09&sig=1rh5V0letBP0CKWwHXfPqEny4zFuNlF9d6ykAQdpRXo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.1.3-0d34777e.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3201,
+      "hub_id": 11182,
+      "version": "1.1.2",
+      "description": "<p>For SPT-AKI 3.9.*, though other versions may work</p>\n<h2>Changelog</h2>\n<ul>\n<li>Update to 3.9.* (Thanks PhatDave and stckytwl!)</li>\n</ul>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/357da6518c64da9075c58dbe1819cfeab910236e79d0abad0ee049c500178a4a\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n<p>SHA-256: 357da6518c64da9075c58dbe1819cfeab910236e79d0abad0ee049c500178a4a</p>\n<p>Note: Not much testing has been done on this.</p>\n<p>Known issue: Crosshair persists through end-of-raid, will have to take a look.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1042,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-08-02T22:31:42.000000Z",
+      "created_at": "2024-08-02T22:31:42.000000Z",
+      "updated_at": "2026-05-14T03:45:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/796837751/a8e31cf7-999d-4e2c-82c1-e8a5f03ecf08?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A28Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.1.2-311d3267.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A46Z&ske=2026-08-01T20%3A57%3A28Z&sks=b&skv=2018-11-09&sig=3dv984PR6BhoiY8fFKVgpZuAE6nI0L8%2F%2BXjV7cj4iHU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.1.2-311d3267.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4291,
+      "hub_id": 9813,
+      "version": "1.1.1",
+      "description": "<p>For SPT-AKI 3.8.*, though other versions may work</p>\n<p>Hope you’re enjoying the mod!</p>\n<h2>Changelog</h2>\n<ul>\n<li>FEATURE: Option to hide crosshair when outside or inside a radius from the center in dynamic positioning mode\n<ul>\n<li>Good for hiding crosshair when it’s wildly out of place, or only showing the crosshair as an obstruction warning</li>\n</ul>\n</li>\n<li>FEATURE: Far easier to swap the default crosshair image out and now ships with 16 additional crosshair images</li>\n<li>ENHANCE: Dynamic crosshair position should be slightly better at behavior around showing/hiding</li>\n<li>FIX: Resolved issue with keybind behavior option “Show While Holding”, should now work while pressing additional keys other than the bound</li>\n</ul>\n<p>May yet still be buggy, please report bugs on GitHub, on the SPT-Hub in the comments, or ping me in the SPT Discord.</p>\n<p>SHA-256: 3f98a8f0408a0d8fa78d9dcb99d5327a406a2617326bffa0510ff05561fceaf3</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/3f98a8f0408a0d8fa78d9dcb99d5327a406a2617326bffa0510ff05561fceaf3\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.1.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 7018,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-08T13:14:13.000000Z",
+      "created_at": "2024-05-08T13:14:13.000000Z",
+      "updated_at": "2026-05-14T04:06:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/796837751/009a1052-eec5-49f5-bdb3-01167730ef68?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A46Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.1.1-ee993a91.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A20Z&ske=2026-08-01T20%3A49%3A46Z&sks=b&skv=2018-11-09&sig=9cVRNIiMh4uOzy%2FE5KSh6I%2BfRSXLYU2nCinSRMh%2F%2FDM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNCwibmJmIjoxNzg1NjE1MjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Zv2DoOAHco8OVZCwMxgWk4RO-EFuYMgjiWnJXGxxASI&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.1.1-ee993a91.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4303,
+      "hub_id": 9799,
+      "version": "1.1.0",
+      "description": "<p>For SPT 3.8.0 and 3.8.1, though other versions may work</p>\n<h2>Changelog</h2>\n<ul>\n<li>FEATURE: Dynamic positioning mode (optional, default off) which dynamically positions the crosshair according to gun facing</li>\n<li>FEATURE: New optional keyboard shortcut to show/hide the crosshair</li>\n<li>ADDED: Fade In/Out time option, set to 0 to disable fade</li>\n<li>FIXED: X/Y offset not being able to be set negative</li>\n<li>FIXED: Potential NRE on scene change</li>\n</ul>\n<h2>Note</h2>\n<ul>\n<li>Likely buggy! Please report all issues!</li>\n<li>Previous config will be overwritten with new defaults</li>\n</ul>\n<h2>Known Issues</h2>\n<ul>\n<li>The “Show While Holding” keyboard shortcut option is a bit wonky, only shows while that key is the only one being pressed</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.1",
+      "downloads": 551,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-07T15:56:55.000000Z",
+      "created_at": "2024-05-07T15:56:55.000000Z",
+      "updated_at": "2026-05-14T04:06:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/796837751/e113a99c-a987-488c-af21-f23a37a48a2d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A15Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.1.0-07d836f0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A06Z&ske=2026-08-01T20%3A56%3A15Z&sks=b&skv=2018-11-09&sig=XHpWu9zh3Usw5TxQ6BYn4qX%2BTiU6Fm5x%2FgXU9K6Te0g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNiwibmJmIjoxNzg1NjE1MjE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qDKyCK3jmruEWaT8GrW3imorjJL69GgWqbaDF_Dc2j8&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.1.0-07d836f0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4310,
+      "hub_id": 9792,
+      "version": "1.0.0",
+      "description": "<p>For SPT-AKI 3.8.0 or 3.8.1, though it may work with other versions</p>\n<p>Initial release. May be buggy, let me know how it goes!</p>\n<p>Please report bugs on GitHub, on the SPT-Hub in the comments, or ping me in the SPT Discord.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1387/simple-crosshair/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.1",
+      "downloads": 504,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-06T19:05:26.000000Z",
+      "created_at": "2024-05-06T19:05:26.000000Z",
+      "updated_at": "2026-05-14T04:06:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5b3aadf41b69ca27af0b506e822ea4483c267f22c8cf279594aceb190ed536e6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/796837751/831d7d20-a365-4668-99d3-0e4c63eba6c2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A24Z&rscd=attachment%3B+filename%3DSimpleCrosshair-1.0.0-f0df887f.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A35Z&ske=2026-08-01T21%3A13%3A24Z&sks=b&skv=2018-11-09&sig=vv5ou9x0fh4J0Hptegqx3%2B%2FRwqftYuIHS4phWSyyGUs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxNiwibmJmIjoxNzg1NjE1MjE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qDKyCK3jmruEWaT8GrW3imorjJL69GgWqbaDF_Dc2j8&response-content-disposition=attachment%3B%20filename%3DSimpleCrosshair-1.0.0-f0df887f.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 42,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:03.626Z",
+    "discoveredBy": "seed"
+  }
+}

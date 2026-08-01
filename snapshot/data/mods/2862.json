@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 2862,
+  "hub_id": null,
+  "guid": "com.anamelash.plate",
+  "name": "P.L.A.T.E. - Penetration, Lethality, Armor & Trauma Engine",
+  "slug": "plate-penetration-lethality-armor-trauma-engine",
+  "teaser": "P.L.A.T.E. replaces Tarkov’s spreadsheet damage with physics: real penetration, material-based armor, wound channels, blood loss and blunt trauma. Bullets hurt, plates aren’t extra HP, and Therapist finally has a reason to sell you blood bags.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/t86KrSa1xxsqR1GN0FiOSjN4jplECuNCf0t7dYNu.png",
+  "downloads": 524,
+  "favourites_count": 16,
+  "description": "<h1>P.L.A.T.E.</h1>\n<h3>Penetration, Lethality, Armor &amp; Trauma Engine</h3>\n<h2>Profile modification</h2>\n<p>The only item added to your profile is the blood transfusion kit, sold by Therapist and craftable in the Hideout. If you remove that item from your inventory/stash before uninstalling P.L.A.T.E., removing the mod should be safe.</p>\n<h2>Gameplay effects</h2>\n<p>You will suffer with this mod. Possibly more than people usually suffer in Tarkov. P.L.A.T.E. does not try to be fair — it tries to follow physics. And physics, as we all know, is a merciless bitch.</p>\n<p>Vanilla Tarkov treats every cartridge like a damage number with a bullet attached. P.L.A.T.E. does the opposite.</p>\n<p>Damage is calculated at the moment of impact from the projectile’s mass, caliber, velocity, construction, angle and actual path through the body. Armor behaves like a physical barrier instead of an extra health bar, and bleeding means blood is leaving your body—not that your left leg is taking periodic psychic damage.</p>\n<p>Welcome to Tarkov. Now physics is the one doing the Tarkov’ing.</p>\n<h2>Bullets are no longer spreadsheets</h2>\n<p>Every hit is resolved from the projectile’s physical state when it reaches the target.</p>\n<ul>\n<li>Distance and barrel length genuinely affect terminal performance.</li>\n<li>Grazing hits produce grazing wounds instead of deleting half a limb.</li>\n<li>Brain, neck, jaw, muscle and bone are no longer interchangeable bags of HP.</li>\n<li>Bones can stop projectiles, fracture or redirect the remaining energy.</li>\n<li>Overpenetrating bullets retain physically calculated velocity and may continue into another body part.</li>\n<li>Fragmentation divides the original projectile mass instead of spawning bonus damage from Nikita’s pocket dimension.</li>\n<li>Temporary cavitation becomes destructive at rifle velocities, while slow heavy bullets behave like slow heavy bullets.</li>\n</ul>\n<p>The damage numbers shown on ammunition cards remain as reference values. The actual result is calculated on impact.</p>\n<h2>Armor is not a dice roll</h2>\n<p>P.L.A.T.E. replaces vanilla penetration chance with a material-based interaction model anchored to real GOST protection classes.</p>\n<p>Ceramic, steel, UHMWPE, aramid and titanium each behave differently:</p>\n<ul>\n<li>Ceramic stops serious threats but cracks under repeated impacts.</li>\n<li>Steel can take a beating, although your ribs may submit a formal complaint.</li>\n<li>Fibrous armor is vulnerable to sharp AP projectiles.</li>\n<li>Titanium absorbs an exceptional amount of energy even when defeated.</li>\n<li>Oblique hits face more material and may ricochet.</li>\n<li>Worn armor provides less protection.</li>\n<li>Penetrating bullets lose energy, deform and may shed mass before entering the body.</li>\n</ul>\n<p>A plate that stops the projectile can still transfer enough energy to cause pain, contusion, internal bleeding or breathing problems.</p>\n<p>Your Slick may stop the round. It cannot negotiate with Newton.</p>\n<h2>You have blood now</h2>\n<p>Bleeding no longer deals HP damage. It drains a separate blood-volume resource and progresses through stages of hemorrhagic shock.</p>\n<p>Early blood loss brings tremors, tunnel vision and a racing pulse. Continue leaking and you lose the ability to sprint or jump, then collapse, then die with full HP bars and a very confused post-raid screen.</p>\n<ul>\n<li>Every penetrating wound can bleed.</li>\n<li>Larger wound channels bleed more.</li>\n<li>Bleeding never stops by itself.</li>\n<li>Bots follow the same rules.</li>\n<li>Blood loss carries between raids and regenerates slowly.</li>\n<li>Bandages and tourniquets stop bleeding.</li>\n<li>Painkillers reduce symptoms but do not magically replace several liters of blood.</li>\n<li>Blood transfusion kits are sold by Therapist and can be crafted at the med station.</li>\n</ul>\n<p>Winning the firefight and bleeding out behind a bush thirty seconds later is now a completely valid Tarkov experience.</p>\n<h2>Ammunition and grenades rebuilt from physical data</h2>\n<p>All ammunition—including rounds introduced by other mods—is normalized from available physical properties.</p>\n<p>Shotgun shells receive realistic pellet counts, masses and velocities. Flechettes behave like narrow steel penetrators rather than angry buckshot. Less-lethal ammunition stops functioning as accidental anti-materiel ordnance.</p>\n<p>Grenade blast and fragmentation are derived from their real prototypes, with configurable fragment range beyond vanilla’s short hard cap. Armor rated for fragmentation can stop ordinary fragments, while larger pieces near the explosion may still ruin your insurance return.</p>\n<h2>Configuration and diagnostics</h2>\n<p>Gameplay-level settings are available through the F12 menu, including a global damage scale ranging from bullet sponge to “Head, Physics.”</p>\n<p>Detailed model parameters are available in the configuration files. An automatically capped <code>events.log</code> records the full physical breakdown of every hit and should be attached to bug reports.</p>\n<h2>Compatibility</h2>\n<p>P.L.A.T.E. derives outcomes from projectile mass, velocity, caliber and armor material. Mods containing deliberately absurd ammunition or armor values may therefore produce deliberately absurd results.</p>\n<p>Other ballistics, armor or medical overhauls are incompatible by definition.</p>\n<p>Fika support is currently untested.</p>\n<p>Bring ammunition. Bring tourniquets. Stop trusting construction helmets.</p>\n<p>Good luck, PMC.</p>\n<h2>Feedback</h2>\n<p>If you have any questions, feedback, or run into issues with the mod, feel free to contact me on Discord. You can either send me a direct message at <strong>anamelash</strong> or tag <strong>@anamelash</strong> in the official SPT Discord server.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2862/plate-penetration-lethality-armor-trauma-engine",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>LLM assistants were used to help translate my own designs and algorithms into C#, as I primarily work with other languages and have limited experience with the C#/.NET ecosystem. All mechanics, architecture, physical models, testing, debugging, and final implementation decisions were created and reviewed by me.</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-07-31T20:00:00.000000Z",
+  "created_at": "2026-07-31T21:33:17.000000Z",
+  "updated_at": "2026-08-01T18:02:16.000000Z",
+  "owner": {
+    "id": 71022,
+    "name": "anamelash",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1fHHF63N6szHk4Uhiut8UxYBQ8XA1QPLbGxiAeOO_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-01-07T09:58:50.000000Z",
+    "updated_at": "2026-08-01T19:39:33.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Anamelash/spt-plate",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14328,
+      "hub_id": null,
+      "version": "0.9.5",
+      "description": "<p>Added two tuning knobs:</p>\n<ul>\n<li>Damage scale, per side (Player / PMC / Scav)</li>\n<li>Bleed rate, per side (Player / PMC / Scav)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2862/plate-penetration-lethality-armor-trauma-engine/0.9.5",
+      "content_length": 3625001,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 144,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-08-01T10:00:00.000000Z",
+      "created_at": "2026-08-01T11:07:27.000000Z",
+      "updated_at": "2026-08-01T18:02:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/76cbfe76679d69252ac5b3c6ab90fc28299d07de680c2435abc3cb92fbebbb52?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/1a0c7649-af36-4742-b808-cc72059ab638?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A55Z&rscd=attachment%3B+filename%3DPLATE-0.9.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A58Z&ske=2026-08-01T21%3A22%3A55Z&sks=b&skv=2018-11-09&sig=nFVaN67F58wJB8G7DL6sH5HqUWVKgwZj1TMhalBQoaU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14319,
+      "hub_id": null,
+      "version": "0.9.4",
+      "description": "<ul>\n<li>Surgical kits now stop visible bleeding on the repaired limb. This works for CMS and Surv12, only on the treated limb. Enabled by default in the F12 menu.</li>\n<li>Internal bleeding can now be disabled separately for the player, PMC bots, and scavs/bosses/raiders. Internal bleeding still has no wound icon and cannot be treated in raid by bandages, tourniquets, or surgery. All options are enabled by default and changes apply immediately, even mid-raid.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2862/plate-penetration-lethality-armor-trauma-engine/0.9.4",
+      "content_length": 3623822,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 200,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-08-01T01:00:00.000000Z",
+      "created_at": "2026-08-01T02:40:57.000000Z",
+      "updated_at": "2026-08-01T06:02:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/4f146536f9ac43b7629e06db6b1470cd9353e02f6c30c672d5011692bf46d7fe?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/a79c7981-8ab9-4595-886a-f442a0d626e4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A55Z&rscd=attachment%3B+filename%3DPLATE-0.9.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A57Z&ske=2026-08-01T21%3A13%3A55Z&sks=b&skv=2018-11-09&sig=1rNkL3X2MOSnXbA82dOkICn2rjQ9qtAZiSKxonA0GCs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14312,
+      "hub_id": null,
+      "version": "0.9.0",
+      "description": "<p>Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2862/plate-penetration-lethality-armor-trauma-engine/0.9.0",
+      "content_length": 3618323,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 180,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-31T20:00:00.000000Z",
+      "created_at": "2026-07-31T21:34:35.000000Z",
+      "updated_at": "2026-08-01T06:02:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/9357488162a135405ce135215f3d7bd70bf030b25929acfb9ae9efb60a8fba54?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/ee7fa584-3155-4ed1-b65e-b2080d746ce8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A51Z&rscd=attachment%3B+filename%3DPLATE-0.9.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A49Z&ske=2026-08-01T21%3A15%3A51Z&sks=b&skv=2018-11-09&sig=eOHnO5jyszn11m1XUtDiddVmP8YVrH4wy0UIzmCs3XA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 7,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:23.625Z",
+    "discoveredBy": "seed"
+  }
+}

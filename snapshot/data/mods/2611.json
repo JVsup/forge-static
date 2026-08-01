@@ -1,0 +1,121 @@
+{
+  "type": "mod",
+  "id": 2611,
+  "hub_id": null,
+  "guid": "com.boosty.hideoutlightsalwayson",
+  "name": "Boosty's Hideout Lights Always On",
+  "slug": "boostys-hideout-lights-always-on",
+  "teaser": "Keep hideout lights on without generator fuel, while preserving normal Illumination progression and player light-mode choices.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/sHb44HjVF6pD3wAX8GX3X8kVS0s5xvYA2h7esvYe.png",
+  "downloads": 3650,
+  "favourites_count": 17,
+  "description": "<h1>Boosty’s Hideout Lights Always On</h1>\n<h2>Overview</h2>\n<p>This mod allows hideout lighting to function without generator fuel while preserving normal hideout progression and user light settings.</p>\n<h2>What It Changes</h2>\n<ul>\n<li>Removes the fuel requirement for hideout Illumination.</li>\n<li>Keeps standard progression behavior:\n<ul>\n<li>Illumination still needs to be built/upgraded normally.</li>\n</ul>\n</li>\n<li>Keeps user-selected light mode behavior (it does not force a custom light level preset).</li>\n</ul>\n<h2>Compatibility</h2>\n<ul>\n<li>SPT target: <code>~4.0.0</code></li>\n<li>Works in single-player and Fika setups.</li>\n<li>Fika note:\n<ul>\n<li>Server part must be installed on the host/server.</li>\n<li>Client DLL must be installed on each player client.</li>\n</ul>\n</li>\n</ul>\n<h2>Installation</h2>\n<ol>\n<li>Close server, launcher, and game.</li>\n<li>Extract the release zip into your SPT folder.\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"Generic Mod Install demo\" /></li>\n<li>Confirm files:\n<ul>\n<li><code>BepInEx/plugins/BoostysHideoutLightsAlwaysOn.Client.dll</code></li>\n<li><code>SPT/user/mods/boostys-hideout-lights-always-on/BoostysHideoutLightsAlwaysOn.dll</code></li>\n</ul>\n</li>\n<li>Restart server and game.</li>\n</ol>\n<p>If your setup is single-root (no nested <code>SPT</code> folder), use:</p>\n<ul>\n<li><code>user/mods/boostys-hideout-lights-always-on/BoostysHideoutLightsAlwaysOn.dll</code></li>\n</ul>\n<h2>Verify It Loaded</h2>\n<ul>\n<li>Server log should include:\n<ul>\n<li><code>[BoostysHideoutLightsAlwaysOn] Illumination no longer requires generator fuel.</code></li>\n</ul>\n</li>\n<li>Client <code>BepInEx/LogOutput.log</code> should include:\n<ul>\n<li><code>Client patch enabled (light gating override).</code></li>\n</ul>\n</li>\n</ul>\n<h2>Uninstall</h2>\n<ol>\n<li>Remove <code>BepInEx/plugins/BoostysHideoutLightsAlwaysOn.Client.dll</code></li>\n<li>Remove <code>SPT/user/mods/boostys-hideout-lights-always-on</code> (or <code>user/mods/...</code> on single-root setups)</li>\n<li>Restart server and game.</li>\n</ol>\n<h2>Found an Issue?</h2>\n<p>Please leave a comment on the mod and I will look into it as soon as I possibly can. Please include any errors or steps to reproduce if possible.</p>\n<h2>Source Code</h2>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/BKBoosty/BoostysHideoutLightsAlwaysOn\" rel=\"noreferrer noopener\">https://github.com/BKBoosty/BoostysHideoutLightsAlwaysOn</a></li>\n</ul>\n<h2>License</h2>\n<p>Creative Commons BY-NC-SA 4.0 (non-commercial, share-alike).\nCommercial use requires separate permission from the author.</p>\n<h2>Have Mod Ideas!?</h2>\n<p>Leave a comment on my SPT profile (<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/106200/boosty\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/user/106200/boosty</a>) and I’ll reach out to you to see what we can do :)</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2611/boostys-hideout-lights-always-on",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 6,
+  "published_at": "2026-03-01T18:24:00.000000Z",
+  "created_at": "2026-03-01T18:30:28.000000Z",
+  "updated_at": "2026-07-28T08:07:33.000000Z",
+  "owner": {
+    "id": 106200,
+    "name": "Boosty",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bavrOTZ09lHxhTQORDvqb1FF5oxcajEvAdOiLa1T_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/zy6yxSaXqzdRJKvtm6voSLSQ8KrZ9QTLqqufi9Dp_2560w.webp",
+    "created_at": "2026-02-28T00:26:37.000000Z",
+    "updated_at": "2026-07-10T04:57:19.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 6,
+    "hub_id": 23,
+    "title": "Hideout",
+    "slug": "hideout",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/BKBoosty/BoostysHideoutLightsAlwaysOn",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13208,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Added</p>\n<ul>\n<li>F12/BepInEx config support:</li>\n<li>EnableLightsAlwaysOn (default: true)</li>\n<li>MinimumIlluminationLevel (default: 0, range: 0-3)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2611/boostys-hideout-lights-always-on/1.0.1",
+      "content_length": 14393,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3385,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-04T21:07:00.000000Z",
+      "created_at": "2026-03-04T21:12:04.000000Z",
+      "updated_at": "2026-07-28T08:07:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2b46e762949ede5b6a002d68d56f61dd6c196e5f6f04e79125a39f4aaad61919?nocache=1",
+          "label": "BoostysHideoutLightsAlwaysOn-1.0.1.zip"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170109862/961e440e-364b-4461-979c-0eeb00b5347f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A20%3A12Z&rscd=attachment%3B+filename%3DBoostysHideoutLightsAlwaysOn-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A19%3A53Z&ske=2026-08-01T20%3A20%3A12Z&sks=b&skv=2018-11-09&sig=VaayeBUN%2F2xYC6wnZDdLUuuUJ%2BMtaByDLesV1pEyqw8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&response-content-disposition=attachment%3B%20filename%3DBoostysHideoutLightsAlwaysOn-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13185,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h1>Boosty’s Hideout Lights Always On</h1>\n<h2>Overview</h2>\n<p>This mod allows hideout lighting to function without generator fuel while preserving normal hideout progression and user light settings.</p>\n<h2>What It Changes</h2>\n<ul>\n<li>Removes the fuel requirement for hideout Illumination.</li>\n<li>Keeps standard progression behavior:\n<ul>\n<li>Illumination still needs to be built/upgraded normally.</li>\n</ul>\n</li>\n<li>Keeps user-selected light mode behavior (it does not force a custom light level preset).</li>\n</ul>\n<h2>Compatibility</h2>\n<ul>\n<li>SPT target: <code>~4.0.0</code></li>\n<li>Works in single-player and Fika setups.</li>\n<li>Fika note:\n<ul>\n<li>Server part must be installed on the host/server.</li>\n<li>Client DLL must be installed on each player client.</li>\n</ul>\n</li>\n</ul>\n<h2>Installation</h2>\n<ol>\n<li>Close server, launcher, and game.</li>\n<li>Extract the release zip into your SPT folder.</li>\n<li>Confirm files:\n<ul>\n<li><code>BepInEx/plugins/BoostysHideoutLightsAlwaysOn.Client.dll</code></li>\n<li><code>SPT/user/mods/boostys-hideout-lights-always-on/BoostysHideoutLightsAlwaysOn.dll</code></li>\n</ul>\n</li>\n<li>Restart server and game.</li>\n</ol>\n<p>If your setup is single-root (no nested <code>SPT</code> folder), use:</p>\n<ul>\n<li><code>user/mods/boostys-hideout-lights-always-on/BoostysHideoutLightsAlwaysOn.dll</code></li>\n</ul>\n<h2>Verify It Loaded</h2>\n<ul>\n<li>Server log should include:\n<ul>\n<li><code>[BoostysHideoutLightsAlwaysOn] Illumination no longer requires generator fuel.</code></li>\n</ul>\n</li>\n<li>Client <code>BepInEx/LogOutput.log</code> should include:\n<ul>\n<li><code>Client patch enabled (light gating override).</code></li>\n</ul>\n</li>\n</ul>\n<h2>Uninstall</h2>\n<ol>\n<li>Remove <code>BepInEx/plugins/BoostysHideoutLightsAlwaysOn.Client.dll</code></li>\n<li>Remove <code>SPT/user/mods/boostys-hideout-lights-always-on</code> (or <code>user/mods/...</code> on single-root setups)</li>\n<li>Restart server and game.</li>\n</ol>\n<h2>Source Code</h2>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/BKBoosty/BoostysHideoutLightsAlwaysOn\" rel=\"noreferrer noopener\">https://github.com/BKBoosty/BoostysHideoutLightsAlwaysOn</a></li>\n</ul>\n<h2>License</h2>\n<p>Creative Commons BY-NC-SA 4.0 (non-commercial, share-alike).\nCommercial use requires separate permission from the author.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2611/boostys-hideout-lights-always-on/1.0.0",
+      "content_length": 10962,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 265,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-01T18:36:00.000000Z",
+      "created_at": "2026-03-01T18:36:31.000000Z",
+      "updated_at": "2026-07-28T08:06:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d116afa14c262bc60cef16bb98832277e01ca129bf90d7c30cfa9a54367bfd5?nocache=1",
+          "label": "BoostysHideoutLightsAlwaysOn.Client.dll"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/7bc82011dfc835677ebd4087eb1e78b3fe16cfcaf7f1539fb0c59bef2ac9c038?nocache=1",
+          "label": "BoostysHideoutLightsAlwaysOn.dll"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1170109862/c9bc3bae-ed10-4c18-a10d-f5100490ecc8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A25%3A31Z&rscd=attachment%3B+filename%3DBoostysHideoutLightsAlwaysOn-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A24%3A42Z&ske=2026-08-01T20%3A25%3A31Z&sks=b&skv=2018-11-09&sig=aF4oWJrZGMe9HStmsSKBmJEf7vRWzBx1E%2FTEcApaLT8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&response-content-disposition=attachment%3B%20filename%3DBoostysHideoutLightsAlwaysOn-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 34,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:40:24.532Z",
+    "discoveredBy": "seed"
+  }
+}

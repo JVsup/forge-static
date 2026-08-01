@@ -1,0 +1,454 @@
+{
+  "type": "mod",
+  "id": 865,
+  "hub_id": 1166,
+  "guid": "xyz.drakia.gildedkeystorage",
+  "name": "Gilded Key Storage",
+  "slug": "gilded-key-storage",
+  "teaser": "A balanced progression based approach to convenient all in one key storage!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1166.png",
+  "downloads": 156141,
+  "favourites_count": 81,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><p>This mod aims to add a balanced way to store all your keys in one grid square, and do so in a convenient way that makes it easy to tell if you have already acquired a key.</p>\n<p><strong>NOTE</strong>: When applying updates, if there are new keys added to Gilded Key Storage, it is recommended to remove and re-add all of your keys to your key containers, to make sure the offsets are aligned. Failure to do so may result in new keys being marked as the slot being full, even if you don’t have that key yet.</p>\n<h3>Installation</h3>\n<p>1) Open the downloaded zip file in 7-zip</p>\n<p>2) Select the folder in the zip file in 7-zip</p>\n<p>3) Drag the selected folder from 7-zip into your SPT folder</p>\n<p>Demonstration Video (Yes, it’s Live Flea Prices, but the same concept applies to all of my mods, I’m not making mod-specific extraction example videos):</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/34vXXDj.gif\" alt=\"Install Gif\" /></p>\n<h3>Details</h3>\n<p>This mod makes keys have unlimited uses, weightless, and discardable by default. Disable those things in the config if you‘re wrong don’t like them.</p>\n<p>This mod adds:</p>\n<p><strong>1: Golden Keychain Mk. I, Mk. II, and Mk. III</strong></p>\n<ul>\n<li>Between these three keychains, ALL mechanical keys in the game can be stored. They will not accept duplicate keys, meaning if you have a key and cannot drag it onto any of the three Golden Keychains, you already have that key!</li>\n</ul>\n<p><strong>2: Golden Keycard Holder</strong></p>\n<ul>\n<li>Same as the keychains, but can hold all keycards including a total of 9 Labs Access Cards.</li>\n</ul>\n<p><strong>3: Secure Key Box</strong></p>\n<ul>\n<li>This is where it all comes together. This box holds all three of the Golden Keychains, and also the Keycard holder. Additionally, it has a 5x5 storage compartment for loose keys. With all 5 cases you can store every key and keycard in the game in a 1x1 grid cell.</li>\n<li>In raid, the process would look something like this: Find a key and drop it into the Secure Key Box. When you have a safe moment, open the Secure Key Box and drag the key over your keychains/ keycard holder to see if there is a free slot available for it. If so, great! Drop it in there, you acquired a new key. If it won’t fit, then you know you already own the key and can either toss it or keep it in the Secure Key Box to sell if it is valuable.\n<ul>\n<li>example:</li>\n</ul>\n</li>\n</ul>\n<p><strong>If you’d like to support Jehree’s work, you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/jehree\" rel=\"noreferrer noopener\">buy him a coffee!</a></strong></p>\n<p><strong>Drakia has been maintaining and improving Gilded Key Storage for too long for his link to not be here<br />\nYou can also give him a coffee if you’d like! <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/drakiaxyz\" rel=\"noreferrer noopener\">https://ko-fi.com/drakiaxyz</a></strong></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Each Case and How to Acquire Them</div>\n<div class=\"tab-content\"><p>The three keychains and the keycard holder are all coded like attachment rails. This means that they will take only ONE of each item that they hold, preventing them from holding duplicates and making it easier for you to tell if you have already acquired any given key you pick up in raid. The keychains themselves all hold a unique third of all mechanical keys, this is because there are too many to fit onto a single one.</p>\n<p>Nearly all aspects of these cases, how they are acquired, etc. can be tweaked in the config if there is something you don’t like. I have them spread out between traders to make them more challenging to acquire when using <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1133-jehree-s-path-to-tarkov-overhaul-forced-travel/#overview\" rel=\"noreferrer noopener\">my PTT overhaul</a>.</p>\n<p>Each case can be obtained through a barter trade of their normal perquisite item, some gold items, and one key that will go into the case. I have added some supportive barter trades to make these items less of an RNG grind to get.</p>\n<p><strong>Supportive Barters:</strong></p>\n<ul>\n<li>The Gingy Keychain can be acquired from LL1 Mechanic for 1 Keytool, from LL1 Jaeger for 1 Prokill, or from LL1 Ragman for 1 Gold Neck Chain and 3 Chainlets.</li>\n<li>The Cottage Backdoor Key can be acquired from LL2 Prapor for 1 Intelligence Folder, 1 SAS Drive, and 1 Secure Flash Drive.</li>\n</ul>\n<p><strong>Golden Keychain Mk. I:</strong></p>\n<ul>\n<li>Acquired from Therapist LL1 for 1 Gingy Keychain, 3 Golden Neck Chains, and 1 Emergency Factory Exit Key.</li>\n</ul>\n<p><strong>Golden Keychain Mk. II:</strong></p>\n<ul>\n<li>Acquired from Ragman LL1 for 1 Gingy Keychain, 3 Golden Neck Chains, and 1 Cottage Back Door Key.</li>\n</ul>\n<p><strong>Golden Keychain Mk. III:</strong></p>\n<ul>\n<li>Acquired from Skier LL1 for 1 Gingy Keychain, 3 Golden Neck Chains, and 1 Tarcone Director’s Office Key.</li>\n</ul>\n<p><strong>Golden Keycard Holder:</strong></p>\n<ul>\n<li>Acquired from Peacekeeper LL1 for 1 Keycard Holder, 3 Golden Neck Chains, and 1 Labs Access Card.</li>\n</ul>\n<p><strong>Secure Key Box:</strong></p>\n<ul>\n<li>Acquired from Therapist LL2 for 1 Defibrillator, 1 Golden Rooster, 1 Keytool, and 300k roubles.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>Configuration is done via the <code>config/config.json5</code> file in the mod folder. This file is created automatically the first time you run the server with Gilded Key Storage installed.</p>\n<p>New configuration options are not automatically added to your config5.json file, but can be copied from config.default.json5 if you want to change them</p>\n<p><strong>Configuration Options:</strong></p>\n<ul>\n<li><strong>key_insurance_enabled (Default: false)</strong>\n<ul>\n<li>Allow insuring keys</li>\n</ul>\n</li>\n<li><strong>cases_insurance_enabled (Default: false)</strong>\n<ul>\n<li>Allow insuring the gilded cases</li>\n</ul>\n</li>\n<li><strong>cases_flea_banned (Default: true)</strong>\n<ul>\n<li>Ban the gilded cases from the flea</li>\n</ul>\n</li>\n<li><strong>weightless_keys (Default: true)</strong>\n<ul>\n<li>Keys have no weight, useful because when you have all keys in your container, the weight adds up fast</li>\n</ul>\n</li>\n<li><strong>no_key_use_limit (Default: false)</strong>\n<ul>\n<li>Almost all keys become infinite use, see <code>use\\_finite\\_keys\\_list</code> for more details. (Labs Access Cards still are consumed**)**</li>\n</ul>\n</li>\n<li><strong>keys_are_discardable (Default: true)</strong>\n<ul>\n<li>So that you cannot accidentally delete your keys by discarding a case.</li>\n</ul>\n</li>\n<li><strong>all_keys_in_secure (Default: true)</strong>\n<ul>\n<li>Allow all keys to be put into secure containers, this fixes the Bloody Rusted Door key not being able to go into the secure container</li>\n</ul>\n</li>\n<li><strong>allow_cases_in_special (Default: false)</strong>\n<ul>\n<li>Allow gilded cases to be put in your special slots</li>\n</ul>\n</li>\n<li><strong>allow_cases_in_secure (Default: true)</strong>\n<ul>\n<li>Allow gilded cases to be put in your secure container</li>\n</ul>\n</li>\n<li><strong>allow_cases_in_backpacks (Default: true)</strong>\n<ul>\n<li>Allow gilded cases to be put in backpacks</li>\n</ul>\n</li>\n<li><strong>cases_allowed_in (Default: empty)</strong>\n<ul>\n<li>A list of additional item IDs that should have cases allowed in them</li>\n</ul>\n</li>\n<li><strong>cases_disallowed_in (Default: empty)</strong>\n<ul>\n<li>A list of additional item IDs that should have cases disallowed in them</li>\n</ul>\n</li>\n<li><strong>use_finite_keys_list (Default: false)</strong>\n<ul>\n<li>Enable a list of specific keys that should keep their use limits, even when <code>no\\_key\\_use\\_limit</code> is enabled</li>\n</ul>\n</li>\n<li><strong>finite_keys_list</strong>\n<ul>\n<li>A list of key ids that will not have their use set to unlimited</li>\n</ul>\n</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Debug Features</div>\n<div class=\"tab-content\"><p>If you are an average user, please do not use these features! They are janky and only meant for testing!</p>\n<p><strong>Debug features:</strong></p>\n<ul>\n<li>log_missing_keys will log any keys in the database that are not in gilded cases in the config to the console in purple. This is useful for finding missing keys if more are added to the game.</li>\n<li>log_rare_keys will log all keys with 10 or less uses</li>\n</ul>\n<p>You can send the Commando friend the command <code>spt giveKeys</code> to receive a message containing all keys from the containers</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/865/gilded-key-storage",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2023-04-23T21:24:00.000000Z",
+  "created_at": "2023-04-23T21:24:19.000000Z",
+  "updated_at": "2026-07-28T06:59:17.000000Z",
+  "owner": {
+    "id": 29457,
+    "name": "Jehree",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/b76a842c5be538441b8116448f409081876f9783_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-03-30T17:43:41.000000Z",
+    "updated_at": "2026-07-31T21:00:36.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 27605,
+      "name": "DrakiaXYZ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-26T18:51:50.000000Z",
+      "updated_at": "2026-08-01T19:31:53.000000Z"
+    }
+  ],
+  "license": {
+    "id": 16,
+    "hub_id": 19,
+    "name": "Creative Commons BY-NC-ND 4.0",
+    "link": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/DrakiaXYZ/SPT-GildedKeyStorage",
+      "label": "3.11.x"
+    },
+    {
+      "url": "https://github.com/DrakiaXYZ/SPT-GildedKeyStorage-CSharp",
+      "label": "4.0+"
+    }
+  ],
+  "versions": [
+    {
+      "id": 12500,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<ul>\n<li>Add Horse Restaurant Toilet Key to Mk 1</li>\n<li>Add Cold Storage Room Key to Mk 2</li>\n<li>Add City Key to Mk 3</li>\n<li>Fix config merging so it works properly</li>\n</ul>\n<p><strong>NOTE</strong>: You may need to remove and re-add your keys to your Gilded Containers, as some offsets were changed. A future update will re-add the auto move logic on login, but that functionality does not yet currently exist</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/2.0.4",
+      "content_length": 3154960,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 30181,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-12-02T03:26:00.000000Z",
+      "created_at": "2025-12-02T03:26:28.000000Z",
+      "updated_at": "2026-07-28T06:59:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4f15159828bbad9a4003c4f3aedb0144d71aa01fa0aac624abe0617c5fdb7e1f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1075177103/f23179cb-5028-46da-a946-eb231a64096a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A59Z&rscd=attachment%3B+filename%3DDrakiaXYZ-GildedKeyStorage-2.0.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A45Z&ske=2026-08-01T21%3A21%3A59Z&sks=b&skv=2018-11-09&sig=wEyk1tm0w2qaNVzlOmRPZ7KxnvhvPF9hoHk5ARB38%2BQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-GildedKeyStorage-2.0.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11961,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<ul>\n<li>Further barter fixes to work with Expanded Task Text</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/2.0.3",
+      "content_length": 3155032,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 8361,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-21T15:31:00.000000Z",
+      "created_at": "2025-10-21T15:32:01.000000Z",
+      "updated_at": "2026-07-28T06:06:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6db938c2bae55832eb682f9e5d9eb65fb8879b6b5ba502c67adf62c5b78af582?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1075177103/90f34ae4-c78d-4223-98c2-8a1a8d1cfa6b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A35Z&rscd=attachment%3B+filename%3DDrakiaXYZ-GildedKeyStorage-2.0.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A17Z&ske=2026-08-01T21%3A17%3A35Z&sks=b&skv=2018-11-09&sig=epkeEJGuRnRUNXovNzPRtLTf9ZPnyRrCOCWHQN2YErE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-GildedKeyStorage-2.0.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11914,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<ul>\n<li>Fix exception when transiting to a map that requires a key</li>\n<li>Fix base game issue where transiting to a map that requires a key could consume two of the key</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/2.0.1",
+      "content_length": 3154912,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1168,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-19T05:00:00.000000Z",
+      "created_at": "2025-10-19T05:00:36.000000Z",
+      "updated_at": "2026-07-28T06:05:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59e365514a122225f66fbe07b4b19bec43080f4a7f444d34be709bbfb3bcb84e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1075177103/d16860ac-e79d-4ab9-8aa6-766d467ea8fb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A27Z&rscd=attachment%3B+filename%3DDrakiaXYZ-GildedKeyStorage-2.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A41Z&ske=2026-08-01T21%3A12%3A27Z&sks=b&skv=2018-11-09&sig=HcmXPyiiQ03LYV3877zwNawKEDYHJbX6WGUT%2B62fDX0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-GildedKeyStorage-2.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11830,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<ul>\n<li>Initial C# release for SPT 4.0.0</li>\n<li>Added new keys</li>\n<li>Fix log spam about bones</li>\n<li>Debug flag now turned into an SPT bot command, spt giveKeys</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/2.0.0",
+      "content_length": 3154893,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2377,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T19:54:00.000000Z",
+      "created_at": "2025-10-13T19:49:23.000000Z",
+      "updated_at": "2026-07-28T06:03:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/01dc6fa4040a6e1afa07be1786e75673a3768e0ffb9c9d4eabcc4324e7ff1d44?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1075177103/2e8f0e21-2aea-4666-a4bb-b30d4e5bcec1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A31Z&rscd=attachment%3B+filename%3DDrakiaXYZ-GildedKeyStorage-2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A58Z&ske=2026-08-01T21%3A03%3A31Z&sks=b&skv=2018-11-09&sig=UjZYnyus9IIoKZWtyvR2Fuc8YM6kqARVjSP7WBo8R3k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-GildedKeyStorage-2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1055,
+      "hub_id": 13729,
+      "version": "1.6.2",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<ul>\n<li>Remove unneeded configs in cases.json</li>\n<li>Add moved configs to config.default.json5</li>\n<li>Rename settings to be more similar</li>\n<li>Fix grids in special slots drawing in the inventory UI</li>\n</ul>\n<p>The following new settings have been added to the config.default.json5 file, and can be copied to your config.json5 if desired. They are no longer configurable on a per-case basis</p>\n<p>// Allow all cases in secure containers “allow_cases_in_secure”: true, // Allow all cases in backpacks “allow_cases_in_backpacks”: true, // A list of additional item IDs that should have cases allowed in them “cases_allowed_in”: [], // A list of additional item IDs that should have cases disallowed in them “cases_disallowed_in”: [],</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.6.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 30171,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-22T01:24:17.000000Z",
+      "created_at": "2025-03-22T01:24:17.000000Z",
+      "updated_at": "2026-05-14T02:03:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/423242dd-a49f-4d82-9b18-4c15740b0276?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A13Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.6.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A35Z&ske=2026-08-01T21%3A26%3A13Z&sks=b&skv=2018-11-09&sig=%2FtvYFB0qi6dVsVwLZNaJO2rUnuYu1KN01%2Fd732991I4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.6.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1157,
+      "hub_id": 13620,
+      "version": "1.6.1",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<p>Fix issue when running on Linux</p>\n<p>Not necessary for Windows users to download this, as nothing else was changed</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.6.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1800,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T18:56:29.000000Z",
+      "created_at": "2025-03-16T18:56:29.000000Z",
+      "updated_at": "2026-05-14T02:06:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/51b508d0-ea21-43e1-8d06-a183d0425fda?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A08Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.6.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A44Z&ske=2026-08-01T21%3A26%3A08Z&sks=b&skv=2018-11-09&sig=tFDghY%2FS5jLJWWvFHQnZyVamDWDGrL7DKOfTGvvdIuU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.6.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1186,
+      "hub_id": 13590,
+      "version": "1.6.0",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<p>Update for SPT 3.11</p>\n<p>- New config option for allowing cases in special slots (Thanks ODT!)</p>\n<p>- Updated default finite key list (Thanks ODT!)</p>\n<p>- Moved <code>case\\_flea\\_banned</code> and <code>case\\_insurance\\_enabled</code> to config.json5 instead of case configs</p>\n<p>- Add new keys</p>\n<p>- New client mod that fixes lab keycards not being consumed</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.6.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 807,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T03:13:34.000000Z",
+      "created_at": "2025-03-16T03:13:34.000000Z",
+      "updated_at": "2026-05-14T02:07:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/e109fa2f-cdc5-4d7d-8d01-ebaf0a264f62?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A48Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A22Z&ske=2026-08-01T21%3A20%3A48Z&sks=b&skv=2018-11-09&sig=RUhkwf1ClxbiXLP%2FBiQvxPWVWn%2BTaGN29NQP1w7e4h4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2085,
+      "hub_id": 12577,
+      "version": "1.5.1",
+      "description": "<h3>This version will only work with SPT 3.10.x</h3>\n<ul>\n<li>Add missing keycards to keycard case</li>\n<li>Tweak some default config values</li>\n</ul>\n<p>Note: Default config values will not affect users who have previously installed the mod. They’re just more sane defaults for new users going forward</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.5.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 17327,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-09T06:56:09.000000Z",
+      "created_at": "2024-12-09T06:56:09.000000Z",
+      "updated_at": "2026-05-14T03:13:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/200410dc-3ca8-4cf1-b17d-cdb45b74a574?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A30Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.5.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A54Z&ske=2026-08-01T21%3A05%3A30Z&sks=b&skv=2018-11-09&sig=%2FEFoBlqbv1NzppCB%2F35xMbNErWWqDOR427GGvQ7i3lI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.5.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2288,
+      "hub_id": 12320,
+      "version": "1.5.0",
+      "description": "<h3>This version will only work with SPT 3.10.x</h3>\n<ul>\n<li>Update for SPT 3.10.0</li>\n<li>Split config into a config, and item JSONs</li>\n<li>Switched to json5 for config file for future comment capabilties</li>\n<li>Use a default config file that’s copied for user editing, so we don’t blow away user configs on update</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.5.0",
+      "content_length": null,
+      "spt_version_constraint": "3.10.0",
+      "downloads": 3765,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-27T05:16:38.000000Z",
+      "created_at": "2024-11-27T05:16:38.000000Z",
+      "updated_at": "2026-05-14T03:19:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/8174f077-16fd-49a1-9728-1dd8a15d6d43?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A40Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.5.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A47Z&ske=2026-08-01T21%3A07%3A40Z&sks=b&skv=2018-11-09&sig=ZSWGjBfG3WNAwimIqKXX%2FH6QTwC4DTMdczjjJKhd5Sc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.5.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2614,
+      "hub_id": 11939,
+      "version": "1.4.2",
+      "description": "<h3>This version will only work with SPT 3.9.x</h3>\n<ul>\n<li>Fix issue where labs access keycards would stack in a single slot</li>\n<li>Attempt to fix any previously stacked keycards</li>\n</ul>\n<p>There is no need to remove keys from your containers before updating, the mod handles automatically moving keys to their new slots on login if necessary.</p>\n<p>However if you have overloaded the labs access keycards in your Keycard Case, you may need to remove all keycards then restart your client to resolve any stacked keycards due to a bug in the previous release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.4.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 6235,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-10-14T02:42:00.000000Z",
+      "created_at": "2024-10-14T02:42:00.000000Z",
+      "updated_at": "2026-05-14T03:26:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/7ce0ba74-ffbd-48d4-825d-b22ce779b594?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A28Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.4.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A27Z&ske=2026-08-01T21%3A05%3A28Z&sks=b&skv=2018-11-09&sig=T2HPOQRw60fNyVQZoS9B3HFjg6RDrEQsMLUpAlAQ%2FaU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.4.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2640,
+      "hub_id": 11909,
+      "version": "1.4.1",
+      "description": "<h3>This version will only work with SPT 3.9.x</h3>\n<ul>\n<li>Add missing keys (Thanks CJ and TetrisDev!)</li>\n<li>Add Ref keys + Rusted to finite list (Thanks CJ!)</li>\n<li>Fix automatic key correction for new key offsets</li>\n<li>Fix issue where cases couldn’t be added to all slots of Theta secure container</li>\n<li>Refactor some code to be more consistent and always cover all grids not just the first</li>\n<li>Fix error caused by badly implemented mods adding invalid item IDs to secure container filters</li>\n<li>Update version</li>\n</ul>\n<p>There is no need to remove keys from your containers before updating, the mod handles automatically moving keys to their new slots on login if necessary</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.4.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1392,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-10-08T00:10:03.000000Z",
+      "created_at": "2024-10-08T00:10:03.000000Z",
+      "updated_at": "2026-05-14T03:26:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/fb8b56e6-2daa-4875-9afc-30f50cc2962f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A27%3A43Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.4.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A45Z&ske=2026-08-01T21%3A27%3A43Z&sks=b&skv=2018-11-09&sig=8gqzRdyanHAE17RcRqwp8VNXHHaDDWEXOS4QgE%2FI%2FvI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.4.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3747,
+      "hub_id": 10504,
+      "version": "1.4.0",
+      "description": "<h3>This version will only work with SPT 3.9.x</h3>\n<ul>\n<li>Update for SPT 3.9.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 17219,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T21:05:10.000000Z",
+      "created_at": "2024-07-06T21:05:10.000000Z",
+      "updated_at": "2026-05-14T03:55:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/4acfc434-d39c-4d98-94af-1da68990a7d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A30Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A04Z&ske=2026-08-01T21%3A23%3A30Z&sks=b&skv=2018-11-09&sig=yoTNTzMFNEm%2BgMroxECVbtwJO72QRIxgmRVrJJjpimA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MCwibmJmIjoxNzg1NjE2MTYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DOcynDDZRfZT_-X6g3EnI0EQO7gbYZCgMN448zWAIjg&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4608,
+      "hub_id": 9443,
+      "version": "1.3.2",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<ul>\n<li>Allow disabling insurance for keys and gilded key containers</li>\n<li>Resolve issue that caused magazine presets to not function</li>\n</ul>\n<p>Thanks to Estam for the insurance disabling functionality!</p>\n<p>Note: The new insurance options require new entries in the config file, so make sure to overwrite the config file when updating</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.3.2",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 14985,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-15T06:18:57.000000Z",
+      "created_at": "2024-04-15T06:18:57.000000Z",
+      "updated_at": "2026-05-14T04:11:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/59bc07dc-990a-48fe-ae3d-bd7f278d81e0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A28Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.3.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A25Z&ske=2026-08-01T21%3A15%3A28Z&sks=b&skv=2018-11-09&sig=ogDPeynKxvWf68US1d2xSjGZ4pJTyhI7GLOLmXZGNjM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.3.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4736,
+      "hub_id": 9304,
+      "version": "1.3.1",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<ul>\n<li>Moved new configs to the top of config.json</li>\n<li>Remove quest key from key list</li>\n<li>Add missing streets keys</li>\n<li>Don’t output quest keys in missing keys list</li>\n<li>Refactor a bunch of code, should work with SVM properly now</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.3.1",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 2370,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-08T04:16:33.000000Z",
+      "created_at": "2024-04-08T04:16:33.000000Z",
+      "updated_at": "2026-05-14T04:15:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/fc35adee-9499-446c-a465-8451511b3592?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A06Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A21Z&ske=2026-08-01T21%3A16%3A06Z&sks=b&skv=2018-11-09&sig=yG4ufbQNOMw4kz98%2BzxnCJXPxQJfNmDYJgvS12ueyy8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4967,
+      "hub_id": 9017,
+      "version": "1.3.0",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<p>Update for SPT 3.8.0</p>\n<ul>\n<li>Add new keys</li>\n<li>Add functionality that auto-migrates to new layout when updating</li>\n<li>Add a new finite_keys_list list, enabled via use_finite_keys_list. Thanks @odt1</li>\n<li>Add a new all_keys_in_secure option, enabled by default. Allows adding the rusted bloody key to secure containers</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/865/gilded-key-storage/1.3.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 2647,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T21:25:36.000000Z",
+      "created_at": "2024-04-01T21:25:36.000000Z",
+      "updated_at": "2026-05-14T04:21:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/416a2acffccfe9608b42af86b90d8396fdeb594de2e27d13374c77b37e795b9a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/771758175/9097a939-3395-4086-8f9b-94c1a5bb05b4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A49Z&rscd=attachment%3B+filename%3DJehree-GildedKeyStorage-1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A58Z&ske=2026-08-01T21%3A09%3A49Z&sks=b&skv=2018-11-09&sig=q7I5Yh8qxmDhf0wiiwL%2FmOCSxUNJpUrIaPgAioTPaLw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DJehree-GildedKeyStorage-1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 166,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:35.016Z",
+    "discoveredBy": "seed"
+  }
+}

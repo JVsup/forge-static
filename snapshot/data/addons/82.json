@@ -1,0 +1,203 @@
+{
+  "type": "addon",
+  "id": 82,
+  "name": "AC'S Ridable Vehicles - FIKA addon",
+  "slug": "acs-ridable-vehicles-fika-addon",
+  "teaser": "FIKA compatibility addon for AC's Drivable Vehicles",
+  "thumbnail": "",
+  "downloads": 272,
+  "description": "<p>FIKA compatibility addon for AC’s Drivable Vehicles</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/addon/82/acs-ridable-vehicles-fika-addon",
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI tooling (Claude) was used as a research and coding assistant during development,\nalways under human direction:</p>\n<ul>\n<li><strong>Reverse-engineering support</strong> — decompiling and digging through the game’s assemblies\nto find the right systems to build on (the BTR’s passenger/seat handling, EFT’s physics\nscheduler, lamp and audio systems), so the mod uses the same mechanisms the game itself\nuses instead of fragile hacks.</li>\n<li><strong>Code drafting and debugging</strong> — implementation drafts and log analysis during the\nbuild-test-fix loop.</li>\n</ul>\n<p>All feature decisions, in-game testing, tuning (driving feel, camera, seat and light\nplacement), asset selection and preparation, and release validation were done by hand.\nEvery change shipped only after being tested in the game; several AI-proposed approaches\nwere rejected or reworked based on those tests. The 3D model, sounds, and artwork are not\nAI-generated.</p>\n",
+  "mod_id": 2797,
+  "is_detached": false,
+  "detached_at": null,
+  "published_at": "2026-07-05T18:39:00.000000Z",
+  "created_at": "2026-07-05T18:42:18.000000Z",
+  "updated_at": "2026-07-28T10:12:27.000000Z",
+  "owner": {
+    "id": 88887,
+    "name": "AnanasCharles",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/txZXFT0D25wM3LEQZFbKIiuACn7blW11h6s46OjE_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-11-10T11:19:47.000000Z",
+    "updated_at": "2026-07-31T23:14:44.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 104918,
+      "name": "FattyPJ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/nXLRQHfeCDUOsdDlPlYAUarKQz3f5ZsliMGyA99i_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2026-02-11T23:08:09.000000Z",
+      "updated_at": "2026-07-31T20:26:37.000000Z"
+    }
+  ],
+  "mod": {
+    "id": 2797,
+    "hub_id": null,
+    "guid": "com.ananascharles.ridablevehicles",
+    "name": "AC's Ridable Vehicles",
+    "slug": "acs-ridable-vehicles",
+    "teaser": "The first player-drivable ground vehicle for SPT",
+    "thumbnail": "https://forge-static.sp-tarkov.com/mods/GFhEGVz8lyKJJl8xDnWSMMHFKe9BNkCJuClJqouq.jpg",
+    "downloads": 3151,
+    "favourites_count": 37,
+    "detail_url": "https://forge.sp-tarkov.com/mod/2797/acs-ridable-vehicles",
+    "fika_compatibility": true,
+    "featured": false,
+    "contains_ads": false,
+    "contains_ai_content": true,
+    "shows_profile_binding_notice": false,
+    "cheat_notice": false,
+    "category_id": 17,
+    "published_at": "2026-07-04T13:04:00.000000Z",
+    "created_at": "2026-07-04T11:51:00.000000Z",
+    "updated_at": "2026-07-28T09:39:09.000000Z",
+    "owner": {
+      "id": 88887,
+      "name": "AnanasCharles",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/txZXFT0D25wM3LEQZFbKIiuACn7blW11h6s46OjE_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2025-11-10T11:19:47.000000Z",
+      "updated_at": "2026-07-31T23:14:44.000000Z"
+    },
+    "additional_authors": [
+      {
+        "id": 104918,
+        "name": "FattyPJ",
+        "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/nXLRQHfeCDUOsdDlPlYAUarKQz3f5ZsliMGyA99i_128w.webp",
+        "cover_photo_url": null,
+        "created_at": "2026-02-11T23:08:09.000000Z",
+        "updated_at": "2026-07-31T20:26:37.000000Z"
+      }
+    ],
+    "category": {
+      "id": 17,
+      "hub_id": 28,
+      "title": "Other",
+      "slug": "other",
+      "description": ""
+    }
+  },
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "source_code_links": [
+    {
+      "url": "https://codeberg.org/AnanasCharles/SPT-DrivableCars",
+      "label": "Codeberg"
+    },
+    {
+      "url": "https://gitlab.com/AnanasCharles/spt-ridablevehicles",
+      "label": "GitLab"
+    }
+  ],
+  "versions": [
+    {
+      "id": 163,
+      "version": "0.15.0",
+      "description": "<h2>v0.15.0</h2>\n<ul>\n<li>Added reliable ordered replication for normalized hull, engine, and tyre damage.</li>\n<li>Added authority filtering so reconstructed observed shots do not damage the same vehicle\nindependently on every peer.</li>\n<li>Replicated damage now drives remote vehicle condition and progressive damage effects.</li>\n<li>Compatible with the main mod’s fixed seated-body orientation and analog instruments.</li>\n<li>Matching v0.15.0 main and addon builds are required on every machine.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/82/acs-ridable-vehicles-fika-addon/0.15.0",
+      "content_length": 10892,
+      "mod_version_constraint": "0.15.0",
+      "downloads": 141,
+      "published_at": "2026-07-17T02:39:00.000000Z",
+      "created_at": "2026-07-17T02:40:23.000000Z",
+      "updated_at": "2026-07-28T10:12:27.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/beca5928056ff4bad1596f46ec6535aea0ee76fc5203467f79eac45ff5c57492?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/6de953f37c8175b976b4bd6038d6824e/RidableVehicles-FikaAddon-v0.15.0.zip"
+      }
+    },
+    {
+      "id": 160,
+      "version": "0.14.0",
+      "description": "<p>KEK</p>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/82/acs-ridable-vehicles-fika-addon/0.14.0",
+      "content_length": 10724,
+      "mod_version_constraint": "0.14.0",
+      "downloads": 70,
+      "published_at": "2026-07-08T18:38:00.000000Z",
+      "created_at": "2026-07-08T18:39:00.000000Z",
+      "updated_at": "2026-07-28T10:12:24.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YWY0YTUzODM0ZDBkNmRhMjY2NjQxNWE1Y2IxNWVmZTU6MTc4MzUzNTkwNw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/8555e2910c64d36ae88f8e50d581fea2/RidableVehicles-FikaAddon-v0.14.0.zip"
+      }
+    },
+    {
+      "id": 155,
+      "version": "0.13.2",
+      "description": "<ul>\n<li><strong>Run-over damage now works for client drivers</strong> — impacts are relayed to the host,\nwhich owns bot simulation. Previously only the host’s hits dealt damage; clients\ndrove straight through people. Ramming the host player also works now.</li>\n<li>Ragdolls on lethal hits replicate (the corpse flies on the simulating side and syncs\nthrough Fika’s corpse syncer).</li>\n<li><strong>Protocol v4</strong> — all players must update the main mod AND this addon together.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/82/acs-ridable-vehicles-fika-addon/0.13.2",
+      "content_length": 10501,
+      "mod_version_constraint": "0.13.2",
+      "downloads": 47,
+      "published_at": "2026-07-05T21:29:00.000000Z",
+      "created_at": "2026-07-05T21:31:13.000000Z",
+      "updated_at": "2026-07-28T10:12:22.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0ee8df1c3a403c5007bbaae85c9a8f951df22883e05e97840d5dcf2a3d2a1938?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/8b210e90de80cdbc402ee33bd9cea21b/RidableVehicles-FikaAddon-v0.13.2.zip"
+      }
+    },
+    {
+      "id": 154,
+      "version": "0.13.1",
+      "description": "<p>0.13.1</p>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/82/acs-ridable-vehicles-fika-addon/0.13.1",
+      "content_length": 9800,
+      "mod_version_constraint": "0.13.1",
+      "downloads": 14,
+      "published_at": "2026-07-05T18:43:00.000000Z",
+      "created_at": "2026-07-05T18:44:30.000000Z",
+      "updated_at": "2026-07-28T10:12:20.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YmM2MTg1ZDEwYzRmNmRhNTY4ZTY3YTg2NjMyYThhYTg6MTc4MzI3NzA1NA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/7577f429ec13a23165ea57979bc755f6/RidableVehicles-FikaAddon-v0.13.1.zip"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:06:49.852Z",
+    "discoveredBy": "mod:2797",
+    "error": null
+  }
+}

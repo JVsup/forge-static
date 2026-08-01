@@ -1,0 +1,237 @@
+{
+  "type": "mod",
+  "id": 2167,
+  "hub_id": 2868,
+  "guid": "com.cannuccia.cnn-containers",
+  "name": "CNN - CONTAINERS - RE-UPLOAD",
+  "slug": "cnn-containers-re-upload",
+  "teaser": "Re-Upload of Cannuccia's CNN-Container mod, updated for SPT v3.11.X and a port for SPT 4.0.X",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2868.jpg",
+  "downloads": 6040,
+  "favourites_count": 20,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><h3>A full rework of the original CNN-Containers mod, ported and updated for SPT 4.0.X.</h3>\n<p>Adds 9 specialized containers for organizing your stash and taking essential supplies into raids, tiered across trader loyalty levels so new players get affordable starter storage while larger containers are gated behind higher loyalty.</p>\n<p>All containers are configurable via a config file. You can enable/disable individual containers, adjust trader prices and loyalty levels, resize container grids, set custom flea market prices, add extra allowed/excluded item filters, and rename/translate containers.</p>\n<blockquote>\n<p><strong>Updating from a previous version?</strong> Check the <strong>Update Notes</strong> tab first — some versions have important warnings.</p>\n</blockquote></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p>1. Download and extract the mod zip into your SPT directory.</p>\n<p>2. Launch the game.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Updating</div>\n<div class=\"tab-content\"><p>1. Download and extract the mod zip into your SPT directory, overwriting when prompted.</p>\n<p>2. Open the SPT launcher’s settings and click “Clean Temp Files” before launching.</p>\n<blockquote>\n<p><strong>Before updating:</strong> read the <strong>Update Notes</strong> tab for any version-specific warnings, and back up your profile and <code>config/config.jsonc</code> if you’ve customized them.</p>\n</blockquote></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Update Notes</div>\n<div class=\"tab-content\"><p><strong>v4.4.0</strong></p>\n<ul>\n<li>The Secure Mapbook’s internal storage changed (this fixes the map-duplication bug). <strong>Any maps left inside a mapbook will be permanently deleted on update.</strong> Move all maps out into your stash before updating, then put them back afterwards — empty mapbooks are unaffected. If you’ve already lost maps, they can only be recovered from a profile backup made <em>before</em> the update (restore it, downgrade to v4.3.0, empty the mapbook, then re-apply v4.4.0).</li>\n<li>The Onyx can now be bought for <strong>dollars only</strong> (no Kappa needed), in addition to the existing Kappa barters.</li>\n</ul>\n<p><strong>v4.3.0</strong></p>\n<ul>\n<li><strong>The config format was completely reworked.</strong> Each container is now a multi-line block instead of a single line, and settings from an older <code>config.jsonc</code> will <strong>not</strong> carry over — you’ll need to re-apply your customizations in the new format. Back up your old config for reference before overwriting, then edit the new one.</li>\n<li><strong>New config options were added:</strong> custom flea prices (<code>fleaPrice</code>), extra allowed item filters for mod compatibility (<code>extraFilters</code> — Pack ‘n’ Strap is pre-added to the Gear Box), extra excluded filters to block items (<code>extraExcludedFilters</code>, handy for the Wooden Box which accepts everything by default), and name / short-name / description overrides per container.</li>\n<li><strong>Containers were rebalanced.</strong> Trader prices, loyalty levels, and some grid sizes changed — containers are now properly tiered across loyalty levels 1–4 (previously most were sold at LL1).</li>\n<li><strong>Fixed vanilla case nesting</strong> so the containers sit correctly inside vanilla cases.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>Edit <code>config/config.jsonc</code> to customize the mod. You can:</p>\n<ul>\n<li>Enable or disable individual containers</li>\n<li>Change trader prices and loyalty levels</li>\n<li>Resize container grids (except the Mapbook, whose cells are generated automatically, one per map)</li>\n<li>Resize each of the Onyx’s 3 grids independently</li>\n<li>Set the price of the Onyx dollars-only barter (optional <code>dollarOnlyPrice</code>; omit to use the default $501,437)</li>\n</ul>\n<blockquote>\n<p><strong>Example — changing the Onyx dollars-only price:</strong> this line isn’t in the config by default. To change it, add <code>dollarOnlyPrice</code> under the <code>onyx</code> block (a commented-out example is already there):</p>\n<pre><code>\"onyx\": {\n    \"enabled\": true,\n    \"dollarPrice\": 85259,\n    \"loyaltyLevel\": 4,\n    \"grid1H\": 2, \"grid1V\": 3,\n    \"grid2H\": 3, \"grid2V\": 4,\n    \"grid3H\": 1, \"grid3V\": 2,\n    \"dollarOnlyPrice\": 750000   // &lt;-- add this line to set your own price\n}\n</code></pre>\n</blockquote>\n<ul>\n<li>Set custom flea market prices (separate from trader prices)</li>\n<li>Add extra allowed item filters per container (for mod compatibility, e.g. Pack ‘n’ Strap)</li>\n<li>Add excluded item filters (e.g. block specific cases from going inside the Wooden Box)</li>\n<li>Rename or translate container names, short names, and descriptions</li>\n</ul>\n<p>Optional settings are commented out below each container in the config - just uncomment and edit.</p>\n<blockquote>\n<p><strong>WARNING:</strong> Disabling a container or changing its grid size after you’ve already used it in your profile (items stored inside) can cause profile corruption or item loss. Only change these settings on a fresh profile or after emptying the affected containers.</p>\n</blockquote></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Containers</div>\n<div class=\"tab-content\"><blockquote>\n<p><strong>Tier 1 — Starter storage:</strong></p>\n</blockquote>\n<ul>\n<li>\n<p><strong>Recycled Ammo Bag</strong> (2x2)</p>\n<ul>\n<li>Holds ammunition, fits inside Secure Containers.</li>\n<li>Trader: Prapor LL1 - 75,000₽</li>\n</ul>\n</li>\n<li>\n<p><strong>Recycled FAK</strong> (3x3)</p>\n<ul>\n<li>Holds medical items, fits inside Secure Containers.</li>\n<li>Trader: Therapist LL1 - 85,000₽</li>\n</ul>\n</li>\n<li>\n<p><strong>Small Portable Fridge</strong> (2x3)</p>\n<ul>\n<li>Holds food items, fits inside Secure Containers.</li>\n<li>Trader: Jaeger LL1 - 38,000₽</li>\n</ul>\n</li>\n<li>\n<p><strong>Small Toolbox</strong> (4x6)</p>\n<ul>\n<li>Holds tools/barter items.</li>\n<li>Trader: Skier LL1 - €500</li>\n</ul>\n</li>\n</ul>\n<blockquote>\n<p><strong>Tier 2 — Mid-level storage:</strong></p>\n</blockquote>\n<ul>\n<li>\n<p><strong>Mod Case</strong> (6x5)</p>\n<ul>\n<li>Holds weapon mod items.</li>\n<li>Trader: Peacekeeper LL2 - $1,200</li>\n</ul>\n</li>\n<li>\n<p><strong>Secure Mapbook</strong> (per-map)</p>\n<ul>\n<li>Holds one of each map, fits in Secure Containers and Special Slots. Cannot be insured (like all storage cases).</li>\n<li>Trader: Therapist LL2 - 65,000₽</li>\n</ul>\n</li>\n<li>\n<p><strong>Ruined Wooden Box</strong> (8x6)</p>\n<ul>\n<li>General-purpose storage crate that accepts any item.</li>\n<li>Trader: Jaeger LL2 - 1,000,000₽</li>\n</ul>\n</li>\n</ul>\n<blockquote>\n<p><strong>Tier 3:</strong></p>\n</blockquote>\n<ul>\n<li>\n<p><strong>Gear Box</strong> (10x8)</p>\n<ul>\n<li>Holds clothing (vests, rigs, backpacks, etc).</li>\n<li>Trader: Ragman LL3 - 850,000₽</li>\n</ul>\n</li>\n</ul>\n<blockquote>\n<p><strong>Tier 4:</strong></p>\n</blockquote>\n<ul>\n<li>\n<p><strong>Secure Container Onyx</strong> (2x3 + 3x4 + 1x2)</p>\n<ul>\n<li>Premium secure container with 3 grids. Follows default excluded items.</li>\n<li>Trader: Peacekeeper LL4</li>\n</ul>\n<p>Offered three ways: barter with the Kappa + $85,259, barter with the Desecrated Kappa + $85,259, or dollars only for $501,437 (no Kappa required).</p>\n</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Known Issues</div>\n<div class=\"tab-content\"><ul>\n<li>The Mod Case and Ruined Wooden Box models display with pink/purple textures (missing shaders). The bundles were built for an older Unity version and need to be recompiled for SPT v4.0’s Unity version. Functionally they work fine.</li>\n<li>v4.4.0 reports its version as 4.3.0 in the server console (a hardcoded version string i forgot to modify). This is cosmetic only, the release is the correct v4.4.0 build. Already fixed in the code and will report correctly from the next release.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>This mod is provided as-is, with no official support.</p></div></div>\n<div id=\"tabset-1-panel-9\" class=\"tab-panel\"><div class=\"tab-title\">License</div>\n<div class=\"tab-content\"><p>This mod is licensed under the MIT License. Please refer to the LICENSE file included in the archive for full details.</p></div></div>\n<div id=\"tabset-1-panel-10\" class=\"tab-panel\"><div class=\"tab-title\">Credits</div>\n<div class=\"tab-content\"><p>Original mod by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/16896/cannuccia\" rel=\"noreferrer noopener\">Cannuccia</a>.</p>\n<p>Updated for SPT 3.11.X by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/59864/amightytank\" rel=\"noreferrer noopener\">AMightyTank</a>.</p>\n<p>Secure Mapbook by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/75504/mrvibesrsa\" rel=\"noreferrer noopener\">MrVibesRSA</a>.</p>\n<p>Container Onyx (Re-Upload) by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/28568/dsnyder\" rel=\"noreferrer noopener\">Dsnyder</a>.</p>\n<p>Testing and feedback by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/108019/thesungod\" rel=\"noreferrer noopener\">TheSunGod</a>.</p>\n<p>Ported and reworked with additions for SPT 4.0.X by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/11050/dildz\" rel=\"noreferrer noopener\">Dildz</a>.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2167/cnn-containers-re-upload",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI (Claude Code) assisted in writing and documenting the C# port, additions and fixes; changes are reviewed and tested thoroughly by me (Dildz).</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2025-06-02T03:31:00.000000Z",
+  "created_at": "2025-06-02T03:31:09.000000Z",
+  "updated_at": "2026-07-28T09:26:11.000000Z",
+  "owner": {
+    "id": 59864,
+    "name": "AmightyTank",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ca455d7c3c3a7a3a5f0c349de15469a9aedb1443_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-07-29T05:47:41.000000Z",
+    "updated_at": "2026-08-01T13:42:04.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 11050,
+      "name": "Dildz",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/272c7e5adaac509abc6f6743e0717d4289b34dd0_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2021-11-02T06:59:35.000000Z",
+      "updated_at": "2026-08-01T12:46:24.000000Z"
+    },
+    {
+      "id": 16896,
+      "name": "Cannuccia",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/83ab0e86674d9061ec4e45c428911c70cd5f2b53_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2022-04-19T21:10:00.000000Z",
+      "updated_at": "2026-07-10T04:50:02.000000Z"
+    },
+    {
+      "id": 28568,
+      "name": "Dsnyder",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/16888b74799ea0f079dc1d5b0469b0907ae557f5_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-03-12T03:57:07.000000Z",
+      "updated_at": "2026-08-01T15:59:55.000000Z"
+    },
+    {
+      "id": 75504,
+      "name": "MrVibesRSA",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=M&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2025-03-25T15:58:49.000000Z",
+      "updated_at": "2025-12-19T06:47:52.000000Z"
+    },
+    {
+      "id": 88672,
+      "name": "amightytank-Xn4VG",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/YQmVEm9UV6BMhn2lzrDrLqua2QEQcBgCNTpP3MZ4_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2025-11-08T20:54:48.000000Z",
+      "updated_at": "2026-07-10T04:52:41.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/AlmightyTank/CNN-Containers",
+      "label": "v3.11.x"
+    },
+    {
+      "url": "https://github.com/Dildz/CNN-Containers",
+      "label": "v4.0.x"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13995,
+      "hub_id": null,
+      "version": "4.4.0",
+      "description": "<h3>⚠️ PLEASE READ BEFORE UPDATING !! ⚠️</h3>\n<h4>SECURE MAPBOOK STORAGE HAS CHANGED</h4>\n<h4>EMPTY YOUR MAPBOOK BEFORE UPDATING!</h4>\n<blockquote>\n<p>The Secure Mapbook’s internal storage changed from <strong>slots</strong> to <strong>grid cells</strong> in this version (this is the fix for the map-duplication bug). If you have <strong>any maps stored inside a Mapbook</strong> in your profile - <strong>you MUST move them into your stash before updating</strong>.\nFailing to do so will result in <strong>those maps being deleted</strong> the first time the updated mod loads your profile.\nOnly the Mapbook is affected this time - all other containers are untouched.</p>\n<hr />\n<p>If you didn’t, and your maps have vanished - you have options:</p>\n<ol>\n<li>restore a profile backup from before the update, revert to CNN-Containers v4.3.0, move the maps into your stash, then update to v4.4.0.</li>\n<li>just re-buy them from Therapist / the flea, or send them to yourself with a dev profile - maps are cheap enough.</li>\n</ol>\n</blockquote>\n<h2>New Features</h2>\n<ul>\n<li><strong>Onyx dollars-only barter.</strong> Peacekeeper now offers the Onyx a third way - for <strong>dollars only, no Kappa required</strong> ($501,437 by default). Added for players who need to keep their Kappa to prestige. The existing Kappa and Desecrated Kappa barters are unchanged.</li>\n<li>Added optional <code>dollarOnlyPrice</code> config key (under <code>onyx</code>) to set the price of the dollars-only barter. You only need to add 1 line if you want to change it - <code>see the config tab for a usage example</code>, current configs remain unaffected.</li>\n</ul>\n<h2>Mapbook Changes</h2>\n<ul>\n<li><strong>Fixed map duplication through insurance.</strong> The Mapbook is now a proper grid container (one cell per map) instead of slot-based. Slotted contents were being treated as attachments and duplicated on insurance return; grid contents are not.</li>\n<li>Maps are now <strong>discovered automatically</strong> from the game, so maps added by other mods (e.g. DynamicMaps) get a cell without any manual setup.</li>\n<li>As a proper storage case, the Mapbook <strong>can no longer be insured</strong> - this is expected EFT behaviour for all cases, and it’s what makes the duplication impossible.</li>\n<li>Load order adjusted so map-adding mods are picked up before the Mapbook is built.</li>\n</ul>\n<h2>Config</h2>\n<ul>\n<li>Blanked or zeroed price / grid values now fall back to sensible defaults instead of <code>0</code>, so a mistyped config can’t create a free or zero-size item.</li>\n</ul>\n<h2>Bugfixes / Maintenance</h2>\n<ul>\n<li>Removed dead code and corrected some internal comments (Gear Box trader label, Mapbook exclusion).</li>\n<li>Release builds are now produced automatically, so every version ships a consistent, tested zip.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2167/cnn-containers-re-upload/4.4.0",
+      "content_length": 37004089,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1080,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-05T11:05:00.000000Z",
+      "created_at": "2026-07-05T11:09:33.000000Z",
+      "updated_at": "2026-07-28T09:26:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d418e3d57c7b6323323ef0e95bc429b4577fd57c213ab96daf168af23e0996cf",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/883899016/e2ff633e-c078-4b9b-a723-5a2e70f4fd7d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A18Z&rscd=attachment%3B+filename%3DCNN-Containers-v4.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A44Z&ske=2026-08-01T21%3A11%3A18Z&sks=b&skv=2018-11-09&sig=6D9L%2FOp0ldIH9vjRiPqywXI6lBGau7a1Le6EMeNN85w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzQ3NSwibmJmIjoxNzg1NjE1Njc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gUDSs8pl_lf7zulaxyCL-ViOblbe0O8-PS1inaWhmJo&response-content-disposition=attachment%3B%20filename%3DCNN-Containers-v4.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13430,
+      "hub_id": null,
+      "version": "4.3.0",
+      "description": "<h3>⚠️ WARNING | ПРЕДУПРЕЖДЕНИЕ | 警告 ⚠️</h3>\n<h3>READ BEFORE UPDATING !!</h3>\n<h4>CONTAINER SIZES, ITEM RESTRICTIONS AND NESTING CHANGES</h4>\n<h4>MAKE PROFILE BACKUPS BEFORE UPDATING!</h4>\n<blockquote>\n<p>Containers have been <strong>resized</strong> and <strong>re-balanced</strong> in this version. If you are upgrading from v4.2.x and have items stored inside any of the affected containers (Gear Box, Mod Case, Small Fridge, Small Toolbox, Wooden Box), or have nested containers - <strong>you MUST empty those containers before updating</strong>.\nFailing to do so will result in <strong>profile corruption and/or item loss</strong>.</p>\n<hr />\n<p>For the love of SPAGHET - heed this warning. I don’t know how to make it more obvious. Use the mod comment section if you are not sure about something before updating.</p>\n<hr />\n<p>If you didn’t, and are now sweating - you have 2 options:</p>\n<ol>\n<li>restore a profile backup and revert to CNN-Containers v4.2.2, empty affected containers, and update to v4.3.0.</li>\n<li>restore a profile backup and change the size values for containers in the config to match the old values before starting the server, empty affected containers and revert the config to it’s defaults.</li>\n</ol>\n<p>💡 Don’t forget about any nested containers - see Balancing Changes</p>\n</blockquote>\n<h2>Balancing Changes</h2>\n<ul>\n<li>Containers are now tiered by trader loyalty level instead of all being LL1.</li>\n<li>Pricing, grid sizes, and flea prices adjusted to create meaningful progression.</li>\n<li>Values can be adjusted for all containers via the reworked config system.</li>\n<li>Wooden Box now prevents nesting (can’t put wooden boxes inside wooden boxes).</li>\n<li>Gear and Wooden Boxes are excluded from Item and THICC cases, all other CNN cases are allowed.</li>\n</ul>\n<p><strong>Ammo Bag</strong></p>\n<ul>\n<li>Old: Prapor LL1, 36,980 RUB, 2x2 grid, flea 43,266</li>\n<li>New: Prapor LL1, 75,000 RUB, 2x2 grid, flea 88,000</li>\n</ul>\n<p><strong>Recycled FAK</strong></p>\n<ul>\n<li>Old: Therapist LL1, 52,572 RUB, 3x3 grid, flea 61,509</li>\n<li>New: Therapist LL1, 85,000 RUB, 3x3 grid, flea 100,000</li>\n</ul>\n<p><strong>Small Fridge</strong></p>\n<ul>\n<li>Old: Jaeger LL1, 20,690 RUB, 4x4 grid, 2.36 kg, flea 17,000</li>\n<li>New: Jaeger LL1, 38,000 RUB, 2x3 grid, 0.5 kg, flea 45,000</li>\n</ul>\n<p><strong>Small Toolbox</strong></p>\n<ul>\n<li>Old: Ragman LL1, EUR 118, 6x4 grid, flea 14,045</li>\n<li>New: Skier LL1, EUR 500, 4x6 grid, flea 76,000</li>\n</ul>\n<p><strong>Mod Case</strong></p>\n<ul>\n<li>Old: Peacekeeper LL1, $434, 7x7 grid, flea 51,284</li>\n<li>New: Peacekeeper LL2, $1,200, 6x5 grid, flea 197,000</li>\n</ul>\n<p><strong>Mapbook</strong></p>\n<ul>\n<li>Old: Therapist LL1, 48,500 RUB, flea 48,500</li>\n<li>New: Therapist LL2, 65,000 RUB, flea 76,000</li>\n</ul>\n<p><strong>Wooden Box</strong></p>\n<ul>\n<li>Old: Jaeger LL1, 750,000 RUB, 12x8 grid, flea 750,000</li>\n<li>New: Jaeger LL2, 1,000,000 RUB, 8x6 grid, flea 1,170,000</li>\n</ul>\n<p><strong>Gear Box</strong></p>\n<ul>\n<li>Old: Mechanic LL1, 1,118,054 RUB, 12x8 grid, flea 1,308,123</li>\n<li>New: Ragman LL3, 850,000 RUB, 10x8 grid, flea 995,000</li>\n</ul>\n<p><strong>Onyx</strong> - unchanged</p>\n<p>Flea prices follow a ~17% markup over trader price.</p>\n<p><strong>Trader changes:</strong></p>\n<ul>\n<li>Small Toolbox moved from Ragman to Skier.</li>\n<li>Gear Box moved from Mechanic to Ragman.</li>\n</ul>\n<h2>Config System Rework</h2>\n<p>See the config file for new usage instructions.</p>\n<ul>\n<li>Added <code>fleaPrice</code> option to all containers (set custom flea market price)</li>\n<li>Added <code>extraFilters</code> to containers and Onyx (allow additional item categories)</li>\n<li>Added <code>extraExcludedFilters</code> to containers and Onyx (block specific items)</li>\n<li>Added <code>name</code>, <code>shortName</code>, <code>description</code> overrides to all containers, Mapbook, and Onyx</li>\n<li>Config.jsonc reworked with expanded comments, examples, and per-container sections</li>\n<li>Added trailing comma support in JSON parser</li>\n</ul>\n<h2>Onyx Changes</h2>\n<ul>\n<li>Onyx now inherits Kappa’s exact grid filter (19-entry allow-list + 112-entry exclusion list) instead of a simple allow-all-minus-weapons. Matches real secure container behavior.</li>\n<li>Added second barter trade: Desecrated Kappa + dollars (in addition to regular Kappa + dollars)</li>\n<li>Onyx supports <code>extraFilters</code> and <code>extraExcludedFilters</code> from config</li>\n<li>Onyx supports <code>name</code>/<code>shortName</code>/<code>description</code> overrides from config</li>\n<li>Fixed OnyxHandbookParentId to match Kappa’s actual handbook category</li>\n</ul>\n<h2>Bugfixes</h2>\n<ul>\n<li>Fixed bots spawning with empty secure containers.</li>\n<li>Fixed some rigs and not accepting items.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2167/cnn-containers-re-upload/4.3.0",
+      "content_length": 37004293,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1678,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-13T14:58:00.000000Z",
+      "created_at": "2026-04-13T14:59:12.000000Z",
+      "updated_at": "2026-07-28T08:21:50.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/911252c73e1138a4df6fb1bbd1b003f8e2d876f3d024530ab3d83c6f50972303",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/883899016/a329ff25-838f-494e-a425-d7726c7e10c8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A17Z&rscd=attachment%3B+filename%3DCNN-Containers-v4.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A03Z&ske=2026-08-01T20%3A56%3A17Z&sks=b&skv=2018-11-09&sig=2wNjdmm%2BZbW6ZCa4pQUp4kJE9f%2F83Jy%2FCGN%2B58d8zjQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzQ3NSwibmJmIjoxNzg1NjE1Njc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gUDSs8pl_lf7zulaxyCL-ViOblbe0O8-PS1inaWhmJo&response-content-disposition=attachment%3B%20filename%3DCNN-Containers-v4.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13303,
+      "hub_id": null,
+      "version": "4.2.2",
+      "description": "<p><strong>Additions:</strong></p>\n<ul>\n<li>Containers: Ruined Wooden Box / Secure Mapbook / “Onyx” Secure Container</li>\n<li>Configuration: Trader levels, Prices and Sizes can be adjusted via config.jsonc</li>\n</ul>\n<blockquote>\n<p><strong>For existing SPT v4.0.x installs - make sure to CLEAN TEMP FILES in the launcher settings</strong></p>\n</blockquote>\n<p>View README regarding installation &amp; known issues.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2167/cnn-containers-re-upload/4.2.2",
+      "content_length": 36999343,
+      "spt_version_constraint": "~4.0",
+      "downloads": 638,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-23T21:15:00.000000Z",
+      "created_at": "2026-03-23T21:17:07.000000Z",
+      "updated_at": "2026-07-28T08:15:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/26920d87439c2e4492fb0e1389c44bab61467889307c58523ba39c9c44ebadc2",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/883899016/b7a2e785-ed2c-4ebd-b0a2-6acc70c778d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A29Z&rscd=attachment%3B+filename%3DCNN-Containers-v4.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A48Z&ske=2026-08-01T21%3A13%3A29Z&sks=b&skv=2018-11-09&sig=K4BLcum8ypR2Yi60dDXAXlG9FVgVwkA1s7ehPNiUcV8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzQ3NSwibmJmIjoxNzg1NjE1Njc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gUDSs8pl_lf7zulaxyCL-ViOblbe0O8-PS1inaWhmJo&response-content-disposition=attachment%3B%20filename%3DCNN-Containers-v4.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13297,
+      "hub_id": null,
+      "version": "4.0.0",
+      "description": "<p>Ported mod to SPT 4.0.X</p>\n<ul>\n<li>Changed the Gear Case / Tool Box / Mod Case containers to be STASH ONLY.</li>\n<li>No additional containers added yet, just the port for now</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2167/cnn-containers-re-upload/4.0.0",
+      "content_length": 25729201,
+      "spt_version_constraint": "~4.0",
+      "downloads": 172,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-22T11:37:00.000000Z",
+      "created_at": "2026-03-22T11:39:45.000000Z",
+      "updated_at": "2026-07-28T08:15:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/50e63dcf246d68be29ad4c4f2504e249303a352b7fe9cf39476baa1da83b90d9",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/883899016/f75b8e69-c347-49a8-9a67-c40b1c6a9da3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A14Z&rscd=attachment%3B+filename%3DCNN-Containers-v4.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A15Z&ske=2026-08-01T21%3A01%3A14Z&sks=b&skv=2018-11-09&sig=7TK0yBD6iYo1MXaGEbr5efGxgNG%2Bkw74cgSj6vrQnuM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzQ3NiwibmJmIjoxNzg1NjE1Njc2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9upBAJ027UdH4WT-AMYuD_iYAMA2CeblJGZydqYUy5I&response-content-disposition=attachment%3B%20filename%3DCNN-Containers-v4.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 476,
+      "hub_id": 14384,
+      "version": "3.3.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/2167/cnn-containers-re-upload/3.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2472,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-06-02T03:31:09.000000Z",
+      "created_at": "2025-06-02T03:31:09.000000Z",
+      "updated_at": "2026-05-14T01:48:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f902788b6ddc1d3ea371d441589bda879b163618fc58c83ce9d1a3cdb9c67d53",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/994479709/ba757ed9-87bd-48b2-9d8f-865d62effac3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A35Z&rscd=attachment%3B+filename%3DCNN-Containers-3.11-3.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A38Z&ske=2026-08-01T21%3A04%3A35Z&sks=b&skv=2018-11-09&sig=VaXom5oKY6S24aOJiod8o44WbBtqjudyLkUb43vCc%2FU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzQ3NiwibmJmIjoxNzg1NjE1Njc2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9upBAJ027UdH4WT-AMYuD_iYAMA2CeblJGZydqYUy5I&response-content-disposition=attachment%3B%20filename%3DCNN-Containers-3.11-3.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 40,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:41:54.222Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "type": "mod",
+  "id": 2758,
+  "hub_id": null,
+  "guid": "com.spt.botcounter",
+  "name": "BotCounter",
+  "slug": "botcounter",
+  "teaser": "Shows all bots alive ingame. Simple UI.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/EnfNArALCpPoBsJyfIWCt2vzJ6yZwsgzeQQJF2eG.png",
+  "downloads": 3657,
+  "favourites_count": 25,
+  "description": "<p>Hello :)</p>\n<p>I needed this mod but i can´t code so i did it with AI.\nThis mod displays all bots in your current raid and adds some new features.</p>\n<hr />\n<p>BotCounter: Key Features</p>\n<p>Real-Time Enemy Monitoring: Actively tracks the total number of bots and bosses currently present in your raid.</p>\n<p>Precision Distance Tracking: Provides the exact distance, in meters, to the nearest enemy within each category.</p>\n<p>Boss Health Monitoring: Displays real-time boss health status, allowing you to track exactly how much damage they have sustained.</p>\n<p>Selective Visibility &amp; Smart Filtering: Total control over your UI layout:</p>\n<p>Group Filtering: Manually toggle specific enemy types on or off based on your needs.</p>\n<p>Auto-Hide Functionality: Automatically conceals empty categories to maintain a clean, minimalist, and unobtrusive HUD.</p>\n<p>Customizable Visuals: Fully personalize the overlay by choosing your preferred text color and adjusting the opacity to fit your playstyle.</p>\n<p>Reliable Detection: Advanced logic accurately identifies active targets and instantly filters out eliminated enemies, including Player Scavs, to prevent “ghost counts”.</p>\n<p>Intelligent Categorization: Automatically differentiates between various bot roles to provide a clear, organized overview of immediate threats.</p>\n<hr />\n<p>New Version 1.9.0</p>\n<ul>\n<li>(Player Scav Fix) &amp; Source Code Fix (GitHub)</li>\n</ul>\n<hr />\n<p>Features (1.8.0):</p>\n<p>Distance Tracking: The UI now displays the exact distance (in meters) to the closest bot within each category.\n[!This option could reduce your performance!] [Solution: Change refresh rate or deactivate this option.]</p>\n<p>Detailed Boss &amp; Guard Names: Instead of grouping all bosses into a single number, the mod now translates internal entity names to display exactly who is on the map.</p>\n<p>Dynamic Boss Health: Boss names will now dynamically change color based on their remaining health percentage across all body parts.</p>\n<p>(Green for =/&gt; 70%, Yellow for =/&gt; 40%, Orange for =/&gt; 10%, Red for &lt;10%).\nHide Zero Counts: Categories with zero active bots will be completely hidden to keep your screen clean and focused.</p>\n<hr />\n<p>UI &amp; Customization:</p>\n<p>Categorized Settings: The F12 configuration menu has been completely reorganized into clean sections\n(1. Visibility, 2. Display, 3. Colors) for easier navigation.</p>\n<p>Custom Colors &amp; Transparency: You can now set a custom global text color instead of being locked to green, and adjust the overall UI opacity to make the text as visible or subtle as you prefer.</p>\n<hr />\n<p>Performance:</p>\n<p>Improved Tracking Accuracy: Switched the underlying data source to the game’s internal BotsController to provide more reliable spawns and counts.</p>\n<p>True Dead Bot Handling: The mod now accurately identifies and filters out dead bots using a dedicated tracking list, preventing ghost counts.</p>\n<p>Optimized Scanning: Introduced smart dictionary caching. The mod now remembers a bot’s role and faction after the initial scan, saving CPU cycles by not repeatedly analyzing the same entities every update tick.</p>\n<hr />\n<ul>\n<li>\n<p>F12 for configuration.</p>\n</li>\n<li>\n<p>Like almost every mod here, extract the zip archive into your SPT directory:\n\\SPT\\BepInEx\\plugins\\BotCounter</p>\n</li>\n<li>\n<p>To uninstall, simply delete the BotCounter Folder from \\SPT\\BepInEx\\plugins\\</p>\n</li>\n<li>\n<p>This mod can be uninstalled at any time without affecting your profile.</p>\n</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2758/botcounter",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>100% AI</p>\n<p>I needed this mod but i can´t code so i did it with AI.</p>\n<p>If anyone can code it properly i would be very happy.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-06-20T10:35:00.000000Z",
+  "created_at": "2026-06-20T10:25:10.000000Z",
+  "updated_at": "2026-07-28T09:41:15.000000Z",
+  "owner": {
+    "id": 115725,
+    "name": "Schluid",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-06-15T14:00:09.000000Z",
+    "updated_at": "2026-07-31T19:59:50.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 13,
+    "hub_id": 16,
+    "name": "The Unlicense",
+    "link": "https://choosealicense.com/licenses/unlicense/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Schluid420/BotCounter",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14134,
+      "hub_id": null,
+      "version": "1.9.0",
+      "description": "<ul>\n<li>Fixed “Player Scav” shown as boss.</li>\n<li>Fixed structure &amp; source code on GitHub  (1.8.0 is wrong)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2758/botcounter/1.9.0",
+      "content_length": 8431,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1025,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-07-18T18:00:00.000000Z",
+      "created_at": "2026-07-18T17:54:15.000000Z",
+      "updated_at": "2026-07-28T09:41:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/240b2fb6b17650a30fb761f6a1338263f6914f6e0c8002e04bc8ac6826b0d018/details",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1275154962/ffdeabe0-1a4f-4c98-b38f-42eb93766023?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A27Z&rscd=attachment%3B+filename%3DBotCounter_1.9.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A37Z&ske=2026-08-01T21%3A13%3A27Z&sks=b&skv=2018-11-09&sig=8zAAAJTETyZDe1LRM0lCcLTbSg57sE%2FFOPVmz3ekEwo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&response-content-disposition=attachment%3B%20filename%3DBotCounter_1.9.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 17,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:41:35.244Z",
+    "discoveredBy": "seed"
+  }
+}

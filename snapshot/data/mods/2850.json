@@ -1,0 +1,166 @@
+{
+  "type": "mod",
+  "id": 2850,
+  "hub_id": null,
+  "guid": "com.anamelash.infinite-loading-fix",
+  "name": "Infinite Loading Fix (Profile & Traders)",
+  "slug": "infinite-loading-fix-profile-traders",
+  "teaser": "Profile stuck on loading forever? Traders opening empty? Both come from the same race: the game builds the menu before its data arrives. This mod waits for it instead of breaking. One file, no server mod, no profile edits, nothing to configure.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Vr9B9eybbwyOzsWmrfXfBtarvQ3JUYBW3uOD2kJ1.png",
+  "downloads": 2553,
+  "favourites_count": 16,
+  "description": "<p>Two failures, one cause.</p>\n<p>On a heavy modlist the client can finish building the main menu before the data that menu depends on has arrived. Nothing catches that, so you get one of two symptoms:</p>\n<p>The profile never loads. You pick your profile and the loading screen stays there. The game is responsive, the server log looks perfectly healthy, but nothing ever happens.\nTraders open empty. The trader screen comes up blank, item interaction breaks, and it stays broken for the rest of the session. A restart fixes it — until next time.\nBoth are timing races, which is why they are intermittent and why the usual advice (“clear your stash”, “remove a mod”, “edit your profile”) sometimes appears to work and then stops working.</p>\n<p>What this mod does</p>\n<p>It makes the client wait instead of breaking. When the menu is ready before its data, the mod holds that step back and runs it the moment the data lands. When a trader screen lost its reference to the item database, the mod hands it back so the screen builds normally.</p>\n<p>If something genuinely cannot be recovered, the mod says so plainly in the log and tells you to restart — it will not quietly leave you with a half-working hideout and call it a success.</p>\n<p>Installing</p>\n<p>Drop the archive into your SPT folder. One plugin file, no server-side part, no profile changes, no dependencies. Everything is configurable, but the defaults are what you want.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2850/infinite-loading-fix-profile-traders",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI Assisted</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-07-26T21:00:00.000000Z",
+  "created_at": "2026-07-27T09:57:04.000000Z",
+  "updated_at": "2026-07-30T18:02:09.000000Z",
+  "owner": {
+    "id": 71022,
+    "name": "anamelash",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1fHHF63N6szHk4Uhiut8UxYBQ8XA1QPLbGxiAeOO_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-01-07T09:58:50.000000Z",
+    "updated_at": "2026-08-01T19:39:33.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Anamelash/spt-init-race-fix",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14300,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<p>Trader window loading fix</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2850/infinite-loading-fix-profile-traders/1.3.0",
+      "content_length": 8617,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1034,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-30T15:00:00.000000Z",
+      "created_at": "2026-07-30T16:40:22.000000Z",
+      "updated_at": "2026-07-30T18:02:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/02d47ebb8b3faef1059bb421a327f954ad3bac6c3ad5220144a5eaa7749da510?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1313626642/e1225093-5362-4b62-9d80-9fcfe5f6fb2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A08Z&rscd=attachment%3B+filename%3DHideoutInitRaceFix-1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A06Z&ske=2026-08-01T21%3A25%3A08Z&sks=b&skv=2018-11-09&sig=hGlMXqaBiOtuOhPdXJ9oH6jCJKig1k67krRrYkSbtKI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DHideoutInitRaceFix-1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14255,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Bugfix: empty hideout</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2850/infinite-loading-fix-profile-traders/1.2.0",
+      "content_length": 7482,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1227,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-27T14:00:00.000000Z",
+      "created_at": "2026-07-27T15:04:25.000000Z",
+      "updated_at": "2026-07-28T09:57:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/7834e35789acb32118440c8045264a091190809a8734e0ae5c277357815e995a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1313626642/3eae0df6-4d4c-499f-a573-922397e5b4f4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A34Z&rscd=attachment%3B+filename%3DHideoutInitRaceFix-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A47Z&ske=2026-08-01T21%3A03%3A34Z&sks=b&skv=2018-11-09&sig=1b4p7w9ZD91sFLOPz%2BhspNPzS4qgl57AFuezzlWMBoc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DHideoutInitRaceFix-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14254,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>Bugfix: fail loudly instead of an empty hideout</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2850/infinite-loading-fix-profile-traders/1.1.0",
+      "content_length": 7352,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 37,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-27T13:00:00.000000Z",
+      "created_at": "2026-07-27T14:31:19.000000Z",
+      "updated_at": "2026-07-28T09:56:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/7ba8fc4aa12249253a5b04c9af5902c42516591eadcbbe7382c264a33fa65be0/details",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1313626642/206681cb-0a45-4f7d-8833-25969bb3f1be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A03Z&rscd=attachment%3B+filename%3DHideoutInitRaceFix-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A58Z&ske=2026-08-01T21%3A15%3A03Z&sks=b&skv=2018-11-09&sig=w8cFgXYImTzrfnI00c%2BUK96OL9QjMpJDmjN0MzlbvXU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DHideoutInitRaceFix-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14252,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2850/infinite-loading-fix-profile-traders/1.0.0",
+      "content_length": 6942,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 255,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-27T00:00:00.000000Z",
+      "created_at": "2026-07-27T10:00:01.000000Z",
+      "updated_at": "2026-07-28T09:57:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/cb7afee47696afd34f8c8e23f1a5499ee49337e9e6e3fd41354d596e591cc090?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1313626642/76481b4f-d897-40ef-b129-6fb3cdba2e9b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A53Z&rscd=attachment%3B+filename%3DHideoutInitRaceFix-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A33Z&ske=2026-08-01T21%3A04%3A53Z&sks=b&skv=2018-11-09&sig=nLIqxKsBxUbCEzSAlR7UNFAZ7nctzhimrKfqQnJtf5c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&response-content-disposition=attachment%3B%20filename%3DHideoutInitRaceFix-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 19,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:47:16.673Z",
+    "discoveredBy": "seed"
+  }
+}

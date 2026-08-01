@@ -1,0 +1,254 @@
+{
+  "type": "mod",
+  "id": 2607,
+  "hub_id": null,
+  "guid": "com.suntion.easygame",
+  "name": "Easy Game",
+  "slug": "easy-game",
+  "teaser": "Adjust character stats, raid duration, item carry limits, magazine times, ammo stacks, stimulator usage, access card uses, flea market restrictions/offers, default item examination, and Labyrinth map visibility. ",
+  "thumbnail": "",
+  "downloads": 2804,
+  "favourites_count": 7,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Easygame Mod for SPTarkov</h3>\n<p>This is a feature-rich mod for the Escape from Tarkov SPTarkov server that provides comprehensive game customization through a unified configuration file. The mod offers independently toggleable features covering character attributes, raid mechanics, item systems, economy, and access cards.</p>\n<h3>Core Features</h3>\n<h4>Character and Raid Adjustments</h4>\n<ul>\n<li>Modify base health, energy, and hydration values for all profiles</li>\n<li>Adjust raid duration across all maps</li>\n<li>Customize item carry limits when entering raids</li>\n</ul>\n<h4>Weapons and Ammunition</h4>\n<ul>\n<li>Adjust magazine loading, unloading, and checking times</li>\n<li>Modify stack sizes for all ammunition types</li>\n</ul>\n<h4>Items and Market</h4>\n<ul>\n<li>Remove flea market selling restrictions on items</li>\n<li>Adjust maximum active offer counts per level</li>\n<li>Set all items as examined by default</li>\n</ul>\n<h4>Consumables</h4>\n<ul>\n<li>Configure stimulator usage times, weight, and price multipliers for all injectors except morphine</li>\n</ul>\n<h4>Access Cards</h4>\n<ul>\n<li>Customize maximum usage counts for both Labs and Labyrinth access cards</li>\n</ul>\n<h4>Map Display</h4>\n<ul>\n<li>Optionally show the Labyrinth map in the map selection screen</li>\n</ul>\n<p>All features are managed through a centralized <code>config.json</code> file, allowing users to flexibly enable or disable specific functions and adjust parameters to achieve a personalized gaming experience.</p>\n<hr />\n<h3>Configuration Guide</h3>\n<p>The <code>config.json</code> configuration file is located by default in <code>SPT/user/mods/Easygame/data</code>.</p>\n<ul>\n<li><strong>Version v1.0.0</strong>: The server must be run at least once to wait for the configuration to be automatically generated. You can also manually create a configuration file containing all the following keys and set up the desired functions in advance according to your needs.</li>\n<li><strong>After Version v1.0.0</strong>: A configuration file will be provided by default, allowing you to set the desired functions before starting the server.</li>\n</ul>\n<pre><code>{\n    // Function enable/disable switches\n    \"EnableFunction\": {\n        // Whether to remove all flea market selling restrictions on items\n        \"IsUnlockAllItemsSellLimit\": true,\n        // Whether to display Labyrinth map in map selection screen\n        \"ShowMapToChoiceScene\": true,\n        // Whether to customize item carry limits into raid\n        \"EnterGameItemLimit\": true,\n        // Whether to modify health, energy and hydration values\n        \"EnergyHydrationModify\": true,\n        // Whether to modify raid duration\n        \"RaidTimeModify\": true,\n        // Whether to modify magazine loading/unloading/checking times\n        \"AmmoTimeModify\": true,\n        // Whether to modify flea market max active offer count per level\n        \"MaxActiveOfferCountModify\": true,\n        // Whether to adjust Labs access card usage count\n        \"AdjustLabsAccess\": true,\n        // Whether to adjust Labyrinth access card usage count\n        \"AdjustLabysAccess\": true,\n        // Whether to modify stimulator durability (excluding morphine)\n        \"AdjustSimulatorMaxHpResource\": true,\n        // Whether to adjust ammo stack size\n        \"AdjustAmmoStack\": true,\n        // Whether to set all items as examined by default\n        \"AllExaminedByDefault\": false\n    },\n    // Stimulator configuration settings\n    \"StimulatorConfig\": {\n        // Number of uses for stimulators\n        \"UseTimes\": 10,\n        // Price multiplier for stimulators\n        \"PriceModify\": 5,\n        // Weight of stimulators in kilograms\n        \"Weight\": 0.5\n    },\n    // Maximum item limit when entering raid\n    \"EnterGameItemLimit\": 3600,\n    // Health multiplier for all profiles\n    \"HealthModify\": 1.5,\n    // Energy and hydration multiplier for all profiles\n    \"EnergyHydrationModify\": 1.5,\n    // Raid duration multiplier\n    \"RaidTimeModify\": 3,\n    // Magazine loading time multiplier\n    \"TakeInAmmoTimeModify\": 0.05,\n    // Magazine unloading time multiplier\n    \"TakeOutAmmoTimeModify\": 0.05,\n    // Magazine checking time multiplier\n    \"CheckAmmoTimeModify\": 0.45,\n    // Flea market max active offers multiplier per level\n    \"MaxActiveOfferCountModify\": 7,\n    // Labs access card maximum usage count\n    \"LabsAccessMaximumNumberOfUsage\": 10,\n    // Labyrinth access card maximum usage count\n    \"LabysAccessMaximumNumberOfUsage\": 10,\n    // Ammo stack size\n    \"AmmoStack\": 300\n}\n</code></pre>\n<hr /></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>Easygame SPTarkov 模组</h3>\n<p>这是一个功能丰富的 Escape from Tarkov SPTarkov 服务端模组，通过统一的配置文件提供全面的游戏自定义功能。该模组提供独立可切换的功能，涵盖角色属性、战局机制、物品系统、经济和访问卡。</p>\n<h3>核心功能</h3>\n<h4>角色与战局调整</h4>\n<ul>\n<li>修改所有档案的基础生命值、能量和水分值</li>\n<li>调整所有地图的战局时长</li>\n<li>自定义进入战局时的物品携带上限</li>\n</ul>\n<h4>武器与弹药</h4>\n<ul>\n<li>调整弹匣装填、卸弹和检查时间</li>\n<li>修改所有弹药类型的堆叠数量</li>\n</ul>\n<h4>物品与市场</h4>\n<ul>\n<li>解除跳蚤市场物品售卖限制</li>\n<li>调整每等级最大活跃报价数量</li>\n<li>默认设置所有物品为已检查状态</li>\n</ul>\n<h4>消耗品</h4>\n<ul>\n<li>配置 stimulator 使用次数、重量和价格倍率（除吗啡外所有注射器）</li>\n</ul>\n<h4>访问卡</h4>\n<ul>\n<li>自定义实验室（Labs）和迷宫（Labyrinth）访问卡的最大使用次数</li>\n</ul>\n<h4>地图显示</h4>\n<ul>\n<li>可选在地图选择界面显示迷宫地图</li>\n</ul>\n<p>所有功能通过集中的 <code>config.json</code> 文件管理，允许用户灵活启用或禁用特定功能并调整参数，以实现个性化的游戏体验。</p>\n<hr />\n<h3>配置指南</h3>\n<p><code>config.json</code> 配置文件默认位于 <code>SPT/user/mods/Easygame/data</code>。</p>\n<ul>\n<li><strong>v1.0.0 版本</strong>：必须至少运行一次服务端以等待配置自动生成。您也可以手动创建包含以下所有键的配置文件，并根据需要预先设置所需功能。</li>\n<li><strong>v1.0.0 之后版本</strong>：默认会提供配置文件，允许您在启动服务端前设置所需功能。</li>\n</ul>\n<pre><code>{\n    // 功能启用/禁用开关\n    \"EnableFunction\": {\n        // 是否解除所有物品的跳蚤市场售卖限制\n        \"IsUnlockAllItemsSellLimit\": true,\n        // 是否在地图选择界面显示迷宫地图\n        \"ShowMapToChoiceScene\": true,\n        // 是否自定义带入战局的物品上限\n        \"EnterGameItemLimit\": true,\n        // 是否修改生命值、能量和水分值\n        \"EnergyHydrationModify\": true,\n        // 是否修改战局时长\n        \"RaidTimeModify\": true,\n        // 是否修改弹匣装填/卸弹/检查时间\n        \"AmmoTimeModify\": true,\n        // 是否修改跳蚤市场每等级最大活跃报价数量\n        \"MaxActiveOfferCountModify\": true,\n        // 是否调整实验室访问卡使用次数\n        \"AdjustLabsAccess\": true,\n        // 是否调整迷宫访问卡使用次数\n        \"AdjustLabysAccess\": true,\n        // 是否修改 stimulator 耐久度（不含吗啡）\n        \"AdjustSimulatorMaxHpResource\": true,\n        // 是否调整弹药堆叠数量\n        \"AdjustAmmoStack\": true,\n        // 是否默认所有物品为已检查状态\n        \"AllExaminedByDefault\": false\n    },\n    // 刺激物配置设置\n    \"StimulatorConfig\": {\n        // 刺激物使用次数\n        \"UseTimes\": 10,\n        // 刺激物价格倍率\n        \"PriceModify\": 5,\n        // 刺激物重量（千克）\n        \"Weight\": 0.5\n    },\n    // 进入战局时最大物品上限\n    \"EnterGameItemLimit\": 3600,\n    // 所有档案的生命值倍率\n    \"HealthModify\": 1.5,\n    // 所有档案的能量和水分倍率\n    \"EnergyHydrationModify\": 1.5,\n    // 战局时长倍率\n    \"RaidTimeModify\": 3,\n    // 弹匣装填时间倍率\n    \"TakeInAmmoTimeModify\": 0.05,\n    // 弹匣卸弹时间倍率\n    \"TakeOutAmmoTimeModify\": 0.05,\n    // 弹匣检查时间倍率\n    \"CheckAmmoTimeModify\": 0.45,\n    // 跳蚤市场每等级最大活跃报价倍率\n    \"MaxActiveOfferCountModify\": 7,\n    // 实验室访问卡最大使用次数\n    \"LabsAccessMaximumNumberOfUsage\": 10,\n    // 迷宫访问卡最大使用次数\n    \"LabysAccessMaximumNumberOfUsage\": 10,\n    // 弹药堆叠数量\n    \"AmmoStack\": 300\n}\n</code></pre></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2607/easy-game",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-02-26T15:24:00.000000Z",
+  "created_at": "2026-02-26T15:24:33.000000Z",
+  "updated_at": "2026-07-28T08:06:34.000000Z",
+  "owner": {
+    "id": 85431,
+    "name": "Suntion",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-10-06T15:34:17.000000Z",
+    "updated_at": "2026-07-10T04:52:14.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/SunYanbox/EasyGame",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13172,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Version 1.1.0 Release Notes</h3>\n<h4>New Features</h4>\n<p><strong>Task Execution Statistics and Performance Monitoring</strong></p>\n<ul>\n<li>Introduced a task runtime status tracking system that automatically records the execution result and time consumption of each task</li>\n<li>Added a task statistical report feature that outputs detailed performance analysis when the mod starts (output to <strong>Game Folder\\SPT\\user\\mods\\SuntionCore\\ModLogs\\EasyGame.log</strong>):\n<ul>\n<li>Completion status of each task (success/failure)</li>\n<li>Precise task execution time (millisecond precision)</li>\n<li>List of tasks skipped due to condition filtering</li>\n<li>Total time consumption of the entire task scheduling process</li>\n</ul>\n</li>\n<li>Automatically handles duplicate task names by appending suffixes like <code>_0</code>, <code>_1</code>, etc., to avoid overwriting statistical information</li>\n</ul>\n<hr />\n<h4>Optimizations and Refactoring</h4>\n<p><strong>Enhanced Configuration Loading Logic</strong></p>\n<ul>\n<li>Refactored the configuration loading process, moving directory creation into exception handling blocks to improve file operation robustness</li>\n<li>Added an outer global exception catch to prevent mod crashes caused by file I/O errors</li>\n<li>Applied null coalescing operators <code>?? 1.0d</code> to all numerical configuration items, ensuring the default multiplier of 1.0 is used when configurations are missing</li>\n<li>Simplified null check logic, removing redundant nested null conditional operators</li>\n</ul>\n<hr />\n<h4>Configuration Improvements</h4>\n<p><strong>Default Configuration File</strong></p>\n<ul>\n<li>Added a default mod configuration file <code>config.json</code>, allowing users to customize mod behavior before the first run</li>\n<li>Changed the default value for the “All Items Inspected” option to <code>false</code> (previously <code>true</code>)</li>\n<li>In coordination with the null safety logic in the code layer, ensures the mod can still run with safe default values when parts of the configuration are missing</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>版本 1.1.0 更新日志</h3>\n<h4>新特性</h4>\n<p><strong>任务执行统计与性能监控</strong></p>\n<ul>\n<li>引入了任务运行时状态跟踪系统，自动记录每个任务的执行结果和耗时</li>\n<li>新增任务统计报告功能，在模组启动时输出详细的性能分析（输出至 <strong>游戏目录\\SPT\\user\\mods\\SuntionCore\\ModLogs\\EasyGame.log</strong>）：\n<ul>\n<li>每个任务的完成状态（成功/失败）</li>\n<li>精确的任务执行时间（毫秒级精度）</li>\n<li>因条件过滤而跳过的任务列表</li>\n<li>整个任务调度过程的总耗时</li>\n</ul>\n</li>\n<li>自动处理重复的任务名称，通过添加 <code>_0</code>、<code>_1</code> 等后缀，避免统计信息被覆盖</li>\n</ul>\n<hr />\n<h4>优化与重构</h4>\n<p><strong>增强的配置加载逻辑</strong></p>\n<ul>\n<li>重构了配置加载流程，将目录创建移至异常处理块内部，提高了文件操作的鲁棒性</li>\n<li>添加了外层全局异常捕获，防止因文件 I/O 错误导致模组崩溃</li>\n<li>对所有数值型配置项应用了空合并运算符 <code>?? 1.0d</code>，确保在配置缺失时使用默认倍率 1.0</li>\n<li>简化了空值检查逻辑，移除了冗余的嵌套空条件运算符</li>\n</ul>\n<hr />\n<h4>配置改进</h4>\n<p><strong>默认配置文件</strong></p>\n<ul>\n<li>新增了默认模组配置文件 <code>config.json</code>，允许用户在首次运行前自定义模组行为</li>\n<li>将“所有物品已检查“选项的默认值更改为 <code>false</code>（此前为 <code>true</code>）</li>\n<li>与代码层的空安全逻辑协同，确保在部分配置缺失时模组仍能使用安全默认值运行</li>\n</ul></div></div></div>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2607/easy-game/1.1.0",
+      "content_length": 18076,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 2574,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-28T04:57:00.000000Z",
+      "created_at": "2026-02-28T04:57:36.000000Z",
+      "updated_at": "2026-07-28T08:06:34.000000Z",
+      "dependencies": [
+        {
+          "id": 2600,
+          "hub_id": null,
+          "guid": "com.suntion.suntioncore",
+          "name": "SuntionCore",
+          "slug": "suntioncore",
+          "teaser": "Some commonly used methods extracted and optimized from the mods I've created, suitable for SPT server mods.",
+          "thumbnail": "",
+          "downloads": 3585,
+          "favourites_count": 10,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2600/suntioncore",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 1,
+          "published_at": "2026-02-21T16:00:00.000000Z",
+          "created_at": "2026-02-21T15:59:16.000000Z",
+          "updated_at": "2026-07-28T08:10:13.000000Z",
+          "owner": {
+            "id": 85431,
+            "name": "Suntion",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2025-10-06T15:34:17.000000Z",
+            "updated_at": "2026-07-10T04:52:14.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13152,
+              "hub_id": null,
+              "version": "1.1.0",
+              "description": "<div class=\"tabset\"><div id=\"tabset-4-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Version 1.1.0 Release Notes</h3>\n<h4>Chore: Core Library Update</h4>\n<p><strong>Observability Improvements: Enhanced Log Tracking and Exception Context Information</strong></p>\n<p>This release focuses on improving the robustness and debuggability of the core library, particularly in edge cases related to object disposal and missing localization data. No public API changes have been introduced.</p>\n<ul>\n<li>\n<p><strong>Refactored <code>ModLogger.LogMessage</code> Logic</strong></p>\n<ul>\n<li>Improved error handling when the logger instance has been disposed (<code>_disposed</code> state).</li>\n<li>Instead of failing silently, the system now outputs red-highlighted error logs directly via <code>Console.WriteLine</code>.</li>\n<li>These diagnostic messages fully capture the context of the failure, including:\n<ul>\n<li>The affected stream type (<code>LogWriterStream</code>).</li>\n<li>The original log message that was attempted.</li>\n<li>The full exception stack trace (<code>StackTrace</code>).</li>\n</ul>\n</li>\n<li>This ensures that critical post-disposal logging attempts are always visible and traceable.</li>\n</ul>\n</li>\n<li>\n<p><strong>Refined <code>I18N</code> Exception Prompts</strong></p>\n<ul>\n<li>Enhanced the <code>NotLoadLanguageException</code> to provide clearer, more actionable error messages.</li>\n<li>The exception now dynamically injects relevant context to distinguish between two common failure scenarios:\n<ol>\n<li><strong>Setting the current language:</strong> The error message now includes the <code>CurrentLang</code> that was being set when the failure occurred.</li>\n<li><strong>Retrieving translation keys:</strong> The error message now specifies the missing <code>key</code> that the system attempted to translate.</li>\n</ol>\n</li>\n<li>This improvement significantly increases troubleshooting efficiency by immediately identifying the root cause of translation failures.</li>\n</ul>\n</li>\n</ul></div></div>\n<div id=\"tabset-4-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>版本 1.1.0 更新日志</h3>\n<h4>项目配置：核心库更新</h4>\n<p><strong>可观测性改进：增强对象释放后的日志追踪与异常上下文信息</strong></p>\n<p>本次更新专注于提高核心库在边缘情况下的鲁棒性和可调试性，特别是涉及对象已释放或本地化数据丢失的场景。本次更新未引入任何公共 API 变更。</p>\n<ul>\n<li>\n<p><strong>重构 <code>ModLogger.LogMessage</code> 逻辑</strong></p>\n<ul>\n<li>改进了当日志记录器实例已被释放（<code>_disposed</code> 状态）时的错误处理。</li>\n<li>系统不再静默失败，而是直接通过 <code>Console.WriteLine</code> 输出红色高亮显示的错误日志。</li>\n<li>这些诊断消息完整地捕获了失败时的上下文信息，包括：\n<ul>\n<li>受影响的流类型（<code>LogWriterStream</code>）。</li>\n<li>尝试记录的原始日志消息。</li>\n<li>完整的异常堆栈跟踪（<code>StackTrace</code>）。</li>\n</ul>\n</li>\n<li>此举确保了在对象释放后关键的日志记录尝试始终可见且可追溯。</li>\n</ul>\n</li>\n<li>\n<p><strong>完善 <code>I18N</code> 异常提示</strong></p>\n<ul>\n<li>增强了 <code>NotLoadLanguageException</code>，以提供更清晰、更具操作性的错误消息。</li>\n<li>该异常现在会动态注入相关的上下文信息，以区分两种常见的失败场景：\n<ol>\n<li><strong>设置当前语言：</strong> 错误消息现在会包含导致失败时正在设置的 <code>CurrentLang</code>（当前语言）。</li>\n<li><strong>检索翻译键：</strong> 错误消息现在会指定系统尝试翻译时缺失的 <code>key</code>（键名）。</li>\n</ol>\n</li>\n<li>此项改进通过立即识别翻译失败的根本原因，显著提高了故障排查效率。</li>\n</ul>\n</li>\n</ul></div></div></div>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2600/suntioncore/1.1.0",
+              "content_length": 15078,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 824,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-02-24T15:00:00.000000Z",
+              "created_at": "2026-02-24T15:00:08.000000Z",
+              "updated_at": "2026-07-28T08:06:11.000000Z"
+            },
+            {
+              "id": 13136,
+              "hub_id": null,
+              "version": "1.0.0",
+              "description": "<div class=\"tabset\"><div id=\"tabset-5-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Core Features Ready</h3>\n<p>Officially released core functionalities including <strong>Magnitude Formatting (new)</strong> , Internationalization (i18n), File Utilities, and the Logging System.</p>\n<h4>Regarding API Changes</h4>\n<p>Only APIs related to <strong>Magnitude Formatting</strong> (<code>MagnitudeFormatter</code>) have been added. There are <strong>no changes</strong> to the usage or signatures of existing public APIs.</p>\n<hr />\n<h3>Test Infrastructure: Built Complete Automated Testing Environment</h3>\n<ul>\n<li><strong>Configuration Optimization</strong>: Simplified the test project to a single target (<code>net9.0</code>) and added an MSBuild target to automatically copy <code>TestFiles</code> resources to the output directory.</li>\n<li><strong>Standardization Control</strong>: Created <code>.gitattributes</code> to enforce <code>binary</code> storage mode for binary files (<code>*.dat</code>, <code>*.dll</code>), preventing encoding corruption.</li>\n<li><strong>Architecture Refactoring</strong>: Introduced a <code>TestData</code> constant class for unified path management and moved <code>MagnitudeFormatterTest</code> to a dedicated namespace directory.</li>\n<li><strong>Internal Exposure</strong>: Used <code>[InternalsVisibleTo]</code> to expose internal members to the test assembly and added the <code>IsStreamReady</code> method for assertions.</li>\n</ul>\n<hr />\n<h3>Test Coverage: Executed Full-Module Integration and Stress Testing</h3>\n<ul>\n<li><strong>FileSizeUtil</strong>: Verified consistency between static methods and the <code>.ToFileSize()</code> string extension.</li>\n<li><strong>I18N</strong>: Covered the full workflow including language loading, chained translation (<code>::</code>), parameter replacement (<code>{{}}</code>), dynamic switching, and data extension.</li>\n<li><strong>ModLogger</strong>: Executed stress tests with 500 random loads, simulating multi-instance, multi-level log writing, and exception stack tracing.</li>\n</ul>\n<hr />\n<h3>Documentation: Added Reference Guide and API Manual</h3>\n<ul>\n<li><strong>Reference Tutorial</strong>: Added a “How to Reference This Library” section to both Chinese and English READMEs, detailing DLL copying and <code>.csproj</code> configuration (<code>Private=False</code>).</li>\n<li><strong>API Manual</strong>: Created <code>API_ZH.md</code> and <code>API_EN.md</code> containing definitions for all public interfaces; migrated detailed tables from the README to these files.</li>\n<li><strong>Usage Guidelines</strong>: Explicitly directed users to refer to the <code>SuntionCore.Tests</code> project for concrete code examples.</li>\n<li><strong>Acknowledgments Update</strong>: Added links and functional descriptions for the official SuntionCore mod.</li>\n</ul></div></div>\n<div id=\"tabset-5-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>核心功能就绪</h3>\n<p>正式发布核心功能，包括<strong>全新的量级格式化</strong>、国际化 (i18n)、文件工具和日志系统。</p>\n<h4>关于 API 变更</h4>\n<p>仅新增了与<strong>量级格式化</strong> (<code>MagnitudeFormatter</code>) 相关的 API。现有公共 API 的用法和签名<strong>均未改变</strong>。</p>\n<hr />\n<h3>测试基础设施：构建完整的自动化测试环境</h3>\n<ul>\n<li><strong>配置优化</strong>：将测试项目简化为单一目标框架 (<code>net9.0</code>)，并添加 MSBuild 目标以自动将 <code>TestFiles</code> 资源复制到输出目录。</li>\n<li><strong>标准化控制</strong>：创建 <code>.gitattributes</code> 文件，强制二进制文件（<code>*.dat</code>, <code>*.dll</code>）以 <code>binary</code> 模式存储，防止编码损坏。</li>\n<li><strong>架构重构</strong>：引入 <code>TestData</code> 常量类以统一管理路径，并将 <code>MagnitudeFormatterTest</code> 移至专用的命名空间目录。</li>\n<li><strong>内部成员暴露</strong>：使用 <code>[InternalsVisibleTo]</code> 将内部成员暴露给测试程序集，并添加了 <code>IsStreamReady</code> 方法用于断言。</li>\n</ul>\n<hr />\n<h3>测试覆盖：执行全模块集成与压力测试</h3>\n<ul>\n<li><strong>FileSizeUtil</strong>：验证了静态方法与 <code>.ToFileSize()</code> 字符串扩展之间的一致性。</li>\n<li><strong>I18N</strong>：覆盖了完整工作流程，包括语言加载、链式翻译 (<code>::</code>)、参数替换 (<code>{{}}</code>)、动态切换和数据扩展。</li>\n<li><strong>ModLogger</strong>：执行了 500 次随机负载的压力测试，模拟了多实例、多级别日志写入和异常堆栈跟踪。</li>\n</ul>\n<hr />\n<h3>文档：新增参考指南与 API 手册</h3>\n<ul>\n<li><strong>引用教程</strong>：在中文和英文 README 中均新增了“如何引用此库”部分，详细说明了 DLL 复制和 <code>.csproj</code> 配置 (<code>Private=False</code>)。</li>\n<li><strong>API 手册</strong>：创建了 <code>API_ZH.md</code> 和 <code>API_EN.md</code>，包含所有公共接口的定义；并将 README 中的详细表格迁移至这些文件。</li>\n<li><strong>使用指南</strong>：明确引导用户参考 <code>SuntionCore.Tests</code> 项目以获取具体的代码示例。</li>\n<li><strong>致谢更新</strong>：添加了官方 SuntionCore 模组的链接和功能描述。</li>\n</ul></div></div></div>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2600/suntioncore/1.0.0",
+              "content_length": 14835,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 75,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-02-22T11:28:00.000000Z",
+              "created_at": "2026-02-22T11:50:33.000000Z",
+              "updated_at": "2026-07-28T08:05:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 1,
+            "hub_id": 17,
+            "title": "Tools",
+            "slug": "tools",
+            "description": "Various standalone tools and programs that aren't installed like normal mods"
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a75484fd0869773516546e34b3885a471eb9d58832c831106db42b8ee87c92bc/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1167608092/9a0f3a17-0c07-4f04-bd7e-bcaf3c1fb9a1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A55Z&rscd=attachment%3B+filename%3DEasyGame-1.1.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A47Z&ske=2026-08-01T21%3A00%3A55Z&sks=b&skv=2018-11-09&sig=1PriGtWU3M1eF6q%2Bzm8katHhLjWQohbpA7urOCJIR1E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&response-content-disposition=attachment%3B%20filename%3DEasyGame-1.1.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13164,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<div class=\"tabset\"><div id=\"tabset-2-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><ul>\n<li><strong>Carry Limit Adjustment</strong>: Modify the maximum number of items players can bring into a raid</li>\n<li><strong>Raid Duration Modification</strong>: Adjust extraction time limits for all maps</li>\n<li><strong>Magazine Operation Time Modification</strong>: Adjust time required for loading, unloading, and checking magazines</li>\n<li><strong>Character Base Stats Modification</strong>: Adjust base health, energy, and hydration limits for all profiles</li>\n<li><strong>Flea Market Selling Restriction Removal</strong>: Allow items that couldn’t be sold on the flea market to be listed</li>\n<li><strong>Ammo Stack Size Modification</strong>: Modify stack limits for all ammunition types</li>\n<li><strong>Stimulator Durability Modification</strong>: Modify usage count, weight, and price for all injectors (except morphine)</li>\n<li><strong>Default Item Examination</strong>: Make all items examined by default</li>\n<li><strong>Labyrinth Map Display</strong>: Make the Labyrinth map appear in the map selection screen</li>\n<li><strong>Flea Market Offer Limit Modification</strong>: Adjust maximum offer count limits for different edition levels on the flea market</li>\n<li><strong>Labs Access Card Usage Adjustment</strong>: Modify usage count for Labs access cards</li>\n<li><strong>Labyrinth Access Card Usage Adjustment</strong>: Modify usage count for Labyrinth access cards</li>\n</ul></div></div>\n<div id=\"tabset-2-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><ul>\n<li><strong>携带上限调整</strong>：修改玩家能够带入战局的最大物品数量</li>\n<li><strong>战局时长调整</strong>：调整所有地图的撤离时间限制</li>\n<li><strong>弹匣操作时间调整</strong>：调整装弹、卸弹和检查弹匣所需的时间</li>\n<li><strong>角色基础属性调整</strong>：调整所有档案的基础健康值、能量值与水分值上限</li>\n<li><strong>跳蚤市场出售限制解除</strong>：允许原本无法在跳蚤市场出售的物品上架</li>\n<li><strong>弹药堆叠数量调整</strong>：修改所有类型弹药的堆叠上限</li>\n<li><strong>注射器耐久调整</strong>：修改所有注射器（除吗啡外）的使用次数、重量与价格</li>\n<li><strong>默认物品检视</strong>：所有物品默认设置为已检视状态</li>\n<li><strong>迷宫地图显示</strong>：使迷宫地图显示在地图选择界面中</li>\n<li><strong>跳蚤市场挂单上限调整</strong>：调整不同版本在跳蚤市场的最大挂单数量</li>\n<li><strong>实验室门禁卡使用调整</strong>：修改实验室门禁卡的使用次数</li>\n<li><strong>迷宫门禁卡使用调整</strong>：修改迷宫门禁卡的使用次数</li>\n</ul></div></div></div>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2607/easy-game/1.0.0",
+      "content_length": 16924,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 230,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-26T15:26:00.000000Z",
+      "created_at": "2026-02-26T15:26:21.000000Z",
+      "updated_at": "2026-07-28T08:06:23.000000Z",
+      "dependencies": [
+        {
+          "id": 2600,
+          "hub_id": null,
+          "guid": "com.suntion.suntioncore",
+          "name": "SuntionCore",
+          "slug": "suntioncore",
+          "teaser": "Some commonly used methods extracted and optimized from the mods I've created, suitable for SPT server mods.",
+          "thumbnail": "",
+          "downloads": 3585,
+          "favourites_count": 10,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2600/suntioncore",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 1,
+          "published_at": "2026-02-21T16:00:00.000000Z",
+          "created_at": "2026-02-21T15:59:16.000000Z",
+          "updated_at": "2026-07-28T08:10:13.000000Z",
+          "owner": {
+            "id": 85431,
+            "name": "Suntion",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2025-10-06T15:34:17.000000Z",
+            "updated_at": "2026-07-10T04:52:14.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13152,
+              "hub_id": null,
+              "version": "1.1.0",
+              "description": "<div class=\"tabset\"><div id=\"tabset-6-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Version 1.1.0 Release Notes</h3>\n<h4>Chore: Core Library Update</h4>\n<p><strong>Observability Improvements: Enhanced Log Tracking and Exception Context Information</strong></p>\n<p>This release focuses on improving the robustness and debuggability of the core library, particularly in edge cases related to object disposal and missing localization data. No public API changes have been introduced.</p>\n<ul>\n<li>\n<p><strong>Refactored <code>ModLogger.LogMessage</code> Logic</strong></p>\n<ul>\n<li>Improved error handling when the logger instance has been disposed (<code>_disposed</code> state).</li>\n<li>Instead of failing silently, the system now outputs red-highlighted error logs directly via <code>Console.WriteLine</code>.</li>\n<li>These diagnostic messages fully capture the context of the failure, including:\n<ul>\n<li>The affected stream type (<code>LogWriterStream</code>).</li>\n<li>The original log message that was attempted.</li>\n<li>The full exception stack trace (<code>StackTrace</code>).</li>\n</ul>\n</li>\n<li>This ensures that critical post-disposal logging attempts are always visible and traceable.</li>\n</ul>\n</li>\n<li>\n<p><strong>Refined <code>I18N</code> Exception Prompts</strong></p>\n<ul>\n<li>Enhanced the <code>NotLoadLanguageException</code> to provide clearer, more actionable error messages.</li>\n<li>The exception now dynamically injects relevant context to distinguish between two common failure scenarios:\n<ol>\n<li><strong>Setting the current language:</strong> The error message now includes the <code>CurrentLang</code> that was being set when the failure occurred.</li>\n<li><strong>Retrieving translation keys:</strong> The error message now specifies the missing <code>key</code> that the system attempted to translate.</li>\n</ol>\n</li>\n<li>This improvement significantly increases troubleshooting efficiency by immediately identifying the root cause of translation failures.</li>\n</ul>\n</li>\n</ul></div></div>\n<div id=\"tabset-6-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>版本 1.1.0 更新日志</h3>\n<h4>项目配置：核心库更新</h4>\n<p><strong>可观测性改进：增强对象释放后的日志追踪与异常上下文信息</strong></p>\n<p>本次更新专注于提高核心库在边缘情况下的鲁棒性和可调试性，特别是涉及对象已释放或本地化数据丢失的场景。本次更新未引入任何公共 API 变更。</p>\n<ul>\n<li>\n<p><strong>重构 <code>ModLogger.LogMessage</code> 逻辑</strong></p>\n<ul>\n<li>改进了当日志记录器实例已被释放（<code>_disposed</code> 状态）时的错误处理。</li>\n<li>系统不再静默失败，而是直接通过 <code>Console.WriteLine</code> 输出红色高亮显示的错误日志。</li>\n<li>这些诊断消息完整地捕获了失败时的上下文信息，包括：\n<ul>\n<li>受影响的流类型（<code>LogWriterStream</code>）。</li>\n<li>尝试记录的原始日志消息。</li>\n<li>完整的异常堆栈跟踪（<code>StackTrace</code>）。</li>\n</ul>\n</li>\n<li>此举确保了在对象释放后关键的日志记录尝试始终可见且可追溯。</li>\n</ul>\n</li>\n<li>\n<p><strong>完善 <code>I18N</code> 异常提示</strong></p>\n<ul>\n<li>增强了 <code>NotLoadLanguageException</code>，以提供更清晰、更具操作性的错误消息。</li>\n<li>该异常现在会动态注入相关的上下文信息，以区分两种常见的失败场景：\n<ol>\n<li><strong>设置当前语言：</strong> 错误消息现在会包含导致失败时正在设置的 <code>CurrentLang</code>（当前语言）。</li>\n<li><strong>检索翻译键：</strong> 错误消息现在会指定系统尝试翻译时缺失的 <code>key</code>（键名）。</li>\n</ol>\n</li>\n<li>此项改进通过立即识别翻译失败的根本原因，显著提高了故障排查效率。</li>\n</ul>\n</li>\n</ul></div></div></div>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2600/suntioncore/1.1.0",
+              "content_length": 15078,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 824,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-02-24T15:00:00.000000Z",
+              "created_at": "2026-02-24T15:00:08.000000Z",
+              "updated_at": "2026-07-28T08:06:11.000000Z"
+            },
+            {
+              "id": 13136,
+              "hub_id": null,
+              "version": "1.0.0",
+              "description": "<div class=\"tabset\"><div id=\"tabset-7-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><h3>Core Features Ready</h3>\n<p>Officially released core functionalities including <strong>Magnitude Formatting (new)</strong> , Internationalization (i18n), File Utilities, and the Logging System.</p>\n<h4>Regarding API Changes</h4>\n<p>Only APIs related to <strong>Magnitude Formatting</strong> (<code>MagnitudeFormatter</code>) have been added. There are <strong>no changes</strong> to the usage or signatures of existing public APIs.</p>\n<hr />\n<h3>Test Infrastructure: Built Complete Automated Testing Environment</h3>\n<ul>\n<li><strong>Configuration Optimization</strong>: Simplified the test project to a single target (<code>net9.0</code>) and added an MSBuild target to automatically copy <code>TestFiles</code> resources to the output directory.</li>\n<li><strong>Standardization Control</strong>: Created <code>.gitattributes</code> to enforce <code>binary</code> storage mode for binary files (<code>*.dat</code>, <code>*.dll</code>), preventing encoding corruption.</li>\n<li><strong>Architecture Refactoring</strong>: Introduced a <code>TestData</code> constant class for unified path management and moved <code>MagnitudeFormatterTest</code> to a dedicated namespace directory.</li>\n<li><strong>Internal Exposure</strong>: Used <code>[InternalsVisibleTo]</code> to expose internal members to the test assembly and added the <code>IsStreamReady</code> method for assertions.</li>\n</ul>\n<hr />\n<h3>Test Coverage: Executed Full-Module Integration and Stress Testing</h3>\n<ul>\n<li><strong>FileSizeUtil</strong>: Verified consistency between static methods and the <code>.ToFileSize()</code> string extension.</li>\n<li><strong>I18N</strong>: Covered the full workflow including language loading, chained translation (<code>::</code>), parameter replacement (<code>{{}}</code>), dynamic switching, and data extension.</li>\n<li><strong>ModLogger</strong>: Executed stress tests with 500 random loads, simulating multi-instance, multi-level log writing, and exception stack tracing.</li>\n</ul>\n<hr />\n<h3>Documentation: Added Reference Guide and API Manual</h3>\n<ul>\n<li><strong>Reference Tutorial</strong>: Added a “How to Reference This Library” section to both Chinese and English READMEs, detailing DLL copying and <code>.csproj</code> configuration (<code>Private=False</code>).</li>\n<li><strong>API Manual</strong>: Created <code>API_ZH.md</code> and <code>API_EN.md</code> containing definitions for all public interfaces; migrated detailed tables from the README to these files.</li>\n<li><strong>Usage Guidelines</strong>: Explicitly directed users to refer to the <code>SuntionCore.Tests</code> project for concrete code examples.</li>\n<li><strong>Acknowledgments Update</strong>: Added links and functional descriptions for the official SuntionCore mod.</li>\n</ul></div></div>\n<div id=\"tabset-7-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><h3>核心功能就绪</h3>\n<p>正式发布核心功能，包括<strong>全新的量级格式化</strong>、国际化 (i18n)、文件工具和日志系统。</p>\n<h4>关于 API 变更</h4>\n<p>仅新增了与<strong>量级格式化</strong> (<code>MagnitudeFormatter</code>) 相关的 API。现有公共 API 的用法和签名<strong>均未改变</strong>。</p>\n<hr />\n<h3>测试基础设施：构建完整的自动化测试环境</h3>\n<ul>\n<li><strong>配置优化</strong>：将测试项目简化为单一目标框架 (<code>net9.0</code>)，并添加 MSBuild 目标以自动将 <code>TestFiles</code> 资源复制到输出目录。</li>\n<li><strong>标准化控制</strong>：创建 <code>.gitattributes</code> 文件，强制二进制文件（<code>*.dat</code>, <code>*.dll</code>）以 <code>binary</code> 模式存储，防止编码损坏。</li>\n<li><strong>架构重构</strong>：引入 <code>TestData</code> 常量类以统一管理路径，并将 <code>MagnitudeFormatterTest</code> 移至专用的命名空间目录。</li>\n<li><strong>内部成员暴露</strong>：使用 <code>[InternalsVisibleTo]</code> 将内部成员暴露给测试程序集，并添加了 <code>IsStreamReady</code> 方法用于断言。</li>\n</ul>\n<hr />\n<h3>测试覆盖：执行全模块集成与压力测试</h3>\n<ul>\n<li><strong>FileSizeUtil</strong>：验证了静态方法与 <code>.ToFileSize()</code> 字符串扩展之间的一致性。</li>\n<li><strong>I18N</strong>：覆盖了完整工作流程，包括语言加载、链式翻译 (<code>::</code>)、参数替换 (<code>{{}}</code>)、动态切换和数据扩展。</li>\n<li><strong>ModLogger</strong>：执行了 500 次随机负载的压力测试，模拟了多实例、多级别日志写入和异常堆栈跟踪。</li>\n</ul>\n<hr />\n<h3>文档：新增参考指南与 API 手册</h3>\n<ul>\n<li><strong>引用教程</strong>：在中文和英文 README 中均新增了“如何引用此库”部分，详细说明了 DLL 复制和 <code>.csproj</code> 配置 (<code>Private=False</code>)。</li>\n<li><strong>API 手册</strong>：创建了 <code>API_ZH.md</code> 和 <code>API_EN.md</code>，包含所有公共接口的定义；并将 README 中的详细表格迁移至这些文件。</li>\n<li><strong>使用指南</strong>：明确引导用户参考 <code>SuntionCore.Tests</code> 项目以获取具体的代码示例。</li>\n<li><strong>致谢更新</strong>：添加了官方 SuntionCore 模组的链接和功能描述。</li>\n</ul></div></div></div>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2600/suntioncore/1.0.0",
+              "content_length": 14835,
+              "spt_version_constraint": "~4.0.4",
+              "downloads": 75,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-02-22T11:28:00.000000Z",
+              "created_at": "2026-02-22T11:50:33.000000Z",
+              "updated_at": "2026-07-28T08:05:43.000000Z"
+            }
+          ],
+          "category": {
+            "id": 1,
+            "hub_id": 17,
+            "title": "Tools",
+            "slug": "tools",
+            "description": "Various standalone tools and programs that aren't installed like normal mods"
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/19b0896660937ae6ac743b836ad071fb1e876d13c4b1edf3657c553539e97b10/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1167608092/a8892950-0944-40e8-9a77-967405cab472?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A22Z&rscd=attachment%3B+filename%3DEasyGame-1.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A42Z&ske=2026-08-01T21%3A10%3A22Z&sks=b&skv=2018-11-09&sig=cV7q39aiyNAJgLEBYUF2sRQnWC6o3kzCRZ1TPOxvNPc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&response-content-disposition=attachment%3B%20filename%3DEasyGame-1.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 1,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:41.199Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "type": "mod",
+  "id": 2514,
+  "hub_id": null,
+  "guid": "hiop.spt.mod.viewer",
+  "name": "SPTModViewer",
+  "slug": "sptmodviewer",
+  "teaser": "Allows you to track the status of mods relative to the Forge site",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/5aie7h0e2RUSMFS6AjyoW1H7Fi6h2WMpeiJF6T49.png",
+  "downloads": 3838,
+  "favourites_count": 12,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">How it work?</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/hiop/SPT-ModViewerFront/blob/master/screenshots/SMV-homepage.PNG?raw=true\" alt=\"preview\" /></p>\n<p>This is a server-side mod. It allows you to see which mods are installed on the server and clients(profiles). The data is displayed on a local web page.</p>\n<p>Features:</p>\n<ul>\n<li>You can easily track which mods are installed on the server and on clients.</li>\n<li>Compares mod versions with Forge and highlights outdated mods</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Install</div>\n<div class=\"tab-content\"><ul>\n<li>Unzip and paste into root game folder (like any other mods)</li>\n<li>Get token from <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/api-tokens\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/user/api-tokens</a> (read permission only)</li>\n<li>Create file - <code>SPT\\user\\mods\\SPTModViewer\\Config</code> with name <code>SptModViewerConfig.json5</code> and your forge token:</li>\n</ul>\n<pre><code>{\n\t\"forgeApiToken\": \"YOU_FORGE_API_TOKEN_HERE\"\n}\n</code></pre>\n<ul>\n<li>Start the SPT server</li>\n<li>Once the server is fully launched, you can visit the mod’s local web page:<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://127.0.0.1:6969/smv\" rel=\"noreferrer noopener\">https://127.0.0.1:6969/smv</a> (If the server is not on your computer, use the server IP and port)</li>\n<li>If everything is done correctly, you will see a page with your mods.</li>\n<li>Check out the FAQ section</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">FAQ</div>\n<div class=\"tab-content\"><p>If the FAQ didn’t help and you still have questions, you can ask them in the comments or on the SPT Discord:<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1439852757212201080\" rel=\"noreferrer noopener\">https://discord.com/channels/875684761291599922/1439852757212201080</a></p>\n<hr />\n<p><strong>This is mod updater?</strong></p>\n<p>NO</p>\n<hr />\n<p><strong>I don’t understand what these multi-colored rectangles are?</strong></p>\n<p>Each mod is a block. The color of the block’s border indicates the mod status:</p>\n<ul>\n<li>Updated - green (This means that your mod matches the latest version posted on the Forge website.)</li>\n<li>Outdated - red (There is a newer/other version on the Forge website)</li>\n<li>Undefined - grey (The mod was not updated or the mod was not found on the forge site (this can happen for several reasons)</li>\n<li>Uninstalled - grey dashed (The mod has been removed from the client or server)</li>\n</ul>\n<hr />\n<p><strong>The profile selection is empty!?</strong></p>\n<p>If you don’t see player profiles (in the filter), you need to first log into the game and then refresh the website page (F5)</p>\n<hr />\n<p><strong>After synchronization, some mods remained unrecognized (gray border)!!!</strong></p>\n<p>There are several options:</p>\n<ol>\n<li>The mod is not uploaded to the Forge servers.</li>\n<li>The mod was not recognized correctly and was not found on Forge.</li>\n<li>The mod is a primary dependency of the SPT (prefix SPT.*).</li>\n<li>Some mods can be complex and contain multiple file mod files</li>\n</ol>\n<p>Solution:<br />\nEach block with a mod has a menu (three dots)</p>\n<ol>\n<li>There’s nothing you can do about it. Just ignore it.</li>\n<li>If you know for sure that the mod is on the Forge servers, then: Menu -&gt; Change GUID (then follow the instructions in the dialog)</li>\n<li>The main SPT dependencies are also a mod. They can generally be hidden so they won’t be displayed again: Menu -&gt; Hide</li>\n<li>You can simply hide non-core mods: Menu -&gt; Hide</li>\n</ol>\n<hr /></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2514/sptmodviewer",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2025-12-27T13:04:00.000000Z",
+  "created_at": "2025-12-27T13:05:05.000000Z",
+  "updated_at": "2026-07-28T07:19:11.000000Z",
+  "owner": {
+    "id": 72091,
+    "name": "hiop90",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bYEK8yV9CwoRtfCoteXoj1uQiWwa7VsrQVssZzVk_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-01-23T05:43:23.000000Z",
+    "updated_at": "2026-08-01T19:35:18.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/hiop/SPT-ModViewer",
+      "label": "core mod"
+    },
+    {
+      "url": "https://github.com/hiop/SPT-ModViewerFront",
+      "label": "front"
+    }
+  ],
+  "versions": [
+    {
+      "id": 12707,
+      "hub_id": null,
+      "version": "0.3.0",
+      "description": "<p>Changelog:</p>\n<ul>\n<li>Added mod state UNINSTALLED (grey dashed block)</li>\n<li>Mod state filter now has a visual cue.</li>\n<li>Added the ability to remove information about uninstalled mods (menu option)</li>\n<li>Fixed an issue with detecting the latest version of the mod</li>\n<li>Fixed a visual display issue with the mod type filter: “0, 1, SERVER, CLIENT”</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/hiop/SPT-ModViewerFront/blob/master/screenshots/SMV-update030.png?raw=true\" alt=\"preview\" /></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2514/sptmodviewer/0.3.0",
+      "content_length": 2442670,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3339,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-29T13:37:00.000000Z",
+      "created_at": "2025-12-29T13:37:25.000000Z",
+      "updated_at": "2026-07-28T07:19:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/44313fd69b739072d6afe31e740e2eefbcfe79dbba8c9cf0f89b400ad6e92783?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122340906/be87dc5c-73ff-4604-8085-67d01534e207?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A42Z&rscd=attachment%3B+filename%3DSPT-ModViewer_030.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A11Z&ske=2026-08-01T21%3A06%3A42Z&sks=b&skv=2018-11-09&sig=9Cl2bvCuIgkpW%2B%2Fgd6VZ%2FH5OVnrhX4Z2IG4pFyiZilE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DSPT-ModViewer_030.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12685,
+      "hub_id": null,
+      "version": "0.2.0",
+      "description": "<p>Please read the installation instructions before use mod. See “Install” tab in mod description</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2514/sptmodviewer/0.2.0",
+      "content_length": 2406392,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 499,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-27T13:08:00.000000Z",
+      "created_at": "2025-12-27T13:08:45.000000Z",
+      "updated_at": "2026-07-28T07:13:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-dd2ca6992669b2d12e79c6f5e90d45c997f98f63f88b992365821b1c7e50dcda-267f80b3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122340906/14611a45-a4d5-4986-b407-9beaeafef186?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A26Z&rscd=attachment%3B+filename%3DSPT-ModViewer_0201.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A21Z&ske=2026-08-01T21%3A17%3A26Z&sks=b&skv=2018-11-09&sig=kmTzWwPzGOcal0DIRQFJ%2Be%2FQW3lK0BAOP6HXoaC3MeM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&response-content-disposition=attachment%3B%20filename%3DSPT-ModViewer_0201.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 26,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:52:27.221Z",
+    "discoveredBy": "seed"
+  }
+}

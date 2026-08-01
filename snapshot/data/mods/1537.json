@@ -1,0 +1,345 @@
+{
+  "type": "mod",
+  "id": 1537,
+  "hub_id": 2107,
+  "guid": "com.sgtlaggy.questtweaks",
+  "name": "sgtlaggy's Quest Tweaks",
+  "slug": "sgtlaggys-quest-tweaks",
+  "teaser": "Some QoL quest changes.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2107.png",
+  "downloads": 18697,
+  "favourites_count": 19,
+  "description": "<p>⚠️ Removing this mod should be safe but there may be lingering effects applied to in-progress quests.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">QOL Settings</div>\n<div class=\"tab-content\"><h3>Reveal All Quest Objectives</h3>\n<p>⚠️ <strong>This may lead to completing objectives out of order, Survive and Extract can be completed before the normally prerequisite objectives. Any currently active quests will have their objectives still revealed if the setting is disabled or mod is removed.</strong></p>\n<p>Reveal all objectives that are hidden by default and only show up after completing other objectives.</p>\n<p>One example is <a target=\"_blank\" class=\"external-link\" href=\"https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_1\" rel=\"noreferrer noopener\">Broadcast - Part 1</a>, the objective to place the Signal Jammer doesn’t appear until you’ve entered the room.</p>\n<h3>Reveal Unknown Quest Rewards</h3>\n<p>Replace all “Unknown Reward” quest rewards with the actual items.</p>\n<h3>Remove Time Gates</h3>\n<p>Remove waiting periods after some quests like Gunsmith.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Conditions</div>\n<div class=\"tab-content\"><h3>Remove Tedious Conditions</h3>\n<p>ℹ️ This is similar to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/336/kiki-removetediousquestconditions\" rel=\"noreferrer noopener\">kiki-RemoveTediousQuestConditions</a>.</p>\n<p>The following objective conditions can be removed.\nAny marked with 🔃 also will also apply to repeatable quests by default.</p>\n<ul>\n<li>🔃 Elimination target (PMC, scav, boss, etc)</li>\n<li>🔃 Weapon and mods</li>\n<li>Equipment</li>\n<li>Health/status effects (stun, dehydration)</li>\n<li>🔃 Body parts</li>\n<li>🔃 Distance</li>\n<li>Time</li>\n<li>Map/location</li>\n<li>Zone\n<ul>\n<li>Removing zone but not map conditions will expand it to the map.</li>\n</ul>\n</li>\n<li>🔃 Item found-in-raid status</li>\n</ul>\n<p>An additional setting toggles whether these also apply to repeatable quests.</p>\n<p>Each of these options can be overridden for individual quests using the <code>questOverrides</code> setting.\nIt should be in the format <code>{\"questId\": {\"option\": true, \"otherOption\": false}}</code>, using the option names in <code>removeConditions</code> for reference. These will always be handled regardless of <code>onlyQuests</code> and <code>exemptQuests</code>.</p>\n<p>As an example, to backport the expansion of <a target=\"_blank\" class=\"external-link\" href=\"https://escapefromtarkov.fandom.com/wiki/Forester%27s_Duty\" rel=\"noreferrer noopener\">Forester’s Duty</a>, you could set <code>{\"66ab9da7eb102b9bcd08591c\": {\"zone\": true}}</code> and this would leave other zones like Capturing Outposts intact.</p>\n<p>The <code>onlyQuests</code> setting lets you specify an exclusive list of quests that will be modified.</p>\n<p>The <code>exemptQuests</code> setting lets you specify a list of quests that will be skipped entirely.</p>\n<p>Quest IDs for these settings can be found using <a target=\"_blank\" class=\"external-link\" href=\"https://tarkynator.com/quests?scope=global\" rel=\"noreferrer noopener\">Tarkynator</a>. For example, the ID of the dehydration quest “The Survivalist Path - Zhivchik” is <code>5d25bfd086f77442734d3007</code>. This can be added to lists like <code>[\"5d25bfd086f77442734d3007\"]</code>. To add multiple quests, add a comma between IDs like <code>[\"...\", \"...\"]</code>.</p>\n<p>Modded quests can also be added. Their quest IDs can be found in some file in their own mod folder in <code>user/mods</code> or, if they use VCQL, <code>user/mods/Virtual's Custom Quest Loader/database/locales/en/THAT_MOD.json</code>.</p>\n<p>To set overrides for repeatable quests use <code>615ffc701c97c768137e719b</code> for PMC dailies, <code>618035d38012292db3081bf0</code> for weeklies, and <code>62825ef60e88d037dc1eb426</code> for scav dailies.</p>\n<h3>Set Number For Eliminations and Items to Hand Over</h3>\n<p>These options will set a percent of original value or flat value across the board for all quests to use when requiring kills or item turn-ins, respected by ‘exemptQuests‘ list.</p>\n<p>The item setting does not apply to quest items like the Bronze Pocket Watch or keys/keycards.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Special Cases</div>\n<div class=\"tab-content\"><h3>Only Require Level to start Lightkeeper</h3>\n<p>ℹ️ This is the same feature provided by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1521/lightkeeper-questline-patch\" rel=\"noreferrer noopener\">Lightkeeper Questline Patch</a>.</p>\n<p>This option will remove all the prerequisite quests to start <code>Network Provider - Part 1</code> and will only require a specific level. A value of <code>0</code> will disable this feature and leave the prerequisites in place.</p>\n<h3>Add Sako TRG M10 to Tarkov Shooter 1-6</h3>\n<p>BSG only added it to 7 and 8, this option makes it work for 1-6 as well.</p>\n<h3>Backport Collector Prerequisites from EFT 1.1.0.0</h3>\n<p>This will completely replace the prerequisites, so is incompatible with other mods such as <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1675/start-collector-early\" rel=\"noreferrer noopener\">Start Collector Early</a> but should be compatible with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2615/updated-collector-quest-and-streamer-case-eft-10-backport\" rel=\"noreferrer noopener\">Updated collector quest and streamer case</a>.</p>\n<p>New prerequisites:</p>\n<ul>\n<li>Loyalty level 4👑 Prapor</li>\n<li>Loyalty level 4👑 Therapist</li>\n<li>Loyalty level 4👑 Skier</li>\n<li>Loyalty level 4👑 Peacekeeper</li>\n<li>Loyalty level 4👑 Mechanic</li>\n<li>Loyalty level 4👑 Ragman</li>\n<li>Loyalty level 4👑 Jaeger</li>\n<li>Fence reputation 3+</li>\n<li>PMC Level 40</li>\n<li>A Shooter Born in Heaven</li>\n<li>The Tarkov Shooter - Part 4</li>\n<li>Sew It Good - Part 4</li>\n<li>Chemical - Part 4 OR Big Customer OR Out of Curiosity</li>\n</ul></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1537/sgtlaggys-quest-tweaks",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 7,
+  "published_at": "2024-07-08T22:09:00.000000Z",
+  "created_at": "2024-07-08T22:09:27.000000Z",
+  "updated_at": "2026-08-01T19:51:35.000000Z",
+  "owner": {
+    "id": 50076,
+    "name": "sgtlaggy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/S7wTCtKyPp2VJq7EYaE6x5KjtGrn3DEwK1gmB5iu_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-30T05:20:41.000000Z",
+    "updated_at": "2026-08-01T19:51:52.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 7,
+    "hub_id": 24,
+    "title": "Quests",
+    "slug": "quests",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/sgtlaggy/spt-quest-tweaks/tree/ts",
+      "label": "3.11"
+    },
+    {
+      "url": "https://github.com/sgtlaggy/spt-quest-tweaks",
+      "label": "4.0"
+    }
+  ],
+  "versions": [
+    {
+      "id": 14130,
+      "hub_id": null,
+      "version": "4.7.0",
+      "description": "<p>Added an option to backport the Kordbreach / EFT 1.1.0.0 Collector prerequisites based on <a target=\"_blank\" class=\"external-link\" href=\"https://x.com/tarkov/status/2077755562490581359\" rel=\"noreferrer noopener\">@tarkov’s recent tweet</a>.</p>\n<p>Added a new setting <code>questOverrides</code> that allows overriding the settings from <code>removeConditions</code> for individual quests.</p>\n<p>Repeating the example in the description, Forester’s Duty could be expanded from villages to the entire maps to match live by adding <code>{\"66ab9da7eb102b9bcd08591c\": {\"zone\": true}}</code> while leaving the zones for other quests like Capturing Outposts and Secured Perimeter in effect.</p>\n<p>When using the <code>onlyQuests</code> and <code>exemptQuests</code> settings, overrides will <em>always</em> take effect but will only fall back to the global/default settings in <code>removeConditions</code> depending on the quest’s presence in those settings.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.7.0",
+      "content_length": 16702,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1005,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-18T04:43:00.000000Z",
+      "created_at": "2026-07-18T04:44:49.000000Z",
+      "updated_at": "2026-08-01T19:51:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/720188f37d7dc7b7314ecba4b3e9132ba3df3da39d11c4a737385010f4d240c0?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/4d0a51bc-ba67-447f-919e-b59eead4abb8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A45Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.7.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A01Z&ske=2026-08-01T21%3A09%3A45Z&sks=b&skv=2018-11-09&sig=rsqZ3fGWMLkuZMudcBOTMqYiCbtRWQeL8cQYdorBJvQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.7.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13732,
+      "hub_id": null,
+      "version": "4.6.0",
+      "description": "<p>Added a new config option <code>OnlyQuests</code> to limit modifications to only a specific few quests.</p>\n<p>Fixed a potential conflict with <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2615/updated-collector-quest-and-streamer-case-eft-10-backport\" rel=\"noreferrer noopener\">Collector Backport</a>.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.6.0",
+      "content_length": 15414,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1825,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-10T05:01:00.000000Z",
+      "created_at": "2026-06-10T05:01:14.000000Z",
+      "updated_at": "2026-07-28T09:06:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/277257a080dc245867ddfba18b3bf6510074958dec7c7e121029e6b8acb3235d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/aef742bf-99b8-4902-942d-215636a6a4f0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A18Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A57Z&ske=2026-08-01T21%3A13%3A18Z&sks=b&skv=2018-11-09&sig=s%2Fg7pbL9sCjUPVUBqo1PIXwcu%2FTQrC0UO%2Bhy0NVLlBc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13035,
+      "hub_id": null,
+      "version": "4.5.1",
+      "description": "<p>Change load priority to load after mods that add quests, so it can actually affect them.\nAlso fixed a couple bugs that would have excluded night Factory and high-level Ground Zero when removing quest zones but not map.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.5.1",
+      "content_length": 14987,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 2625,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-10T09:54:00.000000Z",
+      "created_at": "2026-02-10T09:55:00.000000Z",
+      "updated_at": "2026-07-28T08:01:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0c4105dcaa3e42dc2b4c65dfbd552083cb8a35d942cca0d86d6ad407a21d7438?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/4456041d-da2c-4185-bead-e12fa734f339?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A10Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.5.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A00Z&ske=2026-08-01T20%3A56%3A10Z&sks=b&skv=2018-11-09&sig=26dPYge0bjsurl4PgYKQok5oCxCrq7WEd656XFjwfIM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.5.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12946,
+      "hub_id": null,
+      "version": "4.5.0",
+      "description": "<p>Added options to set item handover counts and eliminations by percent of original value instead of flat value across the board.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.5.0",
+      "content_length": 15213,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 454,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-30T04:38:00.000000Z",
+      "created_at": "2026-01-30T04:38:31.000000Z",
+      "updated_at": "2026-07-28T07:58:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/373a2449f7d8cfc970d964e9d802ac8da0ba9fa47a6161b03c88758a1b020208?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/77678d29-9f70-4a03-8743-d6392fd15628?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A52%3A34Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.5.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A52%3A30Z&ske=2026-08-01T20%3A52%3A34Z&sks=b&skv=2018-11-09&sig=R8pVAP43A6glVAavy0SQzMOVxe6BWRPJ%2FPhotksD4Nw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMiwibmJmIjoxNzg1NjE1MzAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pZ6eyLvkKeW_oNfUHmM0cF8YrxOyd0par3c1BmASQgk&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.5.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11864,
+      "hub_id": null,
+      "version": "4.4.2",
+      "description": "<p>Fixed an error that could seemingly brick profiles by no longer removing Map conditions from repeatable quests.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.4.2",
+      "content_length": 14811,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 3646,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-16T06:14:00.000000Z",
+      "created_at": "2025-10-16T06:14:29.000000Z",
+      "updated_at": "2026-07-28T06:04:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ea7e68a46593faf569586cb6ac940691c5d2c0ba88fe490b91ee88da81c85ca9",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/a24ac438-fd6a-4f5b-8559-bc528a531d20?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A14Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.4.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A49Z&ske=2026-08-01T20%3A58%3A14Z&sks=b&skv=2018-11-09&sig=%2FrNxL7qIkDrLP8DjAbhvI4iHYcJT5Ixka0bdtq5aWyk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMiwibmJmIjoxNzg1NjE1MzAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pZ6eyLvkKeW_oNfUHmM0cF8YrxOyd0par3c1BmASQgk&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.4.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11828,
+      "hub_id": null,
+      "version": "4.4.1",
+      "description": "<p>Fixed an error when enabling the option to remove Zone conditions.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.4.1",
+      "content_length": 14998,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 464,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T15:29:00.000000Z",
+      "created_at": "2025-10-13T15:30:22.000000Z",
+      "updated_at": "2026-07-28T06:03:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7c03f74d6c605eb9bd0b94a0d074f7451803e0f38edb3c3d8685d509b814a722",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/38edfcb6-0e3a-48a7-bb93-9f126a55045b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A16Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.4.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A47Z&ske=2026-08-01T21%3A14%3A16Z&sks=b&skv=2018-11-09&sig=epoV68V5hHSWUTSj4YBOWGe20yaTyA1BCLWxhGK2ZJ4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMiwibmJmIjoxNzg1NjE1MzAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pZ6eyLvkKeW_oNfUHmM0cF8YrxOyd0par3c1BmASQgk&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.4.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11780,
+      "hub_id": null,
+      "version": "4.4.0",
+      "description": "<p>Nothing new, just updated to 4.0.0.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.4.0",
+      "content_length": 14925,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 365,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-11T21:13:00.000000Z",
+      "created_at": "2025-10-11T21:10:20.000000Z",
+      "updated_at": "2026-07-28T06:02:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6145c18e744c320766ab302fb736819cf342a8b6cbce9ec6caf6c0f0d9bd0650",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/b588b35f-cd20-48c8-985a-5d27d25d50bf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A10Z&rscd=attachment%3B+filename%3DsgtlaggyQuestTweaks-4.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A37Z&ske=2026-08-01T21%3A02%3A10Z&sks=b&skv=2018-11-09&sig=ZzL5IkmL0%2FqKMKjcFPKhoCy%2BGXNpAumZ8R01ubMAlrY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwNCwibmJmIjoxNzg1NjE1MzA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HkbSL3iuOudESNz3bRT9duVlVUmw-SQK8YjXkL9_isA&response-content-disposition=attachment%3B%20filename%3DsgtlaggyQuestTweaks-4.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 539,
+      "hub_id": 14316,
+      "version": "4.3.0",
+      "description": "<p>Add options handoverItemCount and eliminationCount to set a universal number of kills/items required for quests, respected by exemptQuests.</p>\n<p>Set them to -1 (default) to leave them at original values.</p>\n<p>The item setting does not apply to keys or quest items like the Bronze Pocket Watch for Background Check.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2010,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-05-23T22:48:04.000000Z",
+      "created_at": "2025-05-23T22:48:04.000000Z",
+      "updated_at": "2026-05-14T01:50:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f0a714aa57b587d5ac256808a3a19b93c262f79c5a08630eddde3f84eb1584cd",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/65d2fb7e-80ff-47f5-8480-b75d3bf591e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A30Z&rscd=attachment%3B+filename%3Dsgtlaggy-QuestTweaks-4.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A16Z&ske=2026-08-01T21%3A03%3A30Z&sks=b&skv=2018-11-09&sig=H22FsoZ5GuZyjvS%2FG828Wl%2BF6W7NB4NRZwu0xtyTW9w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwNCwibmJmIjoxNzg1NjE1MzA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HkbSL3iuOudESNz3bRT9duVlVUmw-SQK8YjXkL9_isA&response-content-disposition=attachment%3B%20filename%3Dsgtlaggy-QuestTweaks-4.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1197,
+      "hub_id": 13579,
+      "version": "4.0.0",
+      "description": "<p>Updated to 3.11</p>\n<ul>\n<li>Removed Claustrophobia AA12 option</li>\n<li>Removed Grenadier option, as I didn’t read the quest text. I was just running off memory (and unimplemented launchers being in the data), pretty sure at some point it didn’t specify “hand grenades.”</li>\n<li>Added option for adding the new Sako TRG M10 to Tarkov Shooter 1-6</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/4.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 970,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T22:28:47.000000Z",
+      "created_at": "2025-03-15T22:28:47.000000Z",
+      "updated_at": "2026-05-14T02:07:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f0a714aa57b587d5ac256808a3a19b93c262f79c5a08630eddde3f84eb1584cd",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/02b41107-42ae-4c03-bf1c-596728fd1a79?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A56%3A16Z&rscd=attachment%3B+filename%3Dsgtlaggy-QuestTweaks-4.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A34Z&ske=2026-08-01T20%3A56%3A16Z&sks=b&skv=2018-11-09&sig=GwegqdIx3TqkV1mK2wYhvU28lHWthLIT%2FXWBKPbsWkM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwNCwibmJmIjoxNzg1NjE1MzA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HkbSL3iuOudESNz3bRT9duVlVUmw-SQK8YjXkL9_isA&response-content-disposition=attachment%3B%20filename%3Dsgtlaggy-QuestTweaks-4.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1445,
+      "hub_id": 13316,
+      "version": "3.3.0",
+      "description": "<ul>\n<li>Added option to make AA12s count toward <a target=\"_blank\" class=\"external-link\" href=\"https://escapefromtarkov.fandom.com/wiki/Claustrophobia\" rel=\"noreferrer noopener\">Claustrophobia</a></li>\n<li>Removed option to add MP18 and MP43 Sawed-off to Setup, it was already done in SPT 3.10</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/3.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 359,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-02-06T05:32:56.000000Z",
+      "created_at": "2025-02-06T05:32:56.000000Z",
+      "updated_at": "2026-05-14T02:23:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f0a714aa57b587d5ac256808a3a19b93c262f79c5a08630eddde3f84eb1584cd",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/e3b768ac-6759-47b5-b453-13cff9b4e4e1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A51%3A00Z&rscd=attachment%3B+filename%3Dsgtlaggy-QuestTweaks-3.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A17Z&ske=2026-08-01T20%3A51%3A00Z&sks=b&skv=2018-11-09&sig=miACUGLcgSfFN0Niif7i6jXEEDtMt%2Br8%2B6f%2BTlSFDEs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwNSwibmJmIjoxNzg1NjE1MzA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uLaUwsv1VyzsTpH4CSx5HHFwHpTFBVmIAniMrhF31NQ&response-content-disposition=attachment%3B%20filename%3Dsgtlaggy-QuestTweaks-3.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2328,
+      "hub_id": 12279,
+      "version": "3.0.0",
+      "description": "<p>Update to SPT 3.10<br />\nThe Gunsmith Challenge setting has been removed because of some technical changes in 3.10. Anyone who wants to pick it up is more than welcome to.</p>\n<p>The Collector level setting has been removed, use <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2284-start-collector-early\" rel=\"noreferrer noopener\">Start Collector Early</a> instead.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1537/sgtlaggys-quest-tweaks/3.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 231,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-26T19:01:24.000000Z",
+      "created_at": "2024-11-26T19:01:24.000000Z",
+      "updated_at": "2026-05-14T03:19:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f0a714aa57b587d5ac256808a3a19b93c262f79c5a08630eddde3f84eb1584cd",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825973304/6f09fab2-eaff-4257-9c2d-80d1205c1ee6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A51Z&rscd=attachment%3B+filename%3Dsgtlaggy-QuestTweaks-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A09Z&ske=2026-08-01T20%3A49%3A51Z&sks=b&skv=2018-11-09&sig=PSUXFeBt4enhKBrCjpumuZzbkH6KVLRHVyggAGfqK1w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwNSwibmJmIjoxNzg1NjE1MzA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uLaUwsv1VyzsTpH4CSx5HHFwHpTFBVmIAniMrhF31NQ&response-content-disposition=attachment%3B%20filename%3Dsgtlaggy-QuestTweaks-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 64,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:31.181Z",
+    "discoveredBy": "seed"
+  }
+}

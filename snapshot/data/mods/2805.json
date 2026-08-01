@@ -1,0 +1,885 @@
+{
+  "type": "mod",
+  "id": 2805,
+  "hub_id": null,
+  "guid": "com.shaneeexd.mapeditorlite",
+  "name": "Map Editor Lite",
+  "slug": "map-editor-lite",
+  "teaser": "Map Editor Lite is a server-side framework for SPTarkov that lets anyone create and share custom map content - using an in-raid editor and simple JSON packs, no programming required.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/URXE5JbXDR7275SJ18sywwReCwSFW3W6giRc28wN.png",
+  "downloads": 896,
+  "favourites_count": 10,
+  "description": "<h1>Map Editor Lite - Custom Map Editor Framework</h1>\n<p><strong>Map Editor Lite</strong> is a server-side framework for SPTarkov that lets anyone create and share custom map content - loot spawns, loot zones, static objects, interactive objects, bot spawn points, extract zones, and light zones - using an in-raid editor and simple JSON packs, no programming required.</p>\n<h2>What It Does</h2>\n<ul>\n<li><strong>In-raid editor</strong>: press <code>F8</code> while in a raid to place markers, preview items, and build custom map packs.</li>\n<li><strong>Custom markers</strong>: loot spawns, loot zones, static objects, interactive objects (doors &amp; containers), bot spawn points, extract zones, and light zones.</li>\n<li><strong>Pack system</strong>: export your map edits as shareable JSON packs.</li>\n<li><strong>Web tool</strong>: import and tune exported packs, adjust spawn chances, mark quest/forced items, and finalize them for release.</li>\n<li><strong>Server injection</strong>: the server mod reads pack JSON and injects the content into SPT raid loot tables, exfiltration points, bot zones, and lighting.</li>\n<li><strong>Forced spawns</strong>: quest and guaranteed spawns are registered through <strong>WTT-CommonLib</strong>.</li>\n<li><strong>Modder friendly</strong>: other mods can ship pack JSON files in their own <code>MapLoot/</code> folders; the server mod loads them automatically.</li>\n</ul>\n<h2>MEL Prefab Hub</h2>\n<p>Anyone can make a prefab within the editor and submit them to the <a target=\"_blank\" class=\"external-link\" href=\"https://serenity-workshop.netlify.app/prefabs\" rel=\"noreferrer noopener\">prefab hub</a> for others to use.</p>\n<h2>Web Tool</h2>\n<p>The mod also includes a <a target=\"_blank\" class=\"external-link\" href=\"https://mapeditorlite-tool.netlify.app\" rel=\"noreferrer noopener\">web tool</a>, however it is mainly to be used for making micro adjustments to your existing packs, rather than for pack creation, that’s to be done with the client mod.</p>\n<h2>Images</h2>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ShaneeexD/MapLootEditorLite#images\" rel=\"noreferrer noopener\">https://github.com/ShaneeexD/MapLootEditorLite#images</a></p>\n<h2>Installation</h2>\n<ol>\n<li>Drag the <code>SPT</code> and <code>BepInEx</code> folders from the mod archive into your SPT installation directory.</li>\n<li>Make sure <strong>WTT-CommonLib</strong> (<code>com.wtt.commonlib</code>) is installed as a server mod.</li>\n<li>Start the server. Map Editor Lite loads automatically.</li>\n</ol>\n<p>On first launch the client creates:</p>\n<ul>\n<li><code>SPT/BepInEx/config/com.shaneeexd.mapeditorlite.cfg</code> — BepInEx configuration (editor toggle, hotkeys, etc.)</li>\n<li><code>SPT/user/mods/MapEditorLite/</code> — client read/write data folder\n<ul>\n<li><code>editor/</code>          # in-raid editor saves</li>\n<li><code>spawns/</code>          # built-in spawn directory</li>\n<li><code>imports/</code>         # files imported into the tool</li>\n<li><code>cache/</code>           # cached item data</li>\n<li><code>prefabs/</code>         # saved prefabs</li>\n<li><code>exports/</code>         # packs exported from the in-raid editor</li>\n<li><code>packs/</code>           # final user packs for the server to load</li>\n</ul>\n</li>\n</ul>\n<h2>Configuration</h2>\n<p>Edit <code>SPT/BepInEx/config/com.shaneeexd.mapeditorlite.cfg</code>:</p>\n<pre><code>[General]\nEnableEditor = false\nEnableDebugVisuals = false\n</code></pre>\n<ul>\n<li><code>EnableEditor</code> — set to <code>true</code> while developing. Default is <code>false</code>, so the F8 editor is disabled until you opt in.</li>\n<li><code>EnableDebugVisuals</code> — show extra debug visuals in raid.</li>\n</ul>\n<h2>Creating a Map Pack</h2>\n<ol>\n<li>Install the client plugin and server mod.</li>\n<li>Set <code>EnableEditor = true</code> in the BepInEx config.</li>\n<li>Enter a raid and press <code>F8</code> to open the editor.</li>\n<li>Place markers for loot, zones, objects, bot spawns, extracts, or lights.</li>\n<li>Enter a pack name and click <strong>Export Pack</strong> in the editor.</li>\n<li>The exported pack is written to <code>SPT/user/mods/MapEditorLite/exports/</code>.</li>\n<li>Open the <strong>Map Editor Lite Tool</strong>, import the pack, tune anything you need.</li>\n<li>Move the final pack into <code>SPT/user/mods/MapEditorLite/packs/</code>.</li>\n</ol>\n<blockquote>\n<p><strong>Tip</strong>: Always test on a new developer profile (and clear temp cache) so you can verify spawns, loot, extracts, and lighting without affecting your main save.</p>\n</blockquote>\n<h2>Publishing a Pack</h2>\n<p>The final pack is a JSON file that can be distributed as a standalone add-on.</p>\n<p>When publishing:</p>\n<ol>\n<li><strong>State the dependency</strong>: Your add-on pack requires <strong>Map Editor Lite v1.0.0</strong> for SPT 4.0.13.</li>\n<li><strong>Do not include</strong> the Map Editor Lite DLL or other authors’ packs in your zip.</li>\n<li><strong>Test</strong> by extracting and running the server before publishing.</li>\n</ol>\n<p>Users install your pack by dragging the <code>SPT</code> folder (containing <code>SPT\\user\\mods\\MapEditorLite\\packs</code>) into their SPT install.</p>\n<h2>Dependencies</h2>\n<ul>\n<li>SPTarkov 4.0.13</li>\n<li>WTT-CommonLib (server mod)</li>\n</ul>\n<h2>More Information</h2>\n<p>View my framework mods and user created add-ons for them <a target=\"_blank\" class=\"external-link\" href=\"https://serenity-workshop.netlify.app\" rel=\"noreferrer noopener\">here.</a></p>\n<ul>\n<li>Full documentation, JSON reference, and examples are in the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ShaneeexD/MapLootEditorLite/blob/main/README.md\" rel=\"noreferrer noopener\">GitHub README</a>.</li>\n</ul>\n<h2>License</h2>\n<p>MIT License</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2805/map-editor-lite",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, the custom UI was also heavily done by AI due to the nature of creating it programmatically. The code is thoroughly reviewed by me before anything is published.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": true,
+  "category_id": 17,
+  "published_at": "2026-07-07T03:20:00.000000Z",
+  "created_at": "2026-07-07T03:22:40.000000Z",
+  "updated_at": "2026-07-29T18:02:21.000000Z",
+  "owner": {
+    "id": 86008,
+    "name": "shaneeexd",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/CzoBD8u0ZJWanwXrKVPvmAhvsX72I6JNZkEFQWX3_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/LoL77W5RmT8vOHIkKv04LwmtH0IZhX7JoAm1SlsP_1280w.webp",
+    "created_at": "2025-10-19T19:42:09.000000Z",
+    "updated_at": "2026-08-01T18:56:15.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ShaneeexD/MapLootEditorLite",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14281,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<h2>v2.0.2 Changelog</h2>\n<ul>\n<li>For vanilla removals, doors are now checked via ID also for better accuracy, no more wrong door removals if there are more than 1 in close proximity to each other</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/2.0.2",
+      "content_length": 2563005,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 144,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-29T06:43:00.000000Z",
+      "created_at": "2026-07-29T06:44:33.000000Z",
+      "updated_at": "2026-07-29T18:02:21.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            },
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            },
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTk1NmZjYWU3ZDE1NmE4YWFiNjExM2FkODJiY2VhMWU6MTc4NTMwNzM5MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1lQtC_1Ec9lJLoLK0S1-Lrova6uEBqGup&export=download"
+      }
+    },
+    {
+      "id": 14267,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<h2>v2.0.1 Changelog</h2>\n<ul>\n<li>Fixed an issue where packs were being loaded the same way as exports, so previews were showing when they should not</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/2.0.1",
+      "content_length": 2559846,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 55,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-28T03:51:00.000000Z",
+      "created_at": "2026-07-28T03:52:59.000000Z",
+      "updated_at": "2026-07-28T18:02:59.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            },
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            },
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MTExYTc3MjU2YzgyOGJjNGVhMjYwYTE2NTdmNmRlYzM6MTc4NTIxMDcxMA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=19298iWEwk0Cs2eerancj-qo-E85GPMTq&export=download"
+      }
+    },
+    {
+      "id": 14249,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h1>v2.0.0 Changelog</h1>\n<h2>Fixes/Changes</h2>\n<ul>\n<li>Fixed issue with loot spawns chance being shared</li>\n<li>Improved loading speed and efficiency</li>\n<li>Fixed freecam ghosting</li>\n<li>Fixed container loot not correctly stacking items (money, ammo)</li>\n<li>Fixed spawn rates not working as intended</li>\n<li>More reliable object previews</li>\n<li>Copy and paste now actually pastes at crosshair location</li>\n<li>General bug fixes and QOL changes</li>\n</ul>\n<h2>Additions</h2>\n<ul>\n<li>Included scav spawns in vanilla data</li>\n<li>Added localisation support (feel free to make translations and submit an addon)</li>\n<li>Added raycast filtering for selecting objects by name</li>\n<li>Added a render view of every object and currently will be selected object while in pick mode</li>\n<li>Added ability to spawn items with child tpl’s and set their slots</li>\n<li>Added ability to lock groups and objects in the hierarchy so they cannot be accidentally clicked in the game world</li>\n<li>Added ability to set initial door states, whether it can be breached etc.</li>\n<li>Added child object detection, GameObjects now show their children in the hierarchy and can be manually edited, it also detects interactable objects like doors etc so keys can be set</li>\n<li>Added ability to set keys to containers like safes and cash registers</li>\n<li>Added ability to toggle preview mode, so you can see objects and lights etc in normal mode</li>\n<li>Added a button in the debug menu to set raid to 24 hours</li>\n<li>Added custom blocker markers (invisible walls)</li>\n<li>Added ability to inject custom models and use them as objects (bundles folder within the packs folder)</li>\n</ul>\n<p>Probably more that I do not remember - enjoy</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/2.0.0",
+      "content_length": 2559798,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 58,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-27T07:17:00.000000Z",
+      "created_at": "2026-07-27T07:28:24.000000Z",
+      "updated_at": "2026-07-28T09:59:12.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            },
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            },
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YzM4NjAzYTZiNjk1ODVmZWZjNjU4ZGY1NWZlN2Y3YTk6MTc4NTEzNzQxNA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1LYN5eDxlQ1zRoEtkNv0_pjDolxwtGx-b&export=download"
+      }
+    },
+    {
+      "id": 14158,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h2>v1.2.0 Changelog</h2>\n<h3>Added</h3>\n<ul>\n<li><strong>Custom Bot &amp; PMC Spawn Points:</strong> new <code>BotSpawnPoint</code> and <code>PmcSpawnZone</code> markers are now supported and can be placed on any map.</li>\n<li><strong>Force Player Spawn:</strong> <code>BotSpawnPoint</code> and <code>PmcSpawnZone</code> markers now expose a <code>Force Player Spawn</code> toggle. When enabled, the player is forced to spawn at that point/zone; when disabled, it allows any bot/PMC spawn.</li>\n</ul>\n<h3>Fixed</h3>\n<ul>\n<li><strong>Container Loot Stack Counts:</strong> currency/ammo and other stackable loose/static loot now spawns with the correct <code>StackObjectsCount</code> values from vanilla data instead of always spawning as single items.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/1.2.0",
+      "content_length": 2390316,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 140,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-19T23:28:00.000000Z",
+      "created_at": "2026-07-19T23:32:23.000000Z",
+      "updated_at": "2026-07-28T09:48:39.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            },
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            },
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OTA1MTkzMGFiNDZmNWY3MmVkZTk0NGE3MmE2ODU3NTU6MTc4NDUwMzc0Mg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1bRt0NLj1hvbtqfUZ8JuFiQbvdXjDy7Wa&export=download"
+      }
+    },
+    {
+      "id": 14133,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<h2>v1.1.1 Changelog</h2>\n<h3>Fixed</h3>\n<ul>\n<li><strong>Loot Zones:</strong> items inside a loot zone now respect their individual <code>% chance</code> values instead of always spawning.</li>\n<li><strong>Container Loot (Default &amp; Hybrid):</strong> copied containers set to <code>Default</code> or <code>Hybrid</code> now reliably contain loot by injecting the marker’s item list the same way <code>Custom</code> does. <code>Default</code> uses the copied vanilla loot, and <code>Hybrid</code> uses vanilla loot plus any custom items you add.</li>\n<li><strong>Import Vanilla Loot:</strong> the importer now correctly finds the vanilla database for installs where <code>SPT_Data</code> is nested inside an <code>SPT</code> subfolder.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/1.1.1",
+      "content_length": 313863,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 53,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-18T16:10:00.000000Z",
+      "created_at": "2026-07-18T16:11:46.000000Z",
+      "updated_at": "2026-07-28T09:43:47.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            },
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            },
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MmM3ZTFkNjc5MGU4ODMyNjA4MTcxN2MwYjQxNmRlMWY6MTc4NDM5MTA1Ng==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1IKRknxEC6c7attbhgY1WfhggTa7TbaSM&export=download"
+      }
+    },
+    {
+      "id": 14027,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h2>v1.1.0 Changelog</h2>\n<ul>\n<li>Pressing F8 now automatically enters freecam editor mode so the menu no longer opens over the game UI and the cursor unlock works consistently.</li>\n<li>The mod EventSystem is now activated whenever the editor cursor is unlocked (including in freecam), so editor UI buttons and inputs can be clicked.</li>\n<li>Freecam now spawns a dedicated <code>MLE_FreeCam</code> camera by cloning the player camera GameObject, so it inherits the full rendering/post-processing stack (Prism, PostProcess, HBAO, SSAA, grading, etc.).</li>\n<li>A render controller attached to the custom freecam fixes render distance/culling: far clip and layer cull distances are set to 10000, occlusion culling is disabled, and LOD bias is raised while in freecam.</li>\n<li>The player is no longer teleported every freecam frame; they are only teleported to the freecam location when exiting freecam.</li>\n<li>New <strong>Output</strong> tab in the bottom panel shows a rolling log of user-visible messages (e.g., door ID dumps, export confirmations) with the full output path, so players don’t need the BepInEx console open.</li>\n<li>Door ID dumps and pack exports now write their success/failure messages to the new Output tab.</li>\n<li>The Output tab has <strong>Copy</strong> and <strong>Clear</strong> buttons; Copy puts all log lines on the system clipboard.</li>\n<li>Copy/paste (Ctrl+C/V) and prefabs now support all marker types, including LightZone, ExtractZone, BotSpawnPoint, BotSpawnZone, and TriggerZone.</li>\n<li>Custom light zones now support configurable shadow settings (None/Hard/Soft, shadow strength/bias/normal bias) to reduce light bleeding through walls.</li>\n<li>The light inspector has a <strong>Force Shadows</strong> button that enables shadow casting/receiving on all renderers within the light’s range.</li>\n<li>Translate/rotate/scale gizmos now scale with camera distance so they stay a usable size when the camera is far from the selected marker.</li>\n<li>Added scene object removal to allow deleting existing GameObjects within a raid.</li>\n<li>Scene object removal is non-destructive: the editor only disables the object as a preview, records its name/path/position/rotation/scale in <code>removedObjects</code>, and exports it with the pack. The actual destruction only happens when the pack is loaded in a raid via <code>RuntimeInteractiveObjectSpawner</code>, and packs are only loaded from the published <code>ServerModPacksDirectory</code> (not exports).</li>\n<li>Added a new <strong>Removed</strong> tab that lists every vanilla object marked for removal, with <strong>Restore</strong> and <strong>Restore All</strong> buttons to re-enable them in the editor, plus <strong>Apply Preview</strong> and <strong>Refresh</strong> buttons.</li>\n<li>Picked scene objects are shown in both the <strong>GameObjects</strong> right panel and the main <strong>Inspector</strong> tab.</li>\n<li>All JSON serialization (map save, prefab save, pack export, door dumps) now uses <code>CultureInfo.InvariantCulture</code> so files are written correctly regardless of the user’s Windows locale.</li>\n<li>Game view no longer appears shrunk on non-standard resolutions/aspect ratios (e.g., 2560x1600 16:10); the camera now fills the full screen behind the editor UI.</li>\n<li>Freecam camera now uses the correct full-screen viewport instead of inheriting a smaller game viewport.</li>\n<li>Reduced console noise: removed informational logs from keybind presses, cursor toggles, copy/paste/undo/redo, and preview spawning. Warnings and errors remain.</li>\n<li>Cursor unlock button is now configurable in BepInEx config (<code>UnlockCursorMouseButton</code>, default 2 = middle). Set to 3 or 4 to use mouse button 4 or 5 instead.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/1.1.0",
+      "content_length": 314879,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 307,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-09T00:53:00.000000Z",
+      "created_at": "2026-07-09T00:56:27.000000Z",
+      "updated_at": "2026-07-28T09:37:14.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            },
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            },
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZDcwMjNhODU2N2FhOWY1YmJjMjIyNzc0Mjk4YWE2Yzk6MTc4MzU1ODU3NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1jGTMQbPi45ATuOjdkddKiun4rrUSAKVk&export=download"
+      }
+    },
+    {
+      "id": 14018,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release, more to come :)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2805/map-editor-lite/1.0.0",
+      "content_length": 283896,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 139,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-07T03:24:00.000000Z",
+      "created_at": "2026-07-07T03:25:07.000000Z",
+      "updated_at": "2026-07-28T09:36:47.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309257,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 14228,
+              "hub_id": null,
+              "version": "2.0.23",
+              "description": "<p>reduced the error logging to be behind config.\nMODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.23",
+              "content_length": 245746,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 15939,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-26T04:25:00.000000Z",
+              "created_at": "2026-07-26T04:26:24.000000Z",
+              "updated_at": "2026-07-28T18:02:31.000000Z"
+            },
+            {
+              "id": 14222,
+              "hub_id": null,
+              "version": "2.0.22",
+              "description": "<ul>\n<li>FINALLY fixed salvage zones :prayge:</li>\n<li>salvage zone UI update + icon!</li>\n<li>add random craft result amount options</li>\n<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>\n<li>added client handling for random craft amounts</li>\n<li>added better validation warnings and a config for validation logging</li>\n<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>\n<li>added new quest service for making quest items</li>\n<li>removed dependency on spt customitemservice</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.22",
+              "content_length": 245907,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 2537,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-07-25T17:47:00.000000Z",
+              "created_at": "2026-07-25T17:47:29.000000Z",
+              "updated_at": "2026-07-28T09:55:31.000000Z"
+            },
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MWU4NDQxODA3ZDEwN2UyZmI5NWYzZTY5MGJiM2YwNmM6MTc4MzM5NDY4Mg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1wTOqaklEff8-s1DeBR9pLenj_Wisfjt5&export=download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 6,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:19.536Z",
+    "discoveredBy": "seed"
+  }
+}

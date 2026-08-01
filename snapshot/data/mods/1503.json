@@ -1,0 +1,449 @@
+{
+  "type": "mod",
+  "id": 1503,
+  "hub_id": 2066,
+  "guid": "com.guiltyman.addmissingquestrequirements",
+  "name": "Add Missing Quest Weapon Requirements",
+  "slug": "add-missing-quest-weapon-requirements",
+  "teaser": "Dynamically reads and applies overrides to the weapon restrictions of kill/eliminate conditions of quests based on override files. Normally, the conditions' weapons need to be manually updated for every added gun. This mod aims to automate this process.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2066.png",
+  "downloads": 11585,
+  "favourites_count": 22,
+  "description": "<h1>AddMissingQuestRequirements</h1>\n<blockquote>\n<p>Server-side SPT 4.x mod that auto-expands quest weapon requirements to include modded clones.</p>\n</blockquote>\n<p>A server-side SPT mod that automatically includes <strong>modded weapons and attachments</strong> in base-game quest conditions.</p>\n<p>Every vanilla quest that says <em>“kill 10 PMCs with an AK-74”</em> implicitly means “any modded AK-74 clone too”  but the game only counts the specific weapon IDs BSG listed. This mod fixes that at server startup: it figures out what category each weapon and attachment belongs to, then expands quest conditions to include every same-category item installed on your server.</p>\n<p><strong>No in-raid cost.</strong> Everything happens once, when the server boots. Nothing is patched on the fly.</p>\n<blockquote>\n<p>For an expanded set of fine-tuned configurations and overrides, see the addon: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/addon/74/amqwr-patches-addon#description\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/addon/74/amqwr-patches-addon#description</a></p>\n</blockquote>\n<hr />\n<h2>Install</h2>\n<ol>\n<li>\n<p>Build or download the release. Drop the whole folder into <code>SPT/</code>:</p>\n<pre><code>SPT/user/mods/GuiltyMan-AddMissingQuestRequirements/\n    AddMissingQuestRequirements.dll\n    config/\n        config.jsonc\n    MissingQuestWeapons/\n        QuestOverrides.jsonc\n        WeaponOverrides.jsonc\n        AttachmentOverrides.jsonc\n</code></pre>\n</li>\n<li>\n<p>Start the SPT server. You should see one line in the server console:</p>\n<blockquote>\n<p><code>AddMissingQuestRequirements ready in 1047ms — 20 of 49 weapon-quests changed (50 of 918 conditions). Weapons: 203 items across 66 types. Attachments: 1990 items across 1338 types.</code></p>\n</blockquote>\n</li>\n<li>\n<p>Launch the game. Quest kill counts should now tick on modded weapons of the same type.</p>\n</li>\n</ol>\n<p><strong>Nothing to configure to use the mod</strong> — defaults cover all vanilla quests. Read on only if you want to customize behaviour or add support for your own mods.</p>\n<hr />\n<h2>Getting help</h2>\n<p>Turn on <code>\"debug\": true</code> and restart the server once, then open an issue with:</p>\n<ol>\n<li>Your <code>config.jsonc</code>, <code>WeaponOverrides.jsonc</code>, <code>QuestOverrides.jsonc</code>, <code>AttachmentOverrides.jsonc</code>.</li>\n<li><code>AddMissingQuestRequirements-debug-report.json</code> and <code>AddMissingQuestRequirements-debug-report.html</code> from next to the DLL.</li>\n<li><code>AddMissingQuestRequirements.log</code> from next to the DLL.</li>\n<li>A description of the quest / weapon / attachment that’s misbehaving.</li>\n</ol>\n<hr />\n<p>More information at github: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements\" rel=\"noreferrer noopener\">https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1503/add-missing-quest-weapon-requirements",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 7,
+  "published_at": "2024-06-24T19:36:00.000000Z",
+  "created_at": "2024-06-24T19:36:13.000000Z",
+  "updated_at": "2026-07-28T09:03:51.000000Z",
+  "owner": {
+    "id": 53980,
+    "name": "GuiltyMan",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=G&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-06-18T11:59:08.000000Z",
+    "updated_at": "2026-07-17T12:10:53.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 7,
+    "hub_id": 24,
+    "title": "Quests",
+    "slug": "quests",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13677,
+      "hub_id": null,
+      "version": "2.3.0",
+      "description": "<h3>Fixes</h3>\n<ul>\n<li>Override item IDs are now matched case-insensitively against the item database and folded to the DB’s canonical casing. Miscased IDs (e.g. uppercase Massivesoft template IDs) in manualTypeOverrides, canBeUsedAs, and quest includedWeapons / excludedWeapons / includedMods / excludedMods previously no-opped silently; they now work and are written back into quests with the correct casing.</li>\n</ul>\n<h3>Added</h3>\n<ul>\n<li>Code-level default rule tags every bolt-action rifle under the SniperRifle node (_props.BoltAction == true) as BoltActionSniperRifle, removing the need for per-weapon manual overrides. Guarded by hasAncestor: SniperRifle so the bolt-action TOZ-106 shotgun is not mistagged.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.3.0",
+      "content_length": 93565,
+      "spt_version_constraint": "~4.0",
+      "downloads": 2961,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-01T14:21:00.000000Z",
+      "created_at": "2026-06-01T14:24:06.000000Z",
+      "updated_at": "2026-07-28T09:03:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/2c9b7a8ed040a1c63d2d68183c318c8d68c7e914e8a734ac915c3438494b50bd?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/82dfd7c9-ebe9-4d7d-b19c-aab251ac690a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A28%3A32Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A28%3A06Z&ske=2026-08-01T20%3A28%3A32Z&sks=b&skv=2018-11-09&sig=SI8FQmuDBVe5RuMdeYcCkOjVKnCRIxthRm4kJB3iD%2B0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzMiwibmJmIjoxNzg1NjEyNzMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGY3w6uUveC63cJX4Yb5nJXSyX9su6AxkU-5foV4-zc&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13641,
+      "hub_id": null,
+      "version": "2.2.0",
+      "description": "<p>New</p>\n<ul>\n<li>\n<p>Rules can opt-in with “applyToManualOverrides”: true to stack on weapons already listed in manualTypeOverrides. Use for grouping rules  that should still fire when the weapon also carries a structural override like\n“AssaultRifle,AssaultCarbine”.</p>\n<p>Default off — existing configs unchanged.</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.2.0",
+      "content_length": 92589,
+      "spt_version_constraint": "~4.0",
+      "downloads": 413,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-23T21:25:00.000000Z",
+      "created_at": "2026-05-23T21:28:32.000000Z",
+      "updated_at": "2026-07-28T09:02:52.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NjE0YjFiM2M4ZjgyN2JkOTAyYThkMjdhMzVhYmM0NzE6MTc3OTU3MTQ4OA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/6563ced1-f044-4fab-a032-ec636d2e57c5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A11Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A55Z&ske=2026-08-01T20%3A26%3A11Z&sks=b&skv=2018-11-09&sig=xiMipWAg%2F4g6OTKf%2B%2FawGnvazYsSqqTqXQbGgBi4fl8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzMywibmJmIjoxNzg1NjEyNzMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.58tS6Bzd_2g0uDBCHZcSvS6ITqWeNOY9FHujmAZkJp8&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13605,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<p>Fixed</p>\n<ul>\n<li>includedMods and excludedMods settings stay on their own side. No more cross-leak into the opposite list.</li>\n<li>excludedMods category settings now grow the list instead of shrinking it.</li>\n</ul>\n<p>New</p>\n<ul>\n<li>Added ‘includedModBundles’ and  ‘excludedModBundles’ fields to QuestOverrides. Expands as cartesian-and combinations.</li>\n<li>Per-line safety cap for cartesian expansion (default 500 combos, adjustable in config.jsonc).</li>\n</ul>\n<p>Other</p>\n<ul>\n<li>Startup notice if old patches use the affected excludedMods setting.</li>\n<li>Inspector report shows the new combo lines.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.1.0",
+      "content_length": 92304,
+      "spt_version_constraint": "~4.0",
+      "downloads": 427,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-16T13:17:00.000000Z",
+      "created_at": "2026-05-16T13:17:35.000000Z",
+      "updated_at": "2026-07-28T08:59:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/66caf752cad8880878eb5a6768798ba4d1969e98b5e0ab5a776a441d9d79f690?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/e95d1555-dd94-4024-be2b-c7afaa1541c1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A17%3A51Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A17%3A40Z&ske=2026-08-01T20%3A17%3A51Z&sks=b&skv=2018-11-09&sig=ZtVuW4syZtOjx9OPd2vrLeityXbCgo8P2atxXwR%2B8Uc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNCwibmJmIjoxNzg1NjEyNzM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fhdwpd92Q2aPFtMOEnOMqrU5LVQz8N817UFF7PnWYLw&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13589,
+      "hub_id": null,
+      "version": "2.0.5",
+      "description": "<ul>\n<li>Fix: HTML/JSON report no longer shows MatchedType / NextBestType badges for conditions whose override uses expansionMode: NoExpansion or WhitelistOnly. Type-match info only appears under Auto, where it reflects actual pipeline behavior.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.5",
+      "content_length": 90229,
+      "spt_version_constraint": "~4.0",
+      "downloads": 299,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-13T16:08:00.000000Z",
+      "created_at": "2026-05-13T16:09:20.000000Z",
+      "updated_at": "2026-07-28T08:54:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YzM4ZjBjNDljZGMwYWI1OTYyMDRiMWNiNjY1NjlhMDI6MTc3ODY4ODU0OQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/92f11080-f3ef-40e0-99fe-083bd122b676?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A22%3A32Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A22%3A02Z&ske=2026-08-01T20%3A22%3A32Z&sks=b&skv=2018-11-09&sig=FrJge%2B8picJdIpE0q5UThR8LsI2PnpHmKkyJr%2BAHlEg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNSwibmJmIjoxNzg1NjEyNzM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Q6N6pzf0hCr58IW5SThGxvapSd2dJ-zMPLcdGjbXY6c&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13580,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<p>Fixes</p>\n<ul>\n<li>Quest overrides using “expansionMode”: 2 with includedWeapons now actually add those weapons.</li>\n<li>Conflicting override modes from different mods now resolve correctly when merging.</li>\n</ul>\n<p>Inspector report</p>\n<ul>\n<li>Manually-blacklisted quests and quests with nothing to expand are now flagged separately from real no-ops.</li>\n<li>Quests tab filter: pick any combination of Blacklisted / No eligible / Noop / Expanded. Defaults to showing only expanded quests.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.4",
+      "content_length": 90189,
+      "spt_version_constraint": "~4.0",
+      "downloads": 226,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-11T21:23:00.000000Z",
+      "created_at": "2026-05-11T21:25:38.000000Z",
+      "updated_at": "2026-07-28T08:53:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MmZjYmU3ZjhjYzBhMmNjZDA4NzczOTcyNDg3MDg1MzU6MTc3ODUzNDU3NA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/b937c9ae-9d41-49bc-8596-670183f3373f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A23%3A16Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A22%3A44Z&ske=2026-08-01T20%3A23%3A16Z&sks=b&skv=2018-11-09&sig=5fhHT6XROHWOa7Uac4gry0yqkT4Fv1acWNuqg0wXt9U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNSwibmJmIjoxNzg1NjEyNzM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Q6N6pzf0hCr58IW5SThGxvapSd2dJ-zMPLcdGjbXY6c&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13579,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<p>Fixes</p>\n<ul>\n<li>Override merge no longer drops ModsExpansionMode, IncludedMods, ExcludedMods — user-authored values for these three keys now actually reach the pipeline.</li>\n<li>Per-condition overrides now match the outer CounterCreator id (the one quest editors surface), not just the inner sub-condition id. Specific entries that previously fell through to Auto now apply.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.3",
+      "content_length": 89436,
+      "spt_version_constraint": "~4.0",
+      "downloads": 97,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-11T15:51:00.000000Z",
+      "created_at": "2026-05-11T16:01:11.000000Z",
+      "updated_at": "2026-07-28T08:54:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YWU3YzUxYjg1ODEwNTFkMTUwYTUxMWExMTNhMGIxNWI6MTc3ODUxNDY4Nw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/be4829c1-1956-4d05-b59f-bf7e21c8bca3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A15%3A00Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A14%3A46Z&ske=2026-08-01T20%3A15%3A00Z&sks=b&skv=2018-11-09&sig=cKTAaKpPZTLHgugtD6dWZVddwAewkjHZLoA1C5dZHSY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNiwibmJmIjoxNzg1NjEyNzM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.j3HSpv7J505uwYGnLgRhOfQuEeCWnZajaOCQGsIdc5o&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13575,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<p>Updated mod load order</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.2",
+      "content_length": 89413,
+      "spt_version_constraint": "~4.0",
+      "downloads": 191,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-10T21:20:00.000000Z",
+      "created_at": "2026-05-10T21:21:00.000000Z",
+      "updated_at": "2026-07-28T08:38:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fd2bb14aad9f234880a7dfcd92389ec119fc58dc4ddf41e187df094dbc8c45e8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/f210cb0b-3188-41b5-9a7e-6216ea22288b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A12%3A36Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A12%3A00Z&ske=2026-08-01T20%3A12%3A36Z&sks=b&skv=2018-11-09&sig=KSGwIq30lwmFqiDYPN0o%2BR7c7mmfi2JjIu0zG8wRiBg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNywibmJmIjoxNzg1NjEyNzM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2PPa2c53rMFwFQD9ujxQI2NNJoM76sgsqi-wcu4EPPk&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13574,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<p>Fix config migration</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.1",
+      "content_length": 89931,
+      "spt_version_constraint": "~4.0",
+      "downloads": 77,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-05-10T18:14:00.000000Z",
+      "created_at": "2026-05-10T18:17:59.000000Z",
+      "updated_at": "2026-07-28T08:38:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/451f96960e379e6e6b04448a9451c02cc8afd7f95bcc2a3037417b06bf371f57",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/ec544eec-60a4-4aae-80eb-464dc692475d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A24%3A23Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A23%3A41Z&ske=2026-08-01T20%3A24%3A23Z&sks=b&skv=2018-11-09&sig=3ab1MNygXu7mKndgh0zIWHUNtHK%2BeEPB15zvcHoF3cI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOCwibmJmIjoxNzg1NjEyNzM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qQye3XNh5OU1fGSJC8ymyTxt0hT7pUq3CjS_KN_S04g&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13571,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h1>Changelog</h1>\n<h2>2.0.0 — SPT 4.0 rewrite</h2>\n<p>Full C# port of the TypeScript mod. Targets SPT <code>~4.0.0</code>.</p>\n<h3>Migration from 1.5.0</h3>\n<p><strong>Drop your old <code>config/</code> and <code>MissingQuestWeapons/</code> files in as-is — they will be migrated automatically on first load.</strong> Migrated files are rewritten in the new format and stamped with a <code>version</code> field; the old format is treated as v0.</p>\n<p>What the migrator does:</p>\n<ul>\n<li><code>config.jsonc</code>: fixes the <code>categorizeWithLessRestrive</code> typo, drops the unused <code>delay</code> field.</li>\n<li><code>OverriddenWeapons.jsonc</code> → <code>WeaponOverrides.jsonc</code>: <code>Override</code> block becomes <code>manualTypeOverrides</code>, <code>CustomCategories</code> becomes <code>customTypeRules</code>.</li>\n<li><code>QuestOverrides.jsonc</code>: structure preserved, version stamped.</li>\n<li>New <code>AttachmentOverrides.jsonc</code> is optional — defaults cover the full attachment tree.</li>\n</ul>\n<p>No manual edits required for a stock 1.5.0 install.</p>\n<h3>New</h3>\n<ul>\n<li>Attachment-condition expansion (<code>weaponModsInclusive</code> / <code>weaponModsExclusive</code>) — supports mod-added quests with no <code>weapon</code> array.</li>\n<li>Rule-chain type detection — bolt-action / pump-action / revolver / caliber checks are config, not code.</li>\n<li>Per-condition override matching by structural properties, not only condition ID.</li>\n<li>Opt-in <code>bestCandidateExpansion</code> and <code>validateOverrideIds</code>.</li>\n<li>Inspector CLI + local web UI for offline iteration on configs without launching SPT.</li>\n</ul>\n<h3>Removed</h3>\n<ul>\n<li><code>delay</code> config field (was a no-op).</li>\n<li><code>logType</code> — replaced by always-on file log + SPT console, gated by <code>debug</code>.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/2.0.0",
+      "content_length": 84954,
+      "spt_version_constraint": "~4.0",
+      "downloads": 122,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-10T13:00:00.000000Z",
+      "created_at": "2026-05-10T11:19:40.000000Z",
+      "updated_at": "2026-07-28T08:38:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e69427846f35e1dd5282770cf053258e9f88cb9e1e756219ee6cef7948635b61?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/a9a6868d-d396-4796-be58-6c278c02cc1a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A30Z&rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A30%3A15Z&ske=2026-08-01T20%3A30%3A30Z&sks=b&skv=2018-11-09&sig=fAFr0Ht89uP3Sp6aSC%2B4DqZ9egHe7GUe3glWmVeOJ3U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOCwibmJmIjoxNzg1NjEyNzM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qQye3XNh5OU1fGSJC8ymyTxt0hT7pUq3CjS_KN_S04g&response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11669,
+      "hub_id": 15070,
+      "version": "1.6.0",
+      "description": "<ul>\n<li>Introduced OverrideBehaviour for better handling of weapon overrides between mods</li>\n<li>Added condition-based handling to the quest overrides</li>\n<li>Added blackListedCalibres, weaponTypes and blackListedWeaponTypes to the custom weapon categories</li>\n<li>Fix error handling in tryReadJson</li>\n</ul>\n<p>More information about how to use newly added fields can be found in the repository’s readme.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.6.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1043,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-09-25T22:02:00.000000Z",
+      "created_at": "2025-09-25T22:02:44.000000Z",
+      "updated_at": "2026-05-18T06:15:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/817833436/f4ae7142-80f4-4be8-b9b4-c43470f60f94?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A21%3A17Z&rscd=attachment%3B+filename%3Dzz_guiltyman-addmissingquestweaponrequirements.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A21%3A15Z&ske=2026-08-01T20%3A21%3A17Z&sks=b&skv=2018-11-09&sig=u4RexzU6HV3FcMMt1YDr5QfL1IxUWq9DnN%2BWbLQVoWE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOSwibmJmIjoxNzg1NjEyNzM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MmUSXdJrkPSI4Z-XBNEpiPL2grZ_pMruhX29R0_CdFI&response-content-disposition=attachment%3B%20filename%3Dzz_guiltyman-addmissingquestweaponrequirements.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 97,
+      "hub_id": 14804,
+      "version": "1.5.2",
+      "description": "<p>Error handling for incorrect overrides</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.5.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 710,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-08-14T22:09:16.000000Z",
+      "created_at": "2025-08-14T22:09:16.000000Z",
+      "updated_at": "2025-08-14T22:09:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+        "reason": "HTTP 404 for https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements/releases/download/v1.5.2/zz_guiltyman-addmissingquestweaponrequirements.zip"
+      }
+    },
+    {
+      "id": 105,
+      "hub_id": 14789,
+      "version": "1.5.0",
+      "description": "<p>Updated for <strong>SPT 3.11.x</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.5.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 281,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-08-12T00:44:34.000000Z",
+      "created_at": "2025-08-12T00:44:34.000000Z",
+      "updated_at": "2025-08-12T00:44:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+        "reason": "HTTP 404 for https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements/releases/download/v1.5.0/zz_guiltyman-addmissingquestweaponrequirements.zip"
+      }
+    },
+    {
+      "id": 2018,
+      "hub_id": 12652,
+      "version": "1.4.0",
+      "description": "<p>Only updated the sptVersion to ensure compatibility with SPT 3.10. If you are still using 3.9, there is no need to update.</p>\n<p>I could not thoroughly test with version 3.10; if any issues arise, please let me know.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1089,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-14T17:50:29.000000Z",
+      "created_at": "2024-12-14T17:50:29.000000Z",
+      "updated_at": "2024-12-14T17:50:29.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+        "reason": "HTTP 404 for https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements/releases/download/v1.4.0/zz_guiltyman-addmissingquestweaponrequirements.zip"
+      }
+    },
+    {
+      "id": 3578,
+      "hub_id": 10706,
+      "version": "1.2.0",
+      "description": "<p>3.9 support</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1360,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-10T16:27:12.000000Z",
+      "created_at": "2024-07-10T16:27:12.000000Z",
+      "updated_at": "2024-07-10T16:27:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+        "reason": "HTTP 404 for https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements/releases/download/v1.2.0/zz_guiltyman-addmissingquestweaponrequirements.zip"
+      }
+    },
+    {
+      "id": 3686,
+      "hub_id": 10576,
+      "version": "1.1.2",
+      "description": "<p>Again thanks <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/52449-therkelsen/\" rel=\"noreferrer noopener\">Therkelsen</a> for his contribution.</p>\n<p>For 3.8.x<br />\nAdded more modded weapons from:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1948-sasha-himik/?highlight=sasha#overview\" rel=\"noreferrer noopener\">Sasha Himik</a><br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1935-girls-frontline-operation-novensk-trader-and-weapon-pack/#overview\" rel=\"noreferrer noopener\">Girls Frontline</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1503/add-missing-quest-weapon-requirements/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 210,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T22:17:45.000000Z",
+      "created_at": "2024-07-07T22:17:45.000000Z",
+      "updated_at": "2024-07-07T22:17:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements",
+        "reason": "HTTP 404 for https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements/releases/download/v1.1.2/zz_guiltyman-addmissingquestweaponrequirements.zip"
+      }
+    }
+  ],
+  "addon_ids": [
+    74
+  ],
+  "page": {
+    "modlistCount": 82,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:32:12.157Z",
+    "discoveredBy": "seed"
+  }
+}

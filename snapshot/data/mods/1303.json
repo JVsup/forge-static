@@ -1,0 +1,345 @@
+{
+  "type": "mod",
+  "id": 1303,
+  "hub_id": 1817,
+  "guid": "com.acidphantasm.harryhideout",
+  "name": "HarryHideout",
+  "slug": "harryhideout",
+  "teaser": "Trader that sells all items for hideout construction/upgrades",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1817.jpg",
+  "downloads": 59242,
+  "favourites_count": 39,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">INSTALLATION</div>\n<div class=\"tab-content\"><p>Installation</p>\n<ol>\n<li>Open the downloaded 7z file in 7-zip</li>\n<li>Select the SPT folder in the 7z file in 7-zip</li>\n<li>Drag the SPT folder from 7-zip into your root SPT folder</li>\n</ol>\n<p>Demonstration Video (yoink):</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/34vXXDj.gif\" alt=\"wMIskD3.gif\" /></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">UNINSTALLATION</div>\n<div class=\"tab-content\"><p>NOTE: Deletion may not be possible because it is a trader. You may need to start a new profile.\nIf you insist on removing it, you can do the following.</p>\n<ol>\n<li>Delete <code>/ROOTSPT/SPT/user/mods/acidphantasm-harryhideout</code></li>\n<li>Done</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">CONFIG</div>\n<div class=\"tab-content\"><p>Config settings (\\config\\config.json)</p>\n<ul>\n<li><strong>priceMultiplier</strong> (Default: 1, Adjust this to increase or lower the prices of items in Harry’s Assort (0.5 = 1/2 price, 2 = 2x price, etc))</li>\n<li><strong>traderRefreshMin</strong> (Default: 1800, Adjust this to change minimum time in seconds for a trader refresh)</li>\n<li><strong>traderRefreshMax</strong> (Default: 3600, Adjust this to change maximum time in seconds for a trader refresh)</li>\n<li><strong>addTraderToFlea</strong> (Default: true, Change this to false to remove offers from flea)</li>\n<li><strong>If realism is installed, the following 3 settings will automatically disable.</strong>\n<ul>\n<li><strong>randomizeBuyRestriction</strong> (Default: false, Change this to true to randomize your buy restriction counts. Will never be lower than 1)</li>\n<li><strong>randomizeStockAvailable</strong> (Default: false, Change this to true to randomize the available stock of each item, will also roll for <strong>outOfStockChance</strong>)</li>\n<li><strong>outOfStockChance</strong> (Default: 25, Percent chance an item will roll “out of stock” when <strong>randomizeStockAvailable</strong> set to true)</li>\n</ul>\n</li>\n<li><strong>debugLogging</strong> (Default: false, Change this to true if you want to be spammed debug information on server launch)</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">RECOMMENDED MODS</div>\n<div class=\"tab-content\"><p>Recommended Mods:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1508-kaeno-traderscrolling/\" rel=\"noreferrer noopener\">Kaeno-TraderScrolling</a></p></div></div></div>\n<p>Special thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/30839-drakiaxyz/\" rel=\"noreferrer noopener\">DrakiaXYZ</a>, their source code gives great inspiration and their mods are top tier.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1303/harryhideout",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2024-04-11T22:10:00.000000Z",
+  "created_at": "2024-04-11T22:10:45.000000Z",
+  "updated_at": "2026-07-28T06:02:41.000000Z",
+  "owner": {
+    "id": 48110,
+    "name": "acidphantasm",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-11T21:22:35.000000Z",
+    "updated_at": "2026-08-01T18:53:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/acidphantasm/acidphantasm-HarryHideout",
+      "label": "3.11"
+    },
+    {
+      "url": "https://github.com/acidphantasm/harryhideout-csharp",
+      "label": "4.0"
+    }
+  ],
+  "versions": [
+    {
+      "id": 11788,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>New Feature</p>\n<ul>\n<li>IgnoreList for adding items to the assort. Default ignores holiday items and currency.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/3.0.0",
+      "content_length": 19740,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 21868,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-11T22:06:00.000000Z",
+      "created_at": "2025-10-11T22:06:09.000000Z",
+      "updated_at": "2026-07-28T06:02:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1882b4c41a689d321072964bde8b177cd295fcab8fbf6828dd83f8a084d53c4f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1074076927/b9654148-4a2a-44ab-8766-3fa25d812ff3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A20Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A35Z&ske=2026-08-01T20%3A50%3A20Z&sks=b&skv=2018-11-09&sig=lgaQWs2PoIZcF4x%2FWTg9T5GeO5a5Y0sqJawx6kBW4S0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1071,
+      "hub_id": 13712,
+      "version": "2.2.1",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed randomized stock / buy restriction not correctly updating flea offers</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/2.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 11130,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-21T07:35:08.000000Z",
+      "created_at": "2025-03-21T07:35:08.000000Z",
+      "updated_at": "2026-05-14T02:03:50.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/5a620138-8119-4c8d-94f2-92d83c10edd5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A36Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A41Z&ske=2026-08-01T21%3A03%3A36Z&sks=b&skv=2018-11-09&sig=hmthmMtpZKOnNtMLbEe4wLQ8MbcOKU0BaJgmtvtUk%2Fs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1210,
+      "hub_id": 13566,
+      "version": "2.1.1",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>3.11 Update</p>\n<p>New Features</p>\n<ul>\n<li>Now sells FIR items</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixes to buy/stock randomization</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/2.1.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 994,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T20:26:35.000000Z",
+      "created_at": "2025-03-15T20:26:35.000000Z",
+      "updated_at": "2026-05-14T02:07:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/c6a79145-592e-4041-996c-4b0c9fc50f6e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A55Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A14Z&ske=2026-08-01T20%3A50%3A55Z&sks=b&skv=2018-11-09&sig=lZjTVWtzPW%2B1pRh7rdeuxt0xguFEXUMrwTsZMUIkVF4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2366,
+      "hub_id": 12229,
+      "version": "2.1.0",
+      "description": "<p><strong>This version will only work for SPT 3.10.x</strong></p>\n<p>3.10 Update</p>\n<ul>\n<li>Updated Harry to MongoID</li>\n<li>Updated reference code to utilize MongoID</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Increased prices slightly</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/2.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 6679,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-26T15:06:04.000000Z",
+      "created_at": "2024-11-26T15:06:04.000000Z",
+      "updated_at": "2026-05-14T03:20:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/ab165bf1-9ea6-44a5-944a-a1c72f45d698?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A55Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A14Z&ske=2026-08-01T21%3A02%3A55Z&sks=b&skv=2018-11-09&sig=omYAHo3J9vZ%2FpkWo7cnqo4GUL4cf2AwfxHZixsoBaNw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3741,
+      "hub_id": 10512,
+      "version": "2.0.0",
+      "description": "<p><strong>This version will only work for SPT 3.9.X</strong></p>\n<p>Code Refactor</p>\n<p>Harry will now always have the items required for any upgrades in the Hideout - even if they change in future updates</p>\n<p>Harry will always charge prices reflecting flea price (load after Live Flea Prices if you want those)</p>\n<p>Blacklist to prevent adding currency or christmas ornaments</p>\n<p>Stock Randomization configs are now async</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 9077,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T22:30:38.000000Z",
+      "created_at": "2024-07-06T22:30:38.000000Z",
+      "updated_at": "2026-05-14T03:55:52.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/3a804ae7-2add-44f3-966e-4d05dc8fbf45?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A28Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A22Z&ske=2026-08-01T20%3A58%3A28Z&sks=b&skv=2018-11-09&sig=ts5oX2uN7YY5gcWvoFVrSVmYCDyyVPXMCeuJBIUEh5Q%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3758,
+      "hub_id": 10493,
+      "version": "1.2.0",
+      "description": "<p><strong>This version will only work for SPT 3.9.X</strong></p>\n<p>Update to 3.9.0</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 249,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T19:47:37.000000Z",
+      "created_at": "2024-07-06T19:47:37.000000Z",
+      "updated_at": "2026-05-14T03:56:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/9e1e2c52-2ee6-4dd3-8e3a-673854346c7f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A16Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A49Z&ske=2026-08-01T20%3A55%3A16Z&sks=b&skv=2018-11-09&sig=wbNzysXWPLImBdmBtue%2FAw8hKnGIRi3xtzlcO1PAyhE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ3OCwibmJmIjoxNzg1NjE1MTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-8ZsQ0s47EJxywDkCdfXDEc56xoZzI3hDR0L-ClG1as&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4255,
+      "hub_id": 9858,
+      "version": "1.1.0",
+      "description": "<p><strong>This version will only work for SPT 3.8.X</strong></p>\n<ul>\n<li>Changed <strong>useBarter</strong> to default false.</li>\n<li><strong>traderRefreshMin</strong> (Default: 1800, Adjust this to change minimum time in seconds for a trader refresh)</li>\n<li><strong>traderRefreshMax</strong> (Default: 3600, Adjust this to change maximum time in seconds for a trader refresh)</li>\n<li><strong>If realism is installed, the following 3 settings will automatically disable.</strong>\n<ul>\n<li><strong>randomizeBuyRestriction</strong> (Default: false, Change this to true to randomize your buy restriction counts. Will never be lower than 1)</li>\n<li><strong>randomizeStockAvailable</strong> (Default: false, Change this to true to randomize the available stock of each item, will also roll for <strong>outOfStockChance</strong>)</li>\n<li><strong>outOfStockChance</strong> (Default: 25, Percent chance an item will roll “out of stock” when <strong>randomizeStockAvailable</strong> set to true)</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 4845,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-11T08:35:48.000000Z",
+      "created_at": "2024-05-11T08:35:48.000000Z",
+      "updated_at": "2026-05-14T04:05:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/f140ae5a-9068-439a-933e-672c40614c15?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A54%3A29Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A53%3A42Z&ske=2026-08-01T20%3A54%3A29Z&sks=b&skv=2018-11-09&sig=FwDeFIb7O95a6KZW%2Br5PQ9cOkgqhP25fLv5A%2BAVqa2k%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4MCwibmJmIjoxNzg1NjE1MTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nA4N87vT7XENm1-v5FeYjuOkNtLz3RtWDAwF98cRleE&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4606,
+      "hub_id": 9446,
+      "version": "1.0.3",
+      "description": "<p><strong>This version will only work for SPT 3.8.0+</strong></p>\n<ul>\n<li>Added minFleaPrice variable to align prices more accurately (should be closer to cheapest prices)</li>\n<li>Moved Wi-Fi Camera (lol) and Scav Junkbox to barter system\n<ul>\n<li>Wi-Fi Camera barter is 3x MS2000 Marker &amp; non-barter price is 37,189 Roubles (instead of 800k+)</li>\n<li>Scav Junkbox barter is 2x BTC &amp; non-barter price is 1,081,368 Roubles</li>\n</ul>\n</li>\n</ul>\n<p>Development on this will likely be limited to minor changes as I move to another project. If you have any issues or suggestions you can throw them in the comments for consideration!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.0.3",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 3047,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-15T16:01:16.000000Z",
+      "created_at": "2024-04-15T16:01:16.000000Z",
+      "updated_at": "2026-05-14T04:11:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/e21f1108-9d47-4c02-a3fb-8951a1ed684e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A29Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A10Z&ske=2026-08-01T20%3A59%3A29Z&sks=b&skv=2018-11-09&sig=0oAmMf0TWhpE3TKUCQCLoQTYztb6g8K7ubamBlr1s88%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4MCwibmJmIjoxNzg1NjE1MTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nA4N87vT7XENm1-v5FeYjuOkNtLz3RtWDAwF98cRleE&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4647,
+      "hub_id": 9400,
+      "version": "1.0.2",
+      "description": "<p><strong>This version will only work for SPT 3.8.0+</strong></p>\n<ul>\n<li>Added enableConsoleDebug config option</li>\n<li>Refactored items.json to allow editing barter cost &amp; item requirement\n<ul>\n<li>if useBarters = true, then the barterItemID &amp; barterAmount is used to control the requirements and price is ignored</li>\n<li>if useBarters = false, then the prices for items are pulled from items.json “barterItems” &amp; “nonBarterItems”</li>\n<li>This does not support adding multiple barterItemIDs for a single itemID yet - don’t do it</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.0.2",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 741,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-12T20:14:00.000000Z",
+      "created_at": "2024-04-12T20:14:00.000000Z",
+      "updated_at": "2026-05-14T04:12:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/57232e14-f69b-49b4-b059-afdfe85ab077?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A48%3A04Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A47%3A45Z&ske=2026-08-01T20%3A48%3A04Z&sks=b&skv=2018-11-09&sig=FEJG4w51HdQa3lxGLdbT2onJaN2gcrN%2BtKLPPbpC8WI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4MCwibmJmIjoxNzg1NjE1MTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nA4N87vT7XENm1-v5FeYjuOkNtLz3RtWDAwF98cRleE&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4665,
+      "hub_id": 9382,
+      "version": "1.0.1",
+      "description": "<p><strong>This version will only work for SPT 3.8.0+</strong></p>\n<ul>\n<li>Add mathRound to disabling barter code to prevent partial ruble spend</li>\n<li>Move mathRound in non flea pricing to prevent partial ruble spend</li>\n<li>Move mathRound in flea pricing to prevent future issues</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.0.1",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 465,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-11T23:25:53.000000Z",
+      "created_at": "2024-04-11T23:25:53.000000Z",
+      "updated_at": "2026-05-14T04:13:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/63d18f4c-fba5-4bbd-9425-cbc37c43adbe?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A37Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A50%3A00Z&ske=2026-08-01T20%3A50%3A37Z&sks=b&skv=2018-11-09&sig=J91bXVnSVyy2xJh%2FEOXWVsa5OkfsSuBgOqK%2FAPvcGMc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4MCwibmJmIjoxNzg1NjE1MTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nA4N87vT7XENm1-v5FeYjuOkNtLz3RtWDAwF98cRleE&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4668,
+      "hub_id": 9379,
+      "version": "1.0.0",
+      "description": "<p><strong>This version will only work for SPT 3.8.0+</strong></p>\n<ul>\n<li>Initial release for 3.8.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1303/harryhideout/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 147,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-11T22:10:45.000000Z",
+      "created_at": "2024-04-11T22:10:45.000000Z",
+      "updated_at": "2026-05-14T04:13:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/76834a3f43c65cec97d4c1d320a992aea68d2b6008801ffc174ad886c08b897f",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/785022790/492807de-7562-499b-b886-49bf40dd6a1b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A10Z&rscd=attachment%3B+filename%3Dacidphantasm-harryhideout.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A30Z&ske=2026-08-01T21%3A04%3A10Z&sks=b&skv=2018-11-09&sig=7R9zvpNkXOyWvYEf307TzfSkdb5QzwnEfpi9zErx%2FeU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQ4MCwibmJmIjoxNzg1NjE1MTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nA4N87vT7XENm1-v5FeYjuOkNtLz3RtWDAwF98cRleE&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-harryhideout.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 47,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:44.800Z",
+    "discoveredBy": "seed"
+  }
+}

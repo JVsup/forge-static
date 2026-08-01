@@ -1,0 +1,561 @@
+{
+  "type": "mod",
+  "id": 2642,
+  "hub_id": null,
+  "guid": "dev.oogabooga.spt-vagabond",
+  "name": "Vagabond",
+  "slug": "vagabond",
+  "teaser": "Vagabond is an overhaul mod, which aims to turn Tarkov into an open world game. You start with limited money to buy a simple loadout, and your challenge is now to survive using only transits and access traders via their own extracts.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/izW0lUid47l1eul4fCSblOyWhrzy8H5tLs40A71Y.png",
+  "downloads": 4342,
+  "favourites_count": 36,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">About</div>\n<div class=\"tab-content\"><p>Vagabond is a gameplay overhaul mod, which aims to turn Tarkov into an open world game.</p>\n<p>You start with limited money to buy a simple loadout from Fence, with some meds if you are lucky, and your challenge is now to survive. Using only transits to move around Tarkov and specific extracts to get access to traders.</p>\n<p>The only way you can extract is using extracts specifically to get access to traders or your own hideout; You otherwise move through maps, using an expanded selection of transits, as if the game was open world.</p>\n<p><strong>Heavily inspired by Path To Tarkov</strong></p>\n<p>If you want to see the trader locations, <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/tree/master/screenshots/traders\" rel=\"noreferrer noopener\">click here</a>.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://img.shields.io/github/issues/MrEliasen/SPT-Vagabond/bug?style=for-the-badge&amp;label=open%20Issues&amp;color=red\" alt=\"GitHub Issues or Pull Requests by label\" />\n</a></p>\n<h4>Custom Trader Support</h4>\n<p>Since 0.6.0 custom traders are no longer ‘officially’ added to vagabond. They are fully supported if you add them yourself via the config or the mod authors add an integration. But there will be no custom traders exfils added directly in vagabond. To add traders to existing exfils is quite easy <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/TRADERS.md\" rel=\"noreferrer noopener\">via the configs</a></p>\n<h4>ABPS Compatibility</h4>\n<p>0.7.1 was tested with ABPS 2.0.19, and a graceful failover is added if the patch could not be applied. ABPS is going through what looks like a rewrite so expect incompatibility.</p>\n<h4>Using SVM?</h4>\n<p>Disable the Raid Settings tab completely, it even being enabled is enough to cause conflicts, regardless of whether or not you changed anything within the tab. - Thank you <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/90917/liquidrage\" rel=\"noreferrer noopener\">_liquidrage</a>!</p>\n<h4>Does Quests Work</h4>\n<p>They should. If its a quest which requires specific extractions, those will be available only when you have the quest(s). Using such extraction will take you back to the quest giver. Do let me know if I missed any quests / if you find any quests you cannot complete.</p>\n<h4>Main Features</h4>\n<ul>\n<li>Place your hideout entrance anywhere (Press CTRL+P in raid to place your hideout entrance, if you use Fika, other players can use your hideout exit as well)</li>\n<li>Per-trader (and hideout if playing with friends) stash</li>\n<li>Use trader specific extractions to get access to their shop.</li>\n<li>Recruit traders into your hideout</li>\n<li>Custom extractions and transits</li>\n<li>Remember last exit/transit location</li>\n<li>Reduce raid loot if you repeat the same raid</li>\n<li>Modding API</li>\n</ul>\n<h4>Remember Raid Position</h4>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/remember_location.png\" alt=\"SPT Vagabond\" /></p>\n<h4>Custom Extractions, Transits and Infil locations</h4>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/custom_transitions.png\" alt=\"SPT Vagabond\" /></p>\n<h4>Trader Specific Extractions</h4>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/custom_trader_exits.png\" alt=\"SPT Vagabond\" /></p>\n<h4>Dynamic Maps Compatibility</h4>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/dynamic_map_support.png\" alt=\"SPT Vagabond\" /></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p>Any mod which makes changes to Extractions, Transits or player spawning (Like selectable entry mod or interaction mods), will likely conflict with this mod and prevent extracts from working.<br />\nLabyrinth has not been tested with this mod.. but.. should hopefully work.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Install</div>\n<div class=\"tab-content\"><ol>\n<li>Download the latest version</li>\n<li>Extract and copy the <code>SPT\\user\\mods\\Vagabond</code> folder to <code>SPT\\user\\mods</code> and the <code>BepInEx\\plugins\\Vagabond</code> to <code>BepInEx\\plugins</code>.</li>\n<li>If you use <strong>Headless</strong> clients, you will need to add the client plugin to the headless spt client as well.</li>\n<li>Create a new profile, and it will get enrolled as a new Vagabond.</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Docs/Help</div>\n<div class=\"tab-content\"><p>Configs live in <code>SPT/user/mods/Vagabond/config/</code>. Restart the SPT server after edits.<br />\nDisclaimer: Documentation is generated using a LLM.</p>\n<h4>Configs Questions</h4>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-custom-trader\" rel=\"noreferrer noopener\">How do I add a custom trader?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-trader-to-my-hideout\" rel=\"noreferrer noopener\">How do I add a trader to my hideout?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-custom-trader-exfil\" rel=\"noreferrer noopener\">How do I add a custom trader exfil?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-transit\" rel=\"noreferrer noopener\">How do I add a transit?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-item-requirements-to-a-transitexfil\" rel=\"noreferrer noopener\">How do I add item requirements to a transit/exfil?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-currency-cost-v-ex-style-to-exfilstransits\" rel=\"noreferrer noopener\">How do I add a currency cost (v-ex style) to exfils/transits?</a></li>\n</ul>\n<h4>Modding API Questions</h4>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#integrate-my-custom-trader-with-vagabond\" rel=\"noreferrer noopener\">How do I integrate my custom trader with Vagabond?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-a-custom-exfil-for-my-trader\" rel=\"noreferrer noopener\">How do I add a custom exfil for my trader?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#make-my-trader-available-in-the-players-hideout\" rel=\"noreferrer noopener\">How do I make my trader available in the player’s hideout?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#add-custom-transits-with-requirements-and-cost\" rel=\"noreferrer noopener\">How do I add custom transits with requirements and cost?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#change-a-players-vagabond-state\" rel=\"noreferrer noopener\">How do I change a player’s Vagabond state?</a></li>\n</ul>\n<h4>Troubleshooting</h4>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#my-custom-extract-is-not-appearing--why\" rel=\"noreferrer noopener\">My custom extract is not appearing - why?</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/FAQ.md#cost-requirement-says-insufficient-funds-but-i-have-the-money\" rel=\"noreferrer noopener\">Cost requirement says insufficient funds, but I have the money</a></li>\n</ul>\n<h4>Configs</h4>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/CONFIG.md\" rel=\"noreferrer noopener\">Core config</a> - core mod settings (<code>vagabond.json</code>)</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/EXFILS.md\" rel=\"noreferrer noopener\">Exfils</a> - extracts + transits</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/TRANSITIONS.md\" rel=\"noreferrer noopener\">Transitions</a> - vanilla SPT transit landing spots</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/TRADERS.md\" rel=\"noreferrer noopener\">Traders</a> - which extract unlocks which trader</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/API.md\" rel=\"noreferrer noopener\">Modding API</a> - For modders to integrate their own exfils, transits and traders.</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/KEYBINDINGS.md\" rel=\"noreferrer noopener\">Dev Keybinds</a> - dump hotkeys (F8/F9/F10) for creating exfils/transits, useful for updating configs or modding.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">🗺️</div>\n<div class=\"tab-content\"><p><a target=\"_blank\" class=\"external-link\" href=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/game-map.webp\" rel=\"noreferrer noopener\">View Full Size</a><br />\nIf you want to see the trader locations, <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/tree/master/screenshots/traders\" rel=\"noreferrer noopener\">click here</a>.\n<img loading=\"lazy\" decoding=\"async\" src=\"https://raw.githubusercontent.com/MrEliasen/SPT-Vagabond/refs/heads/master/screenshots/game-map.webp\" alt=\"SPT Vagabond Map\" /></p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Limits/Issues</div>\n<div class=\"tab-content\"><p>See knows issues/limitations with each released version. Below are other general issues/limitations across all versions:</p>\n<ul>\n<li>SVM Extracts settings will cause conflicts, like preventing extractions etc.</li>\n<li>(Fika) If one of your teammates die and you use a transit after, the game will get stuck. I don’t think this is a mod issue however.</li>\n<li>(Fika) the spawn-in location  and loot amount is determined by the player who initiates the game.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Credit</div>\n<div class=\"tab-content\"><p><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/15099/trap\" rel=\"noreferrer noopener\">Trap</a>, for the original PTT mod, serving as strong inspiration.<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/108489/sacrificial-lamb\" rel=\"noreferrer noopener\">Sacrificial Lamb</a>, for testing a lot of cross compatibility between Vagabond, other mods and SVM settings on the initial release.<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27632/danw\" rel=\"noreferrer noopener\">DanW</a>, for the Hardcore Rules mod which I nicked some patches from.<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/3972/ghostfenixx\" rel=\"noreferrer noopener\">GhostFenixx</a>, for the SVM mod which I also nicked some patches from.<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/48110/acidphantasm\" rel=\"noreferrer noopener\">acidphantasm</a> for the item limits begone mod,  which I also nicked some code from.</p></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">☕</div>\n<div class=\"tab-content\"><p>If you feel utterly compelled to say thanks and you feel a comment is not enough (it is, honestly), you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/oogaboogadev\" rel=\"noreferrer noopener\">become an enabler</a> of my caffeine addiction; however only when you literally have nothing else to spend your shillings and shekels on, I am serious.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2642/vagabond",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Logo &amp; Docs are AI generated</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-03-26T14:14:00.000000Z",
+  "created_at": "2026-03-26T13:51:10.000000Z",
+  "updated_at": "2026-07-28T09:18:17.000000Z",
+  "owner": {
+    "id": 85960,
+    "name": "Oogabooga",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/DzJ0OdYvKYQAR7FmNCeWqYiHcpidVGVTAsV3HhGL_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/Pgxl5yffuEsHGQA7DSlDlAxR3sf3zyaF5HcMPpOO.png",
+    "created_at": "2025-10-19T10:46:08.000000Z",
+    "updated_at": "2026-08-01T16:34:34.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/MrEliasen/SPT-Vagabond",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13821,
+      "hub_id": null,
+      "version": "0.7.1",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>Issues with quests which adds traders to your hideout</li>\n<li>Having access to hideout stash from “plain” transits/exits (eg when using “stay” in “OnDeathGoTo”)</li>\n<li>Add missing rep requirement for starting Therapist “add to hideout” quest.</li>\n<li>Added compatibility with ABPS 2.0.19, should be somewhat backward compatible.</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>Quests for adding traders to your hideout have been moved to configs</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>“add to hideout” quests which needed ammo have been changed to require ammo boxes instead of plain ammo.</li>\n<li>Relocation quest fee has been moved from the vagabond.json config file to the quests own config file</li>\n<li>“Add trader to hideout” quest loyalty requirements has been moved from the vagabond.json config file to the quests own config files</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n<li>Headless clients can get stuck and wont reset between raids - unable to consistency reproduce making it hard to debug.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.7.1",
+      "content_length": 145034,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 1194,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-20T19:39:00.000000Z",
+      "created_at": "2026-06-20T19:40:22.000000Z",
+      "updated_at": "2026-07-28T09:18:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/303af24e763012907219eaef6c262f422d9447e172328318a31e01724b249ed4?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/0b7fabd9351773ed5e7980472613e71509de51cf5aaf3297cdf5526a19b85512?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/3a97a33b06645efd6e8710da80c3c36f6ee8d39b78fb204d271ec8dcd76723f0?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/76b12676-c010-418a-b4f4-314edd545a46?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A52Z&rscd=attachment%3B+filename%3Dspt-vagabond_071.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A14Z&ske=2026-08-01T21%3A20%3A52Z&sks=b&skv=2018-11-09&sig=yTjeiVgyQP8Omr1T1RcKXelVWYF4DXu9xbCXgN3ENNA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_071.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13556,
+      "hub_id": null,
+      "version": "0.7.0",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>Hideouts not getting reset on profile reset</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>Added <code>ForceGroundZeroHigh</code> config option. When enabled, will force the harder Ground Zero variant regardless of player level.</li>\n<li>Added a cost option to exfils, like v-ex, you can specify the cost of using an exfil.</li>\n</ul>\n<h2>API</h2>\n<ul>\n<li>Added Hideout Traders API endpoints - you can now add/remove traders available in a players hideout.</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>If your <code>OnDeathGoTo</code> fails for any reason, it will default to ‘stay’ and notify you via in game mail.</li>\n<li><code>ConsecutiveMapLootReductionRate</code> renamed to <code>ConsecutiveMapLootRetentionRate</code> for clarity (Thanks <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/valphi-dev\" rel=\"noreferrer noopener\">valphi-dev</a>!)</li>\n<li><code>ConsecutiveMapLootReductionMin</code> renamed to <code>ConsecutiveMapLootRetentionMin</code> for clarity (Thanks <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/valphi-dev\" rel=\"noreferrer noopener\">valphi-dev</a>!)</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.7.0",
+      "content_length": 140898,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 967,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-06T22:10:00.000000Z",
+      "created_at": "2026-05-06T22:12:43.000000Z",
+      "updated_at": "2026-07-28T08:32:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/94a497e024ec877c707c16abc814e39a844808d33822c4a4b62d50ccd0de4c84?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/cc70c568bf1ade5d600ad3ffaff4c891849710c0b99825d7dbe9f6b75ec4e52b?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/244c26a59491c1b1a2693ff648e736cedec4060c026c46ce3adf802d82aa76f4?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/1bcfe8fb-2f84-46b2-bfd2-ae7a7bef187a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A34Z&rscd=attachment%3B+filename%3Dspt-vagabond_070.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A31Z&ske=2026-08-01T21%3A09%3A34Z&sks=b&skv=2018-11-09&sig=st5KdXJ5nOM1bGcd9lPYRVS9X70XuKSowiidx53LQJk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_070.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13535,
+      "hub_id": null,
+      "version": "0.6.1",
+      "description": "<p>Apologies for the rapid-fire releases, i normally let a release cook for a bit but some fairly large bugs surfaced which I felt had to be resolved asap.</p>\n<p>See changelog for 0.6.0, it has a lot of information regarding the latest big update.</p>\n<h2>Fixes</h2>\n<ul>\n<li>Traders not being able to share the same exfil</li>\n<li>Repeatable quests causing crashes due to traders being locked instead of just disabled.</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>Virtual stashes have been re-keyed to use the exfil identifier instead of the trader id. A migration is in place which will move all trader stashes to use the exfil identifier instead.</li>\n<li>Shared custom trader exfil has been removed.</li>\n<li>Custom traders are no longer ‘officially’ added to vagabond. They are fully supported if you add them yourself via the config or the mod authors add an integration. But there will be no custom traders exfils added directly in vagabond.</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.6.1",
+      "content_length": 133970,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 217,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-02T11:35:00.000000Z",
+      "created_at": "2026-05-02T11:37:40.000000Z",
+      "updated_at": "2026-07-28T08:31:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6201e758ba3c1011db1b8d450ef635064f2c35d8c6affc45c2d1407fc8bbadce?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/42641f50eb1e656d479f327f222dbdf031048ee01a7ab2328261d60015ffcf9c?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/a0cb05feac697967c43bd4a00c68a99a73b3466cd826f61002e81433c44b39d0?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/18fd507b-b17d-43ae-8132-68616a1e9827?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A33Z&rscd=attachment%3B+filename%3Dspt-vagabond_061.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A18%3A26Z&ske=2026-08-01T21%3A18%3A33Z&sks=b&skv=2018-11-09&sig=Fj1CyGJ7qke71shu9hSjv7uHHa1OTWbZ4wPcpT7DAjI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_061.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13530,
+      "hub_id": null,
+      "version": "0.6.0",
+      "description": "<p>A lot of new configs have been added server-side, make sure they are copied over, or you wont see any transits, traders etc. I recommend replacing existing config(s) and going through it again.</p>\n<p><strong>Custom traders, with the next patch, I will be removing the custom traders as a direct integration, as you can add traders via configs and API now - this is to avoid conflicting with modders own integrations and players own configs as well. So empty the custom traders virtual stash on Reserve before then.</strong></p>\n<h2>Fixes</h2>\n<ul>\n<li>Quests localisation, it should now default to ‘en’ if no translations exists for your chosen language.</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>Consecutive Map Loot Reduction - The more times you play the same map consecutively, the less loot it has (configurable)</li>\n<li>Added <code>HealthOnDeath</code> which allows you to set the health % of your limbs when you die.</li>\n<li>All traders, exfils and transits are now configurable, see new config files in the server mod folder.</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/blob/master/docs/API.md\" rel=\"noreferrer noopener\">Modding API</a> - its basic but should allow other mods to integrate with Vagabond like exfils, transits, traders etc. If there are any API’s you would like to see (specifically for vagabond) let me know. I have made a simple example mod which uses the API <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/MrEliasen/SPT-Vagabond/tree/master/example-api-usage\" rel=\"noreferrer noopener\">here</a></li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li><code>OnDeathGoTo</code> config option has been changed.</li>\n<li><code>StarterFence</code> config option has been replace with <code>StartRaid</code> and <code>StartExfilIdentifier</code></li>\n<li>Custom traders are no longer ‘officially’ added to vagabond. They are fully supported if you add them yourself via the config or the mod authors add an integration. But there will be no custom traders exfils added directly in vagabond.</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.6.0",
+      "content_length": 133284,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 78,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-01T19:56:00.000000Z",
+      "created_at": "2026-05-01T19:58:08.000000Z",
+      "updated_at": "2026-07-28T08:31:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0533b3e176f37f97f704aa50311e3bf9ef89d5db737adfd8d2aa2741f20249ea?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/d78a95a213bc043696fddf8de7ca0f7a480f5bfccdd766655cff12819d5015b3?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/dce60680e08e373e24fecac630900b411e614691579364accdc9f800c0633fdc?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/6776f30e-d351-41b6-9617-d230da870fcb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A55Z&rscd=attachment%3B+filename%3Dspt-vagabond_060.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A28Z&ske=2026-08-01T21%3A03%3A55Z&sks=b&skv=2018-11-09&sig=EKGSrwu00rAU%2BnHGuxxczwADOpG%2BX%2FMyDdSHLmRShik%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyOSwibmJmIjoxNzg1NjE1OTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pa_UB7nP27sX6_Kl6xbkT2yuCX15r81gQXEl2ZbvdcQ&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_060.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13523,
+      "hub_id": null,
+      "version": "0.5.2",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>wrong infil location when going from woods to customs</li>\n<li>not being able to access BTR mail attachments</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>A “defensive” check has been added which forces exfils to be active and enabled in case of another mod throwing an error which could prevent Vagabond’s patch from finishing. <strong>This is likely to fix the dynamic maps and exfil issue some people experienced</strong>. (Thank you <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/53567/chazut\" rel=\"noreferrer noopener\">Chazut</a> for helping me test and debug this!)</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.5.2",
+      "content_length": 122171,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 93,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-30T17:44:00.000000Z",
+      "created_at": "2026-04-30T17:44:05.000000Z",
+      "updated_at": "2026-07-28T08:31:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/777eb3e71d4be2a1214976731ad7058c9354ee1211e82baeb679119e7adceb25?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/e09e1b4e5757399897dad91e824b582009f363e80b8baf1c92e895540e4750bf?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/7427c3e0f202ccc942dc3b3a9f02e69137faba67b4b7e2c059a1fc839d02cc5a?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/ecba3589-8ec4-47ce-9cf0-b5c4fcdda098?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A26Z&rscd=attachment%3B+filename%3Dspt-vagabond_052.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A47Z&ske=2026-08-01T21%3A22%3A26Z&sks=b&skv=2018-11-09&sig=W8a7MmE9fShvb9zlpvdIxU4Hl0Uhq359cdXRcImxEOs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_052.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13506,
+      "hub_id": null,
+      "version": "0.5.1",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>being able to access trader mail without being at a trader</li>\n<li>config not being read on *nix systems. It will now also log and error when that is the case. (Credit: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/111219/int16\" rel=\"noreferrer noopener\">int16</a> &amp; <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Lord-S-E-C\" rel=\"noreferrer noopener\">Lord-S-E-C</a>)</li>\n<li>IsNewCharacter state flag not getting cleared</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>added config option to choose whether to limit access to trader mail attachments based on location or not.</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li><strong>IMPORTANT: the config dir <code>SPT\\user\\mods\\Vagabond\\config</code> is now lowercased, double check you only have one config dir and if you have two, keep only the lowercased dir.</strong></li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.5.1",
+      "content_length": 121828,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 115,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-28T17:25:00.000000Z",
+      "created_at": "2026-04-28T17:28:53.000000Z",
+      "updated_at": "2026-07-28T08:25:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/be79218fe8163d5a4306021ff52b5245be54a507f63dfb0c74eb04d283826c19?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/f395c81944bfa7b2271e9fd4c104f0c53e173e8c8de84ee77ce70bdaf5d09976?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/f26f89371ebea2360b93cf93555ca1dcd9ecd32a90a9cf92e07387ffed30d3d6?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/212c0ae1-57b9-47ba-b72c-c15edf417071?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A36Z&rscd=attachment%3B+filename%3Dspt-vagabond_051.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A22Z&ske=2026-08-01T21%3A09%3A36Z&sks=b&skv=2018-11-09&sig=a3Lgk1kXnHNbeWHKUxqhV9Pa0irjIfw40H9%2B9YC1h44%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyOSwibmJmIjoxNzg1NjE1OTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pa_UB7nP27sX6_Kl6xbkT2yuCX15r81gQXEl2ZbvdcQ&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_051.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13489,
+      "hub_id": null,
+      "version": "0.5.0",
+      "description": "<p>A lot of moving parts to this release, so do let me know if you encounter any issues. The quests to get traders into your hideout is meant to take some effort without it being too RNG. Do let me know how you get on with them after a bit.</p>\n<h2>Fixes</h2>\n<ul>\n<li>OnDeathGoTo config option not working properly.</li>\n<li>AddFenceToHideout config option not working properly.</li>\n<li>Incompatible versions of ABPS will no longer crash the mod, it will just throw an error into the log and continue.</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>Added repeatable quest to Skier, which allows you to relocate your hideout - for a fee (configurable). I recommend disabling “AllowHideoutRelocation” in your config with this feature out.</li>\n<li>Added a quest to each trader, which upon completion adds that trader to your hideout. Quests becomes available at LL2 (configurable).</li>\n<li>Items will now maintain their FIR status if when you visit Traders, as long as you take the items with you when you leave again.</li>\n<li>Added “ShareHideoutExits” config option - gives you access to your hideout if you use someone else’ hideout exfil.</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>You can no longer accept mail attachments from traders if the trader is not available your current location.</li>\n<li>Removed obsolete “FixProfiles” config option</li>\n<li>Remove dev key mappings from the client F12 menu</li>\n</ul>\n<h2>Known Issues / Limitations / Notes</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.5.0",
+      "content_length": 122131,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 164,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-25T21:01:00.000000Z",
+      "created_at": "2026-04-25T21:05:14.000000Z",
+      "updated_at": "2026-07-28T08:25:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/091ad9a9be08498302538e4ba6cb0cde95b7799ae60d5de6576f0adf16e680e7?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/7efc7cd8eff43bce0df22842abb492f7c6208abf6771776de0f40a073a548802?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/c7075683288eba8be26954120b386fbee92b28116427449b3615fb581ed3f480?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/be402a65-04b1-4fb1-8d61-55f45582ef5d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A22Z&rscd=attachment%3B+filename%3Dspt-vagabond_050.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A28Z&ske=2026-08-01T21%3A12%3A22Z&sks=b&skv=2018-11-09&sig=DASD7eYkHYkriFjqRtxHlMZxNddydKit%2FuWpLB%2BuO2I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MCwibmJmIjoxNzg1NjE1OTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ks17LMQDWI31afvGP5Jkk7JaDXgvjM84cB7VwX32ER8&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_050.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13467,
+      "hub_id": null,
+      "version": "0.4.0",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>compatibility with ABPS 2.0.15</li>\n<li>extracting from factory night map prevents you from entering factory again</li>\n<li>trader screen freezing/preventing going back when there are no traders.</li>\n<li>respawning in hideout on death potentially not working.</li>\n<li>starter money was not added to the stash on profile reset.</li>\n<li>secret extracts showing up (regression since the quests fix)</li>\n<li>hideout placements in coop games. Everyone should be able to place their own hideouts not and not move the host’s hideout location.</li>\n<li>hideout location error using wrong location name</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>added config options <code>EnableVirtualStashes</code> for enabling/disabling virtual stashes</li>\n<li>added config option <code>WipeVirtualStashesOnRaidEntry</code> to wipe virtual stashes on raid entry</li>\n<li>added config option <code>HealStatusEffectsOnDeath</code> to clear status effects on death (like heavy bleeds, broken limbs etc)</li>\n<li>added config option <code>AllowPostRaidHealing</code> to allow post-raid healing at Therapist (requires money left at the Therapist if virtual stashes is enabled).</li>\n<li>added config options <code>AddFenceToHideout</code> which allows Fence to be accessed in the hideout.</li>\n<li>added config option <code>MailAttachmentLimit</code> which allows you to change when players can mail items between each other</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>improve blocked action error for virtual stashes.</li>\n<li>added “therapist” as an OnDeathGoTo option.</li>\n<li>“StripMailAttachments” config option is now “MailAttachmentLimit”</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>No longer compatible with ABPS 2.0.14 (and older) since 0.4.0</li>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.4.0",
+      "content_length": 104805,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 295,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-20T18:29:00.000000Z",
+      "created_at": "2026-04-20T18:31:01.000000Z",
+      "updated_at": "2026-07-28T08:24:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1ffd057cf168becacbbcc55cae2e5f01492fc00f445f255bd7ee901859e37599?nocache=1",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/59e8447a6f6a683bc758fd10bb1b69568c26aabb02568f90e8597d6d048d0557?nocache=1",
+          "label": "Common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/80436058fd889d9fa5fe5525638055bf929488d705a1153ac293ed91559a7872?nocache=1",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/0b666ed7-e59e-42cf-b13d-679aff999191?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A31Z&rscd=attachment%3B+filename%3Dspt-vagabond_040.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A11Z&ske=2026-08-01T21%3A22%3A31Z&sks=b&skv=2018-11-09&sig=R3FD4cEu47v7Ww3%2BeCGJ0B5qV28yNvJz0v9h0cQCbl4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MCwibmJmIjoxNzg1NjE1OTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ks17LMQDWI31afvGP5Jkk7JaDXgvjM84cB7VwX32ER8&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_040.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13419,
+      "hub_id": null,
+      "version": "0.3.4",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>hermertic door exfil on reserve</li>\n<li>loosing your legs on some infils</li>\n<li>on death, being placed at the wrong infil when set to “stay”</li>\n<li>remove limit to what items you can bring into raid (Credit: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/48110/acidphantasm\" rel=\"noreferrer noopener\">acidphantasm</a>)</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>Changed config option “PermaDeath” to “ResetOnDeath” to better describe what it does.</li>\n</ul>\n<h2>Features</h2>\n<ul>\n<li>Add config option to choose which Fence to start at (Lighthouse or Streets)</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When the trader screen is blank, like in hideouts, it can sometimes overlay the other menus. <strong>Work around: Press the back button (top right) to close the trader UI</strong>.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.3.4",
+      "content_length": 102699,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 370,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-12T07:28:00.000000Z",
+      "created_at": "2026-04-12T07:32:11.000000Z",
+      "updated_at": "2026-07-28T08:21:29.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f3845736576de4832eddb4bc6acbbdf911dc18dc2531b08ce6a75d5fdc826cb8?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/20e8919344ba0a1be167130a054b1e683ffbb60e55b94749d6543bf5cf95d742?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/2da2f1cc36a217a698ebaf73f4e17b489262313327856884da121abffa41693c?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/0788248c-2326-4b79-b02a-8f8757958a4c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A19Z&rscd=attachment%3B+filename%3Dspt-vagabond_034.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A07Z&ske=2026-08-01T21%3A01%3A19Z&sks=b&skv=2018-11-09&sig=1S3hgVMb7C8%2BEEyir0XewO31VgxVykrwrwqT8QU4wuk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MCwibmJmIjoxNzg1NjE1OTQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ks17LMQDWI31afvGP5Jkk7JaDXgvjM84cB7VwX32ER8&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_034.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13411,
+      "hub_id": null,
+      "version": "0.3.3",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>items loose FIR when transitioning between maps</li>\n<li>immediate extraction on spawn in</li>\n<li>fixed missing Fence exfil on Lighthouse</li>\n<li>further improved the exfil creation which hopefully resolves the delayed exfil spawning.</li>\n<li>remove item restrictions from backpacks (Credit: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/236/server-value-modifier-svm\" rel=\"noreferrer noopener\">GhostFenixx - SVM mod</a>)</li>\n<li>remove in-raid item drop restrictions (Credit: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/236/server-value-modifier-svm\" rel=\"noreferrer noopener\">GhostFenixx - SVM mod</a>)</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When the trader screen is blank, like in hideouts, it can sometimes overlay the other menus. <strong>Work around: Press the back button (top right) to close the trader UI</strong>.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.3.3",
+      "content_length": 102758,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 144,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-10T22:50:00.000000Z",
+      "created_at": "2026-04-10T22:52:40.000000Z",
+      "updated_at": "2026-07-28T08:21:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ae907c94050f432884a1d927458bc8f00bf9e82b9dc5c2e99e4d1730e18d61fd?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/2672c1a185fd874b0ba1b1aeaec46e66e9d05c172ae525d5582cf82762bf0c57?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/c7b7040dfa4ac061ad7d5da8c8fc04876d734b897989881d2207f74645fd7e64?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/fa906b3b-eb2f-4b32-a8bf-bcb5e92e83c3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A31Z&rscd=attachment%3B+filename%3Dspt-vagabond_033.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A54Z&ske=2026-08-01T21%3A10%3A31Z&sks=b&skv=2018-11-09&sig=aWZM8GxKcwQceBPz5GMyJeD6rLj35KDIuBFZSPZm87U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MywibmJmIjoxNzg1NjE1OTQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2ejj--4hS7Xw7-8XOJUkdwkJw7H6bec04eHfmp1O3Dg&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_033.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13403,
+      "hub_id": null,
+      "version": "0.3.2",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>Virtual stashes not getting cleared on profile reset.</li>\n<li>Added (improved) ABPS compatibility. (likely the issue with PMCs/npcs not spawning properly)</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When the trader screen is blank, like in hideouts, it can sometimes overlay the other menus. <strong>Work around: Press the back button (top right) to close the trader UI</strong>.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.3.2",
+      "content_length": 100932,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 82,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-09T15:20:00.000000Z",
+      "created_at": "2026-04-09T15:22:22.000000Z",
+      "updated_at": "2026-07-28T08:20:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/28e60f0b9be6e44ba2658c1bc3231e36ea5f624497a1101f478e53242dd2e969?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/583ae0bbdd2018e9c48337eff4544ad425a88a770d3323241572031483c3cf9a?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/2900a1a12d57405f64bddf0cba9515966a809bc20855151669a5d2db9e39b3bd?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/e2ade4cc-77d8-4a83-a3e3-aa67a6a79f17?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A02Z&rscd=attachment%3B+filename%3Dspt-vagabond_032.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A08Z&ske=2026-08-01T21%3A14%3A02Z&sks=b&skv=2018-11-09&sig=RjVRNxzn67Lum8KYiGIS2w5c95WkDG4417TKTWJgqBo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_032.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13397,
+      "hub_id": null,
+      "version": "0.3.1",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>Quests which required a specific exfil can now be completed (if you find any which can’t let me know)</li>\n<li>Inconsistency with exfils/trader exfils not always working/showing (hopefully resolved/improved)</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>Disable post-raid treatment (Credit: DanW/Hardcore Rules)</li>\n<li>Completing quest extractions should take you to the quest giver when you extract.</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When the trader screen is blank, like in hideouts, it can sometimes overlay the other menus. <strong>Work around: Press the back button (top right) to close the trader UI</strong>.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n<li>Virtual/trader stashes not getting wiped on profile reset (fixed in 0.3.2)</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.3.1",
+      "content_length": 98563,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 84,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-08T08:43:00.000000Z",
+      "created_at": "2026-04-08T08:44:55.000000Z",
+      "updated_at": "2026-07-28T08:20:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b3765ac26fbf864014cda9a24d3933b9171f286d42040687d5861fa7d105fe78?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/6ac2d78b69c339e2c9243463f0364660627b58af5cd29e44b55d0a8e98371a6b?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/10d65d065f2384b84100c2c14c7a1794748a3055167024f8f41ce1056babfef6?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/b3a3c905-ef26-4c49-aeae-a1012da0b23b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A11Z&rscd=attachment%3B+filename%3Dspt-vagabond_031.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A30Z&ske=2026-08-01T21%3A24%3A11Z&sks=b&skv=2018-11-09&sig=rIPMAllJCYif%2FE2SwcTcnymmqkeN%2B6%2FEIl392suxsW4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NCwibmJmIjoxNzg1NjE1OTQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-HEOdNTO4JpMC-shX-VeBShyxm9_rOYQNI47tQyQkDo&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_031.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13381,
+      "hub_id": null,
+      "version": "0.3.0",
+      "description": "<h3>Features</h3>\n<ul>\n<li>Traders, and any other place where you extract which is not your hideout, now have their own stash.</li>\n<li>You can now choose where to place your hideout entrance on any map using CTRL+P (not tested on labs or labyrinth).</li>\n<li>You can now choose where you go when you die. Hideout, Fence or last location (last exfil).</li>\n</ul>\n<h2>Changes</h2>\n<ul>\n<li>Scav runs are now disabled (Credit: DanW/Hardcore Rules)</li>\n<li>Extraction areas have been reduced.</li>\n<li>Removed legacy config option “AlsoWipeCarriedMoneyOnFirstRaid”.</li>\n<li>Custom traders will now show up in a specific extract on Reserve.</li>\n</ul>\n<h2>Fixes</h2>\n<ul>\n<li>Exfils and how they are loaded in has been updated and should hopefully make issues with exfils not appearing/working a non-issue now.</li>\n</ul>\n<h2>Known Issues / Limitations</h2>\n<ul>\n<li>The size of “Virtual Stashes” is the same as your profile’s main stash size.</li>\n<li>When the trader screen is blank, like in hideouts, it can sometimes overlay the other menus. Work around: Press the back button (top right) to close the trader UI.</li>\n<li>When placing a hideout exfil, once it appears you will have to move to trigger the extraction to start.</li>\n<li>Hideouts, when initially placed, won’t show on Dynamic Maps until you leave the raid and come back.</li>\n<li>You can only place your hideout once, unless you update the config to allow relocation (This config option is likely to be removed when I add a proper relocation system).</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>Hideout exfils persist until server restart. Other players will be able to use them as extracts until then.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.3.0",
+      "content_length": 93674,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 100,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-06T11:58:00.000000Z",
+      "created_at": "2026-04-06T11:59:39.000000Z",
+      "updated_at": "2026-07-28T08:19:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/44456d572bf1f93ae9e3b898f37fae59e4669cbbe38bcbf3356b3d82484a34da?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/c3305447f1488f62b730f1824b59988d9f46a4d47b09335fb009751648671ca4?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/3bc2fe655dd519e7f17c4809db47c1397d8b51c7336ab2d830eb24a2aa5e7f08?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/d0bf1f67-429e-41dc-be1d-2c56e7689db0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A30Z&rscd=attachment%3B+filename%3Dspt-vagabond_030.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A24Z&ske=2026-08-01T21%3A17%3A30Z&sks=b&skv=2018-11-09&sig=ukaQH8d6cZXznRbkWuUk8Nqvie%2BNPktJMKoK07Vt8ME%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NSwibmJmIjoxNzg1NjE1OTQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.V-Fbt3LLnocY1tnGpSSczElzVyQ5gwbKUqjStR_oFa0&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_030.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13359,
+      "hub_id": null,
+      "version": "0.2.1",
+      "description": "<h2>Fixes</h2>\n<ul>\n<li>Trader UI locking up / becoming inaccessible</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.2.1",
+      "content_length": 72948,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 149,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-03T08:17:00.000000Z",
+      "created_at": "2026-04-03T08:18:55.000000Z",
+      "updated_at": "2026-07-28T08:18:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6befac1036d5fefe81357d04f957ba7a74033d50b0f94d8f5f923c48964020c3?nocache=1",
+          "label": "client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/8409eb74ede38d930968123a785a755d61972b96daa12876a5b285f335f2727a?nocache=1",
+          "label": "common"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/5e594763e27a8d54f31fff110831f57a4f13000a474fa8a4a0f4910b89301624?nocache=1",
+          "label": "server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/1bab7ff7-d58c-416c-beea-7441dd8017f0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A04Z&rscd=attachment%3B+filename%3Dspt-vagabond_021.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A29Z&ske=2026-08-01T21%3A13%3A04Z&sks=b&skv=2018-11-09&sig=wBbedr4Xa50%2FN3TZagiV4JdzJa4RFyoBwDwUl1g13ro%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0NiwibmJmIjoxNzg1NjE1OTQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sJLwU48cDd6mGdgDExJoIMT5f0ZJBAldylRne1IG1Oc&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_021.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13345,
+      "hub_id": null,
+      "version": "0.2.0",
+      "description": "<h2>What’s Changed</h2>\n<p>Pivoted Vagabond to be an open world game overhaul, heavily inspired by features of PTT. Thanks everyone for bringing PTT to my attention - I was not sure at first however I am on board now.</p>\n<p>This is a massive refactor, I  recommend creating a new profile for this one.</p>\n<h2>Features</h2>\n<ul>\n<li>Remember raid location and transition</li>\n<li>Custom transits and infil positions</li>\n<li>Raid/extract based trader access</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2642/vagabond/0.2.0",
+      "content_length": 72507,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 129,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-01T19:21:00.000000Z",
+      "created_at": "2026-04-01T19:21:45.000000Z",
+      "updated_at": "2026-07-28T08:17:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8026deb64af8eedb09286c5472ed99829dece1a0361c0d0fb282e39b884a2829?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/d13ad3492022c2cc625bade5e7555f090162cdb01ea0be878e9c3294de56a2b0?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/e6919e519a00056048bac8690827a496a5a60b4ed2821639630065c98342c331?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1192483958/41b42556-4c66-48f2-819a-039cab221783?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A33Z&rscd=attachment%3B+filename%3Dspt-vagabond_020.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A26Z&ske=2026-08-01T21%3A15%3A33Z&sks=b&skv=2018-11-09&sig=ClbHfC9PbJmezgPep4zFN9a7CKY8GLeFTHp1kiUMUuE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI1OCwibmJmIjoxNzg1NjE1OTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m9HywKuBTnGn3LGyaTM_8qU0BblQDDi7YZhsBHXCpxA&response-content-disposition=attachment%3B%20filename%3Dspt-vagabond_020.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 27,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:36.241Z",
+    "discoveredBy": "seed"
+  }
+}

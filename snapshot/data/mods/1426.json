@@ -1,0 +1,141 @@
+{
+  "type": "mod",
+  "id": 1426,
+  "hub_id": 1976,
+  "guid": "com.arys.unitytoolkit",
+  "name": "UnityToolkit",
+  "slug": "unitytoolkit",
+  "teaser": "A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.",
+  "thumbnail": "",
+  "downloads": 255748,
+  "favourites_count": 132,
+  "description": "<h1>UnityToolkit</h1>\n<h2>What is this library for?</h2>\n<p>This library aims to provide additional tools to client modders which will (hopefully) allow them to write more optimised code\nand reduce the performance cost and memory allocation of their code even further.</p>\n<h2>How to install this library (for users)</h2>\n<ol>\n<li>Download the latest release</li>\n<li>Open the .7z with 7-Zip</li>\n<li>Drag and drop the ‘BepInEx’ folder into your game folder</li>\n<li>Play SPT</li>\n</ol>\n<h2>How to use this library (for mod developers):</h2>\n<ol>\n<li>Download the latest release</li>\n<li>Copy the assemblies from the release zip to where you store your project’s assembly references</li>\n<li>Add all the assemblies as assembly references to your project</li>\n<li>Add <code>[BepInDependency(\"com.arys.unitytoolkit\")]</code> attribute to your plugin class (I recommend you add a minimum version string to the attribute)</li>\n<li>You can now use <em>UniTask</em>, <em>Unity.Collections</em>, <em>VContainer</em>, <em>ZLinq</em> and <em>ZString</em> in your mod</li>\n</ol>\n<h2>What features does this library provide?</h2>\n<ol>\n<li><em>UniTask</em> is a near zero-allocating, performant version of C# Tasks that’s suited for Unity than the standard C# implementation\n<ul>\n<li>It doesn’t use threads or <code>SynchronizationContext</code>/<code>ExecutionContext</code> so the result is faster performance and lower allocation while matching Unity threading (single-thread)</li>\n<li>It is also possible to replace Unity’s Coroutines, which has poor performance and higher memory allocation, with UniTask instead</li>\n<li>Documentation: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Cysharp/UniTask\" rel=\"noreferrer noopener\">https://github.com/Cysharp/UniTask</a></li>\n</ul>\n</li>\n<li><em>Unity.Collections</em> is included in this library for the additional <code>NativeContainer</code> types it provides\n<ul>\n<li><code>NativeList</code>, <code>NativeHashMap</code>, <code>NativeMultiHashMap</code>, and <code>NativeQueue</code>: these are useful data types when you are working with Unity’s Jobs system as they are thread-safe</li>\n<li>Documentation: <a target=\"_blank\" class=\"external-link\" href=\"https://docs.unity3d.com/Packages/com.unity.collections@2.6/manual/collections-overview.html\" rel=\"noreferrer noopener\">https://docs.unity3d.com/Packages/com.unity.collections@2.6/manual/collections-overview.html</a></li>\n</ul>\n</li>\n<li><em>VContainer</em> is a fast Dependency Injection container, designed for Unity and works with injecting into both standard C# classes and Unity MonoBehaviours\n<ul>\n<li>Documentation: <a target=\"_blank\" class=\"external-link\" href=\"https://vcontainer.hadashikick.jp\" rel=\"noreferrer noopener\">https://vcontainer.hadashikick.jp</a></li>\n</ul>\n</li>\n<li><em>ZLinq</em> provides high performance, zero-allocation LINQ by utilising <code>ValueEnumerable</code>, made by the developer of UniTask\n<ul>\n<li>Documentation: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Cysharp/ZLinq\" rel=\"noreferrer noopener\">https://github.com/Cysharp/ZLinq</a></li>\n</ul>\n</li>\n<li><em>ZString</em> is a near zero-allocating string builder, which is also made by the developer of UniTask and ZLinq\n<ul>\n<li>Documentation: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Cysharp/ZString\" rel=\"noreferrer noopener\">https://github.com/Cysharp/ZString</a></li>\n</ul>\n</li>\n</ol>\n<h2>Is it safe?</h2>\n<p>Yes, all assemblies are just compiled versions of their original git repo\nI’ve also included a VirusTotal scan of all assemblies on the GitHub releases page</p>\n<h2>Building from source</h2>\n<ol>\n<li>Clone the repository:\n<pre><code>git clone https://github.com/ArysWasTaken/UnityToolkit.git\n</code></pre>\n</li>\n<li>Place the compiled assemblies for UniTask, Unity.Collections and ZString in <code>project\\UnityToolkit\\References</code>.</li>\n<li>Adjust the reference paths, macros and build events in the .csproj files</li>\n<li>Open solution in your preferred C# IDE</li>\n<li>Build solution</li>\n</ol>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1426/unitytoolkit",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-05-20T21:40:00.000000Z",
+  "created_at": "2024-05-20T21:40:32.000000Z",
+  "updated_at": "2026-07-28T06:08:57.000000Z",
+  "owner": {
+    "id": 13652,
+    "name": "Arys",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/kMKmevtkLA6hP3tfnVyCilGHyTxGp8GOKbvBHpVY_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/fe2e005ba43d701886614c464c1f9039694e30e4_1280w.webp",
+    "created_at": "2022-01-18T19:35:58.000000Z",
+    "updated_at": "2026-08-01T15:51:41.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ArysWasTaken/UnityToolkit",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12026,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<h2>In this release</h2>\n<ul>\n<li>Removed redundant code</li>\n<li>Removed FixPluginTypesSerialization\n<ul>\n<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.1",
+      "content_length": 500753,
+      "spt_version_constraint": ">=4.0.0",
+      "downloads": 47062,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-25T20:46:00.000000Z",
+      "created_at": "2025-10-25T20:48:51.000000Z",
+      "updated_at": "2026-07-28T06:08:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/81ff11b228b73863f5cf1f54b9d823c344d23a6e900ec8fc3c33578569906fa1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798582455/e140f036-e192-458a-881d-732cff69fab3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A03Z&rscd=attachment%3B+filename%3DUnityToolkit-v2.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A58Z&ske=2026-08-01T21%3A07%3A03Z&sks=b&skv=2018-11-09&sig=Bc6oxsP9BaCF%2Fpft0fOeW2mMIh8aLN69p69dGH6nw7A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DUnityToolkit-v2.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11979,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h1>WARNING</h1>\n<p>There is an issue with this release which causes the game to fail to load into the main menu with certain mods installed.</p>\n<p><strong>Please remove the “FixPluginTypeSerialization” folder inside the “BepInEx/patchers” folder!</strong></p>\n<p>After discussion with Tarkin, this patcher will be removed in the next update of UnityToolkit and he will provide a fixed version of that patcher in his upcoming mod.</p>\n<h2>In this release</h2>\n<ul>\n<li>Removed all APIs and extension methods\n<ul>\n<li>They were not up to par and were probably only used by myself</li>\n</ul>\n</li>\n<li>Added VContainer\n<ul>\n<li>A fast dependency injection container designed for Unity, so it also works on injecting into Unity Objects</li>\n</ul>\n</li>\n<li>Added ZLinq\n<ul>\n<li>Adds high performance, zero-allocation LINQ by using <code>ValueEnumerable</code></li>\n</ul>\n</li>\n<li>Added FixPluginTypesSerialization\n<ul>\n<li>Fixes a bug that affects all Unity Engine versions where references to custom <code>[System.Serializable]</code> classes/structs would not be deserialized correctly in Unity Objects added by client mods</li>\n<li>Thanks to Tarkin for finding this fix</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/2.0.0",
+      "content_length": 532468,
+      "spt_version_constraint": ">=4.0.0",
+      "downloads": 430,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-22T18:53:00.000000Z",
+      "created_at": "2025-10-22T18:54:03.000000Z",
+      "updated_at": "2026-07-28T06:07:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/81a0e275104d5bcec4499fd72918fc0583ba337267883913c197dd8116f38a91?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798582455/278bb100-7ed7-40a9-9fef-a3c61c573abf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A48%3A24Z&rscd=attachment%3B+filename%3DUnityToolkit-v2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A47%3A29Z&ske=2026-08-01T20%3A48%3A24Z&sks=b&skv=2018-11-09&sig=tGeceRsnlApUtd%2Bffdi0g76QrynEb%2BKZdKbuIr0Qsh0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DUnityToolkit-v2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1331,
+      "hub_id": 13433,
+      "version": "1.2.0",
+      "description": "<p>Added Dependency Injection Container and Event Bus structures for mod developers</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1426/unitytoolkit/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 33876,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-02-21T23:28:30.000000Z",
+      "created_at": "2025-02-21T23:28:30.000000Z",
+      "updated_at": "2026-05-14T02:16:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7ca4b638b7704e75f5c2163766b9ee421058b125df415c354343d1a59444b3fb/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798582455/a527bed6-ff26-4c2d-979c-1f58bdef67b2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A39Z&rscd=attachment%3B+filename%3DUnityToolkit-1.2.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A12Z&ske=2026-08-01T21%3A00%3A39Z&sks=b&skv=2018-11-09&sig=DtbscCNItzmL3WSFPKw77zfWat7YbsYsLuNXVAjUo1w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DUnityToolkit-1.2.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 245,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:22.213Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "type": "mod",
+  "id": 2646,
+  "hub_id": null,
+  "guid": "com.deadlauncher.flexiblebuilds",
+  "name": "Flexible Builds",
+  "slug": "flexible-builds",
+  "teaser": "Weapon preset and build improvements for SPT",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Z19V11oqcpYalKwA6a5PtCrwW5vdyUBYHZZnbFZW.png",
+  "downloads": 2240,
+  "favourites_count": 7,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><blockquote>\n<p>Weapon preset and build improvements for SPT</p>\n</blockquote>\n<p>I really like the concept of weapon builds. The idea of having different sets of parts for the same weapon — each optimized for a specific role (mobility, long range, low recoil, etc.) — is genuinely cool. However, Tarkov implements presets quite rigidly. A build is treated as an exact, fixed list of attachments and nothing else (thankfully, magazines are ignored).</p>\n<p>Personally, <strong>I don’t care which exact flashlight or laser is mounted</strong> on my <em>SuperUltraLasergun</em> — I often just slap on whatever I have available at the moment. Yet I still want the weapon to be recognized and displayed as the <em>SuperUltraLasergun</em> build.</p>\n<p>Additionally, preset names must be globally unique, meaning you cannot have the same name for different weapon models (e.g. an AK-74N “Zenit” build and an AKS-74 “Zenit” build at the same time).  And, <em>of course</em>, your build names must only contain Latin characters.</p>\n<p>This mod fixes these limitations. It lets you choose which attachment types are taken into account when matching a weapon in your inventory to a saved preset, allows you to use the <strong>same name</strong> for builds of different weapons, allows you to use <strong>non-Latin</strong> characters in names, and introduces a more <code>flexible</code> matching system.</p>\n<h3>New: Partial Matching</h3>\n<p>You can enable <strong>partial matching</strong> for builds.</p>\n<p>This allows you to create “base builds” that define only a minimal required set of components. A weapon will be considered a match if it <strong>contains all components from the build, but may also include additional ones</strong>.</p>\n<p>When multiple builds match, the mod will automatically pick the <strong>most specific one</strong> (the one with more components).</p>\n<p>This makes it possible to:</p>\n<ul>\n<li>ignore unimportant attachments (like tactical devices) without excluding entire categories</li>\n<li>define layered builds (e.g. base → upgraded → full kit)</li>\n<li>combine with excluded mod types for even more flexibility</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><h3>Hide base weapon name</h3>\n<p>You can switch to display only the preset name without the base model:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/gb4ZC78b/nobasename.png\" alt=\"\" /></p>\n<h3>Same Names</h3>\n<p>Builds for different weapons can share the same name without conflicts:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/tTYVyGjF/samename.png\" alt=\"\" /></p>\n<h3>Naming Freedom</h3>\n<p>Names can use characters other than Latin, as in container tags (even emoji☻).</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/3YGZS6kM/naming.png\" alt=\"\" /></p>\n<h3>Flexible Matching</h3>\n<p>Excluded attachment types (in these examples: sights, mags, mounts, tactical devices, and foregrips) are ignored when comparing builds, allowing them to be recognized as the same preset:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/Lz0HTCdK/flexibillity.png\" alt=\"\" /></p>\n<p>Another example of flexible matching:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/Hf66ypVd/flexibillity2.png\" alt=\"\" /></p>\n<h3>Partial Matching</h3>\n<p>Create a <code>base preset</code> with a minimal number of attachments. Any additional attachments you add will not change the build name, as long as all elements from the base preset are present.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><h3>Flexible Matching</h3>\n<p>You can configure which mod types will be excluded from the preset matching check. The list is generated dynamically from all classes inheriting from the base <code>Mod</code> class — basically, every weapon modification the game recognizes appears in the config.</p>\n<p><em>This makes it easy to ignore custom modification types added by other SPT mods (I haven’t seen any yet, but the option is there).</em></p>\n<h4>Hierarchy</h4>\n<p>Mod types are organized in a tree structure, where each parent contains its nested subtypes.</p>\n<p>Toggling a parent mod class (e.g., “Sights”) will toggle all its child categories (collimators, optics, etc.).</p>\n<p>If a child category is unchecked, the parent will also be unchecked, as not all children remain selected.</p>\n<p><strong>If you want vanilla behavior</strong>, simply select only <strong>Magazines</strong> in the config.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Behavior</div>\n<div class=\"tab-content\"><ul>\n<li>Excluded mods are still saved as part of the preset — settings only affect matching and naming.</li>\n<li>Settings apply only to your own builds and do not affect built-in presets (Mechanic, Prapor, etc.).</li>\n<li>Settings now apply <strong>instantly</strong> — no restart or profile reload required.</li>\n</ul>\n<p><strong>Note:</strong> already displayed item names will only refresh when the game updates inventory.\nYou can force this by exiting to main menu or removing and reattaching any weapon component.</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p><em>Potentially</em> compatible with all other mods, including those that add custom weapon modification types.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2646/flexible-builds",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2026-03-31T11:24:00.000000Z",
+  "created_at": "2026-03-30T15:14:50.000000Z",
+  "updated_at": "2026-07-28T08:24:22.000000Z",
+  "owner": {
+    "id": 90214,
+    "name": "DeadLauncher",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/AIdgwKrFf9XlUNlJP6R2IDldQJ0kZraW61tj2PkM_256w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/3gkq4moR0HVmaUyWzu9qNUC6TPwRBi0kHekQFn7K_2560w.webp",
+    "created_at": "2025-11-19T06:34:39.000000Z",
+    "updated_at": "2026-07-31T16:46:39.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://gitlab.com/DeadLauncher/spt-flexible-builds",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13459,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<h3>Fixes</h3>\n<ul>\n<li>Fixed an issue where weapon item names did not update after creating a new build</li>\n</ul>\n<p>Now, when a new build is created, all items in the inventory with the same base weapon are refreshed and update their names if they match the build.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.2.1",
+      "content_length": 13489,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1222,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-19T09:51:00.000000Z",
+      "created_at": "2026-04-19T09:50:54.000000Z",
+      "updated_at": "2026-07-28T08:24:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/dce822e53b6cd40552bacef47d9dcc918d4a5d7a4a87a45e3f09b4de369dae63?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/80576587/packages/generic/FlexibleBuilds/1.2.1/FlexibleBuilds-1.2.1.7z"
+      }
+    },
+    {
+      "id": 13449,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h3>Changes</h3>\n<ul>\n<li>Added an option to hide the base weapon name from preset titles</li>\n<li>Allow to use non-Latin characters in build names (now matches container tags)</li>\n<li>Weapon names now update after changing settings (refresh occurs when the inventory screen updates, e.g., after returning to the main menu)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.2.0",
+      "content_length": 13253,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 142,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-17T15:49:00.000000Z",
+      "created_at": "2026-04-17T15:45:38.000000Z",
+      "updated_at": "2026-07-28T08:22:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ed40c46a8fa73104c587ebb23b3604483f66c4d18149450a88f081ed42e52edd?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/80576587/packages/generic/FlexibleBuilds/1.2.0/FlexibleBuilds-1.2.0.7z"
+      }
+    },
+    {
+      "id": 13443,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h3>New Features</h3>\n<h4>Partial Matching</h4>\n<ul>\n<li>Added a partial matching option for builds.</li>\n</ul>\n<p>When enabled, you can create “base builds” that include only a minimal set of components. Adding extra attachments on top of such a build will not change its name. When multiple builds could match, the system will choose the most specific one (the one with more components).</p>\n<p>In simple terms: a weapon is considered a match if it <strong>contains all components from the build, but may also include additional ones</strong>.</p>\n<p>This can be used instead of excluding certain attachment types, or together with it for more flexibility.</p>\n<h4>Instant Settings Update</h4>\n<ul>\n<li>Settings now apply automatically when changed.</li>\n</ul>\n<p>No more inventory reloads required. Build detection updates immediately.\nHowever, already displayed item names will only refresh after the game updates weapon mods — you can trigger this by removing and reattaching any weapon component.</p>\n<h3>Changes</h3>\n<ul>\n<li>Performance improvements and caching optimizations</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.1.0",
+      "content_length": 12510,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 122,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-16T10:52:00.000000Z",
+      "created_at": "2026-04-16T10:52:29.000000Z",
+      "updated_at": "2026-07-28T08:22:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/3791b69d322a4df4fa8a54720e10744aca089c56b289922572c78a32ab73cb47?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/api/v4/projects/80576587/packages/generic/FlexibleBuilds/1.1.0/FlexibleBuilds-1.1.0.7z"
+      }
+    },
+    {
+      "id": 13408,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<h2>Heads up</h2>\n<blockquote>\n<p>You will need to reconfigure everything again. Hopefully this is the first and last time — sorry about that.</p>\n</blockquote>\n<h2>Changes</h2>\n<ul>\n<li>Make configuration more consistent and user-friendly</li>\n<li>Display mod types in a tree structure</li>\n<li>Synchronize parent and child mod type selection states</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.0.2",
+      "content_length": 11095,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 243,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-10T11:43:00.000000Z",
+      "created_at": "2026-04-10T11:26:07.000000Z",
+      "updated_at": "2026-07-28T08:20:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b92d434cde836fb1ba5c5dfc3c0296e042715f7060ae7a4d8d5f154dddfbf55e/details",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/DeadLauncher/spt-flexible-builds/-/package_files/290014463/download"
+      }
+    },
+    {
+      "id": 13382,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<ul>\n<li>Set minimum supported server version to 4.0.0 (tested on ≥ 4.0.10)</li>\n<li>Set default mod type exclusions to disabled (no mods are excluded, builds are matched using all attachments)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.0.1",
+      "content_length": 9250,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 175,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-06T15:46:00.000000Z",
+      "created_at": "2026-04-06T15:44:07.000000Z",
+      "updated_at": "2026-07-28T08:19:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5247d776dbc46058ec246c9e4579bc259e243fe37b35f21744d75cf77ff76549?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/DeadLauncher/spt-flexible-builds/-/package_files/288397627/download"
+      }
+    },
+    {
+      "id": 13333,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2646/flexible-builds/1.0.0",
+      "content_length": 9240,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 348,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-03-31T11:23:00.000000Z",
+      "created_at": "2026-03-31T11:16:24.000000Z",
+      "updated_at": "2026-07-28T08:17:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ecd6356011b9398aa38a27185572f479ab1002846508189b5bc77d78c8f298b8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/DeadLauncher/spt-flexible-builds/-/package_files/286719993/download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 14,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:46:16.756Z",
+    "discoveredBy": "seed"
+  }
+}

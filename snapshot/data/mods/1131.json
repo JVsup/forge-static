@@ -1,0 +1,270 @@
+{
+  "type": "mod",
+  "id": 1131,
+  "hub_id": 1561,
+  "guid": "xyz.drakia.livefleaprices",
+  "name": "Live Flea Prices",
+  "slug": "live-flea-prices",
+  "teaser": "Keep your flea prices up to date with data processed from Tarkov.dev",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1561.png",
+  "downloads": 273279,
+  "favourites_count": 109,
+  "description": "<p>A very simple mod that pulls live flea data from a GitHub mirror of processed Tarkov.dev flea data, this mirror is updated once an hour. The mod will re-download the flea data every hour while your server is active, or if it’s been over an hour since the last update when you launch your server.</p>\n<p>The flea prices are processed using approximately the same method as SPT utilizes for flea prices, just updated every hour.</p>\n<p><strong>Notice: This mod connects to an external service to fetch price data, this service is not maintained by or associated with the SPT project.</strong></p>\n<h3>Installation</h3>\n<p>1) Open the downloaded zip file in 7-zip</p>\n<p>2) Select the folder in the zip file in 7-zip</p>\n<p>3) Drag the selected folder from 7-zip into your SPT folder</p>\n<p>Demonstration Video:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/34vXXDj.gif\" alt=\"Install Gif\" /></p>\n<h3>Configuration</h3>\n<p>Configuration is handled via the config/config.json and config/blacklist.json files</p>\n<p>config/config.json:</p>\n<p>- maxIncreaseMult - This is used to provide a multiplier above SPTs base flea price that an item is allowed to go (Default: 10, meaning prices are capped at 10x the base SPT flea price)</p>\n<p>- pvePrices - Whether to enable PvE prices instead of PvP prices (Default: false)</p>\n<p>- disablePriceFetching - Whether to disable fetching of prices from the backing database (Default: false)</p>\n<p>- nextUpdate - This can be ignored and is just used for keeping track of when the plugin should next pull an updated price file</p>\n<p>The config option disablePriceFetching allows disabling the fetching of prices from the backing database, and instead will always use the price file located at user\\mods\\zzDrakiaXYZ-LiveFleaPrices\\config\\prices.json. If this file doesn’t exist, it will be downloaded from the backing database once and not updated after that point.</p>\n<p>Previous price files can be retrieved by looking through the commit history of the backing database repository:</p>\n<p>PVP: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-regular.json\" rel=\"noreferrer noopener\">https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-regular.json</a></p>\n<p>PVE: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-pve.json\" rel=\"noreferrer noopener\">https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-pve.json</a></p>\n<p>config/blacklist.json:</p>\n<p>The blacklist.json file is just an array of item IDs to exclude from Live Flea Prices. You can find item IDs using <a target=\"_blank\" class=\"external-link\" href=\"https://db.sp-tarkov.com/\" rel=\"noreferrer noopener\">https://db.sp-tarkov.com/</a></p>\n<p>If you enjoy my work, you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/drakiaxyz\" rel=\"noreferrer noopener\">feed my caffeine addiction</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1131/live-flea-prices",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2023-10-27T01:11:00.000000Z",
+  "created_at": "2023-10-27T01:11:56.000000Z",
+  "updated_at": "2026-07-28T06:05:47.000000Z",
+  "owner": {
+    "id": 27605,
+    "name": "DrakiaXYZ",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-02-26T18:51:50.000000Z",
+    "updated_at": "2026-08-01T19:31:53.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/DrakiaXYZ/SPT-LiveFleaPrices-CSharp",
+      "label": "C#"
+    },
+    {
+      "url": "https://github.com/DrakiaXYZ/SPT-LiveFleaPrices",
+      "label": "TypeScript"
+    }
+  ],
+  "versions": [
+    {
+      "id": 11930,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<ul>\n<li>Fix issue where prices wouldn’t be honored after the first flea generation</li>\n<li>Fix issue where changing game mode wouldn’t fetch updated prices until refresh timer ran out</li>\n</ul>\n<p>Backing database PvP price fetching is being re-enabled, good luck, and don’t complain that they’re out of whack, that’s what happens when BSG destroys the economy</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/2.0.1",
+      "content_length": 9469,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 68053,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-19T21:03:00.000000Z",
+      "created_at": "2025-10-19T21:04:06.000000Z",
+      "updated_at": "2026-07-28T06:05:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/68d657366e9a8217a8fd62d2e52e683af891c1e71a58bfaf707e761a9ed1858d?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1071934482/c9335858-c72b-4ef2-b8f9-5cd0d6694388?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A23Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-2.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A56%3A41Z&ske=2026-08-01T20%3A57%3A23Z&sks=b&skv=2018-11-09&sig=LdsG8yQocWnRkEP9aF7GP%2FcQcofhpbJVyLAkI%2BOJqBQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-2.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11766,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<ul>\n<li>Update for SPT 4.0.0</li>\n<li>Rewrite in C#</li>\n<li>Backing database PvP prices have been reverted to July 1st, and fetching from Tarkov.dev has been disabled for PvP until next wipe because BSG screwed the economy</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/2.0.0",
+      "content_length": 9415,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 4335,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-11T19:30:00.000000Z",
+      "created_at": "2025-10-11T17:42:24.000000Z",
+      "updated_at": "2026-07-28T06:02:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/e20cb00db7151ed950c756585f7c1923169005962221aaf4ed1a2a1a61d09550?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1071934482/0a5b31ed-dc14-42ab-8cbb-b702bb59c7a2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A03Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A18Z&ske=2026-08-01T21%3A10%3A03Z&sks=b&skv=2018-11-09&sig=y4p22Ide1kzC7eAs9G7U4fvafhs9W79maKBkDaCZiqk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 272,
+      "hub_id": 14603,
+      "version": "1.5.2",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<ul>\n<li>Add new config to allow disabling price fetching</li>\n<li>Backing database PvP prices have been reverted to July 1st, and fetching from Tarkov.dev has been disabled for PvP until BSG re-enables the flea on live</li>\n</ul>\n<p>New config option <code>disablePriceFetching</code> allows disabling the fetching of prices from the backing database, and instead will always use the price file located at <code>user\\\\mods\\\\zzDrakiaXYZ-LiveFleaPrices\\\\config\\\\prices.json</code>. If this file doesn’t exist, it will be downloaded from the backing database once and not updated after that point.</p>\n<p>Previous price files can be retrieved by looking through the commit history of the backing database repository:</p>\n<p>PVP: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-regular.json\" rel=\"noreferrer noopener\">https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-regular.json</a></p>\n<p>PVE: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-pve.json\" rel=\"noreferrer noopener\">https://github.com/DrakiaXYZ/SPT-LiveFleaPriceDB/commits/main/prices-pve.json</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.5.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 21374,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-11T20:00:56.000000Z",
+      "created_at": "2025-07-11T20:00:56.000000Z",
+      "updated_at": "2026-05-14T01:42:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/63c349ff-0b0d-4040-9338-27228a2d6cce?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A30Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.5.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A13Z&ske=2026-08-01T21%3A03%3A30Z&sks=b&skv=2018-11-09&sig=nThGQ6VlnoHnZ0gwSws681yVkptxN%2BowWTrVwX%2FV404%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.5.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1005,
+      "hub_id": 13782,
+      "version": "1.5.1",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<p>Switch to PostSptLoad so we always load after traders are added, even if users mess with their load order</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.5.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 26048,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-25T04:06:21.000000Z",
+      "created_at": "2025-03-25T04:06:21.000000Z",
+      "updated_at": "2026-05-14T02:03:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/54e18bfd-7d82-41a0-9db2-276ade92321b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A56Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.5.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A04Z&ske=2026-08-01T20%3A55%3A56Z&sks=b&skv=2018-11-09&sig=3rnM1k9F6eiadt3XgMJmpA0Ygx1orU%2B30q7micWpDbc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.5.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1138,
+      "hub_id": 13639,
+      "version": "1.5.0",
+      "description": "<h3>This version will only work with SPT 3.11.x</h3>\n<ul>\n<li>Update for 3.11</li>\n<li>Handle fetch failures more gracefully</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.5.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3743,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-17T05:49:10.000000Z",
+      "created_at": "2025-03-17T05:49:10.000000Z",
+      "updated_at": "2026-05-14T02:04:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/6b2f1a1b-5a36-4623-b25d-f2647a8003a7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A29Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.5.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A58Z&ske=2026-08-01T21%3A11%3A29Z&sks=b&skv=2018-11-09&sig=yAiEdnV9o1dEvnUSuQCmz91OUaBwVhGl0xmvFz9Dv%2FQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.5.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1977,
+      "hub_id": 12701,
+      "version": "1.4.0",
+      "description": "<p>Update for 3.10</p>\n<p>- New config option “debug” to enable debug logging</p>\n<p>- New config option “maxLimiter” to enable maxIncreastMult</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 27991,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-18T06:16:31.000000Z",
+      "created_at": "2024-12-18T06:16:31.000000Z",
+      "updated_at": "2026-05-14T02:51:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/34dddb76-eea5-446c-bb99-4cafc0bc17c9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A28Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A40Z&ske=2026-08-01T21%3A04%3A28Z&sks=b&skv=2018-11-09&sig=c5jwrQmXqdVbB6TEx%2B08wu8jSwxJoOVa641z7j01ies%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTM5NywibmJmIjoxNzg1NjE1MDk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7odRXPktsNR57AqUJ4nsr8pvDl3GczaX1MKHSYPI5rU&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3751,
+      "hub_id": 10500,
+      "version": "1.2.0",
+      "description": "<ul>\n<li>Update for 3.9.0</li>\n<li>Add blacklist support, thanks <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Rsslone\" rel=\"noreferrer noopener\">@Rsslone</a> !</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 30554,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-06T20:32:30.000000Z",
+      "created_at": "2024-07-06T20:32:30.000000Z",
+      "updated_at": "2026-05-14T03:56:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/f1a4f3fb-7cf0-4c48-a6bd-f00cd56cd926?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A23Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A00Z&ske=2026-08-01T20%3A49%3A23Z&sks=b&skv=2018-11-09&sig=OkSefZa7b8coZdE29Komx5Y3YqveNppPv8UuvnQBAXY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOSwibmJmIjoxNzg1NjE1MTA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AOu8aTRra9y7Y-1Yl3r4jv-u-NX-d1HQgMIbved97X4&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4974,
+      "hub_id": 9010,
+      "version": "1.1.0",
+      "description": "<ul>\n<li>Update for 3.8.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1131/live-flea-prices/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 8653,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T21:19:52.000000Z",
+      "created_at": "2024-04-01T21:19:52.000000Z",
+      "updated_at": "2026-05-14T04:21:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/37ac9de50ee1eb994b36b76afaa40742b998d43705036098818fdd1f3abea97a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/689538035/b9f657a7-8fe0-40d8-85f6-9c7813c91f6c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A53%3A04Z&rscd=attachment%3B+filename%3DDrakiaXYZ-LiveFleaPrices-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A52%3A52Z&ske=2026-08-01T20%3A53%3A04Z&sks=b&skv=2018-11-09&sig=PVhnDbYFOjSZWltEUmasVrb510s81PLGty%2B58EIYrGQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOSwibmJmIjoxNzg1NjE1MTA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AOu8aTRra9y7Y-1Yl3r4jv-u-NX-d1HQgMIbved97X4&response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-LiveFleaPrices-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 231,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:48:46.200Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,766 @@
+{
+  "type": "mod",
+  "id": 812,
+  "hub_id": 1096,
+  "guid": "me.skwizzy.lootingbots",
+  "name": "Looting Bots",
+  "slug": "looting-bots",
+  "teaser": "This mod aims to add more life to the bots by enhancing some EFT looting behaviors letting bots loot items, containers, and corpses during patrols. More features to come!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1096.png",
+  "downloads": 731617,
+  "favourites_count": 170,
+  "description": "<p>If you enjoy my work, support me at <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/skwizzy\" rel=\"noreferrer noopener\">Ko-Fi!</a></p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3><strong>REQUIRED DEPENDENCY: <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/\" rel=\"noreferrer noopener\">BigBrain</a> This mod will not work unless the BigBrain mod is also installed!</strong></h3>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Skwizzy/SPT-LootingBots/blob/master/README.md\" rel=\"noreferrer noopener\">View readme</a> for more details. Please report any issues in the comments section here or feel free to open an issue on the github. Having debug enabled in the mod menu is recommended when reporting issues.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Skwizzy/SPT-LootingBots/issues?q=is%3Aopen+-label%3A%22resolution%3A+fixed+%28in+beta%29%22+label%3Abug%2C%22performance+issue%22+\" rel=\"noreferrer noopener\"> <img loading=\"lazy\" decoding=\"async\" src=\"https://img.shields.io/github/issues-search/Skwizzy/SPT-LootingBots?label=Open%20issues&amp;query=is%3Aopen%20-label%3A%22resolution%3A%20fixed%20%28in%20beta%29%22%20label%3Abug%2C%22performance%20issue%22\" alt=\"GitHub issue custom search in repo\" /></a> - Check here for an existing issue before reporting a bug</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Skwizzy/SPT-LootingBots/issues?q=is%3Aissue+is%3Aopen+label%3A%22resolution%3A+fixed+%28in+beta%29%22%2C%22resolution%3A+implemented+%28in+beta%29%22+\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://img.shields.io/github/issues-search/skwizzy/spt-lootingbots?label=Resolved%20in%20beta&amp;query=is%3Aissue%20is%3Aopen%20label%3A%22resolution%3A%20fixed%20%28in%20beta%29%22%2C%22resolution%3A%20implemented%20%28in%20beta%29%22\" alt=\"GitHub issue custom search in repo\" /></a></p>\n<h3><strong>Base game behavior:</strong></h3>\n<ul>\n<li>Scavs start a raid on patrol, when they finish a combat engagement they will return to patrol mode after the amount of seconds specified in the Mind.TIME_TO_FORGOR_ABOUT_ENEMY_SEC bot config property</li>\n<li>When scavs are on patrol, they have a chance to inspect a nearby corpse and loot simple things such as weapons and</li>\n<li>When scavs are on patrol, sometimes they stop in front of a lootable container and pretend to loot it</li>\n<li>PMCs and Scavs in SPT spawn with some potentially valuable loot already in their inventory</li>\n</ul>\n<h3><strong>Modded behavior:</strong></h3>\n<ul>\n<li>New bot brain layer (LootingLayer) added for looting that replaces the base game logic responsible for “looting”</li>\n<li>LootingLayer will activate every 10 seconds (by default) during a patrol causing the bots to scan for the closest lootable item, container, or corpse. Scan distance configured by the “Detect Loot Distance” setting (75m by default)</li>\n<li>Once a lootable object has been found, bots will attempt to navigate to the object and commence looting</li>\n<li>Bots will attempt to loot everything from within corpse and a container</li>\n<li>Bots will examine each item for about 1 second before looting it (simulates discovering items when searcing containers/corpses)</li>\n<li>If a bot cannot equip a piece of gear, they will attempt to place it in their inventory</li>\n<li>Not all loot is navigable, relies heavily on the availability of a nearby NavMesh that bots can use to navigate\n<ul>\n<li>If a container is behind a door, bots will open the door if unlocked.</li>\n<li>If a bot is stuck in place or if the bot spends too much time moving, the loot will be ignored</li>\n</ul>\n</li>\n<li>Once looting has finished, bots will wait the amount of time specified<br />\nin the “Delay between looting” setting before the next loot scan occurs (15s by default)</li>\n</ul>\n<p><strong>Gear Swap Criteria</strong></p>\n<ul>\n<li>Bot will always swap to gear that has higher armor rating (helmets, armor vests, armored rigs)</li>\n<li>Backpack will be swapped if backpack being looted has more slots</li>\n<li>When looting larger rigs, bots will swap if currently equipped rig is of equal or lower armor class</li>\n<li>When throwing old backpacks/tactical rigs, bots try to take all the loot from the container thrown</li>\n<li>When looting weapons, bots will compare the item’s Handbook(default) or Flea market price in rubles to the value of the weapons currently equipped.\n<ul>\n<li>Looted weapons with higher value will replace an equipped weapon with the lowest value</li>\n<li>Bots prefer to use the highest value weapon as their primary (if they have ammo)</li>\n</ul>\n</li>\n</ul>\n<h3>Package Contents</h3>\n<ul>\n<li>BepInEx/plugins/skwizzy.LootingBots.dll - Client plugin responsible for all the new corpse looting logic</li>\n<li>user/mods/Skwizzy-LootingBots-ServerMod - Server mod responsible for:\n<ol>\n<li>Marks all items with DiscardLimits as InsuranceDisabled. It then disables the DiscardLimit settings for the server via the EnableDiscardLimits option in Server/database/globals.json. SPT PMC bots by default spawn with loot already in their backpacks, this loot is not marked Found In Raid and thus is subject to BSG’s RMT protection logic. With discard limits enabled, when a bot drops their backback to swap to a new one any loot with discard limits in their bag will be deleted immediately when the bag is dropped. To avoid this we set the EnableDiscardLimits to false, and also make sure to flag all items with a DiscardLimit &gt;= 0 as InsuranceDisabled to prevent items suchs as keys and cases to be insured.</li>\n<li>Provides the option to clear out the loot that PMC/Scav bots start with<br />\nin their backpacks. This does not include meds, ammo, grenades ect. These options can be found in the Skwizzy-LootingBots-ServerMod/config/config.json.</li>\n</ol>\n</li>\n</ul>\n<h3><strong>Install</strong></h3>\n<ul>\n<li>Extract the contents of the .zip file into your SPT directory</li>\n<li>Recommended to have LootingBots-ServerMod loaded last in the mod order to make sure discard limits arent enabled by another server mod</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Mod Settings (F12)</div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Loot Finder</div>\n<div class=\"tab-content\"><ul>\n<li>Enable corpse looting - Enables corpse looting for the selected bot types</li>\n<li>Enable corpse line of sight check - When scanning for loot, corpses will be ignored if they are not visible by the bot</li>\n<li>Detect corpse distance - Distance (in meters) a bot is able to detect a corpse</li>\n<li>Enable container looting - Enables container looting for the selected bot types</li>\n<li>Enable container line of sight check - When scanning for loot, containers will be ignored if they are not visible by the bot</li>\n<li>Detect container distance - Distance (in meters) a bot is able to detect a container</li>\n<li>Enable loose item looting - Enables loose item looting for the selected bot types</li>\n<li>Enable item line of sight check - When scanning for loot, loose items will be ignored if they are not visible by the bot</li>\n<li>Detect item distance - Distance (in meters) a bot is able to detect an item</li>\n<li>Debug: Log Levels - Enable different levels of log messages to show in the logs</li>\n<li>Debug: Show navigation points - Renders spheres where bots are trying to navigate when container looting. (Red): Container position. (Green): Calculated bot destination. (Blue): NavMesh corrected destination (where the bot will move).</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Loot Finder (Timing)</div>\n<div class=\"tab-content\"><ul>\n<li>Delay after spawn - Amount of seconds a bot will wait to start their first loot scan after spawning into raid.</li>\n<li>Delay after taking an item (ms) - Amount of milliseconds a bot will wait after taking an item into their inventory before attempting to loot another item. Simulates the amount of time it takes for a player to look through loot decide to take something.</li>\n<li>Enable examine time - Adds a delay before looting an item to simulate the time it takes for a bot to “uncover (examine)” an item when searching containers, items and corpses. The delay is calculated using the ExamineTime of an object and the AttentionExamineTime of the bot.</li>\n<li>Loot scan interval - The amount of seconds the bot will wait until triggering another loot scan</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Weapon Loot Settings</div>\n<div class=\"tab-content\"><ul>\n<li>Use flea market prices- Bots will query more accurate ragfair prices to do item value checks. Will make a query to get ragfair prices when the client is first started. May affect initial client start times.</li>\n<li>Calculate value from attachments- Calculate weapon value by looking up each attachment. More accurate than just looking at the base weapon template but a slightly more expensive check</li>\n<li>Allow weapon attachment stripping - Allows bots to take the attachments off of a weapon if they are not able to pick the weapon up into their inventory</li>\n<li>PMC: Min loot value threshold - PMC bots will only loot items that exceed the specified value in roubles. When set to 0, bots will ignore the minimum value threshold</li>\n<li>PMC: Max loot value threshold - PMC bots will NOT loot items that exceed the specified value in roubles. When set to 0, bots will ignore the maximum value threshold</li>\n<li>PMC: Allowed gear to equip - The equipment a PMC bot is able to equip during raid</li>\n<li>PMC: Allowed gear in bags - The equipment a PMC bot is able to place in their backpack/rig</li>\n<li>Scav: Min loot value threshold - All non-PMC bots will only loot items that exceed the specified value in roubles. When set to 0, bots will ignore the minimum value threshold</li>\n<li>Scav: Max value threshold - All non-PMC bots will NOT loot items that exceed the specified value in roubles. When set to 0, bots will ignore the maximum value threshold</li>\n<li>Scav: Allowed gear to equip - The equipment a non-PMC bot is able to equip during raid</li>\n<li>Scav: Allowed gear in bags - The equipment a non-PMC bot is able to place in their backpack/rig</li>\n<li>Log Levels - Enable different levels of log messages to show in the logs</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">LootingBots-ServerMod Settings</div>\n<div class=\"tab-content\"><p><strong>Settings for LootingBots-ServerMod can be found in user/Skwizzy-LootingBots-ServerMod/config/config.json</strong></p>\n<ul>\n<li>pmcSpawnWithLoot - When set to true, PMCs will spawn with loot in their bags/pockets (default SPT behavior)</li>\n<li>scavSpawnWithLoot - When set to true, Scavs will spawn with loot in the bags/pockets (default SPT behavior)</li>\n</ul>\n<h3><strong>Default config:</strong></h3>\n<p>{ “pmcSpawnWithLoot”: false, “scavSpawnWithLoot”: true }</p></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Recommended Mods</div>\n<div class=\"tab-content\"><ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols/\" rel=\"noreferrer noopener\">Waypoints - Expanded Bot Patrols</a> - Adds expanded NavMeshes to all maps allowing bots to be able to navigate to almost every part of the map. When playing with larger Loot Detection Distances, this will allow bots to travel freely to extremely far away loot</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1265-search-open-containers/?highlight=search\" rel=\"noreferrer noopener\">Search Open Containers</a> - Allows you to search an opened container without having to close them. Nice QOL when encountering containers that have been looted by a bot and left open</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Mod Conflicts</div>\n<div class=\"tab-content\"><p>This mod will conflict with any mod that sets theglobals.config.DiscardLimitsEnabled to true. PMC bots will throw exceptions when attempting to discard gear with DiscardLimits set. This needs to be false for the mod to function properly with pmc looting.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/812/looting-bots",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2023-03-22T04:38:00.000000Z",
+  "created_at": "2023-03-22T04:38:33.000000Z",
+  "updated_at": "2026-07-28T08:17:17.000000Z",
+  "owner": {
+    "id": 28069,
+    "name": "Skwizzy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/0c9720b3b2edc0812c51df40e1350fecd1fe8917_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-03-06T14:46:41.000000Z",
+    "updated_at": "2026-07-10T04:50:26.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 52282,
+      "name": "ArchangelWTF",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-05-20T14:55:34.000000Z",
+      "updated_at": "2026-08-01T16:40:09.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Skwizzy/SPT-LootingBots",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13344,
+      "hub_id": null,
+      "version": "1.7.0",
+      "description": "<p><strong>Added</strong>:</p>\n<ul>\n<li>Looting priority, currently implemented for corpses (Bots should prioritize looting their own kills) and airdrops</li>\n<li>Extend gear swapping to include other gear (e.g. headphones, eyewear, facecover etc)</li>\n<li>Flea price poll every 30 minutes</li>\n<li>Scan Limiter, limit concurrent loot scans with config</li>\n<li>Empty scan attempts cooldown</li>\n<li>Looting action timeout, in case bots get stuck (shouldn’t probably happen now)</li>\n<li>Total bot networth (only seen in debug)</li>\n<li>Transaction fail checks</li>\n<li>Add missing equipment slots</li>\n</ul>\n<p><strong>Fixed</strong>:</p>\n<ul>\n<li>Moving a bot’s active weapon can cause the bot to get stuck (more of a workaround, the cause is hard to track and is not from LB)</li>\n<li>GetPrioritySlots using corpse equipment instead of own equipment</li>\n<li>Add is used in SubtractNetValue</li>\n<li>Use of interop which forces a bot’s brain to be enabled is never reverted</li>\n<li>Destroy LootFinder when BotOwner is disposed</li>\n<li>Error merging into magazines/weapon chambers</li>\n</ul>\n<p><strong>Modified</strong>:</p>\n<ul>\n<li>Unify ActiveItem ActiveCorpse ActiveContainer into ActiveLoot</li>\n<li>Get loot type from InteractableObject instead of using GetComponentInParent for each type</li>\n<li>Checks per type of loot instead of checking for all loot types</li>\n<li>Refactor ShouldSwapGear, early returns for less checks, monetary check</li>\n<li>Update GetArmorDifference to check plates inside armor slots</li>\n<li>Better flow when swapping gear, after equipping - throw undervalued items, useless mags, then loot/strip attachments of thrown/swapped out gear</li>\n<li>Try to swap if possible instead of throwing items on the ground</li>\n<li>Blocking item check for ShouldSwapGear</li>\n<li>Cleanup ThrowUselessMags</li>\n<li>Refactor locked/unlootable slot/item checks</li>\n<li>Select best available weapon after looting (Almost always primary weapon)</li>\n<li>Refactor distance checks, early exit when current path length exceeds range</li>\n<li>Per slot item pricing</li>\n<li>Try continue moving bot with partial path</li>\n<li>Reuse GearValue weapon pairs instead of allocating new ones when weapons are updated</li>\n<li>Use pooling where possible to minimize allocations (arrays and objects)</li>\n<li>Use bot’s BotLog in ItemAppraiser calls</li>\n<li>InteractContainer helper Fika compat</li>\n<li>Clear lists instead of assigning new ones when resetting (Caches)</li>\n<li>Early return 0 when getting avail grid slots when grid is null</li>\n<li>Store LayerMask as int to avoid conversions</li>\n<li>Do not clear active loot if unsuccesful in looting (usually interrupted by combat) for less loot scans</li>\n<li>Config: Increase delays for more realistic loot time</li>\n<li>Avoid some more repeated property access</li>\n<li>Various reductions in allocations</li>\n</ul>\n<p>A huge thanks to @ozen-m Who practically did most of these changes himself, I only added airdrops to his priority system</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.7.0",
+      "content_length": 54685,
+      "spt_version_constraint": "~4.0",
+      "downloads": 50649,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-01T22:00:00.000000Z",
+      "created_at": "2026-04-01T18:06:53.000000Z",
+      "updated_at": "2026-07-28T08:17:17.000000Z",
+      "dependencies": [
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            },
+            {
+              "id": 12146,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Update for 4.0.0</p>\n<p>Generate new navmeshes for all maps</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.0",
+              "content_length": 50345278,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 1497,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T00:34:00.000000Z",
+              "created_at": "2025-11-03T00:34:44.000000Z",
+              "updated_at": "2026-07-28T06:14:11.000000Z"
+            },
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264934,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284369,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a7f49563071e654822ce1e36f2780eec4bea2e87f2b70507b2caab65a6816155",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/5f18c8e9c3f7fa7fb872904f0b5350a675c654f5915edeca5616fd57cc800893",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/270a5eff-bd4a-4865-995d-c98a96f8930f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A11Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.7.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A58Z&ske=2026-08-01T21%3A04%3A11Z&sks=b&skv=2018-11-09&sig=SlT8ovsWqV6CzystH3WpQ71v7rnd003VX3n%2Bl%2FHVLak%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.7.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13063,
+      "hub_id": null,
+      "version": "1.6.3",
+      "description": "<p><strong>Users that use SAIN are recommended to update to this version</strong></p>\n<ul>\n<li>Fixed an issue that caused bots to stop working after they tried to loot a container with SAIN enabled</li>\n</ul>\n<p><strong>Support for this release will be very limited to non-existent, I may come back to fix critical issues if they arise</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.6.3",
+      "content_length": 48101,
+      "spt_version_constraint": "~4.0",
+      "downloads": 18447,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-13T16:34:00.000000Z",
+      "created_at": "2026-02-13T16:35:03.000000Z",
+      "updated_at": "2026-07-28T08:03:19.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264934,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284369,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            },
+            {
+              "id": 12146,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Update for 4.0.0</p>\n<p>Generate new navmeshes for all maps</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.0",
+              "content_length": 50345278,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 1497,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T00:34:00.000000Z",
+              "created_at": "2025-11-03T00:34:44.000000Z",
+              "updated_at": "2026-07-28T06:14:11.000000Z"
+            },
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/70ff8b695a38e3fad2253310beac15c07ea481c6174f4dd4b578625412b59738",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/f9f131e69a088e7ac2ec6749bbfbad6d8093bc9f5de96189260f6ac0a8807d00",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/cd474018-9b54-40dc-96d0-0c47f74f9487?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A43Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.6.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A17Z&ske=2026-08-01T21%3A06%3A43Z&sks=b&skv=2018-11-09&sig=KHkvVALgxETMUUYiwjgJG4G6vypM5ekZOYaERXDoZGg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.6.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13029,
+      "hub_id": null,
+      "version": "1.6.2",
+      "description": "<ul>\n<li>Updated to SPT 4.0</li>\n<li>Disabled a few things related to BSG“s loot layers</li>\n</ul>\n<p><strong>Support for this release will be very limited to non-existent, I may come back to fix critical issues if they arise</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.6.2",
+      "content_length": 48083,
+      "spt_version_constraint": "~4.0",
+      "downloads": 3066,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-09T16:19:00.000000Z",
+      "created_at": "2026-02-09T16:42:40.000000Z",
+      "updated_at": "2026-07-28T08:01:12.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264934,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284369,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/70c1c19c3efa90c74c30f37f2027598a29912fd03bb9de9d40facecdc4f3df23",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/0396759d699dcb6505798f16b433406a645b00b39b5664cf0bbb503dcb1e068b",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/2fd75e88-19cf-4ded-b7de-6d8fc88c7c70?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A06Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.6.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A10Z&ske=2026-08-01T21%3A11%3A06Z&sks=b&skv=2018-11-09&sig=uNc6Ic5%2By6KoxVCfXqnEtzHp%2BxsPA%2BaPlp7PnrOET6w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.6.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12386,
+      "hub_id": null,
+      "version": "1.6.1",
+      "description": "<ul>\n<li>Bug Fix for Infinite Looting Loop by DanW</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.6.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 16780,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-20T20:01:00.000000Z",
+      "created_at": "2025-11-20T20:01:51.000000Z",
+      "updated_at": "2026-05-14T08:07:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8f0423edc6d6ec24fac0d18d7228c253a78f23ba124595797aa4a9041692be26",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/2d4fe793-6154-4f67-9c92-7f323c99f994?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A43Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.6.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A17Z&ske=2026-08-01T21%3A24%3A43Z&sks=b&skv=2018-11-09&sig=3CyZlKB6o7lzsSF8uscPnkPKotcV%2BgTuyMUN5zRstAw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.6.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 166,
+      "hub_id": 14716,
+      "version": "1.6.0+spt-311",
+      "description": "<p>Changes:</p>\n<p>* Fix Player Scav Detection [SPT 3.11] by DanW</p>\n<p>* Change Log Level of “close enough to loot” Message to Debug by DanW</p>\n<p>* Removed various unnecessary allocations which should lead to better performance</p>\n<p>* Added better Fika compatibility for checking nearby players, no longer base this off of just the main player.</p>\n<p>* Cleaned up the code base in a lot of places</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.6.0+spt-311",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 45348,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-08-01T14:24:50.000000Z",
+      "created_at": "2025-08-01T14:24:50.000000Z",
+      "updated_at": "2026-05-14T01:39:04.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/e4a47623-2a64-49fa-84ca-399d84ab2749?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A49Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.6.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A03Z&ske=2026-08-01T21%3A24%3A49Z&sks=b&skv=2018-11-09&sig=7XTRkeGyi6%2Fk9%2BXNjLdkfLuvWtYyCBq7GYzCMwj8D0g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.6.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1231,
+      "hub_id": 13541,
+      "version": "1.5.0+spt-311",
+      "description": "<p>- Updated to SPT 3.11</p>\n<p>- Adds a new patch to completely turn off BSG’s looting layer</p>\n<p>- Slightly increased looting bot range (From 75 to 80)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.5.0+spt-311",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1587,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T20:00:43.000000Z",
+      "created_at": "2025-03-15T20:00:43.000000Z",
+      "updated_at": "2026-05-14T02:08:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/f43299b5-23f8-4933-8333-9548320cd5d0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A23Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.5.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A30Z&ske=2026-08-01T21%3A20%3A23Z&sks=b&skv=2018-11-09&sig=mRhQY79i13o5LG72BAcmNgHlTEQW3ydSPPebUf9yNU4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.5.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2029,
+      "hub_id": 12641,
+      "version": "1.4.0+spt-310",
+      "description": "<p>Thank you very much ArchangelWTF for making the upgrade to 3.10!</p>\n<p>Update references and removed some deprecated logic</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.4.0+spt-310",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 9641,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-14T02:31:12.000000Z",
+      "created_at": "2024-12-14T02:31:12.000000Z",
+      "updated_at": "2026-05-14T03:13:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/a4ce36e1-fca4-40bc-888d-c7b1b1b977a3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A04Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A12Z&ske=2026-08-01T21%3A26%3A04Z&sks=b&skv=2018-11-09&sig=USeAGtA%2BSK5Tp6ICbB0j%2FwndPVj1V%2FhXGm8LBcjlrIQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3621,
+      "hub_id": 10658,
+      "version": "1.3.5+spt-390",
+      "description": "<p>Thanks @hel0t for the update!</p>\n<p>Update references to work with SPT 3.9.0.</p>\n<p>VirusTotal is showing one of the vendors reporting as malicious (Anity-AVL). This is a false positive, a rescan of version 1.3.4 which had the vendor as passing is now also reporting as malicious</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.3.5+spt-390",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 126038,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-09T03:13:44.000000Z",
+      "created_at": "2024-07-09T03:13:44.000000Z",
+      "updated_at": "2026-05-14T03:54:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/2d5db9da-9386-4ca1-94f3-f7033bc5c842?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A12Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.3.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A20Z&ske=2026-08-01T21%3A02%3A12Z&sks=b&skv=2018-11-09&sig=DJoT3DFH6fT%2FJB9xoeScC8bFdgIn02PbHQWEnOIQpzA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.3.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4456,
+      "hub_id": 9619,
+      "version": "1.3.1+aki-380",
+      "description": "<h3>New Features</h3>\n<p>Thanks to Solarint for the following new features:</p>\n<ul>\n<li>\n<p>Added 3 new methods to the Mod Interop support. GetItemPrice, GetNetLootValue, CheckIfInventoryFull. More info can be found in the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Skwizzy/SPT-LootingBots/blob/3.8.0/using_looting_bots_interop.md\" rel=\"noreferrer noopener\">interop docs</a></p>\n</li>\n<li>\n<p>Added 3 new options to the Loot Finder settings. These settings will cause bots to ignore loot during loot scans if the loot is not visible by the bot. All disabled by default</p>\n<ul>\n<li>Enable corpse line of sight check</li>\n<li>Enable container line of sight check</li>\n<li>Enable item line of sight check.</li>\n</ul>\n</li>\n</ul>\n<h3>Changes</h3>\n<ul>\n<li>Added a new patch to the BotOwner.Dispose method that will remove the BotOwner from the ActiveLootCache when a bot is killed while looting. Should be the root cause of the null reference exceptions seen in the ActiveLootCache</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.3.1+aki-380",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 24449,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-25T04:31:09.000000Z",
+      "created_at": "2024-04-25T04:31:09.000000Z",
+      "updated_at": "2026-05-14T04:09:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/000f916f-a40c-4314-9d5a-7d6f27629399?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A00Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A18Z&ske=2026-08-01T21%3A07%3A00Z&sks=b&skv=2018-11-09&sig=vOHI53%2BPS03qSwZ9eACuBuSvTufA5eP%2F54IFbHudAy4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4942,
+      "hub_id": 9047,
+      "version": "1.3.0+aki-380",
+      "description": "<p>Update GClasses to support AKI 3.8.0</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.3.0+aki-380",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 31578,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T23:11:23.000000Z",
+      "created_at": "2024-04-01T23:11:23.000000Z",
+      "updated_at": "2026-05-14T04:20:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/030fa9c4-5cf5-4d09-83e5-5802b07afa48?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A49Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A33Z&ske=2026-08-01T21%3A03%3A49Z&sks=b&skv=2018-11-09&sig=e4QXsJ%2F368W9nhVVLqsAUfXxonQ%2B6vCru1TD%2F%2FovvyA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4943,
+      "hub_id": 9046,
+      "version": "1.2.2+aki-376",
+      "description": "<h2>Compatible with AKI 3.7.1 - 3.7.6</h2>\n<h2>Changes</h2>\n<ul>\n<li>Prevent caching and finding loot if the BotOwner.name is empty. Should prevent exceptions from being thrown by the ActiveLootCache</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.2.2+aki-376",
+      "content_length": null,
+      "spt_version_constraint": "3.7.6",
+      "downloads": 769,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T23:09:07.000000Z",
+      "created_at": "2024-04-01T23:09:07.000000Z",
+      "updated_at": "2026-05-14T04:20:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/1aaa113b-7095-4a84-8ec8-205fc9bd0e48?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A36Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A31Z&ske=2026-08-01T21%3A10%3A36Z&sks=b&skv=2018-11-09&sig=Nc8r9GvAgoIWc5jbc9xVwpFi9SPmFqcOD1UF34FUwek%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5070,
+      "hub_id": 8863,
+      "version": "1.2.1+aki-376",
+      "description": "<h3>Compatible with AKI 3.7.1 - 3.7.6</h3>\n<h2>Changes</h2>\n<ul>\n<li>Prevent scavs from looting memory 🤖 . Fixed a memory leak due to excessive regex calls and log message concatenation</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.2.1+aki-376",
+      "content_length": null,
+      "spt_version_constraint": "3.7.6",
+      "downloads": 19478,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-02-16T23:14:34.000000Z",
+      "created_at": "2024-02-16T23:14:34.000000Z",
+      "updated_at": "2026-05-14T04:22:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/49e7d764-c1f6-4e70-be14-34855e09ea2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A59Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A22Z&ske=2026-08-01T21%3A25%3A59Z&sks=b&skv=2018-11-09&sig=Zv8aXu%2Bu6wusjDXt3Pe417MFnAdVmAbrsG4ajfoA4Ig%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5079,
+      "hub_id": 8846,
+      "version": "1.2.0",
+      "description": "<p>There is a known memory leak in this version, working on a fix!</p>\n<h3>Compatible with AKI 3.7.1 - 3.7.6</h3>\n<h3>For Modders</h3>\n<p>Thanks to DanW!</p>\n<p>Adds support for external commands without requiring LootingBots as a dependency for mods.</p>\n<p>Currently the two external commands are:</p>\n<ul>\n<li>Force a loot scan: Forces a bot to scan for loot the next time it is able to do so</li>\n<li>Inhibit looting: Stops a bot from looting and prevents them from scanning for loot for a specified amount of seconds</li>\n</ul>\n<p>For more details view the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Skwizzy/SPT-LootingBots/blob/master/using_looting_bots_interop.md\" rel=\"noreferrer noopener\">Full documentation</a></p>\n<h3>New Features</h3>\n<ul>\n<li>New Setting Loot Finder (Timing): Enable examine time - Adds a delay before looting an item to simulate the time it takes for a bot to “uncover (examine)” an item when searching containers, items and corpses. The delay is calculated using the ExamineTime of an object and the AttentionExamineTime of the bot. Without any mods changing these values, it seems like the average examine time is 1 second. Looting should take a bit more time now depending on the amount of items in the container/corpse</li>\n<li>Added a checkbox for PlayerScav to all the Loot Finder settings. Now you can enable/disable looting for player scavs separately from normal scavs</li>\n</ul>\n<h3>Changes</h3>\n<ul>\n<li>\n<p>Lowered delay at the beginning of container/corpse looting to 2500 ms (simulates UI opening and waiting for the search process to start)</p>\n</li>\n<li>\n<p>Renamed Transaction Delay to Delay after taking item and clarified the behavior in the description</p>\n</li>\n<li>\n<p>Allow bots to try and loot “searchable” items even if they do not have room to pick them up. Was preventing loose items like backpacks and rigs from being considered as valid loot</p>\n</li>\n<li>\n<p>Prevent friendly bots from looting things the player is looting. Enemies can still try to loot the same object as the player</p>\n</li>\n<li>\n<p>Hide debugging F12 settings under the “advanced settings” checkbox at the top of the menu</p>\n</li>\n<li>\n<p>A bot will now end exit the loot finding logic if the first three items found are not within the acceptable looting range. This is to prevent bots from performing the expensive path distance calculation multiple times unnecessarily as its usually the case that if the first 3 items are not in range then none of the following items will be in range.</p>\n</li>\n<li>\n<p>Only show top level items in looting results when searching containers/equipment</p>\n</li>\n<li>\n<p>Fixed issue with debug spheres not working</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "3.7.6",
+      "downloads": 3151,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-02-11T21:03:38.000000Z",
+      "created_at": "2024-02-11T21:03:38.000000Z",
+      "updated_at": "2026-05-14T04:22:15.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/efb667d4-6c63-4982-870d-42e0ebca2487?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A31Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A30Z&ske=2026-08-01T21%3A09%3A31Z&sks=b&skv=2018-11-09&sig=GVKAxx6kc%2FYfAZBmGZkEIxQsuSCsGDIdQOd1ivptJHo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5713,
+      "hub_id": 8051,
+      "version": "1.1.4+aki-371",
+      "description": "<p>Finally updated GClasses and NoDiscardLimit implementation to work with AKI 3.7.1! Thank you everyone for your patience!</p>\n<h3>Changes</h3>\n<ul>\n<li>Added LootingLayer to the following new bot brains: <strong>BossBoar</strong>, <strong>BoarSniper</strong>, <strong>FlBoar</strong>, <strong>Obdolbs</strong> and <strong>ArenaFighter</strong></li>\n<li>Fix issue where bots were not picking up usable magazines after equipping a new weapon</li>\n<li>Fix issue where PMCs/scavs with boss brains were being treated as bosses and not allowed to swap gear</li>\n<li>Fix issue where helmets were not recognized as equippable</li>\n<li>Fix mistake in distance math where shortest distance was not being updated resulting in horribly incorrect loot finding.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/812/looting-bots/1.1.4+aki-371",
+      "content_length": null,
+      "spt_version_constraint": "3.7.1",
+      "downloads": 24893,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-26T03:15:35.000000Z",
+      "created_at": "2023-10-26T03:15:35.000000Z",
+      "updated_at": "2026-05-14T04:27:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/59ab8ba3cf6081be8ab5f44ecf00041486bd734e8bd830669dbf4fcf8eab4df3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/613589862/f065d937-7cda-4423-8afe-54c9ab3032ea?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A13Z&rscd=attachment%3B+filename%3DSkwizzy-LootingBots-1.1.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A23Z&ske=2026-08-01T21%3A14%3A13Z&sks=b&skv=2018-11-09&sig=8ULeFRM3OuUsj1DQ0i4TTqG1EApdjNu1iTT7Hqt2Dpg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DSkwizzy-LootingBots-1.1.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 278,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:48:59.130Z",
+    "discoveredBy": "seed"
+  }
+}

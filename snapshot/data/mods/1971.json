@@ -1,0 +1,466 @@
+{
+  "type": "mod",
+  "id": 1971,
+  "hub_id": 2649,
+  "guid": "com.turbodestroyer.croupier",
+  "name": "Croupier - loadout generator + flea quicksell",
+  "slug": "croupier-loadout-generator-flea-quicksell",
+  "teaser": "Gear up for your next raid in just 20 seconds!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/Rnt3MPjWHfhJbbxzqh3cZOUMEqOzs6SEWh8Oij4f.jpg",
+  "downloads": 33925,
+  "favourites_count": 18,
+  "description": "<h4><strong>This trader does 2 things:</strong></h4>\n<p>1) 🔫 <strong>Sells random loadouts</strong> - gear, meds, nades, gun, mags, ammo. Everything you need in a raid, generated instantly, in one in-game mail, ready to wear &amp; rock.</p>\n<div class=\"youtube-lite\" data-video-id=\"Pd8M9ydYIq4\" data-embed-url=\"https://www.youtube-nocookie.com/embed/Pd8M9ydYIq4?autoplay=1\"><img src=\"https://i.ytimg.com/vi/Pd8M9ydYIq4/hqdefault.jpg\" alt=\"YouTube video thumbnail\" loading=\"lazy\" decoding=\"async\" /></div>\n<p>2) 💸 <strong>Buys your FiR items</strong> and pays an average flea market price for them, minus a tax.</p>\n<p><strong>In 3.x</strong> he pays you right away, but buys only FiR items. If you’re on 3.11 or 3.10, please read “FiR selling compatibility” part.</p>\n<p><strong>In 4.x</strong> he first buys <em>all</em> your stuff as a regular trader, and then sends you the difference for sold FiR items.</p>\n<p>------------</p>\n<h4><strong>Notes:</strong></h4>\n<p>- There are 3 tiers of loadouts: low, mid and top. You can choose to buy a loadout with or without a gun.</p>\n<p>- Generally, you’ll get what you pay for. However, there’s a chance you might get a TOZ-106 in the top tier or a Slick armor with level 6 plates in the low tier for example.</p>\n<p>- Gun presets are randomized, but mods for each gun and tier are carefully handpicked, - which means presets rarely recur <em>and</em> they don’t need much adjustments at the same time.</p>\n<p>- If your PMC is naked, just use Alt+click on item to wear it.</p>\n<p>- The idea of the “Blackmarket” (FiR quicksell) feature is to sell found-in-raid items in the standart trader window.<br />\n- There is an option that doesn’t allow you to sell FiR items for fleamarket price before you reach level 15. If you want to sell FiR items for flea price before reaching 15 lvl just disable (set to false) “<em>enable_FIR_only_after_15lvl</em>” in config.</p>\n<p>- 3.x only: The “Blackmarket” (FiR quicksell) feature is ported with its main problem: you can’t see how much money you’re gonna get before selling. Can’t do anything about it, nor really care.</p>\n<p>- 3.x only: The “Blackmarket” (FiR quicksell) feature is now disabled by default - not all people seem to need it and it also has a compatibility problem (see below).</p>\n<p>- 4.0 only: One of the most annoying issues with the 3.x version was that the money amount you saw in the trader window and the money amount you were actually getting were different. Now it works like this: you get what’s written in the trader window right away, and then receive the difference via in-game mail. For example, a pack of cigs costs 1k roubles at the trader and 8k on the flea. You sell it to the trader, get that 1k instantly, and receive the remaining 7k (minus tax) in mail</p>\n<p>------------</p>\n<h4><strong>*FiR selling compatibility (3.x only):</strong></h4>\n<p>This feature is conflicting with any mod that intercepts the standart trading (<em>sends you items in messages, sells XP points/skills, non-inventory quest items, etc</em>) - for example, Skulltag’s Personal Trainer and Bluehead’s AIO Trader.</p>\n<p>If you don’t have such mods and you are wishing to sell found-in-raid items quickly, you can enable this feature in config.json - just set “<em>enable_custom_FIR_selling</em>” to true.</p>\n<p>------------</p>\n<h4><strong>Mods support (full or partial):</strong></h4>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2381-wtt-armory-m249/\" rel=\"noreferrer noopener\">WTT M249</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2506-wtt-aek-971/\" rel=\"noreferrer noopener\">WTT AEK-971</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2682-wtt-armory-an-94/\" rel=\"noreferrer noopener\">WTT AN-94</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2023-wtt-armory-%C4%8Dz-75/\" rel=\"noreferrer noopener\">WTT Cz-75</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1901-wtt-cz-scorpion-evo-3/\" rel=\"noreferrer noopener\">WTT CZ Scorpion Evo 3</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1957-wtt-heckler-koch-g3\" rel=\"noreferrer noopener\">WTT HK G3</a></li>\n<li>Choccy Milk’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2670-walther-wa-2000-sniper-rifle/\" rel=\"noreferrer noopener\">Walter WA 2000</a></li>\n<li>Choccy Milk’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1677-armsel-striker-12/\" rel=\"noreferrer noopener\">Armsel Striker-12</a></li>\n<li>Choccy Milk’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2309-kel-tec-ksg-12-shotgun/\" rel=\"noreferrer noopener\">Kel-Tec KSG-12 Shotgun</a></li>\n<li>Kopat1ch’es <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2507-ratnik-spring-gear-pack/\" rel=\"noreferrer noopener\">Ratnik Spring Gear Pack</a></li>\n<li>Kopat1ch’es <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2458-a-tacs-fg-pack/\" rel=\"noreferrer noopener\">A-TACS FG Pack</a></li>\n<li>My <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2239/couturier-gear-and-clothing-pack\" rel=\"noreferrer noopener\">gear retextures (Couturier)</a></li>\n<li>MoxoPixel’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1555-tactical-gear-component/\" rel=\"noreferrer noopener\">Tactical Gear component</a></li>\n<li>Epic’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1263/epics-all-in-one\" rel=\"noreferrer noopener\">All in One</a></li>\n<li>Wolfik’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1569/wolfiks-heavy-trooper-masks-reupload\" rel=\"noreferrer noopener\">Heavy Trooper Masks</a></li>\n<li>Pluto’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2451/echoes-of-tarkov-requisitions-ng\" rel=\"noreferrer noopener\">Echoes of Tarkov - Requisitions</a></li>\n</ul>\n<p>------------</p>\n<h4>The mods I used/looked into (thanks):</h4>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/692-blackmarket/\" rel=\"noreferrer noopener\">101p’s Blackmarket</a> (updated with minimal edits)<br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/558-bluehead-s-aio-trader/\" rel=\"noreferrer noopener\">Bluehead’s AIO Trader</a> (custom trader controller)<br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2556-unknown-survivor/\" rel=\"noreferrer noopener\">Dsnyder’s Unknown Survivor</a> (used as a template for the trader)</p>\n<p>------------</p>\n<h4>FAQ:</h4>\n<p>&gt; I installed the mod but the trader still doesn’t seem to buy the found-in-raid items for flea market price</p>\n<p>Read “FiR selling compatibility”. You need to explicitly enable this option.</p>\n<p>&gt; I enabled the FiR selling option, and I don’t have conflicting mods. The trader still doesn’t buy found-in-raid items</p>\n<p>You are probably under 15 level. You either need to reach that level, or set enable_FIR_only_after_15lvl to false.</p>\n<p>&gt; The loadout boxes appear in the flea market and flood my barters</p>\n<p>This is not standart behavior, it seems some mod makes my loadout boxes sellable on the flea market. If you are using the “The Blacklist - flea market enhancements” <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1971/croupier-loadout-generator-flea-quicksell?commentPage=2#comments-comment-49775\" rel=\"noreferrer noopener\">check this comment</a>, otherwise please let me know the name of the mod.</p>\n<p>&gt; How do I change level requirements for MID and TOP loadouts?</p>\n<p>This is not recommended due to the game balance reasons, but check <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1971/croupier-loadout-generator-flea-quicksell?commentPage=2#comments-comment-49670\" rel=\"noreferrer noopener\">this comment</a>.</p>\n<p>&gt; How I decrease price for loadouts?</p>\n<p>This is not recommended due to the game balance reasons, but check <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1971/croupier-loadout-generator-flea-quicksell?commentPage=3#comments-comment-47352\" rel=\"noreferrer noopener\">this comment</a>.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1971/croupier-loadout-generator-flea-quicksell",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2025-01-18T13:18:00.000000Z",
+  "created_at": "2025-01-18T13:18:14.000000Z",
+  "updated_at": "2026-07-28T06:44:20.000000Z",
+  "owner": {
+    "id": 71742,
+    "name": "turbodestroyer",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/178242a5fa7130736a3b618c0581e9f6d2808e73_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/VilS13qPoHZRuiZKVAlakr4UW85QLoTVG2clvolt_1280w.webp",
+    "created_at": "2025-01-18T07:02:26.000000Z",
+    "updated_at": "2026-07-10T04:57:07.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/turbodestroyer1337/spt_croupier",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12398,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<p>Added more items to loadout generation pool:</p>\n<ul>\n<li>Latest gear from <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2239/couturier-gear-and-clothing-pack\" rel=\"noreferrer noopener\">Couturier</a> (2.0.2)</li>\n<li>More parts from <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1263/epics-all-in-one\" rel=\"noreferrer noopener\">EpicsAIO</a></li>\n<li>Wolfik’s <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1569/wolfiks-heavy-trooper-masks-reupload\" rel=\"noreferrer noopener\">HeavyTroopers</a> (FDE and Black)</li>\n<li>WIP: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2451/echoes-of-tarkov-requisitions-ng\" rel=\"noreferrer noopener\">EoT Requisitions NG</a> - a few parts and 2 guns (Ak-15, Ak-19) rn</li>\n</ul>\n<hr />\n<p>No code changes. If you don’t have any of those mods there is no sense to update from 2.0.3. However, if you’re still on 2.0.0-2.0.2 version I recommend updating regardless since there have been code fixes in 2.0.3.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/2.0.4",
+      "content_length": 21539332,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 11106,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-21T23:44:00.000000Z",
+      "created_at": "2025-11-22T12:04:35.000000Z",
+      "updated_at": "2026-07-28T06:44:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/3f75bd3700228154847c1622f7c8ab267df19af06f020da21146306df6a3b7ba?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1083618666/4c2ea33d-ac0e-419a-94f3-30bfa3f7791d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A02Z&rscd=attachment%3B+filename%3DCroupier_2_0_4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A24Z&ske=2026-08-01T21%3A15%3A02Z&sks=b&skv=2018-11-09&sig=Z0v5sDd9dnl9HcNC%2FajB3EtvIGBM%2FJQJ0CO%2F4CIXltY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzMzMiwibmJmIjoxNzg1NjE1NTMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZIi46BxXz6W2ed3s65EXmnJOFP56YzwDx1ETz71qmEQ&response-content-disposition=attachment%3B%20filename%3DCroupier_2_0_4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12369,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<p><strong>Code fixes:</strong></p>\n<ul>\n<li>Fixed the issue with 0-ammo stacks (thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/52416/krutor\" rel=\"noreferrer noopener\">Krutor</a> for the report!)</li>\n<li>Fixed the issue when the trader was sending loadouts even when the trade wasn’t successful (thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/65288/tawnysnake\" rel=\"noreferrer noopener\">TawnyShake</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/87178/themodernmeta\" rel=\"noreferrer noopener\">themodernmeta</a>, and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/26904/gleneth\" rel=\"noreferrer noopener\">Gleneth</a> for the reports!)</li>\n</ul>\n<p><strong>Loadouts:</strong></p>\n<ul>\n<li>Added vanilla AK-50</li>\n<li>Added new items from the <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2239/couturier-gear-and-clothing-pack\" rel=\"noreferrer noopener\">Couturier</a> mod (version 2.0.1)</li>\n<li>Added several items from the <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1263/epics-all-in-one\" rel=\"noreferrer noopener\">EpicsAIO</a> mod (AK-15, RMR mount/sight for Elcan Specter, some parts/mags)</li>\n</ul>\n<hr />\n<p>I’ll continue adding content from various gear/gun mods. However, due to the project architecture and my limited free time, it’s going to remain quite opinionated.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/2.0.3",
+      "content_length": 21537267,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 643,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-18T23:13:00.000000Z",
+      "created_at": "2025-11-19T09:13:23.000000Z",
+      "updated_at": "2026-07-28T06:34:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-5a6679648cb4a8b2c44a026371ea5a78324bb11eeb50cd678bc9ebcc28b8fe8f-e603a0a1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1083618666/7f44d233-0f9c-4fe4-8e40-7c5af2125f8b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A54%3A20Z&rscd=attachment%3B+filename%3DCroupier_2_0_3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A02Z&ske=2026-08-01T20%3A54%3A20Z&sks=b&skv=2018-11-09&sig=ZLASCV%2Fk3PJnAKtZ1Ed0qFRWEhQlkqLf1f%2BeLQbreLE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzMzMiwibmJmIjoxNzg1NjE1NTMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZIi46BxXz6W2ed3s65EXmnJOFP56YzwDx1ETz71qmEQ&response-content-disposition=attachment%3B%20filename%3DCroupier_2_0_3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12148,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<p>Fix for “NullReferenceException” on selling some items</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/2.0.2",
+      "content_length": 21531348,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 1368,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-02T23:08:00.000000Z",
+      "created_at": "2025-11-03T06:10:29.000000Z",
+      "updated_at": "2026-07-28T06:14:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-e14530486ae25c5303d52908757b865448c5868d1c92caece1cbbd6ef2f0f991-faac2a07",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1083618666/3782eaf7-d587-4342-90f0-b3deb81e8fb1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A01Z&rscd=attachment%3B+filename%3DCroupier_2.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A21Z&ske=2026-08-01T21%3A07%3A01Z&sks=b&skv=2018-11-09&sig=OdnpsFNS85CH4UDAyunIXW7mAwtRrgCQknVegRKSm%2Fc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzMzMSwibmJmIjoxNzg1NjE1NTMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LMOqsI-TTJrVktbNcJDkLxgbliT_dUWjiGSW_rKSMX8&response-content-disposition=attachment%3B%20filename%3DCroupier_2.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12113,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<ul>\n<li>Eyewear brought back</li>\n<li>Facecovers usually match gear color now, more or less</li>\n<li>Added gear from the latest Tarkov’s version</li>\n<li>Added new items from the Couturier mod (from version 1.0.2 to 1.3.1)</li>\n<li>Decreased chance of getting white/winter gear on non-snowy seasons (it’s still possible if you’re unlucky enough)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/2.0.1",
+      "content_length": 21531326,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 370,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-31T23:09:00.000000Z",
+      "created_at": "2025-11-01T18:10:10.000000Z",
+      "updated_at": "2026-07-28T06:13:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/149b9cbd752c4b8bd340f5f6f1ca6247adf546a5837b0494f2d1b71af643d1cf",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1083618666/dba170ee-9270-494e-bf00-6631406c8386?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A59Z&rscd=attachment%3B+filename%3Dcroupier_2_0_1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A58Z&ske=2026-08-01T21%3A17%3A59Z&sks=b&skv=2018-11-09&sig=Iaq4BNbNgctZl93OJ3u3TzvE1obelr9YrtXH%2BxYtIt8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzMzMywibmJmIjoxNzg1NjE1NTMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zpJlTF_cGeWkBPpiinoqCYi9ELdkw4FHEjbauOQERA8&response-content-disposition=attachment%3B%20filename%3Dcroupier_2_0_1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12037,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>This is a stable beta release for &gt;4.0.1 (won’t work on 4.0.0), please let me know about any problems.</p>\n<hr />\n<h2>TLDR:</h2>\n<p>Mod conflicts fixed + now you get money for sold FiR items in in-game mail.</p>\n<hr />\n<h2>Full release note:</h2>\n<h3>General:</h3>\n<ul>\n<li>Moved the mod to C#;</li>\n<li>Instead of rewriting the Trade controller, which caused conflicts with any mods that used the same approarch (eg Skulltag’s Personal Trainer and Bluehead’s AIO Trader), it now works by intercepting routes and passing the output further, which should theoretically prevent any conflicts.</li>\n</ul>\n<h3>Flea quick sell:</h3>\n<ul>\n<li>One of the most annoying issues with the 3.x version was that the money amount you saw in the trader window and the money amount you were actually getting were different. Now it works like this: you get what’s written in the trader window right away, and then receive the difference via in-game mail. For example, a pack of cigs costs 1k roubles at the trader and 8k on the flea. You sell it to the trader, get that 1k instantly, and receive the remaining 7k (minus tax) in mail;</li>\n<li>Increased quick sell tax from 15% to 20% – consider the additional 5% as the trader’s fee for not having to list your items manually to the flea market;</li>\n<li>Since there appear to be no conflicts with other mods, quick sell is now enabled by default. You can still disable it if you prefer playing without the flea.</li>\n</ul>\n<h3>Loadouts:</h3>\n<ul>\n<li>Slightly increased prices for loadouts. In general, you’ll probably be able to assemble the same loadout yourself for 80-90% of what you just paid, but I think it’s reasonable to charge more for instant assembly and gathering of all the items. Low tier loadouts are probably still underpriced tbh.</li>\n</ul>\n<h3>Other fixes/additions:</h3>\n<ul>\n<li>Fixed the pink boxes problem. Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/53722/stk\" rel=\"noreferrer noopener\">STK</a> for the report;</li>\n<li>Added config value for flea market / trader’s tax (FleaSellTaxPercent, default is 20%). Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/81739/anxietgame\" rel=\"noreferrer noopener\">AnxietGame</a> for this suggestion;</li>\n<li>Added config value to allow you to sell non-FiR items on the flea (FleaSellOnlyFoundInRaid, disabled by default). Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/6063/mikoning\" rel=\"noreferrer noopener\">mikoning</a> for the suggestion.</li>\n</ul>\n<h3>Planned:</h3>\n<ul>\n<li>Obviously, fix any bugs reported in beta, if any;</li>\n<li>Add new items from the newer Tarkov version &amp; Battlepass Season 0;</li>\n<li>Add new Couturier’s gear that was added starting from version 1.0.2;</li>\n<li>Make facemasks match the selected color scheme of the loadout.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/2.0.0",
+      "content_length": 21525801,
+      "spt_version_constraint": "~4.0.1",
+      "downloads": 900,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-25T22:14:00.000000Z",
+      "created_at": "2025-10-26T12:15:02.000000Z",
+      "updated_at": "2026-07-28T06:09:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZDc2OWQzOTU4NWM4YjRmOGEyODk4Y2QyODIwZWNmMjU6MTc2MTQ4MDg3Mw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1083618666/030d0aec-4c60-437b-9621-a0e110a961be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A22Z&rscd=attachment%3B+filename%3DCroupier2.0.0beta.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A21Z&ske=2026-08-01T21%3A15%3A22Z&sks=b&skv=2018-11-09&sig=%2BHnGE5S4PeiUowC%2FWvYZZDJid%2BZ37frkkvfTbxpKF9U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzMzMywibmJmIjoxNzg1NjE1NTMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zpJlTF_cGeWkBPpiinoqCYi9ELdkw4FHEjbauOQERA8&response-content-disposition=attachment%3B%20filename%3DCroupier2.0.0beta.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 169,
+      "hub_id": 14710,
+      "version": "1.2.8",
+      "description": "<p>Added gear from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2943-couturier-gear-retexture/\" rel=\"noreferrer noopener\">Couturier mod</a>. If you don’t have that there’s no sense to download this update.</p>\n<p>No code changes this time.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.8",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3700,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-08-01T10:53:19.000000Z",
+      "created_at": "2025-08-01T10:53:19.000000Z",
+      "updated_at": "2026-07-13T18:00:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.google.com/file/d/1IqmdaNE_1l__q5o3Ezfu9QtexOwbCMIa/view?usp=drive_link"
+      }
+    },
+    {
+      "id": 1053,
+      "hub_id": 13731,
+      "version": "1.2.7",
+      "description": "<p>Minor fix: blacklisted the loadout boxes from barters on the flea market (Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/78560-prometo-melhorar/\" rel=\"noreferrer noopener\">Prometo Melhorar</a> for the report)</p>\n<p>(3.11)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.7",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 6744,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-22T10:45:43.000000Z",
+      "created_at": "2025-03-22T10:45:43.000000Z",
+      "updated_at": "2025-03-22T10:45:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/r0xn2bJT"
+      }
+    },
+    {
+      "id": 1155,
+      "hub_id": 13622,
+      "version": "1.2.6",
+      "description": "<p>Minor update (no code changes, only a few fixes in loadouts):</p>\n<p>- Added mags: AR-15 5.56x45 Beta C-Mag 100-round, PP-19 9x19 F5MFG 50-round, AR-10 7.62x51 X Products X-25 50-round)<br />\n- Changed the standart black 7.62x51 SCAR to SCAR X-17 in Top tier loadouts (the only difference is that it supports 50-round mags)</p>\n<p>(3.11)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.6",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 962,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T19:31:13.000000Z",
+      "created_at": "2025-03-16T19:31:13.000000Z",
+      "updated_at": "2025-03-16T19:31:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/P0ATiCpK"
+      }
+    },
+    {
+      "id": 1172,
+      "hub_id": 13604,
+      "version": "1.2.5",
+      "description": "<p>Ported the mod to 3.11:</p>\n<p>- Changed the semiauto Saiga-12 to the identical automatic Saiga-12 FK in Top tier loadouts</p>\n<p>- Added new standart guns: Sako TRG M10 and Aklys Defense Velociraptor</p>\n<p>- Added new standart equipment: 5.11 Tactical Rush 100 backpack, Mystery Ranch Terraframe backpack, 6B47 Ratnik EMR Arctic helmet, Bank Robber Multicam Alpine chestrig, MTEK Flux helmets (Multicam Arid, olive and Multicam Alpine)</p>\n<p><strong>The mod won’t recieve updates for 3.10 since it’s already good and stable as it is. If you need the mod for 3.10 just download the previous (1.2.4) version.</strong></p>\n<p>(3.11)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.5",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 331,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-16T08:40:19.000000Z",
+      "created_at": "2025-03-16T08:40:19.000000Z",
+      "updated_at": "2025-03-16T08:40:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/S8QEUSzb"
+      }
+    },
+    {
+      "id": 1305,
+      "hub_id": 13459,
+      "version": "1.2.4",
+      "description": "<p>Bug fixes:</p>\n<p>- (Hopefully) finally fixed the bug with examining items. Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/76698-seijifml/\" rel=\"noreferrer noopener\">seijifml</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/50586-sptspy/\" rel=\"noreferrer noopener\">SPTSpy</a> for their reports and help!<br />\n- Added missing categories for selling</p>\n<p>New mods support:<br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1901-wtt-cz-scorpion-evo-3/\" rel=\"noreferrer noopener\">WTT CZ Scorpion Evo 3</a><br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1957-wtt-heckler-koch-g3\" rel=\"noreferrer noopener\">WTT HK G3 and HK11 LMG<br />\n</a>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1679,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-02-28T11:15:06.000000Z",
+      "created_at": "2025-02-28T11:15:06.000000Z",
+      "updated_at": "2025-02-28T11:15:06.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/hSxjhC4D"
+      }
+    },
+    {
+      "id": 1372,
+      "hub_id": 13392,
+      "version": "1.2.3",
+      "description": "<p>Fixes:</p>\n<p>- Fixed the problem with Fence not giving money after a scav run (thanks to Riggzly for the report)</p>\n<p>New mods support:<br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2682-wtt-armory-an-94/\" rel=\"noreferrer noopener\">AN-94</a></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2670-walther-wa-2000-sniper-rifle/\" rel=\"noreferrer noopener\">WA 2000</a></p>\n<p>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1076,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-02-16T10:52:30.000000Z",
+      "created_at": "2025-02-16T10:52:30.000000Z",
+      "updated_at": "2025-02-16T10:52:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/gOAyUQzD"
+      }
+    },
+    {
+      "id": 1496,
+      "hub_id": 13260,
+      "version": "1.2.2",
+      "description": "<p>- minor fixes in loadouts</p>\n<p>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1627,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-01-31T07:41:31.000000Z",
+      "created_at": "2025-01-31T07:41:31.000000Z",
+      "updated_at": "2025-01-31T07:41:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/BXhDhYZD"
+      }
+    },
+    {
+      "id": 1534,
+      "hub_id": 13218,
+      "version": "1.2.1",
+      "description": "<p>minor update</p>\n<p>- fixes for some presets</p>\n<p>new mods support:<br />\n- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2507-ratnik-spring-gear-pack/\" rel=\"noreferrer noopener\">Ratnik Spring Gear Pack</a></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2309-kel-tec-ksg-12-shotgun/\" rel=\"noreferrer noopener\">Kel-Tec KSG-12  </a></p>\n<p>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 966,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-01-25T14:01:50.000000Z",
+      "created_at": "2025-01-25T14:01:50.000000Z",
+      "updated_at": "2025-01-25T14:01:50.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/AXQRkCCT"
+      }
+    },
+    {
+      "id": 1554,
+      "hub_id": 13197,
+      "version": "1.2.0",
+      "description": "<p><strong>Code changes and fixes:</strong></p>\n<p>- Added a config option to enable FiR trading only after level 15 (It’s too OP to have a trader who buys stuff for flea market prices before you actually have access to the flea market). Obviously, if you have FiR trading disabled it won’t work anyway</p>\n<p>- Made ammo counts a bit more random</p>\n<p>- Added more variety to mail messages instead of just having one</p>\n<p>- Slightly increased prices for the low tier (sometimes you could sell stuff for more money than you paid)</p>\n<p>- Reworked ineffective FiR selling algorithm. Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/18109-jj2022/\" rel=\"noreferrer noopener\">jj2022</a> for bringing this to my attention!</p>\n<p>- Tried to fix a weird bug I saw once but couldn’t reproduce again. Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/43123-daprok/\" rel=\"noreferrer noopener\">DaProk</a> for the report!</p>\n<p>- People report it’s possible to get the “loadout” box either from a crate (because of other mods or in vanilla - need to investigate), or from the mentioned bug above. So, now you can sell those boxes back to Croupier, with some losses, of course. Thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/38725-beat2er/\" rel=\"noreferrer noopener\">Beat2er</a> for this suggestion!</p>\n<p><strong>Added support for:</strong></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2023-wtt-armory-%C4%8Dz-75/\" rel=\"noreferrer noopener\">WTT Cz-75</a></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1677-armsel-striker-12/\" rel=\"noreferrer noopener\">Armsel Striker-12</a></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2458-a-tacs-fg-pack/\" rel=\"noreferrer noopener\">A-TACS FG Pack</a></p>\n<p>- Some new items from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1555-tactical-gear-component/\" rel=\"noreferrer noopener\">Tactical Gear Component</a></p>\n<p><strong>Loadout generation fixes:</strong></p>\n<p>- If the weapon has only 2x2 type mag (machine guns basically) and the selected chestrig doesn’t have a 2×2 slot, the mag now goes in the backpack</p>\n<p>- Fixed M249 presets that were using 7.62×51 muzzle devices instead of 5.56x45 ones</p>\n<p>- Tactical modules in low tier were too good — now you’ll mostly see a blue laser or a simple flashlight</p>\n<p>---</p>\n<p>(3.10)</p>\n<p>Thanks to the SPT community for all the warm comments!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 613,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-01-23T09:57:37.000000Z",
+      "created_at": "2025-01-23T09:57:37.000000Z",
+      "updated_at": "2025-01-23T09:57:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/4e52gbgC"
+      }
+    },
+    {
+      "id": 1571,
+      "hub_id": 13178,
+      "version": "1.1.2",
+      "description": "<p><strong>Loadout generation</strong></p>\n<p>🎉 Loadout generation is now independent of <em>confirmTrading</em>. Now other mods with custom implementation of <em>TradeController</em> should not break this (core) functionality.</p>\n<p><strong>FiR selling (Blackmarket)</strong></p>\n<p>- FiR selling still depends on a custom <em>TradeController</em> implementation. As a result, mods that modify standard trading either break FiR selling or the other way around.</p>\n<p>- Because of that, and because not all people need this FiR selling feature, this option is now *disabled by default*. If you think you don’t have other mods intercepting standart <em>TradeController</em> feel free to enable this option (‘enable_custom_FIR_selling’ in config.json)</p>\n<p><strong>Added support for:</strong></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2381-wtt-armory-m249/\" rel=\"noreferrer noopener\">WTT M249</a></p>\n<p>- <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2506-wtt-aek-971/\" rel=\"noreferrer noopener\">WTT AEK-971</a></p>\n<p>- (Partial) <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1555-tactical-gear-component/\" rel=\"noreferrer noopener\">Tactical Gear component</a></p>\n<p><strong>Bug fixes:</strong></p>\n<p>- Fixes for gun presets</p>\n<p>- 2 code hotfixes for 1.1.0</p>\n<p>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 582,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-01-21T11:44:36.000000Z",
+      "created_at": "2025-01-21T11:44:36.000000Z",
+      "updated_at": "2025-01-21T11:44:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/AbhHQRqR"
+      }
+    },
+    {
+      "id": 1596,
+      "hub_id": 13149,
+      "version": "1.0.0",
+      "description": "<p>(3.10)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1971/croupier-loadout-generator-flea-quicksell/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 1258,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-01-18T13:18:14.000000Z",
+      "created_at": "2025-01-18T13:18:14.000000Z",
+      "updated_at": "2025-01-18T13:18:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c06de4f7fec53e7418aea3fb5e4baec5ffc2ee13308a316eb7a6cde4c352ef5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://mega.nz/file/8X4HHSgB"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 53,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:44:30.062Z",
+    "discoveredBy": "seed"
+  }
+}

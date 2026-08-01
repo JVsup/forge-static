@@ -1,0 +1,721 @@
+{
+  "type": "mod",
+  "id": 2097,
+  "hub_id": 2782,
+  "guid": "com.acidphantasm.botplacementsystem",
+  "name": "ABPS - Acid's Bot Placement System",
+  "slug": "abps-acids-bot-placement-system",
+  "teaser": "Configurable spawn mod, allows waves / starting PMCs / boss chances / progressive boss chances. ABPS will always try to keep your raids full and different each time.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2782.png",
+  "downloads": 158101,
+  "favourites_count": 208,
+  "description": "<p>Please review the configuration app, as the default configuration is built the way it is because I enjoy it like this. All options in the configuration app have tooltips, please read them. You can adjust it freely to your liking. The configuration comes with starting PMCs only, and no additional PMC spawns - all bosses are set the same as vanilla defaults in SPT. The default Scav configuration will attempt to keep the map at near caps for the map at all times.</p>\n<p>Both PMC &amp; Scav spawning has been built to only spawn a specific distance from players, and any other bots to spread them around the map a bit. The distance values for this are configurable in F12 - but be careful not to go overboard making them as high as you can as that may delay spawns.</p>\n<p>Support for Legion/Punisher is automatic, but ABPS allows those mods to control their bosses. There is no special configuration for them in this mod.</p>\n<p>ABPS is also Fika compatible as far as I have tested, only the hosts settings will be used.</p>\n<p>Do not use this with another spawn mod.</p>\n<p><em>This mod is still in active development. It may be missing features or configuration options you may want.</em></p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">INSTALLATION</div>\n<div class=\"tab-content\"><ol>\n<li>Download Acid’s Bot Placement System</li>\n<li>Open the downloaded zip file in 7-zip</li>\n<li>Select the SPT &amp; BepInEx folders in the zip file in 7-zip</li>\n<li>Drag the SPT &amp; BepInEx folders from 7-zip into your SPT folder</li>\n</ol>\n<p>Demonstration Video (yoink):</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"3N6gTe2.gif\" /></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">UNINSTALLATION</div>\n<div class=\"tab-content\"><ol>\n<li>Delete <code>/ROOTSPT/Bepinex/plugins/acidphantasm-botplacementsystem</code></li>\n<li>Delete <code>/ROOTSPT/SPT/user/mods/acidphantasm-botplacementsystem</code></li>\n<li>Done</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">CONFIG</div>\n<div class=\"tab-content\"><p>Config App is gone, to edit the configuration run your server after installing and go to:</p>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://127.0.0.1:6969/botplacementsystem/\" rel=\"noreferrer noopener\">https://127.0.0.1:6969/botplacementsystem/</a></li>\n</ul>\n<p>All configs can be updated and edited while the server is running - provided nobody is in raid.\n<strong>If you are using Fika then put the appropriate IP and port instead.</strong></p>\n<p>Additionally, there are some settings in-game via the F12 menu.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">RECOMMENDED MODS</div>\n<div class=\"tab-content\"><p><strong>Recommended Mods</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2180-apbs-acid-s-progressive-bot-system\" rel=\"noreferrer noopener\">APBS</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/2780-no-boss-pmcs/\" rel=\"noreferrer noopener\">No Boss PMCs</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-navmesh/\" rel=\"noreferrer noopener\">Waypoints</a></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1096-looting-bots/\" rel=\"noreferrer noopener\">Looting Bots</a></p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">KNOWN ISSUES</div>\n<div class=\"tab-content\"><p><strong>Known Issues</strong></p>\n<ul>\n<li>None at this moment</li>\n</ul></div></div></div>\n<p>If you enjoy my work - you can <a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/acidphantasm\" rel=\"noreferrer noopener\">buy me a coffee</a>~</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2097/abps-acids-bot-placement-system",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2025-04-13T19:05:00.000000Z",
+  "created_at": "2025-04-13T19:05:25.000000Z",
+  "updated_at": "2026-07-28T09:14:31.000000Z",
+  "owner": {
+    "id": 48110,
+    "name": "acidphantasm",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-11T21:22:35.000000Z",
+    "updated_at": "2026-08-01T18:53:12.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 16,
+    "hub_id": 19,
+    "name": "Creative Commons BY-NC-ND 4.0",
+    "link": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/acidphantasm/acidphantasm-botplacementsystem/",
+      "label": "3.11"
+    },
+    {
+      "url": "https://github.com/acidphantasm/botplacementsystem-csharp",
+      "label": "4.0"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13770,
+      "hub_id": null,
+      "version": "2.0.19",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Configs are now forward compatible - ABPS no longer ships with a config.json</li>\n<li>The server will notify you if your config needs the new features added and will do so without impacting your existing settings</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Updated the WebConfig theme</li>\n<li>Added load order to router</li>\n<li>Adjusted rebuild logic to event based actions instead of DI</li>\n<li>Adjusted config logic to event based actions instead of DI</li>\n<li>Adjusted initialization logic</li>\n<li>Adjusted namespace naming</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved caching racing loading and occasionally causing human players to be skipped</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.19",
+      "content_length": 903224,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 23207,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-13T16:51:00.000000Z",
+      "created_at": "2026-06-13T16:51:55.000000Z",
+      "updated_at": "2026-07-28T09:14:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/967e075d9d07ab130a56c2c16e97e4a92d082ad14076f2619a9a6f2ea3aa5c6a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/ab59d985-f8d4-41a5-a6e1-dc7aaf7f9c1d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A20%3A07Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A19%3A48Z&ske=2026-08-01T20%3A20%3A07Z&sks=b&skv=2018-11-09&sig=YhOEomQmP8Ph1ViLNDVSrvpJXZD6FvXbaI0oaiLZdkI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg5NywibmJmIjoxNzg1NjEyNTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DvN2t8jKWJCO_1oTSmzu-7Wb9otQ1MdLPjQ4EwIwIyw&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13504,
+      "hub_id": null,
+      "version": "2.0.18",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Added advanced F12 debug log and put logging behind it (disabled by default)</li>\n<li>Adjusted spawn point handling</li>\n<li>Adjusted caching of bots</li>\n<li>Adjusted positional spawning logic for leaders</li>\n<li>Adjusted spawn point selection for followers</li>\n<li>Adjusted leader lookup for followers for group assignment</li>\n<li>Adjusted error handling</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved spawn point handling for followers</li>\n<li>Resolved spawn point handling for bots spawning at the same time</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.18",
+      "content_length": 898543,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 17154,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-28T02:55:00.000000Z",
+      "created_at": "2026-04-28T02:56:01.000000Z",
+      "updated_at": "2026-07-28T08:25:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d8e20adb0766ea8726f8c3c5db8c9cca4e2e7e32b5ed2e696bce3cd623969ee7?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/59b6b5d7-d9a4-4853-b1e9-9ebe74687caa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A07%3A10Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A06%3A54Z&ske=2026-08-01T20%3A07%3A10Z&sks=b&skv=2018-11-09&sig=tIPpSZiXuiZMX%2BiV6zPCqaBpTjngpE7GWIbvHiM%2FFLU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg5OCwibmJmIjoxNzg1NjEyNTk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bvI_r44gq37Esb1B2ZNda0B3bTbP4Nz2v8haS-TNtXA&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13494,
+      "hub_id": null,
+      "version": "2.0.17",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>:kabmad:</p>\n<p>Changes</p>\n<ul>\n<li>Slightly more logging</li>\n<li>Slight changes to initialization order</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.17",
+      "content_length": 897429,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 1723,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-26T03:21:00.000000Z",
+      "created_at": "2026-04-26T03:22:27.000000Z",
+      "updated_at": "2026-07-28T08:25:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09ac34e2ac9828a2629c07a449c9a87e9b3071aa1c357f399bb8972a62cf3a77?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/a243834c-7cca-4156-94a6-4a895168f5d5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A13%3A29Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A12%3A51Z&ske=2026-08-01T20%3A13%3A29Z&sks=b&skv=2018-11-09&sig=Dckqdr4728jYvHUgiqzlX9ibTUwq2KMKipPJQJ9iFCY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg5OSwibmJmIjoxNzg1NjEyNTk5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r_XjCipP7voNg2a2sSUCSn-B5klcLcMQmzDG3QVVwQk&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13478,
+      "hub_id": null,
+      "version": "2.0.16",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Removed in-raid check cause all the spawn data is retrieved on the client during raid start, any changes wouldn’t impact the current raid (probably)</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved Fika (headless) not tracking progressive/regressive chances</li>\n<li>Resolved Fika (headless) not spawning bots due to null position data</li>\n<li>Resolved Fika (headless) not spawning bots on 2nd raid due to not resetting properly</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.16",
+      "content_length": 897885,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 1672,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-24T02:12:00.000000Z",
+      "created_at": "2026-04-24T02:12:58.000000Z",
+      "updated_at": "2026-07-28T08:25:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e049c970ee8b998b63228ddd1b0f4bb6f73be7205c0743a952ca714a03f1801f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/ef83ab04-fd8a-4ab9-bd02-3b48528f92de?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A07%3A45Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A07%3A35Z&ske=2026-08-01T20%3A07%3A45Z&sks=b&skv=2018-11-09&sig=lILQRLmdK6tbLeb0n0CS9enJEvhVVpePL9nzCdiGlEw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMCwibmJmIjoxNzg1NjEyNjAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CJkqdKqaKyOLjJYYY1yuLjdOr5CbESha3yZ3hZmz9P8&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13461,
+      "hub_id": null,
+      "version": "2.0.15",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Refactored scav spawning code for performance</li>\n<li>Staggered Pmc Wave spawns 5-15 seconds apart within a single wave</li>\n<li>Changed pending bots to trigger on scav waves to 1</li>\n<li>Adjusted how often scavs attempt to spawn client side</li>\n<li>General code cleanup to prep for full rewrite</li>\n<li>Added additional caching</li>\n<li>Changed Group Size -&gt; Follower Count Limit in Webconfig for clarity</li>\n<li>Changed Group Count -&gt; Group Count Limit in Webconfig for clarity</li>\n<li>Adjusted default Pmc wave Follower Count Limit + Max Pmcs per wave</li>\n<li>Adjusted Starting Pmc Limits for Factory upper max to 8</li>\n<li>Adjusted Scav Wave Custom Timers for Factory/Labyrinth/Labs</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved Pmcs never spawning in scav raids</li>\n<li>Resolved Marksman never spawning in scav raids</li>\n<li>Resolved client trying to double spawn scavs</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.15",
+      "content_length": 897561,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 2533,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-19T21:15:00.000000Z",
+      "created_at": "2026-04-19T21:15:58.000000Z",
+      "updated_at": "2026-07-28T08:24:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/06cad297f765a5d963e7d6240204377e9ce820a357a60eea95bdd5f163b60c27?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/c5d252c5-2cfd-4a6a-8edb-9c21239b28a2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A09%3A59Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A09%3A41Z&ske=2026-08-01T20%3A09%3A59Z&sks=b&skv=2018-11-09&sig=hqD9mHAlaOGaxEXy3VMXycBySAOYzgBQkjKEWC%2B9Tuc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMCwibmJmIjoxNzg1NjEyNjAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CJkqdKqaKyOLjJYYY1yuLjdOr5CbESha3yZ3hZmz9P8&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13339,
+      "hub_id": null,
+      "version": "2.0.14",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Nothing at all I promise</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.14",
+      "content_length": 899724,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 6651,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-01T05:32:00.000000Z",
+      "created_at": "2026-04-01T05:32:38.000000Z",
+      "updated_at": "2026-07-28T08:17:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/581147fe98d3c67b548857e37379e003807d9bb017eaadf5cb1881dd14675c28?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/fe56f8fb-260e-477c-a2e7-1ab60b6a22d1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A19%3A17Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A18%3A25Z&ske=2026-08-01T20%3A19%3A17Z&sks=b&skv=2018-11-09&sig=rUX8Tl7UfW0oJwdKye%2F2OK7xVK%2FQevCLZ4skJEXva3Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMSwibmJmIjoxNzg1NjEyNjAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.I8WFTGI4iX66Drp316YKTGZaZqRDIfl7hXI2SEJHUT0&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13076,
+      "hub_id": null,
+      "version": "2.0.13",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved the Per Player Scav Spawn Limit check being flipped</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.13",
+      "content_length": 898813,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 13746,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-14T10:31:00.000000Z",
+      "created_at": "2026-02-14T10:31:57.000000Z",
+      "updated_at": "2026-07-28T08:03:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/84e2a473ab240abf5a96290345a2a651550af2fb8081f2b11f193ab3055194f2?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/ba05b916-a999-44ed-94d5-d61c74f28f7e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A06%3A04Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A05%3A39Z&ske=2026-08-01T20%3A06%3A04Z&sks=b&skv=2018-11-09&sig=XjIZRirvh%2BvVWj3smWnjF4n%2B99OhaKDa93ty9xLmThg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMiwibmJmIjoxNzg1NjEyNjAyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.wZlLN0MDIJ6nolKbz3Yu9XpQN7cXjeI5n8C-CZwXbvs&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13069,
+      "hub_id": null,
+      "version": "2.0.12",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Webconfig toggle for each boss to disable their followers</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>F12 moved Despawn options into Advanced Menu</li>\n<li>Renamed <code>Group Size</code> in PMC Group config for clarity</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved the Per Player Scav Spawn Limit not being implemented by BSG</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.12",
+      "content_length": 900225,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 425,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-14T04:49:00.000000Z",
+      "created_at": "2026-02-14T04:49:17.000000Z",
+      "updated_at": "2026-07-28T08:03:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d1372589c235d90ec72cc2426abf4497d653d35ae789469c88773276390b6be6?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/e9d5bbed-59bd-496e-8c1b-e62298b838ce?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A25%3A34Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A25Z&ske=2026-08-01T20%3A25%3A34Z&sks=b&skv=2018-11-09&sig=eg0PjCI1MJ5FsIscBEMwMKNylqtww34vOpIvQegZ%2BEU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMywibmJmIjoxNzg1NjEyNjAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.iF5LUKblsyv7LQOcA40Bg018bOBq22MQ5akxXW3Bklk&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12828,
+      "hub_id": null,
+      "version": "2.0.11",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved Regressive Chances resetting boss to minimum spawn chance if they didn’t spawn in prior raid (Thank you Tyfon)</li>\n<li>Resolved Progressive/Regressive chances impacting Weekly Boss config option</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.11",
+      "content_length": 1164626,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 11074,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-10T23:43:00.000000Z",
+      "created_at": "2026-01-10T23:44:03.000000Z",
+      "updated_at": "2026-07-28T07:50:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1e0491f9e79057aab4d8f4babfa4377e622a0c932189eab33f56ed34ee4d20ce?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/1344d767-4ec0-4f68-ad6a-38c510a75681?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A16%3A45Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A16%3A01Z&ske=2026-08-01T20%3A16%3A45Z&sks=b&skv=2018-11-09&sig=V9KIoMO4WVmmafqT7HYZBDcpUfYwJtytNsvfL6%2BXfVA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwMywibmJmIjoxNzg1NjEyNjAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.iF5LUKblsyv7LQOcA40Bg018bOBq22MQ5akxXW3Bklk&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12820,
+      "hub_id": null,
+      "version": "2.0.10",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Added Regressive Chance toggle in F12</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved small bug in Progressive Chances</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.10",
+      "content_length": 1164435,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 1420,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-09T17:40:00.000000Z",
+      "created_at": "2026-01-09T17:42:07.000000Z",
+      "updated_at": "2026-07-28T07:50:23.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c779df25bacc0294ebc000b0f718f3492ed3bd1a97150919a0f5ba10beeb21ea?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/365eb19a-ece3-43e2-aa69-6bfcb885378a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A11%3A17Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A11%3A13Z&ske=2026-08-01T20%3A11%3A17Z&sks=b&skv=2018-11-09&sig=5FJNGXLl1sLr1%2BCxiyhYfDNWqBnxlf%2FH5H0wlhIAhXs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwNCwibmJmIjoxNzg1NjEyNjA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.73Ccef-RSiJ9GJhppNz7Y69o7KGQWswNU8RObo1Y_xo&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12615,
+      "hub_id": null,
+      "version": "2.0.9",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Added boolean toggle for disabling Pmc waves on Labyrinth</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Many little changes in code for readability and consistency</li>\n<li>Many fields marked required for config that were missing designation</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved WebConfig undo button not undoing changes properly</li>\n<li>Resolved WebConfig displaying Default button when not enabled in some instances</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.9",
+      "content_length": 897055,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 11032,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-17T06:51:00.000000Z",
+      "created_at": "2025-12-17T06:51:57.000000Z",
+      "updated_at": "2026-07-28T07:06:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a584aa6383fd266ce725409b014c540b49140c85601c4b73d6bfb0889ac1796?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/c072537d-8898-4068-b5b9-cc5ebb86ca7e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A29%3A40Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A27Z&ske=2026-08-01T20%3A29%3A40Z&sks=b&skv=2018-11-09&sig=x08J2gP7QJZf0nrbVqkMrAH9r81bU493kRwbIlwlBTc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwNSwibmJmIjoxNzg1NjEyNjA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mlJMx7vpNNVEY44exeVghp3ZTN9V63r5DbzAobDyFUk&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12495,
+      "hub_id": null,
+      "version": "2.0.8",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved scavs spawning on Labyrinth when they shouldn’t (Thanks djuice_)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.8",
+      "content_length": 890837,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 7582,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-01T08:02:00.000000Z",
+      "created_at": "2025-12-01T08:02:53.000000Z",
+      "updated_at": "2026-07-28T06:59:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1a037a67ff2805a7e8ba36545e72255c72f0b733b2b3e329521a0145b78eda29?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/19dd0418-f0d6-464f-9f5f-327d6ab4543e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A27%3A19Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A27%3A04Z&ske=2026-08-01T20%3A27%3A19Z&sks=b&skv=2018-11-09&sig=QMKkAzRA1Uhv5grUbrp0Qhb9Vz%2BwD5ZiMLrGNw4V8JE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwNSwibmJmIjoxNzg1NjEyNjA1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.mlJMx7vpNNVEY44exeVghp3ZTN9V63r5DbzAobDyFUk&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12461,
+      "hub_id": null,
+      "version": "2.0.7",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved load order issue with SVM, extended raid times will work now</li>\n<li>Resolved Scav New Spawns occasionally throwing a NRE..probably.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.7",
+      "content_length": 891932,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 2510,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-28T07:14:00.000000Z",
+      "created_at": "2025-11-28T07:14:08.000000Z",
+      "updated_at": "2026-07-28T06:58:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f2092aeee5f62b3eb8fb731d561d2b7eccfa9047d0847aa31e1680293565aec8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/d8b0ecf4-c8f2-4195-aef6-ceab7d598724?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A22%3A18Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A21%3A54Z&ske=2026-08-01T20%3A22%3A18Z&sks=b&skv=2018-11-09&sig=qgl8GuMFR1e%2BJHvTiKSgpWevUPIdrAsYVrdTeiurBgM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwNiwibmJmIjoxNzg1NjEyNjA2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XsiNoxBDyEa9iNhU-CraxkfpIHkI4Gm42aT3atMD27o&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12395,
+      "hub_id": null,
+      "version": "2.0.6",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>F12 option to despawn bots</li>\n<li>F12 option to allow PMCs to spawn anywhere</li>\n<li>Exposed Scav Wave total bot spawn limit in config</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Added Customs Old &amp; New Gas to Scav Hotzones</li>\n<li>Changed default Raider spawn chance in config - If you have had issues with your skill in labs and have been complaining you can’t edit this, you’ve been wrong this entire time. All you had to do was change the chance, or disable adding new spawns. Crazy.</li>\n<li>Changed PMC &amp; Scav Wave StopTimer to allow max of 3600 seconds in web config</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed not properly clearing all cached spawn points between raids</li>\n<li>Fixed minor UI behaviours on web config</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.6",
+      "content_length": 890179,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 4049,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-21T21:37:00.000000Z",
+      "created_at": "2025-11-21T21:37:49.000000Z",
+      "updated_at": "2026-07-28T06:44:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/173c50712f163de7b7e2aeb9dd2bce759df68c1dbebe89633076b03368528e68?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/756b7ff2-b13c-41c3-ad0e-652441bbf77d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A26%3A28Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A40Z&ske=2026-08-01T20%3A26%3A28Z&sks=b&skv=2018-11-09&sig=ImlQr0yiy4qk1NNWtqmcQX1oBjNgbyr0t4T4cvSclbo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwNywibmJmIjoxNzg1NjEyNjA3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.oWEJ3w9TKuscOc0bu2IRQUGUT8h1aQ-MZwDnaxLsEdA&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12326,
+      "hub_id": null,
+      "version": "2.0.5",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Option to lock web config behind an authorization code</li>\n<li>You cannot enable requirement or change the code in the WebApp. You must do this in the config.json yourself.</li>\n<li>You can disable it via WebApp, if you have it enabled and have authorized yourself.</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Tweaked Custom Timers for Scav Waves (if you use them)</li>\n<li>Starting Marksman likelihood changes - you should see them more often</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.5",
+      "content_length": 888810,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 3527,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-15T06:42:00.000000Z",
+      "created_at": "2025-11-15T06:43:11.000000Z",
+      "updated_at": "2026-07-28T06:27:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5eb5ba2b991277fe4bc1ee0da7754112a05939ed2b215810c951a9567482e258?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/f79e40c7-e8b1-461b-ad2d-24766d5ea326?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A24%3A33Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A24%3A12Z&ske=2026-08-01T20%3A24%3A33Z&sks=b&skv=2018-11-09&sig=BhwGm548pN6QNJxLckOkkbrc0b7PTcft4wR%2B8eQu8H4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwOCwibmJmIjoxNzg1NjEyNjA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XET3s39LXWITF-9YmF7DRTZ1sIt1Eci3wg3fC3dqDaw&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12169,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<h3><strong>This version will only work for SPT 4.0.3+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Added <code>Weekly Boss</code> feature from SPT, with a tiny twist</li>\n<li>Added PMC Faction Chance configuration slider</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Adjusted Pmc spawn logic for proper group assignment</li>\n<li>Adjusted Pmc spawn logic to remove some additional delays for followers</li>\n<li>Adjusted Pmc waves to flip to any Bot spawn points available but only checking 50% of configured distances</li>\n<li>Adjusted Pmc waves to use ABPS spawn logic instead of vanilla when no Player spawn points are available</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved Pmcs of the same faction being friendly even if they are in different <code>groups</code></li>\n<li>Resolved Scav Zone Reassignment affecting Factory / GZ / Labyrinth / Laboratory</li>\n<li>Probably resolved issue of Pmc wave groups not getting brains probably - I never experienced this so I’m not sure how to trigger it</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.4",
+      "content_length": 889262,
+      "spt_version_constraint": "~4.0.3",
+      "downloads": 3852,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-04T20:42:00.000000Z",
+      "created_at": "2025-11-04T20:42:05.000000Z",
+      "updated_at": "2026-07-28T06:14:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5e6be665e8c969aa9bbdc1d3d27b192587d07a651a4f34b708bd162cd96efa36?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/323e3c88-3718-45cb-8a7f-77a6fb86d7ff?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A18%3A16Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A17%3A41Z&ske=2026-08-01T20%3A18%3A16Z&sks=b&skv=2018-11-09&sig=t3UYSzzHEE2v9ZBBTk8VQnDIHGiCooQ6G3j3hOSBqqY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwOCwibmJmIjoxNzg1NjEyNjA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XET3s39LXWITF-9YmF7DRTZ1sIt1Eci3wg3fC3dqDaw&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12099,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<h3><strong>This version will only work for SPT 4.0.2+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Added Checkbox to allow the Web Configuration page to check for updates to ABPS</li>\n<li>Added Release Notes to Web Configuration</li>\n<li>Added Toggle for allowing Scavs on Laboratory - Waves</li>\n<li>Added Toggle for allowing Scavs on Labyrinth - Waves</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Adjusted Scav + Marksman Hostility to always be friendly to everything except PMCs</li>\n<li>Adjusted PMC Hostility to always be hostile to bossTagillaAgro, bossKillaAgro, and tagillaHelperAgro</li>\n<li>Adjusted Scav Wave Custom Timer to also apply to Labs and Labyrinth</li>\n<li>Adjusted Labyrinth Bot Max Cap - You need to default this in F12 to fix</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved Progressive Boss Chances not saving correctly</li>\n<li>Resolved Scav brain types not being available on Labyrinth</li>\n<li>Resolved Scavs spawning on Labyrinth when not intended</li>\n<li>Resolved PMCs not spawning on Labyrinth when intended</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.3",
+      "content_length": 884451,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 2297,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-31T19:21:00.000000Z",
+      "created_at": "2025-10-31T19:21:11.000000Z",
+      "updated_at": "2026-07-28T06:12:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a5f17c04aebb3caf8889302155777f3342fc8e13c005926818659e68da25f5ed?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/f0a6a9c1-f43f-4d6d-bb1b-58a4e94bee4d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A15%3A10Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A14%3A42Z&ske=2026-08-01T20%3A15%3A10Z&sks=b&skv=2018-11-09&sig=Sfpt84ZsNO6nPj5HViARH8HCX5xLzOWBLBM%2Bp4u1S2o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkwOSwibmJmIjoxNzg1NjEyNjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dAYOGEssPnzFILrIIn5aEe_xkQMHe80GhogI7HtpP2s&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12069,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<h3><strong>This version will only work for SPT 4.0.2+</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Added additional hostility check for PMCs vs Scavs</li>\n<li>Added additional patch to skip events from reconfiguring hostility</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixes for Fika Headless - Credits to Lacyway &lt;3</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.2",
+      "content_length": 880718,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 1951,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-29T01:25:00.000000Z",
+      "created_at": "2025-10-29T01:25:23.000000Z",
+      "updated_at": "2026-07-28T06:10:52.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ea0ed0cba9b1f8d9ca36ea047af570f88f560d08d9c23e75678bb1958efb4d72?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/9bb68639-f76f-43cd-9610-463f0acd0b63?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A25%3A19Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A24%3A35Z&ske=2026-08-01T20%3A25%3A19Z&sks=b&skv=2018-11-09&sig=tSfxhJXx9PAtcS45h7Xks4Eo8zrztlchynlwsdBF1bE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxMCwibmJmIjoxNzg1NjEyNjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-Kcedw7cmpB9G8EPdaa2S1pi62IKl3YFQW5FYFneZu0&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12059,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<h3><strong>This version will only work for SPT 4.0.2+</strong></h3>\n<p>Previous Notes copied forward so people see it before they download and don’t ask “Where’s the config app?”</p>\n<ul>\n<li>Config App is gone, to edit the configuration run your server after installing and go to <code>https://127.0.0.1:6969/botplacementsystem/</code></li>\n<li>All configs can be updated and edited while the server is running - provided nobody is in raid.</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Skip MaxBotPatch if using Fika Headless</li>\n<li>Fix type on static router for Progressive Chances</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.1",
+      "content_length": 880979,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 1268,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-28T05:19:00.000000Z",
+      "created_at": "2025-10-28T05:19:25.000000Z",
+      "updated_at": "2026-07-28T06:09:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/354b8b87e5bc4ea11d1a10d470ac863d63aa30ad67f4a4fdc1bfffb00507813c?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/07e9f66f-8972-4dd0-894f-6a97be37ad41?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A04%3A08Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A03%3A18Z&ske=2026-08-01T20%3A04%3A08Z&sks=b&skv=2018-11-09&sig=UUHQbzQ82KFDbs2d6J2qEZ4z13wBbQwKvVcWwWHFMXI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxMCwibmJmIjoxNzg1NjEyNjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-Kcedw7cmpB9G8EPdaa2S1pi62IKl3YFQW5FYFneZu0&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12056,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h3><strong>This version will only work for SPT 4.0.2+</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Config App is gone, to edit the configuration run your server after installing and go to <code>https://127.0.0.1:6969/botplacementsystem/</code></li>\n<li>All configs can be updated and edited while the server is running - provided nobody is in raid.</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Marksman spawning incorrectly or in the incorrect order to get a spawn location</li>\n<li>Marksman not spawning on Woods</li>\n<li>Hopefully all the hostility things people complained about that I never saw</li>\n<li>Hopefully all the brain issues people complained about that I never saw</li>\n</ul>\n<p>Special thank you to CWX for doing an initial port of ABPS to SPT 4.0 - I took their foundation, expanded it, and updated logic where I felt necessary. Without CWX doing this, ABPS would not be updated today.</p>\n<p>I tested this with SAIN and 60+ PMCs on Customs in a single raid and never saw any problems, but there was a LOT of fighting constantly.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/2.0.0",
+      "content_length": 881804,
+      "spt_version_constraint": "~4.0.2",
+      "downloads": 428,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-28T02:06:00.000000Z",
+      "created_at": "2025-10-28T02:06:17.000000Z",
+      "updated_at": "2026-07-28T06:09:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/006a5471e3ce07427894c6dce3c6d551ab811f156e06a9f179b853301ed21f1b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1084665453/efc8af71-0c21-4044-aabb-9b68731192d5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A08%3A50Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A08%3A23Z&ske=2026-08-01T20%3A08%3A50Z&sks=b&skv=2018-11-09&sig=wzLH4qSG4R%2B6PdVkBdH6ZjMVhP2czzp7%2FlDcs9wftr8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxMSwibmJmIjoxNzg1NjEyNjExLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5eGJmQ-Ss2iQ4bae2fXasAVuHRN3Sr0ZcgU3C071EIg&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12634,
+      "hub_id": null,
+      "version": "1.1.4",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Backported ABPS client side changes to 3.11</li>\n<li>This includes the hostility fixes, spawning PMCs anywhere, despawning bots, etc.</li>\n<li>The server has not been backported to allow the newer configuration options. If/when I get around to that I’ll do it.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.1.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2059,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-19T05:16:00.000000Z",
+      "created_at": "2025-12-19T05:16:05.000000Z",
+      "updated_at": "2026-05-14T08:42:45.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0d877d9a87175a1aed2cf5d16cea12d042fe286599cd56c023d3b2b139c5892e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/ba5f93b2-e532-407f-a2e0-86283b46b467?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A25%3A28Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A13Z&ske=2026-08-01T20%3A25%3A28Z&sks=b&skv=2018-11-09&sig=GLTHQqdst45%2FzMBx74N85jrVnX3ut9VUrd0RhdKquZY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxMiwibmJmIjoxNzg1NjEyNjEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Yh8PJEK89tHoRYLo1gBcenQ1NXV0c_Y9eHSe1pqJjJU&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 448,
+      "hub_id": 14418,
+      "version": "1.1.2",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Hotfix</p>\n<p>Changes</p>\n<p>- Minor adjustments to spawn timers for scavs</p>\n<p>- [ABPSConfig.exe] Removed bots per zone Scav config (no longer needed)</p>\n<p>- Removed some misc unused code</p>\n<p>Bugs Squashed</p>\n<p>- Fixed marksman not spawning properly after the first raid</p>\n<p>- Maybe fixed some hostility settings</p>\n<p>Changes coming sometime soon for customizing Rogues/Raiders.. not in this release though.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 18319,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-06-10T00:29:31.000000Z",
+      "created_at": "2025-06-10T00:29:31.000000Z",
+      "updated_at": "2026-05-14T01:47:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad3bfe1b3a11fff1ea673328c65319b0788830bf5c67d6c6f57a21c4e147a8e7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/bfa1e1e9-4717-4d8b-a69c-9aba98e9fde3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A20%3A22Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A20%3A00Z&ske=2026-08-01T20%3A20%3A22Z&sks=b&skv=2018-11-09&sig=ZlJH4wLHPSuFrQSxFtOrilw5oBSq89krPpr%2FiK7Qucc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxMywibmJmIjoxNzg1NjEyNjEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nkXAuG9S-8QXuUoTA6l3ckhOxq1g_tuQErtrE_zREJ4&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 760,
+      "hub_id": 14058,
+      "version": "1.1.1",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Hotfix</p>\n<p>Changes</p>\n<ul>\n<li>Switched scavs to spawn after PMCs</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Hopefully fixed issue that was preventing PMCs from falling back to “anywhere” spawns when no valid locations found</li>\n</ul>\n<p>Config App Changes</p>\n<ul>\n<li>Updated MudBlazor (8.2.0 -&gt; 8.3.0)</li>\n<li>Updated Microsoft Extensions</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.1.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 12091,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-21T07:37:03.000000Z",
+      "created_at": "2025-04-21T07:37:03.000000Z",
+      "updated_at": "2026-05-14T01:56:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad3bfe1b3a11fff1ea673328c65319b0788830bf5c67d6c6f57a21c4e147a8e7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/78b21954-7c89-4df3-9e19-34af6c46bca1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A14%3A55Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A14%3A50Z&ske=2026-08-01T20%3A14%3A55Z&sks=b&skv=2018-11-09&sig=v%2FVOZjg3N%2FZZsm1JFb3ApDH5DC5CtkqmBzArpSNsPLI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxNCwibmJmIjoxNzg1NjEyNjE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UNd6quS1RebrO9evcxDXUdecUCKbOBHu4jrDqbB44BA&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 781,
+      "hub_id": 14036,
+      "version": "1.1.0",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Minor Version</p>\n<p>New Features</p>\n<ul>\n<li>[ABPSConfig] PMC Ignore Max Bot Caps config</li>\n<li>[F12] Per Map Bot Caps config</li>\n<li>[F12] Scav Hotzones config</li>\n<li>[F12] Scav Zone Caps config</li>\n<li>[F12] Scav Hotzone Caps config</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Improved New Spawn system checks and balances</li>\n<li>Improved scav distance checks</li>\n<li>Improved PMC distance checks</li>\n<li>Adjusted maximum values allowed for F12 config for various items</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed distance check for PMC spawns to also check scavs</li>\n<li>Fixed various F12 config acceptable values</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3118,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-18T02:01:14.000000Z",
+      "created_at": "2025-04-18T02:01:14.000000Z",
+      "updated_at": "2026-05-14T01:58:27.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad3bfe1b3a11fff1ea673328c65319b0788830bf5c67d6c6f57a21c4e147a8e7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/17ed2bd0-3dc5-41f8-bfaf-8dbd714f2aff?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A14%3A14Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A13%3A43Z&ske=2026-08-01T20%3A14%3A14Z&sks=b&skv=2018-11-09&sig=0b4gbmjZf84y%2FH%2BEqH8ytWliYC2bVPcUkLcY3E%2BQ8vI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxNSwibmJmIjoxNzg1NjEyNjE1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6ywm5w9-oAo2Zvk0zEDPTe7xt8BVHkGNL8yiOroN-js&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 793,
+      "hub_id": 14014,
+      "version": "1.0.1",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Hotfix</p>\n<p>New Features</p>\n<ul>\n<li>New config to use different Factory new spawn timers (enabled by default)</li>\n<li>This setting alleviates the pain of seemingly constant scav spawns on Factory (Thanks Lacyway for the report)</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Added check for specifically your player for PMC spawns, in case you are playing as a dirty scav</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Corrected check for timer on New Spawn system</li>\n<li>Fixed a couple config values (non-user impacting)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.0.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2950,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-14T17:33:12.000000Z",
+      "created_at": "2025-04-14T17:33:12.000000Z",
+      "updated_at": "2026-05-14T01:58:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad3bfe1b3a11fff1ea673328c65319b0788830bf5c67d6c6f57a21c4e147a8e7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/b79f3a10-747e-4026-9c46-17cf073422ba?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A04%3A29Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A04%3A20Z&ske=2026-08-01T20%3A04%3A29Z&sks=b&skv=2018-11-09&sig=R%2FMVsYusgKgzO2RpOd%2FdGG%2Bbd2LKOl8%2FjEb5S7NjLbU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxNSwibmJmIjoxNzg1NjEyNjE1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6ywm5w9-oAo2Zvk0zEDPTe7xt8BVHkGNL8yiOroN-js&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 801,
+      "hub_id": 14006,
+      "version": "1.0.0",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Initial Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2097/abps-acids-bot-placement-system/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1463,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-13T19:05:25.000000Z",
+      "created_at": "2025-04-13T19:05:25.000000Z",
+      "updated_at": "2026-05-14T01:58:37.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad3bfe1b3a11fff1ea673328c65319b0788830bf5c67d6c6f57a21c4e147a8e7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/955060004/bffc2bde-365d-4ada-a185-7c8862ec8be0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A16%3A33Z&rscd=attachment%3B+filename%3Dacidphantasm-botplacementsystem.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A16%3A18Z&ske=2026-08-01T20%3A16%3A33Z&sks=b&skv=2018-11-09&sig=PBVvWkWHjf9lf6LOppPGrSv0HEfoU0K4b7FPMC%2BBj0Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjkxNiwibmJmIjoxNzg1NjEyNjE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CTYP44cM8KNLBHDyCKS9RzD5zRlJaQk5-vfbqtzpb44&response-content-disposition=attachment%3B%20filename%3Dacidphantasm-botplacementsystem.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 432,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:29:57.156Z",
+    "discoveredBy": "seed"
+  }
+}

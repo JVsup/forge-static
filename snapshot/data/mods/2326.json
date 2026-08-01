@@ -1,0 +1,833 @@
+{
+  "type": "mod",
+  "id": 2326,
+  "hub_id": null,
+  "guid": "com.fika.core",
+  "name": "Project Fika",
+  "slug": "project-fika",
+  "teaser": "Project Fika is a mod designed to enable co-op multiplayer game play with your friends in SPT. You can progress through quests, share items and quest progression, fight AI bots (PMCs, SCAVs, and bosses) together and much more.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/RhGQs4svMQ3MWGiEwn8WUQXxP3GUdVhLorptQcXA.png",
+  "downloads": 74346,
+  "favourites_count": 101,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">What is Fika? ❓</div>\n<div class=\"tab-content\"><p>Fika is a cooperative multiplayer mod for <a target=\"_blank\" class=\"external-link\" href=\"https://sp-tarkov.com/\" rel=\"noreferrer noopener\">SPT</a>. Fika adds a lobby interface to join other players’ raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.</p>\n<p>You can find our installation guide <a target=\"_blank\" class=\"external-link\" href=\"https://project-fika.gitbook.io/wiki/\" rel=\"noreferrer noopener\">HERE</a></p>\n<p>We do not provide support on the Forge, use our <a target=\"_blank\" class=\"external-link\" href=\"http://project-fika.com/discord\" rel=\"noreferrer noopener\">discord</a> for support. Please try to minimize the burden on SPT moderators and use our discord for questions.</p>\n<p>In summary:</p>\n<ul>\n<li>SPT is the back-end server that allows you to start the game without using BSG servers — it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.</li>\n<li>Fika is the mod component that adds cooperative multiplayer capabilities which allow players to host or join a raid to play together.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Specifications 📃</div>\n<div class=\"tab-content\"><ul>\n<li>Fika is a combination of a <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/project-fika/Fika-Plugin\" rel=\"noreferrer noopener\">BepInEx plugin</a> and a <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/project-fika/Fika-Server\" rel=\"noreferrer noopener\">SPT server mod</a>.</li>\n<li>Fika uses SPT (with the Fika-Server plugin) as the back-end server for profile and lobby management.</li>\n<li>Fika uses a Server &lt;-&gt; Client UDP networking model for game play. While Fika is still in development, the general consensus is that network performance is better than Escape From Tarkov live (provided the host has proper networking capabilities). Fika 2.0 (coming with SPT 4.0) will have <em>much better</em> net code than live, outperforming both speed, bandwidth usage and accuracy.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Main features ⭐</div>\n<div class=\"tab-content\"><ul>\n<li>Host your own server or join a local/external server.</li>\n<li>Create your own raid (or play solo).</li>\n<li>Join someone else’s raid.</li>\n<li>Play together against bots, share items, progress quests together in the same raid.</li>\n<li>Preserve character, quest, inventory, and hideout progression.</li>\n<li>Use client/server mods from <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/\" rel=\"noreferrer noopener\">SPT</a> (some mods are not compatible - see <strong>Limitations</strong>).</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Other features 🌟</div>\n<div class=\"tab-content\"><ul>\n<li>Item Sending\n<ul>\n<li>Right-click an item in your stash to send it to another account</li>\n<li>Can be customized in the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/project-fika/Fika-Documentation/wiki/6.-Fika-configuration\" rel=\"noreferrer noopener\">server</a> config</li>\n</ul>\n</li>\n<li>Free cam (default to <code>F9</code> key)\n<ul>\n<li>In free cam you can teleport to the cam position by pressing <code>T</code></li>\n<li>You can jump to another player by <code>Left/Right</code> clicking</li>\n<li>You can snap to their head by holding <code>SPACE</code> when jumping</li>\n<li>You can snap to their back in a 3rd position view by holding <code>CTRL</code> when jumping</li>\n<li>You can press the <code>HOME</code> key to temporarily toggle free cam controls</li>\n</ul>\n</li>\n<li>In-game chat system</li>\n<li>In-raid VOIP</li>\n<li>Online player list</li>\n<li>Culling system to increase performance</li>\n<li>Custom notifications (teammate died, boss got killed by a player, etc.)</li>\n<li>Pinging system to ping an area in the game for your teammates</li>\n<li>Player health bars for your teammates</li>\n<li>Quest progress sharing in raids</li>\n<li>Optional/Advanced Headless client to offload AI and gain performance (more info <a target=\"_blank\" class=\"external-link\" href=\"https://project-fika.gitbook.io/wiki/advanced-features/headless-client\" rel=\"noreferrer noopener\">here</a>)</li>\n<li>Network interpolation for smoother gameplay</li>\n<li>UPnP and NAT Punching</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Limitations ❌</div>\n<div class=\"tab-content\"><ul>\n<li>You cannot play Fika without owning a legitimate copy of Escape From Tarkov.</li>\n<li>There is no protection against abuse or cheating. Fika is designed to be played with trusted friends. <strong>Hosting a public server is strongly discouraged</strong>. We will NEVER support public servers.</li>\n<li>Fika does not include any PvP mechanisms. Supporting PvP is not the goal of this project.</li>\n<li>Fika does not offer a global matchmaking service. Only players connected to the same server can create or join raids.</li>\n<li>Certain SPT mods are incompatible with Fika. SPT mods are typically designed for a standard SPT installation, which does not include multiplayer functionality. It is the responsibility of the mod’s author to make their mod compatible with Fika, if they choose to do so.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Modding Fika🛠️</div>\n<div class=\"tab-content\"><p>Please find our wiki page for modding <a target=\"_blank\" class=\"external-link\" href=\"https://wiki.project-fika.com/modding-fika\" rel=\"noreferrer noopener\">here</a>.</p></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Support Me 💖</div>\n<div class=\"tab-content\"><p>You can support me on Ko-Fi</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/lacyway\" rel=\"noreferrer noopener\">Click</a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2326/project-fika",
+  "fika_compatibility": true,
+  "featured": true,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 2,
+  "published_at": "2025-09-26T20:43:00.000000Z",
+  "created_at": "2025-09-26T20:14:55.000000Z",
+  "updated_at": "2026-08-01T16:38:27.000000Z",
+  "owner": {
+    "id": 47969,
+    "name": "Lacyway",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/95a5b3e7532938e8baff549cb4defc29e382f4ac_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/05b1bc6e2a3f74b8f41de186273e89430b36bb0a_1280w.webp",
+    "created_at": "2024-04-09T17:00:56.000000Z",
+    "updated_at": "2026-08-01T19:40:36.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 52282,
+      "name": "ArchangelWTF",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-05-20T14:55:34.000000Z",
+      "updated_at": "2026-08-01T16:40:09.000000Z"
+    },
+    {
+      "id": 85060,
+      "name": "trippyone",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/gloYnvKsCxIr4hzbMtfeGisaXi1jgGOJp8ifmVpj_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2025-09-26T20:56:18.000000Z",
+      "updated_at": "2026-07-24T12:54:51.000000Z"
+    }
+  ],
+  "license": {
+    "id": 17,
+    "hub_id": null,
+    "name": "Creative Commons BY-NC-SA 4.0",
+    "link": "http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+    "created_at": "2025-10-14T20:30:21.000000Z",
+    "updated_at": "2025-10-14T20:30:21.000000Z"
+  },
+  "category": {
+    "id": 2,
+    "hub_id": 79,
+    "title": "Overhauls",
+    "slug": "overhauls",
+    "description": "Large-scale mod packs that overhaul many game systems. Typically combines both client-side and server-side mods into one package."
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/project-fika/Fika-Plugin",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14270,
+      "hub_id": null,
+      "version": "2.3.9",
+      "description": "<ul>\n<li>Fixed a bug where bots couldn’t operate stationary weapons</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.9",
+      "content_length": 1181936,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 1682,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T08:20:00.000000Z",
+      "created_at": "2026-07-28T08:20:29.000000Z",
+      "updated_at": "2026-08-01T16:38:27.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NDM4YWRhMGY4ODAxMTNkZjAyYjlkMTYxODdjY2Y0MmE6MTc4NTIyNjgxMA==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/6de23eee-70bd-4696-9fa5-45bd7aace29f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A46Z&rscd=attachment%3B+filename%3DFika.Release.2.3.9.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A01Z&ske=2026-08-01T21%3A17%3A46Z&sks=b&skv=2018-11-09&sig=mOCFDn7x2K2VtCBmr51fwvSGufWiVErqjVfz5%2BUbhmI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.9.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14212,
+      "hub_id": null,
+      "version": "2.3.8",
+      "description": "<ul>\n<li>Fixed a bug where stationary weapon Ids could not be found when mounting one</li>\n<li>Improved how a client checks if they are currently heading towards a stationary weapon</li>\n<li>Improved how misfires are serialized</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.8",
+      "content_length": 1181942,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 1454,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-24T20:00:00.000000Z",
+      "created_at": "2026-07-24T20:00:19.000000Z",
+      "updated_at": "2026-07-28T09:48:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OWVjOGZlYmZjYmY3NjViNTQ0ZWJkNTkxZDE5MWFlY2I6MTc4NDkyMzEzNQ==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/dbc0c95f-11f5-41af-a0d3-f4d948ffa7a1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A30Z&rscd=attachment%3B+filename%3DFika.Release.2.3.8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A00%3A02Z&ske=2026-08-01T21%3A00%3A30Z&sks=b&skv=2018-11-09&sig=rE6fGyfdT31dtMWXTERLDJYR8VoPCmIDLzziy3qhyGY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14184,
+      "hub_id": null,
+      "version": "2.3.7",
+      "description": "<ul>\n<li>Fixed a bug where certain inventory operations did not go through</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.7",
+      "content_length": 1181664,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 1094,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-21T20:38:00.000000Z",
+      "created_at": "2026-07-21T20:40:13.000000Z",
+      "updated_at": "2026-07-28T09:46:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OTMxMzc2MWQxYzcyY2E2Njg4OWI4Yzc3NmQ2ZGQ4MTE6MTc4NDY2NjMzOA==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/1e39d92d-8f88-4495-833f-2ee679ad601b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A41Z&rscd=attachment%3B+filename%3DFika.Release.2.3.7.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A02Z&ske=2026-08-01T21%3A19%3A41Z&sks=b&skv=2018-11-09&sig=IVvHyArjHeOEsOknqSUvYU8nht1iZN8pZV%2B%2B8rwOAkc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.7.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14180,
+      "hub_id": null,
+      "version": "2.3.6",
+      "description": "<ul>\n<li>Stimulator daamge no longer puts you in a downed state and instead instantly kills you</li>\n<li>Added checks to prevent errors with <code>SAIN</code> if there is delay when a player shoots a bot that is already dead on the host side</li>\n<li>Added lag simulation for developers (requires DEBUG build)</li>\n<li>Refactored and improved several packets</li>\n<li>Made several improvements to the <code>Strict Inventory Sync</code>, bringing more stability and reliability. Everyone should enabled it again</li>\n<li>Fixed several bugs with quest sync from client -&gt; host</li>\n<li>If someone disconnects while the headless is loading and no one is left, it will now forcefully terminate itself</li>\n<li>Added <code>null</code> checks to <code>StopBotsSystem()</code>, prevent rare errors</li>\n<li>Remove log that should be a <code>DEBUG</code> log</li>\n<li>Several improvements to how a player is set to downed, preventing certain inventory errors</li>\n<li>Updated <code>NAT Traversal</code> for the host so that <code>UPnP</code> is not mutually exclusive to <code>NAT Punching</code></li>\n<li>Fixed <code>nullref</code> when interacting with a stationary weapon as a client</li>\n<li>Fast and Instant load now also works for the unload operations</li>\n<li>Several other small improvements have been made to the code base</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.6",
+      "content_length": 1181515,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 198,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-21T13:41:00.000000Z",
+      "created_at": "2026-07-21T13:41:15.000000Z",
+      "updated_at": "2026-07-28T09:46:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YjFjZjliOGQ0NmE1NTlkZjlkNjRiZjAyNGZlMzIyY2Q6MTc4NDY0MTE0Mg==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/0b0d7132-d209-4b67-a332-268191508138?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A52Z&rscd=attachment%3B+filename%3DFika.Release.2.3.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A17Z&ske=2026-08-01T21%3A11%3A52Z&sks=b&skv=2018-11-09&sig=hDOFZgCM5l71lpyhGtdnpDcp4jkuon3gm1W5zBZqsDU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14091,
+      "hub_id": null,
+      "version": "2.3.5",
+      "description": "<ul>\n<li>Reworked how inventory operations are handled on clients, should be slightly more reliable</li>\n<li>Fixed meds animations not resetting as they should when moving to a new limb on other players</li>\n<li>Fixed certain events not toggling when toggling the health bar</li>\n<li>Added new option “Strict sync”\n<ul>\n<li>With this enabled, you cannot shoot/reload/switch weapons unless the server host thinks you can. Shooting/reloading was previously default behavior, switching weapons is new</li>\n<li>This can now be disabled, but doing so voids most if not all support as the main root cause of problems with these features are always from mods</li>\n<li>Only the host’s setting will be applied for the raid and sync to all clients</li>\n</ul>\n</li>\n<li><code>Turnables</code> e.g. lights and their switches are now always synced from the server to clients, making desync more rare</li>\n<li>Knife attacks on windows now break it for everyone else as well</li>\n<li>Knife particles now properly replicate when hitting an object</li>\n<li>Slightly updated <code>Debug UI</code></li>\n<li>Fixed several rare exceptions during certain controllers, most prominently <code>QuickKnife</code> and <code>QuickUse</code></li>\n<li>Fixed rare race condition when hosting a raid</li>\n<li>Fixed few bugs with going into a downed state</li>\n<li>Another player cancelling their grenade should now be more reliably synced</li>\n<li>New feature: Reconnecting quest sync\n<ul>\n<li>The host now saves a collection of every quest progress for all players</li>\n<li>If a player crashes, the host will now attempt to resync this to the rejoining client</li>\n<li>Some quests might not properly resync but it will do the best it can</li>\n</ul>\n</li>\n<li>Various other small improvements and fixes</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.5",
+      "content_length": 1178230,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 1811,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-15T20:42:00.000000Z",
+      "created_at": "2026-07-15T20:42:44.000000Z",
+      "updated_at": "2026-07-28T09:38:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZWZkNWM4ODU0NzA2NjBmOGE2M2U0MTk5NjQ1OGQwYTM6MTc4NDE0Nzc3NA==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/7799750a-ac5a-4e5a-b107-129d05a8fefa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A05Z&rscd=attachment%3B+filename%3DFika.Release.2.3.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A43Z&ske=2026-08-01T21%3A16%3A05Z&sks=b&skv=2018-11-09&sig=qYYsRMRVotdGXkgf%2FQbVVJoB%2F5c%2BVMjZJM9xeYNkKIk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13991,
+      "hub_id": null,
+      "version": "2.3.4",
+      "description": "<ul>\n<li>Fixed a bug where sometimes packet callbacks didn’t register fast enough when connecting to a raid host</li>\n<li>Fixed <code>MuzzleManager_Play_Patch</code></li>\n<li>Removed certain log events that was not meant for production</li>\n<li>You now automatically bleed out if every other player has died in the raid if you are downed</li>\n<li>Fixed a bug where the <code>Join Raid</code> button in the main menu UI sometimes caused players to disappear</li>\n<li>You can no longer use the <code>Join Raid</code> button in the main menu to join if you do not have the required key for the location</li>\n<li>Updated <code>LiteNetLib</code></li>\n<li>Layer masks are now reset when you are revived, preventing a few subtle bugs</li>\n<li>Limbs are now recalculated after you are revived, preventing you from sprinting if your legs were broken</li>\n<li>Fixed a bug where a reconnecting player wasn’t moving until a long time had passed</li>\n<li>Refactored how EFT classes are serialized over the network, should now be up to 3x faster</li>\n<li>Optimized a few packets</li>\n<li>The BTR shooter will no longer idle in the middle of the map until the BTR spawns for clients</li>\n<li>Various other optimizations has been made to the code base</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.4",
+      "content_length": 1170325,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 2647,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-05T07:05:00.000000Z",
+      "created_at": "2026-07-05T07:05:49.000000Z",
+      "updated_at": "2026-07-28T09:25:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZjRiNWJhYmJmMWQ2M2U5NDJiM2M3N2E2YmY1MzA4YzY6MTc4MzIzNTAyMw==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/5bce3952-b020-44a1-a66b-ed2385a2ca56?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A35Z&rscd=attachment%3B+filename%3DFika.Release.2.3.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A03Z&ske=2026-08-01T21%3A20%3A35Z&sks=b&skv=2018-11-09&sig=7TCmMPMD%2BfEOi58IcfNZQD79kHN4NHYFb8msm6l6NdA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13793,
+      "hub_id": null,
+      "version": "2.3.3",
+      "description": "<ul>\n<li>Fixed a bug where procedural animations were played too fast</li>\n<li>Cleaned up player class</li>\n<li>Updated LiteNetLib to latest</li>\n<li>Updated ‘RequiredServerVersion’ to <code>2.3.2</code></li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.3",
+      "content_length": 1143683,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 4759,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-16T16:00:00.000000Z",
+      "created_at": "2026-06-16T16:00:55.000000Z",
+      "updated_at": "2026-07-28T09:16:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/Yzk1NjA4MzE3MmUxMzMzNjZiZGMzOWMxNDdmN2NmYjE6MTc4MTYyNTYyMQ==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/21661088-d5b1-4de4-b230-f40cc6bc0e6f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A17Z&rscd=attachment%3B+filename%3DFika.Release.2.3.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A49Z&ske=2026-08-01T21%3A08%3A17Z&sks=b&skv=2018-11-09&sig=0Qnaihg7edsTp7eJfLQcUYUcqAzk346y%2FUKrs2Hgt74%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13782,
+      "hub_id": null,
+      "version": "2.3.2",
+      "description": "<ul>\n<li>Updated how the <code>FastLoad</code> feature works, making it more balanced when using smaller magazines</li>\n<li>Fixed health bars re-appearing when being disabled</li>\n<li>Fixed health bars showing at raid start when disabled</li>\n<li>Added the ability to join a raid directly from the main menu</li>\n<li>Dramatically improved memory usage when switching states from e.g. Running to Sprinting\n<ul>\n<li>This change has been tested thoroughly, but please let me know if you notice any oddities</li>\n</ul>\n</li>\n<li>Reduced the amount of memory allocations done by the base game when firing a weapon</li>\n<li>Improved performance for the host when a player reconnects</li>\n<li>Improved reliability of reconnecting</li>\n<li>Fixed a bug where a player would not move for others after reconnecting in certain scenarios</li>\n<li>The original rotation is now synced when reconnecting</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.2",
+      "content_length": 1142730,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 841,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-14T20:56:00.000000Z",
+      "created_at": "2026-06-14T20:56:12.000000Z",
+      "updated_at": "2026-07-28T09:15:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTI2OWFlNDAyM2RlZTU2MDFkMDcyMzQwYmEwZmFiMzY6MTc4MTQ3MDQxNQ==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/25333a48-26dc-40f2-ab0c-55bf22915775?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A55Z&rscd=attachment%3B+filename%3DFika.Release.2.3.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A56Z&ske=2026-08-01T21%3A22%3A55Z&sks=b&skv=2018-11-09&sig=D7eWNN4nFp4%2BT9FvxO%2BH42u%2FmlWoMlgAQD3wPqhXYVg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13721,
+      "hub_id": null,
+      "version": "2.3.1",
+      "description": "<ul>\n<li>Fixed a bug where any switch in the game with no key associated to it wouldn’t sync (e.g. power on Reserve)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.1",
+      "content_length": 1134103,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 1999,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-07T19:09:00.000000Z",
+      "created_at": "2026-06-07T19:09:20.000000Z",
+      "updated_at": "2026-07-28T09:06:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MWFjNDRhZGQ1YmZmMGRmNGFlOGUzOGJmMzMzMWEzOGE6MTc4MDg1OTMwMw==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/e99d26fd-e04b-4712-a5dd-f63412188af8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A11%3A41Z&rscd=attachment%3B+filename%3DFika.Release.2.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A16Z&ske=2026-08-01T21%3A11%3A41Z&sks=b&skv=2018-11-09&sig=7C3WVOsqwAPrOvDfZsqSCSSuJYKzNINVn73wuUpxaAE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13717,
+      "hub_id": null,
+      "version": "2.3.0",
+      "description": "<ul>\n<li>Added a new revive system\n<ul>\n<li>The system is tweakable to your liking (all is done in the server config):\n<ul>\n<li>Enable/disable</li>\n<li>Headshot always kills</li>\n<li>Grenades always kills</li>\n<li>Allow looting downed players</li>\n<li>Max revives (per player, max 10)</li>\n<li>Bleedout time (minimum 10 seconds, max 600 seconds)</li>\n<li>Revive time (minimum 3 seconds, max 30 seconds)</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Reduce packet pool to 1 since in more than 2 can never be used</li>\n<li>Updated LiteNetLib to <code>2.1.4</code></li>\n<li>Fixed a bug where disabling the keyboard overlay would disable the list of players as well in free cam</li>\n<li>Fixed a bug where using any of the puzzle items (e.g. blowtorch) in Labyrinth caused a permanent inventory desync</li>\n<li>Added <code>UI Fixes</code> support to sending items. It will now send all selected items if the mod is installed and multiple items are selected</li>\n<li>Updated locales for item sending and added new locales for revive system</li>\n<li>Minor updates to the in-menu UI</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.3.0",
+      "content_length": 1134083,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 486,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-06T19:22:00.000000Z",
+      "created_at": "2026-06-06T19:23:09.000000Z",
+      "updated_at": "2026-07-28T09:06:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NDFhZjQxYmI5ZGM3NWI0YzgzYmEzNmIyNzBiNzZiM2E6MTc4MDc3MzcxNg==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/ee6b6a28-24e1-43d5-a4b6-843c065eaf8e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A12Z&rscd=attachment%3B+filename%3DFika.Release.2.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A09Z&ske=2026-08-01T21%3A08%3A12Z&sks=b&skv=2018-11-09&sig=Ii5%2FoMhFHztt4%2BoOKKBqCaTQUlZajeUgcpZqnpV3nNk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13594,
+      "hub_id": null,
+      "version": "2.2.6",
+      "description": "<ul>\n<li>Fixed a bug where a bot despawned by a bot wasn’t cleared from the sync list properly</li>\n<li>Fixed a bug where the silhouette on the body part list was showing even when no body parts were damaged</li>\n<li>Fixed limbs being off-center when using a non-standard scale on the health bars</li>\n<li>Fixed a rare bug that would happen if over <code>255</code> bots spawned in a raid (what is wrong with you people?) (big thanks to #feepan for helping me find the root cause)</li>\n<li>Minor optimizations to state sending</li>\n<li>Fixed a bug where friendly players would all be non-FiR (this feature was only intended for AI)</li>\n<li>Fixed a small memory leak in the free cam</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.6",
+      "content_length": 1123860,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 4430,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-05-14T13:43:00.000000Z",
+      "created_at": "2026-05-14T13:43:41.000000Z",
+      "updated_at": "2026-07-28T08:54:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/00e03c4ae4f00fed331ba56fbd1b8f70e3dd8de8b62660759f76ddb5d29e75aa?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/90d64214-ba8c-4abf-82fb-a37ebee55669?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A04Z&rscd=attachment%3B+filename%3DFika.Release.2.2.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A04Z&ske=2026-08-01T21%3A15%3A04Z&sks=b&skv=2018-11-09&sig=S1RPKieRXcBJD1rdyLlkNO0H0r%2BtFC92mRxwi4jT4aE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13520,
+      "hub_id": null,
+      "version": "2.2.5",
+      "description": "<ul>\n<li>Added support for inventory replication mods</li>\n<li>Minor improvements to health bar code</li>\n<li>Fixed a bug where if over 28 bots were alive the states would fail to be received on clients due to data corruption</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.5",
+      "content_length": 1124028,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 2804,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-30T08:35:00.000000Z",
+      "created_at": "2026-04-30T08:36:01.000000Z",
+      "updated_at": "2026-07-28T08:30:47.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MDFhNDlkNzI3ODhmMmRlYjA2ZmExN2E1MzFjZGQzZWQ6MTc3NzUzNzk2NA==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/590ab606-2644-4707-afdc-d65bf5cc0195?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A42Z&rscd=attachment%3B+filename%3DFika.Release.2.2.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A16%3A46Z&ske=2026-08-01T21%3A17%3A42Z&sks=b&skv=2018-11-09&sig=MoK8Ht1sV3NkKiJoBBN%2FeS%2F4balkO5ffe9HffmOenpU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13481,
+      "hub_id": null,
+      "version": "2.2.4",
+      "description": "<ul>\n<li>Updated LiteNetLib to <code>2.1.3</code></li>\n<li>Improved how movement states are read and sent</li>\n<li>General updates to spectate list\n<ul>\n<li>Selected player should now be easier to see</li>\n<li>Added server option to allow spectating AI</li>\n</ul>\n</li>\n<li>Exposed <code>RemoveSubcription</code> to modders</li>\n<li>Various improvements and fixes to the free cam</li>\n<li>Added <code>GetPeerById(int id)</code> to the <code>IFikaNetworkManager</code> for modders to use</li>\n<li>Fixed a subtle bug where culled players on a locally hosted raid would not play sound for AI</li>\n<li>Deprecated <code>GetArray&lt;T&gt;()</code> (still works, but modders need to update asap)</li>\n<li>Substantial reduction in bandwidth usage\n<ul>\n<li>A raid should now on average use 500 KB less data per minute</li>\n<li>In testing, a client sent 600 KB <em>in total</em> during a ~15 min Factory raid</li>\n</ul>\n</li>\n<li>Many small improvements to the code base</li>\n<li>Added a new snapshotter for movement inspired by the id Tech 3 networking model</li>\n<li>Raid duration is now logged after a raid</li>\n<li>Added new option to show broken limbs on health bars</li>\n<li>Added 2 new options to the server settings\n<ul>\n<li><strong>InstantLoad</strong>: All mags are instantly loaded in a raid</li>\n<li><strong>FastLoad</strong>: 5 bullets are loaded per tick rather than 1 (if <code>InstantLoad</code> is enabled, this is disabled by default)\n<ul>\n<li>This is a good alternative if you want an immersive way to speed up loading</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Fixed rare exception when cancelling loading internal magazines</li>\n<li>All inventory operations and their callbacks are now pooled, substantially reducing memory usage during load raids</li>\n<li>Fixed a bug where <code>Random Spawn Points</code> wasn’t applying correctly</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.4",
+      "content_length": 1123857,
+      "spt_version_constraint": ">=4.0.13",
+      "downloads": 1445,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-24T13:47:00.000000Z",
+      "created_at": "2026-04-24T13:47:38.000000Z",
+      "updated_at": "2026-07-28T08:25:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/OGRjNTRlZjUwYWEwNzFjYjQ1OWQ1OTVlYzMzOWNhNTc6MTc3NzAzODI3MQ==",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/3205898f-9310-4576-bfbb-2e849f16575a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A03Z&rscd=attachment%3B+filename%3DFika.Release.2.2.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A24Z&ske=2026-08-01T21%3A12%3A03Z&sks=b&skv=2018-11-09&sig=tfx9WQjmooUln2ytS03JtT3zPqLT72hbJ2yd0FbtQHc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13134,
+      "hub_id": null,
+      "version": "2.2.3",
+      "description": "<ul>\n<li>Fixed a bug where certain requests would have a lower timeout than intended</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.3",
+      "content_length": 864808,
+      "spt_version_constraint": ">=4.0.12",
+      "downloads": 10780,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-22T08:19:00.000000Z",
+      "created_at": "2026-02-22T08:19:02.000000Z",
+      "updated_at": "2026-07-28T08:05:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/49c34ad441ebc9668b1aafdcafe990b90e1c175a6ee3a7f6e558e5cc1886722f?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/240a52e6-fdae-49af-be48-d37638a5160b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A57Z&rscd=attachment%3B+filename%3DFika.Release.2.2.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A32Z&ske=2026-08-01T21%3A04%3A57Z&sks=b&skv=2018-11-09&sig=hchyWyxg1CZfGob700QxORUDkPbG43juUSLKwuMctpQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13125,
+      "hub_id": null,
+      "version": "2.2.2",
+      "description": "<ul>\n<li>The player list in the freecam has received an overhaul</li>\n<li>Added safety when sending loot position data on dropped items that resulted in the data being too big</li>\n<li>Fixed several issues with the armor system\n<ul>\n<li>Fixed a very old bug where armor wouldn’t update on other players when they change gear</li>\n<li>Fixed a bug where armor wouldn’t apply <em>plates</em> specifically</li>\n<li>Fixed a bug where if any armor piece ran out of durability, all armor would count as unequipped</li>\n</ul>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.2",
+      "content_length": 864634,
+      "spt_version_constraint": ">=4.0.12",
+      "downloads": 510,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-20T22:46:00.000000Z",
+      "created_at": "2026-02-20T22:47:00.000000Z",
+      "updated_at": "2026-07-28T08:05:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8450f48bf5be5223812ca4955edc50d9062089329b3dda4d102890e95f46e0d7?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/841003d6-1608-4c2a-b71e-bab15ca9b132?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A44Z&rscd=attachment%3B+filename%3DFika.Release.2.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A46Z&ske=2026-08-01T21%3A05%3A44Z&sks=b&skv=2018-11-09&sig=KVkcJpTIfoqdVAllAs9hs5A%2Bo%2B3NTMUdOEATE2V6nM0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13114,
+      "hub_id": null,
+      "version": "2.2.1",
+      "description": "<ul>\n<li>You can now filter by name when sending items</li>\n<li>Added a server option to force random spawns on Labyrinth</li>\n<li>Reduced the amount of redundant bandwidth used when syncing health</li>\n<li>Cleaned up and refactored the mod check</li>\n<li>Updated <code>LiteNetLib</code> to 2.0.2</li>\n<li>Dramatically reduced the amount of memory used by the player list in the freecam</li>\n<li>Fixed a subtle bug with dropped loot position syncing in the game world</li>\n<li>Improved how items are synced when dropped</li>\n<li>Enabled 3 new options in the raid settings\n<ul>\n<li>Disable overload: Removes the overload effect</li>\n<li>Disable arm stamina: Removes arm stamina</li>\n<li>Disable leg stamina: Removes leg stamina</li>\n</ul>\n</li>\n<li>Refactored the Tarkov armor system\n<ul>\n<li>All armors are now cached when you equip <em>anything</em></li>\n<li>Formerly, <em><strong>any</strong></em> bullet would cause a complete recalculation</li>\n<li>This will break mods that allows you to switch plates with the item still equipped (it’s advised not to use this feature)</li>\n</ul>\n</li>\n<li>The interpolation for players and bots has been improved\n<ul>\n<li>Settings were tweaked to be more “snappy”</li>\n<li>The job system was removed, and instead the interpolator was refactored to the more efficient for the CPU</li>\n</ul>\n</li>\n<li>Added server option to force all PMCs to spawn with found in raid loot</li>\n<li>Improved how <code>unmanaged</code> arrays are serialized/deserialized over the network</li>\n<li>Fixed a bug where the in-game time would display an incorrect value when playing on a headless session</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.1",
+      "content_length": 866689,
+      "spt_version_constraint": ">=4.0.12",
+      "downloads": 752,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-18T22:12:00.000000Z",
+      "created_at": "2026-02-18T22:12:32.000000Z",
+      "updated_at": "2026-07-28T08:05:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/884a71a40697b13a0ab36efebc7b581e65ac99c54cd80bd49b278f98c033b01e?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/5a33dacf-95f7-4225-a149-ebe11dca9302?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A47Z&rscd=attachment%3B+filename%3DFika.Release.2.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A52Z&ske=2026-08-01T21%3A24%3A47Z&sks=b&skv=2018-11-09&sig=BP0Ur9BDDPPoiBAtculiKegGC%2B0gTUiuCcUvkTM02Nw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12894,
+      "hub_id": null,
+      "version": "2.2.0",
+      "description": "<ul>\n<li>Added public NAT punching option\n<ul>\n<li>Enable it in the F12 menu</li>\n<li>When both NAT punch &amp; public NAT punching is enabled, you will use our publicly hosted NAT punch master server to bypass port forwarding</li>\n<li>This is similar to what Steam does, which allows you to finally play without opening your ports (some very specific restrictions apply, e.g. certain routers)</li>\n<li>If we decide to shut down the master server, we will let you know. Currently I’m paying for it with my own money</li>\n</ul>\n</li>\n<li><code>SetLightsState</code> now passes the <code>animated</code> parameter to the base call</li>\n<li><code>Player.Velocity</code> is now synced between all clients, allowing mods to utilize it (you probably should adjust your SAIN difficulties now…)</li>\n<li>Cleaned up a lot of old code\n<ul>\n<li>Fika now uses less memory in a lot of places</li>\n<li>Name plates now use <em>way</em> less CPU to update</li>\n<li>Refactored how a raid is joined to make it more modern</li>\n</ul>\n</li>\n<li>A notification is now shown when the headless successfully connects and is ready to be used for hosting</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.2.0",
+      "content_length": 864405,
+      "spt_version_constraint": ">=4.0.11",
+      "downloads": 4407,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-22T19:35:00.000000Z",
+      "created_at": "2026-01-22T19:36:08.000000Z",
+      "updated_at": "2026-07-28T07:56:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/99936f8f7190ec5e7dc39e0c78cf652f90ccb4e98aa98be001eb4c53d435b25e?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/d3f62af8-cc67-4ef6-9a2d-33cb28793359?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A03Z&rscd=attachment%3B+filename%3DFika.Release.2.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A09Z&ske=2026-08-01T21%3A24%3A03Z&sks=b&skv=2018-11-09&sig=2wwixw0t%2BVwivnXVpmNq3WkbFupqtqygPw32V3AywZw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12827,
+      "hub_id": null,
+      "version": "2.1.1",
+      "description": "<ul>\n<li>Updated BTR lerp values, should be smoother for clients</li>\n<li>Added IPv6 support</li>\n<li>Updated bot controller initialization to be more in line with BSGs code</li>\n<li>Fixed a bug where season settings wouldn’t apply correctly</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.1.1",
+      "content_length": 871302,
+      "spt_version_constraint": ">=4.0.11",
+      "downloads": 2477,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-10T22:09:00.000000Z",
+      "created_at": "2026-01-10T22:10:22.000000Z",
+      "updated_at": "2026-07-28T07:50:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c2f132c8c5a10a762cb916b2ec6e43ebc9feed36de066fccfcd3a5666689ddd3?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/7a2271d4-4e8f-4b45-9e75-b442f548d428?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A58Z&rscd=attachment%3B+filename%3DFika.Release.2.1.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A59Z&ske=2026-08-01T21%3A18%3A58Z&sks=b&skv=2018-11-09&sig=w26wwbTTYvEiUsNRgrmMY17QqaLZSzGysibAH01fVsY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.1.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12767,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<ul>\n<li>Added limited Khorovod support</li>\n<li>Added new loading screen\n<ul>\n<li>The screen displays the loading progress of every player (you can now yell at your friend with the potato PC)</li>\n</ul>\n</li>\n<li>Fixed a bug where connecting inside the local network would prefer the WAN IP over the LAN IP, causing an error when NAT Loopback is unsupported</li>\n<li>Your status <em>should</em> no longer be <code>In Stash</code> if you open your stash during the loading screen</li>\n<li>Added and cleaned up logging to make troubleshooting easier</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.1.0",
+      "content_length": 870932,
+      "spt_version_constraint": ">=4.0.11",
+      "downloads": 2072,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-03T19:58:00.000000Z",
+      "created_at": "2026-01-03T19:58:54.000000Z",
+      "updated_at": "2026-07-28T07:40:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d449bddfa3d47d229194f0df53121a66384797ab3de380ed61af578ee45cf37c?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/084c42e8-93e1-4f20-b8d2-0e4e16d6621d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A05Z&rscd=attachment%3B+filename%3DFika.Release.2.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A02Z&ske=2026-08-01T21%3A23%3A05Z&sks=b&skv=2018-11-09&sig=i9LyHzBmxgiavarlZOnQvS94b5%2FVl43%2FaBI0sSyjnas%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12668,
+      "hub_id": null,
+      "version": "2.0.10",
+      "description": "<ul>\n<li>Fixed an issue where remote connections wouldn’t function</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.10",
+      "content_length": 864921,
+      "spt_version_constraint": ">=4.0.9",
+      "downloads": 3489,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-24T21:01:00.000000Z",
+      "created_at": "2025-12-24T21:01:27.000000Z",
+      "updated_at": "2026-07-28T07:07:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a2c24badaf866950f8225d29450667ef5444ebb674a037d05b9c2c234a1e9afb?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/c4bddb8e-6cd4-4cc0-b422-34c795a81651?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A26Z&rscd=attachment%3B+filename%3DFika.Release.2.0.10.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A05Z&ske=2026-08-01T21%3A07%3A26Z&sks=b&skv=2018-11-09&sig=8cLhtN98lpALMb2cfw8V4JkNPajpdkwlXzAJT8wUIrY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.10.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12667,
+      "hub_id": null,
+      "version": "2.0.9",
+      "description": "<ul>\n<li>Improved grenade movement sync</li>\n<li>Added new experimental culling for other players</li>\n<li>Allow more than one profile download\n<ul>\n<li>It now uses a 1 minute cooldown instead</li>\n</ul>\n</li>\n<li>Tweaked interpolation settings (how other players move)</li>\n<li>BTR shooter spawn pos is now synced</li>\n<li>Added new <code>PeerDisconnectedEvent</code> for modders</li>\n<li>Fixed a bug where using a key would use 2 charges for everyone else\n<ul>\n<li>This would remove e.g. <code>2/2</code> keys on the first use, causing desync</li>\n</ul>\n</li>\n<li>All local IPs are now sent when hosting, should improve attempts to connect while using e.g. a VPN or multiple network interfaces</li>\n<li>Updated <code>LiteNetLib</code> to 1.3.5</li>\n<li>Fixed scav runs if using SPT &gt;2.0.9</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.9",
+      "content_length": 864948,
+      "spt_version_constraint": ">=4.0.9",
+      "downloads": 177,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-24T19:00:00.000000Z",
+      "created_at": "2025-12-24T19:00:35.000000Z",
+      "updated_at": "2026-07-28T07:07:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e891da4e138734981b0527b8b1e2730ed8ffd1cc23aa2c1c2c889b9b093f13e5?nocache=1",
+          "label": "Client"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/5a131bd1-6263-48d2-8a15-8968e27cddd0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A51Z&rscd=attachment%3B+filename%3DFika.Release.2.0.9.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A58Z&ske=2026-08-01T21%3A12%3A51Z&sks=b&skv=2018-11-09&sig=GMcCKwHzZU736KCBmNpEsDc90ghaCMDGv0wpsxQ%2B8ik%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.9.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12584,
+      "hub_id": null,
+      "version": "2.0.8",
+      "description": "<ul>\n<li>Fixed up an issue where Fika would not load correctly in SPT 4.0.8</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.8",
+      "content_length": 860951,
+      "spt_version_constraint": "~4.0",
+      "downloads": 3504,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-12T16:54:00.000000Z",
+      "created_at": "2025-12-12T16:55:04.000000Z",
+      "updated_at": "2026-07-28T07:05:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ODQ2YjdkNDIyMzU5NDMzOTJhM2Q4Y2Y1M2VlZDA2MGQ6MTc2NTU1ODQ5OA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/dcd54d80-e390-4422-99c0-f97ac0f26faf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A58Z&rscd=attachment%3B+filename%3DFika.Release.2.0.8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A06Z&ske=2026-08-01T21%3A21%3A58Z&sks=b&skv=2018-11-09&sig=4A2aUVheL4rXfLLnY9O9aZXiJB1waktkRRapamd7yug%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12387,
+      "hub_id": null,
+      "version": "2.0.7",
+      "description": "<ul>\n<li>Certain C# event subscriptions now properly clear after a raid</li>\n<li>Added nullguard to prevent error spam when talking to Lightkeeper</li>\n<li>Added new loading text during the loading screen so that it doesn’t seem like it’s generating weather for 30 seconds</li>\n<li>Failing the mod validation check will now also force quit the game after 15 seconds</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.7",
+      "content_length": 860964,
+      "spt_version_constraint": ">=4.0.6",
+      "downloads": 5916,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-21T06:58:36.000000Z",
+      "created_at": "2025-11-21T06:58:26.000000Z",
+      "updated_at": "2026-07-28T06:43:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d11e686ae3755628a66c9ebecdc5a93e70168f0eba3aa14baf205af5e4ed83d1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/f6c51123-de4e-4ddb-880f-b06d1cdf2b38?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A58Z&rscd=attachment%3B+filename%3DFika.Release.2.0.7.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A08Z&ske=2026-08-01T21%3A05%3A58Z&sks=b&skv=2018-11-09&sig=wD7bOrrgYe8zKYu%2BZh2qg1gDwqbMuCzvXXhfL11feKY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.7.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12278,
+      "hub_id": null,
+      "version": "2.0.6",
+      "description": "<h2>Compatible with EFT 0.16.9.40087</h2>\n<ul>\n<li>Tweaked ping and nameplate calculations when using a PiP scope</li>\n<li>Minor optimizations to raid init</li>\n<li>Added new message packet</li>\n<li>Made several classes public for modders</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.6",
+      "content_length": 860757,
+      "spt_version_constraint": ">=4.0.4",
+      "downloads": 2623,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-11T07:08:00.000000Z",
+      "created_at": "2025-11-11T07:08:37.000000Z",
+      "updated_at": "2026-07-28T06:20:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/25ab9643bd84b663c5e56a716024e713f6205e63c112feb88a14a1461067d59e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/130ff4b6-3e50-4f3f-bf45-212026e3807a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A31Z&rscd=attachment%3B+filename%3DFika.Release.2.0.6.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A50Z&ske=2026-08-01T21%3A14%3A31Z&sks=b&skv=2018-11-09&sig=lmQ7MLJDbLgzscTTivf6RcBgBRDWovHWsAcD9lETaJU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOCwibmJmIjoxNzg1NjE1ODM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fy4YTMrnXEgij0bMGDnhPEMA4o6ZA9FfSzrpX-D5dWA&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.6.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12171,
+      "hub_id": null,
+      "version": "2.0.5",
+      "description": "<ul>\n<li>Added missing boss names when killing bosses (Labyrinth)</li>\n<li>Improved code that handles tripwires for AI</li>\n<li>Improved how grenades are synced over the network</li>\n<li><code>FikaDebug</code> should now display the correct amount of AI for local hosts again</li>\n<li>Added nullguard to prevent exception when a grenade explodes on the raid host</li>\n<li>Improved how a mounted player replicates their information to other players</li>\n<li>Fixed rare edge cases of a null reference when starting with certain debuffs</li>\n<li>Improved the accuracy of how thrown loot replicates</li>\n<li>Fixed a bug where a check was using the wrong <code>Interface</code> when other players heal, causing weird animations</li>\n<li>You should now be able to detach the camera if no players are alive</li>\n<li>Dramatically reduced the amount of CPU and bandwidth the BTR uses to replicate\n<ul>\n<li>It now sends its state 20/s</li>\n</ul>\n</li>\n<li>Improved how zombies replicated\n<ul>\n<li>They now properly hold their guns/melee weapons</li>\n<li>They no longer slide around for clients\n<ul>\n<li>This is probably the last time I spend time on the zombies, as they were left in a sorry state by BSG</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>When you download your profile, all mod data for that profile is also downloaded (requires updating the server mod, or you’ll break your game)</li>\n<li>The time calculation of the game (e.g. for time of day, weather) is now synced from host to all clients to force them all to be in line when starting the raid, alleviating a problem where if you wait too long to start and someone joins late, the weather and time might be a bit off</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.5",
+      "content_length": 860564,
+      "spt_version_constraint": "~4",
+      "downloads": 1578,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-11-04T21:26:00.000000Z",
+      "created_at": "2025-11-04T21:27:00.000000Z",
+      "updated_at": "2026-07-28T06:14:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d309e58d159f5f0e8f2fa77d3e02aa79362ab828666b908b9ceff61069e3457e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/c84af7d3-98f4-44f1-a700-3a499aecb0f3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A40Z&rscd=attachment%3B+filename%3DFika.Release.2.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A54Z&ske=2026-08-01T20%3A58%3A40Z&sks=b&skv=2018-11-09&sig=vsAQpqrMynS0STaPbs%2B48dVL5v2Su1eve8959VOFhCo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOSwibmJmIjoxNzg1NjE1ODM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sXRuPmtA9gwrMvPq-7K-VfEvv-wemXbTF07Ki56Wd4g&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12064,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<ul>\n<li>Fixed a bug where the BTR would not spawn for clients, or would teleport back and forth</li>\n<li>Fixed <code>BTRShooter</code> replication, freeing up a fair amount of bandwidth from the BTR</li>\n<li>Fixed <code>nullref</code> when firing certain grenade launchers</li>\n<li>Added temporary fix for <code>nullref</code> when taking damage from Labrys traps</li>\n<li>Improved how UI elements are rendered when aiming down a scope while using super sampling or DLSS/FSR @shynd</li>\n<li>Cleaned up logic when sending items</li>\n<li>Refactored the <code>WorldPacket</code>\n<ul>\n<li>Grenades are now more accurately synchronized, more lightweight on the CPU and bandwidth\n<ul>\n<li>They might look slightly erratic when moving, I am still tuning it</li>\n</ul>\n</li>\n<li>Airdrops and airdrop crates are more optimized when synchronizing</li>\n</ul>\n</li>\n<li>Main menu status icons have received new colors (still being tuned)</li>\n<li>General code improvements in the code base</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.4",
+      "content_length": 858638,
+      "spt_version_constraint": "~4",
+      "downloads": 1543,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-28T21:19:00.000000Z",
+      "created_at": "2025-10-28T21:20:15.000000Z",
+      "updated_at": "2026-07-28T06:09:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7f88eb0c6df73ed6dabc3a5eda5d65410d7de28b6b31e2395ddad28ec467cdd9?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/28126f0d-3980-4e6c-aed0-31ef1e8208cb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A00Z&rscd=attachment%3B+filename%3DFika.Release.2.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A20%3A48Z&ske=2026-08-01T21%3A21%3A00Z&sks=b&skv=2018-11-09&sig=ohxmUDP5xT87jF0QQFmUKNd8Vl5LIS95mfjfxyoVDew%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12021,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<ul>\n<li>Culled players no longer fully animate, increasing FPS mainly for clients</li>\n<li>Fixed freecam detach when the last player dies when freecam is disabled</li>\n<li>Updated NAT punch logic</li>\n<li>All of the UI in Fika has received either a minor or significant overhaul depending on the UI</li>\n<li>Fixed nullrefs on the interpolation jobs</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.3",
+      "content_length": 857264,
+      "spt_version_constraint": "~4",
+      "downloads": 1007,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-25T14:06:00.000000Z",
+      "created_at": "2025-10-25T14:06:28.000000Z",
+      "updated_at": "2026-07-28T06:08:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8daa0265257a3ebedcb25b3d67325051d567109cfcc5e36ed987f7dff68f7844?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/6dfa26d0-2e3f-41e2-a885-f23019deb8a5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A58%3A23Z&rscd=attachment%3B+filename%3DFika.Release.2.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A36Z&ske=2026-08-01T20%3A58%3A23Z&sks=b&skv=2018-11-09&sig=OqAM3f0k9HB0esi2naJjz1KUSk0WeTARIBWZjRCPtYE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11918,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<h2>Compatible with EFT 0.16.9.40087</h2>\n<ul>\n<li>Slightly improved checks during quest sharing</li>\n<li>Fixed free cam being allowed while the option is disabled</li>\n<li>Fixed a bug where the BTR would never spawn for clients</li>\n<li>Fixed a bug where AI would start ~10s too early during headless games</li>\n<li>Added more logging to BTR initialization</li>\n<li>Optimized several string comparisons</li>\n<li>Fixed a bug where the wrong name would be used for e.g. pings during Scav runs</li>\n<li>Fixed NAT punch logic</li>\n<li>More fixes to the issue where some players are loading in bundles too slow\n<ul>\n<li>This is confirmed to be an issue with certain PCs only, and happens without Fika in local games</li>\n<li>The bug is most likely a bug in the base game as well</li>\n<li>It should now <em>rarely</em> happen, and if it does, the timeout has been massively increased to prevent AI without weapons doing damage, etc.</li>\n</ul>\n</li>\n<li>Fixed a bug where <code>DEBUG</code> patches would be applied to a release</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.2",
+      "content_length": 839093,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1463,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-19T09:03:00.000000Z",
+      "created_at": "2025-10-19T09:03:12.000000Z",
+      "updated_at": "2026-07-28T06:05:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d16ed5d4c9f8143842bc242c7cfdf957dae800473a459c8b87c4902e596c7af5",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/5b1d6e8d-f0f5-4594-96b1-ab9d4a481695?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A19Z&rscd=attachment%3B+filename%3DFika.Release.2.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A26Z&ske=2026-08-01T21%3A16%3A19Z&sks=b&skv=2018-11-09&sig=jMSXzGy%2FIuF3fWorIuReFQm7mTN3Wi73r%2BXSz3G%2Br%2Fc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11778,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<ul>\n<li><code>CoopGame</code> has been refactored into sub-components: <code>ClientGameController</code>, <code>HostGameController</code> and <code>HeadlessGameController</code> for headless clients.\n<ul>\n<li>This has allowed us to abstract most of the logic, making it easier to separate host, client, and headless modes</li>\n<li><strong>Mod authors</strong> should note the new structure if they relied on <code>LocalGame</code>-specific data. Adjusting should not be difficult</li>\n<li>This also optimizes AI updates, which should now run more efficiently than in the base game (SPT and PvE)</li>\n</ul>\n</li>\n<li>Debug commands can now be used when not hosting (these are still not available on public builds)</li>\n<li>The transit system for Fika has been refactored\n<ul>\n<li>It should now allow transit without a headless server, though this is still an unsupported feature due to its unreliability.</li>\n</ul>\n</li>\n<li>The <code>KeepAlive</code> pinging now runs on its own thread, reducing hitches when the backend is slow to respond</li>\n<li>Added support for the new Rocket Launcher</li>\n<li>Fixed a base game bug where players in local games didn’t play idle breathing animations (this has been bugged for years on live and still is)</li>\n<li>The <code>VisualPass()</code> method — responsible for most of the lag apart from AI — has received a <em>massive</em> overhaul and now runs much faster for clients, more in line with live raids. Most players should see a noticeable performance gain from this change</li>\n<li>Optimized many loops and coroutines throughout the code base</li>\n<li>Surface audio calculations have been overhauled and should no longer randomly play the wrong sound, especially for clients on a headless session</li>\n<li>The headless will now keep running for ~5 minutes if the last disconnect was not graceful (crash, disconnect, etc.)</li>\n<li>The method responsible for updating every player each frame has been slightly optimized compared to the base game version, resulting in a small performance boost</li>\n<li>The pedometer (the class that counts your steps in a raid) no longer runs for bots and other players</li>\n<li>Server FPS now updates more frequently in the debug menu</li>\n<li>Corpses are now culled when not visible in the camera, unlike in live local games</li>\n<li>Movement sync has received several major updates\n<ul>\n<li>Removed redundant math in many movement states that ran every frame</li>\n<li><code>SprintSpeed</code> is now synced over the network rather than calculated locally, resulting in more accurate sprinting</li>\n<li>States are now only updated when a new one is available, instead of every frame, improving performance</li>\n<li>Jumping has been dramatically improved and should no longer play incorrect animations when jumping from a running stance</li>\n<li>Fixed an incorrect calculation of the time difference between the server and client</li>\n<li>The <code>IsMoving</code> checks have been overhauled and should now be 100% accurate, also fixing a bug where bots appeared to ice skate in place when opening doors</li>\n<li>Overall, movement sync is now near perfect on a stable connection and <strong>looks better than live</strong> online games in every way</li>\n</ul>\n</li>\n<li>Many <code>struct</code>s have been improved</li>\n<li>Networking and data serialization/deserialization have received a <em>major</em> overhaul\n<ul>\n<li>Many primitive types are now packed into smaller data; for example, a float is now either 2 or 1 bytes instead of 4 in many cases</li>\n<li>Structs such as <code>Vector3</code> and <code>Vector2</code> are now written and read up to 10× faster (in some cases, more than 100 of these were written every frame)</li>\n<li>Certain primitives, e.g., <code>int</code> and <code>short</code>, are now read ~3× faster</li>\n<li>The packet header for every packet is now half the size</li>\n<li><code>MongoID</code>s are now 12 bytes instead of 24</li>\n<li><code>byte[]</code> arrays are now packed using <code>LZ4</code>, resulting in a major decrease in size when sent</li>\n<li>On average, Fika now uses ~60% less bandwidth (highly situational)</li>\n<li>Modders can use all these new methods in <code>FikaSerializationExtensions</code></li>\n<li>Most packets used in Fika have been updated to utilize these changes</li>\n<li>Packets are now sent with a <code>broadcast</code> parameter from clients, allowing the server to process and forward them to everyone <em>much</em> faster without first interpreting the entire message</li>\n<li>Many Fika-specific packets are now pooled and reuse instances instead of creating new ones each time, reducing both memory and CPU usage — especially noticeable during heavy gunfights</li>\n</ul>\n</li>\n<li>Restructured how armor damage is synced to be faster and use fewer allocations</li>\n<li>Updated <code>LiteNetLib</code></li>\n<li>Updated several methods to use <code>ReadOnlySpan&lt;T&gt;</code> instead of <code>byte[]</code>, reducing allocations</li>\n<li>Changed the default VOIP settings to a 20-second speaking limit</li>\n<li>Added missing logic for taking damage</li>\n<li>Fixed a bug where bots would not take damage from environmental or border hazards (snipers, mines)</li>\n<li>Updated the <code>FreeCam</code> overlay UI</li>\n<li>Improved <code>IndexOf()</code> lookups when replicating shots</li>\n<li>Added a new <code>AdminSettings</code> menu, allowing admins to change server settings from the main menu</li>\n<li>Fixed a bug where aiming with the range finder would not replicate</li>\n<li>The BTR getting hit by bullets is no longer calculated by clients, as it had no effect</li>\n<li><code>Fika Chat</code> has been remade from scratch\n<ul>\n<li>Pops up for 3 seconds when receiving a message (while still allowing movement)</li>\n<li>No longer uses <code>OnGUI()</code></li>\n<li>Easier to interact with</li>\n</ul>\n</li>\n<li>Added a <code>RaidAdminUI</code>, accessible from the console\n<ul>\n<li>Allows raid hosts to see statistics from every client</li>\n<li>Allows raid hosts to kick players from the raid (intended to solve AFK problems)</li>\n</ul>\n</li>\n<li>FreeCam now correctly returns behind your player, facing the original direction when toggled</li>\n<li>Fixed a bug where firing <code>OnlyReloadBarrel</code> weapons (e.g., the double-barrel shotgun) did not correctly remove fired ammo, causing desync</li>\n<li>UPnP and NAT Punching are now marked as Advanced options</li>\n<li>Refactored how the server and client handle expected player counts</li>\n<li>Fixed a bug where bots that fail to load remained unspawned indefinitely — they now spawn after 30 seconds if a client fails to load them</li>\n<li>Reduced GC allocations in several places by replacing <code>LINQ</code> queries with <code>for</code> loops</li>\n<li>Improved logic for dropping an equipped weapon (can still appear buggy for other players)</li>\n<li>Fixed a bug where having any Unicode characters in the computer name would prevent the server from starting</li>\n<li><code>VOIP</code> has been slightly refactored for significantly improved stability and performance</li>\n<li>SPT settings that were originally disabled by default are now enabled again (SPT chat bots, profile types, etc.)</li>\n<li>Fixed several (harmless) bugs with the interpolation system due to Unity docs straight out lying</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/2.0.0",
+      "content_length": 821373,
+      "spt_version_constraint": "4.0",
+      "downloads": 2340,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-11T20:09:00.000000Z",
+      "created_at": "2025-10-11T20:09:58.000000Z",
+      "updated_at": "2026-07-28T06:02:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1c5f6ae36d8b5d8fc74ebc644e81e09536141201c3893da35301c692b3dd4ca8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/e4fb1bde-078e-421a-9e43-02954f7bf3ac?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A36Z&rscd=attachment%3B+filename%3DFika.Release.2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A12Z&ske=2026-08-01T21%3A15%3A36Z&sks=b&skv=2018-11-09&sig=j0Ju%2BCRieAdav1zawdth17djtcDin%2FnlDtniwbsILFk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MCwibmJmIjoxNzg1NjE1ODQwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vqnR_Qe1tJV2LV4XnxMBAg9pdh0gEtYh2RoVXdnK_68&response-content-disposition=attachment%3B%20filename%3DFika.Release.2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11673,
+      "hub_id": null,
+      "version": "1.2.8",
+      "description": "<p>First official release on the Forge 😤</p>\n<p>Old notes:</p>\n<h2>Patch Notes - Core v1.2.8</h2>\n<ul>\n<li>Fixed crashes not triggering if connecting to a server with invalid mods</li>\n<li>Added the ability to change the name plate health bar color</li>\n<li>Added the ability to change the name plate name text color</li>\n<li>Fixed a bug where players would start the raid crouched</li>\n</ul>\n<h2>Patch Notes - Server v2.4.8</h2>\n<ul>\n<li>Updated locales</li>\n</ul>\n<h2>Patch Notes - Headless 1.3.7</h2>\n<ul>\n<li>The headless should no longer restart during a Transit if configured to restart after X raids</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2326/project-fika/1.2.8",
+      "content_length": null,
+      "spt_version_constraint": "3.11.4",
+      "downloads": 4058,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-09-26T20:43:36.000000Z",
+      "created_at": "2025-09-26T20:40:44.000000Z",
+      "updated_at": "2026-05-14T06:01:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b873580ce1c808090735846624560fcab5545f1edfd7dfa88ed7e0c233b6e0a8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/791987774/ef597a45-58fe-4d1f-9bce-69f3872a6c10?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A30Z&rscd=attachment%3B+filename%3DFika.1.2.8.Client.Server.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A56Z&ske=2026-08-01T21%3A23%3A30Z&sks=b&skv=2018-11-09&sig=k9m8M4mBoVwsjaJNZrRS9izDXG4DCrtG2rD6fBBw29I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MSwibmJmIjoxNzg1NjE1ODQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6rv2bCk8jdzbjpKLgzIHOjyWstRznhwGjz1PJ0MaOC4&response-content-disposition=attachment%3B%20filename%3DFika.1.2.8.Client.Server.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 226,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:49.155Z",
+    "discoveredBy": "seed"
+  }
+}

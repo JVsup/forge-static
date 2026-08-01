@@ -1,0 +1,441 @@
+{
+  "type": "mod",
+  "id": 2773,
+  "hub_id": null,
+  "guid": "com.mybutthasarash.sptchecker",
+  "name": "SPTChecker",
+  "slug": "sptchecker",
+  "teaser": "Check SPT Forge religiously? Me too.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/qXQTwktu5Ut9nT0bjfFhapK0rXQJlf81hP2cvEGa.png",
+  "downloads": 1497,
+  "favourites_count": 14,
+  "description": "<h2>SPTChecker</h2>\n<p>A lightweight Windows desktop app that monitors the <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mods\" rel=\"noreferrer noopener\">SPT Forge</a> for new and updated mods in real time.</p>\n<blockquote>\n<p><strong>Note on antivirus flags:</strong> A small number of vendors may flag this exe as malicious. Most of them (ALYac, Arcabit, Emsisoft, eScan, GData, VIPRE) all run BitDefender’s engine under the hood and are triggering off the same single false positive detection. These are not real threats. Source code is open on GitHub.</p>\n</blockquote>\n<hr />\n<h3>What it does</h3>\n<p>SPTChecker runs quietly in your system tray and checks the Forge every 5 minutes for changes. When it finds something, it sends a Windows toast notification and updates the UI — no need to manually browse the Forge to stay up to date.</p>\n<p>It can also do the reverse: point it at your SPT install folder and it’ll scan your actually-installed mods and tell you which ones have updates waiting on the Forge (see <strong>Local mod scanning</strong> below) — entirely opt-in, off by default.</p>\n<hr />\n<h3>How it works</h3>\n<ol>\n<li>On first launch, the app populates both columns — <strong>New Mods</strong> from the Forge RSS feed and <strong>Recently Updated</strong> mirroring the website’s “Recently Updated” tab.</li>\n<li>Both columns use the Forge RSS feeds and API — <strong>no HTML scraping</strong>.</li>\n<li>Every 5 minutes, it re-fetches and compares against stored state.</li>\n<li>New mod URLs are flagged as <strong>New</strong>. The Recently Updated column mirrors the Forge website in real time.</li>\n<li>If a mod author unpublishes their mod, it is automatically removed from the display.</li>\n<li>Results persist across checks and restarts — new findings push older entries down in a rolling history (up to 7 per column).</li>\n<li>If a check fails (Forge unreachable, network hiccup, etc.), the app doesn’t crash — it shows the error in the status bar and quietly retries on the next cycle.</li>\n</ol>\n<hr />\n<h3>UI</h3>\n<ul>\n<li><strong>Two-panel layout</strong> — New mods on the left, recently updated mods on the right (up to 7 per column)</li>\n<li><strong>Mod cards</strong> — Each card shows the thumbnail, title, author, version, category, and description</li>\n<li><strong>Version diff</strong> — Updated mods show the version change inline (e.g. <code>1.2.3 → 1.3.0</code>)</li>\n<li><strong>View Change Notes</strong> — A small icon on updated mod cards opens a popup with that version’s changelog, rendered as actual markdown (bold, italic, inline code, headers, bullet lists, and clickable links that open in your browser) rather than a plain text dump, plus a direct “Open on Forge” button</li>\n<li><strong>NEW badge</strong> — Freshly detected mods are marked with a green NEW badge so you can spot changes at a glance</li>\n<li><strong>NEW AUTHOR badge</strong> — Mods from accounts created in the last 60 days are flagged so you can spot new community members</li>\n<li><strong>Timestamps</strong> — Each card shows how long ago the mod was published or updated (e.g. “2h ago”, “yesterday”)</li>\n<li><strong>Hover-scrolling</strong> — Hover over any card to smoothly scroll truncated text and read the full details</li>\n<li><strong>Click to open</strong> — Click any card to open the mod page directly on the Forge</li>\n<li><strong>Right-click menu</strong> — Right-click any card for quick options to view change notes, open on Forge, or copy the link</li>\n<li><strong>Category legend</strong> — Hover the info icon in the header for a color key to every mod category</li>\n<li><strong>Stats window</strong> — Click <strong>Stats</strong> for total mods tracked, mods added this week, a 30-day daily-activity chart (hover any point for the exact date/count), and the top 5 authors/categories by activity in the last 30 days (rolls forward automatically, no manual reset). Author names are clickable and open their Forge profile</li>\n<li><strong>Window size memory</strong> — The app remembers and restores its window size between sessions</li>\n<li><strong>Dark theme</strong> — Styled to match the SPT aesthetic</li>\n</ul>\n<hr />\n<h3>Local mod scanning (opt-in)</h3>\n<p>Click <strong>Local Mods</strong> to check your own installed mods against the Forge — entirely optional and off by default. This is a first iteration of the feature; if you run into anything odd, please report it.</p>\n<ol>\n<li>Point it at your SPT install folder (validated automatically — it checks for <code>BepInEx/plugins</code> or <code>SPT/user/mods</code>).</li>\n<li>Click <strong>Scan Now</strong>. Rather than guessing a mod’s identity from its filename or source code shape, the app reads each mod’s <em>real</em> declared metadata via actual .NET reflection, so it works no matter how a mod author’s code is structured. A progress bar tracks each mod as it’s checked against the Forge.</li>\n<li>Each mod is matched against the Forge (exact ID lookup first, falling back to a smarter name search — handling camelCase/dotted internal names, author-prefixed names, and a full-text fallback search — then fuzzy ranking) and grouped into color-coded sections:\n<ul>\n<li><strong>Updates Available</strong> (orange) — shown as full mod cards (thumbnail, version diff, changelog, right-click menu — same as the main feed), with an <strong>Open All</strong> button to launch every one of those mod pages in your browser at once</li>\n<li><strong>Up to Date</strong> (green) — a simple clickable list linking to each mod’s Forge page</li>\n<li><strong>Not Found on Forge</strong> (red) — mods that couldn’t be matched (see below for why)</li>\n</ul>\n</li>\n<li>Mods that ship both a client-side plugin and a separate server-side file (common for larger mods) are recognized as one logical mod and shown as a single result, not two duplicate entries.</li>\n<li>A toast notification fires if any installed mods have updates available.</li>\n<li>Your folder path and last scan results are remembered across restarts. If enabled, it automatically rescans once when the app launches — it does <strong>not</strong> rescan on the regular 5-minute timer, only on startup or when you manually click Scan Now.</li>\n</ol>\n<p><strong>Why a mod might show up as “Not Found on Forge”:</strong> its internal name may not closely resemble its actual Forge listing title, it may be part of a bundled mod pack rather than listed individually, it may have been removed or renamed on the Forge, or it may be a core SPT/framework component rather than an actual mod (filtered out on purpose). SPTChecker would rather report “not found” than risk flagging the wrong mod as needing an update.</p>\n<hr />\n<h3>System tray</h3>\n<ul>\n<li>Closing the window minimizes to tray instead of quitting</li>\n<li>Double-click the tray icon to restore the window</li>\n<li>Right-click for <strong>Show</strong>, <strong>Check Now</strong>, or <strong>Quit</strong></li>\n<li><strong>Tray badge</strong> — A red dot appears on the tray icon when there are unread changes while the app is minimized, with an unread count in the tooltip. Clears automatically when you open the window</li>\n<li>Toast notifications work even while minimized</li>\n</ul>\n<hr />\n<h3>Status bar</h3>\n<ul>\n<li><strong>Forge status indicator</strong> — A dot shows whether the last check reached the Forge OK (green) or failed (red); hover for details</li>\n<li><strong>Live countdown</strong> — Shows time remaining until the next automatic check</li>\n<li><strong>Running summary</strong> — Shows the baseline mod count on first run, or how many new/updated mods were found (and total tracked) on each subsequent check</li>\n</ul>\n<hr />\n<h3>Additional features</h3>\n<ul>\n<li><strong>Run on Startup</strong> — One-click checkbox to launch silently in the background when Windows starts</li>\n<li><strong>Thumbnail caching</strong> — Mod thumbnails are cached to disk and auto-purged after 3 days; mods with no uploaded thumbnail get the same wireframe placeholder icon shown on the Forge itself, instead of a blank box</li>\n<li><strong>Unpublished mod detection</strong> — Mods removed from the Forge are automatically cleared from the display</li>\n<li><strong>Low resource usage</strong> — Connection pooling, shared fonts, smart timer that sleeps when the window is hidden, and state writes are skipped when nothing changed</li>\n<li><strong>Standalone .exe</strong> — No Python installation required, just download and run</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2773/sptchecker",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Claude (Sonnet) was used to assist with code development — implementing the API integration, UI improvements, slider widget, and build configuration.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 1,
+  "published_at": "2026-06-25T22:00:00.000000Z",
+  "created_at": "2026-06-24T22:44:46.000000Z",
+  "updated_at": "2026-07-31T06:01:56.000000Z",
+  "owner": {
+    "id": 51018,
+    "name": "MyButtHasARash",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=M&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-05-06T13:15:58.000000Z",
+    "updated_at": "2026-08-01T05:59:00.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 1,
+    "hub_id": 17,
+    "title": "Tools",
+    "slug": "tools",
+    "description": "Various standalone tools and programs that aren't installed like normal mods"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/JoelHauser/SPTChecker",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14303,
+      "hub_id": null,
+      "version": "3.1.1",
+      "description": "<h2>v3.1.1</h2>\n<p><strong>Fixed:</strong> Local mod scanning could falsely flag a mod as needing an update when the installed version and the Forge version were actually the same, just written with a different number of version segments (e.g. <code>1.0.2</code> vs <code>1.0.2.0</code>). Version comparisons are now numeric and segment-count-independent, so equivalent versions no longer trigger a false “update available.”</p>\n<p><strong>Fixed:</strong> The daily-activity graph (in Stats) was undercounting mods published “today” — they’d show as 0 until the next day, when they’d suddenly appear correctly. This was caused by relying on a timestamp that reflected when a mod listing was created rather than when it actually went live. The graph now uses the accurate publish timestamp, so today’s new mods count correctly right away.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/3.1.1",
+      "content_length": 61386973,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 111,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-30T23:06:00.000000Z",
+      "created_at": "2026-07-30T23:07:19.000000Z",
+      "updated_at": "2026-07-31T06:01:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/593e9016b5a0ab263592b25d037d4a612cf06cdd1429f077bacb4229ed9304f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/11c51119-1e6b-4b56-aac4-3ae11c54b418?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A48Z&rscd=attachment%3B+filename%3DSPTModChecker_v3.1.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A23Z&ske=2026-08-01T21%3A02%3A48Z&sks=b&skv=2018-11-09&sig=%2BJ4nHoSq2sLa1%2Btq%2F4J9gJhLyXUmQIgtD1c8ejJ8poY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzgyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ItmUle6YpYBGxr5Q37_VZUAXbZR5n2Mg7ZjyYa3M4E0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v3.1.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14205,
+      "hub_id": null,
+      "version": "3.1.0",
+      "description": "<h2>v3.1.0</h2>\n<p><strong>Fixed:</strong> Local mod scanning no longer runs automatically. In 3.0.0, if you had it enabled with a folder already set, it would silently scan every time the app launched. Now it only ever scans when you click <strong>Scan Now</strong> — no more surprise scans on startup.</p>\n<p>Docs also updated to make the local-mod-scanning behavior (color-coded sections, client/server dedup, why a mod might show “Not Found on Forge”) clearer and more accurate.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/3.1.0",
+      "content_length": 61386646,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 206,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-23T22:43:00.000000Z",
+      "created_at": "2026-07-23T22:43:43.000000Z",
+      "updated_at": "2026-07-28T09:47:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/593e9016b5a0ab263592b25d037d4a612cf06cdd1429f077bacb4229ed9304f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/8aeec8b9-a01a-44e9-8258-1062a14ea702?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A40Z&rscd=attachment%3B+filename%3DSPTModChecker_v3.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A16%3A13Z&ske=2026-08-01T21%3A16%3A40Z&sks=b&skv=2018-11-09&sig=%2F4jzs%2FgE6xQ%2F%2B1o3sGcy8LPVg0tAGirzEQuI2fmYq7c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzgyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ItmUle6YpYBGxr5Q37_VZUAXbZR5n2Mg7ZjyYa3M4E0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v3.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14192,
+      "hub_id": null,
+      "version": "3.0.0",
+      "description": "<h2>v3.0.0 — Local Mod Scanning</h2>\n<p>The headline feature this update: SPTChecker can now check your <strong>actual installed mods</strong>, not just what’s new on the Forge.</p>\n<blockquote>\n<p><strong>Note:</strong> Local Mod Scanning is a first iteration of this feature. It’s been tested against real installs, but if you run into anything odd — wrong matches, crashes, missing mods you know are on the Forge — please let me know so I can fix it.</p>\n</blockquote>\n<h3>New: Local Mod Scan (opt-in, off by default)</h3>\n<ul>\n<li>Click <strong>Local Mods</strong>, point it at your SPT install folder, and hit <strong>Scan Now</strong> — it reads every installed mod’s real identity directly from the compiled files (both BepInEx client plugins and SPT server-side mods) and checks each one against the Forge for you.</li>\n<li>Results are grouped into three sections: <strong>Updates Available</strong> (shown as full mod cards, same as the main feed), <strong>Up to Date</strong>, and <strong>Not Found on Forge</strong> — with color-coded headers so they’re easy to tell apart while scrolling.</li>\n<li>A live progress bar shows scan status in real time (“Checking mod 42 of 118 against the Forge…”).</li>\n<li>Get a toast notification if any installed mods have updates waiting.</li>\n<li>Your install path and last scan results are remembered across restarts — enable it once and it’ll auto-rescan on launch.</li>\n<li>Mods that ship both a client plugin <em>and</em> a separate server-side file (common for bigger mods) are now correctly recognized as one mod, not two duplicate “update available” entries.</li>\n</ul>\n<p><strong>Why a mod might show up as “Not Found on Forge”:</strong></p>\n<ul>\n<li>Its internal name just doesn’t resemble its actual Forge listing title closely enough to match safely (e.g. developer shorthand vs. the mod’s public title) — rather than guess and risk flagging the wrong mod, SPTChecker reports it as not found.</li>\n<li>It’s part of a larger bundled mod pack rather than listed individually on the Forge.</li>\n<li>It’s been removed, renamed, or delisted from the Forge.</li>\n<li>It’s a core SPT/framework component rather than an actual mod (these are filtered out on purpose).</li>\n</ul>\n<p>None of these mean something’s broken — SPTChecker would rather tell you “not found” than risk telling you the wrong mod needs an update.</p>\n<h3>Under the hood</h3>\n<ul>\n<li>Local mod identity is now read via real assembly reflection instead of guessing — meaning far fewer missed or misidentified mods.</li>\n<li>Smarter Forge matching: exact ID lookup first, with a much better fallback search (handles mods whose internal name doesn’t match their Forge listing wording).</li>\n<li>Fixed a bug where a mod matched to an older re-uploaded/forked Forge listing could incorrectly show as “update available” when it was actually a downgrade — version comparisons are now numeric, not just “different.”</li>\n<li>Better handling of the Forge’s rate limits so a full scan doesn’t silently drop results.</li>\n</ul>\n<h3>New name, new icon</h3>\n<ul>\n<li>Rebranded from “SPT Mod Checker” to <strong>SPTChecker</strong> — updated everywhere: title bar, system tray, and notifications.</li>\n<li>Brand new app icon — a cleaner magnifying-glass-and-checkmark design, updated across the window, taskbar, tray, toast notifications, and the .exe itself.</li>\n<li>New “no thumbnail” placeholder icon matching the Forge’s own style, for mods without an uploaded thumbnail.</li>\n</ul>\n<hr />\n<p><em>As always — entirely read-only against the Forge and your local mod files. Nothing is modified, nothing is uploaded.</em></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/3.0.0",
+      "content_length": 61386795,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 75,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-23T01:27:00.000000Z",
+      "created_at": "2026-07-23T01:27:44.000000Z",
+      "updated_at": "2026-07-28T09:46:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/593e9016b5a0ab263592b25d037d4a612cf06cdd1429f077bacb4229ed9304f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/d96a3da7-f8f8-4d35-9d73-1509c912a924?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A26Z&rscd=attachment%3B+filename%3DSPTModChecker_v3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A35Z&ske=2026-08-01T21%3A20%3A26Z&sks=b&skv=2018-11-09&sig=xciNjWvZvEOW3F%2BMsC5lJ8lu3M42Qglpa%2BOXHASmpbc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzgyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ItmUle6YpYBGxr5Q37_VZUAXbZR5n2Mg7ZjyYa3M4E0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14156,
+      "hub_id": null,
+      "version": "2.3.0",
+      "description": "<h2>v2.3.0</h2>\n<h3>What’s new</h3>\n<ul>\n<li><strong>Activity graph in Stats</strong> — The Stats window now includes a 30-day “Added Per Day” trend chart, so you can see mod submission activity over time at a glance, not just a single 7-day count. Hover any point for the exact date and count.</li>\n<li><strong>New Author badges</strong> — Mod cards now flag authors who published their first mod on the Forge within the last 60 days with a pink <strong>NEW AUTHOR</strong> badge, making it easier to spot fresh talent alongside the usual <strong>NEW</strong> mod badge.</li>\n</ul>\n<h3>Fixes</h3>\n<ul>\n<li>Fixed the Stats window sometimes rendering cut off until you scrolled.</li>\n<li>Fixed the Stats window occasionally opening partially off-screen.</li>\n<li>Smoothed out the activity graph line, which previously looked jagged/blocky.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.3.0",
+      "content_length": 27249549,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 95,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-19T21:42:00.000000Z",
+      "created_at": "2026-07-19T21:42:45.000000Z",
+      "updated_at": "2026-07-28T09:42:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/593e9016b5a0ab263592b25d037d4a612cf06cdd1429f077bacb4229ed9304f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/1d5205c8-46dc-45da-b42f-5780bd17ba78?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A38Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A16%3A03Z&ske=2026-08-01T21%3A16%3A38Z&sks=b&skv=2018-11-09&sig=ph%2BIj%2BAz0JpYXsCtjo4X7EmpiO4UKYPLFecuZc%2FcKXo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m0p0bQGbjhtlfngJrPhh7X-u1SHCz_aqrjICJ48YZAU&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14080,
+      "hub_id": null,
+      "version": "2.2.5",
+      "description": "<h2>Update Notes</h2>\n<ul>\n<li><strong>Top Authors &amp; Top Categories now rotate every 30 days</strong> — both stats now reflect activity from the last 30 days instead of all-time totals, keeping the leaderboard fresh.</li>\n<li><strong>Reworked category colors</strong> — new color palette makes categories easier to distinguish at a glance.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.2.5",
+      "content_length": 32585820,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 140,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-14T18:39:00.000000Z",
+      "created_at": "2026-07-14T18:39:46.000000Z",
+      "updated_at": "2026-07-28T09:38:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/593e9016b5a0ab263592b25d037d4a612cf06cdd1429f077bacb4229ed9304f4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/2dc83bf7-6198-4142-9b07-ec37018e2ce3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A23Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.2.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A40Z&ske=2026-08-01T21%3A14%3A23Z&sks=b&skv=2018-11-09&sig=JJ4qGCplga3x3dhNknIzqHtE5YPU%2FElSBJpIekzcsUM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg0NywibmJmIjoxNzg1NjE2MDQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.m0p0bQGbjhtlfngJrPhh7X-u1SHCz_aqrjICJ48YZAU&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.2.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14043,
+      "hub_id": null,
+      "version": "2.2.0",
+      "description": "<h2>v2.2.0</h2>\n<ul>\n<li><strong>Change Notes popup</strong> — Click the notes icon on any mod card (or right-click → “View Change Notes”) to open a popup showing the version’s update notes. Works for both new and updated mods. The icon only appears when a mod actually has notes to show.</li>\n<li><strong>Emoji support</strong> — Emoji in mod update notes now render correctly instead of showing as boxes.</li>\n<li><strong>Fixed truncated update notes</strong> — Change notes were being cut off after 800 characters. The full text is now displayed.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.2.0",
+      "content_length": 27235036,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 90,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-10T18:55:00.000000Z",
+      "created_at": "2026-07-10T18:55:56.000000Z",
+      "updated_at": "2026-07-28T09:36:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a500cc4f83952bf6db36829caaf53d2283718a55ce3e04b035f335fb8f21195?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/05d0578a-ed25-4a2f-8b73-c5bd986d5512?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A05Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A13Z&ske=2026-08-01T21%3A02%3A05Z&sks=b&skv=2018-11-09&sig=6E86fSnlOLKHgswXUmYl5b21wL59z9hjotxmkzhzLYg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg0OCwibmJmIjoxNzg1NjE2MDQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v4TZBeNp-HOcxD_QI0jMzGGRDJAVegItBcfndWlV5c8&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14013,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<h2>v2.1.0</h2>\n<ul>\n<li><strong>Tray badge</strong> — When the app is minimized and new mod activity is detected, the system tray icon shows a red notification dot. It clears automatically when you open the window.</li>\n<li><strong>Unread counter</strong> — The tray tooltip tracks unread changes across check cycles, showing “X unread” until you open the app.</li>\n<li><strong>Version diff</strong> — Updated mod cards and toast notifications now display the version change as <code>1.2.3 → 1.3.0</code> so you can see exactly what changed at a glance.</li>\n<li><strong>Window size memory</strong> — The app remembers its window size between sessions and restores it on next launch.</li>\n<li><strong>Forge dot tooltip</strong> — Hovering over the status dot in the bottom bar now shows a tooltip explaining what the green/red colors mean.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.1.0",
+      "content_length": 27222926,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 97,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-06T23:23:00.000000Z",
+      "created_at": "2026-07-06T23:24:25.000000Z",
+      "updated_at": "2026-07-28T09:26:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a500cc4f83952bf6db36829caaf53d2283718a55ce3e04b035f335fb8f21195?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/15883a1d-9ba5-445e-addb-316321c5ea9b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A52Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A58Z&ske=2026-08-01T21%3A10%3A52Z&sks=b&skv=2018-11-09&sig=mobVBHR1i6zT8M0%2BhY0%2BCFP%2BYkP2S%2FD0KvQf4WmSC0c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MSwibmJmIjoxNzg1NjE2MDUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.d3-NQonqUL43JJ4uHqPt-Lm4icF8hYVIkAuCNiK8ICo&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13981,
+      "hub_id": null,
+      "version": "2.0.45",
+      "description": "<h2>v2.0.45</h2>\n<ul>\n<li><strong>Startup entry auto-repair</strong> — If you update to a newer version, the “Run on Startup” registry entry will automatically update itself to point to the new exe the first time you launch it. No more seeing an old version name in Windows Task Manager startup apps.</li>\n</ul>\n<blockquote>\n<p>This is a minor background fix. If you don’t use “Run on Startup”, there is no need to update.</p>\n</blockquote>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.45",
+      "content_length": 27221285,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 76,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-03T23:13:00.000000Z",
+      "created_at": "2026-07-03T23:13:44.000000Z",
+      "updated_at": "2026-07-28T09:25:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a500cc4f83952bf6db36829caaf53d2283718a55ce3e04b035f335fb8f21195?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/657e6cf7-134c-4e08-8c23-47c3710cd4d1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A48Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.45.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A30Z&ske=2026-08-01T21%3A24%3A48Z&sks=b&skv=2018-11-09&sig=BBwS%2FBEvzjCr39WGg%2FnLftkVTGBBNh5Rz8qPrFyuI6I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MSwibmJmIjoxNzg1NjE2MDUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.d3-NQonqUL43JJ4uHqPt-Lm4icF8hYVIkAuCNiK8ICo&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.45.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13961,
+      "hub_id": null,
+      "version": "2.0.44",
+      "description": "<h2>v2.0.44</h2>\n<ul>\n<li><strong>Forge status indicator</strong> — A small dot in the bottom-left status bar shows whether the Forge is reachable in real time. Green = online, red = unreachable.</li>\n<li><strong>Timestamps on mod cards</strong> — Each card now shows how long ago the mod was published or updated (e.g. “2h ago”, “yesterday”, “3d ago”).</li>\n<li><strong>NEW badge</strong> — Mod cards that were freshly detected in the current check cycle display a green “NEW” badge, so you can instantly see what changed without reading through all the cards.</li>\n<li><strong>Right-click context menu</strong> — Right-click any mod card to open a styled context menu with options to open the mod on the Forge or copy the link to clipboard.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.44",
+      "content_length": 27222936,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 58,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T16:22:00.000000Z",
+      "created_at": "2026-07-02T14:55:48.000000Z",
+      "updated_at": "2026-07-28T09:24:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a500cc4f83952bf6db36829caaf53d2283718a55ce3e04b035f335fb8f21195?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/64aebd39-751a-451a-8e4c-1525649234c8?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A00Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A29Z&ske=2026-08-01T21%3A15%3A00Z&sks=b&skv=2018-11-09&sig=IxXkod05LSbnXt9exqL0RNt81V22qlpR7ibGpdRj634%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1MSwibmJmIjoxNzg1NjE2MDUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.d3-NQonqUL43JJ4uHqPt-Lm4icF8hYVIkAuCNiK8ICo&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13939,
+      "hub_id": null,
+      "version": "2.0.43",
+      "description": "<h2>v2.0.43</h2>\n<blockquote>\n<p><strong>Note on antivirus flags:</strong> Most flagging vendors (ALYac, Arcabit, Emsisoft, eScan, GData, VIPRE) all run BitDefender’s engine under the hood — they are all triggering off the same single false positive detection. These are not real threats.</p>\n</blockquote>\n<ul>\n<li><strong>Reverted to single-file distribution</strong> — Fixed a critical issue introduced in v2.0.42 where the app would fail to launch with a Python DLL error. The app is back to a single standalone .exe — no folders or additional files required.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.43",
+      "content_length": 27218808,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 146,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-29T23:55:00.000000Z",
+      "created_at": "2026-06-29T23:55:13.000000Z",
+      "updated_at": "2026-07-28T09:22:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9a500cc4f83952bf6db36829caaf53d2283718a55ce3e04b035f335fb8f21195?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/cbce1ec6-5124-4c62-95ac-5e03d62cf525?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A23Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.43.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A50Z&ske=2026-08-01T21%3A04%3A23Z&sks=b&skv=2018-11-09&sig=aOJD1jjiLiH6YSUyn4zbO9KCV0FKxTnVQQ93IXUci88%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.43.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13918,
+      "hub_id": null,
+      "version": "2.0.4",
+      "description": "<h2>v2.0.4</h2>\n<ul>\n<li><strong>Both columns now mirror the website exactly</strong> — New Mods and Recently Updated columns match the Forge website’s ordering using a hybrid RSS + API approach, catching both new and older mods that receive updates.</li>\n<li><strong>Unpublished mod detection</strong> — Mods removed from the Forge are automatically cleared from the display.</li>\n<li><strong>Removed SPT version badge</strong> — Cleaner mod cards with less visual clutter.</li>\n<li><strong>Cleaned up unused code</strong> — Removed SPT version plumbing, download tracking, and unused config constants.</li>\n<li><strong>Version number in title bar</strong> — App window now displays the current version.</li>\n<li><strong>New icon</strong> — Updated app icon.</li>\n</ul>\n<blockquote>\n<p><strong>Note:</strong> Some antivirus vendors (typically 6-9 out of 71 on VirusTotal) may flag this exe as malicious. These are false positives caused by PyInstaller’s extract-and-run packaging method, which resembles patterns used by packed malware. The source code is fully open on GitHub for anyone to verify or build from source.</p>\n</blockquote>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.4",
+      "content_length": 27218596,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 84,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-28T14:56:00.000000Z",
+      "created_at": "2026-06-28T14:57:49.000000Z",
+      "updated_at": "2026-07-28T09:22:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/61809f30157c8bb8aed0be3380870e0ed47ea58a7e4df77f65cdf6e5e9436550",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/fe6d6fa4-562c-4a60-9500-983fdfb24cd1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A39Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A11Z&ske=2026-08-01T21%3A26%3A39Z&sks=b&skv=2018-11-09&sig=eAhfOe02xMAjXtHhk80U1rOhnR77aViF5vqQrFG0lwI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13908,
+      "hub_id": null,
+      "version": "2.0.3",
+      "description": "<h2>v2.0.3</h2>\n<ul>\n<li><strong>Both columns now mirror the website exactly</strong> — New Mods and Recently Updated columns both pull directly from the Forge RSS feeds and match the website’s ordering in real time.</li>\n<li><strong>New icon</strong> — Updated app icon with improved quality across all sizes.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.3",
+      "content_length": 27218760,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 67,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-27T20:27:00.000000Z",
+      "created_at": "2026-06-27T20:28:02.000000Z",
+      "updated_at": "2026-07-28T09:21:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6a08a2b2ae150902dd56107527343825c8ae3a5e4987e40a1e1bd68405f79d43",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/7a70c647-c494-4f4f-b40c-5a094e502776?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A58Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A08Z&ske=2026-08-01T21%3A05%3A58Z&sks=b&skv=2018-11-09&sig=V74YnIe1zgPNpt7s1CLxcEK%2BgtAV2a0%2BcQ6hgY5dbck%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13893,
+      "hub_id": null,
+      "version": "2.0.2",
+      "description": "<h2>v2.0.2</h2>\n<ul>\n<li><strong>Updated Mods now mirrors the website</strong> — The “Recently Updated” column now matches the Forge website’s ordering exactly. Both columns pull from RSS feeds instead of relying on the API’s <code>updated_at</code> field, which could be thrown off by batch metadata updates.</li>\n<li><strong>Unpublished mod detection</strong> — If a mod author removes their mod from the Forge, it is automatically cleared from the display on the next check.</li>\n<li><strong>Code cleanup</strong> — Removed duplicate RSS parsing logic, cleaned up unused parameters, and minor internal refactoring.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.2",
+      "content_length": 27421938,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 87,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-26T21:11:00.000000Z",
+      "created_at": "2026-06-26T21:12:50.000000Z",
+      "updated_at": "2026-07-28T09:21:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6a08a2b2ae150902dd56107527343825c8ae3a5e4987e40a1e1bd68405f79d43",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/02a6d968-68c2-4db4-96e9-3f655f686887?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A39Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A56Z&ske=2026-08-01T21%3A06%3A39Z&sks=b&skv=2018-11-09&sig=8hwwIAiqdViYqKYwV1bxa7XalVfP6oEYkfKrEX796z4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jhvyxYtNFzLW8kKM2JEUXxZ7gVILGmg03ZwWhUfR5fE&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13884,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<p>Code cleanup :)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.1",
+      "content_length": 27422080,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 117,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-26T00:03:00.000000Z",
+      "created_at": "2026-06-26T00:03:49.000000Z",
+      "updated_at": "2026-07-28T09:21:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6a08a2b2ae150902dd56107527343825c8ae3a5e4987e40a1e1bd68405f79d43",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/8200cade-549f-4603-bbc1-7c1dbb182c66?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A46Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A35Z&ske=2026-08-01T21%3A23%3A46Z&sks=b&skv=2018-11-09&sig=ph7OQym33WOP5tuLCxoOdLzORYFO%2Ftmjw1fCjpbrgow%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jhvyxYtNFzLW8kKM2JEUXxZ7gVILGmg03ZwWhUfR5fE&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13878,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<p>SPT Mod Checker v2.0</p>\n<p>What’s New:</p>\n<ul>\n<li>\n<p>Now uses the official Forge API &amp; RSS feed — All HTML scraping has been removed. New mods are pulled from the RSS feed (matching the site’s “Newest” tab), SPT version badges come from the Forge API, and updated mods are detected via the API. Fully compliant with Forge Terms of Service.</p>\n</li>\n<li>\n<p>Adjustable check interval — A slider in the status bar lets you set how often the app checks for changes (5–60 minutes, default 20). Your choice is saved across restarts.</p>\n</li>\n<li>\n<p>Improved update detection — Updated mods are now detected by actual version number changes, eliminating false positives from metadata updates.</p>\n</li>\n<li>\n<p>7 cards per column — Both columns now display up to 7 mods, up from 6.</p>\n</li>\n<li>\n<p>Dark title bar fix — The title bar no longer flashes white on launch.</p>\n</li>\n<li>\n<p>UI tweaks — Mod cards are consistently sized across both columns. The updated mods column starts empty and fills as real updates are detected.</p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2773/sptchecker/2.0.0",
+      "content_length": 27422846,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 18,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-25T22:00:24.000000Z",
+      "created_at": "2026-06-25T21:23:45.000000Z",
+      "updated_at": "2026-07-28T09:21:05.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6a08a2b2ae150902dd56107527343825c8ae3a5e4987e40a1e1bd68405f79d43",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1278141750/ca0f45e1-a622-4613-87be-d7622b386600?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A27Z&rscd=attachment%3B+filename%3DSPTModChecker_v2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A35Z&ske=2026-08-01T21%3A13%3A27Z&sks=b&skv=2018-11-09&sig=P8jOQOUrLeAAroBzgkOK1sgfNSZXiJTA3xuzw6stH7o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jhvyxYtNFzLW8kKM2JEUXxZ7gVILGmg03ZwWhUfR5fE&response-content-disposition=attachment%3B%20filename%3DSPTModChecker_v2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 12,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:52:23.695Z",
+    "discoveredBy": "seed"
+  }
+}

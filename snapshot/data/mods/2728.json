@@ -1,0 +1,117 @@
+{
+  "type": "mod",
+  "id": 2728,
+  "hub_id": null,
+  "guid": "com.echostarz.compoundingperf",
+  "name": "CompoundingPerf",
+  "slug": "compoundingperf",
+  "teaser": "Multiple performance improvements",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/iqgTiAtVym6QruvOxNY4ETrePOvBXeIpvSKVoVgY.png",
+  "downloads": 5691,
+  "favourites_count": 52,
+  "description": "<p>CompoundingPerf stacks several small, independent <strong>server-side</strong> optimizations under one config. Each feature is individually toggleable, and everything is designed to coexist with other mods. <strong>No client plugin, it’s FIKA-safe by design.</strong></p>\n<h2>What it does</h2>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>What you get</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Calm flea updates</strong></td>\n<td>Removes vanilla’s forced, blocking full garbage-collection when flea offers expire, a recurring multi-second freeze. Measured: 54 forced GCs skipped in one session, worst stall ~8s → ~1.7s.</td>\n</tr>\n<tr>\n<td><strong>Response cache</strong></td>\n<td>Fifteen static-after-load endpoints (item DB, handbook, hideout recipes, globals…) cached after first request. Noticeably snappier stash, hideout, and menu loads.</td>\n</tr>\n<tr>\n<td><strong>Fast compression</strong></td>\n<td>Server responses compressed for speed instead of vanilla’s slowest setting: several times less CPU per response, output unchanged.</td>\n</tr>\n<tr>\n<td><strong>Profile save coalescing</strong></td>\n<td>Rapid-fire profile saves get merged, at most one in flight plus one trailing per profile. The trailing save always captures the latest state, so nothing is ever lost.</td>\n</tr>\n<tr>\n<td><strong>Idle save skipping</strong></td>\n<td>Skips the periodic profile save when nothing has changed, instead of re-serializing the whole profile every tick.</td>\n</tr>\n<tr>\n<td><strong>Single-pass sanitizer</strong></td>\n<td>Replaces five regex passes per response with one zero-allocation scan. Identical output.</td>\n</tr>\n<tr>\n<td><strong>Thread-safe RandomUtil &amp; caches</strong></td>\n<td>Fixes latent thread-safety hazards in the server’s shared RNG and three internal caches, prevents intermittent “collection was modified” crashes under load.</td>\n</tr>\n<tr>\n<td><strong>Isolated bot randomisation</strong></td>\n<td>Fixes a vanilla bug where night-raid equipment modifiers leaked into shared bot config and compounded across bots and raids.</td>\n</tr>\n<tr>\n<td><strong>Calm notifier</strong></td>\n<td>Websocket sends stop holding the global lock during network I/O, and the notify long-poll frees its thread between checks. Most valuable for FIKA hosts.</td>\n</tr>\n</tbody>\n</table>\n<h2>How it plays with other mods</h2>\n<p>Server features use SPT 4.0’s DI override mechanism instead of replacing methods, so other mods’ Harmony patches on the same classes keep working on top. Per-session endpoints (profile, quests, flea search) are never cached. Every override matches the vanilla DI lifetime, and the mod warns at boot if another mod displaces one of its overrides.</p>\n<h2>Compatibility</h2>\n<ul>\n<li>Works on unmodded SPT 4.0.13</li>\n<li>Works with <strong>FIKA 2.3.x</strong> (fixes the 2.3 <code>/fika/api/players</code> crash some hosts hit)</li>\n<li><strong>Server-only</strong> - no BepInEx plugin, nothing client-side to install, configure, or diverge between players</li>\n<li>Every feature has an <code>Enabled</code> flag in <code>config.json</code> - flip any of them independently</li>\n</ul>\n<h2>Install</h2>\n<p>Drag the archive onto <strong>SPT Mods Installer</strong>, or extract it over your SPT install root. It installs one folder:</p>\n<p><code>SPT/user/mods/CompoundingPerf/</code> → <code>CompoundingPerf.dll</code> + <code>config.json</code></p>\n<p><strong>No BepInEx plugin.</strong> Upgrading from 1.2.x? Delete the old <code>BepInEx/plugins/CompoundingPerf.Client/</code> folder — 1.3 is server-only and doesn’t use it.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2728/compoundingperf",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Mod contains commits and code by Claude</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-06-10T03:50:00.000000Z",
+  "created_at": "2026-06-10T04:01:24.000000Z",
+  "updated_at": "2026-07-28T09:18:32.000000Z",
+  "owner": {
+    "id": 34745,
+    "name": "EchoStarz",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/sLclQ4DkTto6WRaoTYmUfzk0gDAu1NoiBF9F5opU_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-07-31T23:39:36.000000Z",
+    "updated_at": "2026-07-31T00:38:01.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/EchoStarz/CompoundingPerf/releases/tag/v1.2.1",
+      "label": "GitHub"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13828,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<h2>New</h2>\n<ul>\n<li><strong>S8 CalmRagfairServer</strong> — vanilla forces a blocking, compacting full GC every time enough flea offers expire, a recurring multi-hundred-ms-to-multi-second stall. This runs the exact same expiry sequence minus the forced collect. In a measured session it skipped 54 forced GCs and the worst frame-pause dropped from ~8s (mod off) to ~1.7s.</li>\n<li><strong>S9 FastCompressionHttpListener</strong> — responses compressed at zlib <code>Fastest</code> instead of vanilla’s slowest <code>SmallestSize</code>: several-fold less CPU for a few percent more bytes that only cross localhost/LAN. Output is byte-compatible.</li>\n<li><strong>S10 ThreadSafeCaches</strong> — serializes access to three SPT caches (handbook prices, item base classes, item blacklists) that vanilla writes at runtime while parallel ragfair tasks read them. Prevents an intermittent concurrent-collection crash.</li>\n<li><strong>S7 FastHttpResponseUtil</strong> — replaces five regex passes per response with one zero-allocation scan. Identical output.</li>\n</ul>\n<h2>Removed</h2>\n<ul>\n<li>\n<p><strong>The log-filtering pair (S3/C4)</strong> — dropped close to nothing on default setups and made other mods’ bug reports worse. The mod is now server-only! No BepInEx plugin ships, which also clears the client/server GUID-mismatch warning in check-mods.</p>\n</li>\n<li>\n<p><em>Upgrading from 1.2.x? Delete the old <code>BepInEx/plugins/CompoundingPerf.Client</code> folder. It is no longer needed</em></p>\n</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2728/compoundingperf/1.3.0",
+      "content_length": 27971,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 3714,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-21T14:04:00.000000Z",
+      "created_at": "2026-06-21T14:13:29.000000Z",
+      "updated_at": "2026-07-28T09:18:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/0302d953ca7cab4fc848d85f267465cb015bf5fd16cd72af364f5100b6844ba4?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1264444937/0a9e4d1e-2ad7-4177-81de-3aa86cbd3778?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A00%3A26Z&rscd=attachment%3B+filename%3DCompoundingPerf-1.3.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A29Z&ske=2026-08-01T21%3A00%3A26Z&sks=b&skv=2018-11-09&sig=zMfG%2Bh%2BWjxXluOwQP8MatPtSK7QneiwIQmJHgAq9gH4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMwNiwibmJmIjoxNzg1NjE2MDA2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5RW920KjL44eMM0w7QBWZgDilWtrshICGr4y8V_-b_s&response-content-disposition=attachment%3B%20filename%3DCompoundingPerf-1.3.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13731,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>First publishing</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2728/compoundingperf/1.2.1",
+      "content_length": 25108,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1977,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-10T04:02:00.000000Z",
+      "created_at": "2026-06-10T04:03:55.000000Z",
+      "updated_at": "2026-07-28T09:06:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/a19af236ff4fd4de0fe15e7f2e2680bcb4ae0d227e31493d726110fe3cf85f40?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1264444937/ea6ae65f-21bb-44c1-a44b-d9d90f866a4a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A51Z&rscd=attachment%3B+filename%3DCompoundingPerf-1.2.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A50Z&ske=2026-08-01T21%3A03%3A51Z&sks=b&skv=2018-11-09&sig=X0mtsIY5Fhu2JGzWl%2Byik3Ync21HIo8obnwiyvZmxOI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMwNiwibmJmIjoxNzg1NjE2MDA2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5RW920KjL44eMM0w7QBWZgDilWtrshICGr4y8V_-b_s&response-content-disposition=attachment%3B%20filename%3DCompoundingPerf-1.2.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 81,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:43:07.740Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "type": "mod",
+  "id": 2185,
+  "hub_id": 2888,
+  "guid": "com.amightytank.yetanothertradermod",
+  "name": "YetAnotherTraderMod",
+  "slug": "yetanothertradermod",
+  "teaser": "Tony - Yet Another Trader",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1yaONWHldzjV9fD8bWBUtvwXqwMYn8NkzzcI5Nx0.png",
+  "downloads": 5924,
+  "favourites_count": 9,
+  "description": "<div class=\"tabset\"><div id=\"tabset-3-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><h3>🔧 BETA RELEASE 🔧</h3>\n<p><strong>Yet Another Trader Mod is still in development.</strong>\nInventory, balance, barter rolls, custom weapons, insurance, quests, side content, and unlocks may change between versions.</p>\n<p>Feedback, bug reports, balance suggestions, and quest feedback are appreciated.</p>\n<hr /></div></div>\n<div id=\"tabset-3-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Tony - Yet Another Trader</div>\n<div class=\"tab-content\"><p>Yet Another Trader Mod adds <strong>Tony Volkov</strong>, a custom trader for <strong>SPT 4.0.13</strong>.</p>\n<p>Tony is a former BEAR operator with old Russian underworld connections. Before Tarkov fell apart, he worked as muscle, logistics, and weapons procurement. After the collapse, he became a quiet middleman between ex-PMCs, smugglers, and what is left of the criminal networks moving gear through Tarkov.</p>\n<p>Tony is not meant to be a normal shopkeeper.</p>\n<p>He is a fixer.</p>\n<p>He deals in practical gear, odd trades, tuned weapons, ammo, armor, meds, custom stims, and whatever else his network can move. Cash works, but the right barter can open doors too.</p>\n<hr /></div></div>\n<div id=\"tabset-3-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Current Version</div>\n<div class=\"tab-content\"><p><strong>Version:</strong> 0.1.0 Beta</p>\n<p>Version <strong>0.1.0 Beta</strong> is the first larger beta content milestone after 0.0.5.</p>\n<p>This update expands Tony from a trader with early systems into a more complete beta experience. It adds new quests, new side content, new weapons, new medical items, new stims, stronger barter behavior, better out-of-stock handling, and several fixes for quest progression and trader systems.</p>\n<p>Current highlights include:</p>\n<ul>\n<li>Tony trader across 4 loyalty levels</li>\n<li>Cash and barter purchase support</li>\n<li>Randomized cash/barter offers</li>\n<li>Barter rerolls on trader restock</li>\n<li>Out-of-stock rerolls on trader restock</li>\n<li>Out-of-stock items stay visible with stock set to zero</li>\n<li>Support for always-barter items</li>\n<li>Support for always-in-stock items</li>\n<li>Support for preventing barter offers from going out of stock</li>\n<li>Out-of-stock blacklist support</li>\n<li>Custom tuned weapons based on base-game guns</li>\n<li>Tony-style full-auto and better-stat weapon variants</li>\n<li>New Tony-themed weapons</li>\n<li>Ammo pack handling for barter rolls</li>\n<li>Corrected ammo pack barter pricing</li>\n<li>Limited ammo barter pack stock</li>\n<li>Custom Tony-themed stims</li>\n<li>Custom Tony-themed medical items</li>\n<li>Insurance support with Tony-themed dialogue</li>\n<li>Descending insurance price coefficient by loyalty level</li>\n<li>Repair support</li>\n<li>Questline and side quest content</li>\n<li>Quest-based unlock support</li>\n<li>Config-driven item setup</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-3-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><ol>\n<li>\n<p>Download the mod archive.</p>\n</li>\n<li>\n<p>Extract the folder into your SPT install:</p>\n</li>\n</ol>\n<pre><code>SPT/user/mods/\n</code></pre>\n<ol start=\"3\">\n<li>Your install path should look like this:</li>\n</ol>\n<pre><code>SPT/user/mods/YetAnotherTraderMod/\n</code></pre>\n<ol start=\"4\">\n<li>\n<p>Launch the SPT server.</p>\n</li>\n<li>\n<p>Launch the game and check your traders. Tony should appear by default.</p>\n</li>\n</ol>\n<p>That’s it. Happy hunting.</p>\n<hr /></div></div>\n<div id=\"tabset-3-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Configuration</div>\n<div class=\"tab-content\"><p>YATM includes config files that let you adjust Tony without editing the main mod code.</p>\n<p>The main config files are located here:</p>\n<pre><code>SPT/user/mods/YetAnotherTraderMod/config/settings.json\nSPT/user/mods/YetAnotherTraderMod/config/items.json\n</code></pre>\n<p>Before editing either file:</p>\n<ol>\n<li>Close the SPT server.</li>\n<li>Make a backup of the config file you are changing.</li>\n<li>Edit the values you want to change.</li>\n<li>Save the file.</li>\n<li>Start the SPT server again.</li>\n</ol>\n<h3>settings.json</h3>\n<p><code>settings.json</code> controls Tony’s general trader behavior.</p>\n<p>Common settings include:</p>\n<pre><code>MinLevel\n</code></pre>\n<p>Controls the minimum player level needed for Tony.</p>\n<pre><code>UnlockedByDefault\n</code></pre>\n<p>Controls whether Tony is unlocked by default.</p>\n<pre><code>TraderRefreshMin\nTraderRefreshMax\n</code></pre>\n<p>Controls Tony’s refresh timer range.</p>\n<pre><code>AddTraderToFleaMarket\n</code></pre>\n<p>Controls whether Tony is added to the flea market trader list.</p>\n<pre><code>InsurancePriceCoef\n</code></pre>\n<p>Controls Tony’s starting insurance price coefficient.</p>\n<p>Tony’s insurance now uses descending loyalty-level pricing. Insurance starts more expensive at lower loyalty levels and becomes cheaper as the player earns higher loyalty with Tony.</p>\n<pre><code>RepairQuality\n</code></pre>\n<p>Controls Tony’s repair quality.</p>\n<pre><code>RandomizeStockAvailable\n</code></pre>\n<p>Enables or disables random stock availability.</p>\n<pre><code>OutOfStockChance\n</code></pre>\n<p>Controls the chance that an item rolls out of stock.</p>\n<pre><code>UnlimitedStock\n</code></pre>\n<p>Makes Tony’s stock unlimited when enabled.</p>\n<pre><code>PriceMultiplier\n</code></pre>\n<p>Adjusts Tony’s item prices globally.</p>\n<pre><code>ForceCashOnly\n</code></pre>\n<p>Forces Tony’s offers to only use cash.</p>\n<pre><code>RandomizeCashBarterOffers\n</code></pre>\n<p>Enables or disables randomized cash/barter offers.</p>\n<pre><code>CashOfferPercent\n</code></pre>\n<p>Controls how often offers should roll as cash instead of barter.</p>\n<pre><code>PreventBarterOffersOutOfStock\n</code></pre>\n<p>Prevents barter offers from being selected by the out-of-stock system.</p>\n<p>This helps keep barter-only offers and special trades available when desired.</p>\n<pre><code>RerollAssortOnRestock\n</code></pre>\n<p>Allows Tony’s assortment systems to reroll when the trader restocks.</p>\n<p>This can reroll cash offers, barter offers, and out-of-stock results on refresh instead of keeping the same roll forever.</p>\n<h3>items.json</h3>\n<p><code>items.json</code> controls Tony’s individual item offers.</p>\n<p>This file handles item prices, currencies, cash-only rules, barter schemes, always-barter rules, always-in-stock rules, and ammo barter pack data.</p>\n<p>Common item values include:</p>\n<pre><code>TplId\n</code></pre>\n<p>The item template ID being sold.</p>\n<pre><code>ItemName\n</code></pre>\n<p>The readable item name used for organization.</p>\n<pre><code>Price\n</code></pre>\n<p>The cash price of the item.</p>\n<pre><code>Currency\n</code></pre>\n<p>The currency used for cash offers, such as RUB.</p>\n<pre><code>CashOnly\n</code></pre>\n<p>Controls whether this item should only be sold for cash.</p>\n<pre><code>AlwaysBarter\n</code></pre>\n<p>Forces the item to stay as a barter offer when enabled.</p>\n<p>This is useful for special trader offers, quest reward unlocks, and items that should never roll into a normal cash purchase.</p>\n<pre><code>AlwaysInStock\n</code></pre>\n<p>Prevents the out-of-stock system from removing availability from this item.</p>\n<p>This is useful for important utility items, quest-related items, or items that should remain available even when the random stock system is enabled.</p>\n<pre><code>BarterScheme\n</code></pre>\n<p>Controls what barter items Tony can ask for.</p>\n<pre><code>AmmoBarterPackTplId\n</code></pre>\n<p>The ammo pack template ID used when loose ammo rolls as a barter offer.</p>\n<pre><code>AmmoBarterPackItemName\n</code></pre>\n<p>The readable name of the ammo pack.</p>\n<pre><code>AmmoBarterPackSize\n</code></pre>\n<p>The number of rounds in the ammo pack.</p>\n<pre><code>BarterSchemeValueBasis\n</code></pre>\n<p>Controls how barter value is calculated.</p>\n<p>Ammo packs can use pack-based value so the barter is based on bullet price multiplied by pack size.</p>\n<h3>Ammo Barter Behavior</h3>\n<p>Ammo has special handling.</p>\n<p>When ammo rolls as a cash offer, it can stay as loose ammo.</p>\n<p>When ammo rolls as a barter offer, YATM can swap the loose ammo item to its matching ammo pack using the ammo pack data in <code>items.json</code>.</p>\n<p>This helps Tony sell ammo in a cleaner way and makes barter values more reasonable for full ammo packs.</p>\n<p>In 0.1.0, ammo barter behavior has been improved:</p>\n<ul>\n<li>Ammo pack barter prices now calculate correctly</li>\n<li>Ammo barter pack stock is limited</li>\n<li>Ammo barter values can use bullet price multiplied by pack size</li>\n<li>Ammo barter generation has been updated and rebalanced</li>\n</ul>\n<h3>Barter and Stock Reroll Behavior</h3>\n<p>Tony’s barter and out-of-stock systems can now reroll on trader restock.</p>\n<p>Depending on your settings, Tony can refresh:</p>\n<ul>\n<li>Which offers roll as cash</li>\n<li>Which offers roll as barter</li>\n<li>Which offers roll out of stock</li>\n<li>Which barter offers stay protected from out-of-stock rolls</li>\n</ul>\n<p>This makes Tony’s inventory feel more dynamic while still letting important items and special offers be controlled through config.</p>\n<h3>Important Notes</h3>\n<p>Make sure your JSON stays valid.</p>\n<p>Do not remove commas, quotes, brackets, or braces unless you know what you are changing.</p>\n<p>If Tony does not load correctly after editing a config file, restore your backup and restart the server.</p>\n<hr /></div></div>\n<div id=\"tabset-3-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Trader Info</div>\n<div class=\"tab-content\"><p><strong>Name:</strong> Tony\n<strong>Surname:</strong> Volkov\n<strong>Nickname:</strong> Tony\n<strong>Location:</strong> A back room somewhere under Tarkov.</p>\n<p><strong>Description:</strong>\nA streetwise fixer with old BEAR ties and deep underworld connections. Tony trades weapons, ammo, armor, meds, custom stims, medical supplies, and hard-to-find gear. Cash works, but the right barter can open doors too.</p>\n<p><strong>Avatar:</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/blob/main/db/CustomTrader/Tony/Tony.jpg?raw=true\" alt=\"fBtRTYm.png\" /></p>\n<hr /></div></div>\n<div id=\"tabset-3-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><ul>\n<li>Purchasable gear and consumables across 4 loyalty levels</li>\n<li>Cash purchase support</li>\n<li>Barter trade support</li>\n<li>Random barter offer support</li>\n<li>Barter reroll support on trader restock</li>\n<li>Out-of-stock reroll support on trader restock</li>\n<li>Out-of-stock system that zeroes stock instead of removing items</li>\n<li>Option to prevent barter offers from rolling out of stock</li>\n<li>Out-of-stock blacklist support</li>\n<li>Always-barter item support</li>\n<li>Always-in-stock item support</li>\n<li>Custom tuned weapons based on base-game guns</li>\n<li>Tony-style modified weapons, including full-auto and improved-stat variants</li>\n<li>New Tony-themed weapons</li>\n<li>Ammo pack support for barter offers</li>\n<li>Corrected ammo pack barter pricing</li>\n<li>Limited ammo barter pack stock</li>\n<li>Custom Tony-themed stims</li>\n<li>Custom Tony-themed medical items</li>\n<li>Insurance support</li>\n<li>Descending insurance price coefficient by loyalty level</li>\n<li>Repair support</li>\n<li>Config-driven item setup</li>\n<li>Quest and side quest content</li>\n<li>Quest-based unlock support</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-3-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Loyalty Levels</div>\n<div class=\"tab-content\"><h3>LL1</h3>\n<p>Basic survival gear, early weapons, cheap ammo, simple armor, food, drinks, low-tier meds, and early Tony essentials.</p>\n<h3>LL2</h3>\n<p>Improved ammo, better AK parts, stronger armor options, suppressors, weapon parts, side quest unlocks, and more useful mid-game gear.</p>\n<h3>LL3</h3>\n<p>Higher-tier weapons, stronger armor, better ammo options, rare items, weapon cases, ammo cases, custom medical items, and more valuable barter offers.</p>\n<h3>LL4</h3>\n<p>Tony’s best stock. High-end ammo, tuned weapons, rare armor, exclusive gear, expensive or limited offers, and stronger late-game unlocks.</p></div></div></div>\n<hr />\n<h2>Preview</h2>\n<div class=\"tabset\"><div id=\"tabset-2-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">LL1</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/blob/main/photos/lvl1.png?raw=true\" alt=\"6mJ8qiQ.png\" /></p></div></div>\n<div id=\"tabset-2-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">LL2</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/blob/main/photos/lvl2.png?raw=true\" alt=\"QyIKUpz.png\" /></p></div></div>\n<div id=\"tabset-2-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">LL3</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/blob/main/photos/lvl3.png?raw=true\" alt=\"YKMp6YJ.png\" /></p></div></div>\n<div id=\"tabset-2-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">LL4</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/blob/main/photos/lvl4.png?raw=true\" alt=\"AgbDaZ9.png\" /></p></div></div></div>\n<hr />\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Current v0.1.0 Changes</div>\n<div class=\"tab-content\"><h3>New Quests and Side Content</h3>\n<p>0.1.0 adds several new quests and side quests to Tony’s progression.</p>\n<p>New quest content added in 0.1.0 includes:</p>\n<ul>\n<li><strong>Broken Radios</strong></li>\n<li><strong>Paper Shields</strong></li>\n<li><strong>Clean Run</strong></li>\n<li><strong>Red Caliber</strong></li>\n<li><strong>Street Clinic</strong></li>\n<li><strong>Used But Usable</strong></li>\n</ul>\n<p>These quests continue building Tony as more than just a trader. His progression now leans further into fixer work, supply recovery, medical connections, weapon access, and side-content unlocks.</p>\n<p>Tony’s full implemented questline now runs through <strong>Used But Usable</strong>, with earlier quest content from 0.0.5 still included as part of the current build.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Quests</div>\n<div class=\"tab-content\"><p>Tony’s questline is active in-game and currently runs through <strong>Used But Usable</strong>.</p>\n<p>The questline starts with <strong>A Friend of a Friend</strong>, a Fence introduction quest that brings the player into Tony’s network. After that, Tony’s own quest progression expands into dead drops, planted items, supply work, old BEAR routes, medical jobs, weapon access, and side favors.</p>\n<p>Current implemented quest content includes:</p>\n<ul>\n<li><strong>A Friend of a Friend</strong> - Fence introduction</li>\n<li><strong>Back Room Etiquette</strong></li>\n<li><strong>First Dead Drop</strong></li>\n<li><strong>No Names Spoken</strong></li>\n<li><strong>Street Tax</strong></li>\n<li><strong>Old BEAR Trails</strong></li>\n<li><strong>Buried Steel</strong></li>\n<li><strong>Safe Hands</strong></li>\n<li><strong>Army Leftovers</strong></li>\n<li><strong>Depot Rats</strong></li>\n<li><strong>Broken Radios</strong></li>\n<li><strong>Paper Shields</strong></li>\n<li><strong>Clean Run</strong></li>\n<li><strong>Red Caliber</strong></li>\n<li><strong>Street Clinic</strong></li>\n<li><strong>Used But Usable</strong></li>\n</ul>\n<p>New quests added specifically in <strong>0.1.0</strong>:</p>\n<ul>\n<li><strong>Broken Radios</strong></li>\n<li><strong>Paper Shields</strong></li>\n<li><strong>Clean Run</strong></li>\n<li><strong>Red Caliber</strong></li>\n<li><strong>Street Clinic</strong></li>\n<li><strong>Used But Usable</strong></li>\n</ul>\n<p>Quest themes include:</p>\n<ul>\n<li>Introductory work through Fence</li>\n<li>Dead drops and planted items</li>\n<li>Recovering Tony’s old records</li>\n<li>Marking supply caches</li>\n<li>Following old BEAR trails</li>\n<li>Recovering medical supplies</li>\n<li>Unlocking cheaper item groups</li>\n<li>Unlocking special barters</li>\n<li>Unlocking Tony’s custom weapons and gear</li>\n<li>Cleaning up loose ends for Tony’s network</li>\n<li>Fixer-style side jobs</li>\n</ul>\n<p>For current quest details, progression notes, and future questline updates, check the YATM Wiki:</p>\n<p>🔗 <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/AlmightyTank/YetAnotherTraderModv.2/wiki\" rel=\"noreferrer noopener\">https://github.com/AlmightyTank/YetAnotherTraderModv.2/wiki</a></p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Planned Features</div>\n<div class=\"tab-content\"><ul>\n<li>More custom Tony weapons</li>\n<li>More custom gear and themed items</li>\n<li>More custom medical items</li>\n<li>More custom stims</li>\n<li>Expanded barter variety</li>\n<li>More trader balance passes</li>\n<li>More questline content</li>\n<li>More side quests</li>\n<li>More quest-based inventory unlocks</li>\n<li>More Tony-themed dialogue and lore</li>\n<li>Better support for unique item groups and special offers</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Testing Focus</div>\n<div class=\"tab-content\"><p>Because this is a beta release, the following areas may need extra testing:</p>\n<ul>\n<li>New quest progression</li>\n<li>Side quest unlocks</li>\n<li>New weapon availability and unlocks</li>\n<li>Quest zone triggers</li>\n<li>Safe Hands unlock chain</li>\n<li>Clean Run craft unlock</li>\n<li>Ammo pack barter pricing</li>\n<li>Ammo pack stock limits</li>\n<li>Barter reroll behavior</li>\n<li>Out-of-stock reroll behavior</li>\n<li>AlwaysBarter items</li>\n<li>AlwaysInStock items</li>\n<li>PreventBarterOffersOutOfStock behavior</li>\n<li>Insurance price scaling by loyalty level</li>\n<li>New stim balance</li>\n<li>Custom medical items</li>\n<li>Custom weapons items</li>\n</ul>\n<hr /></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Versioning</div>\n<div class=\"tab-content\"><p>Current release:</p>\n<pre><code>0.1.0 Beta\n</code></pre>\n<p>Future hotfixes for this release should use the 0.1.x patch line:</p>\n<pre><code>0.1.1 Beta = first hotfix\n0.1.2 Beta = additional hotfix\n0.2.0 Beta = next larger content or system update\n</code></pre>\n<hr /></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>Need help, found a bug, or want to request features?</p>\n<p>Join our support Discord:</p>\n<p>🔗 <a target=\"_blank\" class=\"external-link\" href=\"https://discord.gg/bUuJ7JzgUb\" rel=\"noreferrer noopener\">https://discord.gg/bUuJ7JzgUb</a></p>\n<p>Feel free to post logs, screenshots, suggestions, and balance feedback there.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">License</div>\n<div class=\"tab-content\"><p>This mod is licensed under the MIT License.</p>\n<p>Yet Another Trader Mod is built from and inspired by <strong>Priscilu_Origins_v2</strong>, originally authored by <strong>Reis</strong>, with updates/contributions by <strong>Anigx</strong>.</p>\n<p>Please refer to the included LICENSE file for full details.</p>\n<p>You are free to fork, modify, and redistribute with proper credit.</p>\n<hr /></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Credits</div>\n<div class=\"tab-content\"><ul>\n<li><strong>Based on:</strong> Priscilu_Origins_v2 by <strong>Original Priscilu_Origins_v2 Author:</strong> Reis and <strong>Priscilu_Origins_v2 Update / Contributor:</strong> Anigx</li>\n<li>Thanks to the SPT community for ongoing support</li>\n<li>Special thanks to the modders and creators whose work helped inspire Tony’s direction</li>\n</ul></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2185/yetanothertradermod",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>This project used AI assistance for writing, editing, code troubleshooting, and development planning.</p>\n<p>AI helped draft quest text, trader dialogue, descriptions, README/changelog wording, and example code changes. All AI-assisted material was reviewed, edited, tested, and approved manually before release.</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2025-06-15T01:35:00.000000Z",
+  "created_at": "2025-06-15T01:35:41.000000Z",
+  "updated_at": "2026-07-28T09:22:44.000000Z",
+  "owner": {
+    "id": 59864,
+    "name": "AmightyTank",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ca455d7c3c3a7a3a5f0c349de15469a9aedb1443_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-07-29T05:47:41.000000Z",
+    "updated_at": "2026-08-01T13:42:04.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 101380,
+      "name": "Anigx",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/1N9NlPyMy8GvL4xrkootiva07LfvCJE3zLzmWbq1_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2026-01-11T05:08:37.000000Z",
+      "updated_at": "2026-07-10T04:54:24.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/AlmightyTank/YetAnotherTraderModv.2",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13931,
+      "hub_id": null,
+      "version": "0.1.1",
+      "description": "<h2>Yet Another Trader Mod 0.1.1 HotFix</h2>\n<h3>Removed Custom Color Support was causing problems for some people might add it back</h3>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2185/yetanothertradermod/0.1.1",
+      "content_length": 192581,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1098,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-29T04:24:00.000000Z",
+      "created_at": "2026-06-29T04:24:17.000000Z",
+      "updated_at": "2026-07-28T09:22:44.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/01b792d83952580dc8c385f635cd58fad2e4ac9ae386d2a0775d3dbbd1a9ddd1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1265126213/99c782ab-2f71-457a-baae-e962a5da1447?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A21Z&rscd=attachment%3B+filename%3DYetAnotherTraderMod-v0.1.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A12Z&ske=2026-08-01T21%3A10%3A21Z&sks=b&skv=2018-11-09&sig=BEP897Gaos6wB3%2FF51uMSzmWEk%2FmMqNeRdv%2Fo3lUQTQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk4MCwibmJmIjoxNzg1NjE1NjgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gCGbEMqFiYZgZxHv6PgplXRP-QjvCIpSCmaAX4BgH6U&response-content-disposition=attachment%3B%20filename%3DYetAnotherTraderMod-v0.1.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13838,
+      "hub_id": null,
+      "version": "0.0.5",
+      "description": "<h2>Yet Another Trader Mod v0.0.5</h2>\n<p>This is the first update since the old SPT 3.11 version and brings <strong>Yet Another Trader Mod</strong> forward for <strong>SPT 4.0.13</strong>.</p>\n<p>Tony has been rebuilt around the newer SPT server setup. This release focuses on getting the trader stable again, cleaning up the project structure, and improving how Tony’s assortment, custom items, ammo packs, and barter offers are handled.</p>\n<h3>What changed</h3>\n<ul>\n<li>Updated for <strong>SPT 4.0.13</strong></li>\n<li>Reworked the mod structure for the newer SPT server framework</li>\n<li>Rebranded and cleaned up Tony’s trader identity</li>\n<li>Updated trader metadata, routes, naming, and package structure</li>\n<li>Added Tony’s current trader assortment</li>\n<li>Added support for cash and barter offers</li>\n<li>Added custom item, ammo, part, and weapon support</li>\n<li>Added ammo pack barter handling</li>\n<li>Improved assortment loading behavior</li>\n<li>Fixed out-of-stock handling so items are set to zero stock instead of being removed from the assortment</li>\n<li>Continued groundwork for Tony’s future questline, progression unlocks, insurance, and side content</li>\n</ul>\n<h3>Current status</h3>\n<p>This release is still considered <strong>beta</strong>.</p>\n<p>Inventory, prices, barter trades, custom weapons, ammo balance, insurance, and future quest content may change between versions. The main goal of this update is to make Tony usable again on <strong>SPT 4.0.13</strong> while continuing to build out his long-term content.</p>\n<p>Additional Tony rebrand, balance changes, custom content, and ongoing development by the <strong>Yet Another Trader Mod</strong> team.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2185/yetanothertradermod/0.0.5",
+      "content_length": 349976,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 330,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-22T04:19:00.000000Z",
+      "created_at": "2026-06-22T04:18:19.000000Z",
+      "updated_at": "2026-07-28T09:18:50.000000Z",
+      "dependencies": [
+        {
+          "id": 2310,
+          "hub_id": 3025,
+          "guid": "com.wtt.commonlib",
+          "name": "WTT - CommonLib",
+          "slug": "wtt-commonlib",
+          "teaser": "A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/FVbVeBHaQuaij0cbN9akYctRp36WNPNU6FYzarMw.png",
+          "downloads": 309268,
+          "favourites_count": 573,
+          "detail_url": "https://forge.sp-tarkov.com/mod/2310/wtt-commonlib",
+          "fika_compatibility": true,
+          "featured": false,
+          "contains_ads": true,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2025-09-15T02:44:00.000000Z",
+          "created_at": "2025-09-15T02:44:54.000000Z",
+          "updated_at": "2026-07-28T18:02:31.000000Z",
+          "owner": {
+            "id": 30890,
+            "name": "GrooveypenguinX",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/dbec02c8d33df986b0e101bea4deec01b992b02a_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-05-07T19:55:52.000000Z",
+            "updated_at": "2026-08-01T13:47:25.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 22121,
+              "name": "Tron",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/2e25bad47ca8504c2559e88fb16cea7adfc20189_128w.webp",
+              "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/719d357b66aa2a18f3bd21f3a8c192b0a8bdcc5d_1280w.webp",
+              "created_at": "2022-08-31T05:49:04.000000Z",
+              "updated_at": "2026-08-01T16:41:37.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13486,
+              "hub_id": null,
+              "version": "2.0.20",
+              "description": "<p>Version so good it jumped a number!</p>\n<ul>\n<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>\n<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>\n<li>separated logic in the slothelper methods, added a new one</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/2310/wtt-commonlib/2.0.20",
+              "content_length": 167466,
+              "spt_version_constraint": "~4.0.13",
+              "downloads": 103393,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-25T04:15:00.000000Z",
+              "created_at": "2026-04-25T04:16:03.000000Z",
+              "updated_at": "2026-07-28T08:25:15.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/567a9225b3d4289d694e15cf63b141c388034c7c31f8cfa46ad8339398a6f784?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1265126213/0a4a9b15-34fa-4b1c-9e5b-0f6d55e0e6fd?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A14Z&rscd=attachment%3B+filename%3DYetAnotherTraderMod-v0.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A00Z&ske=2026-08-01T21%3A12%3A14Z&sks=b&skv=2018-11-09&sig=%2Bt4UV%2BoF%2Ff8hdfxwAlaFBhOG1Ml8P9XKLHczsm2ouXM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk4MCwibmJmIjoxNzg1NjE1NjgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gCGbEMqFiYZgZxHv6PgplXRP-QjvCIpSCmaAX4BgH6U&response-content-disposition=attachment%3B%20filename%3DYetAnotherTraderMod-v0.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 374,
+      "hub_id": 14497,
+      "version": "0.0.2",
+      "description": "<p><strong>If you want the old prices go into the config and disable overridePrices with a false instead of true</strong></p>\n<p><strong>Changes:</strong></p>\n<ul>\n<li>Fixed Weapon Mod Requirements for Noise Complaint</li>\n<li>Changed the ZonesIDs for Echo Trap</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2185/yetanothertradermod/0.0.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 4434,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-06-22T16:07:00.000000Z",
+      "created_at": "2025-06-22T16:07:50.000000Z",
+      "updated_at": "2026-06-22T04:19:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0fe1af571d0a29b5487a972fb0aafd837927f968197824a031d579d2dfcdb9da?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1001524830/ac2486c4-2037-424b-9723-b63e9ec54480?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A24Z&rscd=attachment%3B+filename%3DYetAnotherTraderMod-3.11-1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A18Z&ske=2026-08-01T21%3A01%3A24Z&sks=b&skv=2018-11-09&sig=xiRGr5%2BuWoMKe%2Bu1DQor1D%2BD2P1qb8jYKlboWuzf2MU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk4MCwibmJmIjoxNzg1NjE1NjgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gCGbEMqFiYZgZxHv6PgplXRP-QjvCIpSCmaAX4BgH6U&response-content-disposition=attachment%3B%20filename%3DYetAnotherTraderMod-3.11-1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 9,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:16.912Z",
+    "discoveredBy": "seed"
+  }
+}

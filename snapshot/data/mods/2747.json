@@ -1,0 +1,376 @@
+{
+  "type": "mod",
+  "id": 2747,
+  "hub_id": null,
+  "guid": "com.20fpsguy.weekenddrops",
+  "name": "Weekend Drops",
+  "slug": "weekend-drops",
+  "teaser": "Rotating weekend and daily challenges that give crates with loot and pay out GP coins",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/a7n7YT3Vnizy5JsMIhzP3OBJRr9bmobnEsicYmuh.jpg",
+  "downloads": 4841,
+  "favourites_count": 40,
+  "description": "<h1>Weekend Drops</h1>\n<p>Weekend Drops gives you a set of challenges to work through each weekend, daily quests for\nthe rest of the week, to earn  (GP)  and spend in the shop.</p>\n<p>I made it because twitch drops in live EFT are kinda neat but since you cant get them in SPT i though this could be a version of gaining twitch drops in SPT</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Daily challenges</div>\n<div class=\"tab-content\"><p>Five quests a day, every day, each one pays GP. These run all the time, not just on\nweekends, so there’s always something small to do. Finish all five for a bonus.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">GP and the shop</div>\n<div class=\"tab-content\"><p>GP is a virtual balance, you earn it from challenges, and you can also deposit GP coins you find in raid\nstraight into your balance (there’s a slider so you can bank some and keep the rest for REF).</p>\n<p>The shop sells storage cases, Arena crates and a few rarer barter items. Things go on a\ncooldown after you buy them so you can’t just spam-buy.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">The  Weekly challenges</div>\n<div class=\"tab-content\"><ul>\n<li>PMC, Scav and boss kills</li>\n<li>Headshots and grenade kills</li>\n<li>Surviving X minutes, extracting, extracting from a specific map</li>\n<li>Play-as-Scav quests (extract as a Scav, finish Scav runs, kills across Scav raids)</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">these are not final will add more and ad</div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Rewards</div>\n<div class=\"tab-content\"><p>The drop crates are gear-focused and tuned per tier, so an Epic crate won’t hand you a\nstack of junk. Guns come with attachments already on them instead of the bare default\npreset. also</p>\n<p>-WTT backport is included in the loot pool but its optional</p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">The UI</div>\n<div class=\"tab-content\"><ul>\n<li>to access the mod there is a panel you can open from the Inventory tab on the main menu there is a tutorial explaining the mod incase someone doesn’t read this who reads this anyway i m i right?</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">LootNET</div>\n<div class=\"tab-content\"><p>if LootNET is installed it will show the earned GP coins earned that raid still WIP bugs can happend i didn test it enough but it worked almost every raid so far</p></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Contracts</div>\n<div class=\"tab-content\"><ul>\n<li>Contracts a new menu tab (in drops menu). Each board offers a few sealed contracts; you pick one. Its target spawns on your next raid of that map, and clearing the objective pays GP, Two kinds of Bounties exist so far: (hunt a specific crew or boss) and Supply Runs (wipe the crew to call in an airdrop on their position). Accepting or abandoning spends your pick, and a fresh board rolls in after a few days.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-9\" class=\"tab-panel\"><div class=\"tab-title\">Translating Weekend Drops</div>\n<div class=\"tab-content\"><p>Everything the mod shows you lives in <code>en.json</code>. To add a language, copy that file,\nrename it, and translate the values. No code, no build, no rebuild of the mod.</p>\n<p>Adding a language</p>\n<ol>\n<li>\n<p>Copy <code>en.json</code> to <code>&lt;code&gt;.json</code> using <strong>the game’s own language code</strong>:</p>\n<table>\n<thead>\n<tr>\n<th>Code</th>\n<th>Language</th>\n<th>Code</th>\n<th>Language</th>\n<th>Code</th>\n<th>Language</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>en</code></td>\n<td>English</td>\n<td><code>ge</code></td>\n<td>German</td>\n<td><code>jp</code></td>\n<td>Japanese</td>\n</tr>\n<tr>\n<td><code>ru</code></td>\n<td>Russian</td>\n<td><code>fr</code></td>\n<td>French</td>\n<td><code>kr</code></td>\n<td>Korean</td>\n</tr>\n<tr>\n<td><code>ch</code></td>\n<td>Chinese</td>\n<td><code>es</code></td>\n<td>Spanish</td>\n<td><code>pl</code></td>\n<td>Polish</td>\n</tr>\n<tr>\n<td><code>cz</code></td>\n<td>Czech</td>\n<td><code>it</code></td>\n<td>Italian</td>\n<td><code>po</code></td>\n<td>Portuguese</td>\n</tr>\n<tr>\n<td><code>hu</code></td>\n<td>Hungarian</td>\n<td><code>ro</code></td>\n<td>Romanian</td>\n<td><code>sk</code></td>\n<td>Slovak</td>\n</tr>\n<tr>\n<td><code>tu</code></td>\n<td>Turkish</td>\n<td><code>es-mx</code></td>\n<td>Spanish (LatAm)</td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<p>Note these are BSG’s codes, not ISO: German is <code>ge</code> (not <code>de</code>), Chinese is <code>ch</code>,\nJapanese <code>jp</code>, Korean <code>kr</code>.</p>\n</li>\n<li>\n<p>Translate the <strong>values</strong> on the right. Never touch the keys on the left.</p>\n</li>\n<li>\n<p>Drop the file in <code>BepInEx/plugins/WeekendDrops/locales/</code> and restart the game.\nIt is picked automatically when the game is set to that language.</p>\n</li>\n</ol>\n<p>Anything you leave untranslated (or delete) falls back to English, so a partial\ntranslation is perfectly usable. You can ship 50 lines and add more later.</p>\n<p>Rules</p>\n<p><strong>Keep <code>{0}</code>, <code>{1}</code> exactly as they are.</strong> They are filled in at runtime:</p>\n<pre><code>\"ui.notif.claimBoth\": \"{0} daily and {1} weekly waiting to claim\"\n</code></pre>\n<p>You may reorder them if your language needs a different word order\n(<code>\"{1} weekly and {0} daily ...\"</code>), but you may not invent new ones or drop the\nexisting ones. A mismatch shows the wrong number on screen.</p>\n<p><strong>Keep the colour tags.</strong> The tutorial text contains markup like\n<code>&lt;color=#CD8532&gt;&lt;b&gt;GP&lt;/b&gt;&lt;/color&gt;</code>. Translate the words between the tags, leave the\ntags themselves alone.</p>\n<p><strong>Keep it short.</strong> Most strings sit in fixed-width buttons and chips. German and\nRussian run roughly 30% longer than English, and long text gets clipped rather than\nwrapped. If a line does not fit, prefer a shorter phrasing over an exact translation.</p>\n<p><strong>ALL CAPS is intentional</strong> on headers and buttons. Match it where your script has\ncapitals; ignore it where it does not (Chinese, Japanese, Korean).</p>\n<p>Fonts (important for Chinese, Japanese, Korean)</p>\n<p>The panel is drawn with Unity’s built-in font, which has Latin and Cyrillic but\n<strong>no CJK glyphs</strong> - they render as empty boxes. Fix it by naming a system font in\nyour locale’s <code>_meta</code> block:</p>\n<pre><code>\"_meta\": {\n  \"name\": \"简体中文\",\n  \"credit\": \"your name here\",\n  \"font\": \"Microsoft YaHei, SimHei\"\n}\n</code></pre>\n<p>Comma-separated, tried in order, so you can list a fallback for older Windows\ninstalls. Leave <code>font</code> empty for Latin and Cyrillic languages - the default is fine.</p>\n<p>Changing the font needs a game restart. Changing text does not.\nTesting your file</p>\n<p>Set <code>Language</code> in the F12 config to your code (instead of <code>auto</code>) to force it on\nwithout changing the whole game’s language.</p>\n<p>if you got python  installed you Then can check if the file is well-formed useing:</p>\n<pre><code>python tools/check-locale.py\n</code></pre>\n<p>It reports missing keys, keys that no longer exist, and broken <code>{0}</code> placeholders.</p>\n<p>What the key prefixes mean</p>\n<table>\n<thead>\n<tr>\n<th>Prefix</th>\n<th>What it is</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>ui.*</code></td>\n<td>Menu, buttons, notifications, the tutorial</td>\n</tr>\n<tr>\n<td><code>challenge.*</code></td>\n<td>Weekly and daily challenge descriptions</td>\n</tr>\n<tr>\n<td><code>shop.*</code></td>\n<td>Shop item names and descriptions</td>\n</tr>\n<tr>\n<td><code>contract.*</code></td>\n<td>Bounty names, objectives, and radio chatter</td>\n</tr>\n<tr>\n<td><code>ui.map.*</code>, <code>ui.zone.*</code></td>\n<td>Map and landmark names - use the game’s own wording</td>\n</tr>\n</tbody>\n</table>\n<p>For map and location names, copy whatever Escape from Tarkov itself calls them in\nyour language rather than translating the English literally.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2747/weekend-drops",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to make the UI</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-06-19T16:00:00.000000Z",
+  "created_at": "2026-06-17T00:07:31.000000Z",
+  "updated_at": "2026-07-31T22:41:55.000000Z",
+  "owner": {
+    "id": 43600,
+    "name": "20fpsguy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/xrcDHoVQVT6rtxh0ks0DyrvwYDrD0OBnhPMUytms_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/3XeLpx2NFpiWfauZEuOtSrIUrCPbzkOe7SFJwDFp_1280w.webp",
+    "created_at": "2024-01-11T12:46:02.000000Z",
+    "updated_at": "2026-08-01T19:04:17.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/diemitze/WeekendDrops",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14269,
+      "hub_id": null,
+      "version": "1.0.4",
+      "description": "<h3>New</h3>\n<ul>\n<li><strong>language</strong> i added a new sub folder directory named locales feel free to translate it to your language if there is a error in your translated locales it will load all the texts in English thats not a bug thats just a safe guard to not break anything</li>\n<li><strong>65 new challenges</strong> across the weekend and daily pools - easier opening rungs for the categories that only ever offered hard ones (a single grenade kill, 2 headshots, one clean extract, a first Raider or Rogue), more per-map extracts, and fuller ladders for the survive-a-raid, loot and single-raid-spike categories that used to have one entry each. The melee-kill stunt stays a one-off oddity and now shows up less often than before, not more.</li>\n</ul>\n<h3>Changes</h3>\n<ul>\n<li><strong>shop</strong> got a lil overhaul you can now buy a few new thing and barter for some supplys</li>\n<li><strong>Marksman rifles added to the Cleanup Crew’s arsenal</strong> - the M1A, HK G28 and RSASS in 7.62x51, plus the SVDS in 7.62x54R. Roughly one crew member in eight now carries a DMR, so expect to be reached from further out.</li>\n<li><strong>Cultist challenges are no longer a wall on a fresh profile.</strong> Hunting cultists needs a night raid and night vision, but the challenge picker treated them as an everyday category, so one landed on roughly 45% of weekends - a slot a new player simply could not finish. They now share a slot with the other rare-target hunts instead of holding one of their own, which drops them to about 26% of weekends, and the entry rung is a single cultist rather than three. The 8- and 12-kill versions are gone. The same rebalance spreads every other category more evenly, so weekends repeat themselves less.</li>\n</ul>\n<h3>Fixes</h3>\n<ul>\n<li><strong>Depositing GP coins no longer destroys the ones you kept.</strong> Handing in 50 coins out of a stack of 200 credited the 50 correctly, but the leftover 150 disappeared: the deposit removed the whole stack and put a copy of the remainder back, and while your client showed those coins, the server had never agreed they existed, so they were gone at the next sync. Deposits now move whole stacks only, and the amount selector offers stack-sized amounts to match (two stacks of 100 offer 100 or 200). It is a coarser choice than before, but nothing can be lost. A smaller partial deposit would need the game to split a stack in a way that actually sticks, which i have not found a reliable route to yet.</li>\n<li>Fixed three “kill X enemies in a single raid” challenges whose titles, ids and actual targets disagreed (two both read “Kill 12”, and one titled 18 only wanted 8). They are now a clean 6 / 10 / 15 / 20 ladder.</li>\n<li><strong>Supply Run crews now spawn on the drop instead of hiking to it.</strong> They were spawning anywhere in a zone that spans several hundred metres and walking in as a group, which is where they ran into trouble. They now start posted around the crate.</li>\n<li><strong>Fixed the Supply Run crew being sent to the wrong place entirely.</strong> The crew’s hideout was rolled from the map’s hideout list with no regard for where the crate was coming down, so you could get a Broken Village drop guarded from USEC Base. Worse, the crew could split, half holding the hideout while the rest walked off to the crate. Their posts are now always built around the rolled landing site. A Supply Run you already accepted repairs itself on the spot, so you don’t have to abandon it (and burn your board pick) to get the fix.\nalso sorry for does who ran around the map trying to find them i did a terrible job adding the crew it should be now much better i hope at least…</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2747/weekend-drops/1.0.4",
+      "content_length": 411945,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 755,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T04:06:00.000000Z",
+      "created_at": "2026-07-28T05:31:26.000000Z",
+      "updated_at": "2026-07-31T22:41:11.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/842a9a2798032f5710f7e6377c3f4ed4861677fe2fc886966e01a8f3f7a7b158?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/d3b301aa28d333cd9c4152a246714e726f252f76291e6a5cbd389f1a212e1eed?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1271710109/cf95ce6d-7a03-4c9e-afdb-247820c2150a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A21Z&rscd=attachment%3B+filename%3DWeekendDrops-1.0.4.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A12Z&ske=2026-08-01T21%3A07%3A21Z&sks=b&skv=2018-11-09&sig=TvqtdcLfG8fAd02tlxSm9W%2BZrlX67g3EkX58cwsKdB0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&response-content-disposition=attachment%3B%20filename%3DWeekendDrops-1.0.4.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14045,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<h3>New</h3>\n<ul>\n<li><strong>Send GP to a friend</strong> - gift GP from your balance to any other player (built for Fika). Open the deposit screen and hit “Send to a friend”, pick a recipient, choose an amount, and send. No fee and the recipient gets a gold “GP gift received” popup the next time they open the menu, whether or not they were online when you sent it also works with no fika installed incase you want to send GP to you other profile.</li>\n<li><strong>Team standings (Fika)</strong> - the Weekly tab now shows a team board of everyone on the server, ranked by GP earned this weekend. Only appears when Fika is installed.</li>\n<li><strong>New challenges</strong> - hunt Cultists and the Cultist Priest, take on Raiders and Rogues, chase single-raid feats (kill a pile of enemies in one raid, or survive 15 minutes in one). The weekly and daily pools also got a wider spread of the existing kill, extract, and survival targets.</li>\n<li><strong>Reward reminder you won’t miss</strong> - when you have rewards waiting to claim, the main-menu nudge now pops as a bright, pulsing card with a sound, and it lands once you are actually back on the menu instead of behind the raid-end screen.</li>\n<li><strong>inRaid</strong> contract Toast it now tells you the location of the cleanup crew</li>\n<li><strong>Fika</strong> added Compatibility i tested a few raids it should work but there could be issues with the air drop not getting called after the crew gets killed</li>\n<li><strong>challenges on loading screen</strong> added a option to the F12 menu to toggle it on or off</li>\n</ul>\n<h3>Changes.</h3>\n<ul>\n<li>Menu readability pass: brighter, higher-contrast action buttons (Buy, Claim, Confirm) and cleaner text alignment across the panels.</li>\n<li>shop got rebalanced a bit rised prices a bit</li>\n<li>cleanup crew got buffed better gear like guns and chances to spawn with helmets and body armor they also now got some meds/stims so they can heal in fights</li>\n</ul>\n<h3>Fixes</h3>\n<ul>\n<li>menu should now no longer lag after a few raids and stay smooth without weird animation delay</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2747/weekend-drops/1.0.3",
+      "content_length": 377342,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1606,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-10T20:24:00.000000Z",
+      "created_at": "2026-07-10T20:32:23.000000Z",
+      "updated_at": "2026-07-31T22:41:55.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6d1495ecd6a62fa7e92d2c8265f3f589423ce6e5d956a869a5daa145fba06657?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/ab05116c10a4590a3ed5788358ae7ddd1478483ad0280825def2de67de4e0fa8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1271710109/3dbdb81b-2034-4280-9e39-429324a7ad99?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A47Z&rscd=attachment%3B+filename%3DWeekendDrops-1.0.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A28Z&ske=2026-08-01T21%3A04%3A47Z&sks=b&skv=2018-11-09&sig=AesoWCZW5GmhmWnE2miJ8thi5c6xlzOlXHRckWbGNn8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&response-content-disposition=attachment%3B%20filename%3DWeekendDrops-1.0.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13875,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<h3>Added</h3>\n<ul>\n<li>Contracts a new menu tab (in drops menu). Each board offers a few sealed contracts; you pick one. Its target spawns on your next raid of that map, and clearing the objective pays GP, Two kinds of Bounties  exist so far: (hunt a specific crew or boss) and Supply Runs (wipe the crew to call in an airdrop on their position). Accepting or abandoning spends your pick, and a fresh board rolls in after a few days.</li>\n</ul>\n<h3>Fixes</h3>\n<ul>\n<li>Weekend tier crates now drop more items: Tier 1 gives 5 (was 3), Tier 2 gives 7 (was 3), Tier 3 gives 9 (was 4).</li>\n<li>Tier 1 (common) crates now lean into basics: food, drink, household and barter items, tools, and keys. Body armor, weapons, and armored rigs were removed from the common pool and stay in the higher tiers.</li>\n<li>The “Disable Scav challenges” F12 toggle now actually works.</li>\n<li>LootNET Quests work now too.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2747/weekend-drops/1.0.2",
+      "content_length": 357316,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1174,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-06-26T16:00:00.000000Z",
+      "created_at": "2026-06-25T16:03:42.000000Z",
+      "updated_at": "2026-07-31T22:41:01.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264945,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284380,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0633775a4420a667e755c19095fce20b2d2fbc704f0c941b3f3cdc0a9be6c973?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/86ffeedecd89a4f04d77bc92dd336483bbd6566ed3104528da354c416addcbbb?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1271710109/1c610619-cf81-478a-a790-cd488fedb9b4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A58Z&rscd=attachment%3B+filename%3DWeekendDrops-1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A08Z&ske=2026-08-01T21%3A05%3A58Z&sks=b&skv=2018-11-09&sig=07dAd07p4jFnPwedwn5EMpaqWTtnLFCmVNTAHdE7uR8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&response-content-disposition=attachment%3B%20filename%3DWeekendDrops-1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13818,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<h3>Fixes</h3>\n<ul>\n<li>The daily “complete all challenges” bonus now actually pays out. Before, clicking Claim did nothing.</li>\n<li>Crate ammo boxes are no longer empty. They now come filled with their rounds.</li>\n<li>Crates no longer hand out duplicate bulky gear. Backpacks, body armor, rigs, and headwear are capped at one per crate.</li>\n<li>a game crash no longer breaks the mod.</li>\n</ul>\n<h3>New</h3>\n<ul>\n<li>Option to turn off Scav challenges, for players who run Scav raids disabled. Toggle it in the F12 menu under Challenges, or set <code>enableScavChallenges</code> in config.json. Any Scav challenge already in your set is swapped for a different quest. Takes effect after a game restart.</li>\n</ul>\n<h3>Removed</h3>\n<ul>\n<li>The leftover “Test Notification” button. not sure how i didn notice that earlier i left that in ups</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2747/weekend-drops/1.0.1",
+      "content_length": 299944,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 985,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-20T12:43:00.000000Z",
+      "created_at": "2026-06-20T12:47:00.000000Z",
+      "updated_at": "2026-07-31T22:41:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9b911d8c5de0ef135657827d2816bc022d8da84ffec6b4afac03fda4cd7aa0bb?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/f1d4017b5d22dd113edf049f9195fb2ce8454169e01724b7aa3e34fcc2815036?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1271710109/4b9f8dcb-5c10-4d89-b7a9-97c96f8acc16?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A27Z&rscd=attachment%3B+filename%3DWeekendDrops-1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A05Z&ske=2026-08-01T21%3A05%3A27Z&sks=b&skv=2018-11-09&sig=JyRxUuiYSS%2Blrk92UD7gUle8ufRegV33nwnKhOq6Ml8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&response-content-disposition=attachment%3B%20filename%3DWeekendDrops-1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13802,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>realase!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2747/weekend-drops/1.0.0",
+      "content_length": 289571,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 321,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-19T16:00:00.000000Z",
+      "created_at": "2026-06-18T21:20:20.000000Z",
+      "updated_at": "2026-07-31T22:41:30.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6bf23605e12c52d852e573283444323da583297362031a7c5e4bef4ea88a93c9?nocache=1",
+          "label": ""
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/801be4d26112416be4d04679eff3731cf17bb398b85bd043d4d38716ad474c5a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1271710109/53af8ca3-4ae9-415d-a94e-c34c8595f08a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A51Z&rscd=attachment%3B+filename%3DWeekendDrops-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A43Z&ske=2026-08-01T21%3A05%3A51Z&sks=b&skv=2018-11-09&sig=MTOcw0uSjZc%2BE0zHAEUczcQ7d3KHjrRKHoTOAUw%2Fh%2Bs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&response-content-disposition=attachment%3B%20filename%3DWeekendDrops-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 40,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:55:09.840Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "type": "mod",
+  "id": 2763,
+  "hub_id": null,
+  "guid": "hiop.melee.multiplier",
+  "name": "MeleeMultiplier",
+  "slug": "meleemultiplier",
+  "teaser": "Damage multiplier for melee weapons",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/GYDLTFNAXoviMyycgkHXzxbGd9CHsD3ooAYZYSm5.png",
+  "downloads": 1312,
+  "favourites_count": 11,
+  "description": "<p>Damage multiplier for melee weapons (stab, slash). Default x10.</p>\n<hr />\n<p><strong>Install</strong><br />\nExtract zip content to root game folder</p>\n<hr />\n<p><strong>Config</strong><br />\n.\\SPT\\user\\mods\\MeleeMultiplier\\Config\\MeleeMultiplierConfig.json5 change “meleeDamageMultiplier” value to any integer number</p>\n<pre><code>{\n  // damage multiplier x10 by default\n  \"meleeDamageMultiplier\": 10,\n \n  // List of item template IDs to exclude.\n  // https://db.sp-tarkov.com/search (root.item._id)\n  \"excludedMeleeItems\": [\n    \"6087e570b998180e9f76dc24\", // Tagillas Superfors DB 2020 Dead Blow Hammer\n    \"5fc64ea372b0dd78d51159dc\" // Сultist knife\n  ],\n}\n</code></pre>\n<hr />\n<p>Inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/819/deadly-blades\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/mod/819/deadly-blades</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2763/meleemultiplier",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 13,
+  "published_at": "2026-06-22T09:34:00.000000Z",
+  "created_at": "2026-06-22T09:34:23.000000Z",
+  "updated_at": "2026-07-28T09:21:02.000000Z",
+  "owner": {
+    "id": 72091,
+    "name": "hiop90",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bYEK8yV9CwoRtfCoteXoj1uQiWwa7VsrQVssZzVk_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-01-23T05:43:23.000000Z",
+    "updated_at": "2026-08-01T19:35:18.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 27174,
+      "name": "gaylatea",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/36ff2ea60e32966b4406be6a6ceefb6f16324d45_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-17T21:52:37.000000Z",
+      "updated_at": "2026-07-10T04:50:24.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 13,
+    "hub_id": 76,
+    "title": "Weapons",
+    "slug": "weapons",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/hiop/SPT-MeleeMultiplier",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13887,
+      "hub_id": null,
+      "version": "0.0.3",
+      "description": "<p>Features:</p>\n<ul>\n<li>added support for weapons from mods</li>\n<li>added default exclusion for cultist knife</li>\n</ul>\n<p>Updating from version 0.0.2:</p>\n<ul>\n<li>Unzip the mod as usual</li>\n<li>Delete the config folder OR replace config:</li>\n</ul>\n<pre><code>{\n  \"meleeDamageMultiplier\": 10,\n  \"excludedMeleeItems\": [\n    \"6087e570b998180e9f76dc24\", // Tagillas Superfors DB 2020 Dead Blow Hammer\n    \"5fc64ea372b0dd78d51159dc\" // Сultist knife\n  ],\n}\n</code></pre>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2763/meleemultiplier/0.0.3",
+      "content_length": 7290,
+      "spt_version_constraint": "~4.0.7",
+      "downloads": 942,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-26T06:44:00.000000Z",
+      "created_at": "2026-06-26T06:47:16.000000Z",
+      "updated_at": "2026-07-28T09:21:02.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-09cb9e166546c58718a8262212f51726dcc87c3ab59263481c9d1d6ab7729448-afede5f8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1276765338/095a29de-a1b3-45f1-a5b9-65df5478163a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A05Z&rscd=attachment%3B+filename%3DMeleeMultiplier_003.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A43Z&ske=2026-08-01T21%3A16%3A05Z&sks=b&skv=2018-11-09&sig=ZGECUUxMdG%2Fk1pttneX4DEHuQKyAVS7b3OTkfCFamVE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MXL4groQa-ff-1td0wio2rQ1e5FhKFpRPw0WDRpV0j8&response-content-disposition=attachment%3B%20filename%3DMeleeMultiplier_003.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13849,
+      "hub_id": null,
+      "version": "0.0.2",
+      "description": "<p>Features:</p>\n<ul>\n<li>added weapon exclusion</li>\n</ul>\n<p>Updating from version 0.0.1:</p>\n<ol>\n<li>Unzip the mod as usual</li>\n<li>Delete the config folder</li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2763/meleemultiplier/0.0.2",
+      "content_length": 7157,
+      "spt_version_constraint": "~4.0.7",
+      "downloads": 174,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-23T13:45:00.000000Z",
+      "created_at": "2026-06-23T13:46:41.000000Z",
+      "updated_at": "2026-07-28T09:19:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url-analysis/u-0a040bd00e283d0a0bf9319734d89f53174e912bea8f8f984d6a6d7394aeca6b-b5998f50",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1276765338/6ac86ce3-b3e1-4ca7-86ec-c732303b9e04?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A50Z&rscd=attachment%3B+filename%3DMeleeMultiplier_002.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A17Z&ske=2026-08-01T21%3A25%3A50Z&sks=b&skv=2018-11-09&sig=eZcQ1nKeWfTasQHQqTsWr14DRU0aa9TxFrHQYTenpsM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MXL4groQa-ff-1td0wio2rQ1e5FhKFpRPw0WDRpV0j8&response-content-disposition=attachment%3B%20filename%3DMeleeMultiplier_002.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13841,
+      "hub_id": null,
+      "version": "0.0.1",
+      "description": "<p>yay!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2763/meleemultiplier/0.0.1",
+      "content_length": 7234,
+      "spt_version_constraint": "~4.0.7",
+      "downloads": 196,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-22T09:34:00.000000Z",
+      "created_at": "2026-06-22T09:35:35.000000Z",
+      "updated_at": "2026-07-28T09:18:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/c56533fe5f9058d70a65d980c1975cc0d3b670fc11b60419cadba795013d0190?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1276765338/0062625f-4888-403a-81ae-b3cce600713d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A35Z&rscd=attachment%3B+filename%3DMeleeMultiplier_001.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A15%3A23Z&ske=2026-08-01T21%3A15%3A35Z&sks=b&skv=2018-11-09&sig=zrBR0BDmv4KBwHVKl2Zgbpa%2F8klgw4MwY7QDTQJTydU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMyMCwibmJmIjoxNzg1NjE2MDIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MXL4groQa-ff-1td0wio2rQ1e5FhKFpRPw0WDRpV0j8&response-content-disposition=attachment%3B%20filename%3DMeleeMultiplier_001.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 21,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:29.525Z",
+    "discoveredBy": "seed"
+  }
+}

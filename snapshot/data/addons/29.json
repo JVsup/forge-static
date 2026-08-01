@@ -1,0 +1,247 @@
+{
+  "type": "addon",
+  "id": 29,
+  "name": "SPT Item Creator Wiki",
+  "slug": "spt-item-creator-wiki",
+  "teaser": "The accompanying Wiki systematically organizes data resources and offers complete API references and item creation guides, helping developers and players efficiently utilize the mod and rapidly expand SPT's item database.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/addons/jZDiFWm6ycVoG1SSDODE5HtbWKIr0amYzNDb0fV6.png",
+  "downloads": 247,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">English</div>\n<div class=\"tab-content\"><p>This plugin serves as the centralized release of the Wiki system, documenting the evolution of its structure and content optimization. Key improvements include restructured organization of update logs, corrected descriptions of fields and constants, and expanded examples, usage guides, and item creation tutorials, along with ongoing refinement of documentation formats for IDs and enum values.</p>\n<p>Each version update specifies the minimum required mod version, ensuring synchronization between documentation and mod functionality. The entire documentation framework is built on Python MkDocs, featuring a clear structure and support for bilingual constants, aiming to provide developers with accurate and practical technical references.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">中文</div>\n<div class=\"tab-content\"><p>此插件是对Wiki系统的集中发布，记录了Wiki文档的结构调整与内容优化历程。重点包括重构更新日志组织方式、修正字段与常量说明、补充示例与使用指引、物品创建教程，并持续完善各类ID和枚举值的文档格式。</p>\n<p>每个版本更新均明确了所需的最低模组版本，确保文档与模组功能同步。整体文档体系基于Python MkDocs构建，结构清晰，支持双语常量，旨在为开发者提供准确、实用的技术参考。</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/addon/29/spt-item-creator-wiki",
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "mod_id": 2565,
+  "is_detached": false,
+  "detached_at": null,
+  "published_at": "2026-01-28T06:31:00.000000Z",
+  "created_at": "2026-01-28T06:31:59.000000Z",
+  "updated_at": "2026-07-28T10:00:19.000000Z",
+  "owner": {
+    "id": 85431,
+    "name": "Suntion",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-10-06T15:34:17.000000Z",
+    "updated_at": "2026-07-10T04:52:14.000000Z"
+  },
+  "additional_authors": [],
+  "mod": {
+    "id": 2565,
+    "hub_id": null,
+    "guid": "com.suntion.sptitemcreator",
+    "name": "SPT Item Creator",
+    "slug": "spt-item-creator",
+    "teaser": "This mod simplifies SPT item creation and enables efficient expansion through interface encapsulation and comprehensive documentation.",
+    "thumbnail": "https://forge-static.sp-tarkov.com/mods/3L8N3RsebHon93zzx3WAwP2Qq9ihZ6JeHNnrzMNr.png",
+    "downloads": 898,
+    "favourites_count": 2,
+    "detail_url": "https://forge.sp-tarkov.com/mod/2565/spt-item-creator",
+    "fika_compatibility": false,
+    "featured": false,
+    "contains_ads": false,
+    "contains_ai_content": false,
+    "shows_profile_binding_notice": true,
+    "cheat_notice": false,
+    "category_id": 4,
+    "published_at": "2026-01-28T08:20:00.000000Z",
+    "created_at": "2026-01-28T05:02:21.000000Z",
+    "updated_at": "2026-07-28T08:19:27.000000Z",
+    "owner": {
+      "id": 85431,
+      "name": "Suntion",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/C4Ru8gLOeaXnBuD7oeuX0eMqKlWTAYebEstA8Qy3_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2025-10-06T15:34:17.000000Z",
+      "updated_at": "2026-07-10T04:52:14.000000Z"
+    },
+    "additional_authors": [],
+    "category": {
+      "id": 4,
+      "hub_id": 21,
+      "title": "Items",
+      "slug": "items",
+      "description": ""
+    }
+  },
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/SunYanbox/SptItemCreator/tree/master/Wiki",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 64,
+      "version": "0.1.1",
+      "description": "<h2>English</h2>\n<p><strong>Documentation Updates</strong>:</p>\n<ul>\n<li>Updated BaseInfo documentation to correct the description of the <code>HandbookParentId</code> field, clarifying behavior and classification impact when the field is missing.</li>\n<li>Updated <code>handbookParentId</code> optional ID and corresponding type documentation, adding warning notes.</li>\n<li>Fixed broken link in the module configuration documentation.</li>\n<li>Synchronized updates to the English version of the documentation.</li>\n<li>Updated the data file type documentation, removing the <code>$type</code> field description and adding a type mechanism explanation.</li>\n<li>Updated BaseInfo documentation to clarify the purpose of the <code>type</code> field.</li>\n<li>Updated the module changelog and technical changelog, adding the v0.1.1 version record.</li>\n<li>Created new module configuration documentation, explaining config.json configuration options.</li>\n<li>Synchronized updates to the English version of the documentation.</li>\n</ul>\n<p><strong>New Documentation</strong>:</p>\n<ul>\n<li>Module Configuration</li>\n</ul>\n<h2>中文</h2>\n<p><strong>文档更新</strong>：</p>\n<ul>\n<li>更新 BaseInfo 文档，修正 HandbookParentId 字段描述，明确缺失时的行为与分类影响</li>\n<li>更新 handbookParentId 可选Id与对应类型 文档，补充警告说明</li>\n<li>修复模块配置文档链接错误</li>\n<li>同步更新英文版本文档</li>\n<li>更新数据文件类型文档，移除 <code>$type</code> 字段说明，添加类型机制说明</li>\n<li>更新 BaseInfo 文档，澄清 <code>type</code> 字段作用</li>\n<li>更新模组更新日志和技术更新日志，添加 v0.1.1 版本记录</li>\n<li>新建模块配置文档，说明 config.json 配置项</li>\n<li>同步更新英文版本文档</li>\n</ul>\n<p><strong>新增文档</strong>：</p>\n<ul>\n<li>模块配置</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.1.1",
+      "content_length": 911135,
+      "mod_version_constraint": ">=0.1.1",
+      "downloads": 126,
+      "published_at": "2026-04-04T14:32:00.000000Z",
+      "created_at": "2026-04-04T14:32:59.000000Z",
+      "updated_at": "2026-07-28T10:00:19.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5f8dee52d826c7dd3f9163b87d96b510c90583d00d92f3f1804659d74c0c41f4/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/1df6e22d-7647-4649-8aa4-f95494883fa7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A48Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_04_04_22_00.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A27Z&ske=2026-08-01T21%3A06%3A48Z&sks=b&skv=2018-11-09&sig=LpcFXQBXrRkhar%2BkTWvww5lApmS14tiWaFpHuzmFnNw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NiwibmJmIjoxNzg1NjE2MTY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5zskKy0HSBYP6hmJ0-jIfOG3mElJGJ9YNvlE-jYDlmA&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_04_04_22_00.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 58,
+      "version": "0.1.0",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag</strong>: Wiki_26_03_16_03_40</p>\n<ul>\n<li>Updated the Chinese version of README.md, marking the WebUI access guide as deleted content, and clearly informing users that WebUI has been removed after version 0.1.0</li>\n<li>Added a new document “AI-Assisted Creation Workflow.md”, detailing the four-stage item creation workflow based on AI technology</li>\n<li>Added cache system instructions in the AI-assisted workflow document, guiding users to view property data statistics by item type in the <code>SPT\\user\\mods\\SptItemCreator\\StatsCache</code> path</li>\n<li>Added best practice tips, emphasizing key operational points such as starting from templates, prioritizing encapsulated fields, and maintaining ID uniqueness</li>\n<li>Updated precautions, clarifying technical details including data file extension requirements, encapsulated field priorities, and model path specifications</li>\n<li>Added technical changelog entry for v0.1.0, recording core code changes such as namespace refactoring, log system rewrite, and cache system introduction</li>\n<li>Added mod changelog entry for v0.1.0, recording user-visible changes including WebUI removal, validation process optimization, and cache system output directory</li>\n<li>Detailed the output path, content composition, and practical用途 of the new cache system in the mod changelog, facilitating users to utilize statistical data for item creation</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签</strong>: Wiki_26_03_16_03_40</p>\n<ul>\n<li>更新中文版 README.md，将 WebUI 访问指南标记为已删除内容，明确告知用户 WebUI 在版本 0.1.0 后已移除</li>\n<li>新增<code>AI辅助创建工作流.md</code>文档，详细介绍了基于 AI 技术的四阶段物品创建工作流程</li>\n<li>在 AI辅助工作流文档中增加了缓存系统说明，指导用户在 <code>SPT\\user\\mods\\SptItemCreator\\StatsCache</code> 路径查看按物品类型统计的属性数据</li>\n<li>新增最佳实践提示，强调从模板开始、优先使用封装字段、保持 ID 唯一性等关键操作要点</li>\n<li>更新注意事项，明确数据文件后缀要求、封装字段优先级、模型路径规范等技术细节</li>\n<li>新增技术更新日志 v0.1.0 条目，记录命名空间重构、日志系统重写、缓存系统引入等核心代码变更</li>\n<li>新增模组更新日志 v0.1.0 条目，记录 WebUI 移除、验证流程优化、缓存系统输出目录等用户可见变化</li>\n<li>在模组更新日志中详细说明新缓存系统的输出路径、内容构成和实际用途，方便用户利用统计数据创建物品</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.1.0",
+      "content_length": 895590,
+      "mod_version_constraint": "~0.1.0",
+      "downloads": 44,
+      "published_at": "2026-03-15T20:00:00.000000Z",
+      "created_at": "2026-03-15T20:15:19.000000Z",
+      "updated_at": "2026-07-28T09:59:46.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bc08ec3644ed90ba936ef45eea7fe2ceb778620bdc3f4773e605a591cedbc4ba/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/fcecec67-0716-44d8-9572-da9a05893a1a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A27Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_03_16_03_40.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A56Z&ske=2026-08-01T21%3A23%3A27Z&sks=b&skv=2018-11-09&sig=6ZrAlb5KSK5WkWQ080eWV%2FLfGMN%2B0%2BdhNj%2B6cSEx844%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NiwibmJmIjoxNzg1NjE2MTY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5zskKy0HSBYP6hmJ0-jIfOG3mElJGJ9YNvlE-jYDlmA&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_03_16_03_40.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 45,
+      "version": "0.0.5",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag:</strong> Wiki_26_02_02_18_20</p>\n<ul>\n<li>Added Technical Update Log; underlying-related update information has been moved here.</li>\n<li>Added light/dark theme toggle functionality to the Wiki interface</li>\n<li>Added a new <strong>Data Structures</strong> module, organizing commonly used types and assets in SPTData\n<ul>\n<li>Regarding <code>0. Understanding Mod Data Structures (Optional).md</code>\n<ul>\n<li>Extracted information about X and moved it to the new module, adding data type details and their representation in data files for X</li>\n<li>X: BaseInfo, DrinkFoodInfo, MedicalInfo, BuffsInfo, AttributeInfo</li>\n</ul>\n</li>\n<li>Added comprehensive documentation for frequently used SPT data structures, covering core types such as Buff, LocaleDetails, Prefab, MongoId, and more</li>\n<li>Created explanations for SPT data files, including detailed breakdowns of globals.json and items.json</li>\n</ul>\n</li>\n<li>Fixed the example description error for the <code>effects_damage</code> key</li>\n<li>Removed duplicate Wiki interfaces after restructuring the data structures</li>\n<li>When navigating to external links in the Wiki, a new tab will open.</li>\n<li>The Wiki’s search functionality supports Chinese keyword search.</li>\n<li>Updated the English Wiki</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签:</strong> Wiki_26_02_02_18_20</p>\n<ul>\n<li>创建独立的技术更新日志，专门记录底层框架和核心服务变更</li>\n<li>Wiki界面新增明暗主题切换</li>\n<li>新增<strong>数据结构</strong>模块，整理了SPTData中常用的类型和资产\n<ul>\n<li>关于<code>0. 了解模组数据结构(可选).md</code>\n<ul>\n<li>提取其中关于X的信息移动到新模块，X新增数据类型信息与在数据文件中写法列</li>\n<li>X: BaseInfo, DrinkFoodInfo, MedicalInfo BuffsInfo, AttributeInfo</li>\n</ul>\n</li>\n<li>新增完整的SPT常用数据结构文档，涵盖Buff、LocaleDetails、Prefab、MongoId等核心类型</li>\n<li>创建SPT数据文件说明，包含globals.json和items.json的详细解释</li>\n</ul>\n</li>\n<li>修复effects_damage键的示例说明错误</li>\n<li>移除了整理数据结构后重复的Wiki界面</li>\n<li>新增Wiki跳转外部链接时会在新标签页跳转</li>\n<li>搜索功能提供对中文关键字的支持</li>\n<li>更新英文Wiki</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.0.5",
+      "content_length": 889343,
+      "mod_version_constraint": "~0.0.4",
+      "downloads": 45,
+      "published_at": "2026-02-02T11:25:00.000000Z",
+      "created_at": "2026-02-02T11:25:13.000000Z",
+      "updated_at": "2026-07-28T09:59:16.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1b03e878067e28a9781f651c3f01fee7e3d3384049fdc555072963a2debc596d/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/7a27bd5f-26c9-43af-b2f1-b89bd5b52d09?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A17%3A09Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_02_02_18_20.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A16%3A53Z&ske=2026-08-01T21%3A17%3A09Z&sks=b&skv=2018-11-09&sig=Wszwg9VV5gsWRKSBolqSxXo%2FV%2BV%2FNNhkUPh2TKE4f7Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NiwibmJmIjoxNzg1NjE2MTY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5zskKy0HSBYP6hmJ0-jIfOG3mElJGJ9YNvlE-jYDlmA&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_02_02_18_20.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 44,
+      "version": "0.0.4",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag:</strong> Wiki_26_01_30_14_45</p>\n<p><strong>New Features:</strong></p>\n<ul>\n<li>Added commonly used MongoDB ObjectId (<code>MongoId</code>) constants for <code>ParentId</code>.</li>\n<li>Added color string constants for <code>BackgroundColor</code>.</li>\n<li>Added support for new field data introduced after version v0.0.3.</li>\n</ul>\n<p><strong>Fixes &amp; Improvements:</strong></p>\n<ul>\n<li>Fixed potentially ambiguous text and clarified previously unclear information in the codebase/documentation.</li>\n<li>Refactored and reorganized the Wiki documentation.</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签:</strong> Wiki_26_01_30_14_45</p>\n<p><strong>新增功能：</strong></p>\n<ul>\n<li>新增了常用的 <code>ParentId</code> 相关的 MongoDB ObjectId (<code>MongoId</code>) 常量数据。</li>\n<li>新增了 <code>BackgroundColor</code> 相关的颜色字符串常量数据。</li>\n<li>新增了对 v0.0.3 版本之后引入的新字段数据的适配支持。</li>\n</ul>\n<p><strong>修复与改进：</strong></p>\n<ul>\n<li>修复了代码库/文档中可能引起歧义的文本，澄清了过去表述不清的信息。</li>\n<li>重新整理并重构了 Wiki 文档。</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.0.4",
+      "content_length": 1110850,
+      "mod_version_constraint": "~0.0.3",
+      "downloads": 15,
+      "published_at": "2026-01-30T07:00:00.000000Z",
+      "created_at": "2026-01-30T07:01:55.000000Z",
+      "updated_at": "2026-07-28T09:59:06.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e3d6ec1755f3097da15db1c68656e81944144c81fbae5a727d5c3be3fa97b3c1/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/fdf4ed62-d2c8-4580-9403-fd440003b0a4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A04Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_01_30_14_45.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A47Z&ske=2026-08-01T21%3A14%3A04Z&sks=b&skv=2018-11-09&sig=fX%2BEaJSC5nHhU7DZlL9H2gB7Tr3UIWKW0bBcza%2BpJfk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NywibmJmIjoxNzg1NjE2MTY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EX4kYC5euuqM9W70lc5tsm7sx4F9UEjGQHg7JSMGWN4&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_01_30_14_45.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 42,
+      "version": "0.0.3",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag:</strong> Wiki_26_01_28_14_00</p>\n<ul>\n<li>Restructured the organization of update logs in the Wiki documentation, separating mod updates from Wiki updates.</li>\n<li>Clarified potentially ambiguous text in Wiki\\docs\\README.md.</li>\n<li>Corrected field descriptions in the mod documentation, explicitly defining the priority rules for the <code>propertyOverride</code> attribute.</li>\n<li>Enhanced update logs with detailed descriptions and solutions for known issues.</li>\n<li>Added usage instructions and requirements for code examples to all constant documentation pages.</li>\n<li>Improved ammunition-related constant documentation with clear type usage guidelines.</li>\n<li>Standardized the format of currency and trader ID documents, emphasizing the required MongoId string format.</li>\n<li>Updated rarity constant documentation to clearly support both Chinese and English key values.</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签:</strong> Wiki_26_01_28_14_00</p>\n<ul>\n<li>重构了Wiki文档中对更新日志的组织方式，将模组更新与Wiki更新分开管理。</li>\n<li>修正了 Wiki\\docs\\README.md 中可能引起歧义的文本表述。</li>\n<li>修正模组字段说明，明确 <code>propertyOverride</code> 属性的优先级规则。</li>\n<li>补充更新日志中的已知问题描述，并提供相应的处理方案。</li>\n<li>为所有常量文档添加使用说明和使用示例要求，提升实用性。</li>\n<li>完善子弹相关常量文档，增加类型使用指引。</li>\n<li>统一货币和商人ID文档格式，强调MongoId字符串格式要求。</li>\n<li>更新稀有度常量说明，明确支持中英文双语键值。</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.0.3",
+      "content_length": 1100067,
+      "mod_version_constraint": "~0.0.2",
+      "downloads": 15,
+      "published_at": "2026-01-28T06:00:00.000000Z",
+      "created_at": "2026-01-28T07:11:47.000000Z",
+      "updated_at": "2026-07-28T09:59:00.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/210d6daa4619d5ff7b8ce256bdf6751bac77927348b96a33f1348941809202f4/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/fc0cdd84-d378-4ba9-84ba-9432fa87e923?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A40Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_01_28_14_00.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A42Z&ske=2026-08-01T21%3A26%3A40Z&sks=b&skv=2018-11-09&sig=EAyVDIA8vh5U7PBScooq7j5cFX5JwWU4hTFuOAz8GWE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NywibmJmIjoxNzg1NjE2MTY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EX4kYC5euuqM9W70lc5tsm7sx4F9UEjGQHg7JSMGWN4&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_01_28_14_00.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 41,
+      "version": "0.0.2",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag:</strong> Wiki_26_01_23_19_00\n<strong>Minimum Mod Version:</strong> v0.0.2</p>\n<ul>\n<li>Added explanations for the new fields <code>allowAll</code>, <code>canFilter</code>, and <code>cantFilter</code> in the section <strong>1. Fields Used by the Mod</strong>.</li>\n<li>Fixed incorrect descriptions of usage methods in constants related to food, drinks, and medical items; both <code>effects_health</code> and <code>effects_damage</code> now correctly support using enum key names as effect keys.</li>\n<li>Updated handbook item IDs and added detailed IDs for weapon accessories, containers, safes, and other item types.</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签:</strong> Wiki_26_01_23_19_00\n<strong>最低模组版本：</strong> v0.0.2</p>\n<ul>\n<li>在<strong>1. 模组用到的字段</strong>中新增了对 <code>allowAll</code>、<code>canFilter</code>、<code>cantFilter</code> 字段的说明。</li>\n<li>修复了饮品、食物与药品相关常量中对使用方式的错误描述，无论是 <code>effects_health</code> 还是 <code>effects_damage</code>，均支持使用枚举的键名作为效果键。</li>\n<li>更新了手册类型ID，补充了详细的武器配件、容器、安全箱等物品类型的ID。</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.0.2",
+      "content_length": 1098737,
+      "mod_version_constraint": "~0.0.2",
+      "downloads": 0,
+      "published_at": "2026-01-23T11:00:00.000000Z",
+      "created_at": "2026-01-28T07:03:41.000000Z",
+      "updated_at": "2026-07-28T09:59:02.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/deb59465687cf84fc23531feebda3ca1f5ee38931f30e7381d9cd8de0c7fc6ca/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/b571dd7e-c653-49ea-a83c-e17771def956?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A14Z&rscd=attachment%3B+filename%3DSptItemCreatorWiki_26_01_23_19_00.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A44Z&ske=2026-08-01T21%3A08%3A14Z&sks=b&skv=2018-11-09&sig=mKD32Bz7D1QfxbIQv6MJws622TFdxUo56JkV4QBchKo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NywibmJmIjoxNzg1NjE2MTY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EX4kYC5euuqM9W70lc5tsm7sx4F9UEjGQHg7JSMGWN4&response-content-disposition=attachment%3B%20filename%3DSptItemCreatorWiki_26_01_23_19_00.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 40,
+      "version": "0.0.1",
+      "description": "<h2>English</h2>\n<p><strong>Wiki Tag:</strong> Wiki_26_01_23_12_33</p>\n<p><strong>Minimum Mod Version:</strong> v0.0.1</p>\n<ul>\n<li>Established a complete Wiki directory structure based on <a target=\"_blank\" class=\"external-link\" href=\"https://www.mkdocs.org/\" rel=\"noreferrer noopener\">Python MkDocs</a>, including homepage, update logs, and Git commit tag guidelines.</li>\n<li>Introduced a comprehensive constant documentation system, with detailed files categorized by type such as ammunition, MongoId, and medical items.</li>\n<li>Added a full item creation tutorial, covering four chapters: field explanations, data structures, file creation, and model integration.</li>\n<li>Optimized README structure by removing redundant constant lists and adding Wiki navigation and custom model configuration instructions.</li>\n<li>Fixed syntax errors in merchant ID documentation, standardized all document formats, and provided complete JSON and C# enum references.</li>\n<li>Integrated the MkDocs documentation system with support for Chinese interface and theme switching, featuring shortcut keys (?/n/p/s) for navigation, along with comprehensive technical documentation and API links.</li>\n<li>Enhanced constant file usage guides with practical examples and application scenarios to improve usability.</li>\n</ul>\n<h2>中文</h2>\n<p><strong>Wiki 标签:</strong> Wiki_26_01_23_12_33</p>\n<p><strong>最低模组版本：</strong> v0.0.1</p>\n<ul>\n<li>创建完整的基于 <a target=\"_blank\" class=\"external-link\" href=\"https://www.mkdocs.org/\" rel=\"noreferrer noopener\">Python MkDocs</a> 的Wiki目录结构，包含主页、更新日志和Git提交标签规范指南。</li>\n<li>新增常量文档体系，拆分为子弹、MongoId、医疗等分类的详细常量文件。</li>\n<li>新增物品创建完整教程，包含字段解析、数据结构、文件创建和模型添加四章内容。</li>\n<li>优化README结构，移除冗余常量列表，增加Wiki导航和自定义模型配置说明。</li>\n<li>修复商人Id文档语法错误，统一所有文档格式，提供完整的JSON和C#枚举参考。</li>\n<li>集成MkDocs文档系统，支持中文界面和主题切换，提供快捷键帮助（?/n/p/s），并整合全面的技术文档与API链接。</li>\n<li>完善常量文件使用说明，增加具体示例和使用场景说明，提高文档实用性。</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/addon/download/29/spt-item-creator-wiki/0.0.1",
+      "content_length": 1094522,
+      "mod_version_constraint": "~0.0.1",
+      "downloads": 2,
+      "published_at": "2026-01-23T04:33:00.000000Z",
+      "created_at": "2026-01-28T06:37:37.000000Z",
+      "updated_at": "2026-07-28T09:58:58.000000Z",
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/374e447d223d889ac3fb5bbcea0a4dd84a9a1b19831efe5e6c330a739e00d1a5/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1139320364/b604e280-9469-4405-98bd-5b9b8544315d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A16Z&rscd=attachment%3B+filename%3Dwiki.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A09Z&ske=2026-08-01T21%3A23%3A16Z&sks=b&skv=2018-11-09&sig=EG0QCYs8phVl7WTv0nIaZWRdATbHqFHNJ%2BPum6PMlj0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2OCwibmJmIjoxNzg1NjE2MTY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.d8BXd5Ucz5KsO4aru4TdCKb12x6VrZQFogB627pm_X8&response-content-disposition=attachment%3B%20filename%3Dwiki.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:10:41.959Z",
+    "discoveredBy": "addon-index",
+    "error": null
+  }
+}

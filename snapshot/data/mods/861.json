@@ -1,0 +1,358 @@
+{
+  "type": "mod",
+  "id": 861,
+  "hub_id": 1159,
+  "guid": "vip.tommysoucy.morecheckmarks",
+  "name": "MoreCheckmarks",
+  "slug": "morecheckmarks",
+  "teaser": "A mod that adds checkmarks and more detailed tooltips to items to indicate if it is needed for hideout upgrades, quests, or if it is on your wishlist",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1159.png",
+  "downloads": 483217,
+  "favourites_count": 174,
+  "description": "<h1>MoreCheckmarks v2.2.0 - SPT 4.0 Update</h1>\n<h2>Overview</h2>\n<p>A mod for SPT that shows colored checkmarks on items needed for hideout upgrades, quests, wishlist, barters, and crafting recipes.</p>\n<p>The tooltip displays detailed information about what each item is needed for, including counts and specific module/quest/recipe names.</p>\n<hr />\n<h2>Features</h2>\n<h3>Checkmark Colors</h3>\n<ul>\n<li><strong>RED</strong> - Item is needed for hideout but you need <strong>more</strong> to fulfill the requirement of at least one module</li>\n<li><strong>GREEN</strong> - Item is needed for hideout and you have <strong>enough</strong> to fulfill the requirements (behavior configurable - see <code>Fulfilled Any Can Be Upgraded</code> setting)</li>\n<li><strong>YELLOW</strong> - Item is needed for a quest/task</li>\n<li><strong>BLUE</strong> - Item is on your wishlist</li>\n<li><strong>MAGENTA</strong> - Item is needed for a trade/barter</li>\n<li><strong>CYAN</strong> - Item is needed for a crafting recipe</li>\n</ul>\n<p>All colors are fully customizable in the config.</p>\n<h3>Tooltip Information</h3>\n<ul>\n<li>Shows “found in raid count” / “total count in stash”</li>\n<li>Individual color coding for each module (green, red, or blue) based on whether you have enough for that specific module</li>\n<li>Shows counts: (current count in stash / total count needed by all modules)</li>\n<li>Lists all quests, hideout modules, barters, and crafts the item is needed for</li>\n</ul>\n<h3>“Take” Action Color Coding</h3>\n<p>If the “Take” option is available when picking up loose loot, it will be color coded to match the checkmark system.</p>\n<h3>Quest Item Handling</h3>\n<p>If an item is needed for a quest or is found in raid (so would already have a checkmark), it will show the appropriate color but still display the quest information in the tooltip.</p>\n<hr />\n<h2>What’s New in v2.0.0</h2>\n<h3>🎮 F12 In-Game Configuration Menu</h3>\n<p><em>Almost</em> all settings are now accessible through BepInEx’s F12 configuration menu! No more editing config files manually.</p>\n<ul>\n<li><strong>Live color pickers</strong> with RGB sliders</li>\n<li><strong>Organized categories</strong>: Hideout, Quests, Barter &amp; Craft, Priority, Colors</li>\n<li><strong>Hoverable descriptions</strong> explaining each setting</li>\n<li>Changes apply after switching menus (e.g., leave stash → main menu → return)</li>\n</ul>\n<h3>🎯 Quest Prerequisite Display</h3>\n<p>When enabled, the tooltip now shows how many prerequisite quests you need to complete before each quest becomes available:</p>\n<ul>\n<li><strong>Color-coded status</strong>:\n<ul>\n<li>🟢 <strong>Green</strong> <code>(0 prereqs)</code> - Quest is available now</li>\n<li>🟡 <strong>Yellow</strong> <code>(1-9 prereqs)</code> - Quest is close to being unlocked</li>\n<li>⚪ <strong>Gray</strong> <code>(10+ prereqs)</code> - Quest is far away (e.g., Collector)</li>\n</ul>\n</li>\n<li><strong>Smart sorting</strong> - Quests are sorted by prerequisite count, so items needed for soon-to-be-available quests appear first</li>\n<li>Can be disabled in settings if you prefer the classic view</li>\n</ul>\n<hr />\n<h2>Installation</h2>\n<ol>\n<li>Download and extract the zip file into your SPT game folder</li>\n<li>You should end up with:\n<ul>\n<li><code>BepInEx/plugins/MoreCheckmarks/MoreCheckmarks.dll</code></li>\n<li><code>BepInEx/plugins/MoreCheckmarks/MoreCheckmarksAssets</code></li>\n<li><code>SPT/user/mods/MoreCheckmarksBackend/MoreCheckmarksBackend.dll</code></li>\n</ul>\n</li>\n</ol>\n<hr />\n<h2>Configuration</h2>\n<p>Press <strong>F12</strong> in-game to access all settings. Below are the available options:</p>\n<h3>Hideout Settings</h3>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Show Hideout Checkmarks</strong></td>\n<td>Show checkmark and tooltip for hideout areas this item is needed for. Default on. When disabled, no hideout checkmark or “Needed for area” tooltip section is shown.</td>\n</tr>\n<tr>\n<td><strong>Fulfilled Any Can Be Upgraded</strong></td>\n<td>When TRUE, shows fulfilled checkmark when AT LEAST ONE hideout module can be upgraded. When FALSE, shows fulfilled only when ALL modules requiring this item can be upgraded.</td>\n</tr>\n<tr>\n<td><strong>Show Future Module Levels</strong></td>\n<td>Show requirements for future hideout module levels instead of only the next one.</td>\n</tr>\n<tr>\n<td><strong>Only Show Hideout Checkmark On FIR Items</strong></td>\n<td>When enabled, hideout needs only drive the checkmark for Found In Raid (FIR) items. Non-FIR items get no hideout checkmark (quests, wishlist, barters, and crafts can still show one). The “Needed for area” tooltip lines are still shown.</td>\n</tr>\n</tbody>\n</table>\n<h3>Quest Settings</h3>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Show Quest Checkmarks</strong></td>\n<td>Show checkmark and tooltip for quests this item is needed for. Default on. When disabled, no quest checkmark or quest tooltip section is shown.</td>\n</tr>\n<tr>\n<td><strong>Include Future Quests</strong></td>\n<td>Consider future quests when checking which quests an item is required for. If false, behaves like vanilla.</td>\n</tr>\n<tr>\n<td><strong>Show Prerequisite Count</strong></td>\n<td>Show the number of prerequisite quests needed before each quest becomes available, with color coding and sorting.</td>\n</tr>\n<tr>\n<td><strong>Show Quest Checkmarks for Non-FIR Items</strong></td>\n<td>When enabled, quest checkmarks appear on items even if they aren’t found in raid. Useful if your SPT is configured to accept non-FIR items for quest turn-ins. This is about whether <em>your stored item</em> is FIR.</td>\n</tr>\n<tr>\n<td><strong>Only Show FiR-Required Quests</strong></td>\n<td>When enabled, quest checkmarks only appear for quests that <strong>require</strong> the item to be Found In Raid. Quests that accept non-FIR items (e.g. Ragman’s <em>Hot Delivery</em>) won’t show a quest checkmark. This is about whether the <strong>quest</strong> requires FIR — separate from the option above. Default off; hardcore players should leave it off.</td>\n</tr>\n</tbody>\n</table>\n<h3>Barter &amp; Craft Settings</h3>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Show Barter</strong></td>\n<td>Show checkmark and tooltip for barter/trades this item is needed for.</td>\n</tr>\n<tr>\n<td><strong>Show Craft</strong></td>\n<td>Show checkmark and tooltip for crafting recipes this item is needed for.</td>\n</tr>\n<tr>\n<td><strong>Show Future Craft</strong></td>\n<td>Show crafting recipes for hideout areas of higher level than current.</td>\n</tr>\n</tbody>\n</table>\n<h3>Priority Settings</h3>\n<p>These settings decide which checkmark color to display when an item is needed for multiple things. Higher number = higher priority.</p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Quest Priority</strong></td>\n<td>Priority for quest checkmarks</td>\n</tr>\n<tr>\n<td><strong>Hideout Priority</strong></td>\n<td>Priority for hideout checkmarks</td>\n</tr>\n<tr>\n<td><strong>Wishlist Priority</strong></td>\n<td>Priority for wishlist checkmarks</td>\n</tr>\n<tr>\n<td><strong>Barter Priority</strong></td>\n<td>Priority for barter checkmarks</td>\n</tr>\n<tr>\n<td><strong>Craft Priority</strong></td>\n<td>Priority for craft checkmarks</td>\n</tr>\n</tbody>\n</table>\n<h3>Color Settings</h3>\n<p>All colors can be customized using RGB sliders. Default colors:</p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Need More Color</strong></td>\n<td>Light Red</td>\n</tr>\n<tr>\n<td><strong>Fulfilled Color</strong></td>\n<td>Light Green</td>\n</tr>\n<tr>\n<td><strong>Wishlist Color</strong></td>\n<td>Light Blue</td>\n</tr>\n<tr>\n<td><strong>Barter Color</strong></td>\n<td>Magenta</td>\n</tr>\n<tr>\n<td><strong>Craft Color</strong></td>\n<td>Cyan</td>\n</tr>\n</tbody>\n</table>\n<h3>Server Configuration (<code>config.json</code>)</h3>\n<p>Some quest-hiding options live in a server-side config file rather than the F12 menu, since they require server data. The file is created automatically with defaults on first server start at:</p>\n<p><code>SPT/user/mods/MoreCheckmarksBackend/config.json</code></p>\n<table>\n<thead>\n<tr>\n<th>Setting</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong><code>hideInactiveEventQuests</code></strong></td>\n<td><code>true</code></td>\n<td>Hide checkmarks for inactive seasonal/event quests (Christmas, Halloween, etc.) that aren’t currently active. Set to <code>false</code> to show them like before.</td>\n</tr>\n<tr>\n<td><strong><code>excludedQuestIds</code></strong></td>\n<td><code>[]</code></td>\n<td>A list of quest IDs to completely ignore (no checkmarks). Useful for quests you never do (e.g. <em>Compensation For Damage</em>).</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Finding quest IDs:</strong> On every server start, the mod writes a readable lookup file next to the config at <code>SPT/user/mods/MoreCheckmarksBackend/quest-id-reference.txt</code>, listing every quest as <code>Quest Name [Trader] = questId</code>. Copy the IDs you want to hide into <code>excludedQuestIds</code>, for example:</p>\n<pre><code>{\n  \"hideInactiveEventQuests\": true,\n  \"excludedQuestIds\": [\"5c0bd94186f7747a727f09b2\"]\n}\n</code></pre>\n<p>Changes to <code>config.json</code> take effect after a server restart.</p>\n<hr />\n<h2>Compatibility</h2>\n<ul>\n<li><strong>SPT Version</strong>: 4.0.x</li>\n<li><strong>Required</strong>: BepInEx (included with SPT)</li>\n</ul>\n<hr />\n<h2>Credits</h2>\n<p>Original mod by <strong>TommySoucy</strong>. SPT 4.0 port and new features by TommySoucy &amp; Bewa.</p>\n<hr />\n<h2>Changelog</h2>\n<h3>v2.2.0</h3>\n<ul>\n<li>The “Needed for area” tooltip count is now FIR-aware: when “Only Show Hideout Checkmark On FIR Items” is enabled, the possessed number reflects only your Found In Raid items instead of your total count.</li>\n<li>Clearer STASH tooltip wording - now reads “X found in raid / Y total” instead of “X/Y”.</li>\n<li>Added “Show Quest Checkmarks” option (Quests section) - toggle quest checkmarks and the quest tooltip section on or off. Default on.</li>\n<li>Added “Show Hideout Checkmarks” option (Hideout section) - toggle hideout checkmarks and the “Needed for area” tooltip section on or off. Default on.</li>\n<li>Added “Only Show Hideout Checkmark On FIR Items” option (Hideout section) - hideout needs only drive the checkmark for Found In Raid items; non-FIR items get no hideout checkmark (other reasons still apply). Default on.</li>\n<li>Added “Only Show FiR-Required Quests” option (Quests section) - hides quest checkmarks for items whose quest doesn’t require Found In Raid (e.g. Ragman’s Hot Delivery). Default off, so existing behavior is unchanged unless enabled.</li>\n<li>Added server-side <code>config.json</code> with <code>hideInactiveEventQuests</code> (default on) to hide inactive seasonal/event quests, and <code>excludedQuestIds</code> to hide specific quests you never do. A <code>quest-id-reference.txt</code> lookup file is generated on server start to help find quest IDs for the exclusion list.</li>\n</ul>\n<h3>V2.1.1</h3>\n<ul>\n<li>Refactor codebase to improve maintainability.</li>\n</ul>\n<h3>v2.1.0</h3>\n<ul>\n<li>Fixed barter checkmarks not displaying (server was returning empty data)</li>\n<li>Added “Show Quest Checkmarks for Non-FIR Items” option in F12 menu (Quests section) - enables quest checkmarks on items that aren’t found in raid, useful for SPT configurations that accept non-FIR items for quest turn-ins</li>\n</ul>\n<h3>v2.0.0</h3>\n<ul>\n<li>Full port to SPT 4.0</li>\n<li>Added F12 in-game configuration menu (replaces Config.json)</li>\n<li>Added quest prerequisite count display with color coding</li>\n<li>Added smart sorting of quests by prerequisite count</li>\n<li>Fixed quest filtering to properly include future quests</li>\n<li>Various bug fixes and improvements</li>\n</ul>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/861/morecheckmarks",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Dumb code, configuration logic, build configuration, bug fixes / minor improvements (code reviewed)</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2023-04-20T23:07:00.000000Z",
+  "created_at": "2023-04-20T23:07:02.000000Z",
+  "updated_at": "2026-07-28T09:21:56.000000Z",
+  "owner": {
+    "id": 22726,
+    "name": "VIPkiller17",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=V&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2022-09-27T17:53:43.000000Z",
+    "updated_at": "2026-07-09T18:55:00.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 61806,
+      "name": "Bewa",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/WVF4iWlojuCC533m3BCZ9yUlPjkg0Ye6HJzkzaNn.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-08-19T23:42:17.000000Z",
+      "updated_at": "2026-07-27T02:11:23.000000Z"
+    },
+    {
+      "id": 73498,
+      "name": "ScottieKnowz",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2025-02-15T01:29:31.000000Z",
+      "updated_at": "2025-09-26T15:41:05.000000Z"
+    }
+  ],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/TommySoucy/MoreCheckmarks",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13909,
+      "hub_id": null,
+      "version": "2.2.0",
+      "description": "<ul>\n<li>The “Needed for area” tooltip count is now FIR-aware: when “Only Show Hideout Checkmark On FIR Items” is enabled, the possessed number reflects only your Found In Raid items instead of your total count.</li>\n<li>Clearer STASH tooltip wording - now reads “X found in raid / Y total” instead of “X/Y”.</li>\n<li>Added “Show Quest Checkmarks” option (Quests section) - toggle quest checkmarks and the quest tooltip section on or off. Default on.</li>\n<li>Added “Show Hideout Checkmarks” option (Hideout section) - toggle hideout checkmarks and the “Needed for area” tooltip section on or off. Default on.</li>\n<li>Added “Only Show Hideout Checkmark On FIR Items” option (Hideout section) - hideout needs only drive the checkmark for Found In Raid items; non-FIR items get no hideout checkmark (other reasons still apply). Default on.</li>\n<li>Added “Only Show FiR-Required Quests” option (Quests section) - hides quest checkmarks for items whose quest doesn’t require Found In Raid (e.g. Ragman’s Hot Delivery). Default off, so existing behavior is unchanged unless enabled.</li>\n<li>Added server-side <code>config.json</code> with <code>hideInactiveEventQuests</code> (default on) to hide inactive seasonal/event quests, and <code>excludedQuestIds</code> to hide specific quests you never do. A <code>quest-id-reference.txt</code> lookup file is generated on server start to help find quest IDs for the exclusion list.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/2.2.0",
+      "content_length": 104641,
+      "spt_version_constraint": "~4.0",
+      "downloads": 13152,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-27T21:40:00.000000Z",
+      "created_at": "2026-06-27T21:41:49.000000Z",
+      "updated_at": "2026-07-28T09:21:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/509b70a1608c6f1a52075ff9c9b8ef516ec6a7308eeae889fb01718743e63587?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/ea418e0e-db88-416e-ba2b-56739f4e742b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A34Z&rscd=attachment%3B+filename%3DMoreCheckmarks-v2.2.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A26Z&ske=2026-08-01T21%3A06%3A34Z&sks=b&skv=2018-11-09&sig=PUMLV%2F1Rlz3%2FPOTEFZKj3Mosv3a8KKFGNNrqt9Exw7s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-v2.2.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12835,
+      "hub_id": null,
+      "version": "2.1.0",
+      "description": "<ul>\n<li>Fixed barter checkmarks not displaying (server was returning empty data)</li>\n<li>Added “Show Quest Checkmarks for Non-FIR Items” option in F12 menu (Quests section) - enables quest checkmarks on items that aren’t found in raid, useful for SPT configurations that accept non-FIR items for quest turn-ins</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/2.1.0",
+      "content_length": 103879,
+      "spt_version_constraint": "4.0.11",
+      "downloads": 37996,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-11T21:21:00.000000Z",
+      "created_at": "2026-01-11T21:21:58.000000Z",
+      "updated_at": "2026-07-28T07:51:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/63a2ac1a041a99fe32ca6012374f29df7ebcc3927738a60a6c3bebe054e65d5b?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/4f1eb599-edd3-4806-8d6f-19858998f1af?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A45Z&rscd=attachment%3B+filename%3DMoreCheckmarks-v2.1.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A29Z&ske=2026-08-01T21%3A04%3A45Z&sks=b&skv=2018-11-09&sig=eoQulBdMg%2FOsd1v2dEG41eGlfyrmacATGWGFznfbQ7w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-v2.1.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12536,
+      "hub_id": null,
+      "version": "2.0.1",
+      "description": "<h2>MoreCheckmarks v2.0.1</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>Fixed crash on new profiles</strong> - Mod no longer breaks when launching with a fresh profile</li>\n<li><strong>Fixed quest tooltips not updating</strong> - Completed quests now immediately disappear from item tooltips without requiring a game restart</li>\n<li><strong>Fixed performance issue</strong> - Resolved server request spam when opening menus</li>\n</ul>\n<h3>Improvements</h3>\n<ul>\n<li><strong>New profile support</strong> - Quest checkmarks now appear immediately on new profiles, you don’t need to accept a quest for them to appear</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/2.0.1",
+      "content_length": 103725,
+      "spt_version_constraint": "4.0.7",
+      "downloads": 14454,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-07T02:19:00.000000Z",
+      "created_at": "2025-12-07T02:19:07.000000Z",
+      "updated_at": "2026-07-28T07:02:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09934c6ef96e3412b8b9b0e42a7917ba5b2896729cd8fb9d12575aef8d4a1006?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/fe39815c-0e3c-4079-a209-75afe4f0e577?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A13Z&rscd=attachment%3B+filename%3DMoreCheckmarks-v2.0.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A11Z&ske=2026-08-01T21%3A09%3A13Z&sks=b&skv=2018-11-09&sig=AGjwKNTrRh1P5l%2FANl4F0ZhMiH9RZbrS466FT6%2B0aNA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-v2.0.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12525,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h1>MoreCheckmarks v2.0.0 - SPT 4.0 Update</h1>\n<blockquote>\n<p>⚠️ <strong>Note:</strong> This is a complete port to SPT 4.0. As with any major update, there may be bugs or unexpected behavior. Please be patient while we iron out any kinks, and don’t hesitate to report any issues you encounter!</p>\n</blockquote>\n<hr />\n<ul>\n<li>Full port to SPT 4.0</li>\n<li>Added F12 in-game configuration menu (replaces Config.json)</li>\n<li>Added quest prerequisite count display with color coding</li>\n<li>Added smart sorting of quests by prerequisite count</li>\n<li>Fixed quest filtering to properly include future quests</li>\n<li>Various bug fixes and improvements</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/2.0.0",
+      "content_length": 103230,
+      "spt_version_constraint": "~4.0",
+      "downloads": 2326,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-05T03:29:00.000000Z",
+      "created_at": "2025-12-05T03:29:17.000000Z",
+      "updated_at": "2026-07-28T07:01:57.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6760514a25ab0461e0e8805a180f14ef8d5f1b0779042d701bfc32750457d796?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/1f86a4dd-03ab-42f7-94e9-ee0533d31d0d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A06Z&rscd=attachment%3B+filename%3DMoreCheckmarks-v2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A17Z&ske=2026-08-01T21%3A26%3A06Z&sks=b&skv=2018-11-09&sig=EYHtp7WTV1ixaN0DDkc5lfgB2Y2gTrFLen4XV3dXa5c%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-v2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1076,
+      "hub_id": 13707,
+      "version": "1.5.17",
+      "description": "<p>* Fixes a small issue with profile selector being patched incorrectly</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.17",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 74977,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-20T22:06:14.000000Z",
+      "created_at": "2025-03-20T22:06:14.000000Z",
+      "updated_at": "2026-05-14T02:03:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/6be0a525-7f85-4bd8-9e73-f28bc0158d06?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A36Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.17-for-3.11.1-35392.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A23%3A45Z&ske=2026-08-01T21%3A24%3A36Z&sks=b&skv=2018-11-09&sig=epoFGTneU5xa4ATWWfU3OQV%2FwKhMjEskOXkCp%2BTwhuo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.17-for-3.11.1-35392.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1237,
+      "hub_id": 13533,
+      "version": "1.5.16",
+      "description": "<p>* Updated for 3.11.0 - 35392</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.16",
+      "content_length": null,
+      "spt_version_constraint": "3.11.0",
+      "downloads": 4170,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T19:48:25.000000Z",
+      "created_at": "2025-03-15T19:48:25.000000Z",
+      "updated_at": "2026-05-14T02:08:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/d31a94be-4109-4c93-9a1e-1aeae95443e7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A24%3A13Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.16-for-3.11.0-35392.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A03Z&ske=2026-08-01T21%3A24%3A13Z&sks=b&skv=2018-11-09&sig=bJwDMtNRWYXHsPmeA4T6Bqa7tyLxQSoUqEyKRWAiDpI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.16-for-3.11.0-35392.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2243,
+      "hub_id": 12379,
+      "version": "1.5.15+for-3100-33420",
+      "description": "<p>Update to SPT 3.10.0 - 33420</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.15+for-3100-33420",
+      "content_length": null,
+      "spt_version_constraint": "3.10.0",
+      "downloads": 55203,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-29T06:03:38.000000Z",
+      "created_at": "2024-11-29T06:03:38.000000Z",
+      "updated_at": "2026-05-14T03:18:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/98873794-b23e-41ba-841c-b5f29c930b2a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A35Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.15-for-3.10.0-33420.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A19Z&ske=2026-08-01T21%3A14%3A35Z&sks=b&skv=2018-11-09&sig=D2TXJbvcoAoS8w3Pi8BVhMGPO8dpFYkCimqm%2Fvl4XH8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.15-for-3.10.0-33420.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3702,
+      "hub_id": 10556,
+      "version": "1.5.14+for-390-30626",
+      "description": "<p>Updated for 3.9.0 - 30626</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.14+for-390-30626",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 79683,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T18:37:52.000000Z",
+      "created_at": "2024-07-07T18:37:52.000000Z",
+      "updated_at": "2026-05-14T03:55:26.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/92af9bc0-fc56-4620-9549-902adc8d2a41?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A07Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.14-for-3.9.0-30626.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A44Z&ske=2026-08-01T21%3A08%3A07Z&sks=b&skv=2018-11-09&sig=P2UYvs6mKyw5tTXZHqKLsWtKQhREEE5hXh4lGib6kjg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.14-for-3.9.0-30626.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4871,
+      "hub_id": 9133,
+      "version": "1.5.12+for-380-29197",
+      "description": "<p>Fix to handle custom quests from mods that forgot to update their database template to 3.8.0 (Artem and probably others)</p>\n<p>Quests that don’t have their database formatted properly will not function with MoreCheckmarks.</p>\n<p>Ping their modders if you want them to fix it.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.12+for-380-29197",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 8111,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-03T05:22:47.000000Z",
+      "created_at": "2024-04-03T05:22:47.000000Z",
+      "updated_at": "2026-07-13T18:05:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/TommySoucy/MoreCheckmarks/releases/tag/v1.5.12"
+      }
+    },
+    {
+      "id": 4960,
+      "hub_id": 9027,
+      "version": "1.5.11+for-380-29197",
+      "description": "<p>Update for 3.8.0 - 29197</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.11+for-380-29197",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 5610,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T21:44:56.000000Z",
+      "created_at": "2024-04-01T21:44:56.000000Z",
+      "updated_at": "2026-05-14T04:20:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/73cfcd0e-99e7-474a-86b6-f0a0195c50bb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A15%3A37Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.11-for-3.8.0-29197.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A14%3A43Z&ske=2026-08-01T21%3A15%3A37Z&sks=b&skv=2018-11-09&sig=EcjYyJgIquLNqj7tw7ZLkFGoH6qznLPL8ds8J7SoHwM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.11-for-3.8.0-29197.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5854,
+      "hub_id": 7869,
+      "version": "1.5.9+for-371-26535",
+      "description": "<p>Update to 3.7.1 - 26535</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/861/morecheckmarks/1.5.9+for-371-26535",
+      "content_length": null,
+      "spt_version_constraint": "3.7.1",
+      "downloads": 61783,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-15T17:39:20.000000Z",
+      "created_at": "2023-10-15T17:39:20.000000Z",
+      "updated_at": "2026-05-14T04:29:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/aebddd03aff62d3be5bbe64df1b523beb68ba32fe6a750a11f591f26c7b8ce76/detection",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/390853049/5913db2e-da9f-486a-80a1-365f724e0050?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A14Z&rscd=attachment%3B+filename%3DMoreCheckmarks-1.5.9-for-3.7.1-26535.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A11%3A55Z&ske=2026-08-01T21%3A12%3A14Z&sks=b&skv=2018-11-09&sig=NQMW1T7HpskoA12p0LJz3wpbgRpUz7AhIYOjDal5nAo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DMoreCheckmarks-1.5.9-for-3.7.1-26535.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 333,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:49:45.160Z",
+    "discoveredBy": "seed"
+  }
+}

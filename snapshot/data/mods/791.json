@@ -1,0 +1,1321 @@
+{
+  "type": "mod",
+  "id": 791,
+  "hub_id": 1062,
+  "guid": "me.sol.sain",
+  "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+  "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+  "teaser": "Bots that don't suck.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+  "downloads": 1240947,
+  "favourites_count": 436,
+  "description": "<p><strong>Report issues or bugs to here: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ArchangelWTF/SAIN/issues\" rel=\"noreferrer noopener\">SAIN Github Issue Tracker</a></strong></p>\n<p><strong>Any issues must include a full list of your server and client mods, the version of SPT you are playing on, and either your Bepinex/LogOutput file or an exact description of the issue you are experiencing and the context of when it occurred. Just telling me “its broken” is not helpful what so ever.</strong></p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p><strong>SAIN 3.0: New Features:</strong></p>\n<ul>\n<li>\n<p><strong>New Combat AI</strong></p>\n<ul>\n<li>Fully replaced combat logic.</li>\n<li>AI Will Run for cover while reloading and using first aid.</li>\n<li>Entirely new decision system and framework.</li>\n<li>Bots will move outside their bot-zones to investigate gunfire or chase enemies.</li>\n</ul>\n</li>\n<li>\n<p>Full Bot Customization and Difficulty Modifications while in-game.</p>\n<ul>\n<li>\n<p>Press f6 (Default Key) to open new in-game GUI.</p>\n</li>\n<li>\n<p>Includes difficulty presets that modify SAIN config settings.</p>\n<ul>\n<li>These presets have no influence on other difficulty options in other mods or the selected difficulty when starting a raid. They are ONLY for quickly changing SAIN gui settings.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>New Tracking of Last Known Position for bots.</p>\n<ul>\n<li>Bots will only use real sensory information to track where they last saw or heard you, and will remember that location for longer. Bots will share this info if they are in a group, and either using headsets, or close by to friendlies.</li>\n<li>When making lots of noise from 1 place, bots will get increasingly accurate information on where a sound came from, and be able to see their target from further away, and see them faster if they heard them from the same place that they currently are. Repositioning is key!</li>\n</ul>\n</li>\n<li>\n<p><strong>Bot Extracts</strong></p>\n<ul>\n<li>\n<p>PMCs and Scavs will move to extract at the end of raid, or if they are heavily injured and can’t heal.</p>\n</li>\n<li>\n<p>If using Looting Bots, SAIN will track how much loot they’ve gained during a raid (Net-Loot-Value) and can decide to leave if they are satisfied.</p>\n<ul>\n<li>Can be configured in “Looting Bots” tab in Global Settings.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>Bots React to you reloading, healing, pulling out grenades, pulling pins on grenades, using surgery, or looting.</strong></p>\n<ul>\n<li>Yes you can bait the AI now.</li>\n</ul>\n</li>\n<li>\n<p><strong>New Cover System for AI</strong></p>\n<ul>\n<li>Bots use objects around them in the real gameworld rather than preset static points.</li>\n<li>Anywhere there is NavMesh and objects, bots will take cover and fight properly.</li>\n</ul>\n</li>\n<li>\n<p><strong>New AI Personality System</strong></p>\n<ul>\n<li>Bots are assigned a personality preset that influences their decisions and talk behavior.</li>\n<li>Bots with excellent gear will be more aggressive, taunt their enemy, and wait for enemies to show up far less frequently.</li>\n<li>Currently Implemented: GigaChad, Snapping Turtle, Wreckless, Chad, Rat, Coward, Timmy, Normal.</li>\n</ul>\n</li>\n<li>\n<p>New Squad Personality System</p>\n<ul>\n<li>Groups of bots will have specific personalities that affects how vocal they are, their coordination, and their aggression level.</li>\n<li>Currently Implemented: GigaChads, Elite, TimmyTeam6, Rats, Normal</li>\n</ul>\n</li>\n<li>\n<p>**New Talk System</p>\n<ul>\n<li>\n<p>Solo bots are less talkative.</p>\n</li>\n<li>\n<p>Bot Groups now use a complex system to call out enemy locations, friendly status, their current actions, and requests to other group members in close proximity.</p>\n</li>\n<li>\n<p>Squad leaders will call out orders for bots based on the situation.</p>\n</li>\n<li>\n<p>Personality Specific Voice Behaviors</p>\n<ul>\n<li>Rats and Timmys may beg for their life and try to stop you from shooting them.</li>\n<li>Chads/GigaChads will taunt enemies.</li>\n<li>and a few secret rare events that I wont spoil.</li>\n</ul>\n</li>\n<li>\n<p>New AI Voice Response System</p>\n<ul>\n<li>AI of certain personalities will respond to voicelines from both the player, and other bots, so if you start talking shit, they might start talking back!</li>\n<li>Friendly bots will voice line back to you, so you can more easily tell when a friendly is nearby so you don’t lose that scav karma.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>New Squad Tactics</strong></p>\n<ul>\n<li>\n<p>Squads will work together.</p>\n<ul>\n<li>Groups of scavs and especially PMCs are far more dangerous than before. Think carefully before engaging a group of well armed PMCs!</li>\n<li>Squads will try to help friendly members if they are in trouble</li>\n<li>Squads regroup around their squad leader if they drift too far.</li>\n<li>Squads will suppress enemies around a corner while a friendly is retreating to heal or reload.</li>\n</ul>\n</li>\n<li>\n<p>New Squad Leader System</p>\n<ul>\n<li>Each group of bots is assigned a squad leader who gives commands and behaves differently.</li>\n<li>Killing this squad leader will leave groups less combat effective by disabling Squad Specific bot actions.</li>\n<li>Try to ID a squad leader and kill them first to make a group easier to deal with!</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>Bot Blind Fire</strong></p>\n<ul>\n<li>Bots will blindfire over objects in the direction of their enemy.</li>\n</ul>\n</li>\n<li>\n<p><strong>Advanced Search Behavior and Movement</strong></p>\n<ul>\n<li>Bots will try to peek corners and clear dangerous areas while searching for enemies.</li>\n</ul>\n</li>\n<li>\n<p><strong>Bots now make full use of stimulators and injectors in their inventory.</strong></p>\n</li>\n<li>\n<p><strong>Bots will use hand gestures to friendlies instead of voicelining if those friendlies are within line of sight.</strong></p>\n</li>\n<li>\n<p><strong>Certain equipment items provide buffs or debuffs to stealth against AI if further than 50 meters away. Will work on adding these to the description for items, and expanding on the system for easily adding new items or configuring these values in the future.</strong></p>\n<ul>\n<li><strong>Currently Implemented:</strong></li>\n<li><strong>Tan Ulach - 7.5% faster vision speed</strong></li>\n<li><strong>Blue Untar Helmet - 10% faster vision speed</strong></li>\n<li><strong>Boonie Hats - 20% slower vision speed</strong></li>\n<li><strong>Pilgrim Backpack - 10% faster vision speed</strong></li>\n<li><strong>RAID (couch) backpack - 7.5% faster vision speed.</strong></li>\n<li><strong>Any face cover - 5% slower vision speed.</strong></li>\n</ul>\n</li>\n<li>\n<p><strong>Revamped scatter system for bots based on their weapons recoil stats.</strong></p>\n<ul>\n<li>You can adjust this in the f12 menu. If a mod you are using lowers recoil for weapons, bots will also have reduced recoil!</li>\n<li>There are additional settings available if advanced settings are enabled in the f12 menu (Checkbox at the top) but I do not recommend messing with this without some fine tuning, or bots won’t be able to hit anything.</li>\n</ul>\n</li>\n<li>\n<p><strong>Flashlight detection and blinding for bots.</strong></p>\n<ul>\n<li>Bots can detect your flashlight beam being shined around and will investigate, they estimate the position and the accuracy is based on distance to to the object being illuminated.</li>\n<li>Bots are blinded by flashlights at close range, they will have increased recoil and slower aim speed.</li>\n</ul>\n</li>\n<li>\n<p><strong>Dynamic Lean.</strong></p>\n<ul>\n<li>Bots will lean based on objects around them and their enemies position, and can do so while peeking corners.</li>\n</ul>\n</li>\n<li>\n<p><strong>Weather affects bot visibility.</strong></p>\n<ul>\n<li>Poor weather conditions will actually have an affect on how well bots can see and how fast they see you.</li>\n</ul>\n</li>\n<li>\n<p><strong>More accurate time-of-day vision.</strong></p>\n<ul>\n<li>Bot vision will gradually reduce as darkness falls or increase as the sun rises. in vanilla, it changes very rapidly, but only after the sun is completely set.</li>\n</ul>\n</li>\n<li>\n<p><strong>Sound occlusion for bot hearing.</strong></p>\n<ul>\n<li>The distance bots can hear sounds is affected by objects between them and the source. The more objects - the higher the occlusion.</li>\n</ul>\n</li>\n<li>\n<p><strong>Gunshot audible range based on weapon caliber.</strong></p>\n<ul>\n<li>In Vanilla, bots hear all unsuppressed weapons at the same range. Now this scales depending on the caliber properly.</li>\n</ul>\n</li>\n<li>\n<p><strong>Subsonic ammo is quieter for bots.</strong></p>\n<ul>\n<li>Using a suppressor + subsonic ammo will have a dramatic effect on the range bots can hear your gunshots.</li>\n</ul>\n</li>\n<li>\n<p><strong>Rain affects bot hearing.</strong></p>\n<ul>\n<li>Heavy rain will reduce the range bots can hear sounds.</li>\n</ul>\n</li>\n<li>\n<p><strong>Semi-auto firemode swap for bots firing at 40+ meters.</strong></p>\n<ul>\n<li>Bots will automatically swap to semi auto when engaging targets at range.</li>\n</ul>\n</li>\n<li>\n<p><strong>Recoil, Ergo, Ammo-Type based fire-rate and full auto burst length.</strong></p>\n<ul>\n<li>How fast bots shoot is affected by their weapon stats. So low recoil guns will be fired in semi auto at a faster rate at long range, and bots will fire longer burts at close range.</li>\n</ul>\n</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Install</div>\n<div class=\"tab-content\"><h3>Installation</h3>\n<p>1) Open the downloaded .7z file in <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7-zip</a></p>\n<p>2) Select the folders in the .7z file in <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7-zip</a></p>\n<p>3) Drag the selected folders from <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7-zip</a> into your SPT folder</p>\n<p>4) If you couldn’t tell, you need <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7-zip</a> to extract this mod</p>\n<p>Demonstration Video:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://i.imgur.com/3N6gTe2.gif\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"3N6gTe2.gif\" /></a></p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">FAQ</div>\n<div class=\"tab-content\"><ul>\n<li>How do I install?\n<ul>\n<li>Just drag and drop the two folders in the downloaded zip into the folder you installed SPT to. Thats it.\n<ul>\n<li>If Installed correctly with BigBrain, you should see SAIN in the f12 menu while ingame, and SAIN being activated in the server when starting it.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>How do I configure the mod?\n<ul>\n<li>Press F6 while in-game.</li>\n</ul>\n</li>\n<li>Bots have wallhack!\n<ul>\n<li>They do not. Bots are hearing you.</li>\n<li>The intention is that if you can hear a bot, they can hear you.</li>\n<li>Stop sprinting everywhere, be aware that turning in place creates a skid noise and it can be heard by bots, just like a real player can hear it.</li>\n<li>If your character makes a noise, it can be heard with only a few exceptions.</li>\n<li>Bot hearing tries to simulate what a real player can hear to as close as possible, but I’m always tweaking and adjusting things.</li>\n</ul>\n</li>\n<li>My Spawns are messed up!\n<ul>\n<li>SAIN does not touch bot spawns, loadouts, or anything else that isn’t explicitly listed. SAIN is purely bot behavior and actions.</li>\n</ul>\n</li>\n<li>How do the difficulty presets work in the GUI?\n<ul>\n<li>The presets ONLY modify settings within the SAIN GUI. They have no impact on any other mod or what difficulty you select when starting a raid.</li>\n</ul>\n</li>\n<li>How do I make the bots smarter?\n<ul>\n<li>You can’t. There is no magical button to make ai do smarter or new things, it has to be manually programmed and designed, this is a replacement AI, so anything the bots do has to be designed and built.</li>\n</ul>\n</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Mod Compatibilty + Known Issues</div>\n<div class=\"tab-content\"><p><strong>Incompatibilities:</strong></p>\n<ul>\n<li><strong>ANY mod that modifies AI brain types will cause issues.</strong></li>\n<li><strong>Better Spawns Plus - Incompatible - Modifies bot brain types for some reason.</strong></li>\n<li><strong>No Bush ESP - Incompatible - Already implemented into SAIN.</strong></li>\n<li><strong>No Grenade ESP - Incompatible - SAIN requires bots to see grenades or hear the pop from them to react.</strong></li>\n<li><strong>No AI ESP - Implemented into SAIN. Do not use.</strong></li>\n<li><strong>No Boss PMCs - Incompatible - SAIN requires different brain types than No Boss PMCs uses</strong></li>\n<li><strong>Separate Hostility - Incompatible - Causes exception spam. Do not use.</strong></li>\n</ul>\n<p><strong>Known Issues:</strong></p>\n<ol>\n<li>Bots will sometimes get stuck in healing animations</li>\n<li>Bots will sometimes vault into places they can’t get down from. (Mostly resolved in recent versions, but can still happen sometimes)</li>\n<li>Sometimes random stuff in EFT code becomes null, and causes sain code to throw errors.</li>\n<li>Bots can do some stupid stuff sometimes, always working on it but creating code for every possible situation is difficult.</li>\n<li>Bots sometimes spin in place when trying to look to where they are trying to run, probably just need to adjust some distance thresholds to fix this.</li>\n<li>Bots like to crouch every time they start shooting a target that appears</li>\n<li>Bots hear gunshots/footsteps from way too far while in areas like the Reserve bunker</li>\n<li>Bots don’t take into consideration bodies in the place they are trying to search (will take a lot of rework and a new system to fix this)</li>\n<li>Tarkov is cursed and made of spaghetti code.</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Support the Project</div>\n<div class=\"tab-content\"><p><strong>I have a Patreon if you want to support my work. I am unemployed and a student, but I am working on this project full time 12+ hours a day, every day, and have been for over 4 months now. Every dollar helps!</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.patreon.com/Solarint\" rel=\"noreferrer noopener\">Link to Solarint’s Patreon</a></p></div></div></div>\n<p>**HUGE Thanks to everyone in the Discord who helped test the Alpha builds of 2.0. Ya’ll are the only reason this mod works as well as it does!</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+  "fika_compatibility": true,
+  "featured": true,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2023-03-09T02:46:00.000000Z",
+  "created_at": "2023-03-09T02:46:50.000000Z",
+  "updated_at": "2026-08-01T16:40:06.000000Z",
+  "owner": {
+    "id": 27463,
+    "name": "Solarint",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-02-23T17:11:59.000000Z",
+    "updated_at": "2026-07-10T04:50:24.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 27605,
+      "name": "DrakiaXYZ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-26T18:51:50.000000Z",
+      "updated_at": "2026-08-01T19:31:53.000000Z"
+    },
+    {
+      "id": 52282,
+      "name": "ArchangelWTF",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-05-20T14:55:34.000000Z",
+      "updated_at": "2026-08-01T16:40:09.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ArchangelWTF/SAIN",
+      "label": "4.2.0+"
+    },
+    {
+      "url": "https://github.com/Solarint/SAIN",
+      "label": "Original"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13477,
+      "hub_id": null,
+      "version": "4.4.3",
+      "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+      "content_length": 351166,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 88734,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-23T23:46:00.000000Z",
+      "created_at": "2026-04-23T23:46:01.000000Z",
+      "updated_at": "2026-08-01T16:40:06.000000Z",
+      "dependencies": [
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247447,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115518,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            },
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            },
+            {
+              "id": 12146,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Update for 4.0.0</p>\n<p>Generate new navmeshes for all maps</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.0",
+              "content_length": 50345278,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 1497,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T00:34:00.000000Z",
+              "created_at": "2025-11-03T00:34:44.000000Z",
+              "updated_at": "2026-07-28T06:14:11.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264943,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284378,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5935ce75a5f8056796f8ba34096fb3e1b0ef44122fe5487f9cece2a3e7d1f2a1",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/59940b9a23600286b74012b7078d41f73a5c3ef7894ceace90b066b9678b3e34",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/0622e4b2-b323-42df-8049-bfa99fe24960?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A16%3A24Z&rscd=attachment%3B+filename%3DSAIN.4.4.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A16%3A19Z&ske=2026-08-01T21%3A16%3A24Z&sks=b&skv=2018-11-09&sig=lFSIY2quk5hGIkYi9qAR3nB07EGSGANf6OJ9p%2BTgtlc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13343,
+      "hub_id": null,
+      "version": "4.4.2",
+      "description": "<p>Changes:</p>\n<ul>\n<li>Removed funni (The AI vibe coded fixes didn’t work out :( )</li>\n</ul>\n<p>Changes from V4.4.0:</p>\n<ul>\n<li>Fix hideout not loading properly when having night vision equipped</li>\n<li>Fix: weapon data not being updated properly by @powerCasualUser</li>\n<li>Fix: inverted difficulty modifier in recoil calculation by @powerCasualUser</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.2",
+      "content_length": 348490,
+      "spt_version_constraint": "~4.0",
+      "downloads": 17758,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-01T22:00:00.000000Z",
+      "created_at": "2026-04-01T17:47:37.000000Z",
+      "updated_at": "2026-07-28T08:17:16.000000Z",
+      "dependencies": [
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247447,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115518,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            },
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            },
+            {
+              "id": 12146,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Update for 4.0.0</p>\n<p>Generate new navmeshes for all maps</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.0",
+              "content_length": 50345278,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 1497,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T00:34:00.000000Z",
+              "created_at": "2025-11-03T00:34:44.000000Z",
+              "updated_at": "2026-07-28T06:14:11.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264943,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284378,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/b5dc604eeb304d929838a1f7eaaf67bb304e2e66c49d95d94edf7edc825a20e3",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/e381a062ec04192a3d577160f1c86ada976a398645fe50d22f0714e2784ae222",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/f5651abb-94ad-48e7-af99-8f5652dc807f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A04Z&rscd=attachment%3B+filename%3DSAIN.4.4.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A41Z&ske=2026-08-01T21%3A20%3A04Z&sks=b&skv=2018-11-09&sig=NqTSkvNKQ%2BfFCzYCk0FQSzD3xEAJATt5LVwsJxzD%2FPY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12930,
+      "hub_id": null,
+      "version": "4.4.0",
+      "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+      "content_length": 348509,
+      "spt_version_constraint": "~4.0",
+      "downloads": 43547,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-01-28T13:00:00.000000Z",
+      "created_at": "2026-01-28T13:24:29.000000Z",
+      "updated_at": "2026-07-28T07:57:37.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264943,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284378,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247447,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            },
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115518,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            },
+            {
+              "id": 12146,
+              "hub_id": null,
+              "version": "1.8.0",
+              "description": "<p>Update for 4.0.0</p>\n<p>Generate new navmeshes for all maps</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.0",
+              "content_length": 50345278,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 1497,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T00:34:00.000000Z",
+              "created_at": "2025-11-03T00:34:44.000000Z",
+              "updated_at": "2026-07-28T06:14:11.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/c7b80ee433b8707c4ad120dfca2c7a4ce2965987a8e1e3a3343c6699c08594ab",
+          "label": "Client"
+        },
+        {
+          "url": "https://www.virustotal.com/gui/file/a8e6b0ee11277c69d83b3422a94a7af78691d293fe1b4d69ad4d4dc173888eab",
+          "label": "Server"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/40bede05-0d19-4d7c-8015-bb8d29130dac?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A13Z&rscd=attachment%3B+filename%3DSAIN.4.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A12Z&ske=2026-08-01T21%3A19%3A13Z&sks=b&skv=2018-11-09&sig=l7mBvunMrUDCLvkyP%2Bnedz5Gux87RkCErhQqG4Z1K44%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12661,
+      "hub_id": null,
+      "version": "4.3.1",
+      "description": "<p><strong>This version will require new presets!</strong></p>\n<p>This version wouldn’t have been possible if it weren’t for some community members actively contributing to SAIN’s code base, thanks to each one of you!</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fix: Stops RemovePerson from being invoked repeatedly by @Arys</li>\n<li>Further fixes to log spam on bot extracting by @Arys</li>\n<li>QoL: Embed version, description, copyright into the assembly. by @yurikus</li>\n<li>Fix bot not sprint when seeking cover and invalid <code>IsSniper</code> check by @powerCasualUser</li>\n<li>Fix: add missing Blicky, 12.7x99mm, and rocket launcher to Shoot settings by @powerCasualUser</li>\n<li>Fix: Bots being able to see through certain objects and thus attempting to shoot through them</li>\n<li>Fix: Bots being forced to stop moving while asleep causing erratic behaviour</li>\n<li>Fix: Bots not entering BSG’s sleep state correctly when a user has moved far enough away</li>\n<li>Removed: No Bush ESP (Comes with the latest client by default now)</li>\n<li>Added: Partisan’s AI to be overridden by SAIN</li>\n<li>Added: Glukhar’s AI to be overridden by SAIN</li>\n<li>Added: Santa’s AI to be overridden by SAIN</li>\n<li>Added: Support for the AK-50, rocket launcher &amp; blicky</li>\n<li>Fix: Introduce global minimum aim time + fix crouch spamming by @Janky</li>\n<li>Fix: Various null references in Calcmodifier</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.3.1",
+      "content_length": 1705545,
+      "spt_version_constraint": "~4.0",
+      "downloads": 37127,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-24T15:00:00.000000Z",
+      "created_at": "2025-12-24T14:52:31.000000Z",
+      "updated_at": "2026-07-28T07:07:43.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264943,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284378,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a31316f3e22da5e5411d74b5e2c7d66dce6bcfb4b44496798c0e72f3f045fbc3",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/c560d0f5-13f7-4990-b746-9c529628a683?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A54Z&rscd=attachment%3B+filename%3DSAIN.4.3.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A38Z&ske=2026-08-01T21%3A07%3A54Z&sks=b&skv=2018-11-09&sig=LJl0B0lCCUBaOcAXukNw29P8bIx9yNRtliSY15Ecr0M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSAIN.4.3.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12392,
+      "hub_id": null,
+      "version": "4.3.0",
+      "description": "<p>Re-release of 4.2.0 (4.0.0) with the following changes:</p>\n<p><strong>This release will require new presets due to the Labyrinth bosses being added! Older presets will not work in Labyrinth!</strong></p>\n<ul>\n<li>Fixes Labyrinth being an invalid location</li>\n<li>Clears up logic in center of mass handling</li>\n<li>Adds new labyrinth bosses</li>\n</ul>\n<p>A huge thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/72916/jankytheclown\" rel=\"noreferrer noopener\">JankyTheClown</a> for most these fixes</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.3.0",
+      "content_length": 1640918,
+      "spt_version_constraint": "~4.0",
+      "downloads": 46284,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-21T16:01:00.000000Z",
+      "created_at": "2025-11-21T16:02:01.000000Z",
+      "updated_at": "2026-07-28T06:44:13.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264943,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284378,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NDk0M2MyYjk0NWFiNGRlODE0N2Q3ZGZjZTJhZmI3ZTU6MTc2Mzc0MDkwNA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/bfff152e-bab9-4470-8efd-cb51d1f3ff9e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A56Z&rscd=attachment%3B+filename%3DSAIN.4.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A22Z&ske=2026-08-01T21%3A10%3A56Z&sks=b&skv=2018-11-09&sig=%2BtP8ACTZxHoVrSEahmJTlVjaZjzM%2BNW%2B1cbpRL%2FiOxE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSAIN.4.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 157,
+      "hub_id": 14725,
+      "version": "4.1.3",
+      "description": "<p>Rebalanced default presets.</p>\n<p>Heavily nerfed scavs (disabled faster cqb reaction, reduced hearing range)</p>\n<p>Goons can now aim for your head (sometimes).</p>\n<p>Killa and tagilla hold down the trigger for longer and wait less between shots.</p>\n<p>Buffed most bosses and followers.</p>\n<p>Re-enabled “Aim Center Mass” for PMCs on default difficulty, was a mistake.</p>\n<p>Slightly lowered “Aim Center Mass Point” to reduce headshots, was raised quite a bit in 4.1.0, but accidental headshots are a bit too frequent now.</p>\n<p>Lots of small changes to bot configs, too many to list.</p>\n<p><strong>You’ll need to create a new preset to get the new changes, but old presets are working fine.</strong></p>\n<p>Fixes:</p>\n<p>Fixed many boss followers being broken.</p>\n<p>Disabled smoothing or any modification to bot steering when a bot isn’t in combat. Spinny bots should be fixed now. Will return to this in the future, but something is breaking when using the new smoothing solution.</p>\n<p>Fixed some bots getting stuck in a vanilla layer, making them unable to move or fight enemies (fairly sure I fixed this, its hard to test for, but I couldn’t find any bots doing it after)</p>\n<p>Project Fika - Fixed error spam and broken bots when 1 player extracts, but the rest stay in raid.</p>\n<p>Project Fika - Fixed footstep sound from player being triggered when they weren’t moving. (Oops)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.1.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 67661,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-08-02T03:59:00.000000Z",
+      "created_at": "2025-08-02T03:59:17.000000Z",
+      "updated_at": "2026-05-14T01:38:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/e904a21a-b4d4-4b81-993c-84901c0f6bb9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A17Z&rscd=attachment%3B+filename%3DSAIN-4.1.3.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A10Z&ske=2026-08-01T21%3A26%3A17Z&sks=b&skv=2018-11-09&sig=eq%2FMPNwAZ2nIWkTQgw3iU51Cp%2ByDg1uRKSNlQBaaImE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&response-content-disposition=attachment%3B%20filename%3DSAIN-4.1.3.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 193,
+      "hub_id": 14684,
+      "version": "4.1.0",
+      "description": "<p>for SPT 3.11.x</p>\n<p>Reworked Bot turning and smoothing calculations.</p>\n<p>Added new ballistics prediction for Bot Aim. They should account for distance and leading targets fairly accurately.</p>\n<p>Thank you Janky for the help in the math of all this.</p>\n<p>Improved performance, especially for large amounts of bots fighting across the map.</p>\n<p>Reworked Bot Cover Finder.</p>\n<p>Reworked Bot Suppression. A bot’s personality now tells a bot how it should suppress enemies, some bots will be jumpy, some wont suppress at all.</p>\n<p>Improved Bot pathfinding and sprinting.</p>\n<p>Reduced how often bots will lean, and made their leans more accurate to how a person would lean into corners as they seek a target.</p>\n<p>Reworked how bots decide to seek and hold cover, or search for enemies.</p>\n<p>Improved bot group search behavior.</p>\n<p>Different Personality Types will search for enemies at different “paces”, some will carefully peek corners, others will aggressively swing angles.</p>\n<p>Improved simulated arm injuries on bots.</p>\n<p>Improved bot simulated recoil.</p>\n<p>Reworked how bots select different enemies.</p>\n<p>Reduced the amount of situations where a bot could be stuck in a loop of searching, then going back to cover, then searching again without ever making progress.</p>\n<p>Known issues:</p>\n<p>Doors are 45% cursed.</p>\n<p>Infinite mag bug. It’s a bug in the EFT build that SPT 3.11 is running on, it’s already been fixed by BSG.</p>\n<p>Bot busy hands.</p>\n<p>Tagilla is bored of using his hammer for a little while.</p>\n<p>Bots are still not the most intelligent about ammo conservation in all situations.</p>\n<p>All presets are out of date, many old settings were setup incorrectly due to de-obfuscated eft code being difficult to understand, check tool tips!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 2994,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-28T04:26:06.000000Z",
+      "created_at": "2025-07-28T04:26:06.000000Z",
+      "updated_at": "2026-07-13T18:00:27.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://github.com/Solarint/SAIN/releases/tag/v4.1.0"
+      }
+    },
+    {
+      "id": 287,
+      "hub_id": 14586,
+      "version": "4.0.1",
+      "description": "<p>SPT 3.11.x</p>\n<p>Fixed error spam when out of raid.<br />\nBots now use the same movement smoothing and inertia as players.<br />\nAdded more control over turn smoothing and corrected a few issues with it (can be edited from globalsettings .json file of your preset)<br />\nIncreased smoothing for better visual results, but it now changes depending on if a bot is aiming, at peace, sprinting, ect.<br />\nDecoupled bot character steering from movement direction, bot animations now look like players do.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.0.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 3791,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-08T03:47:56.000000Z",
+      "created_at": "2025-07-08T03:47:56.000000Z",
+      "updated_at": "2026-05-14T01:42:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/13d70241-115c-4d85-969c-60673f1ce7bc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A25%3A36Z&rscd=attachment%3B+filename%3DSAIN-4.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A24%3A40Z&ske=2026-08-01T21%3A25%3A36Z&sks=b&skv=2018-11-09&sig=6c7b%2Fbgivd6rdysg875jeB1uqLp4hTA3fX4NpsFyeQQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DSAIN-4.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 296,
+      "hub_id": 14576,
+      "version": "4.0.0",
+      "description": "<p>SPT 3.11.3 Only.<br />\nNew:<br />\nSilky Smooth bot turning.</p>\n<p>Added smoothing to bot movement, leaning, speed changes, and posed changes.</p>\n<p>Added new path visibility system that is multi-threaded. Bots should no longer stare into walls if their enemy is on the other side of it, but rather will look to the place that enemy would appear. (still needs some work, but is mostly functional)</p>\n<p>Improved bot reactions to grenades, including their own grenades (not perfect but the entire system should be redone)</p>\n<p>Rewrote how audible distance of footstep sounds is calculated, should be more closely aligned with how it sounds to players.</p>\n<p>Fixed flashlight detection not working.</p>\n<p>Moved all bots in combat to use sain’s pathfinder for walking instead of just sprinting.</p>\n<p>Greatly increased the amount of suppressing fire from bots. (Not configurable yet)</p>\n<p>Added “Strafe Speed” Config option for bot settings. Depending on bot type and difficulty bots will strafe faster or slower.</p>\n<p>Rewrote how bots are ticked and initialized.</p>\n<p>Fixed a vanilla behavior not being removed from scavs and overwriting sain behavior.</p>\n<p>Added new multithreaded functions.<br />\n- Enemy Place Job (for checking distance and visibility of last known positions)<br />\n- Path Visibility Job (Finds the place a bot should look at, based on where their enemies last know position)</p>\n<p>Optimized everything based on Unity Profiling data.</p>\n<p>Added new Hearing sensor that should both run better and expand functionality.</p>\n<p>Added Bot deafening system from gunfire. If a shot goes off close to a bot, they will be partially deaf to quieter sounds such as footsteps.</p>\n<p>Added audio masking system where bots will be unable to hear a sound if they heard something louder than that sound very recently.</p>\n<p>The intent is to allow players to use voice-lines to cover up the sounds of them healing.</p>\n<p>Added new system for bullet fly-by detection on bots that tracks each bullet’s real position to see if it comes close to them.<br />\nMany small tweaks to bot decision making to resolve issues and improve behavior.</p>\n<p>Fixed:</p>\n<p>Everything.</p>\n<p>Multiple patches were targeting the wrong methods, and a few were entirely outdated.</p>\n<p>Fixed bots teleporting.</p>\n<p>Fixed integrated suppressors not counting as being suppressed for bot hearing.</p>\n<p>Simplified a bunch of systems that were not working correctly.</p>\n<p>And a lot more.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.11.3",
+      "downloads": 3142,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-07-07T07:00:51.000000Z",
+      "created_at": "2025-07-07T07:00:51.000000Z",
+      "updated_at": "2026-05-14T01:42:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/19f6b69c-1458-489e-8f08-dc13c4458f1f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A37Z&rscd=attachment%3B+filename%3DSAIN-4.0.0-RC2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A26%3A05Z&ske=2026-08-01T21%3A26%3A37Z&sks=b&skv=2018-11-09&sig=K3syeIncfh3TkFFKE0eeFdEh4IIOpIWDxDy8EagtRls%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&response-content-disposition=attachment%3B%20filename%3DSAIN-4.0.0-RC2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 478,
+      "hub_id": 14382,
+      "version": "3.3.0",
+      "description": "<p>- Updated for 3.11</p>\n<p>No new functionality has been added, this is simply to update SAIN to work on 3.11. Bugs that were on 3.10 are most likely going to be in 3.11 until Solar gets the time to work on SAIN again. Please be patient.</p>\n<p>Thanks to all new contributors for helping, and an especially big thanks to Brie for updating most of the AI logic that was broken with 3.11.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 31272,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-06-01T17:37:58.000000Z",
+      "created_at": "2025-06-01T17:37:58.000000Z",
+      "updated_at": "2025-06-01T17:37:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "fallback",
+        "sourceUrl": "https://github.com/ArchangelWTF/SAIN",
+        "reason": "HTTP 404 for https://github.com/Lacyway/SAIN/releases/download/v3.3.0/SAIN-3.3.0-Release.zip"
+      }
+    },
+    {
+      "id": 1990,
+      "hub_id": 12686,
+      "version": "3.2.1",
+      "description": "<p><strong>SPT 3.10.X ONLY</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file-analysis/MGNlMmUxMDk4NTQ1ZmE2ZTY4NzViNTM2Mjk2ZmM4Zjg6MTczNDM5ODM2MA==\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n<p>There is still 1 false positive and “Antiy-AVL” thinks SAIN is “pornware”.</p>\n<p><em><strong>Changes:</strong></em></p>\n<p><strong>Reworked Bot Suppression</strong>.</p>\n<ol>\n<li>Added New Tier System for how much bots are suppressed. Old: Suppressed / Heavy Suppressed. New: Light, Medium, Heavy, Extreme</li>\n<li>Bots get Light Suppression from almost any bullet flying by them.</li>\n<li>Increased the effect that suppression has on bot stats.</li>\n<li>Add Suppression Amp to boost suppression received when bullets are very close to a bot’s head.</li>\n<li>Suppression now depends on the caliber of bullet being fired at the bot. Big Boolet = much more scary.</li>\n<li>Added extensive config options for suppression (Global Settings =&gt; Mind) Most are marked as Advanced Settings. All new settings have full tooltips to explain the system.</li>\n<li>Added Suppression Resistance for Personality and BotType configs. It is not yet pre-configured, so no bots will have resistance by default.</li>\n<li>Configuring each tier of suppression is possible by editing the GlobalSettings.json in a custom preset. No GUI for it yet.</li>\n<li>Added Hearing Distance Multiplier to Suppression Effects</li>\n</ol>\n<p><strong>Added Extensive New Config Options</strong></p>\n<ol>\n<li>Everything is configurable for bot hearing.</li>\n<li>Added Toggle in GlobalSettings =&gt; Shoot to force bots to only use semi auto if desired. (Defaults to off)</li>\n<li>Added toggles for each bot type and global toggles for different movement options for bots. So you can disable lean, vault, jump, pose adjustment, and prone globally or for specific bot types.</li>\n<li>Added Power Level Options to Global Settings, these control how different things about a bot affect their power level score, and in return what personality they are allowed to use.</li>\n<li>Added Time and Weather config options for vision and hearing.</li>\n<li>Added several new advanced config options for bot steering.</li>\n<li>Added config option to change what personality bosses are assigned. (Found in GlobalSettings.json in a custom preset, no GUI yet)</li>\n</ol>\n<p><strong>GUI Reworks</strong></p>\n<ol>\n<li>Settings menu is now more condensed to allow more options.</li>\n<li>Slight adjustments to the dimensions of everything to improve readability and consistency.</li>\n<li>Added Toggle on the top bar to enable/disable advanced settings.</li>\n<li>Added a ton of new descriptions and proper names for config values. Almost all global settings have explanations now.</li>\n</ol>\n<p><strong>General Improvements</strong></p>\n<ol>\n<li>Added .json file to match nicknames with specific personalities. (Generated on game launch when sain is installed)</li>\n<li>Enable Extract Global now swaps between SAIN extract and Vanilla extract systems. Defaults to Vanilla.</li>\n<li>Bots now have more difficulty hearing suppressed gunfire.</li>\n<li>Bots now sprint when possible when under fire by someone shooting from long range. (Can be toggled in Global Settings =&gt; Mind.</li>\n</ol>\n<p><strong>Fixes</strong></p>\n<ol>\n<li>Fixed some vanilla combat layers still being active for PMC AI.</li>\n<li>Fixed guns not firing if returning from a raid and entering the shooting range.</li>\n<li>Fixed Bot hearing not being affected by stun/flash grenades.</li>\n<li>Disabled several loggers from activating unless SAIN Debug Mode is enabled.</li>\n<li>Fixed SAIN Server mod showing incorrect version.</li>\n</ol>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 119303,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-17T01:25:16.000000Z",
+      "created_at": "2024-12-17T01:25:16.000000Z",
+      "updated_at": "2026-05-14T02:52:00.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/202f6ac3-8672-4478-80e5-ef1fac9c8631?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A02Z&rscd=attachment%3B+filename%3DSAIN-3.2.1-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A12Z&ske=2026-08-01T21%3A07%3A02Z&sks=b&skv=2018-11-09&sig=q5eekCcY2J7S9In3uAdDFBQ078l3BQtf0y%2B%2F6mXkT0E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.2.1-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 2147,
+      "hub_id": 12499,
+      "version": "3.2.0",
+      "description": "<p><strong>SPT 3.10+ ONLY</strong></p>\n<p><strong>Full credit to <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Lacyway\" rel=\"noreferrer noopener\">@Lacyway</a> for getting SAIN working with SPT 310!<br />\nNote: Apparently Virus total thinks SAIN is “Pornware”. So consider this the official porn update!<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/a3a9c563d2e1ea1dd204d7ae5b3c820c79476c7fb33fd031c2ccd4000ecbac59/detection\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/a3a9c563d2e1ea1dd204d7ae5b3c820c79476c7fb33fd031c2ccd4000ecbac59/detection</a><br />\nChangelog:</strong></p>\n<p><strong>Solarint:</strong></p>\n<ul>\n<li>Added new config options for customizing bot sound position estimation, or how accurate they are at locating the source of heard sounds. Found in Global Settings =&gt; Hearing</li>\n<li>Added new styling and design for some GUI visuals.</li>\n<li>Added categories to settings folders to improve organization (wip)</li>\n<li>Added toggle at the top of the SAIN GUI to enable/disable advanced settings.</li>\n</ul>\n<p><strong>Lacyway:</strong></p>\n<ul>\n<li>Updated for SPT 310.</li>\n<li>Zombies are now ignored by SAIN, and should be working properly.</li>\n<li>SAIN hit reactions are now off by default until Solar / new developer can take a look at them (they are known to cause issues)</li>\n<li>Fixes to improve Fika/SAIN compatibility.</li>\n<li>Add sandbox_high to locations (Fixes: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Solarint/SAIN/issues/9\" rel=\"noreferrer noopener\">#9</a>) by <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ArchangelWTF\" rel=\"noreferrer noopener\">@ArchangelWTF</a> in <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Solarint/SAIN/issues/10\" rel=\"noreferrer noopener\">#10</a></li>\n<li>Added new ammo calibers</li>\n<li>Added new missing guards for Kaban</li>\n<li>Added Partisan to bot types</li>\n<li>Merged PR from DanW fixing nullref (other one was skipped as it was causing side effects</li>\n</ul>\n<p><strong>Known Issues:</strong></p>\n<ul>\n<li>In some openable menus in the GUI, you cannot directly type a number into the box, and you have to use the slider.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.10.0",
+      "downloads": 20801,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-12-06T02:30:13.000000Z",
+      "created_at": "2024-12-06T02:30:13.000000Z",
+      "updated_at": "2026-05-14T03:14:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/144f21b8-d382-4622-848f-611ea6be1824?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A38Z&rscd=attachment%3B+filename%3DSAIN-3.2.0-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A29Z&ske=2026-08-01T21%3A03%3A38Z&sks=b&skv=2018-11-09&sig=KnuY32MUFsDX%2BVWS60Wf7is0fXsqygUlmnMM9UxN%2B0o%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.2.0-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3188,
+      "hub_id": 11199,
+      "version": "3.1.0",
+      "description": "<p><strong>SPT 3.9 ONLY</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1-VTFkZ0qUKKzYWnEXY0LI1iS006dX2eVKBEQhI2Gt8s/edit\" rel=\"noreferrer noopener\">Changelog</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 132991,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-08-04T19:02:11.000000Z",
+      "created_at": "2024-08-04T19:02:11.000000Z",
+      "updated_at": "2026-05-14T03:45:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/c75a8a2e-bec7-4c44-b47d-e16722c5d59d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A28%3A17Z&rscd=attachment%3B+filename%3DSAIN-3.1.0-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A27%3A26Z&ske=2026-08-01T21%3A28%3A17Z&sks=b&skv=2018-11-09&sig=0BtwIjIt10utnRq9FG2m8VSBd%2FYzIDul0sONgvbuNVY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&response-content-disposition=attachment%3B%20filename%3DSAIN-3.1.0-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3377,
+      "hub_id": 10966,
+      "version": "3.0.6",
+      "description": "<p><strong>SPT 3.9 ONLY</strong></p>\n<p>Changelog:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1OT18XcZDGrjRBpU88XRoLN9N2r46XvvgUiVXVmyG7YE/edit?usp=sharing\" rel=\"noreferrer noopener\">https://docs.google.com/document/d/1OT18XcZDGrjRBpU88XRoLN9N2r46XvvgUiVXVmyG7YE/edit?usp=sharing</a></p>\n<p>VirusTotal result:</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/f2bfcecc8a2b5511aa9d22e93c3fcce5190d363a539f6b782ff3ca90c6d585b7?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/f2bfcecc8a2b5511aa9d22e93c3fcce5190d363a539f6b782ff3ca90c6d585b7?nocache=1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.6",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 34634,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-20T10:04:55.000000Z",
+      "created_at": "2024-07-20T10:04:55.000000Z",
+      "updated_at": "2026-05-14T03:49:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/4546b98a-559c-449b-8af0-37eef81b2f5d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A57Z&rscd=attachment%3B+filename%3DSAIN.3.0.6-for-SPT-3.9.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A00Z&ske=2026-08-01T21%3A06%3A57Z&sks=b&skv=2018-11-09&sig=wOo6utYiHqulmVN1R3x8irHycZUQ%2FsVmUWxFd0rTv4E%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DSAIN.3.0.6-for-SPT-3.9.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3468,
+      "hub_id": 10844,
+      "version": "3.0.5",
+      "description": "<p><strong>SPT 3.9.0-3.9.2 ONLY</strong></p>\n<p>Changelog: <a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1zkRKmSuWWRT99j_093FR6UfTLwYCerg-Ppojql8iENM/edit\" rel=\"noreferrer noopener\">https://docs.google.com/document/d/1zkRKmSuWWRT99j_093FR6UfTLwYCerg-Ppojql8iENM/edit</a></p>\n<p>Just a few bugfixes and difficulty preset changes mostly.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.5",
+      "content_length": null,
+      "spt_version_constraint": "3.9.2",
+      "downloads": 14396,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-14T22:49:39.000000Z",
+      "created_at": "2024-07-14T22:49:39.000000Z",
+      "updated_at": "2026-05-14T03:50:52.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/b2a7dcc6-d6be-4df5-9d95-c94ce99d7fa9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A19%3A40Z&rscd=attachment%3B+filename%3DSAIN-3.0.5-for-SPT-3.9.1-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A18%3A57Z&ske=2026-08-01T21%3A19%3A40Z&sks=b&skv=2018-11-09&sig=k8ZS4yM6h9uLGQrApHWR2KgLnNU7gRTSx8h1Q7rgKrI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.5-for-SPT-3.9.1-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3471,
+      "hub_id": 10840,
+      "version": "3.0.4",
+      "description": "<p><strong>SPT 3.9.0 - 3.9.2 ONLY</strong></p>\n<p>Changelog <a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1LV8YFY6H37iBVVxTkWjQaW9Wm6wODeGYpAh2KUPg1N0/edit\" rel=\"noreferrer noopener\">HERE</a><br />\nVirustotal Result <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/ea08d3b420c7da05ddb2c4e01a8f09728ddfa59c0f2c78681ef85b8503733323?nocache=1\" rel=\"noreferrer noopener\">HERE</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.4",
+      "content_length": null,
+      "spt_version_constraint": "3.9.2",
+      "downloads": 2651,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-14T16:24:42.000000Z",
+      "created_at": "2024-07-14T16:24:42.000000Z",
+      "updated_at": "2026-05-14T03:50:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/5d678d10-50aa-4fda-8fc9-fcee3e42a4f3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A41Z&rscd=attachment%3B+filename%3DSAIN-3.0.4-for-SPT-3.9.1-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A10%3A20Z&ske=2026-08-01T21%3A10%3A41Z&sks=b&skv=2018-11-09&sig=KjiB4sQRxdUzrR7duF9tXR7V8%2FwIdfDDF8yYQQkjCmI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.4-for-SPT-3.9.1-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3504,
+      "hub_id": 10802,
+      "version": "3.0.3",
+      "description": "<p>Changelog: <a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1mdyDZD-1bid55qmYFA-1F0qQWJOGu7otE2VV0FJcbc4/edit\" rel=\"noreferrer noopener\">https://docs.google.com/document/d/1mdyDZD-1bid55qmYFA-1F0qQWJOGu7otE2VV0FJcbc4/edit</a></p>\n<p>SPT 3.8.3 build <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Solarint/SAIN/releases/download/v3.0.3-release/SAIN.3.0.3.for.SPT.3.8.3-Release.7z\" rel=\"noreferrer noopener\">HERE</a><br />\nThis will ACTUALLY be the last spt 3.8.3 release.<br />\nspt 3.8.3 build only includes bot fixes.</p>\n<p>Edit:<br />\nFixed version being linked here going to the spt 3.8.3 version.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.3",
+      "content_length": null,
+      "spt_version_constraint": "3.8.3",
+      "downloads": 6420,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-13T07:57:16.000000Z",
+      "created_at": "2024-07-13T07:57:16.000000Z",
+      "updated_at": "2026-05-14T03:51:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/d113bcb1-a024-4722-887a-55e7eb26c898?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A00Z&rscd=attachment%3B+filename%3DSAIN.3.0.3.for.SPT.3.9.0-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A16Z&ske=2026-08-01T21%3A03%3A00Z&sks=b&skv=2018-11-09&sig=ZY5PexgewCsinGjWQ153%2BL2LEQipa0MqeN4Kscyijmg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&response-content-disposition=attachment%3B%20filename%3DSAIN.3.0.3.for.SPT.3.9.0-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3587,
+      "hub_id": 10695,
+      "version": "3.0.1",
+      "description": "<p>Changelog here:<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/1y5-13J4iQ9Qo1nZuaIYLaLbduIRu6OkpUrxIb83k86w/edit\" rel=\"noreferrer noopener\">https://docs.google.com/document/d/1y5-13J4iQ9Qo1nZuaIYLaLbduIRu6OkpUrxIb83k86w/edit</a><br />\nZip includes a SPT 3.8.3 version and a 3.9.0 version.</p>\n<p>Install the correct one, please.<br />\nUnless there is something major I need to fix, this will be the last SPT 3.8.3 release for sain, porting stuff back and forth is incredibly tedious.<br />\nVirustotal results:<br />\n3.9.0 dll: <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/02e9c7a4653a78f452268a4c6146b1742af909423b800e961d04c8a681427162?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/02e9c7a4653a78f452268a4c6146b1742af909423b800e961d04c8a681427162?nocache=1</a></p>\n<p>3.8.3 dll: <a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/083be674cb7c8d25df8108d2b43645c460b47b13e7b879f51082131c3a82eb64?nocache=1\" rel=\"noreferrer noopener\">https://www.virustotal.com/gui/file/083be674cb7c8d25df8108d2b43645c460b47b13e7b879f51082131c3a82eb64?nocache=1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.1",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 9606,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-10T07:02:30.000000Z",
+      "created_at": "2024-07-10T07:02:30.000000Z",
+      "updated_at": "2026-05-14T03:53:46.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/89d4caca-525f-41f4-9825-65a64900fa75?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A29%3A59Z&rscd=attachment%3B+filename%3DSAIN-3.0.1-Release.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A29%3A04Z&ske=2026-08-01T21%3A29%3A59Z&sks=b&skv=2018-11-09&sig=gT%2FZvBRfMT%2FG1LLS%2FJwpDtaw4XCWRDWYgWkXmwzG4Yw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.1-Release.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3718,
+      "hub_id": 10540,
+      "version": "3.0.0",
+      "description": "<p>Only works on 3.8.1 - 3.8.3</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/18aJ2QQQlhT_3OfoBT0EDxYu0AvHJ-9_CjrsIY0f5cz8/edit\" rel=\"noreferrer noopener\">Change Log</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.0",
+      "content_length": null,
+      "spt_version_constraint": "3.8.3",
+      "downloads": 3806,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T11:25:02.000000Z",
+      "created_at": "2024-07-07T11:25:02.000000Z",
+      "updated_at": "2026-05-14T03:55:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/9cf9aac8-8822-4a49-94a2-a2cd44a12a13?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A19Z&rscd=attachment%3B+filename%3DSAIN-3.0.0-SPT-3.8.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A43Z&ske=2026-08-01T21%3A08%3A19Z&sks=b&skv=2018-11-09&sig=4zRLrVT2OyEVII%2BbKqfC83kt3VCstcsYkCY2s4hCB%2FY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.0-SPT-3.8.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3712,
+      "hub_id": 10546,
+      "version": "3.0.0+390",
+      "description": "<p>Only works on 3.9.0<br />\n<strong>OLD PRESETS ARE NOT COMPATIBLE.</strong></p>\n<p>Updated for SPT 3.9.0. Requires the latest BigBrain and Waypoints version!</p>\n<p>Updated download link to a version without extra files in the User Mod that can affect Linux users. Sorry!</p>\n<p>Note: I accidentally left some loose files in a folder called “3.8.0” in the rush to fix the above issue before anyone noticed, you can just ignore it, its just some zips of releases.</p>\n<p>special thanks to <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/58175-phiveaces/\" rel=\"noreferrer noopener\">Phiveaces</a> for their help getting a few references updated to new EFT code!</p>\n<p>Change log here: <a target=\"_blank\" class=\"external-link\" href=\"https://docs.google.com/document/d/18aJ2QQQlhT_3OfoBT0EDxYu0AvHJ-9_CjrsIY0f5cz8/edit\" rel=\"noreferrer noopener\">3.0.0 Changelog  </a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/3.0.0+390",
+      "content_length": null,
+      "spt_version_constraint": "3.9.0",
+      "downloads": 9909,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T13:38:42.000000Z",
+      "created_at": "2024-07-07T13:38:42.000000Z",
+      "updated_at": "2026-05-14T03:55:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/efcb08d3-8483-42b9-8ec8-2ba46765427e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A10%3A33Z&rscd=attachment%3B+filename%3DSAIN-3.0.0-SPT-3.9.0-Hotfix.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A37Z&ske=2026-08-01T21%3A10%3A33Z&sks=b&skv=2018-11-09&sig=mn8ReaUv%2BLaPBtFXuH0xkucG7qjNu9tRgOwNjZUjCCQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.0-SPT-3.9.0-Hotfix.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4826,
+      "hub_id": 9192,
+      "version": "2.1.12",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<ul>\n<li>Fixed major issue that caused bots to not get proper position info on the Player.\n<ul>\n<li>This was the cause of a lot of strange, unintentional behavior. Bots feel better than ever to fight. This should fix bots healing when in line of sight of the player, among many other issues.</li>\n</ul>\n</li>\n<li>Bots can be suppressed now. Suppressed bots won’t lean out of cover and will usually wait in cover until a while after they have been suppressed.</li>\n<li>Bots will shift between cover less often overall.</li>\n<li>Rats will no longer shift between cover.</li>\n<li>Added option in personality settings to enable or disable cover shifting.</li>\n<li>Added advanced config options to modify shift cover behavior. (Global Settings / Cover)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.12",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 49074,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-04T16:50:47.000000Z",
+      "created_at": "2024-04-04T16:50:47.000000Z",
+      "updated_at": "2026-05-14T04:17:53.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/94d0c3cd-785a-4065-82b3-38a455f37fa6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A28%3A10Z&rscd=attachment%3B+filename%3DSAIN.2.1.12.for.3.8.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A27%3A33Z&ske=2026-08-01T21%3A28%3A10Z&sks=b&skv=2018-11-09&sig=tJ3S6SZhqa5uFde1d5FvVm3ifP74%2BbOPcqusBZ24b4g%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MCwibmJmIjoxNzg1NjE2MTYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DOcynDDZRfZT_-X6g3EnI0EQO7gbYZCgMN448zWAIjg&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.12.for.3.8.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4913,
+      "hub_id": 9084,
+      "version": "2.1.11",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<p>Update for SPT 3.8.0</p>\n<ul>\n<li>Resolve issue where bots on Ground Zero can cause massive framerate drops</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.11",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 12276,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-02T05:46:10.000000Z",
+      "created_at": "2024-04-02T05:46:10.000000Z",
+      "updated_at": "2026-05-14T04:20:11.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/27ed283f-22de-453c-8c71-60dd8a1a7971?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A22%3A40Z&rscd=attachment%3B+filename%3DSAIN.2.1.11.for.3.8.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A22Z&ske=2026-08-01T21%3A22%3A40Z&sks=b&skv=2018-11-09&sig=L6%2B384TiFs6kNd3Vas47VzX7LdAuVMnQ%2FD8SnV1QLm4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.11.for.3.8.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4968,
+      "hub_id": 9016,
+      "version": "2.1.10",
+      "description": "<h3>This version will only work with SPT 3.8.0</h3>\n<p>Update for SPT 3.8.0</p>\n<ul>\n<li>Updates necessary to work with SPT 3.8.0</li>\n<li>Improved fallback behavior for bots</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.10",
+      "content_length": null,
+      "spt_version_constraint": "3.8.0",
+      "downloads": 3765,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-04-01T21:24:52.000000Z",
+      "created_at": "2024-04-01T21:24:52.000000Z",
+      "updated_at": "2026-05-14T04:21:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/f7ac8302-16b6-4a58-bcdc-c9a7e8d37baa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A19Z&rscd=attachment%3B+filename%3DSAIN.2.1.10.for.3.8.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A47Z&ske=2026-08-01T21%3A03%3A19Z&sks=b&skv=2018-11-09&sig=CV1bm9NkP2OxGclObZes91sDA5x7ipM0EGnYyl6s92s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.10.for.3.8.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5040,
+      "hub_id": 8903,
+      "version": "2.1.9",
+      "description": "<h3>This version will only work with <strong>SPT 3.7.4 - 3.7.6</strong></h3>\n<p>REQUIRES Latest <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions\" rel=\"noreferrer noopener\">Big Brain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/\" rel=\"noreferrer noopener\">WayPoints</a> updates for 3.7.4 - 3.7.6 as well<br />\nThis mod REQUIRES 7-zip to extract: <a target=\"_blank\" class=\"external-link\" href=\"https://www.7-zip.org/\" rel=\"noreferrer noopener\">7-zip.org</a></p>\n<ul>\n<li>Allow disabling bot extracting globally</li>\n<li>Further improvements to bot extracting</li>\n</ul>\n<h3><strong>If updating from 2.1.6 or earlier you must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.9",
+      "content_length": null,
+      "spt_version_constraint": "3.7.6",
+      "downloads": 18840,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-03-02T20:00:30.000000Z",
+      "created_at": "2024-03-02T20:00:30.000000Z",
+      "updated_at": "2026-05-14T04:21:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/a0508c88-b05a-4c70-a5dc-102d95d1e50d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A40Z&rscd=attachment%3B+filename%3DSAIN.2.1.9.for.3.7.6.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A40Z&ske=2026-08-01T21%3A07%3A40Z&sks=b&skv=2018-11-09&sig=WvlczeBfGpmFZJwIziGkwt1BqP8VB8Yn94EvP6QmWvc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.9.for.3.7.6.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5285,
+      "hub_id": 8604,
+      "version": "2.1.8",
+      "description": "<h3>This version will only work with <strong>SPT 3.7.4 - 3.7.6</strong></h3>\n<p>REQUIRES Latest <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions\" rel=\"noreferrer noopener\">Big Brain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/\" rel=\"noreferrer noopener\">WayPoints</a> updates for 3.7.4 - 3.7.6 as well</p>\n<ul>\n<li>Improved bot extract handling, bots will now update their chosen extract in the event it’s inaccessible, and will be able to use triggered extracts if the trigger has been done. Thanks DanW!</li>\n<li>Bots will now investigate IR light sources if they have NVGs on, the same way they investigate visible flashlights/lasers</li>\n<li>Catch/fix a few exceptions</li>\n<li>Limit bots reloading to once every 5 seconds, to avoid potential slowdowns when a weapon has bad data</li>\n<li>Fix flashlight dazzle, it now properly checks the enemy player, and is more limited in how much scatter it adds.\n<ul>\n<li>This should resolve the issue where a bot starts missing you when THEY have a flashlight, and you aim at them</li>\n<li>The dazzle effect is now less pronounced, bots are still relatively accurate even if you’re aiming a flashlight at them</li>\n</ul>\n</li>\n<li>Player scav bots no longer spawn with boss brains</li>\n<li>This version of SAIN is only compatible with SPT 3.7.4-3.7.6, not prior versions</li>\n</ul>\n<h3><strong>If updating from 2.1.6 or earlier you must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.8",
+      "content_length": null,
+      "spt_version_constraint": "3.7.6",
+      "downloads": 50874,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-01-02T01:23:17.000000Z",
+      "created_at": "2024-01-02T01:23:17.000000Z",
+      "updated_at": "2026-05-14T04:23:40.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/9a2a2a97-f090-4328-96d0-844f07191d4b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A25Z&rscd=attachment%3B+filename%3DSAIN.2.1.8.for.3.7.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A34Z&ske=2026-08-01T21%3A20%3A25Z&sks=b&skv=2018-11-09&sig=VJlqo5T3cmWrMEgqv6kE5WlRYVhuc%2FPfCPjPNzSNunk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.8.for.3.7.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5399,
+      "hub_id": 8466,
+      "version": "2.1.7",
+      "description": "<h3>This version will only work with <strong>SPT 3.7.5</strong></h3>\n<p>REQUIRES Latest <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions\" rel=\"noreferrer noopener\">Big Brain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/\" rel=\"noreferrer noopener\">WayPoints</a> updates for 3.7.5 as well</p>\n<ul>\n<li>Separate preset version from SAIN version, unless I make a breaking change to presets, they should no longer throw warnings</li>\n<li>Allow disabling bot talk patching via Global Settings -&gt; General Settings</li>\n<li>New handling of extract timer, should work with shortened raids introduced in SPT 3.7.4</li>\n<li>Allow external mods to trigger a forced extract on a bot</li>\n<li>Remove all pause functionality (Pausing causes too many issues to be worth maintaining that functionality)</li>\n<li>Remove SPT version number from SAIN dll filename</li>\n<li>This version of SAIN is only compatible with SPT 3.7.4-3.7.5, not prior versions</li>\n</ul>\n<h3><strong>You must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>\n<p>The filename for the plugin has changed, this means you will need to manually delete the file <code>BepInEx/Plugins/SAIN-3.7.1.dll</code></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.7",
+      "content_length": null,
+      "spt_version_constraint": "3.7.5",
+      "downloads": 18180,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-12-11T04:24:38.000000Z",
+      "created_at": "2023-12-11T04:24:38.000000Z",
+      "updated_at": "2026-05-14T04:24:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/47227736-e83f-4c28-9ada-c9d9a622cc8a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A46Z&rscd=attachment%3B+filename%3DSAIN.2.1.7.for.3.7.4.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A08%3A44Z&ske=2026-08-01T21%3A08%3A46Z&sks=b&skv=2018-11-09&sig=GN7S5O7ciCp286sVTsMbmBta%2BbChTF%2FBAL2K%2BdAsohM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.7.for.3.7.4.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5479,
+      "hub_id": 8366,
+      "version": "2.1.6",
+      "description": "<h3>This version will only work with SPT 3.7.3-3.7.4</h3>\n<p>REQUIRES Latest <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions\" rel=\"noreferrer noopener\">Big Brain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/\" rel=\"noreferrer noopener\">WayPoints</a> updates for 3.7.3-3.7.4 as well</p>\n<ul>\n<li>Fix squads not being created properly</li>\n<li>Tweak to Searching to help with the run/skid/run/skid behaviour (Thanks <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/y-saber\" rel=\"noreferrer noopener\">Saber</a>!)</li>\n<li>Resolve an issue that stopped SAIN from working when SPT was in debug mode</li>\n<li>Switch to 7-zip archives for releases</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.6",
+      "content_length": null,
+      "spt_version_constraint": "3.7.4",
+      "downloads": 13305,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-11-27T06:37:21.000000Z",
+      "created_at": "2023-11-27T06:37:21.000000Z",
+      "updated_at": "2026-05-14T04:26:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/654356041/5e9c1fdf-405b-4fcf-8b16-13017ce90129?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A23%3A25Z&rscd=attachment%3B+filename%3DSAIN.2.1.6.for.3.7.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A22%3A57Z&ske=2026-08-01T21%3A23%3A25Z&sks=b&skv=2018-11-09&sig=qTfWyRndD98lhTyRXllbSGOTNhxDnZgYXrmZuMgly%2BM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.6.for.3.7.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 5747,
+      "hub_id": 8015,
+      "version": "2.1.5",
+      "description": "<h3>This version will only work with SPT 3.7.1, 3.7.2, 3.7.3 REQUIRES Latest <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions\" rel=\"noreferrer noopener\">Big Brain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/\" rel=\"noreferrer noopener\">WayPoints</a> updates for 3.7.1/3.7.2/3.7.3 as well</h3>\n<p>Updated for 3.7.1</p>\n<p>Also supports 3.7.2, 3.7.3</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/2.1.5",
+      "content_length": null,
+      "spt_version_constraint": "3.7.3",
+      "downloads": 34652,
+      "fika_compatibility": "unknown",
+      "published_at": "2023-10-23T02:03:15.000000Z",
+      "created_at": "2023-10-23T02:03:15.000000Z",
+      "updated_at": "2026-05-14T04:28:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/631081868/2e61bce3-47fe-441b-8653-cbf434aa6875?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A26%3A19Z&rscd=attachment%3B+filename%3DSAIN.2.1.5.for.3.7.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A25%3A31Z&ske=2026-08-01T21%3A26%3A19Z&sks=b&skv=2018-11-09&sig=Xbu%2F7rws8PZ9LV35zrLqDYx2jzxSvvj%2ByzI2bFo20dI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NCwibmJmIjoxNzg1NjE2MTY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9Nz59p15zzk9cFnVyrZGjZlGnUlNtiSHOSmPMyJB1Mg&response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.5.for.3.7.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 640,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:52:00.587Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,691 @@
+{
+  "type": "mod",
+  "id": 1431,
+  "hub_id": 1981,
+  "guid": "com.mpstark.dynamicmaps",
+  "name": "Dynamic Maps",
+  "slug": "dynamic-maps",
+  "teaser": "Replaces the in-game map screen with actually useful maps with dynamic information!",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1981.png",
+  "downloads": 725970,
+  "favourites_count": 329,
+  "description": "<p><strong>Notice:</strong> I’m stepping back from my SPT mods for now and have added some known community authors in the case that I am out of touch, which is very likely to happen in the next months. These authors are not obligated to anything, just want to make sure that someone can add a maintainer in the future. My SPT projects were started to keep me occupied after a death in my immediate family and I’ve lost interest in Tarkov for now.</p>\n<hr />\n<p>Tired of getting lost? Here’s an in-game map viewer with dynamic information overlaid on-top, including extracts, quests, player and teammate markers, corpses, the BTR, player-dropped backpacks, airdrops, and locked doors. More features after the screenshots.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-DynamicMaps/raw/main/Screenshots/in_raid_map.png\" alt=\"in_raid_map.png\" /></p>\n<p><strong>In-game map with player marker</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-DynamicMaps/raw/main/Screenshots/out_of_raid_map.png\" alt=\"out_of_raid_map.png\" /></p>\n<p><strong>All maps accessible outside of raid</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-DynamicMaps/raw/main/Screenshots/dynamic_locks.png\" alt=\"dynamic_locks.png\" /></p>\n<p><strong>Dynamic Locks</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://github.com/mpstark/SPT-DynamicMaps/raw/main/Screenshots/quest_markers.png\" alt=\"quest_markers.png\" /></p>\n<p><strong>Quest Markers</strong></p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">INSTALLATION</div>\n<div class=\"tab-content\"><ol>\n<li>Download Dynamic Maps</li>\n<li>Open the downloaded zip file in 7-zip</li>\n<li>Select all folders in the zip file in 7-zip</li>\n<li>Drag the folders from 7-zip into your SPT folder</li>\n</ol>\n<p>Demonstration Video (yoink):\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3N6gTe2.gif\" alt=\"3N6gTe2.gif\" /></p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">FIKA COMPATIBILITY</div>\n<div class=\"tab-content\"><p>Dynamic Maps is compatible with Fika.</p>\n<ol>\n<li>Do not install the Bepinex side of this mod on the Fika Headless client, it will not load.</li>\n<li>All clients should have it, but it is not required for all clients to have.</li>\n<li>The Fika Server must have the Dynamic Maps Server side of the mod installed.</li>\n</ol></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">FEATURES</div>\n<div class=\"tab-content\"><ul>\n<li>Map organized in stacked layers / levels\n<ul>\n<li>Text map labels supported overlaid on map</li>\n<li>Automatic selection of layer based on player position (configurable)</li>\n<li>Manual level control available on left of map screen (as well as shift-scroll and configurable hotkeys)</li>\n</ul>\n</li>\n<li>Automatic min/max zoom based on size of map</li>\n<li>Support for coordinate rotation, since BSG decided to make north different direction on many of the maps</li>\n<li>Drag-based map pan and mousewheel-based map zoom controls; additional hotkeys for map control available (configurable)</li>\n<li>Peek at map hotkey (configurable)</li>\n<li>Minimap (configurable)</li>\n<li>Icon-based map markers placed both statically and dynamically. Currently:\n<ul>\n<li>In-raid dynamic player icon</li>\n<li>In-raid dynamic current extracts for player</li>\n<li>In-raid dynamic quest icons (loosely based on <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/dvize/GTFO\" rel=\"noreferrer noopener\">Prop’s GTFO</a>)</li>\n<li>In-raid dynamic player-dropped backpacks</li>\n<li>In-raid dynamic BTR icon (with icon by Kuromi, see <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/mpstark/SPT-DynamicMaps/blob/main/Resources/Markers/marker_credits.txt\" rel=\"noreferrer noopener\">marker_credits.txt</a> for more info)</li>\n<li>In-raid dynamic airdrop icons (generated when airdrop lands)</li>\n<li>In-raid dynamic markers for corpses</li>\n<li>In-raid dynamic other players/bots icons\n<ul>\n<li>Friendly players will only show if using another mod that adds multiplayer or adds friendly bots (not sure if that exists)</li>\n<li>Enemy players, bosses, and scavs off by default, intended for mostly debug</li>\n</ul>\n</li>\n<li>Static markers for all extracts for all maps out-of-raid</li>\n<li>Statically-loaded locked door with dynamic icon and color based on key status\n<ul>\n<li>Out-of-raid, green with key means player has it in inventory, yellow with key means key in stash, red with lock otherwise</li>\n<li>In-raid, green with key means player has the key, red with lock means player doesn’t have key</li>\n</ul>\n</li>\n<li>Static markers for switches and levers</li>\n</ul>\n</li>\n</ul>\n<p>See <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/mpstark/SPT-DynamicMaps/blob/main/KNOWN_ISSUES.md\" rel=\"noreferrer noopener\">KNOWN_ISSUES.md</a> for known current issues and <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/mpstark/SPT-DynamicMaps/blob/main/FEATURE_WISHLIST.md\" rel=\"noreferrer noopener\">FEATURE_WISHLIST.md</a> for a list of things that I would like to work on in the future.</p>\n<p>If you’re enjoying the mod or have a suggestion, please leave a comment**!**</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">CONFIGURATION</div>\n<div class=\"tab-content\"><hr />\n<p><strong>General</strong></p>\n<ul>\n<li><strong>Replace Map Screen</strong>: If the map should replace the BSG default map screen, requires swapping away from modded map to refresh</li>\n<li><strong>Center on Player Hotkey</strong>: Pressed while the map is open, centers the player</li>\n<li><strong>Move Map * Hotkey</strong>: Hotkey to move the map *</li>\n<li><strong>Move Map Hotkey Speed</strong>: How fast the map should move, units are map percent per second</li>\n<li><strong>Change Map Level * Hotkey</strong>: Hotkey to move the map level * (shift-scroll also does this in map screen)</li>\n<li><strong>Zoom Map * Hotkey</strong>: Hotkey to zoom the map * (scroll also does this in map screen)</li>\n<li><strong>Zoom Map Hotkey Speed</strong>: Zoom Map Hotkey Speed</li>\n<li><strong>Dump Info Hotkey</strong>: Pressed while the map is open, dumps json MarkerDefs for extracts, loot, and switches into root of plugin folder (only shows in advanced config mode)</li>\n</ul>\n<hr />\n<p><strong>Dynamic Markers</strong></p>\n<ul>\n<li><strong>Show Player Marker</strong>: If the player marker should be shown in raid</li>\n<li><strong>Show Friendly Player Markers</strong>: If friendly player markers should be shown</li>\n<li><strong>Show Enemy Player Markers</strong>: If enemy player markers should be shown (generally for debug)</li>\n<li><strong>Show Scav Markers</strong>: If enemy scav markers should be shown (generally for debug)</li>\n<li><strong>Show Boss Markers</strong>: If enemy boss markers should be shown</li>\n<li><strong>Show Locked Door Status</strong>: If locked door markers should be updated with status based on key acquisition</li>\n<li><strong>Show Quests In Raid</strong>: If quests should be shown in raid</li>\n<li><strong>Show Extracts In Raid</strong>: If extracts should be shown in raid</li>\n<li><strong>Show Extracts Status In Raid</strong>: If extracts should be colored according to their status in raid</li>\n<li><strong>Show Dropped Backpack In Raid</strong>: If the player’s dropped backpacks (not anyone elses) should be shown in raid</li>\n<li><strong>Show BTR In Raid</strong>: If the BTR should be shown in raid</li>\n<li><strong>Show Airdrop In Raid</strong>: If airdrops should be shown in raid when they land</li>\n<li><strong>Show Friendly Corpses In Raid</strong>: If friendly corpses should be shown in raid</li>\n<li><strong>Show Player-killed Corpses In Raid</strong>: If corpses killed by the player should be shown in raid, killed bosses will be shown in another color</li>\n<li><strong>Show Friendly-killed Corpses In Raid</strong>: If corpses killed by friendly players should be shown in raid, killed bosses will be shown in another color</li>\n<li><strong>Show Boss Corpses In Raid</strong>: If boss corpses (other than ones killed by the player) should be shown in raid</li>\n<li><strong>Show Other Corpses In Raid</strong>: If corpses (other than friendly ones or ones killed by the player) should be shown in raid</li>\n</ul>\n<hr />\n<p><strong>In-Raid</strong></p>\n<ul>\n<li><strong>Auto Select Level</strong>: If the level should be automatically selected based on the players position in raid</li>\n<li><strong>Auto Center On Player Marker</strong>: If the player marker should be centered when showing the map in raid</li>\n<li><strong>Reset Zoom On Center</strong>: If the zoom level should be reset each time that the map is opened while in raid</li>\n<li><strong>Centering On Player Zoom Level</strong>: What zoom level should be used as while centering on the player (0 is fully zoomed out, and 1 is fully zoomed in)</li>\n<li><strong>Peek at Map Shortcut</strong>: The keyboard shortcut to peek at the map</li>\n<li><strong>Hold for Peek</strong>: If the shortcut should be held to keep it open. If disabled, button toggles</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">RECOMMENDED MODS</div>\n<div class=\"tab-content\"><p>- Tyfon’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1860-ui-fixes/\" rel=\"noreferrer noopener\">UI Fixes</a></p>\n<p>- DrakiaXYZ’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1567-equip-from-weapon-rack/\" rel=\"noreferrer noopener\">Equip from Weapon Rack</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1859-quick-move-to-containers/\" rel=\"noreferrer noopener\">Quick Move to Containers</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1574-quest-tracker/\" rel=\"noreferrer noopener\">Quest Tracker</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1114-task-list-fixes/\" rel=\"noreferrer noopener\">Task List Fixes</a></p>\n<p>- ChooChoo’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1795-trader-modding-and-improved-weapon-building/\" rel=\"noreferrer noopener\">Trader Modding and Improved Weapon Building</a></p>\n<p>- CJ’s <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1769-stash-search\" rel=\"noreferrer noopener\">Stash Search</a>, which I have contributed to</p>\n<p>- My other mods <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1887-quick-weapon-rack-access/\" rel=\"noreferrer noopener\">Quick Weapon Rack Access</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1898-player-encumbrance-bar/\" rel=\"noreferrer noopener\">Player Encumbrance Bar</a>, and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1920-simple-crosshair/\" rel=\"noreferrer noopener\">Simple Crosshair</a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1431/dynamic-maps",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-05-23T02:35:00.000000Z",
+  "created_at": "2024-05-23T02:35:55.000000Z",
+  "updated_at": "2026-08-01T16:45:17.000000Z",
+  "owner": {
+    "id": 47478,
+    "name": "mpstark",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=m&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2024-04-04T09:27:41.000000Z",
+    "updated_at": "2025-09-26T15:36:51.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 27605,
+      "name": "DrakiaXYZ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2023-02-26T18:51:50.000000Z",
+      "updated_at": "2026-08-01T19:31:53.000000Z"
+    },
+    {
+      "id": 33963,
+      "name": "Cj",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/d727d6bd8dc4933bd46485123affaace57e0a5dc_128w.webp",
+      "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/abb3c8031fdcdc84c3d7e7624209ec44a3b48a80.jpg",
+      "created_at": "2023-07-14T19:01:21.000000Z",
+      "updated_at": "2026-08-01T17:03:48.000000Z"
+    },
+    {
+      "id": 48110,
+      "name": "acidphantasm",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/539f89fb275187ce761506de5f60c3a09690ee32_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-04-11T21:22:35.000000Z",
+      "updated_at": "2026-08-01T18:53:12.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/acidphantasm/SPT-DynamicMaps",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13462,
+      "hub_id": null,
+      "version": "1.1.3",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Actually last hotfix probably who knows, I do what I want</p>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved minimap not being at the correct position on initial spawn</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.1.3",
+      "content_length": 1010566,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 88530,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-20T02:50:00.000000Z",
+      "created_at": "2026-04-20T02:50:40.000000Z",
+      "updated_at": "2026-08-01T16:45:17.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8edb5fa7853dfdfcac9c810fc2fbaf712f4b040a6b5df44af0b78fdae6c2fe3f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/af1bcd52-b873-4665-b8f2-1d9f25db018a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A29Z&rscd=attachment%3B+filename%3DDynamicMaps-1.1.3.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A19Z&ske=2026-08-01T21%3A06%3A29Z&sks=b&skv=2018-11-09&sig=mxdbs8%2F1OoWQblT9CBpmmpLmaL6AFIRvYppmIg%2F6ni4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-1.1.3.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13452,
+      "hub_id": null,
+      "version": "1.1.2",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Hopefully last hotfix unless people find more issues.</p>\n<p>Changes</p>\n<ul>\n<li>When changing map on Menu Screen, the map will load at minimum zoom and centered now</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved zoom/position issues with the peek map when the minimap is enabled</li>\n<li>Resolved adjusting the main map zoom manually in the config trying to adjust the zoom level on the minimap in raid</li>\n<li>Probably resolved NRE caused by Looting Bots bots trying to loot something that can’t fit, then throwing it on the ground, then looting it again when it’s an item that should display on the map due to settings</li>\n<li>Resolved level select slider disappearing on Menu Map when changing to a map with 1 level, then changing to another map with multiple levels</li>\n</ul>\n<p>Stop using mod managers to try and install this.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.1.2",
+      "content_length": 1008461,
+      "spt_version_constraint": "~4.0",
+      "downloads": 3733,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-17T21:42:00.000000Z",
+      "created_at": "2026-04-17T21:42:37.000000Z",
+      "updated_at": "2026-07-28T08:22:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/29d0985f6c64c5f60a64e2a186b8a7fa6fed731810db7403b7620a32ac865200?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/4f757845-c151-4290-a421-daf2c4acc8f7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A45Z&rscd=attachment%3B+filename%3DDynamicMaps-1.1.2.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A29Z&ske=2026-08-01T21%3A12%3A45Z&sks=b&skv=2018-11-09&sig=84ZKlA2nvefTalIosObTOrrcMwpM39doeW6b9gCsXTc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-1.1.2.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13446,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>New Features</p>\n<ul>\n<li>F12 option to enable/disable zooming into the mouse instead of center on Menu Map</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>In-raid MiniMap is now 30~ FPS for performance</li>\n<li>Map is now clamped (no longer lose the map on accident or flinging it off screen and having to remember the center hotkey)</li>\n<li>Big changes to Scroll Zoom / Drag on Menu Map (much smoother)</li>\n<li>Tried to fix a few subscriptions not unsubscribing properly on destroy, there’s probably still more of these (the random NRE on raid end)</li>\n<li>Peek map will reset to Min Zoom &amp; Center the map if you disable AutoCenter On Player + Reset Zoom + Retain Map Pos</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved the per map zoom levels fighting each other by normalizing the config zoom to 0-1f (% based)</li>\n<li>Resolved the map zoom values not updating if you happen to change the zoom via F12</li>\n<li>Resolved Labyrinth Menu map not automatically displaying the exfil names</li>\n<li>Resolved the peek map flinging away randomly depending on AutoCenter/Reset Zoom/Retain Map F12 settings</li>\n<li>Resolved more zoom logic issues</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.1.1",
+      "content_length": 1008173,
+      "spt_version_constraint": "~4.0",
+      "downloads": 1367,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-17T02:59:00.000000Z",
+      "created_at": "2026-04-17T03:00:17.000000Z",
+      "updated_at": "2026-07-28T08:22:24.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7eb40fec128ca1b32b3821dd00e5aab3a4cd85a7a1d7e711697c08aa4fb4eab1?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/ea4ce6af-1066-4934-9f28-4d925fe15ed0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A52Z&rscd=attachment%3B+filename%3DDynamicMaps-1.1.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A28Z&ske=2026-08-01T21%3A01%3A52Z&sks=b&skv=2018-11-09&sig=mUz8dh5OlRStiR86nKdC3LHZEKxZh56NZXxonpzTtYk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-1.1.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13434,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Known: Still zoom issues sometimes cause f the minimap</p>\n<p>New Features</p>\n<ul>\n<li>Changes maps to load via SVG</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Slightly adjusted how zoom logic works to better handle configuration options</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Resolved issue with zoom logic rotating away/towards player when zooming on peek (probably)</li>\n</ul>\n<p>Mod now ships with required dependencies for SVG support\nIf removing Dynamic Maps, you can remove the following files from <code>\\SPTROOT\\EscapeFromTarkov_Data\\Managed</code> to ensure full uninstallation</p>\n<ul>\n<li>Unity.InternalAPIEngineBridge.003.dll</li>\n<li>Unity.VectorGraphics</li>\n</ul>\n<p>Mod now ships with the required licenses for the map SVGs themselves, and is notated where I have adjusted them as per requirements of the license itself.\nThis includes shipping with a license for Labyrinth, which I made myself by hand.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.1.0",
+      "content_length": 1007449,
+      "spt_version_constraint": "~4.0",
+      "downloads": 3080,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-04-14T02:08:00.000000Z",
+      "created_at": "2026-04-14T02:09:09.000000Z",
+      "updated_at": "2026-07-28T08:21:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0924d4c749ab67fc9f86f753fb85c0cc949ef1349c7f932a94d23fbb9e170fe2?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/0bf0589f-1148-4b4e-8e85-cdd50db913f7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A13%3A11Z&rscd=attachment%3B+filename%3DDynamicMaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A55Z&ske=2026-08-01T21%3A13%3A11Z&sks=b&skv=2018-11-09&sig=Zv8Osvk4DeuQva6fUWSqMz3BaviYLsUtAzWPqN%2BFHf8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DDynamicMaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12696,
+      "hub_id": null,
+      "version": "1.0.5",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed Transit Markers not displaying on Fika</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.5",
+      "content_length": 8487264,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 73993,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-28T02:58:00.000000Z",
+      "created_at": "2025-12-28T02:58:25.000000Z",
+      "updated_at": "2026-07-28T07:18:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/00a0663d01b1a52d9635b0141f0541ffc669bc9327ce72083eea7c403673625e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/dd062143-5eac-4fc5-b48d-9b2e95041cdf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A13Z&rscd=attachment%3B+filename%3DDynamicMaps-1.0.5.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A49Z&ske=2026-08-01T21%3A02%3A13Z&sks=b&skv=2018-11-09&sig=hsnFWn9%2FGw9yJ%2Bv1%2FoSvTixQbLaCgXCgmqsCCJTX2Hg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-1.0.5.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12303,
+      "hub_id": null,
+      "version": "1.0.4",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed NREs from Airdrop containers. Especially needed for Fika users.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.4",
+      "content_length": 7923476,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 58173,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-13T03:43:00.000000Z",
+      "created_at": "2025-11-13T03:43:34.000000Z",
+      "updated_at": "2026-07-28T06:26:43.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5ba936fe7fa9f2807685294dd29eddd856762455dfcd83eacfb20df316762c7f?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/ad8cf587-2681-4e27-bfca-3aa330ee3213?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A01%3A52Z&rscd=attachment%3B+filename%3Dmpstark-dynamicmaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A31Z&ske=2026-08-01T21%3A01%3A52Z&sks=b&skv=2018-11-09&sig=n2EpfOIUkygoShWZX6d0ZtIs1ofXkT%2B6%2F2lPrV65fqo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&response-content-disposition=attachment%3B%20filename%3Dmpstark-dynamicmaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12031,
+      "hub_id": null,
+      "version": "1.0.3",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed Labyrinth Bosses/Helpers showing incorrectly as Scavs.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.3",
+      "content_length": 7925856,
+      "spt_version_constraint": "~4.0",
+      "downloads": 19289,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-10-26T03:34:00.000000Z",
+      "created_at": "2025-10-26T03:34:09.000000Z",
+      "updated_at": "2026-07-28T06:08:54.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/3bbd5e55b6b3a70fe5b903093b01efcb6d50ea20233d14678ab256c62f720317?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/3b8cdccb-4175-4a6c-bf66-529cc21da386?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A09Z&rscd=attachment%3B+filename%3Dmpstark-dynamicmaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A23Z&ske=2026-08-01T21%3A14%3A09Z&sks=b&skv=2018-11-09&sig=87rQWbWNSPNF6g9PdfgK9xBhPTnkRWzcX%2F6rEbAymT0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MywibmJmIjoxNzg1NjE1MjQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sOfuc54jAf4cNoxlQSIf2c_oRNT0-tUX2DC1ySqSIvM&response-content-disposition=attachment%3B%20filename%3Dmpstark-dynamicmaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11879,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>New Features</p>\n<ul>\n<li>Labyrinth Map</li>\n<li>Labyrinth was custom made by me, so may have some inaccuracies.</li>\n</ul>\n<p>Changes</p>\n<ul>\n<li>Replaced unnecessary reflection (Thanks Lacyway)</li>\n</ul>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fixed invalid method reflection (Thanks Lacyway)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.2",
+      "content_length": 7923936,
+      "spt_version_constraint": "~4.0",
+      "downloads": 11064,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-17T17:08:00.000000Z",
+      "created_at": "2025-10-17T17:08:13.000000Z",
+      "updated_at": "2026-07-28T06:04:34.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/f59a71e2b0c40f966bce0a98ada4d3714aa523971ebcc3687364646bf1721eb8?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/4b4de6d5-8bc7-406d-9c2b-6548607c3731?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A04Z&rscd=attachment%3B+filename%3Dmpstark-dynamicmaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A23Z&ske=2026-08-01T21%3A05%3A04Z&sks=b&skv=2018-11-09&sig=bDokl6ryNqAbSDoy2414kTdTeFY1nqakcQh35Fj0DZQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3Dmpstark-dynamicmaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11824,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Hotfix</p>\n<p>Bugs Squashed</p>\n<ul>\n<li>Fix Map Item check</li>\n<li>Fix Quest Markers</li>\n<li>Fix thrown backpacks/items/etc</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.1",
+      "content_length": 7834156,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 8943,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T10:31:00.000000Z",
+      "created_at": "2025-10-13T10:31:37.000000Z",
+      "updated_at": "2026-07-28T06:03:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a5a9dc118f46c4fd4eacfacfc9589327b85d17163a1a17f1da0527110511f328?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/b06e829d-973a-480e-9452-a16324a8a9e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A51%3A56Z&rscd=attachment%3B+filename%3Dmpstark-dynamicmaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A51%3A17Z&ske=2026-08-01T20%3A51%3A56Z&sks=b&skv=2018-11-09&sig=Nq6pSup0hql8HaTuGlvLr273fP0GFN5syIHR3JKnP7s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3Dmpstark-dynamicmaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11818,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<h3><strong>This version will only work for SPT 4.0.x</strong></h3>\n<p>Changes</p>\n<ul>\n<li>Added description text to the map items (You forgot these existed, didn’t you? They’re available at Therapist.)</li>\n</ul>\n<p>Fika Compatibility</p>\n<ul>\n<li>Added ability for server owners to prevent users from enabling bot markers</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/1.0.0",
+      "content_length": 7834212,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 1645,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-13T03:42:00.000000Z",
+      "created_at": "2025-10-13T03:42:38.000000Z",
+      "updated_at": "2026-07-28T06:03:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/df5ef08f7523f0bf0cdd65e56da64f4bb98c65b2a38af5cda240e92c3c72b51e?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/b862e30b-e946-474c-b035-1efcbb513a78?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A39Z&rscd=attachment%3B+filename%3Dmpstark-dynamicmaps.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A54%3A40Z&ske=2026-08-01T20%3A55%3A39Z&sks=b&skv=2018-11-09&sig=IHco8z768K6TW0%2B2XIkRK%2Br3rVPrYpTJNW%2BNUUGhKSg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3Dmpstark-dynamicmaps.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 773,
+      "hub_id": 14045,
+      "version": "0.5.7",
+      "description": "<h3><strong>This version will only work for SPT 3.11.x</strong></h3>\n<p>Version bump to create a new release on the hub</p>\n<p>No changes from 0.5.6</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.5.7",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 138424,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-18T19:39:37.000000Z",
+      "created_at": "2025-04-18T19:39:37.000000Z",
+      "updated_at": "2026-05-14T01:58:07.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/927514928/a82e290e-35f8-482d-8e87-e16d465ba450?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A14%3A15Z&rscd=attachment%3B+filename%3DDynamicMaps-0.5.7-ba475092.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A13%3A52Z&ske=2026-08-01T21%3A14%3A15Z&sks=b&skv=2018-11-09&sig=xRcbLx5htp%2F39ZnisN%2BW1EUYP3nca1mRXHec84mgt54%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.5.7-ba475092.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3169,
+      "hub_id": 11222,
+      "version": "0.3.4",
+      "description": "<p>For SPT 3.9.* only.</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Minor issue that caused MapPeek GameObject to be retained after a raid</li>\n</ul>\n<p>SHA-256: 8aa5bd34b1366411704d37bcb52844760e17e139587ec4409a516dc3d9be9cd9</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/8aa5bd34b1366411704d37bcb52844760e17e139587ec4409a516dc3d9be9cd9\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.4",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 53157,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-08-06T07:43:10.000000Z",
+      "created_at": "2024-08-06T07:43:10.000000Z",
+      "updated_at": "2026-05-14T03:45:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/e9f9e5df-32e5-4f5d-b294-8ca4dd3ded05?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A04%3A39Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.4-b6d8bf85.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A51Z&ske=2026-08-01T21%3A04%3A39Z&sks=b&skv=2018-11-09&sig=TcvimWwWD2OVkgxyRlH5JtQimc%2BpDTW8FSMNHA3NZhM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.4-b6d8bf85.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3713,
+      "hub_id": 10545,
+      "version": "0.3.2",
+      "description": "<p>For SPT 3.9.* Only</p>\n<h2>Changelog</h2>\n<ul>\n<li>Updated for SPT 3.9.* with no other changes. Thanks ArchangelWTF/Jesse for the headstart.</li>\n</ul>\n<p>SHA-256: 0a698fad43758a889e265786f8c2c9e19d4da2850f455d15267ee6d137cc6544</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/0a698fad43758a889e265786f8c2c9e19d4da2850f455d15267ee6d137cc6544\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n<p>Not much testing has been done, let me know if you run into an issue!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 11870,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T12:56:17.000000Z",
+      "created_at": "2024-07-07T12:56:17.000000Z",
+      "updated_at": "2026-05-14T03:55:32.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/d4b19e7c-0164-4953-90d1-33479722c1d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A48%3A52Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.2-55669364.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A48%3A41Z&ske=2026-08-01T20%3A48%3A52Z&sks=b&skv=2018-11-09&sig=5UEczM5znYKl1CZfYQJvklCoqfTstedPuxy4bcAss%2Bc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.2-55669364.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4016,
+      "hub_id": 10152,
+      "version": "0.3.1",
+      "description": "<p>For SPT 3.8.*</p>\n<p>KNOWN ISSUE: NRE log spam on player marker, doesn’t seem to affect gameplay, but will affect performance. Will fix ASAP.</p>\n<h2>Changelog</h2>\n<ul>\n<li>FEATURE: Add BTR marker (Thanks Kuromi for the custom icon!)</li>\n<li>FEATURE: Add player-dropped backpack marker (note: shows for all backpacks dropped by p)</li>\n<li>FEATURE: Add friendly-killed corpse markers option</li>\n<li>FEATURE: Add boss corpse marker option</li>\n<li>FIX: Markers for PMCs/Scavs on mounted guns should now properly be removed (probably tied to BSG bug)</li>\n<li>FIX: Quests that must be completed in one raid should now properly display markers for conditions that were reset (Thanks Utjan for the digging!)</li>\n<li>TWEAK: Add unique color for boss corpses (Thanks GavinRay97)</li>\n<li>TWEAK: Changed friendly player markers to a lighter blue</li>\n<li>TWEAK: Changed “Other Corpses” to be white instead of yellow</li>\n</ul>\n<p>You should still consider this mod unstable: please report all issues!</p>\n<p>SHA-256: 268bebd7567aaf3dbceb073ab36edb1eedb7912f822a30187a09b7ba9f6ced1f</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/268bebd7567aaf3dbceb073ab36edb1eedb7912f822a30187a09b7ba9f6ced1f\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 1080,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-06-02T20:46:08.000000Z",
+      "created_at": "2024-06-02T20:46:08.000000Z",
+      "updated_at": "2026-05-14T04:01:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/9349875a-fd40-4abf-bf46-3afc045ccb56?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A12%3A30Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.1-dcbaf9ea.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A12%3A18Z&ske=2026-08-01T21%3A12%3A30Z&sks=b&skv=2018-11-09&sig=g4pZzRwOBbL65P7iCqEDDNdyTRAt5dpKSZWUofrXjPk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.1-dcbaf9ea.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3985,
+      "hub_id": 10195,
+      "version": "0.3.1+3",
+      "description": "<p>For SPT 3.8.* Only</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Optional quest markers are now removed when they are completed</li>\n<li>FIX: Resolve issue that could arise if invalid LootItem was registered, which sometimes happened with airdrops</li>\n<li>MINOR: EFT version is now checked before loading mod, as currently this is tied to specific version of EFT</li>\n</ul>\n<p>SHA-256: d1c198f81cceb9c1a8c309dd93bd2a31c448962b41319605c82fc0aba9d1867f</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/d1c198f81cceb9c1a8c309dd93bd2a31c448962b41319605c82fc0aba9d1867f\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.1+3",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 20535,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-06-07T04:54:11.000000Z",
+      "created_at": "2024-06-07T04:54:11.000000Z",
+      "updated_at": "2026-05-14T04:00:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/4ed5c860-f0f1-451f-b250-810d278d39c9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A57%3A47Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.1.3-c079a1fa.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A57%3A36Z&ske=2026-08-01T20%3A57%3A47Z&sks=b&skv=2018-11-09&sig=xKDyrvbxHqqbc3%2Fkb23%2FO5iqOzjcG9YZsjWBPD8S2Sw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.1.3-c079a1fa.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4009,
+      "hub_id": 10162,
+      "version": "0.3.1+2",
+      "description": "<p>For SPT 3.8.*</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Boss markers should now be properly enabled if it the only other player marker enabled (i.e. you disabled Friendly Player Markers)</li>\n<li>FIX: Boss corpse markers should now be enabled by its config instead being tied to “Other Corpses”</li>\n<li>TWEAK: Add some additional bosses to tracked bosses (Cultist Priest, Blood Hounds)</li>\n</ul>\n<p>You should still consider this mod unstable: please report all issues!</p>\n<p>SHA-256: db50e3bb16babe9cd61f661c259d29a712a8d44a9156b056da06afa0ef3b7d54</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/db50e3bb16babe9cd61f661c259d29a712a8d44a9156b056da06afa0ef3b7d54\" rel=\"noreferrer noopener\">VirusTotal Results</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.1+2",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 3344,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-06-04T02:23:00.000000Z",
+      "created_at": "2024-06-04T02:23:00.000000Z",
+      "updated_at": "2026-05-14T04:01:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/da329576-9495-4a0a-9215-3b930574682d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A16Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.1.2-e1cc3770.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A15Z&ske=2026-08-01T20%3A49%3A16Z&sks=b&skv=2018-11-09&sig=oLpCpQ9a9M9SNmY3nUC2q%2FImN2ujX3ZemmTdkw4QfvQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.1.2-e1cc3770.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4015,
+      "hub_id": 10153,
+      "version": "0.3.1+1",
+      "description": "<p>For SPT 3.8.*</p>\n<p>Hotfix: Fixes potential 0.3.1 NRE log spam probably: if you see any exceptions in your BepInEx log from DynamicMaps, PLEASE let me know.</p>\n<h2>0.3.1 Changelog</h2>\n<p>- FEATURE: Add BTR marker (Thanks Kuromi for the custom icon!)</p>\n<p>- FEATURE: Add player-dropped backpack marker</p>\n<p>- FEATURE: Add friendly-killed corpse markers option</p>\n<p>- FEATURE: Add boss corpse marker option</p>\n<p>- FIX: Markers for PMCs/Scavs on mounted guns should now properly be removed (probably tied to BSG bug)</p>\n<p>- FIX: Quests that must be completed in one raid should now properly display markers for conditions that were reset (Thanks Utjan for the digging!)</p>\n<p>- TWEAK: Add unique color for boss corpses (Thanks GavinRay97)</p>\n<p>- TWEAK: Changed friendly player markers to a lighter blue</p>\n<p>- TWEAK: Changed “Other Corpses” to be white instead of yellow</p>\n<p>You should still consider this mod unstable: please report all issues!</p>\n<p>SHA-256: 25ee9fe33c221e0bb74aff43c1fa9cb91b2b679b9c32d25b305f540d0205ab1a<br />\n<a target=\"_blank\" class=\"external-link\" href=\"https://www.virustotal.com/gui/file/25ee9fe33c221e0bb74aff43c1fa9cb91b2b679b9c32d25b305f540d0205ab1a\" rel=\"noreferrer noopener\">VirusTotal Result  </a></p>\n<p>Known issue: Show Boss Corpses is bugged, use Show Other Corpses to see both boss corpses and other corpses.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.1+1",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 2235,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-06-02T21:47:31.000000Z",
+      "created_at": "2024-06-02T21:47:31.000000Z",
+      "updated_at": "2026-05-14T04:01:21.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/109c3ef9-392e-447f-8b79-2f8d8b5b27aa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A48%3A31Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.1.1-30462ee8.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A47%3A36Z&ske=2026-08-01T20%3A48%3A31Z&sks=b&skv=2018-11-09&sig=%2FtlDiPbNsO2nJVMdXKuJw3Bs1%2FzXvAGsIFyXX15bf0s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.1.1-30462ee8.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4057,
+      "hub_id": 10100,
+      "version": "0.3.0",
+      "description": "<p>For SPT 3.8.* only</p>\n<h2>Changelog</h2>\n<ul>\n<li>MAJOR: Added “Peek at Map” feature, which will allow you to glance at the map without opening the inventory, configurable</li>\n<li>FEATURE: Added separate boss marker option, which will use a different star icon</li>\n<li>FEATURE: Added hotkeys for map manipulation, available to use both during peek and in map screen</li>\n<li>FEATURE: Added dynamic markers for corpses, separated into friendly, killed-by-player, and other</li>\n<li>CHANGE: Renamed “Enabled” config option to “Replace Map Screen”</li>\n<li>CHANGE: Map layer images are cached during initial load of game, which was the majority of map load times</li>\n<li>CHANGE: Defaults for map centering on player in-raid changed to be less annoying. notably disabled by default</li>\n<li>FIXED: Nicknames for player icons are now transliterated if needed</li>\n</ul>\n<p>This is a big update, so likely there are bugs! Please report all issues!</p>\n<p>SHA-256: 2a81de1bb421eb06bb1a9e5fe0f3ddd0f6a3909b1152192c46bb110cec02b2d0</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.3.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 4990,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-29T22:49:48.000000Z",
+      "created_at": "2024-05-29T22:49:48.000000Z",
+      "updated_at": "2026-05-14T04:02:42.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/6827ca6b-b5b3-4848-b9b6-fffd0ff111bf?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A01Z&rscd=attachment%3B+filename%3DDynamicMaps-0.3.0-f8d4ed27.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A06%3A55Z&ske=2026-08-01T21%3A07%3A01Z&sks=b&skv=2018-11-09&sig=nIXFKQYhLXBSmUqGK6FmBypjOuoo7oP54S0mFeZzvoY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.3.0-f8d4ed27.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4077,
+      "hub_id": 10078,
+      "version": "0.2.1",
+      "description": "<p>For SPT 3.8.*</p>\n<h2>Changelog</h2>\n<ul>\n<li>FEATURE: Add airdrop dynamic markers</li>\n<li>FEATURE: Add “Center on Player” hotkey config</li>\n<li>FIX: Some dynamic markers, particularly markers for other players, may fail to have text initialize properly yielding <strong>MEGA</strong> text without outline. Now should retry each time the user mouses over marker or hides/shows</li>\n<li>FIX: Only get extract information once during raid instead of each time the map was opened and get it slightly differently, may resolve some issues with extracts that I could not reproduce</li>\n<li>FIX: Shoreline utility room had malformed key id</li>\n<li>FIX: Customs Dorms third floor boundary for auto level detection</li>\n<li>FIX: Slightly adjust factory bounds</li>\n</ul>\n<p>PROBABLY STILL UNSTABLE: PLEASE REPORT ALL ISSUES!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.2.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 2297,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-27T21:23:39.000000Z",
+      "created_at": "2024-05-27T21:23:39.000000Z",
+      "updated_at": "2026-05-14T04:02:48.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/a6064509-24af-4b7d-b649-40d046475951?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A23Z&rscd=attachment%3B+filename%3DDynamicMaps-0.2.1-01ec57c1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A00Z&ske=2026-08-01T20%3A49%3A23Z&sks=b&skv=2018-11-09&sig=hwbDKbcT0%2BZqqjmIAhW7kHl8s6RwLMKiUeBZ52P7Hmk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.2.1-01ec57c1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4083,
+      "hub_id": 10070,
+      "version": "0.2.0",
+      "description": "<p>For SPT 3.8.*</p>\n<h2>Changelog</h2>\n<ul>\n<li>FEATURE: Added basic config</li>\n<li>FEATURE: Showing map in raid will center on player and have the zoom reset to slightly zoomed in, configurable</li>\n<li>FEATURE: Show friendly players on map, configurable</li>\n<li>FEATURE: For debug or just because: show enemy PMCs and scavs on map, configurable, default off</li>\n<li>FIX: Scav raids extracts were somehow being randomized by inspecting them (Why BSG!?)</li>\n<li>FIX: Resolve creating duplicate quest markers in some instances</li>\n<li>COMPAT: Custom quest flare zones should be more compatible</li>\n</ul>\n<p>PROBABLY STILL UNSTABLE: PLEASE REPORT ALL ISSUES!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.2.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 1662,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-26T22:06:08.000000Z",
+      "created_at": "2024-05-26T22:06:08.000000Z",
+      "updated_at": "2026-05-14T04:02:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/4b791db6-224f-4146-9b1a-a2ea11b92a1c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A05Z&rscd=attachment%3B+filename%3DDynamicMaps-0.2.0-b76afa42.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A46Z&ske=2026-08-01T21%3A06%3A05Z&sks=b&skv=2018-11-09&sig=cz3sYN%2BfCqpVF7uueWzrxlIbotTbzKApwvyNqMSFgNo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0OCwibmJmIjoxNzg1NjE1MjQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5PPs5bfJaEgh-tKGxZSMerMPp2EVvEFO9GyGQ8c9K_I&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.2.0-b76afa42.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4114,
+      "hub_id": 10033,
+      "version": "0.1.3",
+      "description": "<p>For SPT 3.8.*</p>\n<p>Sorry for the version spam!</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Resolve regression with attempted Fika fix</li>\n<li>FIX: Don’t allow map filter if nothing matches that filter</li>\n</ul>\n<p>PROBABLY STILL BUGGY – REPORT ALL BUGS PLEASE!</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.1.3",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 3944,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-23T13:39:30.000000Z",
+      "created_at": "2024-05-23T13:39:30.000000Z",
+      "updated_at": "2026-05-14T04:03:13.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/8faac674-d521-4c9f-8787-f8a07d5b7892?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A19Z&rscd=attachment%3B+filename%3DDynamicMaps-0.1.3-34486712.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A40Z&ske=2026-08-01T21%3A02%3A19Z&sks=b&skv=2018-11-09&sig=Vq%2B9%2B5HoQxXHn0p8YYLqsXKfe9fTuayyHYP0t3UplJ8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0OCwibmJmIjoxNzg1NjE1MjQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5PPs5bfJaEgh-tKGxZSMerMPp2EVvEFO9GyGQ8c9K_I&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.1.3-34486712.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4117,
+      "hub_id": 10029,
+      "version": "0.1.2",
+      "description": "<p>For SPT 3.8.*</p>\n<h2>Changelog</h2>\n<ul>\n<li>FIX: Disable zooming with scroll-wheel if the map select dropdown is down (which also uses the scroll wheel)</li>\n<li>COMPAT: Try to resolve Fika incompatibility that borked the in-raid detection, causing the lack of a player marker and quest markers</li>\n<li>COMPAT: Attempt to better support custom quests</li>\n</ul>\n<p>PROBABLY STILL BUGGY – REPORT ALL BUGS PLEASE!</p>\n<p>KNOWN ISSUES:</p>\n<ul>\n<li>There is something wrong with the fika fix with this version. Will fix as soon as I can.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.1.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 265,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-23T12:15:39.000000Z",
+      "created_at": "2024-05-23T12:15:39.000000Z",
+      "updated_at": "2026-05-14T04:03:20.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/0fe36c47-39e1-4a4e-a61d-8b5b83a613d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A54%3A15Z&rscd=attachment%3B+filename%3DDynamicMaps-0.1.2-bf85c0ef.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A53%3A38Z&ske=2026-08-01T20%3A54%3A15Z&sks=b&skv=2018-11-09&sig=xI8Yb91QPTsrUklFDrLMPJlhPJjaFzvlCSotyuhYxvg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0OCwibmJmIjoxNzg1NjE1MjQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5PPs5bfJaEgh-tKGxZSMerMPp2EVvEFO9GyGQ8c9K_I&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.1.2-bf85c0ef.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4118,
+      "hub_id": 10028,
+      "version": "0.1.1",
+      "description": "<p>For SPT 3.8.*</p>\n<h2>Changelog</h2>\n<ul>\n<li>ENHANCEMENT: Added shift-scroll shortcut to move up and down levels</li>\n<li>FIX: Resolve Woods out-of-raid static extracts showing in-raid</li>\n<li>FIX: Remove unused shortcut configuration – I will be revisiting this in the future, it was more complicated than I expected</li>\n</ul>\n<p>PROBABLY BUGGY – REPORT ALL BUGS PLEASE!</p>\n<p>Known Issues: Incompatible with Fika; next version will fix.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.1.1",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 403,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-23T09:47:07.000000Z",
+      "created_at": "2024-05-23T09:47:07.000000Z",
+      "updated_at": "2026-05-14T04:03:19.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/2d01cf8f-639c-4c3a-955b-fd50bacdc54c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A55Z&rscd=attachment%3B+filename%3DDynamicMaps-0.1.1-0a158297.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A02%3A13Z&ske=2026-08-01T21%3A02%3A55Z&sks=b&skv=2018-11-09&sig=YY%2B%2BFT53r6kuh0a8PLXV4WDNz6MIctCEtDsggs%2BpmBY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0OCwibmJmIjoxNzg1NjE1MjQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5PPs5bfJaEgh-tKGxZSMerMPp2EVvEFO9GyGQ8c9K_I&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.1.1-0a158297.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 4122,
+      "hub_id": 10023,
+      "version": "0.1.0",
+      "description": "<p>For SPT 3.8.*</p>\n<p>Initial release</p>\n<p>PROBABLY BUGGY – REPORT ALL BUGS PLEASE!</p>\n<p>Known issues:<br />\n- The keyboard shortcut is currently unimplemented, it turned out to be harder than I thought it would be and I forgot to remove the config for it.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1431/dynamic-maps/0.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.8.0",
+      "downloads": 992,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-05-23T02:35:55.000000Z",
+      "created_at": "2024-05-23T02:35:55.000000Z",
+      "updated_at": "2026-05-14T04:03:16.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/5d78674497088b42504f74508f28e0c62b8fcbd7a1ffe571fb220d2169a22ad6",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/798473022/3636a9ba-6555-4ddb-b89f-546456314617?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A43Z&rscd=attachment%3B+filename%3DDynamicMaps-0.1.0-c581f5fb.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A28Z&ske=2026-08-01T21%3A09%3A43Z&sks=b&skv=2018-11-09&sig=WigQ9%2FFp7ac6OwtDA3q4p%2BEtY3qnqD7lPbIMB4AdSuY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0OCwibmJmIjoxNzg1NjE1MjQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5PPs5bfJaEgh-tKGxZSMerMPp2EVvEFO9GyGQ8c9K_I&response-content-disposition=attachment%3B%20filename%3DDynamicMaps-0.1.0-c581f5fb.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 508,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:45:33.707Z",
+    "discoveredBy": "seed"
+  }
+}

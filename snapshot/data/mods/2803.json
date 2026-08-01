@@ -1,0 +1,316 @@
+{
+  "type": "mod",
+  "id": 2803,
+  "hub_id": null,
+  "guid": "com.serenity.itemgen",
+  "name": "ItemGen",
+  "slug": "itemgen",
+  "teaser": "A server-side framework for SPTarkov that lets anyone, including non-programmers, create custom items using simple JSON packs. Includes a web-based tool for generating packs visually and a client-side bundle injector for custom 3D models.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/ONjHcQzOhEa1yNlZbili0L9M4c6yzXWMgqo0s81L.png",
+  "downloads": 1497,
+  "favourites_count": 20,
+  "description": "<h1>ItemGen - Custom Item Framework</h1>\n<p><strong>ItemGen</strong> is a server-side framework for SPTarkov that lets anyone create custom items - quest items, keys, containers, and stims - using simple JSON packs, no programming required. Custom 3D models and use animations are supported through the included client bundle injector.</p>\n<h2>What It Does</h2>\n<ul>\n<li>Loads item packs from <code>user/mods/ItemGen/items/</code></li>\n<li>Clones existing item templates and overrides names, descriptions, stats, prices, and stack sizes</li>\n<li>Registers custom items with the item database, handbook, and flea market</li>\n<li>Supports <strong>Quest Items</strong>, <strong>Keys</strong>, <strong>Containers</strong>, and <strong>Stims</strong> with category-specific behavior</li>\n<li>Adds custom items to vanilla traders with configurable prices, loyalty levels, and stock</li>\n<li>Handles all item registration, validation, and locale injection internally</li>\n<li>Includes a client-side bundle injector for custom 3D models and use animations via <code>BepInEx/plugins/Serenity-ItemGen/bundles/</code></li>\n</ul>\n<h2>Web Tool</h2>\n<p>Create item packs visually with the <a target=\"_blank\" class=\"external-link\" href=\"https://itemgen-tool.netlify.app\" rel=\"noreferrer noopener\"><strong>ItemGen Tool</strong></a> - pick a base item template, set your custom stats and details, configure traders, drop in custom bundle files, and export a ready-to-use zip.</p>\n<h2>Installation</h2>\n<ol>\n<li>Drag the <code>SPT</code> and <code>BepInEx</code> folders from the mod archive into your SPT installation directory.</li>\n<li>Start the server. ItemGen loads automatically and waits for item packs.</li>\n</ol>\n<h2>Making an Item Pack</h2>\n<ol>\n<li>Open the ItemGen Tool.</li>\n<li>Select a base item template, set your custom name, description, and stats.</li>\n<li>Configure traders and, if needed, drop custom bundle files into the Bundles tab for custom 3D models.</li>\n<li>Click <strong>Export</strong> to download a zip.</li>\n<li>Drag the <code>SPT</code> folder (and <code>BepInEx</code> if bundles are included) into your SPT install to test (<strong>ALWAYS</strong> use a new temporary profile when testing).</li>\n</ol>\n<blockquote>\n<p><strong>Tip</strong>: Always test on a new developer profile (and make sure to clear temp cache) so you can verify trader listings, item rendering, and bundle injection without affecting your main save.</p>\n</blockquote>\n<h2>Publishing an Item Pack Addon</h2>\n<p>The ItemGen Tool export zip is already structured for distribution, users just drag the <code>SPT</code> folder into their install directory.</p>\n<p>When publishing:</p>\n<ol>\n<li><strong>State the dependency</strong>: Your add-on pack requires <strong>ItemGen v1.0.0</strong> for SPT 4.0.13.</li>\n<li><strong>Do not include</strong> the ItemGen DLL or other authors’ packs in your zip.</li>\n<li><strong>Test</strong> by extracting and running the server before publishing.</li>\n</ol>\n<h2>Dependencies</h2>\n<ul>\n<li>SPTarkov 4.0.13</li>\n</ul>\n<h2>More Information</h2>\n<p>View my framework mods and user created add-ons for them <a target=\"_blank\" class=\"external-link\" href=\"https://serenity-workshop.netlify.app\" rel=\"noreferrer noopener\">here.</a></p>\n<p>See the full documentation, JSON reference, and examples in the <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/ShaneeexD/ItemGen/blob/main/README.md\" rel=\"noreferrer noopener\">GitHub README</a>.</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2803/itemgen",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, as well as descriptions. The code is thoroughly reviewed by me before anything is published.</p>\n",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 4,
+  "published_at": "2026-07-07T00:12:00.000000Z",
+  "created_at": "2026-07-07T00:12:57.000000Z",
+  "updated_at": "2026-07-28T09:57:56.000000Z",
+  "owner": {
+    "id": 86008,
+    "name": "shaneeexd",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/CzoBD8u0ZJWanwXrKVPvmAhvsX72I6JNZkEFQWX3_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/LoL77W5RmT8vOHIkKv04LwmtH0IZhX7JoAm1SlsP_1280w.webp",
+    "created_at": "2025-10-19T19:42:09.000000Z",
+    "updated_at": "2026-08-01T00:33:29.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 4,
+    "hub_id": 21,
+    "title": "Items",
+    "slug": "items",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/ShaneeexD/ItemGen",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14247,
+      "hub_id": null,
+      "version": "1.5.0",
+      "description": "<h2>v1.5.0 Changelog</h2>\n<ul>\n<li><strong>BetterKeys compatibility</strong> - ItemGen keys now integrate with BetterKeys: map-specific background colors, key descriptions with Tips, Required Extracts, Required Quests, and Behind the Lock loot info.</li>\n<li><strong>Custom models for keys</strong> - keys now support Custom Model and Use Model bundle paths, matching the same pattern used by other item types.</li>\n<li><strong>Bartering for custom items</strong> - custom items can now be added as barter offers in trader inventories.</li>\n<li><strong>Removed custom stim patch</strong> - the stim effects/damage patch has been removed due to instability and conflicts with other items.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.5.0",
+      "content_length": 54035,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 925,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-27T07:06:00.000000Z",
+      "created_at": "2026-07-27T07:07:02.000000Z",
+      "updated_at": "2026-07-28T09:57:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/Nzg1NGNjNDhmZmEzYWM5MWIzNTg2Nzg5YzM1Y2ZlODA6MTc4NTEzNTk4OQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1sQmHtxyD3W_3oynTTGFZjhBRii-iNM7B&export=download"
+      }
+    },
+    {
+      "id": 14208,
+      "hub_id": null,
+      "version": "1.4.2",
+      "description": "<h2>v1.4.2 Changelog</h2>\n<ul>\n<li>Fixed an issue where EffectsHealth/EffectsDamage properties were being dropped</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.4.2",
+      "content_length": 53543,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 79,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-24T16:23:00.000000Z",
+      "created_at": "2026-07-24T16:31:23.000000Z",
+      "updated_at": "2026-07-28T09:56:01.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YzJmNTUzY2NkMzgzYjFkYjZkZTk2NmRlYTQyZmQwZWY6MTc4NDkxMDUzNA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1dYV8Q2ddk7vb7XrmS525aG2hn8ZbTxZn&export=download"
+      }
+    },
+    {
+      "id": 14206,
+      "hub_id": null,
+      "version": "1.4.1",
+      "description": "<h2>v1.4.1 Changelog</h2>\n<ul>\n<li>Added bundle injection/override values for quest items</li>\n<li>Added stash item size with icon scaling for quest items</li>\n<li>Updated tool to accommodate these</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.4.1",
+      "content_length": 53258,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 24,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-24T01:41:00.000000Z",
+      "created_at": "2026-07-24T01:37:21.000000Z",
+      "updated_at": "2026-07-28T09:55:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MWRiYTM1NDE1Y2U1NTY0ZjQxZDQxNWQ5M2NkYmI4NTM6MTc4NDg1NzI1NA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1oFKOadDJrgVOhq66w83fwFLw1XkS6sxC&export=download"
+      }
+    },
+    {
+      "id": 14165,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<h2>v1.4.0 Changelog</h2>\n<ul>\n<li><strong>Custom Barter items</strong> - a new <code>barters</code> category lets you clone any vanilla barter item, override <code>parent</code>/<code>handbookParentId</code>, <code>stackMaxSize</code>, <code>width</code>/<code>height</code>, <code>itemSound</code>, and <code>properties</code>.</li>\n<li><strong>Custom Food and Drink items</strong> - a new <code>foodDrinks</code> category lets you create one-use snacks or multi-use food/drink items with configurable <code>maxResource</code>/<code>resource</code>, <code>foodUseTime</code>, <code>foodEffectType</code>, health effects (Hydration/Energy), and damage effects.</li>\n<li><strong>Fixed vanilla stims and meds</strong> - the <code>StimEffectsDamagePatch</code> no longer runs on vanilla items, so default stims and other misc items can be used in raid again.</li>\n<li><strong>Stim-only guard</strong> - the <code>StimEffectsDamagePatch</code> and <code>StimEffectsDamageMultiPatch</code> now explicitly exit for non-stim meds, and the multi-patch is gated to custom items only, so other modded healing items will not be affected.</li>\n<li><strong>Workbench crafting</strong> - every custom item type can now have a hideout workbench craft recipe with requirements, workbench level, craft time, and output count. A new <code>Crafting</code> section in the tool lets you configure these recipes.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.4.0",
+      "content_length": 53158,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 101,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-20T18:21:00.000000Z",
+      "created_at": "2026-07-20T18:21:45.000000Z",
+      "updated_at": "2026-07-28T09:49:58.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTE1NTcyZDE5MGVmOGMzOTljNzdlZjU5OTc5MzE0NjE6MTc4NDU3MTY5MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1tNIzwYiqE6OUBUhrSrnppr947t1JgZEK&export=download"
+      }
+    },
+    {
+      "id": 14075,
+      "hub_id": null,
+      "version": "1.3.5",
+      "description": "<h2>v1.3.5 Changelog</h2>\n<ul>\n<li><strong>Container loot pool injection</strong> - every item type can now be added to vanilla container loot tables. The new <code>Loot</code> section in the tool lets you enable loot injection, pick container IDs, and set rarity.</li>\n<li><strong>Fixed client icon scaling</strong> - fixed a bug where the item icon scaling would affect other items in the stash.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.3.5",
+      "content_length": 48145,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 161,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-13T23:21:00.000000Z",
+      "created_at": "2026-07-13T23:22:48.000000Z",
+      "updated_at": "2026-07-28T09:38:41.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NzYwMWM5ODhkYzg4MjdiYmYzZDhiZjk0YWRmNDkxZGU6MTc4Mzk4NDkxMg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1vm6N32S_miKn670WVav-HFyr3XQ1Sqmk&export=download"
+      }
+    },
+    {
+      "id": 14064,
+      "hub_id": null,
+      "version": "1.2.5",
+      "description": "<h2>v1.2.5 Changelog</h2>\n<ul>\n<li><strong>Custom secure containers</strong> - a new feature integrated into the existing container section: create a custom container and toggle <code>isSecured</code> so it behaves like a secure container in-game.</li>\n<li><strong>Raw JSON properties editor</strong> - new for all existing item types. Add any extra field in the <code>Raw Properties JSON</code> panel; the game will register those fields even though they are not in the UI.</li>\n<li><strong>Reduced server logging</strong> - item generators no longer log per-item success messages. Final startup output now shows <code>registered/enabled</code> counts for each item type plus total trader entries; per-item errors and warnings are still logged.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.2.5",
+      "content_length": 43022,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 32,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-12T23:55:00.000000Z",
+      "created_at": "2026-07-12T23:56:21.000000Z",
+      "updated_at": "2026-07-28T09:38:10.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NTU2MTJjODY2MjNiMGVlZDE1ZmEyMmI3ZDFhMjk0ZWY6MTc4MzkwMDU3MQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1SzP01J5phjaijhLTPdzujxSIJXCnGYBg&export=download"
+      }
+    },
+    {
+      "id": 14063,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<h2>v1.2.1 Changelog</h2>\n<ul>\n<li><strong>Client-side icon scaling</strong> - custom items now render their inventory icon at the size defined by <code>Width</code>/<code>Height</code>, preventing oversized icons from overlapping adjacent slots.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.2.1",
+      "content_length": 42767,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 6,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-12T22:06:00.000000Z",
+      "created_at": "2026-07-12T22:06:58.000000Z",
+      "updated_at": "2026-07-28T09:38:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NGU2OWJjYTA3ZWYwZTRiOTkyMDEwMGQxOTM4NWYyZjU6MTc4Mzg5NDAwMw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=19433fObZjHPf0aXSfgdTaWEl4P_IIz6t&export=download"
+      }
+    },
+    {
+      "id": 14061,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h3>v1.2.0 Changelog</h3>\n<ul>\n<li><strong>Custom keys now work on vanilla doors</strong>: Custom keys can be assigned to vanilla doors, including multiple keys per door via door-key mappings.</li>\n<li><strong>New MedKit category</strong>: Create custom medkits by cloning Salewa, IFAK, and AFAK templates with full control over HP resource, healing cost, effects, and custom bundles.</li>\n<li><strong>Bundle injection supports medkits</strong>: Custom medkit loot and use model bundles are loaded automatically.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.2.0",
+      "content_length": 44500,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 11,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-12T18:30:00.000000Z",
+      "created_at": "2026-07-12T18:30:59.000000Z",
+      "updated_at": "2026-07-28T09:37:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NDU1YWY5Y2Q0MTU4OTQ1NTBkNjcyNTE2ZWJhZGE5ZjU6MTc4Mzg4MTA1MQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=17rqopeFRS4JJoAJ6tp46F7xSwM6tGjw7&export=download"
+      }
+    },
+    {
+      "id": 14049,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h3>v1.1.0 Changelog</h3>\n<ul>\n<li><strong>Custom containers in secure containers</strong>: Custom containers can now be set to valid placed inside secure containers.</li>\n<li><strong>Fracture healing stims</strong>: Stims can now use <code>EffectsDamage</code> to heal fractures.</li>\n<li><strong>Multi-limb healing limit</strong>: Added <code>maxBodyPartsToHeal</code> so one stim can heal multiple limbs up to a set limit. (Experimental)</li>\n<li><strong>Decimal stim buff values</strong>: Buff <code>value</code>, <code>delay</code>, <code>duration</code> and <code>chance</code> now support decimal numbers.</li>\n<li><strong>SkillName ignored for non-SkillRate buffs</strong>: <code>skillName</code> is only used when the buff type is <code>SkillRate</code>.</li>\n<li><strong>Web tool updates</strong>: Added fields for <code>EffectsDamage</code>, <code>EffectsHealth</code>, <code>maxBodyPartsToHeal</code>, and decimal buff inputs.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.1.0",
+      "content_length": 38851,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 58,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-11T04:16:00.000000Z",
+      "created_at": "2026-07-11T04:17:12.000000Z",
+      "updated_at": "2026-07-28T09:37:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MzgxMDYxYjc1OTFkODRmYWI3MGJjNWRlODU4OTEyZWI6MTc4Mzc0MzQyMQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1CwmfhN5CNnOamyslunqWLu0yxVDHXM1t&export=download"
+      }
+    },
+    {
+      "id": 14014,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release</p>\n<p><strong>Note:</strong> Quest items and keys will register fine, but are mainly to be used with the upcoming release of the “Map Editor Lite” mod.</p>\n<p><strong>This is a very early version of the mod, many items to be added in the future.</strong></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2803/itemgen/1.0.0",
+      "content_length": 33631,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 197,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-07-07T00:28:00.000000Z",
+      "created_at": "2026-07-07T00:29:15.000000Z",
+      "updated_at": "2026-07-28T09:36:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/Yzc3M2YyZmQ5Y2EyODk0NmQ0YjRhNjFiYjU5NDE5ZDM6MTc4MzM4NDE0MA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://drive.usercontent.google.com/download?id=1YkNpI_ysQ8WAKhd04f8eGv5AogJ-H6Gu&export=download"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 11,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:47:31.466Z",
+    "discoveredBy": "seed"
+  }
+}

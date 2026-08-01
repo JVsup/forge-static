@@ -1,0 +1,1286 @@
+{
+  "type": "mod",
+  "id": 2595,
+  "hub_id": null,
+  "guid": "com.blackhorse311.botmind",
+  "name": "Blackhorse311-BotMind",
+  "slug": "blackhorse311-botmind",
+  "teaser": "Smarter bots. On-demand medics. Three AI modules in one package.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/D18qxXTAjEctooV9o978KEsBg9Wl0kflcVcEpVaE.png",
+  "downloads": 4021,
+  "favourites_count": 2,
+  "description": "<p>⚠️ Found a bug? Report it on our GitHub Issue Tracker: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/issues</a> Include your\nmod list, SPT version, and BepInEx/LogOutput.log file.</p>\n<p>⚠️ REQUIRES SPT 4.0.12 — This mod will NOT work on 4.0.11 or earlier versions.</p>\n<p>BotMind — Smarter bots. On-demand medics.</p>\n<p>Three AI modules in one package: intelligent Looting, objective-based Questing, and the MedicBuddy on-demand medical\nteam.</p>\n<p>How It Works:</p>\n<p>Looting: Bots scan area → Find valuable loot → Navigate → Pick up items\nQuesting: Bots get objectives → Navigate map → Explore → Extract\nMedicBuddy: Press LCtrl+LAlt+F10 → Team spawns → Medic heals you → Team retreats</p>\n<p>Key Features</p>\n<p>Intelligent Looting — Bots loot corpses, containers, and loose items based on value. Throttled to prevent hoover\nbehavior (max 3 targets per 2 minutes, 15s cooldown between targets).\nObjective Questing — PMC and Scav bots pursue objectives, explore areas, and extract. Natural pauses between\nobjectives. Raiders, Rogues, and boss bots are excluded.\nMedicBuddy — Summon a friendly medical team with one keypress. Full healing: HP, bleeds, fractures, destroyed limbs.\nVoice Lines — 60 voice lines (EN/RU) for immersive medic interactions.\nCCP Rally Points — Press Y to direct your medical team to a specific treatment location.\nMedic Promotion — If the medic dies, a shooter gets promoted automatically.\nSAIN Integration — Optional combat awareness and extraction support. Works fully without SAIN too.\nConfigurable Combat Alert — Control how long bots fight before returning to objectives (default 15s, adjustable\n10-120s in F12).\nSAIN BotMind Preset — Optional SAIN config preset for faster enemy detection and more aggressive combat.</p>\n<p>Dependencies</p>\n<p>REQUIRED:</p>\n<ul>\n<li>SPT 4.0.12 (will NOT work on earlier versions)</li>\n<li>BigBrain 1.4.x (AI layer framework)</li>\n</ul>\n<p>RECOMMENDED:</p>\n<ul>\n<li>SAIN 3.x+ (combat awareness and extraction)</li>\n<li>Waypoints 1.8.x+ (improved NavMesh for bot navigation — prevents freezing/stuck bots)</li>\n</ul>\n<p>COMPATIBLE WITH:</p>\n<ul>\n<li>LootingBots (auto-detected — BotMind disables its Looting module, MedicBuddy + Questing still work)</li>\n<li>SWAG + Donuts</li>\n<li>AI Limit</li>\n<li>FIKA (confirmed working)</li>\n<li>Custom item mods</li>\n</ul>\n<p>Installation</p>\n<p>Download the latest release from GitHub: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/releases/latest\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/releases/latest</a>\nExtract the archive directly into your SPT root folder (where SPT.Server.exe is)\nFiles go to:</p>\n<ul>\n<li>Client: BepInEx/plugins/Blackhorse311-BotMind/Blackhorse311.BotMind.dll</li>\n<li>Server: SPT/user/mods/Blackhorse311-BotMind/Blackhorse311.BotMind.Server.dll</li>\n<li>Voice lines: BepInEx/plugins/Blackhorse311-BotMind/voicelines/ (en/ and ru/)</li>\n<li>SAIN Preset (optional): BepInEx/plugins/SAIN/Presets/BotMind/</li>\n</ul>\n<p>MedicBuddy Controls</p>\n<p>LCtrl+LAlt+F10 — Summon the medical team\nY — Set a Casualty Collection Point (CCP) at your position</p>\n<p>How MedicBuddy works:</p>\n<ol>\n<li>Press LCtrl+LAlt+F10 to summon the medical team</li>\n<li>A medic and shooter escorts spawn and navigate to your position</li>\n<li>Press Y to set a CCP rally point where you want treatment</li>\n<li>The team establishes a defensive perimeter</li>\n<li>The medic heals all injuries (HP, bleeds, fractures, destroyed limbs)</li>\n<li>After treatment, the team retreats and despawns</li>\n</ol>\n<p>Tips:</p>\n<ul>\n<li>Use open areas for your CCP — tight corridors cause navigation issues</li>\n<li>Shooter escorts engage hostile bots during treatment</li>\n<li>5-minute cooldown between summons (configurable)</li>\n<li>PMC raids only by default (configurable)</li>\n<li>You must be injured and have no medical equipment to call the team</li>\n</ul>\n<p>SAIN BotMind Preset (Optional)</p>\n<p>BotMind includes an optional SAIN configuration preset that tunes bot detection and aggression. Without it, SAIN’s\ndefault settings can cause bots to walk past enemies before engaging.</p>\n<p>What it changes (compared to SAIN “hard” difficulty):</p>\n<ul>\n<li>GainSightCoef: 1.0 → 1.5 (50% faster visual target acquisition)</li>\n<li>AggressionCoef: 1.0 → 1.3 (30% more aggressive combat decisions)</li>\n<li>HearingDistanceCoef: 1.0 → 1.15 (15% better hearing range)</li>\n<li>VisibleDistCoef: 1.0 → 1.1 (10% further vision range)</li>\n</ul>\n<p>How to activate:</p>\n<ol>\n<li>Preset auto-installs to BepInEx/plugins/SAIN/Presets/BotMind/ when you extract the mod</li>\n<li>In-game, press F6 to open the SAIN GUI</li>\n<li>Select “BotMind” from the preset dropdown</li>\n<li>Changes take effect immediately</li>\n</ol>\n<p>How to revert: Press F6 and select any other preset. Your original SAIN settings are never modified.</p>\n<p>Configuration</p>\n<p>Press F12 → Find “BotMind” → Adjust settings</p>\n<p>General:</p>\n<ul>\n<li>Enable Looting (default: on)</li>\n<li>Enable Questing (default: on)</li>\n<li>Enable MedicBuddy (default: on)</li>\n<li>Combat Alert Duration (default: 15s) — How long bots fight after sensing an enemy before resuming objectives</li>\n</ul>\n<p>Looting:</p>\n<ul>\n<li>Search Radius (default: 35m, range: 10-200m)</li>\n<li>Minimum Item Value (default: 5000 rubles)</li>\n<li>Loot Corpses / Containers / Loose Items (all default: on)</li>\n</ul>\n<p>Questing:</p>\n<ul>\n<li>PMCs Do Quests (default: on)</li>\n<li>Scavs Do Quests (default: off)</li>\n<li>Quest Priority (default: 50)</li>\n</ul>\n<p>MedicBuddy:</p>\n<ul>\n<li>Summon Keybind (default: LCtrl+LAlt+F10)</li>\n<li>Cooldown (default: 300s)</li>\n<li>Team Size (default: 4, range: 2-6)</li>\n<li>PMC Raids Only (default: on)</li>\n<li>Rally Point Keybind (default: Y)</li>\n<li>Enable Voice Lines (default: on)</li>\n<li>Voice Volume (default: 80)</li>\n<li>Escort Difficulty (default: 2/hard, range: 0-3)</li>\n</ul>\n<p>Performance:</p>\n<ul>\n<li>Max Bots Per Map (default: 0 = use game defaults, max: 31)</li>\n<li>When MedicBuddy is enabled, team-size slots are auto-reserved so your medical team always has room to spawn.</li>\n</ul>\n<p>Troubleshooting</p>\n<ul>\n<li>Mod doesn’t work / strange behavior → Verify you are on SPT 4.0.12</li>\n<li>MedicBuddy not responding → Check mod is enabled in F12. Check PMC-only setting if playing as Scav.</li>\n<li>Medic getting stuck → Move to an open area and press Y to set a new CCP</li>\n<li>Bots walking past enemies → Activate the BotMind SAIN preset (F6). Increase Combat Alert Duration in F12. Install\nWaypoints.</li>\n<li>Bots freezing or getting stuck → Install Waypoints mod (DrakiaXYZ-Waypoints)</li>\n<li>Bots looting too aggressively → Lower Search Radius (default 35m). Session limit is 3 targets per 2 minutes.</li>\n<li>Bots standing still with questing on → Update to v1.6.0. Major fixes in v1.5.0 and v1.6.0.</li>\n<li>Bots walking backwards → Update to v1.6.0. Fixed movement facing bug.</li>\n<li>Raiders/Bloodhounds stuck on questing → Update to v1.6.0. Non-PMC/Scav bots are now excluded from questing.</li>\n<li>Bots stuck looting a container → Update to v1.6.0. Added action-level timeout safety net.</li>\n</ul>\n<p>Changelog</p>\n<p>v1.6.0 (2026-03-02)</p>\n<ul>\n<li>Fix: Bots no longer get stuck in “Complete” looting state — added action-level timeout safety net in LootingLayer\n(#10)</li>\n<li>Fix: Raiders and Rogues no longer receive questing objectives — explicit role allowlist prevents non-PMC/Scav bots\nfrom getting stuck on bad waypoints (#10)</li>\n<li>Fix: Bots no longer walk backwards — GoToPoint lookToMovingDirection parameter enabled across all movement calls\n(#10)</li>\n<li>29 new tests (220 total)</li>\n</ul>\n<p>v1.5.0 (2026-02-28)</p>\n<ul>\n<li>Fix: Bots no longer stuck at spawn when questing is enabled — questing layer stays active during objective cooldown\ninstead of letting EFT’s default brain walk bots back to spawn</li>\n<li>Fix: Graduated waypoint generation — tries far, medium, then close distances so bots always find reachable\ndestinations</li>\n<li>Fix: Exploration now radiates from bot’s current position instead of circling spawn</li>\n<li>Fix: Looting timeout log spam — was firing every frame (110K+ lines per session), now logs once</li>\n<li>Fix: Combat Alert Duration default reduced 30s → 15s (30s kept bots in perpetual combat on active maps)</li>\n<li>20 new tests (191 total)</li>\n</ul>\n<p>v1.4.0 (2026-02-21)</p>\n<ul>\n<li>Fix: Bot movement speeds increased — bots now jog/sprint instead of creeping</li>\n<li>Fix: Pose and move speed reset in all Stop() methods — no more crouch/slow persistence after AI transitions</li>\n<li>Fix: Looting throttle — 8s scan interval, 15s cooldown, 3 targets per 2min session limit</li>\n<li>Fix: Default search radius 50m → 35m</li>\n<li>Fix: 5s cooldown between questing objectives</li>\n<li>Fix: Combat detection always checks EFT GoalEnemy alongside SAIN</li>\n<li>New: Combat Alert Duration config (15s default, 10-120s range)</li>\n<li>New: Waypoints soft dependency with startup warning</li>\n<li>New: Optional SAIN “BotMind” preset for faster detection and higher aggression</li>\n<li>37 new tests (171 total)</li>\n</ul>\n<p>v1.3.0 (2026-02-19)</p>\n<ul>\n<li>Fix: Looting collider buffer 64 → 256 for loot-adding mods</li>\n<li>Fix: Overall timeout (60s) on all looting logic</li>\n<li>Fix: Stuck detection for container and corpse navigation</li>\n<li>Fix: Non-SAIN combat fallback via GoalEnemy/IsUnderFire</li>\n<li>22 new tests (134 total)</li>\n</ul>\n<p>v1.2.0 (2026-02-18)</p>\n<ul>\n<li>Fix: Bots no longer stuck in failed/standby questing states</li>\n<li>Fix: NavMesh path validation, SamplePosition tolerance 20m → 5m</li>\n<li>Fix: Local Explore fallback for unreachable waypoints</li>\n<li>Fix: Removed LookToMovingDirection blocking enemy detection</li>\n</ul>\n<p>v1.1.1 (2026-02-18)</p>\n<ul>\n<li>Fix: Bots no longer idle after reaching waypoints</li>\n<li>Fix: PMC bots detect and engage each other during questing</li>\n</ul>\n<p>v1.1.0 (2026-02-17)</p>\n<ul>\n<li>New: Bot Limit Slider (0-31) with MedicBuddy slot reservation</li>\n<li>New: Escort combat awareness and configurable difficulty</li>\n<li>New: LootingBots auto-compatibility</li>\n<li>30 new tests (112 total)</li>\n</ul>\n<p>v1.0.0 (2026-02-17)</p>\n<ul>\n<li>Initial release: Looting, Questing, MedicBuddy</li>\n<li>60 voice lines (EN/RU), 82 unit tests</li>\n</ul>\n<p>Credits</p>\n<p>Author: Blackhorse311</p>\n<p>BotMind was developed through collaboration between Blackhorse311 and Claude (AI by Anthropic).</p>\n<p>Thanks to: SPT Team, BepInEx Team, DrakiaXYZ (BigBrain + Waypoints), Solarint (SAIN), Anthropic (Claude)</p>\n<p>Inspiration: DanW (QuestingBots), Skwizzy (LootingBots)</p>\n<p>Community Contributors:</p>\n<ul>\n<li>Th3Kenix — Reported questing idle/stuck and PMC non-engagement</li>\n<li>ExcellentBugg — Confirmed persistent questing standby bug (#3)</li>\n<li>ExcellentBug, wookie143, Legitimancer — Reported movement and looting issues (v1.4.0)</li>\n<li>Guntero, simjounhax, alecontt — Reported questing stuck at spawn (v1.5.0)</li>\n<li>DigitalBurns — Reported questing stuck (#9, v1.5.0) AND loot hang + backwards walking (#10, v1.6.0)</li>\n<li>Capricorn — Reported MedicBuddy + ABPS compatibility</li>\n<li>thesubnautica19881 — Confirmed FIKA compatibility</li>\n<li>LO010OL — LootingBots compatibility question</li>\n</ul>\n<p>License: MIT — Full source: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind</a></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2595/blackhorse311-botmind",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-03-02T19:26:00.000000Z",
+  "created_at": "2026-02-17T20:08:35.000000Z",
+  "updated_at": "2026-07-28T08:07:19.000000Z",
+  "owner": {
+    "id": 40646,
+    "name": "Blackhorse311",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/22d76c9b7be880fa3a4974a19f4e3a90c6c9b2cf_128w.webp",
+    "cover_photo_url": "https://forge-static.sp-tarkov.com/cover-photos/EVJBNkSE7DYjNGXMsLM6HFrJWWjFiZRREsogUxcB_1280w.webp",
+    "created_at": "2023-11-16T18:47:45.000000Z",
+    "updated_at": "2026-07-10T04:56:59.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Blackhorse311/BotMind/archive/refs/tags/v1.5.0.zip",
+      "label": "GitHub Repository"
+    }
+  ],
+  "versions": [
+    {
+      "id": 13194,
+      "hub_id": null,
+      "version": "1.6.0",
+      "description": "<h2>What’s Changed</h2>\n<p>Three fixes for <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues/10\" rel=\"noreferrer noopener\">#10</a> reported by @DigitalBurns:</p>\n<h3>1. Container Loot Hang Fixed</h3>\n<p>Bots getting stuck in “Complete” looting state for 60s. Added action-level timeout (70s) in LootingLayer as a safety net when internal signals are lost, plus fixed a missing <code>_target</code> reset in LootCorpseLogic.</p>\n<h3>2. Raiders/Rogues No Longer Receive Questing Objectives</h3>\n<p>Raiders (brain name “PMC”, but WildSpawnType.pmcBot) and Rogues were falling through the PMC/Scav role guards in QuestingLayer and getting stuck on bad waypoints — especially on Woods. Added explicit role allowlist: only actual PMCs and Scavs get questing now.</p>\n<h3>3. Backwards Walking Fixed</h3>\n<p>All GoToPoint() calls were passing <code>false</code> for the <code>lookToMovingDirection</code> parameter, leaving EFT’s locomotion with no facing constraint. Changed to <code>true</code> across all movement calls. This is a one-time path hint (not the per-frame override removed in v1.2.0), so enemy detection remains unaffected.</p>\n<h3>Stats</h3>\n<ul>\n<li><strong>Build:</strong> 0 errors, 0 warnings</li>\n<li><strong>Tests:</strong> 220 passing (29 new)</li>\n<li><strong>Files changed:</strong> 13</li>\n</ul>\n<h3>Installation</h3>\n<p>Extract the archive directly into your SPT root folder (where <code>SPT.Server.exe</code> is located).</p>\n<p><strong>Requires:</strong> SPT 4.0.12 + BigBrain 1.4.x</p>\n<h3>Thanks</h3>\n<ul>\n<li><strong>@DigitalBurns</strong> — for detailed bug reports with BotDebug screenshots and BepInEx logs on both <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues/9\" rel=\"noreferrer noopener\">#9</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues/10\" rel=\"noreferrer noopener\">#10</a>. Two releases worth of fixes came from your reports!</li>\n<li><strong>Guntero, simjounhax, alecontt</strong> — for reporting questing stuck behavior on SPT Forge</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.5.0...v1.6.0\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.5.0...v1.6.0</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.6.0",
+      "content_length": 4775260,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 1982,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-02T19:23:00.000000Z",
+      "created_at": "2026-03-02T19:24:01.000000Z",
+      "updated_at": "2026-07-28T08:07:19.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247436,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/4c97410fea443d901565f437be97cc6b5d5d41b1da12b8f92381eae59b72ccae",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/328d6f03-496a-49bf-86ff-5e928024f2dc?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A19%3A22Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A18%3A34Z&ske=2026-08-01T20%3A19%3A22Z&sks=b&skv=2018-11-09&sig=f0PEgHwZtsQK9UX2W%2BlBaSPvmxbG3kkchrUGN8IZstc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.6.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13182,
+      "hub_id": null,
+      "version": "1.5.0",
+      "description": "<p>v1.5.0 - Fix Questing Stuck at Spawn</p>\n<h2>What’s Changed</h2>\n<p><strong>Major fix: Bots no longer get stuck at spawn when questing is enabled.</strong> Multiple users reported PMC bots standing still or returning to their spawn point with questing on. Root cause was 4 interacting bugs, all fixed in this release.</p>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>Questing layer stays active during cooldown</strong> — Previously, a 5-second gap between objectives let EFT’s default brain walk bots back to spawn. The layer now handles the pause internally so bots stay where they are.</li>\n<li><strong>Graduated waypoint generation</strong> — Old 50m minimum range frequently failed NavMesh validation on complex maps (Woods, Interchange). Now tries far→medium→close distance tiers (50-150m → 20-60m → 10-30m) so bots always find a reachable destination.</li>\n<li><strong>Progressive exploration</strong> — Explore waypoints now generate from the bot’s current position instead of a fixed point at spawn, so bots actually move outward across the map.</li>\n<li><strong>Combat alert duration reduced</strong> — Default reduced from 30s to 15s. The old value kept bots in perpetual “combat mode” on active maps, preventing questing entirely. Still configurable in F12.</li>\n<li><strong>Looting timeout log spam fixed</strong> — The timeout warning was firing every frame (producing 110,000+ spam lines in one session). Now logs once per timeout event.</li>\n</ul>\n<h3>Other Changes</h3>\n<ul>\n<li>POST_OBJECTIVE_COOLDOWN reduced from 5s to 3s for snappier objective transitions</li>\n<li>Version strings synchronized to 1.5.0 across client, server, and plugin attribute</li>\n<li>20 new unit tests (191 total, all passing)</li>\n</ul>\n<h3>Installation</h3>\n<p>Extract the 7z to your SPT root folder. Includes:</p>\n<ul>\n<li><code>BepInEx/plugins/Blackhorse311-BotMind/</code> — Client plugin + voice lines</li>\n<li><code>SPT/user/mods/Blackhorse311-BotMind/</code> — Server mod</li>\n<li><code>sain-preset/BotMind/</code> — Optional SAIN preset (copy to <code>BepInEx/plugins/SAIN/Presets/</code>)</li>\n</ul>\n<p><strong>Requires:</strong> SPT 4.0.12 + BigBrain 1.4.x</p>\n<h3>Full Changelog</h3>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.4.0...v1.5.0\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.4.0...v1.5.0</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.5.0",
+      "content_length": 4775164,
+      "spt_version_constraint": "~4.0.12",
+      "downloads": 377,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-03-01T05:39:00.000000Z",
+      "created_at": "2026-03-01T05:39:38.000000Z",
+      "updated_at": "2026-07-28T08:06:50.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247436,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/88cb940a6a806cba99057d206ca4f01de3feb1648bd22b75c46195daa1566a74",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/011698b5-2b81-4f20-bbaf-18e03ffe85b6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A29%3A24Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.5.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A11Z&ske=2026-08-01T20%3A29%3A24Z&sks=b&skv=2018-11-09&sig=bQCMwIcBa8ScnCPaxmXNUFLvnI%2BHeV%2FA0LztN2BQjZU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.5.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13133,
+      "hub_id": null,
+      "version": "1.4.0",
+      "description": "<h2>What’s Changed</h2>\n<p>Addresses community-reported issues with bot movement, combat awareness, and looting behavior. Thanks to ExcellentBug, wookie143, Legitimancer, and DigitalB for the detailed reports.</p>\n<h3>Movement Fixes</h3>\n<ul>\n<li><strong>Bot speeds increased</strong> across all modules — bots now jog/sprint instead of creeping</li>\n<li><strong>Pose/speed reset</strong> in all layer Stop() methods — bots no longer stay crouched or slow after transitioning between AI layers</li>\n</ul>\n<h3>Combat Detection</h3>\n<ul>\n<li><strong>Always checks EFT native enemy awareness</strong> (GoalEnemy, IsUnderFire) alongside SAIN — prevents bots walking past visible enemies</li>\n<li><strong>New: Combat Alert Duration</strong> config (default 30s, range 10-120s) — controls how long bots stay in fight mode before resuming questing/looting</li>\n<li><strong>Waypoints soft dependency</strong> — warns at startup if DrakiaXYZ-Waypoints is not installed</li>\n</ul>\n<h3>Looting Throttle</h3>\n<ul>\n<li>Scan interval 2s → 8s</li>\n<li>15-second cooldown between loot targets</li>\n<li>Session limit: max 3 targets per 2-minute window</li>\n<li>Default search radius reduced from 50m to 35m</li>\n</ul>\n<h3>Questing</h3>\n<ul>\n<li>5-second cooldown between objectives for natural-looking behavior transitions</li>\n</ul>\n<h3>SAIN BotMind Preset (Optional)</h3>\n<p>Includes a SAIN configuration preset tuned for BotMind:</p>\n<ul>\n<li>50% faster visual target acquisition</li>\n<li>30% more aggressive combat decisions</li>\n<li>15% better hearing range</li>\n<li>10% further vision range</li>\n</ul>\n<p><strong>To activate:</strong> Press F6 in-game → select “BotMind” preset. Fully reversible — your SAIN settings are never overwritten.</p>\n<h3>Tests</h3>\n<ul>\n<li>37 new unit tests for behavior throttle logic (171 total)</li>\n<li>Build: 0 errors, 0 warnings</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.3.0...v1.4.0\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.3.0...v1.4.0</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.4.0",
+      "content_length": 4774950,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 628,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-21T21:16:00.000000Z",
+      "created_at": "2026-02-21T21:16:42.000000Z",
+      "updated_at": "2026-07-28T08:05:39.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247436,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 12147,
+              "hub_id": null,
+              "version": "1.8.1",
+              "description": "<p>Potential fix for Fika Headless</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.1",
+              "content_length": 50345268,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 95374,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-11-03T04:43:00.000000Z",
+              "created_at": "2025-11-03T04:43:59.000000Z",
+              "updated_at": "2026-08-01T16:47:20.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/a25667f145f6057c9a7158f74c81e6bd3661da1d6b6a3ec028ca6f56c42b3e54",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/1958c5e0-634d-426d-9639-cc8fdf12722c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A14%3A43Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.4.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A14%3A05Z&ske=2026-08-01T20%3A14%3A43Z&sks=b&skv=2018-11-09&sig=6vPrE8%2FtRc24O407%2BER%2Bm677jLKx%2FRZVlg27nLaaZyQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.4.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13119,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<h2>What’s New in v1.3.0</h2>\n<p>Looting reliability improvements and non-SAIN combat awareness. Bots no longer get stuck indefinitely on unreachable loot targets, and bots without SAIN now properly yield to combat.</p>\n<h3>Bug Fixes</h3>\n<ul>\n<li>\n<p><strong>Looting collider buffer increased from 64 to 256</strong> — Prevents missing containers when loot-adding mods (Lots of Loot Redux, etc.) are installed. The previous buffer of 64 could silently truncate scan results on modded maps with dense loot.</p>\n</li>\n<li>\n<p><strong>Overall timeout (60s) added to all looting logic</strong> — Bots will no longer get stuck indefinitely on unreachable containers, corpses, or items. Container and corpse looting time out after 60 seconds; loose item pickup times out after 45 seconds.</p>\n</li>\n<li>\n<p><strong>Stuck detection added to container and corpse navigation</strong> — Bots abort after 5 consecutive movement checks with no distance progress (&lt; 0.3m improvement). Catches cases where bots are pathing against walls or obstacles.</p>\n</li>\n<li>\n<p><strong>Non-SAIN combat fallback</strong> — Bots without SAIN now properly yield to combat via native EFT enemy detection (<code>GoalEnemy</code>, <code>IsUnderFire</code>). Previously, <code>IsBotInCombat()</code> returned <code>float.MaxValue</code> when SAIN wasn’t loaded, meaning bots would loot while being shot at.</p>\n</li>\n<li>\n<p><strong>22 new unit tests</strong> for timeout logic, stuck detection, collider buffer bounds, and combat fallback (134 total)</p>\n</li>\n</ul>\n<h3>Installation</h3>\n<blockquote>\n<p><strong>REQUIRES SPT 4.0.12</strong> — This mod will NOT work on 4.0.11 or earlier versions.</p>\n</blockquote>\n<ol>\n<li>Extract the archive directly into your SPT root folder</li>\n<li>The folder structure should be:\n<pre><code>SPT/\n└── BepInEx/\n    └── plugins/\n        └── Blackhorse311-BotMind/\n            ├── Blackhorse311.BotMind.dll\n            └── voicelines/\n                ├── en/ (30 .ogg files)\n                └── ru/ (30 .ogg files)\n</code></pre>\n</li>\n</ol>\n<h3>Requirements</h3>\n<ul>\n<li><strong>SPT 4.0.12</strong> (will NOT work on 4.0.11 or earlier)</li>\n<li>BigBrain 1.4.x</li>\n<li>SAIN 3.x/4.x (optional but recommended)</li>\n</ul>\n<h3>Compatibility</h3>\n<ul>\n<li><strong>FIKA</strong>: Confirmed working</li>\n<li><strong>LootingBots</strong>: Auto-detected and compatible (BotMind looting auto-disables)</li>\n<li><strong>SAIN 4.4.0</strong>: Compatible</li>\n<li><strong>Lots of Loot Redux</strong>: Now properly supported with larger collider buffer</li>\n</ul>\n<h3>Full Changelog</h3>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.2.0...v1.3.0\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.2.0...v1.3.0</a></p>\n<h3>Credits</h3>\n<ul>\n<li><strong>Rockjaw</strong> — Container looting report that identified the collider buffer limitation</li>\n<li><strong>DeRuffo</strong> — Bug report on looting getting stuck with large mod lists</li>\n<li><strong>Capricorn</strong> — Feedback on bot behavior during combat without SAIN</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.3.0",
+      "content_length": 4773162,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 374,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-19T18:17:00.000000Z",
+      "created_at": "2026-02-19T18:17:24.000000Z",
+      "updated_at": "2026-07-28T08:05:23.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fc6f5fb3fe2427d477ed7c92160be73ec0f4210920603cd67618c2d3e2b3f622",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/d24d9770-b2ca-4106-970d-578331330ef7?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A14%3A12Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.3.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A13%3A45Z&ske=2026-08-01T20%3A14%3A12Z&sks=b&skv=2018-11-09&sig=5hXotETLB7v15900M4H4uxDC3ZNvZfb5%2BmVJSAtrss4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.3.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13116,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<h2>What’s New (v1.1.0 + v1.1.1 + v1.2.0)</h2>\n<p>This is the first combined release since v1.0.0, covering three versions of improvements and bug fixes.</p>\n<h3>Features (v1.1.0)</h3>\n<ul>\n<li><strong>Bot Limit Slider</strong> — BotLimitPatch + BotLimitManager with slot reservation for MedicBuddy escort teams</li>\n<li><strong>Escort Combat Awareness</strong> — DefendPerimeterLogic scans for threats using <code>Physics.OverlapSphere</code>, feeds <code>CheckAndAddEnemy</code>, and faces nearest enemy</li>\n<li><strong>Escort Difficulty Config</strong> — Configurable <code>BotDifficulty</code> (0–3, default: hard) for MedicBuddy escort bots</li>\n<li><strong>LootingBots Compatibility</strong> — Auto-detects LootingBots (<code>me.skwizzy.lootingbots</code>) and disables BotMind’s Looting module to avoid conflicts. MedicBuddy + Questing remain active.</li>\n<li><strong>30 new unit tests</strong> — 112 total, all passing</li>\n</ul>\n<h3>Bug Fixes</h3>\n<h4>v1.1.1 — Issue #1: Questing Idle/Stuck + PMC Non-Engagement</h4>\n<ul>\n<li><code>QuestManager.MarkCurrentObjectiveComplete()</code> now calls <code>UpdateObjectives()</code> immediately instead of leaving a 5-second idle gap</li>\n<li>Removed <code>LookToMovingDirection()</code> from GoToLocationLogic, ExploreAreaLogic, and ExtractLogic — these calls overrode EFT’s natural head-scanning, preventing <code>LookSensor</code> from detecting enemies, which meant SAIN combat never activated</li>\n<li><code>QuestingLayer.IsActive()</code> now updates immediately when idle (was throttled to 5s even with no objective)</li>\n</ul>\n<h4>v1.2.0 — Issues #2 &amp; #3: Questing Failed/Standby States</h4>\n<ul>\n<li><strong>Path reachability validation</strong>: Objective generation now validates a complete walkable path using <code>NavMesh.CalculatePath()</code> before accepting waypoints — not just checking that a position exists on NavMesh</li>\n<li><strong>Reduced snap tolerance</strong>: <code>NavMesh.SamplePosition</code> tolerance reduced from 20m to 5m to prevent wrong-floor/building snaps</li>\n<li><strong>Local exploration fallback</strong>: When no reachable long-range waypoints can be found, bots fall back to exploring locally (40m for PMCs, 30m for Scavs) instead of standing idle</li>\n<li><strong>F12 runtime toggle works</strong>: QuestingLayer is now always registered for both PMC and Scav brain types — the <code>IsActive()</code> method handles per-type filtering at runtime, so toggling <code>PMCsDoQuests</code>/<code>ScavsDoQuests</code> in F12 works without restart</li>\n<li><strong>Separate path failure counter</strong>: Path-to-target failures and movement-stuck detection now use independent counters, preventing premature failure declarations</li>\n<li><strong>Remaining LookToMovingDirection cleanup</strong>: Removed 5 more calls from FindItemLogic, PlaceItemLogic, LootContainerLogic, PickupItemLogic, and LootCorpseLogic</li>\n</ul>\n<h3>Installation</h3>\n<ol>\n<li>Extract the zip to your SPT root folder</li>\n<li>The folder structure should be:\n<pre><code>SPT/\n└── BepInEx/\n    └── plugins/\n        └── Blackhorse311-BotMind/\n            ├── Blackhorse311.BotMind.dll\n            └── voicelines/\n                ├── en/ (30 .ogg files)\n                └── ru/ (30 .ogg files)\n</code></pre>\n</li>\n</ol>\n<h3>Requirements</h3>\n<ul>\n<li>SPT 4.0.12</li>\n<li>BigBrain 1.4.x</li>\n<li>SAIN 4.x (optional but recommended)</li>\n</ul>\n<h3>Compatibility</h3>\n<ul>\n<li><strong>FIKA</strong>: Confirmed working (thanks thesubnautica19881!)</li>\n<li><strong>LootingBots</strong>: Auto-detected and compatible (BotMind looting auto-disables)</li>\n<li><strong>SAIN 4.4.0</strong>: Compatible</li>\n</ul>\n<h3>Full Changelog</h3>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.2.0\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.2.0</a></p>\n<h3>Credits</h3>\n<ul>\n<li><strong>Th3Kenix</strong> — Detailed bug reports with debug screenshots for Issues #1, #2, and #3</li>\n<li><strong>ExcellentBugg</strong> — Confirming Issue #2 persisted after v1.1.1</li>\n<li><strong>LO010OL</strong> — LootingBots compatibility question that led to auto-detection feature</li>\n<li><strong>thesubnautica19881</strong> — FIKA compatibility confirmation</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.2.0",
+      "content_length": 4772308,
+      "spt_version_constraint": "4.0.12",
+      "downloads": 216,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-18T23:22:00.000000Z",
+      "created_at": "2026-02-18T23:22:57.000000Z",
+      "updated_at": "2026-07-28T08:05:11.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/566458f3d94d94ad8c36e7ff34fbfd59e6d4dd79a9bb23b3ba39c0c372433688",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/bfbc10b8-23f3-4a98-a6ee-7556072f524b?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A31Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.2.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A48Z&ske=2026-08-01T20%3A30%3A31Z&sks=b&skv=2018-11-09&sig=yG3piMsQAF%2Brz2LJMed7XYTKJd39LvHgLN9b%2FlrOEYA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.2.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13108,
+      "hub_id": null,
+      "version": "1.1.1",
+      "description": "<h2>New Features</h2>\n<h3>Bot Limit Slider</h3>\n<p>New <strong>Max Bots Per Map</strong> config setting (0–31) with automatic MedicBuddy slot reservation. When MedicBuddy is enabled,\nteam-size slots are auto-reserved so your medical team always has room to spawn. Compatible with SWAG+Donuts and AI\nLimit.</p>\n<h3>Escort Combat Awareness</h3>\n<p>Shooter escorts now actively scan for and engage nearby threats. Scans every 1s for hostiles within 80m, registers up\nto 4 nearest threats, and faces the nearest enemy instead of looking randomly outward.</p>\n<h3>Escort Difficulty Config</h3>\n<p>New <strong>Escort Difficulty</strong> setting (0–3, default 2 = hard) to control escort bot combat skill level.</p>\n<h3>LootingBots Compatibility</h3>\n<p>BotMind now auto-detects <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mods/Skwizzy-LootingBots\" rel=\"noreferrer noopener\">LootingBots</a> and disables its own\nLooting module to avoid conflicts. MedicBuddy and Questing continue to work alongside LootingBots.</p>\n<h2>Bug Fixes</h2>\n<ul>\n<li><strong>Bots no longer go idle after reaching quest waypoints</strong> — objective rotation is now immediate instead of waiting\nup to 5 seconds between waypoints (<a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues/1\" rel=\"noreferrer noopener\">#1</a>)</li>\n<li><strong>Stuck bots now properly transition to the next objective</strong> — when the stuck counter hits 3, bots move on instead\nof standing still</li>\n<li><strong>PMC bots from different teams now detect and engage each other</strong> — removed a per-frame steering override that was\nblocking EFT’s natural head-scanning and enemy perception</li>\n<li>Stuck/navigation failure logging upgraded from Debug (hidden) to Warning (visible) for easier troubleshooting</li>\n</ul>\n<h2>Stats</h2>\n<ul>\n<li>30 new unit tests (112 total)</li>\n<li>0 build warnings</li>\n</ul>\n<h2>Thanks</h2>\n<ul>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Th3Kenix\" rel=\"noreferrer noopener\">Th3Kenix</a></strong> — reported questing idle/stuck bug and PMC non-engagement\n(<a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/issues/1\" rel=\"noreferrer noopener\">#1</a>)</li>\n<li><strong>LO010OL</strong> — identified LootingBots compatibility question on SPT Forge</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.1.1\" rel=\"noreferrer noopener\">https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.1.1</a></p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.1.1",
+      "content_length": 4772054,
+      "spt_version_constraint": "~4.0.12",
+      "downloads": 250,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-18T07:06:00.000000Z",
+      "created_at": "2026-02-18T07:06:07.000000Z",
+      "updated_at": "2026-07-28T08:04:51.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/3dabb51a0d5754e6da79d3e08de74f6158a150cbb9a8b286f03dbff3b780de8a",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/db2f4231-9cf1-4649-b8c9-58a265e5579c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A37%3A48Z&rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.1.1.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A37%3A16Z&ske=2026-08-01T20%3A37%3A48Z&sks=b&skv=2018-11-09&sig=wfDLhULq1asC1mAMyGW%2F%2BbH45Ep9p0ZlJkkt9qowodo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.1.1.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13106,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2595/blackhorse311-botmind/1.0.0",
+      "content_length": 4769796,
+      "spt_version_constraint": "~4.0.12",
+      "downloads": 194,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-17T20:11:00.000000Z",
+      "created_at": "2026-02-17T20:11:39.000000Z",
+      "updated_at": "2026-07-28T08:04:54.000000Z",
+      "dependencies": [
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264922,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284358,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240934,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 12930,
+              "hub_id": null,
+              "version": "4.4.0",
+              "description": "<p>It is recommended to install the latest version of Fika along with this version of SAIN</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>Fixed up certain bots not doing damage when getting shot in the head</li>\n<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>\n<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>\n<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>\n<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>\n<li>Minor lights optimization by @ozen-m</li>\n<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>\n<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>\n<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>\n<li>Added a server mod to allow preset modders to more easily define bot personalities</li>\n<li>Fixed up Deathwish to include harder pmc’s</li>\n<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>\n<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>\n<li>More code cleanup work</li>\n</ul>\n<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.0",
+              "content_length": 348509,
+              "spt_version_constraint": "~4.0",
+              "downloads": 43547,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-01-28T13:00:00.000000Z",
+              "created_at": "2026-01-28T13:24:29.000000Z",
+              "updated_at": "2026-07-28T07:57:37.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/eb3cfd9fc8612de79719dd1d0f889a209bb747814d5e9eda3606eac0078fccb8",
+          "label": "VIrusTotal Scan"
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/aea8fa4e-35c7-4a34-b7ae-c2c215ba94d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A36%3A22Z&rscd=attachment%3B+filename%3DBlackhorse311-BotMind.v1.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A36%3A21Z&ske=2026-08-01T20%3A36%3A22Z&sks=b&skv=2018-11-09&sig=KsBnB6jmdo1U38sgEBtvLzM%2Be2S69u%2BtNWF8%2BKQhdd8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&response-content-disposition=attachment%3B%20filename%3DBlackhorse311-BotMind.v1.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 6,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:40:23.630Z",
+    "discoveredBy": "seed"
+  }
+}

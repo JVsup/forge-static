@@ -1,0 +1,292 @@
+{
+  "type": "mod",
+  "id": 2526,
+  "hub_id": null,
+  "guid": "com.minesettimi.advfleasimulator",
+  "name": "Advanced Flea Simulator",
+  "slug": "advanced-flea-simulator",
+  "teaser": "Highly configurable simulator that aims to make using the flea market closer to how it feels to use in the live game.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/aonR9PhKNP6EBzHrr2l6k1DZ9lFV76N93PHRKER1.png",
+  "downloads": 6360,
+  "favourites_count": 13,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Overview</div>\n<div class=\"tab-content\"><p>Want the flea market to be less static than vanilla?\nWant the flea prices to be not as dependent on BSG’s changes to 1.0?</p>\n<p>This mod aims to simulate a flea market with YOUR specifications</p>\n<ul>\n<li>Item price simulation</li>\n<li>Dynamic offer generation</li>\n<li>Dynamic position based sell chance and delay</li>\n<li>Early wipe price simulation</li>\n<li>Progressive Flea Support</li>\n<li>Advanced configuration</li>\n</ul>\n<hr />\n<p>Some items can be calm:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/6qGwC9O.png\" alt=\"calm\" /></p>\n<p>Some items can be chaotic:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/3C7wfWh.png\" alt=\"chaotic\" /></p>\n<p>Some can be in-between:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://imgur.com/gNhnt5V.png\" alt=\"middle\" /></p>\n<p>And some can be weird:</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://imgur.com/BVGuyn4.png\" alt=\"weird\" /></p>\n<hr />\n<p>Every item can be assigned different simulation data that changes how they are simulated by the mod.\nEven modded items can be simulated!</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Features</div>\n<div class=\"tab-content\"><p><strong>Item Simulations</strong></p>\n<p>The mod will simulate the flea market with prices going up in down in varying degrees of unpredictability.\nHow often these prices are simulated and the behavior of every item is configurable.</p>\n<p><strong>Dynamic Offers</strong></p>\n<p>Creates fake PMC offers based on the configured supply of an item.\nHigh supply items such as bundles of wires will have more available offers with higher quantities.\nRarer items such as marked keys generate with less offers.</p>\n<p><strong>Dynamic Selling</strong></p>\n<p>Adds a custom system for determining if your item offers get sold and when they get sold.\nThe chances are dependent on how much the configured supply and demand an item has and what position your item is when sorted by price.\nYour item has the largest chance of being sold when cheaper than any other item!\nBut when its more expensive than others, it will take longer and have a bigger chance at not selling.</p>\n<p><strong>Early Wipe Simulation</strong></p>\n<p>Features an ability to modify prices and features based on the look of the prices during an early wipe in live EFT.\nThe length of early wipe depends on configuration. The early wipe will make the prices start out far from their usual and then return to their regular prices by the end.</p>\n<p><strong>Progressive Flea Support</strong></p>\n<p>Features a progressive flea configuration which allows configuring categories or specific items to be locked in the flea. This feature removes the need to configure SPT’s built in flea config (which isn’t recommended)<br />\nThe system also features default values and a configuration to allow flea from level 1.</p>\n<p>It starts off disabled but can be enabled with a preset config option. The default config comes with EFT 1.0’s level locks.</p>\n<p><strong>Advanced Configuration</strong></p>\n<p>Most features in this mod are configurable through a preset system! Check out the Config tab for more info.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Config</div>\n<div class=\"tab-content\"><h5>The default config currently needs some more tweaking. Some outlier items may behave differently than expected.</h5>\n<p>This mod features a preset based system to allow for easier config saving and transfer.<br />\n<strong>Some values will not change an already simulated market! You can fully reset by deleting state.json</strong></p>\n<p>A default config is included with the files. It features comments that describe what every value does.</p>\n<p>To make your own config, first duplicate the default config file in the Presets folder, change the name and author, and then set your new config in loader.json. (<em>The mod will not cover for making out of bound variables or making min variables higher than max.</em>)</p>\n<p>Feel free to share your config by creating an addon for this mod!</p>\n<hr />\n<p>The config operates off of assigning items to categories and then using the categories for how the item should be simulated.\nEvery config should come with a default category that sets the default values for each other category, if another config doesn’t have a value it will be sourced from this category.</p>\n<p>Features are also togglable through the core config. If you don’t want offers to be generated, selling chances to be changed, or early wipe prices to be simulated, then you can turn them off.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Common Issues</div>\n<div class=\"tab-content\"><p><strong>All items are very expensive</strong><br />\nThis is typically caused by early wipe prices which most items start high and go much lower, they can be disabled within the config.</p>\n<p><strong>Items won’t sell</strong><br />\nIf the items are being sold cheaper than every other item, the demand for the item might be low. If the demand is really low the item can take up to an hour in the default config.</p>\n<p><strong>Item price not behaving as it should/mod behavior is not as expected</strong><br />\nThe default config might not be suited to how you want the market to work. I suggest creating a new config using the instructions in the Config section.</p></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p><strong>Incompatible</strong><br />\nDelayed Flea Sales - This mod overrides the same code.</p>\n<p><strong>Compatibility Issues</strong><br />\nFast Sell Mods - Typically these will place the item for sale at a price that will sell the best for vanilla SPT so if using one of these, expect that they might not sell as frequently.\nLive Flea Prices - This mod adjusts prices on a regular basis. Compatible if simulation is disabled AND Live Flea Orice’s refresh flea config setting is set to false.\nDynamic Flea Prices - Price adjustments are not compatible unless simulation is disabled.</p>\n<p><strong>Compatible</strong>\nThe Blacklist</p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Debug</div>\n<div class=\"tab-content\"><p>There are several debug features to help test item simulations. They are all featured in the core section of the config.</p>\n<p>The most notable debug tool is the <strong>debugSimulation</strong>, if you set it to true and enter an item’s tplId in <strong>debugItem</strong>, it will generate a .csv file that features 3 months of price data.\nThe number of rows generated is dynamically based on your simulation rate.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2526/advanced-flea-simulator",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-01-01T20:09:00.000000Z",
+  "created_at": "2026-01-01T07:08:41.000000Z",
+  "updated_at": "2026-07-28T18:02:31.000000Z",
+  "owner": {
+    "id": 96972,
+    "name": "minesettimi",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/j6cDJMwWE6CKrjbeszLB1RLkQMLCDgEpLI6qno7T_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-12-16T20:38:13.000000Z",
+    "updated_at": "2026-08-01T19:17:59.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/minesettimi/FleaSimulator",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14272,
+      "hub_id": null,
+      "version": "1.4.1",
+      "description": "<p>Simulation can now be disabled in the preset config which allows for the use of the sell and/or buy system with vanilla prices or other pricing mods.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.4.1",
+      "content_length": 34264,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 214,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T15:20:00.000000Z",
+      "created_at": "2026-07-28T15:38:00.000000Z",
+      "updated_at": "2026-07-28T18:02:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZGY5ZWFkZjRjMTY1YWYyOGE5NzE0OTM0YTc3YjE4NzA6MTc4NTI1Mjk1OQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/2c780147-2e4d-4acd-aa1b-03f58570b4e3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A25%3A06Z&rscd=attachment%3B+filename%3DFleaSimulator-v1.4.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A25%3A05Z&ske=2026-08-01T20%3A25%3A06Z&sks=b&skv=2018-11-09&sig=dzja6hq7fxF3EkvLzIJ7FhKNMkyGWZsPkjoR1RAhah4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMSwibmJmIjoxNzg1NjEyODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OM_eySSLArPAaKWbf7VdX8S9XPLqIqxwFVPBdhzytls&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.4.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 14237,
+      "hub_id": null,
+      "version": "1.3.0",
+      "description": "<p>Removed progressive flea config<br />\n<strong>(IF YOU USED A CUSTOM PROGRESSIVE CONFIG, INSTALL THE STANDALONE MOD AND MIGRATE THE CONFIG SETTINGS BEFORE STARTING SERVER!)</strong></p>\n<p>Increased default minimum demand sell chance to 90% from 50%<br />\nClarified a few comments in the default config</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.3.0",
+      "content_length": 34231,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 140,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-26T15:50:00.000000Z",
+      "created_at": "2026-07-26T15:50:47.000000Z",
+      "updated_at": "2026-07-28T09:56:12.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/d2f829858f5a21a05670e664c58aff5a8585937d53d9b3d54d9a08739928972c?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/72f6f6f8-6a2d-4d5e-a11f-3c5175cbd0ba?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A12%3A45Z&rscd=attachment%3B+filename%3DFleaSimulator-v1.3.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A12%3A15Z&ske=2026-08-01T20%3A12%3A45Z&sks=b&skv=2018-11-09&sig=5X3h8sTcCejCH7Et%2FfiDQwoPuB2nlnTzFO7zQJcc1hY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMSwibmJmIjoxNzg1NjEyODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OM_eySSLArPAaKWbf7VdX8S9XPLqIqxwFVPBdhzytls&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.3.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13053,
+      "hub_id": null,
+      "version": "1.2.2",
+      "description": "<p>More overflow precautions</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.2.2",
+      "content_length": 36559,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 3688,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-02-12T15:13:00.000000Z",
+      "created_at": "2026-02-12T15:13:44.000000Z",
+      "updated_at": "2026-07-28T08:02:14.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8f137125bb74a9a9020dfbf06e2170797c5bcd516ca354f024d554156d3b46d9",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/323ab8d2-183f-4f91-a500-2bad50852873?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A24%3A53Z&rscd=attachment%3B+filename%3DFleaSimulator-v1.2.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A24%3A35Z&ske=2026-08-01T20%3A24%3A53Z&sks=b&skv=2018-11-09&sig=Vt7qyWBjUzuIm7j3VZsiqIir0Mmf%2Fd7gMBxCw6tGw9M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMiwibmJmIjoxNzg1NjEyODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WG1qe5-5IJasHUU7c58BH4RhapjrKRCgkAdy5PIHM3Y&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.2.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13047,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>fixes item prices being too high or too low crashing the mod</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.2.1",
+      "content_length": 36553,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 112,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-02-11T20:43:00.000000Z",
+      "created_at": "2026-02-11T20:49:28.000000Z",
+      "updated_at": "2026-07-28T08:02:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/77bb5b218e3e04744705a773163e8fb1e1e8407557b936ec46974c0ae587c55e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/f2df388b-13c8-4177-9661-f2a0d35c4576?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A14%3A36Z&rscd=attachment%3B+filename%3DFleaSimulator-v1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A13%3A38Z&ske=2026-08-01T20%3A14%3A36Z&sks=b&skv=2018-11-09&sig=1VecCeiRSKw1Sa7o3m8MXABeJk2a9KVDqSf55RLZ%2B54%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMywibmJmIjoxNzg1NjEyODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.j3l2ysW8xhspvTS6C-nrS40It-YAX7rhlSBJw2xwPKI&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12769,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>Added a “deals” system where when you sell items further below minimum, the chances of selling rise and the delay drop.</p>\n<p>Made the demand to sell delay curve exponential. The max delay from selling an item gets higher as demand decreases instead of being linear.</p>\n<p>Changed some data points</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.2.0",
+      "content_length": 36542,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 1722,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-03T21:03:00.000000Z",
+      "created_at": "2026-01-03T21:03:21.000000Z",
+      "updated_at": "2026-07-28T07:40:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8c6ee9659170d3e3bae944f7e557d498be2faa750edc95d5c526f7668fcfaab7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/31940f7e-42d6-4586-a297-3cd15e302d21?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A11%3A47Z&rscd=attachment%3B+filename%3DFleaSimulator-V1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A11%3A18Z&ske=2026-08-01T20%3A11%3A47Z&sks=b&skv=2018-11-09&sig=ojCp4I1jajOVNjWFWFmaiFzmdBcyWOFZZqcA5MN%2FQLQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNCwibmJmIjoxNzg1NjEyODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bqwIaxjLjhZXAXMfGIX4s9JEMKtfPoWlffqKYzrEJX8&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12743,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>Added progressive flea configuration which allows for locking specific items or categories behind levels. It is disabled by default.\nAdded simulation interpolation which runs simulations for time missed when server was offline.\nFixed offer count slowly reducing over time</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.1.0",
+      "content_length": 35742,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 170,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-02T23:24:00.000000Z",
+      "created_at": "2026-01-02T23:25:05.000000Z",
+      "updated_at": "2026-07-28T07:25:55.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/56fad1e8998a720a64ea82a2b2608e37722445da3b1cd097b96dede6f040288e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/d291515d-4414-422a-b33d-2257b7974808?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A32%3A13Z&rscd=attachment%3B+filename%3DFleaSimulator-V1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A31%3A34Z&ske=2026-08-01T20%3A32%3A13Z&sks=b&skv=2018-11-09&sig=kNBdlgT3rKa9EZuwVHrHjcA6WfqTq1GzhSwl8czgp80%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNCwibmJmIjoxNzg1NjEyODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bqwIaxjLjhZXAXMfGIX4s9JEMKtfPoWlffqKYzrEJX8&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12739,
+      "hub_id": null,
+      "version": "1.0.2",
+      "description": "<p>added config feature to disable early wipe when creating fresh market if a profile exists over a specific level\nfixed issue where loader.json causes a crash\nfixed crash when an non-indexed item has offers created for it</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.0.2",
+      "content_length": 32654,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 209,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-02T03:24:00.000000Z",
+      "created_at": "2026-01-02T03:24:58.000000Z",
+      "updated_at": "2026-07-28T07:25:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e2bc6acd20eb10255dbba001d3e55b8befe31cadbee745651f08855cc0d442b7",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/58d0849b-9d98-4ca4-a669-73f1c8820c9f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A11%3A10Z&rscd=attachment%3B+filename%3DFleaSimulator-V1.0.2.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A10%3A32Z&ske=2026-08-01T20%3A11%3A10Z&sks=b&skv=2018-11-09&sig=6nuPvDiAKmMtgh%2FYaknkumUWW2VYlvyaONAG2NdBagY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNSwibmJmIjoxNzg1NjEyODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vYn9ukIvftyruR2q0iY6d1K_r57tgjHvScrhBCp8HrU&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.2.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12736,
+      "hub_id": null,
+      "version": "1.0.1",
+      "description": "<p>Fixes loader.json not being generated</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.0.1",
+      "content_length": 32108,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 75,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-01T21:20:00.000000Z",
+      "created_at": "2026-01-01T21:20:46.000000Z",
+      "updated_at": "2026-07-28T07:25:33.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/fce6c4b0baa8f12059c7dacb739f425e47193862e81e1b2a753cde88e5202891",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/2c8e72de-a6fb-4864-b9f4-a9484fb87247?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A30%3A07Z&rscd=attachment%3B+filename%3DFleaSimulator-V1.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A29%3A49Z&ske=2026-08-01T20%3A30%3A07Z&sks=b&skv=2018-11-09&sig=b%2FdUgMnDY%2Fc4VCPi%2BQhWZm6Iqblt2UcJYseQ96b2j%2BU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNiwibmJmIjoxNzg1NjEyODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QyNU6oz16kyooKKnuX_bGasHuhhgvkxe9XX-PBRLgts&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 12735,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>Initial Release</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2526/advanced-flea-simulator/1.0.0",
+      "content_length": 31998,
+      "spt_version_constraint": "~4.0.4",
+      "downloads": 30,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-01-01T20:09:00.000000Z",
+      "created_at": "2026-01-01T20:09:21.000000Z",
+      "updated_at": "2026-07-28T07:25:35.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/79efbb3d77b3b6bf038a98f2dab4cc5b7937d77f1d2f75c7e8f6d60aa112e512",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/57ca2ecc-3cf7-46bd-9180-77925fe6c76f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A27%3A42Z&rscd=attachment%3B+filename%3DFleaSimulator-V1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A26%3A55Z&ske=2026-08-01T20%3A27%3A42Z&sks=b&skv=2018-11-09&sig=mH1dVNoZNT1EU6I5NekY7DOc1vFe8nu2eBPsXXjwEKE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNywibmJmIjoxNzg1NjEyODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xFj53J_NhzWJxYCwpo0jcttT7hjlHQ1pav0pXjQmQY0&response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 32,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:33:50.306Z",
+    "discoveredBy": "seed"
+  }
+}

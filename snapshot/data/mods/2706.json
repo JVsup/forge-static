@@ -1,0 +1,886 @@
+{
+  "type": "mod",
+  "id": 2706,
+  "hub_id": null,
+  "guid": "com.chazut.orbit",
+  "name": "ORBIT",
+  "slug": "orbit",
+  "teaser": "Bots with a mission. They loot, they fight, they extract - like real players, not wandering AI",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/IcW1c4xICg0NtQ6H2RLLeK6jrum71JD6mqW24yPi.png",
+  "downloads": 23347,
+  "favourites_count": 196,
+  "description": "<blockquote>\n<p>⚠️ <strong>Heads up:</strong> ORBIT is built on <strong>Phobos</strong>‘s foundation (MIT-licensed).\nFull credits at the bottom. ORBIT wouldn’t exist without <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/72916/jankytheclown\" rel=\"noreferrer noopener\">Janky’s</a> work 🙏</p>\n</blockquote>\n<blockquote>\n<p><strong>ORBIT</strong> - Objective-driven Raid Bot Intelligence Tactics</p>\n<p>Smarter bots. Real objectives. Raids that feel alive.</p>\n</blockquote>\n<p>Bots in your raids no longer just patrol and shoot. With ORBIT, they have\ngoals: rich loot spots to clear, PvP hotspots to hunt, quest triggers to\nvisit, and a real reason to head for extract. They coordinate, loot\ntogether, and leave when they’re done - just like players.</p>\n<p>Built on <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\">Phobos</a>’s foundations (advection field, cell dispatch, squad movement), with a custom looting layer on top of BSG vanilla APIs (originally inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/812/looting-bots\" rel=\"noreferrer noopener\">LootingBots</a>, now fully rewritten) and quest routing inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1109/questing-bots\" rel=\"noreferrer noopener\">QuestingBot</a> (but A LOT simpler, no code reuse) - all rebuilt as a single coherent system instead of three layers fighting for control.</p>\n<p>It started as my own personal “best of the three” - picking the parts I\nliked from each and gluing them together. Along the way it grew well\nbeyond that, into something I’m proud enough of to share.</p>\n<p>Pair it with the latest <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1479/raid-review\" rel=\"noreferrer noopener\">Raid Review</a> to see what every bot was doing on the post-raid map replay.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://i.imgur.com/WSWqb8d.png\" rel=\"noreferrer noopener\">📷 Screenshot</a></p>\n<p>Questions, bug reports, feedback: <strong><a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1509314495019745451\" rel=\"noreferrer noopener\">ORBIT Discord thread</a></strong>.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">What It Does</div>\n<div class=\"tab-content\"><p>Every bot squad in your raid rolls a small list of goals at spawn:</p>\n<ul>\n<li><strong>Loot a rich zone</strong> - clean out a high-value area, room by room</li>\n<li><strong>Hunt for fights</strong> - anchor a known PvP hotspot, prowl for kills</li>\n<li><strong>Run a quest</strong> - visit a real EFT quest trigger like a player would</li>\n</ul>\n<p>How they pursue those goals depends on their SAIN personality:</p>\n<ul>\n<li><strong>Rats / Cowards</strong> - careful, low-risk, loot a lot, extract early</li>\n<li><strong>Average</strong> - balanced, will do a bit of everything</li>\n<li><strong>Chads / GigaChads</strong> - aggressive, hunt PvP, skip cheap loot, push extracts</li>\n<li><strong>Timmys</strong> - wander a bit, make weird picks, get to the wrong room sometimes</li>\n</ul>\n<p>Squads coordinate: the leader picks the target, the rest spread to nearby\nloot or cover. They open locked doors (sometimes), chain-loot adjacent\ncontainers, and credit the right teammate when the corpse needs looting.</p>\n<p>They extract when one of three things happens: they’ve looted enough money,\nthey’ve finished all their goals, or the raid is getting late.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">How Squads Pick Targets</div>\n<div class=\"tab-content\"><p>Each squad’s main objectives live in <strong>cells</strong> on the map (a coarse grid).\nOnce the squad’s leader picks an anchor, the rest of the system works in\ntwo layers:</p>\n<p><strong>Main anchor</strong> - the squad’s current focus. One member (the leader by\ndefault) walks straight to it. For a Kills main this is a PvP hotspot;\nfor a LootValue main it’s a specific high-value POI in the target cell;\nfor a Quest main it’s the trigger point of a real EFT quest.</p>\n<p><strong>Splinter targets</strong> - while the leader handles the anchor, the other\nmembers fan out to nearby POIs inside the same cell (loose loot, corpses,\ncontainers, synthetic patrol points). Each splinter is picked around the\nmember’s own position with a random reservoir sample, so a 4-PMC squad\nnaturally ends up working a small area without all stacking on one spot.\nA splinter is kept across anchor flips if it’s still in range of the new\nanchor - bots don’t yo-yo between random POIs when the leader chain-loots\nthe next container two metres away.</p>\n<p><strong>Own-kill credit</strong> - when a squad scores a kill, the specific member\nthat landed it is the one routed straight to the corpse on the next\ndispatch, not a random teammate. The killer loots the body they dropped.</p>\n<p><strong>Coverage roll</strong> - on entering a high-value loot cell, each POI inside\nthe cell rolls against the squad’s coverage value (per-personality:\nCautious 85-95%, Average 65-75%, Aggressive 50-60%, GigaChad 30-45%). POIs\nthat lose the roll are quietly skipped so the squad never vacuums the\nroom 100%, like a real player who missed a few items.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Looting In Detail</div>\n<div class=\"tab-content\"><p>The looting layer is custom, built straight on top of BSG’s vanilla bot\npickup APIs. It handles containers, corpses and loose world items, with a\nfocus on making the bots feel like real players rather than vacuum\ncleaners.</p>\n<p><strong>Per-bot value gate (PMCs and PlayerScavs)</strong></p>\n<ul>\n<li>Each PMC has its own loot threshold rolled from its SAIN personality:\nChad ~15k/slot, Average ~10k/slot, Cautious (Rat/Coward) ~5k/slot,\nGigaChad ~20k/slot, Timmy 0 (everything goes). PlayerScavs fall back to\na 5k default.</li>\n<li>Value is judged <strong>per inventory slot</strong> (handbook price ÷ item size), so\na tiny key worth 50k beats a 60k backpack that takes 15 slots.</li>\n<li>A Chad walking past a 5k mag won’t bother; a Rat in the same squad will\nhappily grab it.</li>\n</ul>\n<p><strong>Bot scavs: opportunistic random pickups</strong></p>\n<ul>\n<li>AI scavs don’t use a value threshold. They roll a per-item dice (default\n30% chance to grab) - matches the vanilla feel where scavs pick up the\nodd item but don’t deliberately empty a corpse.</li>\n<li>PlayerScavs are excluded from this and use the PMC-style threshold path.</li>\n</ul>\n<p><strong>Smart squad memory</strong></p>\n<ul>\n<li>When a Chad opens a container and rejects everything, the same POI is\nadded to his personal skip list - he won’t be sent back. His Chad\nteammates also skip it (same threshold). But the squad’s Rat can still\nbe dispatched there and clean up what the Chad refused.</li>\n<li>The squad’s own blacklist (a hard “we’re done here”) only triggers when\nitems were actually taken, when the POI was empty, or on transaction\nfailures - never on a pure value rejection.</li>\n</ul>\n<p><strong>Always-pick items</strong></p>\n<ul>\n<li>Currency stacks, frag grenades, and dogtags bypass both the value gate\nand the scav random roll. A real player never walks past a dogtag.</li>\n</ul>\n<p><strong>Realistic search timing</strong></p>\n<ul>\n<li>Containers play an open/close animation (~2.5s) with the bot kneeling\nin front of the lid.</li>\n<li>Corpses are drained on two interleaved tracks: a <strong>visible track</strong>\n(helmet, weapons, scabbard, etc., grabbed sequentially with ~0.8s\nbetween each) and a <strong>search track</strong> (vest, armour, backpack, pockets,\none slot at a time with progressive per-item reveal: 1.5s initial + 0.4s\nper extra item, capped at 8s).</li>\n<li>Slot order is randomised so the bot doesn’t always go backpack-first,\nvest-second, pockets-third.</li>\n<li>Loose items trigger the kneel-and-grab animation per pickup.</li>\n</ul>\n<p><strong>Drain order</strong></p>\n<ul>\n<li>Items inside grid containers (wallets, money cases, rigs, backpacks,\npockets) are emptied <strong>inside-out</strong>: cash and contents first, then the\nempty wrapper.</li>\n<li>Weapon + mods chains drain root-first (the weapon itself, then any\ndetachable mods), same for armour + plates.</li>\n</ul>\n<p><strong>Mod filtering on weapons</strong></p>\n<ul>\n<li>Only attachments flagged as “removable in raid” (scopes, mags, grips,\nsilencers, foregrips, mounts, charging handles, dust covers, sights,\nlasers, lamps) are considered. Barrels, buttstocks, handguards and\nreceivers are dropped from the queue - nobody disassembles a rifle\nmid-firefight.</li>\n</ul>\n<p><strong>Corpse exclusions</strong></p>\n<ul>\n<li>PMC corpses keep their melee weapon (Scabbard slot) on the body, same\nas live EFT. Scav corpses are fully lootable.</li>\n<li>Secured containers are never touched, on any corpse.</li>\n</ul>\n<p><strong>Chain-loot sweep</strong></p>\n<ul>\n<li>After successfully looting a POI, the bot looks for nearby loose items\nor corpses within a short radius and chains to them directly - mirrors\nthe way a player picks up adjacent items before walking away.</li>\n<li>Same-floor preference: a candidate two metres away on the floor above\nloses to one ten metres away on the same floor, so the bot doesn’t\nyo-yo between basement and lobby on Resort.</li>\n<li>Each sweep candidate gets its own coverage roll.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><ol>\n<li>Install dependencies first:\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/902/bigbrain\" rel=\"noreferrer noopener\">BigBrain</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27605/drakiaxyz\" rel=\"noreferrer noopener\">DrakiaXYZ</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh\" rel=\"noreferrer noopener\">Waypoints - Expanded Navmesh</a></li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement\" rel=\"noreferrer noopener\">SAIN</a></li>\n</ul>\n</li>\n<li>Extract the zip in your SPT root folder.</li>\n<li>Launch the game. You’ll see <code>ORBIT 1.0.0</code> in the bottom-left version\nlabel when it’s loaded.</li>\n</ol>\n<p>All tuning lives in the F12 menu - open it in-game and tweak live.</p>\n<p><strong>Two recommended SAIN tweaks</strong>:</p>\n<ul>\n<li>Tweak SAIN personality chances (see the next tab).</li>\n<li>Disable SAIN’s extract layer so it doesn’t fight ORBIT’s extract logic. Open <code>BepInEx/plugins/SAIN/Presets/&lt;your_preset&gt;/GlobalSettings.json</code> and set:</li>\n</ul>\n<pre><code>\"Extract\": {\n  \"SAIN_EXTRACT_TOGGLE\": false\n}\n</code></pre></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">Personalities (Recommended SAIN Config)</div>\n<div class=\"tab-content\"><p>ORBIT was tuned around a specific personality distribution. SAIN’s own\ndefaults work fine, but if you want raids that match what I tested against,\ngo into SAIN’s F12 config under <strong>Personality → Assignment</strong> and set:</p>\n<table>\n<thead>\n<tr>\n<th>Personality</th>\n<th>Chance</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Rat</td>\n<td>10</td>\n</tr>\n<tr>\n<td>Wreckless</td>\n<td>5</td>\n</tr>\n<tr>\n<td>SnappingTurtle</td>\n<td>5</td>\n</tr>\n<tr>\n<td>Coward</td>\n<td>5</td>\n</tr>\n<tr>\n<td>Chad</td>\n<td>5</td>\n</tr>\n<tr>\n<td>Timmy</td>\n<td>3</td>\n</tr>\n<tr>\n<td>GigaChad</td>\n<td>3</td>\n</tr>\n</tbody>\n</table>\n<p>Set <code>Can be randomly assigned</code> to <strong>True</strong> for each one.</p>\n<p>This gives roughly a third of your PMCs interesting personalities - the\ndistribution ORBIT was built around.</p>\n<p><strong>Note for <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1895/sain-twitch-players\" rel=\"noreferrer noopener\">Twitch Player</a> users</strong>: <strong>Twitch Player</strong> sets several personalities chance to <strong>0</strong> by default, so it’s important to apply the SAIN settings as above.</p></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">Unsupported Mods</div>\n<div class=\"tab-content\"><p><strong>ORBIT supports only one other AI mod: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement\" rel=\"noreferrer noopener\">SAIN</a> and is REQUIRED</strong></p>\n<p>Any other AI / bot-behaviour mod will either fight ORBIT for control or\nduplicate work it already does. Don’t install them alongside ORBIT.</p>\n<p><strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1109/questing-bots\" rel=\"noreferrer noopener\">QuestingBot</a></strong></p>\n<ul>\n<li>QuestingBots actually <em>simulates</em> quests - bots plant items, hold zones\nfor the required time, etc.</li>\n<li>ORBIT is simpler: bots just route to the quest trigger location, no\nreal quest mechanics.</li>\n<li>Both want to assign the same bot a quest at the same time → conflict.\nPick one.</li>\n</ul>\n<p><strong><a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\">Phobos</a></strong></p>\n<ul>\n<li>ORBIT is built on Phobos’s foundations, same advection field, same\ncell dispatch logic, same squad movement model. Running both means\ntwo systems trying to move the same bots.</li>\n</ul>\n<p><strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/812/looting-bots\" rel=\"noreferrer noopener\">LootingBots</a></strong></p>\n<ul>\n<li>ORBIT has its own loot pipeline driving BSG vanilla pickup APIs,\nwith per-personality value thresholds. Running both means two\nsystems racing to loot the same containers.</li>\n</ul>\n<p><strong>Any other “AI overhaul” mod</strong></p>\n<ul>\n<li>If a mod replaces bot brain logic, dispatches bots somewhere, or\ncontrols looting / extracting / questing, assume it conflicts unless\nproven otherwise.</li>\n</ul>\n<p><strong>AI Limiter / Bot Culling mods</strong></p>\n<ul>\n<li>Anything that deactivates, pauses, freezes, or culls bots while\nthey’re still alive (typically to save CPU when bots are off-screen)\nbreaks ORBIT’s core loop. ORBIT relies on every squad running their\nfull lifecycle in the background: patrolling, looting, fighting,\nextracting, even when you’re nowhere near them. The moment a bot\ngets deactivated mid-objective, it never reaches the next waypoint,\nnever engages, never extracts. No support planned on the ORBIT side\nfor now, a built-in degraded-tickrate option for off-screen squads\nis on the roadmap as a potential future workaround.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">Troubleshooting</div>\n<div class=\"tab-content\"><p><strong>Bots freeze / stand still / weird behaviour</strong></p>\n<ul>\n<li>Check for AI-limiter / bot-culling mods (see Unsupported Mods).</li>\n<li>If you’ve extended raid duration via SVM, RaidOverhaul, Custom Raid\nTimes etc., test with vanilla raid times. Long raids have been\nreported to cause odd bot behaviour.</li>\n<li>If you have ABPS, worth trying to delete its config file and let it regenerate from defaults. A\nstale ABPS config has been reported to clash.</li>\n</ul>\n<p><strong>If the above doesn’t help → 50/50 method</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://wiki.sp-tarkov.com/en/5050-method\" rel=\"noreferrer noopener\">The 50/50 method</a> is the\ncanonical SPT way to pin down a mod conflict: disable half your mods,\ntest the raid, see if the issue persists, split again, repeat until the\nculprit is isolated. Tedious but reliable.</p>\n<p><strong>If you’re going to report the issue</strong></p>\n<p>Quoting Shynd:</p>\n<blockquote>\n<p>When reporting aberrant behavior to a mod dev it is best to do so\nwith a much smaller subset of your normal mods — for ORBIT I would\nhave just ABPS / SAIN / ORBIT — and with nothing changed in SVM or\nanything else. Each individual person here has a functionally unique\nmod pack. Let’s try to make it as similar as possible before trying\nto help fix issues that may only occur for you specifically.</p>\n</blockquote>\n<p>So before pinging me: try to reproduce the issue with just\n<strong>ORBIT + SAIN + BigBrain + Waypoints + ABPS</strong> and default configs\nacross the board. If the issue still reproduces there, then I have\nsomething I can actually act on.</p>\n<p><strong>Still stuck?</strong></p>\n<p>Drop by the <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1509314495019745451\" rel=\"noreferrer noopener\">ORBIT thread</a> or the <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1424142649027199148\" rel=\"noreferrer noopener\">SPT 4.0 support</a> channel.</p></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">Compatible &amp; Recommended</div>\n<div class=\"tab-content\"><p>Spawn / loadout mods are fine and actually recommended, they shape <em>who</em> spawns and <em>what gear</em> they bring, while ORBIT decides <em>where they go and what they do</em>. The two layers don’t fight each other.</p>\n<ul>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement\" rel=\"noreferrer noopener\">SAIN</a></strong> — <strong>REQUIRED</strong>. ORBIT plugs into SAIN’s personality system; without it the mod won’t load.</li>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1594/apbs-acids-progressive-bot-system\" rel=\"noreferrer noopener\">APBS</a></strong> - progression-based bot loadouts. Recommended.</li>\n<li><strong><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2097/abps-acids-bot-placement-system\" rel=\"noreferrer noopener\">ABPS</a></strong> - Configurable spawn mod. Recommended.</li>\n<li>Other pure spawn / loadout / loot-table mods should be safe too.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-9\" class=\"tab-panel\"><div class=\"tab-title\">Roadmap</div>\n<div class=\"tab-content\"><p>No ETA, no promises, but on the list:</p>\n<p><strong>Behaviour</strong></p>\n<ul>\n<li>Squads can decide to camp + ambush instead of always roaming</li>\n<li>Smarter movement - checking corners, scanning the rear, less straight-line dashing</li>\n<li>Less static regrouping (bots are easy 1-taps while waiting for squadmates)</li>\n<li>Post-combat self-heal if meds are in inventory</li>\n<li>Squad splitting with radio comms</li>\n<li>New personalities</li>\n<li>Crouch when looting a body in the open to minimise silhouette</li>\n<li>Weapon-type → behaviour archetype hint (CQB-leaning loadout pushes harder, sniper loadout stays back) driven by MOA + RPM + scope presence, biasing POI selection so a Mosin squad doesn’t get routed into Resort interiors</li>\n<li>Cross-raid player-movement heatmap: aggregate the player positions raid-review already logs into a per-map occurrence map, then weight squad dispatch toward those hotspots so the side routes a player habitually rats through stop being safe over time (suggested by Fiodor on Discord)</li>\n<li>A proper in-ORBIT AI limiter for off-screen / far-from-player squads</li>\n<li>Investigate why extended raid duration breaks bot behaviour. Users running SVM / RaidOverhaul / Custom Raid Times with longer-than-vanilla raid lengths consistently report bots going inert, freezing, or behaving erratically (multiple reports). Currently in Troubleshooting as a “test with vanilla raid times first” recommendation, but the underlying cause isn’t understood. Worth tracing what state ORBIT (or a dependency) accumulates over time that fails past the vanilla window</li>\n</ul>\n<p><strong>Objectives</strong></p>\n<ul>\n<li>“Marked-key loot rush” for high-tier squads</li>\n<li>“Spawn rush” for the most aggressive personalities</li>\n<li>“Boss hunting”</li>\n<li>Faction-vs-faction “hunt” objective: a squad actively seeks out another faction’s bots instead of just roaming. Enables rivalries like cultists hunting PMCs, UNTAR hunting scavs, or ISB ↔ Black Division hunting each other. Doubles as a robustness win for custom/vanilla bots whose stock SAIN/BSG nodes sometimes freeze and stop moving (suggested by Firefly on Discord - ISB author)</li>\n<li>Airdrop / helicopter crash / BTR objectives: squads slow-approach the drop zone, hold position at a nearby vantage for a few minutes (ambush window), then close in and loot. Mimics how players treat airdrops in live, nobody walks straight to the smoke.</li>\n<li>“Rally flare” item: firing it immediately overrides the current objective of every bot alive on the map and sends them converging on the spot it was fired (a hard redirect, not a soft advection nudge). A player-triggered “pull the whole map onto this point” tool, kept separate from the airdrop system so calling a drop never aggros the whole lobby</li>\n<li>Multi-step objectives (activate → loot/extract):\n<ul>\n<li>Interchange Kiba (disable alarm → loot)</li>\n<li>Interchange ULTRA (power on → loot)</li>\n<li>Interchange Object #21WS keycard container (power on → loot)</li>\n<li>Interchange Object #11SR room (power on → toilet switch → loot → extract inside)</li>\n<li>Customs scav-base exfil (power on → extract)</li>\n<li>Reserve bunker exfil (switch → extract)</li>\n<li>Reserve D-2 (switch 1 → door switch → extract)</li>\n</ul>\n</li>\n</ul>\n<p><strong>Extracts</strong></p>\n<ul>\n<li>WorldEvent exfils (Reserve / Customs switch-gated)</li>\n<li>Train exfil (Armored Train availability window)</li>\n<li>“Drop backpack” exfils (Empty / EmptyOrSize) - usable when bot has no backpack, OR wounded bots drop the bag and use them anyway</li>\n<li>HasItem (RedRebel-style - bot must own a Red Rebel in inventory, ignore the paracord and WearsItem gear constraints entirely)</li>\n<li>Chance roll on whether a squad will use the car / V-Ex (SharedTimer) exfil</li>\n</ul>\n<p><strong>Looting</strong></p>\n<ul>\n<li>Post-loot inventory sort so the grid stays usable as the bot fills up</li>\n<li>Stack-aware pricing (currency / ammo stacks evaluated as bulk value,\nnot single-unit)</li>\n</ul>\n<p><strong>Tuning</strong></p>\n<ul>\n<li>Faction takeover split: patrols → ORBIT, checkpoints → vanilla (RUAF / UNTAR / BlackDivision)</li>\n<li>Per-map ORBIT toggle: enable/disable ORBIT map by map</li>\n<li>Flip the faction-control model to opt-IN instead of opt-OUT, ORBIT only controls explicitly enabled bot types, safer for future custom-bot mods</li>\n</ul>\n<p><strong>Animations / polish</strong></p>\n<ul>\n<li>Keycard / key swipe animation for PMC bots opening locked rooms (currently they call the Unlock function instantly with no anim, should walk to the reader and play the swipe like a player). Attempted but doesn’t work yet, so it’s parked for now (low priority)</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-10\" class=\"tab-panel\"><div class=\"tab-title\">Known Issues</div>\n<div class=\"tab-content\"><ul>\n<li>ORBIT is still young and has rough edges. Bug reports and feedback on the <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1509314495019745451\" rel=\"noreferrer noopener\">Discord thread</a> are very welcome.</li>\n<li><strong>Most Reserve exfils require switches ORBIT doesn’t operate yet</strong> - bots there mostly stay until killed or raid end.</li>\n<li><strong>Bots walk into minefield</strong> - the rebuilt POI generation doesn’t exclude minefield zones yet, so bots can be routed straight into them. Fix planned.</li>\n<li><strong>Possible interaction with CactusPie’s “Transfer Loot Into Container Automatically” mod</strong> - reported symptom: items a bot loots end up in YOUR tagged containers (SICC case, etc.). Best theory at the moment is that ORBIT routes pickups through BSG vanilla APIs (same path as the player), so a mod hooking those APIs may end up applying its logic to bot pickups too. Investigating.</li>\n<li><strong>Faction-mod takeover (RUAF / UNTAR / Black Division) can misbehave</strong> - these mods swap the bot’s brain at runtime (via MoreBotsAPI) and ORBIT’s handling of that handoff is not fully solid yet, so a controlled squad may rapidly switch goals or get stuck. Workaround: leave the per-faction takeover toggles OFF (their default) so ORBIT leaves those bots vanilla. Fix in progress.</li>\n<li><strong>Rare stuck bots</strong> - usually unstick themselves within a minute. Still iterating.</li>\n<li><strong>Mod conflicts</strong> - tested with my own config. Yours may differ. Report anything obviously broken on <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Chazut/ORBIT/issues\" rel=\"noreferrer noopener\">GitHub</a>.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-11\" class=\"tab-panel\"><div class=\"tab-title\">About AI</div>\n<div class=\"tab-content\"><p>I want to be upfront: I used <strong>Claude</strong> as a coding assistant on this mod.</p>\n<p>That doesn’t mean it’s vibe-coded slop. I spent days reading the source\nof Phobos, and built custom debug overlays in Raid Review\nso I could <em>see</em> what every mod was doing per-frame before writing a\nsingle line of ORBIT. I’m the architect; the LLM is a productivity tool -\nsame as a senior dev using Stack Overflow doesn’t make them a fraud.</p>\n<p>I have 10+ years of professional dev experience. I know what I’m shipping.</p>\n<p>If that’s a dealbreaker for you, I understand - uninstall and move on, no\nhard feelings. If you can judge a mod on what it does rather than how it\nwas written, give it a try.</p></div></div>\n<div id=\"tabset-1-panel-12\" class=\"tab-panel\"><div class=\"tab-title\">Credits</div>\n<div class=\"tab-content\"><p>A huge thank you to the authors listed below.</p>\n<ul>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\">Phobos</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/72916/jankytheclown\" rel=\"noreferrer noopener\">janky</a> - the original advection-field cell dispatch that ORBIT is built around (MIT, used with explicit permission - see screenshot below).</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1109/questing-bots\" rel=\"noreferrer noopener\">QuestingBot</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27632/danw\" rel=\"noreferrer noopener\">danW</a> - inspired the quest-routing concept, no code reused.</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/812/looting-bots\" rel=\"noreferrer noopener\">LootingBots</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/28069/skwizzy\" rel=\"noreferrer noopener\">Skwizzy</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/52282/archangelwtf\" rel=\"noreferrer noopener\">ArchangelWTF</a> - ORBIT started out as a Phobos + LB merge; over time many features were added and the looting layer was rewritten from scratch on top of BSG vanilla APIs to fit ORBIT’s design better. No LB code left in the current release.</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement\" rel=\"noreferrer noopener\">SAIN</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27463/solarint\" rel=\"noreferrer noopener\">Solarint</a>, <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/52282/archangelwtf\" rel=\"noreferrer noopener\">ArchangelWTF</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27605/drakiaxyz\" rel=\"noreferrer noopener\">DrakiaXYZ</a> - without it, no personality system to plug into</li>\n<li><a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/902/bigbrain\" rel=\"noreferrer noopener\">BigBrain</a> by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/27605/drakiaxyz\" rel=\"noreferrer noopener\">DrakiaXYZ</a></li>\n<li>The <strong>SPT team</strong> for an amazing modding framework</li>\n<li>The <strong>SPT Discord</strong></li>\n<li><strong>You</strong>, for trying the mod</li>\n</ul>\n<p><strong>Phobos authorization from Janky:</strong></p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.imgur.com/ifGx54S.png\" alt=\"Phobos authorization from Janky\" /></p></div></div>\n<div id=\"tabset-1-panel-13\" class=\"tab-panel\"><div class=\"tab-title\">Support</div>\n<div class=\"tab-content\"><p>If ORBIT made your raids more interesting and want to support my work, feel free to buy me a coffee!</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://ko-fi.com/chazut\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\" alt=\"ko-fi\" /></a></p>\n<p>All my mods are free and open source. Your support keeps me motivated to create more!</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2706/orbit",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Claude was used as an implementation assistant. Architecture, design, debugging, and all in-game testing are mine. See the “About AI” tab on the mod page for the longer version.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 5,
+  "published_at": "2026-06-04T06:56:00.000000Z",
+  "created_at": "2026-05-27T21:33:27.000000Z",
+  "updated_at": "2026-07-28T09:24:43.000000Z",
+  "owner": {
+    "id": 53567,
+    "name": "Chazut",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/SZtQzpUnHxgsEp7PUwmPsOthANslnWpFfoCLiJpM_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-06-11T18:31:06.000000Z",
+    "updated_at": "2026-08-01T14:44:30.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 5,
+    "hub_id": 22,
+    "title": "Bots",
+    "slug": "bots",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Chazut/ORBIT",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13966,
+      "hub_id": null,
+      "version": "1.2.1",
+      "description": "<p>Patch release: fixes the <strong>performance issues</strong> introduced by 1.2.0, bots <strong>walking through doors</strong>, and a batch small issues. Huge thanks to everyone who reported and tested the RC builds!</p>\n<h2>⚡ Performance</h2>\n<p>1.2.0 could tank your fps (especially on Streets, or near bosses and rogues). Several causes were found and fixed, it should now run at least as smoothly as 1.1.0 did.</p>\n<h2>🚪 Doors</h2>\n<ul>\n<li>Bots no longer walk through closed or locked doors (Labs keycard rooms included). They stop, open the door, then walk through.</li>\n<li>Doors opened by bots now stay open instead of closing again on their own.</li>\n</ul>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Bots now go back and loot their own kills after a fight.</li>\n<li>The rest of the squad keeps moving and looting nearby instead of standing frozen while one member loots.</li>\n</ul>\n<h2>🚑 Extraction</h2>\n<ul>\n<li>“Extract allowed for = None” now blocks <strong>all</strong> extract types, including emergency and loot extracts.</li>\n<li>Squads no longer walk toward exits they can’t actually reach.</li>\n</ul>\n<hr />\n<p>Enjoy 🙂</p>\n<p>and thanks again to the reporters and RC testers 🙂</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.1",
+      "content_length": 206097,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 11393,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-02T20:39:00.000000Z",
+      "created_at": "2026-07-02T20:39:21.000000Z",
+      "updated_at": "2026-07-28T09:24:43.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240943,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88730,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264937,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284372,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/087d118d5ce3f63467938581a7f340dac1fbbae2b0488f4a0a6cbd103678ba1a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1250658155/349940b5-bf29-4658-a4ba-685a46130722?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A54Z&rscd=attachment%3B+filename%3DORBIT-1.2.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A59%3A24Z&ske=2026-08-01T20%3A59%3A54Z&sks=b&skv=2018-11-09&sig=FC2BfsaX425ftW6OV0LvLJ25BqNA9diPU8rABab%2BHZU%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI3OCwibmJmIjoxNzg1NjE1OTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.15FZkHoyPwMjkZ-JOHbUMT_58JeKmfPGjSflmIfhecc&response-content-disposition=attachment%3B%20filename%3DORBIT-1.2.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13945,
+      "hub_id": null,
+      "version": "1.2.0",
+      "description": "<p>1.2.0 is mostly about <strong>what bots do when things go sideways</strong>: a wounded bot now extracts itself instead of dying, squads rally to a teammate in trouble, and a whole class of “bot stuck forever” cases are caught and recovered. There’s also a new off-screen performance mode, Combine faction support, and the usual wave of door / looting reliability fixes.</p>\n<h2>🚑 Solo &amp; emergency extraction</h2>\n<p>Bots can now leave the raid on their own, two ways:</p>\n<ul>\n<li><strong>Emergency extract</strong> → a bot that’s badly wounded and out of usable meds stops trying to fight or loot and heads for the nearest exfil instead of bleeding out where it stands. If it recovers on the way (found a med, or the bleed stopped), it cancels and rejoins the squad. If it can’t reach an exfil, it falls back to regrouping with a living squadmate.</li>\n<li><strong>Loot extract</strong> → a bot whose own loot haul crosses its personal value threshold can go to exfill while the rest of the squad keeps playing.</li>\n</ul>\n<p>New <strong>Emergency extract</strong> toggle (section 08, ON by default).</p>\n<h2>🤝 Squad rally</h2>\n<p>When a squadmate comes under fire, the rest of the squad now rallies to support them instead of each carrying on with their own thing. Members already in their own fight aren’t pulled off it, and a lone bot doesn’t “rally” itself.</p>\n<h2>🩹 Bots get un-stuck</h2>\n<p>Several ways a bot could get stuck permanently are now detected and recovered:</p>\n<ul>\n<li>Bots that <strong>spawn on a disconnected chunk of the map</strong> (an “island” the rest of the map can’t reach) get teleported back onto it.</li>\n<li>Bots <strong>wedged behind their own door</strong> get freed.</li>\n<li>Bots <strong>stuck on the way to any objective</strong> now un-stick themselves.</li>\n<li>Stuck-bot teleports are better at actually un-sticking, and they leave guarding bots on their post alone.</li>\n</ul>\n<h2>🚪 Doors</h2>\n<ul>\n<li><strong>Bots no longer unlock doors from across the map.</strong> A locked door a bot needs to get through has its navmesh path opened up front so the bot can walk to it, but the door itself stays locked until the bot is actually standing at it, and only then does it get unlocked.</li>\n<li>Door unlocks are <strong>floor-gated</strong> so a bot can’t pop a lock through the floor above or below.</li>\n</ul>\n<blockquote>\n<p>The unlock doesn’t play a hand/key animation yet → I took a few swings at it without luck, so I’ve parked it for now. It’s a minor cosmetic detail and there are bigger things on the list, so it’s on the back burner, not dropped.</p>\n</blockquote>\n<h2>🎒 Looting</h2>\n<ul>\n<li>Squads no longer <strong>loop on or get stuck on corpses</strong> they can’t finish looting.</li>\n<li>Bots no longer park on a loot spot they can’t actually reach, and a loot objective whose items are all below-threshold now finishes cleanly instead of hanging.</li>\n</ul>\n<h2>🪖 Factions</h2>\n<ul>\n<li><strong>Combine Soldiers</strong> are now supported, with their own takeover toggle.</li>\n<li><strong>Bloodhounds</strong> get Roaming / Disable-ORBIT toggles, like the Goons.</li>\n<li><strong>ISB</strong> fixes → ORBIT now properly drives all ISB’s bots.</li>\n</ul>\n<h2>⚡ Off-screen performance mode (experimental)</h2>\n<p>There’s a new opt-in option to throttle squads that are far off-screen, but <strong>honestly the gain is very small and I wouldn’t recommend turning it on yet.</strong> ORBIT only drives the bots’ high-level decisions → the heavy lifting (combat, aiming, vision, pathfinding, animations) keeps running at full cost no matter what, so throttling ORBIT’s slice barely moves the needle.</p>\n<p>I’ll look at building a proper AI limiter into ORBIT down the line → that’s the thing that would actually claw back frames.</p>\n<h2>⚙️ Settings (F12) → reorganized</h2>\n<p>The F12 config got a big cleanup. The default view is now short and focused.\nAll the deep tuning is tucked behind the <strong>“Advanced settings”</strong> checkbox → there if you want it, out of the way if you don’t.\nTooltips are shorter with examples, and percentage sliders read as <code>70%</code> instead of <code>0.7</code>.</p>\n<p>New toggles this release: <strong>Emergency extract when wounded</strong>, <strong>Combine Soldiers takeover</strong>, <strong>Bloodhound Roaming / Disable ORBIT</strong>, <strong>Quiet logging</strong> (on by default, cuts log spam), and an <strong>off-screen tickrate</strong> option (off by default; honestly minor, see above).</p>\n<blockquote>\n<p>⚠️ <strong>Heads up: the F12 config was reorganized, so your existing settings won’t carry over.</strong> Because of the refactor, the cleanest update is to <strong>delete your old config file → <code>BepInEx/config/com.chazut.orbit.cfg</code></strong> → before launching. ORBIT regenerates it fresh with the new layout and sensible defaults. (If you leave it in place the old/renamed entries just sit there unused, but a clean file is recommended.)</p>\n</blockquote>\n<hr />\n<p>Enjoy, and thanks to everyone who reported issues and tested 🙂</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.2.0",
+      "content_length": 196945,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 1628,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-30T20:57:00.000000Z",
+      "created_at": "2026-06-30T20:58:49.000000Z",
+      "updated_at": "2026-07-28T09:23:19.000000Z",
+      "dependencies": [
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240943,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88730,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264937,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284372,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/8b3d56d05b158f262c1094a9581210ba6d9e5f2330f8ed13ee498877d493572c?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1250658155/cae5f60c-06de-4e14-8319-e1633f1eef6c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A18%3A08Z&rscd=attachment%3B+filename%3DORBIT-1.2.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A17%3A43Z&ske=2026-08-01T21%3A18%3A08Z&sks=b&skv=2018-11-09&sig=qbWN5xMjPeEGXhQBNGAgDtiUISrfzidWYVI4Ew9T5rI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI3OCwibmJmIjoxNzg1NjE1OTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.15FZkHoyPwMjkZ-JOHbUMT_58JeKmfPGjSflmIfhecc&response-content-disposition=attachment%3B%20filename%3DORBIT-1.2.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13786,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<p>This is a big one. 1.1.0 add <strong>in-raid gear upgrade system</strong>, makes bots far more reliable at doors, looting, multi-floor buildings and extracts, fixes a pile of SAIN personality edge cases, and brings back the <strong>player-convergence pull from <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\">Phobos</a> (<a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/72916/jankytheclown\" rel=\"noreferrer noopener\">janky</a>)</strong>.</p>\n<p>If you’re updating: just drop the new build in, your existing F12 settings carry over (a couple of options moved or were removed, see <em>Settings changes</em> at the bottom).</p>\n<h2>✨ Bots now upgrade their loadout</h2>\n<p>Bots look at what they find on corpses and actually <strong>kit themselves up</strong> mid-raid. Each piece is compared against what they already have and only swapped when it’s a genuine upgrade:</p>\n<ul>\n<li><strong>Weapons</strong> — judged on how the gun actually performs (ergonomics, recoil, effective range, ammo quality, weighted per map), not its price tag. A bot won’t ditch a solid armor-piercing rifle for a flashy but worse shotgun.</li>\n<li><strong>Body armor &amp; helmets</strong> — better protection wins.</li>\n<li><strong>Rigs &amp; backpacks</strong> — bigger/better carry wins, and the bot moves its current loot into the new one first (it won’t drop your would-be loot on the floor).</li>\n<li><strong>Headsets.</strong></li>\n<li><strong>Ammo &amp; mags</strong> — bots keep the mags and ammo that fit their <em>new</em> gun and stop hoarding the rest.</li>\n<li><strong>Stripping</strong> — before a bot throws its old weapon on a corpse, it strips the expensive attachments (scope, suppressor, grip…) into its bag first. Kill it afterwards and you’ll find the old gun stripped clean, just like a player would leave it.</li>\n</ul>\n<p>Scavs stay scavs: they only grab gear for empty slots, no deliberate upgrading.</p>\n<h2>🚪 Doors actually work now</h2>\n<p>Bots used to phase straight through doors. They now stop, open the door (with the animation), and walk through, including rolling to force open locked doors to reach loot behind them. Doors that get stuck mid-animation are cleaned up so they don’t stay broken for the rest of the raid.</p>\n<h2>🧠 Smarter looting &amp; movement</h2>\n<ul>\n<li><strong>Multi-floor buildings</strong> — bots clean a floor at a time and stop yo-yoing up and down the stairs. They’ll still wander to other floors naturally, just not on every single pickup.</li>\n<li><strong>Patrol behaviour</strong> — bots actually walk <em>to</em> their patrol points instead of teleport-twitching between nearby ones.</li>\n<li><strong>Squad leaders</strong> keep moving during “Kill” roams instead of standing guard while the rest of the squad works.</li>\n<li><strong>Corpse looting</strong> is tighter — no more grabbing gear from across the room.</li>\n<li><strong>Loot hang fix</strong> — a bot that gets stuck on a pickup now unsticks itself instead of crouching in place forever.</li>\n<li><strong>Dead teammate?</strong> The squad can grab their dropped gear and re-think whether it’s still worth extracting.</li>\n</ul>\n<h2>🎯 Better extracts</h2>\n<p>Bots are much more reliable at actually reaching and using exfils, including tricky underground/hatch extracts. No more bots parking next to an exfil and never leaving.</p>\n<h2>👤 Personality fixes (SAIN)</h2>\n<p>Several cases where PMCs all fell back to the generic “Average” behaviour are fixed.</p>\n<h2>🌍 Player convergence is back</h2>\n<p>The world gently drifts toward where you actually are, bringing more action around you. <strong>Off by default</strong>, flip it on in F12 (section 03) if you want it, and there are sliders to tune how strong and how far-reaching the pull is (you can even set it negative to make bots avoid you).</p>\n<p>Full credit for this one goes to <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/user/72916/jankytheclown\" rel=\"noreferrer noopener\">janky</a>, the original <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\">Phobos</a> mod — it’s a port of their convergence system.</p>\n<h2>🤝 FIKA &amp; faction mods</h2>\n<ul>\n<li><strong>FIKA / headless</strong> (not officially supported): I took a couple of attempted swings at issues people reported — a crash that could leave a lobby in a broken state, and bots valuing all loot at 0 on headless (now pulling prices from the server instead). These aren’t confirmed yet, so if you run Fika, let me know how it goes.</li>\n<li><strong>Faction mods</strong> play nicer: the “Vanilla X” toggles are now clearly named “<strong>Disable ORBIT on X</strong>”, there’s a new toggle for <strong>Raiders</strong>, and ORBIT now drives the <strong>ISB</strong> faction by default (with a toggle to leave them on their own).</li>\n</ul>\n<blockquote>\n<p>Heads up: if you run a bot-spawn overhaul mod (ABPS or other) and your custom-faction bots aren’t spawning, that’s a problem between the spawn-mod and factions mods, not ORBIT.</p>\n</blockquote>\n<h2>⚙️ Settings changes</h2>\n<ul>\n<li><code>Vanilla scavs / goons / cultists</code> are renamed to <strong>Disable ORBIT on scavs / goons / cultists</strong> (same thing, clearer name).</li>\n<li>New: <strong>Disable ORBIT on raiders</strong>, <strong>Player convergence</strong> (+ scales), <strong>Cross-floor splinter chance</strong>, <strong>Take over ISB bots</strong>.</li>\n</ul>\n<hr />\n<p>Enjoy, and thanks to everyone who reported issues and tested 🙂</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.1.0",
+      "content_length": 328419,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 6108,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-15T07:06:00.000000Z",
+      "created_at": "2026-06-15T07:07:00.000000Z",
+      "updated_at": "2026-07-28T09:16:08.000000Z",
+      "dependencies": [
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264937,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284372,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240943,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88730,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/a841e0f6f7efe17c37ede0b843bb5bd81c7234b5a5405d8a0094290c8d3c4256?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1250658155/139d2d74-9364-4f24-998c-1673491f89a1?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A20%3A17Z&rscd=attachment%3B+filename%3DORBIT-1.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A19%3A20Z&ske=2026-08-01T21%3A20%3A17Z&sks=b&skv=2018-11-09&sig=eAzQsQnpySC4uPzUk69STv4nOQLEbgPIbgria9YrCbw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI3OCwibmJmIjoxNzg1NjE1OTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.15FZkHoyPwMjkZ-JOHbUMT_58JeKmfPGjSflmIfhecc&response-content-disposition=attachment%3B%20filename%3DORBIT-1.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13700,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p><strong>Smarter bots. Real objectives. Raids that feel alive.</strong></p>\n<p>PMC squads and PlayerScavs in your raids now roll a list of goals at spawn - loot a rich area, hunt a PvP hotspot, run an EFT quest - and extract when they’re done. Just like players.</p>\n<blockquote>\n<p>⚠️ <strong>Note:</strong> 1.0.0 is the first public release.</p>\n<p>A few rough edges are expected — bug reports very welcome on the\n<a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1509314495019745451\" rel=\"noreferrer noopener\">Discord thread</a>.</p>\n</blockquote>\n<p>📖 <strong>Full docs, SAIN config, roadmap, known issues</strong>: See the mod page on the Forge.</p>\n<h2>🎯 What’s in 1.0.0</h2>\n<ul>\n<li>Per-squad long-term objectives (Kills / LootValue / Quest)</li>\n<li>Five SAIN personality archetypes, each with their own tuning</li>\n<li><strong>Brand-new custom looting layer</strong> built from scratch on top of BSG vanilla APIs:\n<ul>\n<li>Per-personality value thresholds (Chad walks past trash, Rat grabs everything, etc.)</li>\n<li>Bot scavs roll random pickups instead of vacuuming corpses</li>\n<li>Smart squad memory: a Chad rejection doesn’t block a Rat teammate from coming to clean up</li>\n<li>Realistic search/looting timing delays</li>\n<li>Inside-out drain (cash before wallet, contents before container)</li>\n<li>Mod filtering: only attachments removable in raid</li>\n<li>PMC melee bound to the body (Scabbard) - same as live</li>\n<li>Always-pick dogtags, cash, and frag grenades</li>\n</ul>\n</li>\n<li>Smart extract logic (loot threshold / mains done / time low)</li>\n<li>Public API for <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1090-raid-review/\" rel=\"noreferrer noopener\">Raid Review</a> integration - see every bot’s decisions on the post-raid replay</li>\n</ul>\n<h2>⚡ Install</h2>\n<ol>\n<li>Install <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/663-drakiaxyz-big-brain/\" rel=\"noreferrer noopener\">BigBrain</a> and <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1659-sain/\" rel=\"noreferrer noopener\">SAIN</a> first</li>\n<li>Download <code>ORBIT-1.0.0.zip</code> below</li>\n<li>Extract at your SPT root - done</li>\n</ol>\n<h2>🙏 Credits</h2>\n<p>Built on top of <a target=\"_blank\" class=\"external-link\" href=\"https://discord.com/channels/875684761291599922/1337131427803955200\" rel=\"noreferrer noopener\"><strong>Phobos</strong></a> (used with explicit permission from Janky) and inspired by <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/812/looting-bots\" rel=\"noreferrer noopener\"><strong>LootingBots</strong></a> and <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1109/questing-bots\" rel=\"noreferrer noopener\"><strong>QuestingBot</strong></a>. The looting layer is fully original code on top of BSG vanilla APIs.</p>\n<p>Built on <strong>SAIN</strong> and <strong>BigBrain</strong> - none of this works without them.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2706/orbit/1.0.0",
+      "content_length": 129941,
+      "spt_version_constraint": "~4.0.13",
+      "downloads": 4218,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-06-04T07:09:00.000000Z",
+      "created_at": "2026-06-04T07:09:22.000000Z",
+      "updated_at": "2026-07-28T09:05:31.000000Z",
+      "dependencies": [
+        {
+          "id": 827,
+          "hub_id": 1119,
+          "guid": "xyz.drakia.waypoints",
+          "name": "Waypoints - Expanded Navmesh",
+          "slug": "waypoints-expanded-navmesh",
+          "teaser": "Expand where bots can explore with full map navmesh coverage!",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1119.png",
+          "downloads": 1247445,
+          "favourites_count": 515,
+          "detail_url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 17,
+          "published_at": "2023-04-03T04:38:00.000000Z",
+          "created_at": "2023-04-03T04:38:28.000000Z",
+          "updated_at": "2026-08-01T16:47:20.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 13378,
+              "hub_id": null,
+              "version": "1.8.2",
+              "description": "<ul>\n<li>Fix door on Lighthouse</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/827/waypoints-expanded-navmesh/1.8.2",
+              "content_length": 50345711,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 115516,
+              "fika_compatibility": "unknown",
+              "published_at": "2026-04-05T17:23:00.000000Z",
+              "created_at": "2026-04-05T17:24:29.000000Z",
+              "updated_at": "2026-07-28T08:19:40.000000Z"
+            }
+          ],
+          "category": {
+            "id": 17,
+            "hub_id": 28,
+            "title": "Other",
+            "slug": "other",
+            "description": ""
+          }
+        },
+        {
+          "id": 902,
+          "hub_id": 1219,
+          "guid": "xyz.drakia.bigbrain",
+          "name": "BigBrain",
+          "slug": "bigbrain",
+          "teaser": "A library for adding extra logic layers to existing bot brains",
+          "thumbnail": "",
+          "downloads": 1264937,
+          "favourites_count": 563,
+          "detail_url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+          "fika_compatibility": false,
+          "featured": false,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-05-31T03:20:00.000000Z",
+          "created_at": "2023-05-31T03:20:55.000000Z",
+          "updated_at": "2026-07-28T06:00:44.000000Z",
+          "owner": {
+            "id": 27605,
+            "name": "DrakiaXYZ",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-26T18:51:50.000000Z",
+            "updated_at": "2026-08-01T19:31:53.000000Z"
+          },
+          "additional_authors": [],
+          "versions": [
+            {
+              "id": 11761,
+              "hub_id": null,
+              "version": "1.4.0",
+              "description": "<ul>\n<li>Update to SPT 4.0.0</li>\n<li>Thanks to Archangel!</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/902/bigbrain/1.4.0",
+              "content_length": 16741,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 284372,
+              "fika_compatibility": "unknown",
+              "published_at": "2025-10-11T19:30:03.000000Z",
+              "created_at": "2025-10-11T17:31:39.000000Z",
+              "updated_at": "2026-07-28T06:00:44.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        },
+        {
+          "id": 791,
+          "hub_id": 1062,
+          "guid": "me.sol.sain",
+          "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+          "slug": "sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "teaser": "Bots that don't suck.",
+          "thumbnail": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+          "downloads": 1240943,
+          "favourites_count": 436,
+          "detail_url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+          "fika_compatibility": true,
+          "featured": true,
+          "contains_ads": false,
+          "contains_ai_content": false,
+          "shows_profile_binding_notice": false,
+          "cheat_notice": false,
+          "category_id": 5,
+          "published_at": "2023-03-09T02:46:00.000000Z",
+          "created_at": "2023-03-09T02:46:50.000000Z",
+          "updated_at": "2026-08-01T16:40:06.000000Z",
+          "owner": {
+            "id": 27463,
+            "name": "Solarint",
+            "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/9fa66985990895e0c115adbdee4dbf71409d1566_128w.webp",
+            "cover_photo_url": null,
+            "created_at": "2023-02-23T17:11:59.000000Z",
+            "updated_at": "2026-07-10T04:50:24.000000Z"
+          },
+          "additional_authors": [
+            {
+              "id": 27605,
+              "name": "DrakiaXYZ",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/M9qMWlknCITEk33QXO07mJG0j8qP4xhz1QOsHUHD_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2023-02-26T18:51:50.000000Z",
+              "updated_at": "2026-08-01T19:31:53.000000Z"
+            },
+            {
+              "id": 52282,
+              "name": "ArchangelWTF",
+              "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/bc678ae6a663d65b719827be994414a484a8e356_128w.webp",
+              "cover_photo_url": null,
+              "created_at": "2024-05-20T14:55:34.000000Z",
+              "updated_at": "2026-08-01T16:40:09.000000Z"
+            }
+          ],
+          "versions": [
+            {
+              "id": 13477,
+              "hub_id": null,
+              "version": "4.4.3",
+              "description": "<p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>\n<h2>What’s Changed</h2>\n<ul>\n<li>fix: invalid location ID for Woods by @powerCasualUser</li>\n<li>Use RemoveFromMap method to extract bot by @ozen</li>\n<li>Revert removal of LootingBots Interop by @ozen</li>\n<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>\n<li>More Conditions to Wanting Patrol Stance by @ozen</li>\n<li>Grenades Toggle Fix by @ozen</li>\n</ul>\n",
+              "link": "https://forge.sp-tarkov.com/mod/download/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/4.4.3",
+              "content_length": 351166,
+              "spt_version_constraint": "~4.0.0",
+              "downloads": 88730,
+              "fika_compatibility": "compatible",
+              "published_at": "2026-04-23T23:46:00.000000Z",
+              "created_at": "2026-04-23T23:46:01.000000Z",
+              "updated_at": "2026-08-01T16:40:06.000000Z"
+            }
+          ],
+          "category": {
+            "id": 5,
+            "hub_id": 22,
+            "title": "Bots",
+            "slug": "bots",
+            "description": ""
+          }
+        }
+      ],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/09b8a016550803c9e21b6388d513b41f8de34997b1733976804f3589a01e2a90?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1250658155/7321719f-7ded-4043-8141-690aafd3dcef?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A06%3A36Z&rscd=attachment%3B+filename%3DORBIT-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A05%3A48Z&ske=2026-08-01T21%3A06%3A36Z&sks=b&skv=2018-11-09&sig=FMqyY2Wk3obW5SBeNHw49hCtN5r9DPaMR9%2BS4KvPPx4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI4MCwibmJmIjoxNzg1NjE1OTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IzV1ETVImV8r4bEik0VS8a_edLr2BAacOvllb14ET7A&response-content-disposition=attachment%3B%20filename%3DORBIT-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 293,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:50:19.457Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "type": "mod",
+  "id": 1527,
+  "hub_id": 2093,
+  "guid": "com.sgtlaggy.tradernamer",
+  "name": "Trader Namer",
+  "slug": "trader-namer",
+  "teaser": "Change your traders' names and avatars.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2093.png",
+  "downloads": 7432,
+  "favourites_count": 3,
+  "description": "<p>A <a target=\"_blank\" class=\"external-link\" href=\"https://sgtlaggy.github.io/spt-trader-namer/\" rel=\"noreferrer noopener\">web configuration tool</a> is available to configure trader details without manually editing the JSON config.</p>\n<p>The novel difference from other avatar-swapping mods is that it uses trader nicknames instead of obscure avatar IDs that don’t match the trader ID.</p>\n<p>Instead of using a trader’s nickname you can use either their regular ID (for compatibility with Windows filename restrictions) or avatar ID (to easily switch from other avatar-switching mods).</p>\n<p>Both features of the mod should work for custom traders as long as this mod loads after them.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Name Examples</div>\n<div class=\"tab-content\"><p>Edit <code>config.json</code> and add a new line between the <code>{}</code> in the format <code>\"Default Name\": \"New Name\"</code>.</p>\n<p>The key (left) should be the trader’s default nickname/ID like <code>Prapor</code> or <code>54cb50c76803fa8b248b4571</code>, the value (right) is what you want their new name to be.</p>\n<p>Examples:</p>\n<pre><code>{\n    \"Prapor\": \"Sidorovich\"\n}\n</code></pre>\n<pre><code>{\n    \"Prapor\": \"Sidorovich\",\n    \"Fence\": \"Drebin\"\n}\n</code></pre>\n<p>Details like the trader’s Location and Description can also be changed with extended syntax.\nValid keys are “FullName”, “FirstName”, “Nickname”, “Location”, and “Description”. All are case-sensitive.</p>\n<pre><code>{\n  \"Prapor\": {\n    \"Nickname\": \"Sidorovich\",\n    \"Location\": \"Rookie Village in the Cordon\",\n    \"Description\": \"A reliable source of equipment for stalkers.\"\n  },\n  \"Fence\": \"Drebin\"\n}\n</code></pre></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Avatars</div>\n<div class=\"tab-content\"><p>Name an image based on the trader’s default nickname/ID like <code>Prapor.jpg</code>, <code>54cb50c76803fa8b248b4571.jpg</code>, or <code>59b91ca086f77469a81232e4.jpg</code> and put it in the mod’s <code>avatars</code> folder.</p>\n<p>Images should be JPEG or PNG and sizes around 500x500 work best.</p>\n<p>All users will need to go into their launcher settings and select <code>Clean Temp Files</code> for avatars to update.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Language</div>\n<div class=\"tab-content\"><p>By default names are looked up using your <code>system</code> language but this can be changed in <code>config.json</code>. You can find language codes in <code>SPT_Data/Server/database/locales/</code>; the value for English is <code>en</code>, Russian is <code>ru</code>, etc.</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1527/trader-namer",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2024-07-07T07:59:00.000000Z",
+  "created_at": "2024-07-07T07:59:50.000000Z",
+  "updated_at": "2026-07-28T06:44:08.000000Z",
+  "owner": {
+    "id": 50076,
+    "name": "sgtlaggy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/S7wTCtKyPp2VJq7EYaE6x5KjtGrn3DEwK1gmB5iu_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-04-30T05:20:41.000000Z",
+    "updated_at": "2026-08-01T19:51:52.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/sgtlaggy/spt-trader-namer/tree/ts",
+      "label": "3.11"
+    },
+    {
+      "url": "https://github.com/sgtlaggy/spt-trader-namer",
+      "label": "4.0"
+    }
+  ],
+  "versions": [
+    {
+      "id": 12394,
+      "hub_id": null,
+      "version": "4.0.1",
+      "description": "<p>Changed load order to load after (hopefully) all custom traders.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1527/trader-namer/4.0.1",
+      "content_length": 8372,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 883,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-11-21T20:05:00.000000Z",
+      "created_at": "2025-11-21T20:05:32.000000Z",
+      "updated_at": "2026-07-28T06:44:08.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/ad288a6e0e1c847b5fd4119395a18ff0592db95096b9d9dc858ae4dd1a1fc4dc?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825229723/db095d8e-b5cc-4499-8b95-e7583282e934?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A03%3A13Z&rscd=attachment%3B+filename%3DTraderNamer-4.0.1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A03%3A02Z&ske=2026-08-01T21%3A03%3A13Z&sks=b&skv=2018-11-09&sig=I9X9hfNdhxC2R9VFxkbY7YafKFxSkLvQt0enHrtHnp8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&response-content-disposition=attachment%3B%20filename%3DTraderNamer-4.0.1.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 11783,
+      "hub_id": null,
+      "version": "4.0.0",
+      "description": "<p>Updated to SPT 4.0.</p>\n<p>Moved and changed config file. Previously separate files for language and trader details, now just <code>config.json</code> with those as separate keys. An old <code>names.json</code> file can simply be copy-pasted over the empty <code>{}</code> in the new config file.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1527/trader-namer/4.0.0",
+      "content_length": 8366,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 365,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-10-11T22:55:38.000000Z",
+      "created_at": "2025-10-11T21:35:59.000000Z",
+      "updated_at": "2026-07-28T06:02:38.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9e3e3b2fc62df2b81eb9c3e0e14db8ad8706278dbc7b658b6f682d9122bf052a",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825229723/a95f09fa-684c-4f1a-9b53-5a454199b394?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A05%3A29Z&rscd=attachment%3B+filename%3DTraderNamer-4.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A04%3A31Z&ske=2026-08-01T21%3A05%3A29Z&sks=b&skv=2018-11-09&sig=cNni5ch11gwQSMioOSILhG1aBnnF3QnBDkPcn5qHrIA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&response-content-disposition=attachment%3B%20filename%3DTraderNamer-4.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 899,
+      "hub_id": 13897,
+      "version": "3.1.0",
+      "description": "<p>Now supports using trader ID to get around Windows filename restrictions</p>\n<p>Because it wasn’t much more effort, you can also use early traders’ avatar ID to more easily transition from other avatar-switching mods</p>\n<p>These apply to both avatars and names.json</p>\n<p>Traders’ original names are now grabbed from the system locale instead of English by default. This can be changed in the new lang.json config.</p>\n<p>This is mainly useful for anyone using Fika with players who use different system languages and don’t have a dedicated server setup.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1527/trader-namer/3.1.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 1070,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-01T22:37:56.000000Z",
+      "created_at": "2025-04-01T22:37:56.000000Z",
+      "updated_at": "2026-05-14T02:01:49.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825229723/36dcc7f5-f2e1-4fd6-8d21-197e2d3e8c56?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A55%3A25Z&rscd=attachment%3B+filename%3DTraderNamer-3.1.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A55%3A18Z&ske=2026-08-01T20%3A55%3A25Z&sks=b&skv=2018-11-09&sig=V2IEwKGomSxJWtQBs2h%2BCYf%2BKj6SbFr3w9FwP4LhJSM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&response-content-disposition=attachment%3B%20filename%3DTraderNamer-3.1.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 1198,
+      "hub_id": 13578,
+      "version": "3.0.0",
+      "description": "<p>Updated to 3.11</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1527/trader-namer/3.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 353,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-03-15T22:24:48.000000Z",
+      "created_at": "2025-03-15T22:24:48.000000Z",
+      "updated_at": "2026-05-14T02:07:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825229723/0dbd0219-321c-43f8-bcd0-107eaa6b82ae?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A09%3A36Z&rscd=attachment%3B+filename%3DTraderNamer-3.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A09%3A20Z&ske=2026-08-01T21%3A09%3A36Z&sks=b&skv=2018-11-09&sig=GBoymP3n1e41UgGrmFq2JWhquPdfp9lsaUtAGCkkLZQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&response-content-disposition=attachment%3B%20filename%3DTraderNamer-3.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 3721,
+      "hub_id": 10534,
+      "version": "2.0.0",
+      "description": "<p>Currently the 3.9 launcher’s “Clean Temp Files” option does not work correctly.</p>\n<p>Until this is fixed users can delete the user/sptappdata/files/trader folder.</p>\n<p>A 3.8.3 release is available in the Github releases.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1527/trader-namer/2.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 260,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-07-07T07:59:50.000000Z",
+      "created_at": "2024-07-07T07:59:50.000000Z",
+      "updated_at": "2026-05-14T03:55:39.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/825229723/5ca0e4ab-afe2-4ba3-8128-4bf07511c511?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A50%3A03Z&rscd=attachment%3B+filename%3DTraderNamer-2.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A49%3A05Z&ske=2026-08-01T20%3A50%3A03Z&sks=b&skv=2018-11-09&sig=5yllHM%2BmZRHTsaRFO4byK%2BFSeZr2m92esfqlikg10q0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&response-content-disposition=attachment%3B%20filename%3DTraderNamer-2.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 2,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:53:54.302Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "type": "mod",
+  "id": 2852,
+  "hub_id": null,
+  "guid": "com.sipto.truevalday",
+  "name": "True Valday",
+  "slug": "true-valday",
+  "teaser": "The Valday PS-320 used to be clean glass, then the optics rework filled it with a shadow that swims every time you move. True Valday hands the old sight picture back.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/5ILzGCwksDuxJcGboBuwS3KgjzSvjXodRyCg0FzI.png",
+  "downloads": 515,
+  "favourites_count": 5,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">Description</div>\n<div class=\"tab-content\"><h3>Overview</h3>\n<p>Gives the Valday PS-320 back the sight picture it had before the optics rework: glass that runs clear to the edge, with just enough life left in the shadow that the picture still reacts to movement instead of looking painted on. Both zoom modes benefit, 1x and 6x.</p>\n<p>Only the Valday is touched. Every other optic keeps its stock glass.</p>\n<h3>How it works</h3>\n<p>The Valday’s tunnel vision isn’t code, it’s two numbers baked into the scope’s lens material: how wide the clear picture is, and how far the shadow travels as your eye comes off the axis. The Valday ships with a clear radius of 0.474 where clean 1-6x glass like the Razor sits at 0.94, and half again the shadow travel. The mod rewrites both as the scope spawns. No bundle edits — your game files are never modified.</p>\n<p>There’s nothing to configure and that’s on purpose. The numbers are the ones I settled on after tuning them live in raids — clear radius 1.0, shadow travel a touch over stock — and they’re compiled in.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><h3>Requirements</h3>\n<p><strong>Nothing.</strong> No dependencies, no integrations.</p>\n<h3>Steps</h3>\n<ol>\n<li>Download the archive.</li>\n<li>Extract it into your SPT folder — the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>.</li>\n<li>Merge when Windows asks. <code>TrueValday</code> lands in <code>BepInEx/plugins</code>.</li>\n<li>Launch.</li>\n</ol>\n<p>Client-side only. Nothing goes in <code>user/mods</code>, and in a Fika group only you need it.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">Compatibility</div>\n<div class=\"tab-content\"><p>It rewrites two values on the Valday’s lens material and touches nothing else. A mod that adjusts those same lens numbers across all scopes will fight it over the Valday — last writer wins — but reticle mods, zoom mods and PiP changes don’t overlap it.</p>\n<p>Built against SPT 4.0.13. The hooks are stable named classes, so it should ride out small updates; the material numbers are the shipping asset’s and could move on a major optics patch.</p></div></div></div>\n\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2852/true-valday",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI was used to generate the Mod Cover Photo and audit the mod</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-07-28T01:34:00.000000Z",
+  "created_at": "2026-07-28T01:35:47.000000Z",
+  "updated_at": "2026-07-28T18:02:51.000000Z",
+  "owner": {
+    "id": 117959,
+    "name": "Sipto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2026-07-13T07:04:33.000000Z",
+    "updated_at": "2026-08-01T17:46:06.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/CameronsWorks/TrueValday",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 14265,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>check mod description</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2852/true-valday/1.0.0",
+      "content_length": 5111,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 515,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-28T01:36:00.000000Z",
+      "created_at": "2026-07-28T01:37:00.000000Z",
+      "updated_at": "2026-07-28T18:02:51.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/6d8bcc3adc2847d3fb32b552f6cd73996a8010cdcf742baf9bdb648b7c72078e",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1314414099/8a349a86-bb58-4d06-b120-9e0ce21475c5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A07%3A31Z&rscd=attachment%3B+filename%3DTrueValday-1.0.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A20Z&ske=2026-08-01T21%3A07%3A31Z&sks=b&skv=2018-11-09&sig=VD6elXXtGgGPDoLkBva0NFeA62HvSyIjLpn%2Bg6nav18%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&response-content-disposition=attachment%3B%20filename%3DTrueValday-1.0.0.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 9,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:06.681Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "type": "mod",
+  "id": 2722,
+  "hub_id": null,
+  "guid": "com.ghost.variableraidtimer",
+  "name": "Variable Raid Timer",
+  "slug": "variable-raid-timer",
+  "teaser": "A mod to spice things up a bit, and remind you there's a timer to check",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/rmOQUuiJOG31J6VelFSfa6kQWSWtTvwclRYoJ9CW.jpg",
+  "downloads": 368,
+  "favourites_count": 6,
+  "description": "<p>Description</p>\n<p>A server mod for SPT 4.0+ that randomizes raid duration on every raid start, forcing you to actually check the timer and adapt their strategy accordingly.</p>\n<p>Got a long raid? Pace yourself. Loot, explore, but don’t forget to check your doors and corners. That’s how they get you, kid.</p>\n<p>Got a short raid? Forget about looting and haul ass out of there.</p>\n<hr />\n<p>Installation</p>\n<p>Like the other mods. You extract the contents of the 7z archive into your main SPT folder.</p>\n<p>That’s it.</p>\n<hr />\n<p>Configuration</p>\n<p>Edit config.json to adjust the behaviour:</p>\n<pre><code>\"MaxVariancePercent\"\n</code></pre>\n<p>Maximum deviation from the map’s base raid time, as a percentage.<br />\nA value of <code>20</code> means the raid time can vary by up to +-20% of the base duration.</p>\n<pre><code>\"Bias\"\n</code></pre>\n<p>Controls the probability of getting a longer or shorter raid. Lower values means chance leans towards shorter raids. 0 is shorter raids only. 10 is effectively only longer raids.</p>\n<pre><code>\"MinimumRaidTimeMinutes\"\n</code></pre>\n<p>Hard floor in minutes. The randomized time will never go below this value regardless of variance.</p>\n<hr />\n<p>Compatibility</p>\n<p>SPT 4.0.0+</p>\n<p>I have not tested with Fika, and I don’t intend to.</p>\n<hr />\n<p>Disclaimer</p>\n<p>I’m fairly new to coding, so the code contains AI-assisted content. Also, expect bugs.</p>\n<hr />\n<p>Special thanks to Sgtlaggy for his help reading the code and pointing out everything wrong with it</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2722/variable-raid-timer",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>Code was written with AI assistance (Claude by Anthropic). I reviewed, tested, and understand all of it, and take full responsibility for its behavior.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 8,
+  "published_at": "2026-06-06T18:58:00.000000Z",
+  "created_at": "2026-06-06T18:56:31.000000Z",
+  "updated_at": "2026-07-28T09:15:28.000000Z",
+  "owner": {
+    "id": 65601,
+    "name": "the_lame_ghost",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/tyYHMJqHjTXEzoKJ52vjQDtOWC2zunodxidkhBeb_256w.webp",
+    "cover_photo_url": null,
+    "created_at": "2024-10-17T08:57:54.000000Z",
+    "updated_at": "2026-07-10T04:51:38.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 8,
+    "hub_id": 25,
+    "title": "Locations",
+    "slug": "locations",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/Lame-Ghost/SPT-Variable-Raid-Timer/",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 13776,
+      "hub_id": null,
+      "version": "1.1.0",
+      "description": "<h1>Changelog</h1>\n<h2>1.1.0</h2>\n<ul>\n<li>Complete rewrite of the per-raid hook. Previously used <code>IOnBeforeEventRequestData</code>, which is dead code in SPT and never fires. Mod was silently applying the same time every raid until server restart.</li>\n<li>Now hooks <code>MatchController.ConfigureOfflineRaid</code> via Harmony postfix, which fires correctly on every raid start.</li>\n<li>Replaced <code>Console.WriteLine</code> with <code>ISptLogger</code> (injected).</li>\n<li>Replaced <code>ServiceLocator</code> with proper DI injection throughout.</li>\n<li>Config reworked: dropped <code>AllowIncrease</code> and <code>AllowDecrease</code> in favor of a single <code>Bias</code> float using an odds-ratio model.</li>\n<li>Config file is now resolved relative to the DLL, folder can be renamed freely.</li>\n<li>Server console now logs map name, delta, and final raid time on each raid start.</li>\n</ul>\n<h2>1.0.0</h2>\n<ul>\n<li>Initial release.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2722/variable-raid-timer/1.1.0",
+      "content_length": 6651,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 262,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-14T09:03:00.000000Z",
+      "created_at": "2026-06-14T09:07:43.000000Z",
+      "updated_at": "2026-07-28T09:15:28.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/9c6cd471cbe14d28b7b5398e6b912602c2f3b0a9e111f38c7fd56851a9732e3a?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1261468876/aee756b6-55b5-42a5-8a80-f12b8fbd2ec4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A02%3A09Z&rscd=attachment%3B+filename%3Dcom.ghost.VariableRaidTimer.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A01%3A21Z&ske=2026-08-01T21%3A02%3A09Z&sks=b&skv=2018-11-09&sig=phaFGEr7y9Z90%2FYEx3NkQT2mm2Yjqymc8OcLDAmDd7U%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMwNiwibmJmIjoxNzg1NjE2MDA2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5RW920KjL44eMM0w7QBWZgDilWtrshICGr4y8V_-b_s&response-content-disposition=attachment%3B%20filename%3Dcom.ghost.VariableRaidTimer.7z&response-content-type=application%2Foctet-stream"
+      }
+    },
+    {
+      "id": 13716,
+      "hub_id": null,
+      "version": "1.0.0",
+      "description": "<p>First release ever (yay!)</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2722/variable-raid-timer/1.0.0",
+      "content_length": 7126,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 106,
+      "fika_compatibility": "unknown",
+      "published_at": "2026-06-06T19:00:00.000000Z",
+      "created_at": "2026-06-06T18:58:33.000000Z",
+      "updated_at": "2026-07-28T09:06:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e0e5252098073a65e72928bfde84f11a4491b2dda315e5a4303eaf972fa82c77?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1261468876/6f014c5d-7db6-46cb-a5f2-87ed5f02626a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A08%3A10Z&rscd=attachment%3B+filename%3DGhost.VarRaidTimer.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A07%3A39Z&ske=2026-08-01T21%3A08%3A10Z&sks=b&skv=2018-11-09&sig=19BTMzjlVEenbnq4YVoYm8akuhe78ZSPbgRR6VpSgCA%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMwNiwibmJmIjoxNzg1NjE2MDA2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.5RW920KjL44eMM0w7QBWZgDilWtrshICGr4y8V_-b_s&response-content-disposition=attachment%3B%20filename%3DGhost.VarRaidTimer.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": 14,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:54:39.063Z",
+    "discoveredBy": "seed"
+  }
+}

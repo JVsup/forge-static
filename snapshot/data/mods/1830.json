@@ -1,0 +1,85 @@
+{
+  "type": "mod",
+  "id": 1830,
+  "hub_id": 2476,
+  "guid": null,
+  "name": "Random skill level and mastering",
+  "slug": "random-skill-level-and-mastering",
+  "teaser": "You're a professional PMC, not a baby",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2476.png",
+  "downloads": 1644,
+  "favourites_count": 0,
+  "description": "<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">About</div>\n<div class=\"tab-content\"><p>I really didn’t like that we play for a PMC that went through many conflicts and didn’t get any skills. This mod is designed to fix that because each person is individual in their skills, so each profile you create will have different skills.</p>\n<p>You will no longer have to level up from scratch, your skills will be similar to the skills of a person who has completed training.</p>\n<p>Feel free to report bugs and queries in the forum or on my GitHub <a target=\"_blank\" class=\"external-link\" href=\"https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod\" rel=\"noreferrer noopener\">https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod</a></p>\n<p>A new profile is recommended!</p>\n<p>Implemented a system for checking the selected faction in the profile. If you select Bear, weapon mastering will increase only for weapons common in the Russian army. If you select USEC, the weapon mastering will increase for weapons common in NATO countries.</p>\n<p>Simply put, Bear does not know how to handle NATO weapons, and USEC does not know how to handle Russian weapons.</p>\n<p>This mod only changes the skill and mastery level of weapons, which are zero. Each profile will have different skill and mastery levels.</p></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">Installation</div>\n<div class=\"tab-content\"><p>1. Drag the user folder from the zip archive into the SPT installation folder.</p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">How to configure</div>\n<div class=\"tab-content\"><p>After installing the mod, open the [tt]config.json[/tt] file and set the value to true or falls for the selected skills.</p>\n<p>true - random skill level</p>\n<p>false - Skill will remain at the same progress level</p>\n<p>minSkillLevel contains the minimum skill level, by default equals 0</p>\n<p>maxSkillLevel contains the maximum skill level, by default equals 3000</p>\n<p>minMasteringLevel contains the minimum weapon mastering level, by default equals 0</p>\n<p>maxMasteringLevel contains the maximum weapon mastering level, by default equals 1000</p>\n<p>If you want to add a new weapon for some faction, then use the config.json file</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">Vanila config.json</div>\n<div class=\"tab-content\"><p>{ “minSkillLevel”: 0, “maxSkillLevel”: 3000, “minMasteringLevel”: 0, “maxMasteringLevel”: 1000, “Skills”: { “Endurance”: true, “Strength”: true, “Vitality”: true, “Health”: true, “StressResistance”: true, “Metabolism”: true, “Immunity”: true, “Perception”: true, “Intellect”: true, “Attention”: true, “Charisma”: true, “Memory”: true, “Pistol”: true, “Revolver”: true, “SMG”: true, “Assault”: true, “Shotgun”: true, “Sniper”: true, “LMG”: true, “HMG”: true, “Launcher”: true, “AttachedLauncher”: true, “Throwing”: true, “Melee”: true, “DMR”: true, “RecoilControl”: true, “AimDrills”: true, “TroubleShooting”: true, “Surgery”: true, “CovertMovement”: true, “Search”: true, “MagDrills”: true, “Sniping”: true, “ProneMovement”: true, “LightVests”: true, “HeavyVests”: true, “WeaponModding”: true, “AdvancedModding”: true, “WeaponTreatment”: true, “Freetrading”: true, “Barter”: true, “Crafting”: false, “HideoutManagement”: false }, “Mastering”: { “Bear”: [ “AK74”, “AKM”, “SVD”, “VSS”, “DVL”, “KS23”, “VSK94”, “T5000”, “SR2”, “RPD” ], “USEC”: [ “M4”, “MDR”, “MPX”, “MP5”, “SA-58”, “P90”, “AXMC”, “STM-9”, “MP7”, “SR25”, “M1A” ] } } {.endtabset}</p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1830/random-skill-level-and-mastering",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2024-11-08T15:28:24.000000Z",
+  "created_at": "2024-11-08T15:28:24.000000Z",
+  "updated_at": "2026-07-07T16:59:02.000000Z",
+  "owner": {
+    "id": 37691,
+    "name": "Hacker228",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/6e75aefe9628440f9961060cd6fd6f83b19c8707_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-10-01T05:15:42.000000Z",
+    "updated_at": "2026-07-10T04:50:47.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 2448,
+      "hub_id": 12132,
+      "version": "1.0.2",
+      "description": "<p>Added faction-based weapon mastering randomization.</p>\n<p>- Updated config.json to include weapon lists for Bear and USEC factions.</p>\n<p>- Added mastery weapons for Bear: AK74, AKM, SKS, SVD, VSS, DVL, KS23, VSK94, T5000, SR2, RPD.</p>\n<p>- Added mastery weapons for USEC: M4, MDR, MPX, MP5, SA-58, P90, AXMC, STM-9, MP7, SR25, M1A.</p>\n<p>- Implemented conditional check in mod to identify faction (Bear or USEC) based on profile side.</p>\n<p>- Adjusted mastering progress update logic to apply only for faction-specific weapons.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1830/random-skill-level-and-mastering/1.0.2",
+      "content_length": null,
+      "spt_version_constraint": "~3.9.0",
+      "downloads": 1238,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-11-09T07:53:38.000000Z",
+      "created_at": "2024-11-09T07:53:38.000000Z",
+      "updated_at": "2026-05-14T03:22:31.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/e3bb458353657f7411dee1c703b15e782c2aa6d4c7e3f1d04e65597ad6286599?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/885656580/669fc9bd-967a-4235-afeb-0f0247661161?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A59%3A51Z&rscd=attachment%3B+filename%3Dz_hacker228-randomskilllevelandmastering.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A58%3A57Z&ske=2026-08-01T20%3A59%3A51Z&sks=b&skv=2018-11-09&sig=i06GrBeU0bzTrXlo6GaVozVYii%2FV1YTefUFEXD7Jhow%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc3NywibmJmIjoxNzg1NjE1NDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZwhBWbFdMOfElCiypsy7X-GCCyZzLUCFAW3jESW-w-Q&response-content-disposition=attachment%3B%20filename%3Dz_hacker228-randomskilllevelandmastering.zip&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:59:22.423Z",
+    "discoveredBy": "mod:2582"
+  }
+}

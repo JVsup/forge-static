@@ -1,0 +1,101 @@
+{
+  "type": "mod",
+  "id": 2483,
+  "hub_id": null,
+  "guid": "com.someonenamedadam.barf",
+  "name": "Boxes At Ref (BARF) - NG",
+  "slug": "boxes-at-ref-barf-ng",
+  "teaser": "Missed this mod? Well, I did too, so it's back! This mod adds lootboxes and other items from EFT:Arena to the new trader Ref.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/QMBkx2dNQ1SvOfLaHfXBF4zpDoZqLJf9oGFNv7ov.jpg",
+  "downloads": 16170,
+  "favourites_count": 46,
+  "description": "<p>Updated version of Boxes At Ref (BARF) mod.</p>\n<p>Original mod link: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/1560/boxes-at-ref-barf\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/mod/1560/boxes-at-ref-barf</a>\n3.11 version link: <a target=\"_blank\" class=\"external-link\" href=\"https://forge.sp-tarkov.com/mod/2128/boxes-at-ref-barf-again\" rel=\"noreferrer noopener\">https://forge.sp-tarkov.com/mod/2128/boxes-at-ref-barf-again</a></p>\n<p>Licensing: The original author has been inactive for a very long time and with the mod has MIT License I will maintain this mod for 4.0 until the author returns and take over should they wish to.</p>\n<h2>📂 Installation</h2>\n<h3>Requirements</h3>\n<ul>\n<li><strong>SPT 4.0.x</strong></li>\n<li>Server mod only — <em>no BepInEx plugin required</em></li>\n</ul>\n<h3>Steps</h3>\n<ol>\n<li>Download the latest release</li>\n<li>Extract it into your SPT installation</li>\n<li>You should see:</li>\n</ol>\n<pre><code>SPT/user/mods/BoxesAtRef/\n    BoxesAtRef.dll\n    database/\n</code></pre>\n<p>Restart your server and enjoy.</p>\n<h2>⚙️ Configuration</h2>\n<p>Configuration lives here:</p>\n<pre><code>SPT/user/mods/BoxesAtRef/database/itemsToAdd.json\nSPT/user/mods/BoxesAtRef/database/crateContents.json\n</code></pre>\n<p>Editing the items:</p>\n<h3><strong>1) Indivdual item</strong></h3>\n<pre><code>{\n  \"items\": [\n    {\n      \"_id\": \"crate_unique_id\", // Don't touch\n      \"_tpl\": \"template_id\", // Don't touch\n      \"openID\": \"open_animation_id\", // Don't touch\n      \"price\": 50,\n      \"buyRestrictionMax\": 1,\n      \"loyaltyLevel\": 1\n    }\n  ]\n}\n</code></pre>\n<h3><strong>2) Crate contents</strong></h3>\n<pre><code>{\n  \"66573310a1657263d816a139\": {\n    \"rewardCount\": 3,\n    \"foundInRaid\": true,\n    \"rewardTplPool\": [] // Add MongoIds here\n  }\n}\n</code></pre>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2483/boxes-at-ref-barf-ng",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": true,
+  "cheat_notice": false,
+  "category_id": 16,
+  "published_at": "2025-12-03T18:28:00.000000Z",
+  "created_at": "2025-12-03T18:28:59.000000Z",
+  "updated_at": "2026-07-28T06:59:29.000000Z",
+  "owner": {
+    "id": 78428,
+    "name": "kobethuy",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/xwnzuK5gF0ndmEIlazGfekomSx7oeNGvTE7UQckP_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-05-04T22:32:08.000000Z",
+    "updated_at": "2026-08-01T17:02:59.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 57635,
+      "name": "SomeoneNamedAdam",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2024-07-13T20:45:53.000000Z",
+      "updated_at": "2026-08-01T18:23:27.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 16,
+    "hub_id": 29,
+    "title": "Traders",
+    "slug": "traders",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://github.com/thuynguyentrungdang/BoxesAtRef-4.0",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 12508,
+      "hub_id": null,
+      "version": "2.0.0",
+      "description": "<h3><strong>Changelogs</strong></h3>\n<ul>\n<li>Updated to 4.0</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2483/boxes-at-ref-barf-ng/2.0.0",
+      "content_length": 8589,
+      "spt_version_constraint": "~4.0.0",
+      "downloads": 16170,
+      "fika_compatibility": "compatible",
+      "published_at": "2025-12-03T18:31:00.000000Z",
+      "created_at": "2025-12-03T18:32:00.000000Z",
+      "updated_at": "2026-07-28T06:59:29.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MjVhNDNlODc1MTQwMWM3NmI4YWI1Mjg4YjA0ZGZlNjM6MTc2NDc4NjcwNg==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1109324616/bae2c44e-11d6-4077-87c1-ea7bbe99f898?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T21%3A21%3A23Z&rscd=attachment%3B+filename%3DBoxesAtRef-4.0_2.0.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T20%3A21%3A04Z&ske=2026-08-01T21%3A21%3A23Z&sks=b&skv=2018-11-09&sig=eq51lJmMOBaOTUdfqecIQr3hLf3WskTbtHGtqGc2ih4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0OCwibmJmIjoxNzg1NjE1ODQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uvoVu5pEkGcXJ4MEX_-zLsPlxUqJMU3kqP0QPmEaETA&response-content-disposition=attachment%3B%20filename%3DBoxesAtRef-4.0_2.0.0.7z&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "addon_ids": [],
+  "page": {
+    "modlistCount": 79,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:41:40.890Z",
+    "discoveredBy": "seed"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "type": "mod",
+  "id": 2096,
+  "hub_id": 2781,
+  "guid": null,
+  "name": "Inventory Organizing Features (Ported to 3.11.x)",
+  "slug": "inventory-organizing-features-ported-to-311x",
+  "teaser": "Adds several inventory organizing features which rely on item tags, such as sort locking, move locking and container organizing. Also adds a button to take out all the items from a container.",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/2781.png",
+  "downloads": 5691,
+  "favourites_count": 1,
+  "description": "<p><strong>THIS IS A QUICK FIX FOR THE MOD.</strong></p>\n<p><strong>IF NIGHTINGALE OR ANY CONTRIBUTOR WANTS; I WILL TAKE IT DOWN NO QUESTIONS ASKED.</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/23286-nightingale/\" rel=\"noreferrer noopener\">DeadLeaves</a> updated the original mod to 3.8.3.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/56861-yume/\" rel=\"noreferrer noopener\">Yume</a> added recursive container sort.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/59522-meepowski/\" rel=\"noreferrer noopener\">Meepowski</a> updated the mod to support 3.9.0.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/63839-kyomiko/\" rel=\"noreferrer noopener\">KyoMiko</a> updated the mod to support 3.10.0.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/79881-garlicbreadtcg/\" rel=\"noreferrer noopener\">garlicbreadtcg</a> updated the mod to support 3.11.x.</p>\n<p>To install drop the .dll file into the \\BepInEx\\plugins folder.</p>\n<p>See full documentation and explanation of all the features here: <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/files/file/1152-inventory-organizing-features/\" rel=\"noreferrer noopener\">Inventory Organizing Features</a></p>\n<p>Remember to go there and thank <a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/user/23286-nightingale/\" rel=\"noreferrer noopener\">Nightingale!</a> They did all the hard work.</p>\n<p>Very little support will be provided. But if you get any errors, post them in the comments and I’ll see if there is anything that can be done.</p>\n<h3><strong>Original mod description:</strong></h3>\n<p>Description</p>\n<p>This mod adds several inventory organizing features that should save you some time when managing your stash. These features use the in-game item tags. In general, to use it’s features you have to write a @ tag and parameters(if needed) into item’s tag name.</p>\n<h3><strong>Installation</strong></h3>\n<p>Drop the contents of the archive into your SP Tarkov directory.</p>\n<h3><strong>Tags</strong></h3>\n<p>There are several tags you can use:</p>\n<p>@sl - Sort Lock. Prevents the item from being moved when sorting inventory.</p>\n<p>@ml - Move Lock. Prevents the item from being moved by user or when sorting inventory.</p>\n<p>@o - Organize. Makes a container pull items which can fit into it. Items which are being pulled are determined by container’s filters and parameters which user has specified.</p>\n<p>The “Organize” feature is the only one that can use additional parameters. It’s probably not the most elegant solution, but also not the worst and decently usable even as a simple proof of concept.</p>\n<h3><strong>Multiple tags</strong></h3>\n<p>If you wish to specify multiple tags, make sure to separate them with spaces.</p>\n<p>Example: @ml @o, @sl @o, @o money; @ml.</p>\n<h3><strong>“Take Out” button</strong></h3>\n<p>This button is located on container view panel, near the sort and organize button. It’s label should say “T/O”. It takes out every item from the container into it’s parent container. When used on equipped items - transfers contents into stash.</p>\n<p>Demo: <a target=\"_blank\" class=\"external-link\" href=\"http://streamable.com/0sx49w\" rel=\"noreferrer noopener\">https://streamable.com/0sx49w</a></p>\n<h3><strong>How to use the organizing feature</strong></h3>\n<p>First of all add the @o organize tag to container’s tag name.</p>\n<p><em>* Using the organize tag without any parameters will pull any item that container accepts.</em></p>\n<p><strong>If you want to specify any parameters the organize tag must begin with</strong> @o  <strong>(whitespace included) and end with</strong> ; <strong>(semicolon).</strong></p>\n<p><strong>Example:</strong></p>\n<p><strong>- without any parameters @o</strong></p>\n<p><strong>- with some parameters @o categoryParam1|n:nameParam1|–fir;</strong></p>\n<p>Both category and name parameters rely on localized strings, so keep that in mind.</p>\n<p>Both category and name parameters are not case sensitive.</p>\n<p><strong>To confirm that you wrote everything correctly</strong> check the notification which appears after you press Save on the Edit Tag window.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/attachment/4871-notification-jpg/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://hub.sp-tarkov.com/attachment/4871-notification-jpg/?thumbnail=1\" alt=\"?thumbnail=1\" /></a></p>\n<p>To execute the organization - press the new button located near the “Sort” button. It has a “Hideout” icon.</p>\n<p><img loading=\"lazy\" decoding=\"async\" src=\"https://hub.sp-tarkov.com/attachment/4872-stash-org-jpg/\" alt=\"4872-stash-org-jpg\" /><img loading=\"lazy\" decoding=\"async\" src=\"https://hub.sp-tarkov.com/attachment/4873-container-org-jpg/\" alt=\"4873-container-org-jpg\" /></p>\n<h3><strong>Category parameter</strong></h3>\n<p>You can specify desired categories by simply writing a <strong>full, exact category name</strong> (e.g. Tools, Gear mods, etc.).</p>\n<p><strong>You can find item’s category when you inspect it or in the handbook.</strong> Categories are showed in the top left corner, under the name, separated by &gt;.</p>\n<p><strong>Handbook:</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/attachment/4869-handbook-cats-jpg/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://hub.sp-tarkov.com/attachment/4869-handbook-cats-jpg/?thumbnail=1\" alt=\"?thumbnail=1\" /></a></p>\n<p><strong>When inspecting an item:</strong></p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://hub.sp-tarkov.com/attachment/4867-itemcategories-jpg/\" rel=\"noreferrer noopener\"><img loading=\"lazy\" decoding=\"async\" src=\"https://hub.sp-tarkov.com/attachment/4867-itemcategories-jpg/?thumbnail=1\" alt=\"?thumbnail=1\" /></a></p>\n<p>Example: @o ammo; - only the Ammo category.</p>\n<p>If you add ! before categories name, the specified category parameter will be treated as an <em>exclusion</em>.</p>\n<p>Example: @o !magazines; - means everything but Magazines category.</p>\n<h3><strong>Name parameter</strong></h3>\n<p>You can specify a desired name by writing a prefix n: and then the name of an item. The name doesn’t have to be exact, it can be a certain part of it, but be aware that it can also be ambiguous (e.g. if you simply write BP it will pull any item that has “BP” in it’s name).</p>\n<p>Example @o n:igolnik;.</p>\n<p>If you add ! before name parameter, it will be treated as an <em>exclusion</em>.</p>\n<p>Example: @o n:!igolnik; - means everything but items which have “igolnik” in the name.</p>\n<h3><strong>Container priority and order parameter</strong></h3>\n<p>By default organized containers execution is ordered by their implicit priority, where containers with the narrowest conditions are taken first. For example container with tag @o n:igolnik;(selects only items which have “igolnik” in the name) has a higher priority than the one with tag @o(default category, pulls any fitting item).</p>\n<p>If implicit priority doesn’t suffice, you can specify an explicit order number. Containers with explicit order value are prioritized over those without it.</p>\n<p>Example: @o #:3; and @o #:1;, container with order value 1 will pull items earlier than the one with order value 3.</p>\n<h3><strong>Found in raid (and other double-dash parameters)</strong></h3>\n<p>There are some parameters which are prefixed with two dashes:</p>\n<p>--default - default container categories. If no categories are specified, this parameters is implicitly used. Most likely you won’t need it.</p>\n<p>--fir - items must be “Found in raid”.</p>\n<p>--not-fir - items must be not “Found in raid”.</p>\n<h3><strong>Multiple parameters</strong></h3>\n<p>If you want to specify multiple parameters, simply separate them with the | symbol.</p>\n<p>Example:</p>\n<p>@o #:2|muzzle devices|n:ak-74|–fir; - container priority value 2, only items of category “Muzzle devices” and only if item’s name contains “ak-74”, and only found in raid. Basically collects all FiR muzzle devices with AK-74 in the name, like Wafflemaker, JMac, and other suppressors/muzzle breaks.</p>\n<p>@o assault rifles|magazines|weapon parts &amp; mods; - container will pull only Assault Rifles, Magazines and Weapon parts &amp; mods.</p>\n<p>@o n:rouble|n:eur|n:dollar|n:bitc; - container will pull only items which have “rouble” or “eur”, or “dollar”, or “bitc” in their name.</p>\n<h3><strong>Video demonstration/examples</strong></h3>\n<p>Using the “Take out” button.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"http://streamable.com/0sx49w\" rel=\"noreferrer noopener\">https://streamable.com/0sx49w</a></p>\n<p>@ml and @sl tags demonstration.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/6k1umi\" rel=\"noreferrer noopener\">https://streamable.com/6k1umi</a></p>\n<p>Organizing containers by their default category using @o tag.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/g3jko0\" rel=\"noreferrer noopener\">https://streamable.com/g3jko0</a></p>\n<p>Organizing containers by specifying a category name.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/y9779l\" rel=\"noreferrer noopener\">https://streamable.com/y9779l</a></p>\n<p>Using the –fir parameter to collect only “Found in raid” items.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/v9ftzx\" rel=\"noreferrer noopener\">https://streamable.com/v9ftzx</a></p>\n<p>Organizing ammo, using the name parameters, excluding grenades from ammo containers.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/gzx57t\" rel=\"noreferrer noopener\">https://streamable.com/gzx57t</a></p>\n<p>How name parameters work. (Specifically name parameter ambiguity)</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/ct30u6\" rel=\"noreferrer noopener\">https://streamable.com/ct30u6</a></p>\n<p>Organizing a container inside of a container.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/joajvl\" rel=\"noreferrer noopener\">https://streamable.com/joajvl</a></p>\n<p>Using the order parameter and how it works.</p>\n<p><a target=\"_blank\" class=\"external-link\" href=\"https://streamable.com/owlso8\" rel=\"noreferrer noopener\">https://streamable.com/owlso8</a></p>\n<p><em>* I hope I didn’t make them too quick, but I suppose you can always pause a video.</em></p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2096/inventory-organizing-features-ported-to-311x",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2025-04-12T19:05:12.000000Z",
+  "created_at": "2025-04-12T19:05:12.000000Z",
+  "updated_at": "2026-07-07T16:59:07.000000Z",
+  "owner": {
+    "id": 76618,
+    "name": "garlicbreadtcg",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=g&color=7F9CF5&background=EBF4FF",
+    "cover_photo_url": null,
+    "created_at": "2025-04-11T03:07:52.000000Z",
+    "updated_at": "2026-03-29T04:00:50.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 9836,
+      "name": "DeadLeaves",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/205f2557487b1fb0b1de9b1bf202b712eeece2ce_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2021-09-28T18:40:41.000000Z",
+      "updated_at": "2026-08-01T18:03:54.000000Z"
+    },
+    {
+      "id": 20056,
+      "name": "Nightingale",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/211a9e0b679926e2b976117cf46083380e329abb_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2022-06-28T10:28:17.000000Z",
+      "updated_at": "2026-07-10T04:50:07.000000Z"
+    },
+    {
+      "id": 53618,
+      "name": "Yume",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=Y&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2024-06-12T23:34:20.000000Z",
+      "updated_at": "2025-09-26T15:38:03.000000Z"
+    },
+    {
+      "id": 56277,
+      "name": "Meepowski",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/ef6c58e687f565551dd0e71edec3d0f00dda8440_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2024-07-08T09:09:50.000000Z",
+      "updated_at": "2026-08-01T20:01:20.000000Z"
+    },
+    {
+      "id": 60594,
+      "name": "KyoMiko",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=K&color=7F9CF5&background=EBF4FF",
+      "cover_photo_url": null,
+      "created_at": "2024-08-06T01:34:27.000000Z",
+      "updated_at": "2025-09-26T15:39:15.000000Z"
+    }
+  ],
+  "license": {
+    "id": 14,
+    "hub_id": 17,
+    "name": "University of Illinois/NCSA Open Source License",
+    "link": "https://choosealicense.com/licenses/ncsa/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://gitea.com/garlicbreadtcg/SPT-InventoryOrganizingFeatures",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 807,
+      "hub_id": 14000,
+      "version": "1.4.0",
+      "description": "",
+      "link": "https://forge.sp-tarkov.com/mod/download/2096/inventory-organizing-features-ported-to-311x/1.4.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.11.0",
+      "downloads": 5691,
+      "fika_compatibility": "unknown",
+      "published_at": "2025-04-12T19:05:12.000000Z",
+      "created_at": "2025-04-12T19:05:12.000000Z",
+      "updated_at": "2026-05-14T01:58:44.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/1dec450ec1743c54426f75e7882765ab4016cf29d4686697a5655a7831857b35?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://4d3e0f26919f429c2b0092fb846c818a.r2.cloudflarestorage.com/gitea-com-prod/attachments/3/9/392438ef-1e19-4b71-be8c-05cf6cba3006?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=90744cd4dfc7c318a594a56d0ebe8323%2F20260801%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260801T202043Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3DSPT-InventoryOrganizingFeatures1.4.0.zip&response-content-type=application%2Fzip&X-Amz-Signature=5ce0f5369ec225ef3d1764abcd7dd491f31ac534c2ba4d240482823d38de9a14"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:01:43.810Z",
+    "discoveredBy": "mod:1530",
+    "error": null
+  }
+}

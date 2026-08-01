@@ -1,0 +1,282 @@
+{
+  "type": "mod",
+  "id": 2797,
+  "hub_id": null,
+  "guid": "com.ananascharles.ridablevehicles",
+  "name": "AC's Ridable Vehicles",
+  "slug": "acs-ridable-vehicles",
+  "teaser": "The first player-drivable ground vehicle for SPT",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/GFhEGVz8lyKJJl8xDnWSMMHFKe9BNkCJuClJqouq.jpg",
+  "downloads": 3140,
+  "favourites_count": 37,
+  "description": "<h1>Ridable Vehicles — drive, fight, and extract with a real car</h1>\n<p><strong>The first player-drivable ground vehicle for SPT.</strong> Spawn a Land Rover Defender 110\nin-raid, enter through one of its four doors, carry loot in the rear trunk, and drive.\nThe car uses real wheel physics, EFT-native ballistic materials, subsystem damage, fuel,\nand its own Vehicle Getaway extraction flow on Woods.</p>\n<div class=\"tabset\"><div id=\"tabset-1-panel-1\" class=\"tab-panel\"><div class=\"tab-title\">WHAT YOU GET</div>\n<div class=\"tab-content\"><ul>\n<li><strong>A real vehicle, really driven</strong> — full <code>WheelCollider</code> physics on a 2.1-ton,\nall-wheel-drive Defender 110. It has tuned suspension, a low center of mass, a\nroughly 90 km/h stock top speed, working steering and wheel rotation, and it can be\nflipped back onto its wheels.</li>\n<li><strong>EFT-native ballistic cover</strong> — authored metal, glass, engine, and tyre hit volumes use\nTarkov’s own ballistic solver. Rounds can stop, ricochet, lose energy, or penetrate the\nvehicle and continue into an occupant. This is physical cover, not god mode.</li>\n<li><strong>Mechanical damage</strong> — the hull, engine, and each tyre have independent health. Engine\ndamage cuts torque, destroyed hulls or engines disable the car, punctured tyres lose\ndrive and grip, and severe collisions damage the vehicle.</li>\n<li><strong>Vehicle Getaway on Woods</strong> — park at South V-Ex, Outskirts, Scav Bridge, or the RUAF\ntransit road and hold still for the countdown. These vehicle exits are always available,\nregardless of the raid’s active exfils or the player’s extraction list.</li>\n<li><strong>Bring the trunk home</strong> — the 8x8 rear trunk carries real items. A successful Getaway\nhands that vehicle’s cargo to the BTR Driver, who delivers it by message after the raid.\nDeath, disconnect, on-foot extraction, and normal extracts do not send trunk cargo.</li>\n<li><strong>Fuel and refueling</strong> — fuel drains with driving load. Refuel from a metal or\nexpeditionary fuel tank through the native door interaction menu, with a timed progress\ncountdown.</li>\n<li><strong>Proper instruments</strong> — an auto-scaled analog speedometer, separate fuel gauge with\nlow-fuel warnings, and a top-down condition display for hull, engine, and all four tyres.</li>\n<li><strong>Progressive vehicle effects</strong> — engine smoke begins before failure and darkens as\ndamage grows; destroyed engines burn. Running vehicles emit exhaust, while grounded\nwheels raise surface-colored dust on soil, grass, gravel, swamp, and snow.</li>\n<li><strong>Racing-style camera</strong> — cockpit view with free mouse look and auto-centering, or a\nthird-person chase camera through F12. Terrain pitch and roll come through the view.</li>\n<li><strong>Four seats and four doors</strong> — the driver sits on the right, as in the real RHD\nDefender. Each seat is entered through its own door and occupied seats are unavailable.</li>\n<li><strong>Native interaction</strong> — the familiar EFT interaction menu handles entering, exiting,\nopening the trunk, refueling, and flipping the vehicle.</li>\n<li><strong>Audio, lights, and horn</strong> — layered idle/acceleration audio, brake and crash sounds,\nheadlights, brake lights, reverse lights, and a horn. Bots hear the engine and horn;\nnearby enemies can notice occupants in a driven car.</li>\n<li><strong>Optional Fika co-op</strong> — the separate addon synchronizes vehicle spawning, motion,\nseats, fuel, audio, lights, horn, run-over impacts, and vehicle damage. It remains\nexperimental and every peer must run exactly matching versions.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-2\" class=\"tab-panel\"><div class=\"tab-title\">SCREENSHOTS &amp; VIDEO</div>\n<div class=\"tab-content\"><p><img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/5XR7chP7/01.webp\" alt=\"image01\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/S4NWZw51/02.webp\" alt=\"image02\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/kssQptwk/03.webp\" alt=\"image03\" />\n<img loading=\"lazy\" decoding=\"async\" src=\"https://i.ibb.co/vxwsRdTT/04.webp\" alt=\"image04\" /></p>\n<p><strong>Video — coming soon.</strong></p></div></div>\n<div id=\"tabset-1-panel-3\" class=\"tab-panel\"><div class=\"tab-title\">CONTROLS</div>\n<div class=\"tab-content\"><table>\n<thead>\n<tr>\n<th>Input</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>F9</code></td>\n<td>Spawn a vehicle in front of you</td>\n</tr>\n<tr>\n<td>Interact at a door</td>\n<td>Enter the corresponding seat</td>\n</tr>\n<tr>\n<td>Look at your door + interact</td>\n<td>Exit</td>\n</tr>\n<tr>\n<td>Interact at the rear</td>\n<td>Open the 8x8 trunk</td>\n</tr>\n<tr>\n<td>Driver-door interaction</td>\n<td>Refuel or flip when available</td>\n</tr>\n<tr>\n<td><code>W</code> / <code>S</code></td>\n<td>Drive / reverse</td>\n</tr>\n<tr>\n<td><code>A</code> / <code>D</code></td>\n<td>Steer</td>\n</tr>\n<tr>\n<td><code>Space</code></td>\n<td>Brake</td>\n</tr>\n<tr>\n<td><code>L</code></td>\n<td>Toggle headlights</td>\n</tr>\n<tr>\n<td><code>H</code></td>\n<td>Horn</td>\n</tr>\n<tr>\n<td><code>R</code> (hold)</td>\n<td>Right an overturned vehicle while driving</td>\n</tr>\n<tr>\n<td>Mouse</td>\n<td>Look around; view auto-centers while moving</td>\n</tr>\n</tbody>\n</table>\n<p>Keys and most handling, camera, seat, light, sound, fuel, damage, HUD, and extraction\nsettings are live-tunable in F12.</p></div></div>\n<div id=\"tabset-1-panel-4\" class=\"tab-panel\"><div class=\"tab-title\">INSTALLATION</div>\n<div class=\"tab-content\"><p><strong>Two downloads are published:</strong></p>\n<ol>\n<li><strong><code>RidableVehicles-vX.Y.Z.zip</code></strong> — the required main mod. Extract it into the SPT root\nfolder containing <code>EscapeFromTarkov.exe</code>. This is all single-player users need.</li>\n<li><strong><code>RidableVehicles-FikaAddon-vX.Y.Z.zip</code></strong> — optional Fika synchronization. Install it\non every player and headless host in the raid, alongside the exact same main-mod version.</li>\n</ol>\n<p>For Fika, verify <code>Fika &gt; SyncVehicles</code> in F12 on every machine. Fresh installs enable it by\ndefault; existing configuration files retain their previous value.</p>\n<p>The main mod is a client-side BepInEx plugin. It does not require a custom server mod.</p>\n<p><strong>Requirements:</strong></p>\n<ul>\n<li>SPT <strong>4.0.13</strong></li>\n<li>EFT client <strong>0.16.9.0.40087</strong></li>\n<li>Fika only when using the optional co-op addon</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-5\" class=\"tab-panel\"><div class=\"tab-title\">v0.15.0 — THE GETAWAY</div>\n<div class=\"tab-content\"><ul>\n<li>Added permanent Vehicle Getaway zones at South V-Ex, Outskirts, Scav Bridge, and RUAF\nTransit on Woods.</li>\n<li>Added extract-only BTR Driver delivery for the occupied vehicle’s trunk cargo.</li>\n<li>Added EFT-native metal, glass, engine, and tyre ballistic cover.</li>\n<li>Added hull, engine, tyre, and collision damage with configurable durability.</li>\n<li>Added Fika replication for normalized vehicle damage.</li>\n<li>Added a six-zone condition display with continuous health colors.</li>\n<li>Added progressive engine smoke, destroyed-engine fire, running exhaust, and\nsurface-aware wheel dust.</li>\n<li>Replaced the default text HUD with an analog speedometer and fuel gauge. The legacy text\noverlay remains available as an opt-in debug display.</li>\n<li>Fixed the seated character sometimes facing backward without changing camera or controls.</li>\n<li>Fixed duplicate nested cargo records during Getaway delivery.</li>\n<li>Fixed mirrored analog-gauge markings and obscured endpoint labels.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-6\" class=\"tab-panel\"><div class=\"tab-title\">PREVIOUS RELEASES</div>\n<div class=\"tab-content\"><ul>\n<li><strong>v0.14.2</strong> — fixed the extraction black screen, restored seated players during raid\nteardown, and made runtime trunk IDs raid-safe and deterministic.</li>\n<li><strong>v0.14.0</strong> — fuel and timed refueling, horn, rear trunk, HUD, bot awareness,\nbrake/crash sounds, and Fika protocol v7.</li>\n<li><strong>v0.13.2</strong> — client-driver run-over relay, balanced impact damage, ragdolls, and the\ndebug scav spawner.</li>\n<li><strong>v0.13.1</strong> — moved Fika support into a separate optional addon.</li>\n<li><strong>v0.13.0</strong> — four seats and doors, collision hull, occupant mortality, run-over damage,\nAI hearing, and initial experimental Fika synchronization.</li>\n<li><strong>v0.12.0</strong> — steering/spinning wheels, revised handling, and engine audio v2.</li>\n<li><strong>v0.11.0</strong> — first public Defender release.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-7\" class=\"tab-panel\"><div class=\"tab-title\">ROADMAP</div>\n<div class=\"tab-content\"><ul>\n<li>Vehicle repairs and cross-raid condition persistence</li>\n<li>Legitimate deployment through ownership/trader progression instead of the F9 spawn key</li>\n<li>More vehicles using the existing marker/spec architecture</li>\n<li>Fika late-join resynchronization and broader multiplayer hardening</li>\n<li>Smarter bot threat responses</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-8\" class=\"tab-panel\"><div class=\"tab-title\">LIMITATIONS</div>\n<div class=\"tab-content\"><ul>\n<li>Getaway currently supports Woods only.</li>\n<li>BTR cargo arrives through delayed trader mail, not immediate stash insertion.</li>\n<li>Passenger weapons do not work while using the seated BTR pose.</li>\n<li>There is no repair or cross-raid persistence yet; vehicle damage lasts for the raid.</li>\n<li>The F9 spawn key remains the only deployment method.</li>\n<li>Only the Defender ships. The motorcycle is disabled and not included.</li>\n<li>Fika synchronization is experimental, has no late-join vehicle resync, and requires\nmatching main/addon versions on every machine.</li>\n<li>Fika trunk ownership and simultaneous multi-peer trunk interaction need broader field\nvalidation; avoid editing the trunk from multiple clients during a Getaway countdown.</li>\n<li>Upgrading keeps the existing BepInEx configuration. New settings are added automatically;\ndelete <code>BepInEx/config/com.ananascharles.ridablevehicles.cfg</code> only if you intentionally\nwant every option reset to the current defaults.</li>\n</ul></div></div>\n<div id=\"tabset-1-panel-9\" class=\"tab-panel\"><div class=\"tab-title\">CREDITS</div>\n<div class=\"tab-content\"><p><strong>FattyPJ</strong> for his endless support and brainstorming\n<em>This work is based on “Land Rover Defender 110”\n(<a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/3d-models/land-rover-defender-110-5773ec04488b46148816b5f7a9f3f44f\" rel=\"noreferrer noopener\">https://sketchfab.com/3d-models/land-rover-defender-110-5773ec04488b46148816b5f7a9f3f44f</a>)\nby meeww (<a target=\"_blank\" class=\"external-link\" href=\"https://sketchfab.com/meeww\" rel=\"noreferrer noopener\">https://sketchfab.com/meeww</a>), licensed under CC-BY-4.0\n(<a target=\"_blank\" class=\"external-link\" href=\"http://creativecommons.org/licenses/by/4.0/\" rel=\"noreferrer noopener\">http://creativecommons.org/licenses/by/4.0/</a>).</em></p>\n<p>Controllable-object patterns studied from the open-source FPV Drone Mod (MIT) by pein.</p>\n<p>Source code: <a target=\"_blank\" class=\"external-link\" href=\"https://codeberg.org/AnanasCharles/SPT-DrivableCars\" rel=\"noreferrer noopener\">Codeberg</a> ·\n<a target=\"_blank\" class=\"external-link\" href=\"https://gitlab.com/AnanasCharles/spt-ridablevehicles\" rel=\"noreferrer noopener\">GitLab mirror</a></p></div></div></div>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/2797/acs-ridable-vehicles",
+  "fika_compatibility": true,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": true,
+  "custom_ai_disclosure": "<p>AI tooling (Claude) was used as a research and coding assistant during development,\nalways under human direction:</p>\n<ul>\n<li><strong>Reverse-engineering support</strong> — decompiling and digging through the game’s assemblies\nto find the right systems to build on (the BTR’s passenger/seat handling, EFT’s physics\nscheduler, lamp and audio systems), so the mod uses the same mechanisms the game itself\nuses instead of fragile hacks.</li>\n<li><strong>Code drafting and debugging</strong> — implementation drafts and log analysis during the\nbuild-test-fix loop.</li>\n</ul>\n<p>All feature decisions, in-game testing, tuning (driving feel, camera, seat and light\nplacement), asset selection and preparation, and release validation were done by hand.\nEvery change shipped only after being tested in the game; several AI-proposed approaches\nwere rejected or reworked based on those tests. The 3D model, sounds, and artwork are not\nAI-generated.</p>\n",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": 17,
+  "published_at": "2026-07-04T13:04:00.000000Z",
+  "created_at": "2026-07-04T11:51:00.000000Z",
+  "updated_at": "2026-07-28T09:39:09.000000Z",
+  "owner": {
+    "id": 88887,
+    "name": "AnanasCharles",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/txZXFT0D25wM3LEQZFbKIiuACn7blW11h6s46OjE_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2025-11-10T11:19:47.000000Z",
+    "updated_at": "2026-07-31T23:14:44.000000Z"
+  },
+  "additional_authors": [
+    {
+      "id": 104918,
+      "name": "FattyPJ",
+      "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/nXLRQHfeCDUOsdDlPlYAUarKQz3f5ZsliMGyA99i_128w.webp",
+      "cover_photo_url": null,
+      "created_at": "2026-02-11T23:08:09.000000Z",
+      "updated_at": "2026-07-31T20:26:37.000000Z"
+    }
+  ],
+  "license": {
+    "id": 11,
+    "hub_id": 14,
+    "name": "MIT License",
+    "link": "https://choosealicense.com/licenses/mit/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": {
+    "id": 17,
+    "hub_id": 28,
+    "title": "Other",
+    "slug": "other",
+    "description": ""
+  },
+  "source_code_links": [
+    {
+      "url": "https://codeberg.org/AnanasCharles/SPT-DrivableCars",
+      "label": "Codeberg"
+    },
+    {
+      "url": "https://gitlab.com/AnanasCharles/spt-ridablevehicles/",
+      "label": "GitLab"
+    }
+  ],
+  "versions": [
+    {
+      "id": 14110,
+      "hub_id": null,
+      "version": "0.15.0",
+      "description": "<h1>v0.15.0 — The Getaway</h1>\n<p>v0.15.0 turns the Defender from a raid transport into a vehicle with consequences: it can\nstop rounds, take subsystem damage, break down, show that damage visually, and carry you\nand your trunk cargo out of Woods through the new Vehicle Getaway flow.</p>\n<p>This release targets <strong>SPT 4.0.13 / EFT 0.16.9.0.40087</strong>.</p>\n<h2>Highlights</h2>\n<ul>\n<li>Vehicle Getaway extraction at four permanent Woods landmarks</li>\n<li>EFT-native ballistic cover and subsystem damage</li>\n<li>Progressive engine smoke, destroyed-engine fire, exhaust, and surface-aware wheel dust</li>\n<li>Analog speedometer, fuel gauge, and six-zone condition display</li>\n<li>Stable seated-player orientation fix</li>\n<li>Fika damage-state replication</li>\n</ul>\n<h2>Vehicle Getaway</h2>\n<p>Park the vehicle within 20 metres of a supported landmark and remain nearly stationary\nfor the configured countdown (20 seconds by default). The native extraction countdown UI\nshows the remaining time. The Getaway is available at:</p>\n<ul>\n<li><strong>South V-Ex</strong></li>\n<li><strong>Outskirts</strong></li>\n<li><strong>Scav Bridge</strong></li>\n<li><strong>RUAF Transit</strong></li>\n</ul>\n<p>These are resolved from live scene anchors. They remain usable regardless of which vanilla\nextracts are active or whether that extract appears in the local player’s extraction list.\nScav Bridge is resolved through the current scene’s legacy internal <code>Factory Gate</code> name.</p>\n<p>Completing the countdown:</p>\n<ol>\n<li>Collects the direct item roots from the trunk of the vehicle currently being used.</li>\n<li>Restores the seated player before raid shutdown.</li>\n<li>Ends the raid with <code>Survived</code> status.</li>\n<li>Hands the trunk cargo to EFT/SPT’s native BTR delivery flow.</li>\n</ol>\n<p>Cargo is <strong>not placed directly into the stash</strong>. The BTR Driver delivers it by message after\nthe raid, using the same delayed mail system as native BTR item delivery. A notification is\nshown before extraction so the player knows to check messages. Native delivery processing\nalso removes delivered items from insurance.</p>\n<p>The hand-off is structurally extraction-only: dying, disconnecting, extracting on foot, or\nusing a normal extract does not queue trunk cargo. With multiple spawned vehicles, only the\ntrunk belonging to the occupied vehicle is sampled when its countdown completes.</p>\n<h2>Ballistic cover and vehicle damage</h2>\n<p>The Defender is no longer shoot-through scenery. Eleven authored hit volumes plus four\nruntime wheel volumes use EFT’s own <code>BallisticCollider</code> system and native material presets:</p>\n<ul>\n<li>Thin vehicle body and roof: <code>MetalThin</code></li>\n<li>Engine bay: <code>MetalThick</code></li>\n<li>Windows: <code>Glass</code></li>\n<li>Tyres: <code>Tyre</code></li>\n</ul>\n<p>EFT’s ballistic solver remains responsible for stopping, ricochet, penetration, energy\nloss, impact effects, and rounds continuing through the vehicle into an occupant. The car\nis cover, not a force field; penetration and occupant hits still depend on the round and\nthe material it crosses.</p>\n<p>Default mechanical health at <code>1x</code> durability:</p>\n<ul>\n<li>Hull: <strong>1200</strong></li>\n<li>Engine: <strong>320</strong></li>\n<li>Each tyre: <strong>110</strong></li>\n</ul>\n<p>Damage behavior:</p>\n<ul>\n<li>Engine health progressively reduces available torque.</li>\n<li>A destroyed engine or hull stops propulsion.</li>\n<li>Destroyed tyres stop receiving drive torque and lose most forward and lateral grip.</li>\n<li>Severe collisions damage the hull and engine.</li>\n<li>A hull-destroyed vehicle cannot be entered.</li>\n<li><code>Damage &gt; VehicleDamageEnabled</code> and <code>VehicleDurabilityMultiplier</code> control the system for\nnewly spawned vehicles.</li>\n</ul>\n<h2>Instruments and vehicle condition</h2>\n<p>The default driving HUD has been replaced with generated analog instruments:</p>\n<ul>\n<li>A speedometer that scales its range to the configured vehicle top speed</li>\n<li>A separate fuel gauge with percentage readout</li>\n<li>Amber fuel warning at 25% or below</li>\n<li>Red fuel warning at 10% or below</li>\n<li>A top-down Defender condition display for hull, engine, and all four tyres</li>\n<li>Continuous green-to-yellow-to-orange-to-red health coloring instead of coarse steps</li>\n</ul>\n<p>The previous speed/fuel/condition text remains available only through\n<code>Debug &gt; ShowHudText</code> and is disabled by default.</p>\n<h2>Vehicle effects</h2>\n<ul>\n<li>Engine damage begins producing light gray smoke below 72% engine health.</li>\n<li>Smoke volume, size, lifetime, and darkness increase continuously as health falls.</li>\n<li>A destroyed engine or hull adds a small orange engine-bay flame.</li>\n<li>A running vehicle emits light exhaust; exhaust becomes sootier with engine damage and\nresponds to engine load.</li>\n<li>Grounded wheels create low-cost dust above roughly 9 km/h on soil, swamp, garbage,\ngrass, gravel, slate, and snow.</li>\n<li>Dust color follows the contacted surface. Asphalt, concrete, metal, and water do not\nproduce dust.</li>\n<li>The smoke material, texture, shader, authored damage volumes, and exhaust marker are\nincluded in the rebuilt vehicle bundle.</li>\n</ul>\n<h2>Fika co-op</h2>\n<p>All Fika players, including a headless host, must install the matching v0.15.0 main mod and\nFika addon. Fresh installs enable <code>Fika &gt; SyncVehicles</code> by default; existing configuration\nfiles preserve their previous value, so verify the setting on every machine.</p>\n<h2>Fixes</h2>\n<ul>\n<li>Fixed nested trunk cargo being serialized more than once during Getaway delivery. The\ntransfer now submits only direct trunk roots and rejects duplicate item IDs as a final\nraid-end guard.</li>\n<li>Fixed analog gauge faces being vertically mirrored relative to their needles.</li>\n<li>Fixed <code>0</code>, maximum-speed, <code>E</code>, and <code>F</code> labels being obscured by the needle at endpoints.</li>\n<li>Getaway now tells the player about pending BTR cargo before the raid-end transition hides\nor queues websocket notifications.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.15.0",
+      "content_length": 13230701,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 1116,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-17T02:37:00.000000Z",
+      "created_at": "2026-07-17T02:37:39.000000Z",
+      "updated_at": "2026-07-28T09:39:09.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/NmUyODAyNmI5YzgyNjUwMTI3Mzk2ZDJiZGI0OThkZTg6MTc4NDI1NTgwMw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/a6269764ef8564544b7d0220716b8513/RidableVehicles-v0.15.0.zip"
+      }
+    },
+    {
+      "id": 14076,
+      "hub_id": null,
+      "version": "0.14.2",
+      "description": "<p><strong>FIX — black screen at extraction when a car was used is raid.</strong></p>\n<h2>Fixed</h2>\n<ul>\n<li>Extraction black-screen: trunk is no longer part of the raid-end loot serialization</li>\n<li>Extracting while still SITTING IN the car now restores the player cleanly (this\npath previously had no handler at all — only death did)</li>\n<li>Trunk internal IDs are valid and reset per raid — multi-vehicle sessions stay\nconsistent between Fika peers even after one side restarts their game</li>\n</ul>\n<h2>Notes</h2>\n<ul>\n<li>v0.14.0 downloads are superseded — please update</li>\n<li>Same version on all machines as always (both DLLs for Fika groups)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.14.2",
+      "content_length": 19392092,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 307,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-14T00:45:00.000000Z",
+      "created_at": "2026-07-14T00:50:57.000000Z",
+      "updated_at": "2026-07-28T09:37:59.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/0ac1cec8106c3705c7f88a22b19d6ce3db57d3e88248fb6bed1863bec5712386?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/9d04aee2f623a2a75af192aeb8d02642/RidableVehicles-v0.14.2.zip"
+      }
+    },
+    {
+      "id": 14025,
+      "hub_id": null,
+      "version": "0.14.0",
+      "description": "<p><strong>The QoL release — the car is a place you live in now.</strong></p>\n<h2>New</h2>\n<ul>\n<li><strong>Horn</strong> (<code>H</code>): real recorded horn, seamless loop — and bots <em>hear</em> it (~120m) (<em>Still needs a lot of work</em>)</li>\n<li><strong>Fuel system</strong>: Tarkov-grade consumption (Defender: ~17min flat-out on 75L), empty tank = dead engine (horn still works). <strong>Refuel via the door menu</strong> with metal/expeditionary fuel cans — timed action with the native green countdown, cancels if you walk off (<em>1L = 1 point of fuel from Fuel Cannisters = very generous</em>)</li>\n<li><strong>Driving HUD</strong>: speed + fuel, bottom-center, red under 15% (<code>HUD/ShowHud</code>)</li>\n<li><strong>Trunk</strong>: real 8x8 lootable container at the rear — stash loot, drive it across the map (“Open trunk” at the rear). Raid-local; per-client under Fika</li>\n<li><strong>Bots notice driven vehicles</strong>: engage on sight/sound at range (AI/BotNoticeRange, 80m), and path around parked cars. Engine off = stealth preserved</li>\n<li><strong>Brake screech + crash sounds</strong>: recorded clips, speed-scaled; brake keyed to the brake light (synced in co-op)</li>\n</ul>\n<h2>Changed</h2>\n<ul>\n<li><code>SyncVehicles</code> defaults ON — installing the Fika addon <em>is</em> the opt-in</li>\n<li>Fika protocol v4 → <strong>v6</strong>: ALL players must update BOTH DLLs together</li>\n<li>Fuel/consumption/refuel-speed all live-tunable in F12</li>\n</ul>\n<h2>Fixed</h2>\n<ul>\n<li>Driver could exit with weapon permanently hidden</li>\n<li>Crash impacts were silent (muted one-shot source)</li>\n<li>Loot-window soft-lock when opening containers from vehicle menus</li>\n</ul>\n<h2>Known</h2>\n<ul>\n<li>Motorcycle exists in the codebase but is DISABLED this release (model polish pending)</li>\n<li>Seated body still faces backwards (cosmetic, animator work queued)</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.14.0",
+      "content_length": 19391867,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 537,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-08T18:32:00.000000Z",
+      "created_at": "2026-07-08T18:37:38.000000Z",
+      "updated_at": "2026-07-28T09:36:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/MzIwY2Q0ZTU1YTViYWZhMzA5ZWNjNDRiYTZlMTM5NjQ6MTc4MzUzNTg0Nw==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/30d3902059fdd701700e0f639b0a48ac/RidableVehicles-v0.14.0.zip"
+      }
+    },
+    {
+      "id": 14002,
+      "hub_id": null,
+      "version": "0.13.2",
+      "description": "<p><strong>The car is a proper weapon now — and co-op drivers get to use it too.</strong></p>\n<h2>New &amp; fixed</h2>\n<ul>\n<li><strong>Ragdolls!</strong> Lethal run-overs launch the body with the car’s velocity — the faster you hit, the further they fly.</li>\n<li><strong>Run-over damage works for co-op client drivers</strong> — impacts are relayed to the host (previously only the host’s hits landed). Ramming the host also works. Sorry, host.</li>\n<li><strong>Balanced run-over damage</strong> — no more universal insta-kill: ~10 km/h hurts, 20-30 km/h breaks legs or worse, 45+ km/h is an instant kill. Damage was previously applied per <em>collider</em> (~10x too much).</li>\n<li><strong>Reversing over someone works now</strong> — symmetric impact detection + lower damage floor.</li>\n<li><strong>Debug scav spawner</strong> for testing/bug reports: enable <code>Debug &gt; EnableScavSpawner</code> in F12, press <code>F10</code> — a scav spawns at the nearest spawn marker ahead of you.</li>\n</ul>\n<h2>Co-op note</h2>\n<p>Protocol changed (v4): <strong>all players must update both files together.</strong> Mixed versions log a PROTOCOL MISMATCH error.</p>\n<h2>Install / upgrade</h2>\n<p>Unzip into your SPT root, overwrite. SPT 4.0.13. Fika optional.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.13.2",
+      "content_length": 19080991,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 473,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-05T21:28:00.000000Z",
+      "created_at": "2026-07-05T21:29:01.000000Z",
+      "updated_at": "2026-07-28T09:26:25.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/ZjYzMmM0NzQ4MWNlYmRlOWZjNWNlNTVjNWU0OWM1MmE6MTc4MzI4Njg3NQ==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/4d217909e88fe500b1b2461ff3a32efe/RidableVehicles-v0.13.2.zip"
+      }
+    },
+    {
+      "id": 14001,
+      "hub_id": null,
+      "version": "0.13.1",
+      "description": "<p><strong>HOTFIX — fixes infinite loading screen for users WITHOUT Fika. Now split into two downloads.</strong></p>\n<h2>Downloads</h2>\n<ul>\n<li><strong><code>RidableVehicles-v0.13.1.zip</code></strong> — the mod. This is all you need for singleplayer SPT.</li>\n<li><strong><code>RidableVehicles-FikaAddon-v0.13.1.zip</code></strong> — OPTIONAL co-op addon, only for Fika users who want vehicle sync. <strong>Every player in the raid must install the same addon version</strong>, and sync must be enabled in F12 (<code>Fika &gt; SyncVehicles</code>) on every machine. HIGHLY EXPERIMENTAL.</li>\n</ul>\n<h2>What was wrong in v0.13.0</h2>\n<p>The Fika co-op code shipped inside the main DLL; on installs without Fika, BepInEx’s plugin scan failed on those types → infinite loading screen. The integration now lives in the separate addon DLL — without it (or without Fika) the mod is pure singleplayer and loads clean.</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.13.1",
+      "content_length": 19078399,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 51,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-05T18:46:00.000000Z",
+      "created_at": "2026-07-05T18:46:47.000000Z",
+      "updated_at": "2026-07-28T09:26:18.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/bdcfc50a426d8794e43618753cfc3715f69f27a40f9348d90d175ff2277e2bf0?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/d1fe5636adb99d78aa74e93c1cc424fb/RidableVehicles-v0.13.1.zip"
+      }
+    },
+    {
+      "id": 13999,
+      "hub_id": null,
+      "version": "0.13.0",
+      "description": "<p><strong>Four seats, a real hull, mortal passengers — and the car fights back.</strong></p>\n<h2>New</h2>\n<ul>\n<li><strong>4 seats, 4 doors</strong> — driver seat on the <em>right</em> (it’s a real RHD Defender!), three passenger seats. Enter each seat at its own door; occupied seats show a disabled “Occupied” entry; exit at your own door.</li>\n<li><strong>Real collision shape</strong> — the hull is a proper multi-box compound: bullets fly over the hood, you can lean over the bonnet, and tall obstacles interact per-section.</li>\n<li><strong>You’re mortal in the car</strong> — the car is soft cover; bullets go through doors and glass. Dying in the seat is handled cleanly.</li>\n<li><strong>Run-over damage</strong> — speed-scaled damage to anyone you hit (chest + legs), lethal above ~45 km/h. Reliable when you host or play solo; damage from a <em>Fika client</em> driver is still experimental.</li>\n<li><strong>Bots hear the engine</strong> — scavs and PMCs investigate engine noise from 45–130 m depending on throttle. (Buggy)</li>\n<li><strong>HIGHLY EXPERIMENTAL Fika co-op sync (OPT-IN)</strong> — vehicles, drivers and passengers replicate between players. Disabled by default: enable <code>Fika &gt; SyncVehicles</code> in F12 on <strong>every</strong> players machine. Expect rough edges; report them.</li>\n</ul>\n<h2>Fixed</h2>\n<ul>\n<li>Exit teleports are ground-clamped — no more out-of-map deaths from a desynced exit point.</li>\n<li>Better default seat/body position values.</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.13.0",
+      "content_length": 19083627,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 46,
+      "fika_compatibility": "compatible",
+      "published_at": "2026-07-05T16:44:00.000000Z",
+      "created_at": "2026-07-05T16:45:05.000000Z",
+      "updated_at": "2026-07-28T09:26:22.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file-analysis/YzdhNjY5MGY4MWU5MDdkMWUzZTlkMzBjOGZmNjM3MDU6MTc4MzI2OTg3OA==",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://gitlab.com/-/project/84102744/uploads/3e71fce3b0ce78211e0afe5c8682d874/RidableVehicles-v0.13.0.zip"
+      }
+    },
+    {
+      "id": 13989,
+      "hub_id": null,
+      "version": "0.12.0",
+      "description": "<p><strong>Wheels that turn, a planted ride, and a real engine.</strong></p>\n<h1>Changed</h1>\n<ul>\n<li>Wheels steer &amp; spin — real wheel meshes rigged to the physics (marker-driven; wheel nodes authored into the model). Rear wheels spin dead-center; spare stays put.</li>\n<li>Physics axles measured from the model — front axle was ~0.33 m off; true tire radius (0.40 m) plants the car properly.</li>\n<li>Driving feel — body sits on its wheels (no more floating), stiffer/shorter suspension, speed-scaled downforce, extra gravity when airborne.</li>\n<li>Engine audio v2 — idle melts into the acceleration layer (no more two stacked loops), pseudo-gearbox pitch steps, seamless idle loop (no more “breathing” pause).</li>\n</ul>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.12.0",
+      "content_length": 19067682,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 406,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-07-04T16:31:00.000000Z",
+      "created_at": "2026-07-04T16:33:29.000000Z",
+      "updated_at": "2026-07-28T09:25:56.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/7671b1d0e596599485330e581e7b4c67a134404d2ef147883f01d243284522b3?nocache=1",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://codeberg.org/AnanasCharles/SPT-DrivableCars/releases/download/v0.12.0/RidableVehicles-v0.12.0.zip"
+      }
+    },
+    {
+      "id": 13987,
+      "hub_id": null,
+      "version": "0.11.0",
+      "description": "<p>The first player-drivable ground vehicle for SPT. Spawn a Land Rover Defender 110 in-raid, walk to the driver door, climb in, and drive.</p>\n<pre><code>Full WheelCollider physics: 2.1 t, AWD, ~90 km/h, tuned suspension\nCockpit camera with free mouse look + auto-center, or chase cam\nEnter/exit through the driver door via the native interaction menu\nEngine idle + acceleration audio (packed in the bundle)\nHeadlights (L), brake lights, reverse lights\nEverything live-tunable in F12\n</code></pre>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/2797/acs-ridable-vehicles/0.11.0",
+      "content_length": 18685015,
+      "spt_version_constraint": "4.0.13",
+      "downloads": 204,
+      "fika_compatibility": "incompatible",
+      "published_at": "2026-07-04T11:56:00.000000Z",
+      "created_at": "2026-07-04T11:54:48.000000Z",
+      "updated_at": "2026-07-28T09:26:03.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/file/764cffbd8e0b18c03ccaa4111bc591783f0de7c9b468563ccc26ffacd59fb908",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://codeberg.org/AnanasCharles/SPT-DrivableCars/releases/download/v0.11.0/RidableVehicles-v0.11.0.zip"
+      }
+    }
+  ],
+  "addon_ids": [
+    82
+  ],
+  "page": {
+    "modlistCount": 41,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T19:30:23.598Z",
+    "discoveredBy": "seed"
+  }
+}

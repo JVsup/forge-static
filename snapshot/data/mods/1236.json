@@ -1,0 +1,86 @@
+{
+  "type": "mod",
+  "id": 1236,
+  "hub_id": 1723,
+  "guid": null,
+  "name": "Fast healing",
+  "slug": "fast-healing",
+  "teaser": "Faster healing and surgery + dynamic healing time for less damaged body parts",
+  "thumbnail": "https://forge-static.sp-tarkov.com/mods/1723.png",
+  "downloads": 4069,
+  "favourites_count": 0,
+  "description": "<p>This mod allows you to customize healing and surgery time to your liking. Additionally, you can speed up healing for less damaged body parts, so you no longer have to perform full healing animation just to heal 1 or 2 hit points.</p>\n<p>Warning: faster healing works only for limbs without bleeding or fractures! Enabling it for bleeding or fractured limbs causes the game to bug out, and at the moment I don’t want to spend time working around this issue.</p>\n<h3>Installation</h3>\n<p>Copy CactusPie.FastHealing.dll to BepInEx/plugins directory</p>\n<h3>Configuration (F12 menu)</h3>\n<ul>\n<li>\n<p>Enable surgery time multiplier - whether the surgery time multiplier is enabled</p>\n</li>\n<li>\n<p>Surgery time multiplier - the surgery time will be multiplied by this number. For instance</p>\n<ul>\n<li>Setting it to 0.5 will make it two times faster</li>\n<li>Setting it to 0.25 will make it four times faster</li>\n<li>Setting it to 2.0 will make it two times slower</li>\n</ul>\n</li>\n<li>\n<p>Enable healing time multiplier - whether the healing time multiplier is enabled</p>\n</li>\n<li>\n<p>Healing time multiplier - the healing time will be multiplied by this number. For instance</p>\n<ul>\n<li>Setting it to 0.5 will make it two times faster</li>\n<li>Setting it to 0.25 will make it four times faster</li>\n<li>Setting it to 2.0 will make it two times slower</li>\n</ul>\n</li>\n<li>\n<p>Dynamic heal time enabled - enabling this will make less damaged limbs heal faster. For instance, if you lost only 1hp in a specific limb, it will be healed very quickly. The more HP you lose, the longer the healing will take - but it will never go above the vanilla time.</p>\n</li>\n<li>\n<p>Dynamic healing time health threshold - the percentage of health required for the dynamic healing to trigger. By default, it is set to 50, which means the limb needs to have more than 50% of health for it to heal faster. For instance, stomach has a maximum of 70 hit points by default, which means that it will need to have at least 36 hit points for it to heal faster.</p>\n</li>\n<li>\n<p>Dynamic heal time multiplier - the default value (1.0) is the default multiplier for how much should the healing be sped up. Decreasing it below 1.0 will make the dynamic healing even faster, while increasing it will make it slower.</p>\n</li>\n</ul>\n<p>The final equation for calculating the dynamic healing time, assuming that all options are enabled, is as follows:</p>\n<p>If the limb is below the theshold for dynamic healing, only regular multiplier will be applied. Thus, the equation will become:</p>\n",
+  "detail_url": "https://forge.sp-tarkov.com/mod/1236/fast-healing",
+  "fika_compatibility": false,
+  "featured": false,
+  "contains_ads": false,
+  "contains_ai_content": false,
+  "custom_ai_disclosure": "",
+  "shows_profile_binding_notice": false,
+  "cheat_notice": false,
+  "category_id": null,
+  "published_at": "2024-01-21T14:05:12.000000Z",
+  "created_at": "2024-01-21T14:05:12.000000Z",
+  "updated_at": "2026-07-07T16:58:53.000000Z",
+  "owner": {
+    "id": 29315,
+    "name": "CactusPie",
+    "profile_photo_url": "https://forge-static.sp-tarkov.com/profile-photos/750af3e70705360132ca4bac33f06e8536a05070_128w.webp",
+    "cover_photo_url": null,
+    "created_at": "2023-03-27T06:24:49.000000Z",
+    "updated_at": "2026-07-10T04:50:29.000000Z"
+  },
+  "additional_authors": [],
+  "license": {
+    "id": 15,
+    "hub_id": 18,
+    "name": "GNU GPLv3",
+    "link": "https://choosealicense.com/licenses/gpl-3.0/",
+    "created_at": "2025-09-26T15:44:12.000000Z",
+    "updated_at": "2025-09-26T15:44:12.000000Z"
+  },
+  "category": null,
+  "source_code_links": [
+    {
+      "url": "https://github.com/CactusPie/SPT-FastHealing",
+      "label": ""
+    }
+  ],
+  "versions": [
+    {
+      "id": 5135,
+      "hub_id": 8773,
+      "version": "1.0.0",
+      "description": "<p>Initial release for 3.7.x</p>\n",
+      "link": "https://forge.sp-tarkov.com/mod/download/1236/fast-healing/1.0.0",
+      "content_length": null,
+      "spt_version_constraint": "~3.7.0",
+      "downloads": 4069,
+      "fika_compatibility": "unknown",
+      "published_at": "2024-01-21T14:05:12.000000Z",
+      "created_at": "2024-01-21T14:05:12.000000Z",
+      "updated_at": "2026-05-14T04:22:36.000000Z",
+      "dependencies": [],
+      "virus_total_links": [
+        {
+          "url": "https://www.virustotal.com/gui/url/ee7d6e50b72abefca02e5224b592fee144545540fa905ac48a507d7947309e5b",
+          "label": ""
+        }
+      ],
+      "download": {
+        "type": "external",
+        "url": "https://release-assets.githubusercontent.com/github-production-release-asset/746220302/5252666d-688b-49cc-9722-779841260b73?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-01T20%3A49%3A25Z&rscd=attachment%3B+filename%3DCactusPie.FastHealing.dll&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-01T19%3A48%3A57Z&ske=2026-08-01T20%3A49%3A25Z&sks=b&skv=2018-11-09&sig=%2FnOFcmn5iD3OmvrMUEPLMfiBex3moYdhYua%2FJwBPEQo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQyOSwibmJmIjoxNzg1NjE1MTI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.tKbdpl25WGxN6CMxuYw8iCrqTAFj6V8YPbTEIGD0WAU&response-content-disposition=attachment%3B%20filename%3DCactusPie.FastHealing.dll&response-content-type=application%2Foctet-stream"
+      }
+    }
+  ],
+  "page": {
+    "modlistCount": null,
+    "authorRoles": []
+  },
+  "capture": {
+    "status": "complete",
+    "capturedAt": "2026-08-01T20:02:11.506Z",
+    "discoveredBy": "mod:914",
+    "error": null
+  }
+}
