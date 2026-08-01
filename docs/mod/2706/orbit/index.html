@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -80,7 +80,7 @@ Full credits at the bottom. ORBIT wouldn’t exist without <span class="dead-lin
 goals: rich loot spots to clear, PvP hotspots to hunt, quest triggers to
 visit, and a real reason to head for extract. They coordinate, loot
 together, and leave when they’re done - just like players.</p>
-<p>Built on <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1337131427803955200" rel="noreferrer noopener">Phobos</a>’s foundations (advection field, cell dispatch, squad movement), with a custom looting layer on top of BSG vanilla APIs (originally inspired by <a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a>, now fully rewritten) and quest routing inspired by <a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener">QuestingBot</a> (but A LOT simpler, no code reuse) - all rebuilt as a single coherent system instead of three layers fighting for control.</p>
+<p>Built on <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1337131427803955200" rel="noreferrer noopener">Phobos</a>’s foundations (advection field, cell dispatch, squad movement), with a custom looting layer on top of Big Silly Goose vanilla APIs (originally inspired by <a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a>, now fully rewritten) and quest routing inspired by <a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener">QuestingBot</a> (but A LOT simpler, no code reuse) - all rebuilt as a single coherent system instead of three layers fighting for control.</p>
 <p>It started as my own personal “best of the three” - picking the parts I
 liked from each and gluing them together. Along the way it grew well
 beyond that, into something I’m proud enough of to share.</p>
@@ -131,7 +131,7 @@ Cautious 85-95%, Average 65-75%, Aggressive 50-60%, GigaChad 30-45%). POIs
 that lose the roll are quietly skipped so the squad never vacuums the
 room 100%, like a real player who missed a few items.</p></div></div>
 <div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Looting In Detail</div>
-<div class="tab-content"><p>The looting layer is custom, built straight on top of BSG’s vanilla bot
+<div class="tab-content"><p>The looting layer is custom, built straight on top of Big Silly Goose’s vanilla bot
 pickup APIs. It handles containers, corpses and loose world items, with a
 focus on making the bots feel like real players rather than vacuum
 cleaners.</p>
@@ -303,7 +303,7 @@ two systems trying to move the same bots.</li>
 </ul>
 <p><strong><a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a></strong></p>
 <ul>
-<li>ORBIT has its own loot pipeline driving BSG vanilla pickup APIs,
+<li>ORBIT has its own loot pipeline driving Big Silly Goose vanilla pickup APIs,
 with per-personality value thresholds. Running both means two
 systems racing to loot the same containers.</li>
 </ul>
@@ -385,7 +385,7 @@ something I can actually act on.</p>
 <li>“Marked-key loot rush” for high-tier squads</li>
 <li>“Spawn rush” for the most aggressive personalities</li>
 <li>“Boss hunting”</li>
-<li>Faction-vs-faction “hunt” objective: a squad actively seeks out another faction’s bots instead of just roaming. Enables rivalries like cultists hunting PMCs, UNTAR hunting scavs, or ISB ↔ Black Division hunting each other. Doubles as a robustness win for custom/vanilla bots whose stock SAIN/BSG nodes sometimes freeze and stop moving (suggested by Firefly on Discord - ISB author)</li>
+<li>Faction-vs-faction “hunt” objective: a squad actively seeks out another faction’s bots instead of just roaming. Enables rivalries like cultists hunting PMCs, UNTAR hunting scavs, or ISB ↔ Black Division hunting each other. Doubles as a robustness win for custom/vanilla bots whose stock SAIN/Big Silly Goose nodes sometimes freeze and stop moving (suggested by Firefly on Discord - ISB author)</li>
 <li>Airdrop / helicopter crash / BTR objectives: squads slow-approach the drop zone, hold position at a nearby vantage for a few minutes (ambush window), then close in and loot. Mimics how players treat airdrops in live, nobody walks straight to the smoke.</li>
 <li>“Rally flare” item: firing it immediately overrides the current objective of every bot alive on the map and sends them converging on the spot it was fired (a hard redirect, not a soft advection nudge). A player-triggered “pull the whole map onto this point” tool, kept separate from the airdrop system so calling a drop never aggros the whole lobby</li>
 <li>Multi-step objectives (activate → loot/extract):
@@ -429,7 +429,7 @@ not single-unit)</li>
 <li>ORBIT is still young and has rough edges. Bug reports and feedback on the <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1509314495019745451" rel="noreferrer noopener">Discord thread</a> are very welcome.</li>
 <li><strong>Most Reserve exfils require switches ORBIT doesn’t operate yet</strong> - bots there mostly stay until killed or raid end.</li>
 <li><strong>Bots walk into minefield</strong> - the rebuilt POI generation doesn’t exclude minefield zones yet, so bots can be routed straight into them. Fix planned.</li>
-<li><strong>Possible interaction with CactusPie’s “Transfer Loot Into Container Automatically” mod</strong> - reported symptom: items a bot loots end up in YOUR tagged containers (SICC case, etc.). Best theory at the moment is that ORBIT routes pickups through BSG vanilla APIs (same path as the player), so a mod hooking those APIs may end up applying its logic to bot pickups too. Investigating.</li>
+<li><strong>Possible interaction with CactusPie’s “Transfer Loot Into Container Automatically” mod</strong> - reported symptom: items a bot loots end up in YOUR tagged containers (SICC case, etc.). Best theory at the moment is that ORBIT routes pickups through Big Silly Goose vanilla APIs (same path as the player), so a mod hooking those APIs may end up applying its logic to bot pickups too. Investigating.</li>
 <li><strong>Faction-mod takeover (RUAF / UNTAR / Black Division) can misbehave</strong> - these mods swap the bot’s brain at runtime (via MoreBotsAPI) and ORBIT’s handling of that handoff is not fully solid yet, so a controlled squad may rapidly switch goals or get stuck. Workaround: leave the per-faction takeover toggles OFF (their default) so ORBIT leaves those bots vanilla. Fix in progress.</li>
 <li><strong>Rare stuck bots</strong> - usually unstick themselves within a minute. Still iterating.</li>
 <li><strong>Mod conflicts</strong> - tested with my own config. Yours may differ. Report anything obviously broken on <a target="_blank" class="external-link" href="https://github.com/Chazut/ORBIT/issues" rel="noreferrer noopener">GitHub</a>.</li>
@@ -450,7 +450,7 @@ was written, give it a try.</p></div></div>
 <ul>
 <li><a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1337131427803955200" rel="noreferrer noopener">Phobos</a> by <span class="dead-link">janky</span> - the original advection-field cell dispatch that ORBIT is built around (MIT, used with explicit permission - see screenshot below).</li>
 <li><a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener">QuestingBot</a> by <span class="dead-link">danW</span> - inspired the quest-routing concept, no code reused.</li>
-<li><a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a> by <span class="dead-link">Skwizzy</span> and <span class="dead-link">ArchangelWTF</span> - ORBIT started out as a Phobos + LB merge; over time many features were added and the looting layer was rewritten from scratch on top of BSG vanilla APIs to fit ORBIT’s design better. No LB code left in the current release.</li>
+<li><a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a> by <span class="dead-link">Skwizzy</span> and <span class="dead-link">ArchangelWTF</span> - ORBIT started out as a Phobos + LB merge; over time many features were added and the looting layer was rewritten from scratch on top of Big Silly Goose vanilla APIs to fit ORBIT’s design better. No LB code left in the current release.</li>
 <li><a target="_blank" class="external-link" href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/" rel="noreferrer noopener">SAIN</a> by <span class="dead-link">Solarint</span>, <span class="dead-link">ArchangelWTF</span> and <span class="dead-link">DrakiaXYZ</span> - without it, no personality system to plug into</li>
 <li><a target="_blank" class="external-link" href="../../902/bigbrain/" rel="noreferrer noopener">BigBrain</a> by <span class="dead-link">DrakiaXYZ</span></li>
 <li>The <strong>SPT team</strong> for an amazing modding framework</li>
@@ -655,7 +655,7 @@ Tooltips are shorter with examples, and percentage sliders read as <code>70%</co
 <ul>
 <li>Per-squad long-term objectives (Kills / LootValue / Quest)</li>
 <li>Five SAIN personality archetypes, each with their own tuning</li>
-<li><strong>Brand-new custom looting layer</strong> built from scratch on top of BSG vanilla APIs:
+<li><strong>Brand-new custom looting layer</strong> built from scratch on top of Big Silly Goose vanilla APIs:
 <ul>
 <li>Per-personality value thresholds (Chad walks past trash, Rat grabs everything, etc.)</li>
 <li>Bot scavs roll random pickups instead of vacuuming corpses</li>
@@ -677,7 +677,7 @@ Tooltips are shorter with examples, and percentage sliders read as <code>70%</co
 <li>Extract at your SPT root - done</li>
 </ol>
 <h2>🙏 Credits</h2>
-<p>Built on top of <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1337131427803955200" rel="noreferrer noopener"><strong>Phobos</strong></a> (used with explicit permission from Janky) and inspired by <a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener"><strong>LootingBots</strong></a> and <a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener"><strong>QuestingBot</strong></a>. The looting layer is fully original code on top of BSG vanilla APIs.</p>
+<p>Built on top of <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1337131427803955200" rel="noreferrer noopener"><strong>Phobos</strong></a> (used with explicit permission from Janky) and inspired by <a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener"><strong>LootingBots</strong></a> and <a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener"><strong>QuestingBot</strong></a>. The looting layer is fully original code on top of Big Silly Goose vanilla APIs.</p>
 <p>Built on <strong>SAIN</strong> and <strong>BigBrain</strong> - none of this works without them.</p>
 </div>
           <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li></ul></div>

@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -116,7 +116,7 @@ in the “Delay between looting” setting before the next loot scan occurs (15s
 <li>BepInEx/plugins/skwizzy.LootingBots.dll - Client plugin responsible for all the new corpse looting logic</li>
 <li>user/mods/Skwizzy-LootingBots-ServerMod - Server mod responsible for:
 <ol>
-<li>Marks all items with DiscardLimits as InsuranceDisabled. It then disables the DiscardLimit settings for the server via the EnableDiscardLimits option in Server/database/globals.json. SPT PMC bots by default spawn with loot already in their backpacks, this loot is not marked Found In Raid and thus is subject to BSG’s RMT protection logic. With discard limits enabled, when a bot drops their backback to swap to a new one any loot with discard limits in their bag will be deleted immediately when the bag is dropped. To avoid this we set the EnableDiscardLimits to false, and also make sure to flag all items with a DiscardLimit &gt;= 0 as InsuranceDisabled to prevent items suchs as keys and cases to be insured.</li>
+<li>Marks all items with DiscardLimits as InsuranceDisabled. It then disables the DiscardLimit settings for the server via the EnableDiscardLimits option in Server/database/globals.json. SPT PMC bots by default spawn with loot already in their backpacks, this loot is not marked Found In Raid and thus is subject to Big Silly Goose’s RMT protection logic. With discard limits enabled, when a bot drops their backback to swap to a new one any loot with discard limits in their bag will be deleted immediately when the bag is dropped. To avoid this we set the EnableDiscardLimits to false, and also make sure to flag all items with a DiscardLimit &gt;= 0 as InsuranceDisabled to prevent items suchs as keys and cases to be insured.</li>
 <li>Provides the option to clear out the loot that PMC/Scav bots start with<br>
 in their backpacks. This does not include meds, ammo, grenades ect. These options can be found in the Skwizzy-LootingBots-ServerMod/config/config.json.</li>
 </ol>
@@ -282,7 +282,7 @@ in their backpacks. This does not include meds, ammo, grenades ect. These option
           </div>
           <div class="prose version-notes"><ul>
 <li>Updated to SPT 4.0</li>
-<li>Disabled a few things related to BSG“s loot layers</li>
+<li>Disabled a few things related to Big Silly Goose“s loot layers</li>
 </ul>
 <p><strong>Support for this release will be very limited to non-existent, I may come back to fix critical issues if they arise</strong></p>
 </div>
@@ -346,7 +346,7 @@ in their backpacks. This does not include meds, ammo, grenades ect. These option
             <span>1,587 downloads</span><span>Unknown size</span>
           </div>
           <div class="prose version-notes"><p>- Updated to SPT 3.11</p>
-<p>- Adds a new patch to completely turn off BSG’s looting layer</p>
+<p>- Adds a new patch to completely turn off Big Silly Goose’s looting layer</p>
 <p>- Slightly increased looting bot range (From 75 to 80)</p>
 </div>
           

@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -42,7 +42,7 @@
       <span class="badge"></span>
     </div>
     <h1>Live Flea Prices</h1>
-    <p class="hero-teaser">Keep your flea prices up to date with data processed from Tarkov.dev</p>
+    <p class="hero-teaser">Keep your flea prices up to date with data processed from THE CITY.dev</p>
     <div class="author-list">
       <span class="author"><img src="../../../assets/f1d2533c994ed91f540679bbc6ee02e42ba70149b776e37c1534147c67e656a6.webp" alt="" width="32" height="32">DrakiaXYZ</span>
       
@@ -68,7 +68,7 @@
       
     </div>
 
-    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>A very simple mod that pulls live flea data from a GitHub mirror of processed Tarkov.dev flea data, this mirror is updated once an hour. The mod will re-download the flea data every hour while your server is active, or if it’s been over an hour since the last update when you launch your server.</p>
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>A very simple mod that pulls live flea data from a GitHub mirror of processed THE CITY.dev flea data, this mirror is updated once an hour. The mod will re-download the flea data every hour while your server is active, or if it’s been over an hour since the last update when you launch your server.</p>
 <p>The flea prices are processed using approximately the same method as SPT utilizes for flea prices, just updated every hour.</p>
 <p><strong>Notice: This mod connects to an external service to fetch price data, this service is not maintained by or associated with the SPT project.</strong></p>
 <h3>Installation</h3>
@@ -107,7 +107,7 @@
 <li>Fix issue where prices wouldn’t be honored after the first flea generation</li>
 <li>Fix issue where changing game mode wouldn’t fetch updated prices until refresh timer ran out</li>
 </ul>
-<p>Backing database PvP price fetching is being re-enabled, good luck, and don’t complain that they’re out of whack, that’s what happens when BSG destroys the economy</p>
+<p>Backing database PvP price fetching is being re-enabled, good luck, and don’t complain that they’re out of whack, that’s what happens when Big Silly Goose destroys the economy</p>
 </div>
           
           <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/68d657366e9a8217a8fd62d2e52e683af891c1e71a58bfaf707e761a9ed1858d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
@@ -128,7 +128,7 @@
           <div class="prose version-notes"><ul>
 <li>Update for SPT 4.0.0</li>
 <li>Rewrite in C#</li>
-<li>Backing database PvP prices have been reverted to July 1st, and fetching from Tarkov.dev has been disabled for PvP until next wipe because BSG screwed the economy</li>
+<li>Backing database PvP prices have been reverted to July 1st, and fetching from THE CITY.dev has been disabled for PvP until next wipe because Big Silly Goose screwed the economy</li>
 </ul>
 </div>
           
@@ -150,7 +150,7 @@
           <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
 <ul>
 <li>Add new config to allow disabling price fetching</li>
-<li>Backing database PvP prices have been reverted to July 1st, and fetching from Tarkov.dev has been disabled for PvP until BSG re-enables the flea on live</li>
+<li>Backing database PvP prices have been reverted to July 1st, and fetching from THE CITY.dev has been disabled for PvP until Big Silly Goose re-enables the flea on live</li>
 </ul>
 <p>New config option <code>disablePriceFetching</code> allows disabling the fetching of prices from the backing database, and instead will always use the price file located at <code>user\\mods\\zzDrakiaXYZ-LiveFleaPrices\\config\\prices.json</code>. If this file doesn’t exist, it will be downloaded from the backing database once and not updated after that point.</p>
 <p>Previous price files can be retrieved by looking through the commit history of the backing database repository:</p>

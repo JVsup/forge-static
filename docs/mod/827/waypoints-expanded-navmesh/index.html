@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -84,10 +84,10 @@
 <p>I have had to remove the list of recommended mods, as some users appear to be unable to validate that mods are compatible with their version of SPT before installing them, and I can’t be bothered constantly updating this list as mods update.</p>
 <h3>Compatibility</h3>
 <p>This mod should be compatible with other bot-adjusting mods.</p>
-<p>If your Tarkov stops loading after installing Waypoints, no it is not Waypoints breaking your install, you have installed another out of date mod that depends on Waypoints, and installing Waypoints has caused that mod to actually load and break things.</p>
+<p>If your THE CITY stops loading after installing Waypoints, no it is not Waypoints breaking your install, you have installed another out of date mod that depends on Waypoints, and installing Waypoints has caused that mod to actually load and break things.</p>
 <h3>Limitations</h3>
 <p>I’ve created custom navmeshes for every map, so bots are now capable of getting almost anywhere that a player can walk to. Bots however are not capable of complex actions such as jumping, or crouching, so there are still some areas of maps that bots won’t be able to traverse.</p>
-<p>The newest iteration of the navmesh is based around the same settings BSG has used for creating their meshes, but expanded to the full map. This does limit bot navigation in certain areas, but ensures there is less likely to be issues created by trying to force bots into places they can’t actually navigate.</p>
+<p>The newest iteration of the navmesh is based around the same settings Big Silly Goose has used for creating their meshes, but expanded to the full map. This does limit bot navigation in certain areas, but ensures there is less likely to be issues created by trying to force bots into places they can’t actually navigate.</p>
 <h3>Special Thanks</h3>
 <p>I want to give special thanks to Solarint for his assistance in making the collection of waypoints provided with the original version of the plugin, as well as being a sounding board for ideas and issues encountered during development. And for his work on SAIN to make Waypoints even better!</p>
 <p>Thank you to TINYTEETH for testing the mod before release, and making sure I didn’t destroy the world by accident! And for all the feedback on the custom nav meshes so I could make sure they were ready for release.</p>
@@ -216,7 +216,7 @@
 <li>Add custom meshes for all maps</li>
 <li>Tweak existing custom meshes</li>
 </ul>
-<p>Turns out BSG’s meshes skip locked doors, which is problematic for other mods that depend on bots being able to walk through locked doors</p>
+<p>Turns out Big Silly Goose’s meshes skip locked doors, which is problematic for other mods that depend on bots being able to walk through locked doors</p>
 </div>
           
           <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9369d2f01dbf38978fb49cb2c2e02dea94b842371557ae8bb3d37281863907b3" target="_blank" rel="noreferrer noopener">report 1</a></div>
@@ -261,7 +261,7 @@
 <p>Update for SPT 3.10.0</p>
 </li>
 <li>
-<p>Reduced to only 4 navmeshes, as BSG has mostly full map navmesh for maps now. Included meshes:</p>
+<p>Reduced to only 4 navmeshes, as Big Silly Goose has mostly full map navmesh for maps now. Included meshes:</p>
 <ul>
 <li>Interchange</li>
 <li>Lighthouse</li>
@@ -334,7 +334,7 @@
 <li>Update for 3.9.0</li>
 <li>Drop woods expanded navmesh for now, needs to be re-generated due to map restructuring</li>
 <li>Handle Ground Zero level 21+ map</li>
-<li>Disable GroupPoint patches, as BSG refactored that part of the code. Will need to see if it performs better</li>
+<li>Disable GroupPoint patches, as Big Silly Goose refactored that part of the code. Will need to see if it performs better</li>
 </ul>
 </div>
           
@@ -430,9 +430,9 @@
 <li>Remove the capability to add new patrol points, and all associated code</li>
 <li>Implement new method of handling locked doors, to work with the new method of navmesh generation</li>
 <li>Add handling of special door types (Cargo doors on Labs, elevators on Labs, D2 door on Reserve)</li>
-<li>Add a workaround for the fact BSG doesn’t enable door carvers any more</li>
+<li>Add a workaround for the fact Big Silly Goose doesn’t enable door carvers any more</li>
 <li>Add a workaround for doors on some maps having a NavMeshObstacle instead of a NavMeshDoorLink</li>
-<li>Regenerate all navmeshes using a new method, will more closely resemble the BSG meshes but expanded for the full map</li>
+<li>Regenerate all navmeshes using a new method, will more closely resemble the Big Silly Goose meshes but expanded for the full map</li>
 <li>Server mod is no longer necessary</li>
 </ul>
 </div>

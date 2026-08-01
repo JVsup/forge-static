@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -132,7 +132,7 @@
 <hr>
 <p>What’s New in v2.0.7</p>
 <p>Critical: Fixed gear not restoring on death when SVM is installed. SVM replaces MatchCallbacks, which prevented our primary restoration path from running. The fallback was too late in SPT’s pipeline. Fix: override SetInventory to restore snapshot items before they get copied to the server profile.</p>
-<p>Medium: Fixed melee weapons being deleted from non-managed Scabbard slots. In normal Tarkov, melee weapons are never lost on death. Scabbard is now always preserved.</p>
+<p>Medium: Fixed melee weapons being deleted from non-managed Scabbard slots. In normal THE CITY, melee weapons are never lost on death. Scabbard is now always preserved.</p>
 <p>48 unit tests (10 serialization + 38 restoration algorithm). Server-side fix, client DLL unchanged.</p>
 <hr>
 <p>Links</p>
@@ -165,7 +165,7 @@
 </ul>
 <p><strong>Fix:</strong> Override <code>SetInventory</code> in <code>CustomInRaidHelper</code> to restore snapshot items into <code>postRaidProfile</code> BEFORE <code>base.SetInventory</code> copies them to the server profile. The snapshot file acts as coordination: if <code>RaidEndInterceptor</code> already ran, it deleted the file so <code>SetInventory</code> finds nothing. If SVM prevented it, the file still exists.</p>
 <h3>Scabbard Deletion on Death (MEDIUM)</h3>
-<p><strong>Problem:</strong> Melee weapons were being deleted from non-managed Scabbard slots. In normal Tarkov, melee weapons are never lost on death.</p>
+<p><strong>Problem:</strong> Melee weapons were being deleted from non-managed Scabbard slots. In normal THE CITY, melee weapons are never lost on death.</p>
 <p><strong>Fix:</strong> Added Scabbard to always-preserved slots in <code>DeleteNonManagedSlotItems</code>.</p>
 <h3>Technical</h3>
 <ul>
@@ -252,9 +252,9 @@ are never deleted, but their <strong>contents</strong> are now properly removed 
 <code>preservedManagedContainerIds</code> set to track containers whose children should be seeded into the BFS removal queue.</p>
 <h3>Pockets Death Mechanics</h3>
 <p>In <code>DeleteNonManagedSlotItems</code> (partial death processing), Pockets was treated identically to SecuredContainer — both
-container and contents were always preserved. But in normal Tarkov, SecuredContainer contents survive death while
+container and contents were always preserved. But in normal THE CITY, SecuredContainer contents survive death while
 Pockets contents are lost.</p>
-<p><strong>Fix:</strong> SecuredContainer preserves container + contents (normal Tarkov). Pockets preserves container but deletes
+<p><strong>Fix:</strong> SecuredContainer preserves container + contents (normal THE CITY). Pockets preserves container but deletes
 contents when not managed (normal death behavior).</p>
 <h2>Installation</h2>
 <ol>
@@ -665,7 +665,7 @@ v1.4.8, missing the magazine ammo fix and other v1.4.9 features.</p>
 <p><strong>Critical Bug Fix:</strong> Secure containers (and other non-managed slots) were being deleted when they should have
 been preserved.</p>
 <h3>The Problem</h3>
-<p>When users set “Restore Secure Container to Snapshot” to <strong>false</strong> (meaning they wanted normal Tarkov behavior
+<p>When users set “Restore Secure Container to Snapshot” to <strong>false</strong> (meaning they wanted normal THE CITY behavior
 where secure container contents are always kept), the secure container was being <strong>deleted entirely</strong> on death
 instead of being preserved.</p>
 <p>This also affected users running mods like SVM (Server Value Modifier) that route through a different code path.</p>
@@ -674,7 +674,7 @@ instead of being preserved.</p>
 <code>CustomInRaidHelper.cs</code>). Now:</p>
 <ul>
 <li><strong>Enabled slots</strong> → Items removed and restored from snapshot</li>
-<li><strong>Disabled slots</strong> → Items preserved (normal Tarkov behavior)</li>
+<li><strong>Disabled slots</strong> → Items preserved (normal THE CITY behavior)</li>
 <li><strong>Empty slots at snapshot time</strong> → Looted items removed on death</li>
 </ul>
 <h2>Installation</h2>
@@ -767,7 +767,7 @@ full</li>
 <li>
 <p><strong>Secure Container Deleted When Disabled</strong>: Fixed critical bug where disabling “Restore Secure Container to
 Snapshot” in config caused the secure container to be deleted entirely on death, instead of being preserved with
-normal Tarkov behavior. Non-managed slots are now properly preserved. (Reported by @rimmyjob via GitHub #4)</p>
+normal THE CITY behavior. Non-managed slots are now properly preserved. (Reported by @rimmyjob via GitHub #4)</p>
 </li>
 <li>
 <p><strong>Release Package Structure</strong>: Fixed folder structure in release packages - server mod now correctly placed in

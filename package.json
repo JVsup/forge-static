@@ -10,6 +10,7 @@
   "scripts": {
     "capture": "node src/capture.mjs",
     "build": "node src/build.mjs",
+    "test": "node --test",
     "verify": "node src/verify.mjs",
     "serve": "node src/serve.mjs",
     "archive": "npm run capture && npm run build && npm run verify"

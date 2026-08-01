@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -68,7 +68,7 @@
       
     </div>
 
-    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>NOTE: I just want to dispel some misinformation that gets tossed around about this mod. First, I mention in this description that I’m not sure if it causes issues with other mods, so far I have never experienced a single issue. Second, there is no reason NOT to install this mod, it only does good, less VRAM usage = good. And third, this doesn’t just remove pre-allocation. Unity on DX11 doesn’t reserve a fixed VRAM pool. Tarkov’s VRAM stats with the fps 3 command, I’m 99% sure is not accurate, check task manager to see actual VRAM usage.</strong></p>
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>NOTE: I just want to dispel some misinformation that gets tossed around about this mod. First, I mention in this description that I’m not sure if it causes issues with other mods, so far I have never experienced a single issue. Second, there is no reason NOT to install this mod, it only does good, less VRAM usage = good. And third, this doesn’t just remove pre-allocation. Unity on DX11 doesn’t reserve a fixed VRAM pool. THE CITY’s VRAM stats with the fps 3 command, I’m 99% sure is not accurate, check task manager to see actual VRAM usage.</strong></p>
 <p>Have you ever wanted to play SPT at 12k resolution but your VRAM keeps maxing out?</p>
 <p>Well, now you can! No not really, but this mod should help clear up about 1-2GB of VRAM. There will be a small lag spike right after the start raid countdown finishes, this only happens once at the start of each raid.</p>
 <p>This mod unloads unused assets such as textures, meshes, and audio and as a result, clears up a chunk of VRAM.</p>
@@ -121,7 +121,7 @@
 <ul>
 <li>Added a check to see if the cleaner ran at the start of the raid and avoid any calls to run it again during raid (this is just for compatibility sake with other mods if there’s any UI mods that call EFT.UI.PreloaderUI.ShowRaidStartInfo regularly)</li>
 </ul>
-<p>Also, just want to explain something about this. I know someone in the comments mentioned that EFT allocates VRAM so this mod could functionally be doing nothing. I’m not so sure about that though, something weird is going on. When you use the fps 3 command to view VRAM usage, you’ll notice, none of the VRAM usage numbers in there change with this mod installed vs not installed. Despite that, VRAM usage still shows a considerable drop in windows task manager. I have no idea what’s going on here but it doesn’t seem to break anything so it could be BSG not handling VRAM allocation right or something weird is going on with the fps 3 command monitor.</p>
+<p>Also, just want to explain something about this. I know someone in the comments mentioned that EFT allocates VRAM so this mod could functionally be doing nothing. I’m not so sure about that though, something weird is going on. When you use the fps 3 command to view VRAM usage, you’ll notice, none of the VRAM usage numbers in there change with this mod installed vs not installed. Despite that, VRAM usage still shows a considerable drop in windows task manager. I have no idea what’s going on here but it doesn’t seem to break anything so it could be Big Silly Goose not handling VRAM allocation right or something weird is going on with the fps 3 command monitor.</p>
 </div>
           
           <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/61677fdc97d0050a35a1a07be4f7fd8c3d619a3fe7bc699c794589558e99ba41?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>

@@ -3,7 +3,7 @@
 <section class="index-hero">
   <p class="kicker">One-time public information snapshot</p>
   <h1>{{ heading }}</h1>
-  <p>Every archived item is listed on this page. Search and filters run only in your browser.</p>
+  <p>{{ intro }}</p>
   <div class="count-line"><strong data-result-count>{{ mods.length | number }}</strong> visible of {{ mods.length | number }}</div>
 </section>
 
@@ -32,4 +32,3 @@
 </section>
 {% endif %}
 {% endblock %}
-

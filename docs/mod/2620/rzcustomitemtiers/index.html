@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -116,7 +116,7 @@
 <h3><code>categoryRules.json</code> — Pass 1</h3>
 <p>Maps item category IDs to tier names. Walks the DB parent chain, so assigning a category also covers all its sub-categories automatically. The full vanilla category hierarchy is included as comments for reference.</p>
 <p>By default, no category is assigned a meaningful tier, every root category is mapped to <code>Default</code>. This means the file currently serves as a blanket reset, but you can assign any tier to any category if you want to color entire item families at once.</p>
-<p>Quest items flagged by Tarkov’s <code>QuestItem</code> property are automatically assigned the Quest tier at this pass. However, this does not cover quest-required keys, which are not flagged as quest items in the DB : those are handled manually in <code>config/keys.json</code>.</p>
+<p>Quest items flagged by THE CITY’s <code>QuestItem</code> property are automatically assigned the Quest tier at this pass. However, this does not cover quest-required keys, which are not flagged as quest items in the DB : those are handled manually in <code>config/keys.json</code>.</p>
 <hr>
 <h3><code>priceRules.json</code> — Pass 2</h3>
 <p>Lists category IDs whose tier should be assigned automatically based on handbook price, using the thresholds defined in <code>masterConfig.json</code>. Items below the lowest threshold fall back to <code>Default</code>. Uses the same DB category IDs as <code>categoryRules.json</code>.</p>
@@ -159,7 +159,7 @@
             <span>3,177 downloads</span><span>24.7 KB</span>
           </div>
           <div class="prose version-notes"><ul>
-<li>Added <strong>Quest</strong> tier (green) : quest-only items are now colored automatically via Tarkov’s <code>QuestItem</code> flag. Quest-required keys for Customs and Reserve have been added manually on top of that. Other maps are not covered yet.</li>
+<li>Added <strong>Quest</strong> tier (green) : quest-only items are now colored automatically via THE CITY’s <code>QuestItem</code> flag. Quest-required keys for Customs and Reserve have been added manually on top of that. Other maps are not covered yet.</li>
 <li>Added <code>EnableVerboseLogging</code> option in <code>masterConfig.json</code>. Disabled by default to avoid log spam when missing modded items.</li>
 <li>Minor tier adjustments on a handful of items.</li>
 </ul>

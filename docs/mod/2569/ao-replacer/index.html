@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -42,7 +42,7 @@
       <span class="badge"></span>
     </div>
     <h1>AO Replacer</h1>
-    <p class="hero-teaser">Replaces Tarkov&#39;s HBAO with GTAO, a more accurate ambient occlusion method</p>
+    <p class="hero-teaser">Replaces THE CITY&#39;s HBAO with GTAO, a more accurate ambient occlusion method</p>
     <div class="author-list">
       <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
       
@@ -70,10 +70,10 @@
 
     <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>AO Replacer</strong></p>
 <p><strong>NOTE: If you are using SPT-VR, you do not need this mod. It is built into SPT-VR because it requires it for proper stereo/VR support. You will get errors if you use this with SPT-VR</strong></p>
-<p>This is a total replacement of Tarkov’s built in AO. Tarkov uses an AO method called “HBAO” or horizon based ambient occlusion. This replacer uses “GTAO” or ground truth ambient occlusion. GTAO is a more modern and accurate method of doing ambient occlusion.</p>
+<p>This is a total replacement of THE CITY’s built in AO. THE CITY uses an AO method called “HBAO” or horizon based ambient occlusion. This replacer uses “GTAO” or ground truth ambient occlusion. GTAO is a more modern and accurate method of doing ambient occlusion.</p>
 <p>If you aren’t sure what exactly AO is, here’s some examples - <a target="_blank" class="external-link" href="https://slow.pics/c/lVhGdZXE" rel="noreferrer noopener">https://slow.pics/c/lVhGdZXE</a></p>
 <p>When you go to that link, if you click the picture, it’ll cycle through No AO, GTAO (this mod), and HBAO (EFT’s). At the top left, you can click the comparison drop down and select the second comparison to see another example. At the bottom, you can enable a slider example so you can move a slider between examples</p>
-<p>There isn’t any configuration on this currently, possibly in the future. It just takes over the AO settings in graphics settings of Tarkov.</p>
+<p>There isn’t any configuration on this currently, possibly in the future. It just takes over the AO settings in graphics settings of THE CITY.</p>
 <p><strong>NOTE: Colored Ultra AO currently does the same as just Ultra in this mod since this GTAO doesn’t have an equivalent</strong></p>
 <p>To install, just copy the contents of the “AOReplacer” folder into your SPT directory.</p>
 <p><strong>This is compatible with Hollywood FX/Graphics but the ambient occlusion settings in that mod will be ignored in favor of this one. Hollywood Graphics uses the built in AO, this replaces that AO. Double ambient occlusion is bad so I want to avoid that happening.</strong></p>
@@ -138,7 +138,7 @@
 <ul>
 <li>Adjusted AO to use Deferred/GBuffer rather than having it be a post effect using camera normals</li>
 </ul>
-<p>This change makes it so that the AO takes effect before the lighting pass. This results in more realistic/accurate AO. There won’t be just shading on every corner. This causes the AO effect all together to be less aggressive and noticeable. You’ll only see shading when the lighting in the spot is darker/not lit up by any lights. This is more in-line with my goal for this mod because Tarkov’s AO is a post effect that just applies to the final scene and doesn’t take lighting, normals, and reflections into account.</p>
+<p>This change makes it so that the AO takes effect before the lighting pass. This results in more realistic/accurate AO. There won’t be just shading on every corner. This causes the AO effect all together to be less aggressive and noticeable. You’ll only see shading when the lighting in the spot is darker/not lit up by any lights. This is more in-line with my goal for this mod because THE CITY’s AO is a post effect that just applies to the final scene and doesn’t take lighting, normals, and reflections into account.</p>
 <p>Built-in HBAO vs GTAO using Gbuffer:
 <a target="_blank" class="external-link" href="https://imgsli.com/NDQ2NTA3" rel="noreferrer noopener">https://imgsli.com/NDQ2NTA3</a></p>
 <p>No AO vs GTAO using GBuffer:

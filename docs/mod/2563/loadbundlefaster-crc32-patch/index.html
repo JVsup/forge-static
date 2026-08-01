@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -93,7 +93,7 @@
 <ul>
 <li>CPU: Must support SSE4.1 and PCLMULQDQ instructions.</li>
 <li>In human terms: Unless your CPU was stolen from a museum, you are fine.</li>
-<li>The Litmus Test: If your PC can even launch Escape From Tarkov (let alone play it), your CPU is already way too powerful for this project. If you are capable of getting “Head, Eyes,” you are capable of running this plugin.</li>
+<li>The Litmus Test: If your PC can even launch Escape From THE CITY (let alone play it), your CPU is already way too powerful for this project. If you are capable of getting “Head, Eyes,” you are capable of running this plugin.</li>
 <li>(Basically, any Intel CPU after 2010 or AMD CPU after 2011 works perfectly.)</li>
 </ul>
 <h3>Installation</h3>
@@ -105,7 +105,7 @@
 </ol>
 <h3>Technical Details (For the curious)</h3>
 <h4>The Bottleneck</h4>
-<p>Escape From Tarkov runs on a version of Unity using an older Mono runtime. This runtime’s JIT compiler lacks “Automatic Vectorization” (Auto-SIMD). As a result, standard C# CRC32 calculations are processed byte-by-byte (scalar), which is incredibly slow for large data bundles.</p>
+<p>Escape From THE CITY runs on a version of Unity using an older Mono runtime. This runtime’s JIT compiler lacks “Automatic Vectorization” (Auto-SIMD). As a result, standard C# CRC32 calculations are processed byte-by-byte (scalar), which is incredibly slow for large data bundles.</p>
 <p><strong>The Evidence (FlameGraph):</strong>
 <img loading="lazy" decoding="async" src="../../../assets/589d464137d0c00fa57c764cbf01f1a721d0d36f74c061d6291aadd28fa86e89.webp" alt="FlameGraph Analysis"></p>
 <ul>

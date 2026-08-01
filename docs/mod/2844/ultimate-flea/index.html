@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -42,7 +42,7 @@
       <span class="badge"></span>
     </div>
     <h1>Ultimate Flea</h1>
-    <p class="hero-teaser">Full flea control for SPT 4.0: manage the item pool, set prices, pull Tarkov.dev averages, and run a local supply/demand economy with early-wipe scaling.</p>
+    <p class="hero-teaser">Full flea control for SPT 4.0: manage the item pool, set prices, pull THE CITY.dev averages, and run a local supply/demand economy with early-wipe scaling.</p>
     <div class="author-list">
       <span class="author"><img src="../../../assets/ca190e852ee9f53bb8fa93fe590498373ebe6409496d5f51cc3563e103147bb0.webp" alt="" width="32" height="32">ZloyMolodoy</span>
       
@@ -70,12 +70,12 @@
 
     <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>UltimateFlea</h1>
 <p>Server-side flea market mod for <strong>SPT 4.0</strong>.</p>
-<p>Control what can be sold, set prices yourself, pull live averages from Tarkov.dev, and run a local supply/demand economy with early-wipe scaling.</p>
+<p>Control what can be sold, set prices yourself, pull live averages from THE CITY.dev, and run a local supply/demand economy with early-wipe scaling.</p>
 <div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
 <div class="tab-content"><ul>
 <li><strong>Item pool</strong> — blacklist / whitelist by item ID or category</li>
 <li><strong>Pricing</strong> — fixed prices, global/item/category multipliers</li>
-<li><strong>Tarkov.dev prices</strong> — uses <code>avg24hPrice</code> from <code>json.tarkov.dev</code> (with cache fallback)</li>
+<li><strong>THE CITY.dev prices</strong> — uses <code>avg24hPrice</code> from <code>json.tarkov.dev</code> (with cache fallback)</li>
 <li><strong>Local economy</strong> — buys raise demand, sold player offers raise supply</li>
 <li><strong>Early wipe</strong> — temporary price multiplier based on character age (<code>RegistrationDate</code>)</li>
 <li><strong>WTT-friendly</strong> — can unblacklist custom items so they appear on the flea</li>
@@ -87,7 +87,7 @@
 <li>Edit configs in <code>config/</code> next to the DLL</li>
 <li>Start the server</li>
 </ol>
-<p>Default configs use a <strong>realistic flea</strong> preset (Tarkov.dev prices + mild economy).</p></div></div>
+<p>Default configs use a <strong>realistic flea</strong> preset (THE CITY.dev prices + mild economy).</p></div></div>
 <div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Config</div>
 <div class="tab-content"><table>
 <thead>
@@ -116,13 +116,13 @@
 </tbody>
 </table>
 <p>Item IDs: <a target="_blank" class="external-link" href="https://db.sp-tarkov.com/" rel="noreferrer noopener">https://db.sp-tarkov.com/</a></p>
-<p>Economy state is saved to <code>data/economy_state.json</code>. Tarkov.dev prices are cached under <code>data/</code> as well.</p></div></div>
+<p>Economy state is saved to <code>data/economy_state.json</code>. THE CITY.dev prices are cached under <code>data/</code> as well.</p></div></div>
 <div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">How to configure</div>
 <div class="tab-content"><p>Edit JSON files in <code>SPT/user/mods/UltimateFlea/config/</code>, then restart the server.</p>
 <p><strong>Quick start</strong></p>
 <ol>
 <li>Leave the default <strong>realistic</strong> preset if you just want live-ish prices.</li>
-<li>Set <code>"priceSource": "tarkovdev"</code> for Tarkov.dev averages, or <code>"local"</code> for SPT handbook/prices.</li>
+<li>Set <code>"priceSource": "tarkovdev"</code> for THE CITY.dev averages, or <code>"local"</code> for SPT handbook/prices.</li>
 <li>Use <code>pool.json</code> only if you want to force-add/remove items.</li>
 <li>Use <code>pricing.json</code> for fixed prices or multipliers.</li>
 <li>Tune <code>economy.json</code> if prices move too fast/slow or wipe feels too strong.</li>
@@ -296,7 +296,7 @@
 I haven’t tested it extensively with FIKA, but there should be no architecture conflict.</p></div></div>
 <div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Planned</div>
 <div class="tab-content"><ul>
-<li>Level-locked flea sales (like live Tarkov)</li>
+<li>Level-locked flea sales (like live THE CITY)</li>
 <li>Separate market events / stronger trend systems</li>
 </ul></div></div>
 <div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Bugs</div>

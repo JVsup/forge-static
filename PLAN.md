@@ -140,3 +140,12 @@ bytů, ale každý zdrojový obrázek musí zůstat vizuálně reprezentovaný.
 - Publikace jde přímo do `main`, bez pull requestu, protože repozitář je určen
   výhradně pro tento archiv.
 
+## Prezentační úpravy snapshotu
+
+- Původní normalizovaná data zůstávají beze změny. Při sestavení veřejného webu
+  se v běžném viditelném textu nahrazují názvy společnosti a samostatné slovo
+  `Tarkov`; názvy modů a addonů, URL, identifikátory a technické ukázky jsou
+  chráněné a zůstávají přesně dohledatelné v původním znění.
+- Index výslovně uvádí zaměření archivu na SPT 4.0.0 a novější a upozornění na
+  všech stránkách říká, že jednorázový snapshot je poskytovaný bez údržby,
+  podpory a záruk.

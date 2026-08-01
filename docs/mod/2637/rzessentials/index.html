@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -111,7 +111,7 @@
 <p><strong>Armor plates</strong> — Shows class and effective durability in the item description, and appends a <code>[class/eff. durability]</code> suffix to the item name.</p>
 <p><strong>Key</strong> — Shows a custom description for keys : what the key opens, what loot to expect, and any related quests.</p>
 <blockquote>
-<p>⚠️ Streets of Tarkov keys are not covered. There are also very likely errors in the listed keys, I can’t be bothered to verify all of them. If you feel like doing a proper pass and want to submit a corrected version, send it my way and I’ll include it.</p>
+<p>⚠️ Streets of THE CITY keys are not covered. There are also very likely errors in the listed keys, I can’t be bothered to verify all of them. If you feel like doing a proper pass and want to submit a corrected version, send it my way and I’ll include it.</p>
 </blockquote>
 <hr>
 <p><a target="_blank" class="external-link" href="https://i.imgur.com/rHdlmMX.png" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/ea65a2561eb939b9ccd768e7260b1dd09f06af377cfaeda11a0d5f78c360b6f7.webp" alt="1"></a></p>
@@ -153,7 +153,7 @@
 <h4><code>categoryRules.json</code> — Pass 1</h4>
 <p>Maps item category IDs to tier names. Walks the DB parent chain, so assigning a category also covers all its sub-categories automatically. The full vanilla category hierarchy is included as comments for reference.</p>
 <p>By default, no category is assigned a meaningful tier, every root category is mapped to <code>Default</code>. This means the file currently serves as a blanket reset, but you can assign any tier to any category if you want to color entire item families at once.</p>
-<p>Quest items flagged by Tarkov’s <code>QuestItem</code> property are automatically assigned the Quest tier at this pass. However, this does not cover quest-required keys, which are not flagged as quest items in the DB : those are handled manually in <code>config/keys.json</code>.</p>
+<p>Quest items flagged by THE CITY’s <code>QuestItem</code> property are automatically assigned the Quest tier at this pass. However, this does not cover quest-required keys, which are not flagged as quest items in the DB : those are handled manually in <code>config/keys.json</code>.</p>
 <hr>
 <h4><code>priceRules.json</code> — Pass 2</h4>
 <p>Lists category IDs whose tier should be assigned automatically based on handbook price, using the thresholds defined in <code>masterConfig.json</code>. Items below the lowest threshold fall back to <code>Default</code>. Uses the same DB category IDs as <code>categoryRules.json</code>.</p>
@@ -184,7 +184,7 @@
 <p>⚠️ Grid resizing, known limitation : Grid overrides work correctly for most items (containers, cases, pouches, stash). For backpacks specifically, some have a GridLayoutComponent with a layout baked into a Unity prefab. For those the inventory UI may still display the original layout. The mod BetterBackpacks solves this with a BepInEx client patch. RZEssentials does not include a client component and this will not be fixed.</p>
 </blockquote>
 <blockquote>
-<p>⚠️ Increasing the stack size of non-stackable items is not supported. Tarkov’s inventory system is not designed for it, and the results range from balance-breaking to outright broken mechanics. Better that way I guess, it’s not Minecraft after all.</p>
+<p>⚠️ Increasing the stack size of non-stackable items is not supported. THE CITY’s inventory system is not designed for it, and the results range from balance-breaking to outright broken mechanics. Better that way I guess, it’s not Minecraft after all.</p>
 </blockquote>
 <blockquote>
 <p>💡 The one limitation worth knowing : this system works cleanly on flat numeric and boolean properties. Nested structures like attachment filter lists require dedicated code and are not supported, except container grids, which are explicitly handled.</p>

@@ -67,7 +67,10 @@ export function prepareDependencies(value, recordLookup, fromFile) {
 
 export function sanitizeRichHtml(html, context) {
   if (!html) return '<p class="empty-state">No description was available in the snapshot.</p>';
-  const { currentFile, assetMap, recordLookup, placeholderHref } = context;
+  const {
+    currentFile, assetMap, recordLookup, placeholderHref,
+    transformText = (value) => value,
+  } = context;
   const $ = cheerio.load(String(html), null, false);
   $('script,style,link,meta,base,form,input,button,textarea,select,option,noscript').remove();
   $('*').each((_, element) => {
@@ -112,6 +115,19 @@ export function sanitizeRichHtml(html, context) {
     if (isForgeUrl(source)) media.replaceWith('<p class="unavailable-embed">Forge-hosted embed unavailable in this archive.</p>');
     else if (source) media.replaceWith(`<p><a href="${source}" target="_blank" rel="noreferrer noopener">Open external media</a></p>`);
     else media.remove();
+  });
+  $('*').contents().each((_, node) => {
+    if (node.type !== 'text') return;
+    const parent = $(node).parent();
+    if (parent.closest('code,pre,kbd,samp').length) return;
+    node.data = transformText(node.data);
+  });
+  $('[alt],[title]').each((_, element) => {
+    const item = $(element);
+    if (item.closest('code,pre,kbd,samp').length) return;
+    for (const attribute of ['alt', 'title']) {
+      if (item.attr(attribute) !== undefined) item.attr(attribute, transformText(item.attr(attribute)));
+    }
   });
   return $.html();
 }

@@ -11,6 +11,7 @@ import {
   compatibleSptVersions, deriveSptVersions, makeRecordLookup, outputPath,
   prepareDependencies, recordHref, relativeFileUrl, sanitizeRichHtml,
 } from './lib/render.mjs';
+import { createVisibleTextTransformer } from './lib/text-transform.mjs';
 
 async function loadRecords(type) {
   const directory = path.join(DATA_DIR, type === 'mod' ? 'mods' : 'addons');
@@ -73,6 +74,12 @@ env.addFilter('number', formatNumber);
 env.addFilter('bytes', formatBytes);
 
 const allRecords = [...mods, ...addons];
+const protectedDisplayNames = allRecords.flatMap((record) => [
+  record.name,
+  record.owner?.name,
+  ...(record.additional_authors || []).map((author) => author.name),
+]);
+const transformText = createVisibleTextTransformer(protectedDisplayNames);
 const recordLookup = makeRecordLookup(allRecords);
 const addonsByMod = new Map();
 for (const addon of addons) {
@@ -92,8 +99,17 @@ function prepareRecord(record, currentFile) {
   };
   const prepared = {
     ...record,
-    page: record.page || { modlistCount: null, authorRoles: [] },
-    source_code_links: (record.source_code_links || []).filter((source) => source?.url && !isForgeUrl(source.url)),
+    teaser: transformText(record.teaser),
+    page: {
+      ...(record.page || { modlistCount: null, authorRoles: [] }),
+      authorRoles: (record.page?.authorRoles || []).map(transformText),
+    },
+    source_code_links: (record.source_code_links || [])
+      .filter((source) => source?.url && !isForgeUrl(source.url))
+      .map((source) => ({
+        ...source,
+        label: source.label && source.label !== source.url ? transformText(source.label) : source.label,
+      })),
     href: recordHref(record, currentFile),
     thumbnailHref: assetHref(record.thumbnail),
     owner: record.owner ? { ...record.owner, avatarHref: assetHref(record.owner.profile_photo_url) } : null,
@@ -101,15 +117,15 @@ function prepareRecord(record, currentFile) {
     sptVersions: compatibleSptVersions(record, sptVersions),
   };
   prepared.descriptionHtml = sanitizeRichHtml(record.description, {
-    currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder),
+    currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder), transformText,
   });
   prepared.aiDisclosureHtml = record.custom_ai_disclosure ? sanitizeRichHtml(record.custom_ai_disclosure, {
-    currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder),
+    currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder), transformText,
   }) : '';
   prepared.versions = (record.versions || []).slice().map((version) => ({
     ...version,
     descriptionHtml: sanitizeRichHtml(version.description, {
-      currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder),
+      currentFile, assetMap, recordLookup, placeholderHref: relativeFileUrl(currentFile, placeholder), transformText,
     }),
     dependencies: prepareDependencies(version.dependencies, recordLookup, currentFile),
   }));
@@ -127,10 +143,11 @@ function prepareCard(record, currentFile) {
   const asset = record.thumbnail ? assetMap[record.thumbnail] : null;
   return {
     ...record,
+    teaser: transformText(record.teaser),
     href: recordHref(record, currentFile),
     thumbnailHref: relativeFileUrl(currentFile, asset?.path || placeholder),
     sptVersions: compatibleSptVersions(record, sptVersions),
-    searchText: [record.name, record.teaser, record.owner?.name, ...(record.additional_authors || []).map((a) => a.name), record.guid].filter(Boolean).join(' ').toLowerCase(),
+    searchText: [record.name, transformText(record.teaser), record.owner?.name, ...(record.additional_authors || []).map((a) => a.name), record.guid].filter(Boolean).join(' ').toLowerCase(),
   };
 }
 
@@ -153,18 +170,21 @@ async function renderTo(relative, template, context) {
 }
 
 await renderTo('index.html', 'index.njk', {
-  title: 'The Forge static archive', heading: 'Archived mods', showAddons: true,
+  title: 'The Forge static archive', heading: 'Archived SPT 4.0.0+ mods', showAddons: true,
+  intro: 'This archive focuses on mods for SPT 4.0.0 and newer, including recursively archived dependencies. Every archived mod is listed here; search and filters run only in your browser.',
   mods: mods.map((record) => prepareCard(record, 'index.html')),
   addons: addons.map((record) => prepareCard(record, 'index.html')),
   categories: [...new Set(mods.map((record) => record.category?.name).filter(Boolean))].sort(),
 });
 await renderTo('mods/index.html', 'index.njk', {
-  title: 'Archived mods', heading: 'All archived mods', showAddons: false,
+  title: 'Archived mods', heading: 'All archived SPT 4.0.0+ mods', showAddons: false,
+  intro: 'This archive focuses on mods for SPT 4.0.0 and newer, including recursively archived dependencies. Every archived mod is listed here; search and filters run only in your browser.',
   mods: mods.map((record) => prepareCard(record, 'mods/index.html')),
   categories: [...new Set(mods.map((record) => record.category?.name).filter(Boolean))].sort(),
 });
 await renderTo('addons/index.html', 'index.njk', {
   title: 'Archived addons', heading: 'All archived addons', addonOnly: true,
+  intro: 'Addons connected to the archived SPT 4.0.0+ mod collection are listed here. Search and filters run only in your browser.',
   mods: addons.map((record) => prepareCard(record, 'addons/index.html')),
   categories: [],
 });
@@ -182,8 +202,5 @@ const completedManifest = {
   builtAt: new Date().toISOString(),
   docsBytes: await directorySize(DOCS_DIR),
 };
-await Promise.all([
-  writeJson(path.join(DOCS_DIR, 'archive-manifest.json'), completedManifest),
-  writeJson(path.join(SNAPSHOT_DIR, 'manifest.json'), completedManifest),
-]);
+await writeJson(path.join(DOCS_DIR, 'archive-manifest.json'), completedManifest);
 console.log(`Built ${mods.length} mod pages and ${addons.length} addon pages in docs/.`);

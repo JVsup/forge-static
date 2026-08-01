@@ -25,7 +25,7 @@
     </div>
   </header>
   <aside class="archive-notice" aria-label="Archive notice">
-    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This archive is provided as-is and will not be maintained or updated. No warranties, guarantees, or support are provided—take it or leave it.</div>
   </aside>
   <main id="main-content" class="shell page-content">
     
@@ -118,10 +118,10 @@
 </tr>
 </tbody>
 </table>
-<p>The full coverage spans 5.56, 5.45, 7.62×39, 7.62×51, 7.62×54R, 9×19, 9×18, 9×39, 12 gauge, 20 gauge, .338 Lapua, .45 ACP, 4.6×30, 5.7×28, .366 TKM, .300 Blackout, and the rest of Tarkov’s roster.</p>
+<p>The full coverage spans 5.56, 5.45, 7.62×39, 7.62×51, 7.62×54R, 9×19, 9×18, 9×39, 12 gauge, 20 gauge, .338 Lapua, .45 ACP, 4.6×30, 5.7×28, .366 TKM, .300 Blackout, and the rest of THE CITY’s roster.</p>
 <h2>How it works</h2>
 <p>The mod runs in two cooperating pieces. The server-side component, <code>RealisticFrag.dll</code>, lives in <code>SPT/user/mods/</code> and applies the per-ammo <code>FragmentationChance</code>, <code>MinFragmentsCount</code>, and <code>MaxFragmentsCount</code> overrides at server boot — the values are read from <code>config.json</code> and written into the in-memory items database before any raid loads. The client-side component, <code>RealisticFrag.Client.dll</code>, lives in <code>BepInEx/plugins/</code> and applies a Harmony patch to <code>EftBulletClass.method_8</code> (the central impact resolver). On every bullet impact, the patch reads the bullet’s current velocity from <code>Vector3_1.magnitude</code> and the ammo’s template ID from the <code>Ammo</code> field, looks up the <code>MinimumVelocity</code> for that round in the shared configuration, and zeros out the bullet’s <code>FragmentationChance</code> for the duration of the impact resolution if velocity is below the threshold. A postfix step restores the original chance immediately afterwards, so penetrating bullets keep their full base chance for any subsequent impacts on the same flight.</p>
-<p>This save-mutate-restore approach was chosen specifically so that the mod composes cleanly with EFT’s existing fragmentation system rather than replacing it. The roll math, the fragment-spawning code, the body-zone damage distribution — all of that is BSG’s existing logic, untouched. RealisticFrag simply adjusts the input chance based on what the round is and how fast it’s still moving.</p>
+<p>This save-mutate-restore approach was chosen specifically so that the mod composes cleanly with EFT’s existing fragmentation system rather than replacing it. The roll math, the fragment-spawning code, the body-zone damage distribution — all of that is Big Silly Goose’s existing logic, untouched. RealisticFrag simply adjusts the input chance based on what the round is and how fast it’s still moving.</p>
 <h2>Install</h2>
 <p>The simplest install path is to download the <code>.7z</code> archive from the Direct Download below and drop it onto <code>SPT Mods Installer.exe</code>, which will route the contents into the right paths automatically. If you prefer a manual install, extract the archive at the SPT root so that the structure looks like this:</p>
 <pre><code>&lt;SPT root&gt;/
@@ -137,7 +137,7 @@
 </code></pre>
 <p>After your first raid, you can confirm the velocity gate is firing by opening <code>BepInEx/LogOutput.log</code> and searching for <code>gated frag</code> — those lines record every impact where the velocity gate suppressed a fragmentation roll.</p>
 <h2>Compatibility</h2>
-<p>RealisticFrag is built and tested against SPT 4.0.13. It is expected to work on SPT 4.0.10 through 4.0.12 since the underlying <code>TemplateItem.Properties</code> shape has not changed across those point releases, but those versions have not been tested. SPT 3.x is not supported because the 3.x mod loader and server architecture are fundamentally different. The mod has nothing to say about live (non-SPT) Tarkov.</p>
+<p>RealisticFrag is built and tested against SPT 4.0.13. It is expected to work on SPT 4.0.10 through 4.0.12 since the underlying <code>TemplateItem.Properties</code> shape has not changed across those point releases, but those versions have not been tested. SPT 3.x is not supported because the 3.x mod loader and server architecture are fundamentally different. The mod has nothing to say about live (non-SPT) THE CITY.</p>
 <p>When running alongside other mods that also write <code>FragmentationChance</code> — most commonly SVM with its ammo-section overrides enabled — load order determines the winner. RealisticFrag loads at <code>OnLoadOrder.PostDBModLoader + 1</code>, so it generally writes after SVM and its values take precedence for any round both mods touch. The server log shows each mod’s writes, which is the most reliable way to check for actual conflicts.</p>
 <h2>Configuration</h2>
 <p>Every ammo override lives in <code>config.json</code> next to the server DLL. Each entry is keyed by the 24-character ammo template ID and accepts the following fields:</p>
@@ -153,7 +153,7 @@
   }
 }
 </code></pre>
-<p>The easiest way to look up a template ID is the searchable database at <a target="_blank" class="external-link" href="https://db.sp-tarkov.com/search" rel="noreferrer noopener">db.sp-tarkov.com/search</a>. Edits take effect on the next server restart, with no need to fully restart EFT or the launcher. The full per-round rationale and the methodology used to derive each value lives in <code>BALLISTICS.md</code> in the source repository.</p>
+<p>The easiest way to look up a template ID is the searchable database at <a target="_blank" class="external-link" href="https://db.sp-tarkov.com/search" rel="noreferrer noopener">db.sp-THE CITY.com/search</a>. Edits take effect on the next server restart, with no need to fully restart EFT or the launcher. The full per-round rationale and the methodology used to derive each value lives in <code>BALLISTICS.md</code> in the source repository.</p>
 </section>
     <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
       <div class="version-list">
