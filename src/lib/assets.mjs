@@ -81,3 +81,28 @@ export async function captureAssets(requests, options = {}) {
   await writeJson(mapFile, existing);
   return existing;
 }
+
+export async function recompressAssets(assetMap, profile) {
+  const remapped = { ...assetMap };
+  for (const [url, entry] of Object.entries(remapped)) {
+    if (!entry?.path || entry.mime === 'image/svg+xml' || entry.mime?.includes('icon')) continue;
+    const sourcePath = path.join(SNAPSHOT_DIR, entry.path);
+    if (!await pathExists(sourcePath)) continue;
+    const source = await fs.readFile(sourcePath);
+    const optimized = await optimize(source, entry.mime, entry.role || 'content', profile);
+    if (optimized.buffer.length >= source.length) continue;
+    const hash = sha256(optimized.buffer);
+    const extension = mimeExtensions[optimized.mime] || '.bin';
+    const relative = path.posix.join('assets', `${hash}${extension}`);
+    const target = path.join(SNAPSHOT_DIR, relative);
+    if (!await pathExists(target)) await fs.writeFile(target, optimized.buffer);
+    remapped[url] = { ...entry, path: relative, sha256: hash, size: optimized.buffer.length, mime: optimized.mime };
+  }
+  const used = new Set(Object.values(remapped).map((entry) => entry?.path).filter(Boolean).map((value) => path.normalize(value)));
+  for (const name of await fs.readdir(ASSET_DIR).catch(() => [])) {
+    const relative = path.normalize(path.join('assets', name));
+    if (!used.has(relative)) await fs.unlink(path.join(ASSET_DIR, name));
+  }
+  await writeJson(mapFile, remapped);
+  return remapped;
+}
