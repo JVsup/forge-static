@@ -4,7 +4,7 @@ import * as cheerio from 'cheerio';
 import {
   DATA_DIR, DOCS_DIR, FORGE_HOSTS, MAX_DOCS_BYTES, MAX_FILE_BYTES, SNAPSHOT_DIR,
 } from './config.mjs';
-import { extractForgeReferences } from './lib/content.mjs';
+import { collectDependencyReferences, extractForgeReferences } from './lib/content.mjs';
 import { directorySize, listFiles, pathExists, posixPath, readJson } from './lib/fs.mjs';
 import { outputPath } from './lib/render.mjs';
 
@@ -71,6 +71,9 @@ for (const record of [...mods, ...addons]) {
     if (!recordKeys.has(`${ref.type}:${ref.id}`)) fail('UNCLOSED_GRAPH', output, `${ref.type}:${ref.id}`);
   }
   for (const version of record.versions || []) {
+    for (const dependency of collectDependencyReferences(version.dependencies || [])) {
+      if (!recordKeys.has(`mod:${dependency.id}`)) fail('UNCLOSED_DEPENDENCY', output, `mod:${dependency.id}`);
+    }
     if (!['external', 'fallback'].includes(version.download?.type)) fail('MISSING_DOWNLOAD_DECISION', output, `Version ${version.version}`);
     if (version.download?.type === 'external' && containsForgeUrl(version.download.url)) fail('FORGE_DOWNLOAD', output, version.download.url);
   }
@@ -117,12 +120,32 @@ for (const file of htmlFiles) {
     const label = $(tab).text().trim().toLowerCase();
     if (label.includes('comment') || label.includes('file verification')) fail('FORBIDDEN_TAB', file, label);
   });
+  if ($('form').length) fail('FORBIDDEN_FORM', file, `${$('form').length} forms found`);
+  $('.nuked').each((_, element) => {
+    const text = $(element).text().replace(/\s+/g, ' ').trim();
+    if (text !== 'nuked from forge, try source code url') fail('INVALID_FALLBACK_TEXT', file, text);
+  });
   if (posixPath(path.relative(DOCS_DIR, file)).startsWith('mod/')) {
     if (!$('#description').length || !$('#versions').length) fail('MISSING_MOD_TAB', file, 'Description or Versions panel missing');
   }
   if (posixPath(path.relative(DOCS_DIR, file)).startsWith('addon/')) {
     if (!$('#description').length || !$('#versions').length) fail('MISSING_ADDON_TAB', file, 'Description or Versions panel missing');
   }
+}
+
+for (const [relative, expected] of [
+  ['index.html', mods.length],
+  ['mods/index.html', mods.length],
+  ['addons/index.html', addons.length],
+]) {
+  const file = path.join(DOCS_DIR, ...relative.split('/'));
+  if (!await pathExists(file)) {
+    fail('MISSING_INDEX', file, relative);
+    continue;
+  }
+  const $ = cheerio.load(await fs.readFile(file, 'utf8'));
+  const actual = $('[data-card-grid]').first().find('[data-archive-card]').length;
+  if (actual !== expected) fail('INDEX_CARD_COUNT', file, `Expected ${expected}, found ${actual}`);
 }
 
 function pathExistsSync(target) {
@@ -152,4 +175,3 @@ const report = {
 };
 console.log(JSON.stringify(report, null, 2));
 if (errors.length) process.exitCode = 1;
-

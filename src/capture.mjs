@@ -90,7 +90,7 @@ async function resolveDownloads(record) {
     }
     }
   }
-  await Promise.all(Array.from({ length: Math.min(6, versions.length || 1) }, worker));
+  await Promise.all(Array.from({ length: Math.min(3, versions.length || 1) }, worker));
 }
 
 async function safeHtml(url, type, id) {
@@ -295,7 +295,7 @@ async function downloadWorker() {
     if ((index + 1) % 25 === 0) console.log(`Resolved downloads for ${index + 1}/${downloadRecords.length} pages.`);
   }
 }
-await Promise.all(Array.from({ length: Math.min(4, downloadRecords.length || 1) }, downloadWorker));
+await Promise.all(Array.from({ length: Math.min(12, downloadRecords.length || 1) }, downloadWorker));
 console.log(`Capturing images referenced by ${mods.length} mods and ${addons.length} addons…`);
 const assets = await captureAssets(assetRequests([...mods, ...addons]));
 const assetValues = Object.values(assets);
@@ -303,19 +303,34 @@ const assetValues = Object.values(assets);
 const sourceMap = {};
 const responseCacheDir = path.join(SNAPSHOT_DIR, 'cache', 'responses');
 if (await pathExists(responseCacheDir)) {
-  for (const name of await fs.readdir(responseCacheDir)) {
-    if (!name.endsWith('.json')) continue;
-    const meta = await readJson(path.join(responseCacheDir, name));
-    const bodyName = name.replace(/\.json$/, '.body');
-    const bodyPath = path.join(responseCacheDir, bodyName);
-    if (!meta?.requestUrl || !await pathExists(bodyPath)) continue;
-    const body = await fs.readFile(bodyPath);
-    sourceMap[meta.requestUrl] = {
-      cacheBody: path.posix.join('cache', 'responses', bodyName),
-      finalUrl: meta.finalUrl, status: meta.status, capturedAt: meta.capturedAt,
-      size: body.length, sha256: sha256(body),
-    };
+  const names = (await fs.readdir(responseCacheDir)).filter((name) => name.endsWith('.json'));
+  let sourceCursor = 0;
+  let sourceCompleted = 0;
+  async function sourceWorker() {
+    while (sourceCursor < names.length) {
+      const index = sourceCursor;
+      sourceCursor += 1;
+      const name = names[index];
+      try {
+        const meta = await readJson(path.join(responseCacheDir, name));
+        const bodyName = name.replace(/\.json$/, '.body');
+        const bodyPath = path.join(responseCacheDir, bodyName);
+        if (!meta?.requestUrl || !await pathExists(bodyPath)) continue;
+        const body = await fs.readFile(bodyPath);
+        sourceMap[meta.requestUrl] = {
+          cacheKey: bodyName.replace(/\.body$/, ''),
+          finalUrl: meta.finalUrl, status: meta.status, capturedAt: meta.capturedAt,
+          size: body.length, sha256: sha256(body),
+        };
+      } catch (error) {
+        state.errors.push({ type: 'cache', id: name, stage: 'source-map', message: error.message, at: new Date().toISOString() });
+      } finally {
+        sourceCompleted += 1;
+        if (sourceCompleted % 1000 === 0) console.log(`Indexed ${sourceCompleted}/${names.length} cached responses.`);
+      }
+    }
   }
+  await Promise.all(Array.from({ length: Math.min(16, names.length || 1) }, sourceWorker));
 }
 await writeJson(path.join(SNAPSHOT_DIR, 'source-map.json'), sourceMap);
 
@@ -336,7 +351,10 @@ const manifest = {
   cachedSourceCount: Object.keys(sourceMap).length,
   externalDownloads: [...mods, ...addons].flatMap((record) => record.versions || []).filter((version) => version.download?.type === 'external').length,
   downloadFallbacks: [...mods, ...addons].flatMap((record) => record.versions || []).filter((version) => version.download?.type === 'fallback').length,
-  errors: state.errors,
+  errors: [...new Map(state.errors.map((error) => [
+    `${error.type}:${error.id}:${error.stage}:${error.message}`,
+    error,
+  ])).values()],
   sourceHosts: [...new Set(Object.keys(assets).map((url) => new URL(url).hostname))].sort(),
 };
 await writeJson(manifestFile, manifest);

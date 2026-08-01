@@ -141,6 +141,7 @@ function common(currentFile) {
     modsHref: relativeFileUrl(currentFile, 'mods/index.html', true),
     addonsHref: relativeFileUrl(currentFile, 'addons/index.html', true),
     cssHref: relativeFileUrl(currentFile, 'static/archive.css'),
+    responsiveCssHref: relativeFileUrl(currentFile, 'static/responsive-fixes.css'),
     jsHref: relativeFileUrl(currentFile, 'static/archive.js'),
   };
 }

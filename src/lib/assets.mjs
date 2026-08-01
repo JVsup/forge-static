@@ -43,10 +43,11 @@ export async function captureAssets(requests, options = {}) {
   let cursor = 0;
   let writeGate = Promise.resolve();
   async function processItem(item) {
-    completed += 1;
+    const count = ++completed;
     if (existing[item.url]?.path && await pathExists(path.join(SNAPSHOT_DIR, existing[item.url].path))) return;
+    if (existing[item.url]?.error) return;
     try {
-      const result = await cachedRequest(item.url, { kind: 'asset', retries: 4, cache: false });
+      const result = await cachedRequest(item.url, { kind: 'asset', retries: 1, timeoutMs: 20_000, cache: false });
       const mime = contentType(result.headers, item.url);
       if (!mime.startsWith('image/')) throw new Error(`Not an image (${mime})`);
       if (result.body.length > MAX_FILE_BYTES) throw new Error('Source image exceeds 100 MB');
@@ -64,9 +65,10 @@ export async function captureAssets(requests, options = {}) {
     } catch (error) {
       existing[item.url] = { path: null, error: error.message, role: item.role || 'content' };
     }
-    if (completed % 50 === 0) {
+    if (count % 50 === 0) {
       writeGate = writeGate.then(() => writeJson(mapFile, existing));
       await writeGate;
+      console.log(`Captured ${count}/${entries.length} image URLs.`);
     }
   }
   async function worker() {
@@ -76,7 +78,7 @@ export async function captureAssets(requests, options = {}) {
       await processItem(entries[index]);
     }
   }
-  await Promise.all(Array.from({ length: Math.min(6, entries.length || 1) }, worker));
+  await Promise.all(Array.from({ length: Math.min(16, entries.length || 1) }, worker));
   await writeGate;
   await writeJson(mapFile, existing);
   return existing;
@@ -84,20 +86,38 @@ export async function captureAssets(requests, options = {}) {
 
 export async function recompressAssets(assetMap, profile) {
   const remapped = { ...assetMap };
-  for (const [url, entry] of Object.entries(remapped)) {
-    if (!entry?.path || entry.mime === 'image/svg+xml' || entry.mime?.includes('icon')) continue;
+  const entries = Object.entries(remapped);
+  let cursor = 0;
+  let completed = 0;
+  async function worker() {
+    while (cursor < entries.length) {
+      const index = cursor;
+      cursor += 1;
+      const [url, entry] = entries[index];
+      if (!entry?.path || entry.mime === 'image/svg+xml' || entry.mime?.includes('icon')) {
+        completed += 1;
+        continue;
+      }
     const sourcePath = path.join(SNAPSHOT_DIR, entry.path);
-    if (!await pathExists(sourcePath)) continue;
+      if (!await pathExists(sourcePath)) {
+        completed += 1;
+        continue;
+      }
     const source = await fs.readFile(sourcePath);
     const optimized = await optimize(source, entry.mime, entry.role || 'content', profile);
-    if (optimized.buffer.length >= source.length) continue;
-    const hash = sha256(optimized.buffer);
-    const extension = mimeExtensions[optimized.mime] || '.bin';
-    const relative = path.posix.join('assets', `${hash}${extension}`);
-    const target = path.join(SNAPSHOT_DIR, relative);
-    if (!await pathExists(target)) await fs.writeFile(target, optimized.buffer);
-    remapped[url] = { ...entry, path: relative, sha256: hash, size: optimized.buffer.length, mime: optimized.mime };
+      if (optimized.buffer.length < source.length) {
+        const hash = sha256(optimized.buffer);
+        const extension = mimeExtensions[optimized.mime] || '.bin';
+        const relative = path.posix.join('assets', `${hash}${extension}`);
+        const target = path.join(SNAPSHOT_DIR, relative);
+        if (!await pathExists(target)) await fs.writeFile(target, optimized.buffer);
+        remapped[url] = { ...entry, path: relative, sha256: hash, size: optimized.buffer.length, mime: optimized.mime };
+      }
+      completed += 1;
+      if (completed % 250 === 0) console.log(`Recompressed ${completed}/${entries.length} assets.`);
+    }
   }
+  await Promise.all(Array.from({ length: Math.min(4, entries.length || 1) }, worker));
   const used = new Set(Object.values(remapped).map((entry) => entry?.path).filter(Boolean).map((value) => path.normalize(value)));
   for (const name of await fs.readdir(ASSET_DIR).catch(() => [])) {
     const relative = path.normalize(path.join('assets', name));

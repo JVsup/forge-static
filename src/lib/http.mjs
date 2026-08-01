@@ -5,6 +5,7 @@ import { ensureDir, pathExists, readJson, sha256, writeJson } from './fs.mjs';
 
 let lastApiRequest = 0;
 let apiGate = Promise.resolve();
+const cacheWriteGates = new Map();
 
 const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
@@ -31,28 +32,50 @@ function cachePaths(url, kind) {
   };
 }
 
+async function writeCachedResponse(targets, body, meta) {
+  const previous = cacheWriteGates.get(targets.meta) || Promise.resolve();
+  const current = previous.catch(() => {}).then(async () => {
+    await ensureDir(path.dirname(targets.body));
+    await fs.writeFile(targets.body, body);
+    await writeJson(targets.meta, meta);
+  });
+  cacheWriteGates.set(targets.meta, current);
+  try {
+    await current;
+  } finally {
+    if (cacheWriteGates.get(targets.meta) === current) cacheWriteGates.delete(targets.meta);
+  }
+}
+
 export async function cachedRequest(url, options = {}) {
   const {
     accept = '*/*', kind = 'text', refresh = false, method = 'GET',
     retries = 6, redirect = 'follow', cache = method === 'GET', headers = {},
+    timeoutMs = 60_000,
   } = options;
   const targets = cachePaths(url, `${method}:${kind}`);
   if (cache && !refresh && await pathExists(targets.meta) && await pathExists(targets.body)) {
-    const meta = await readJson(targets.meta);
-    const body = await fs.readFile(targets.body);
-    return { ...meta, body, fromCache: true };
+    try {
+      const meta = await readJson(targets.meta);
+      const body = await fs.readFile(targets.body);
+      return { ...meta, body, fromCache: true };
+    } catch {
+      // A process interruption or an older concurrent writer may have left a bad cache entry.
+      // Fetching the URL again safely replaces it through the serialized writer below.
+    }
   }
 
   let lastError;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     await throttle(url);
+    let timer;
     try {
       const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 60_000);
+      timer = setTimeout(() => controller.abort(), timeoutMs);
       const response = await fetch(url, {
         method, redirect, signal: controller.signal,
         headers: { 'accept': accept, 'user-agent': 'JVsup-Forge-Static-Archive/1.0', ...headers },
-      }).finally(() => clearTimeout(timer));
+      });
       const responseHeaders = headerObject(response.headers);
       if (response.status === 429 || response.status >= 500) {
         const retryAfter = Number(response.headers.get('retry-after'));
@@ -61,6 +84,7 @@ export async function cachedRequest(url, options = {}) {
           : Math.min(30_000, 750 * (2 ** attempt));
         await response.arrayBuffer().catch(() => null);
         if (attempt < retries) {
+          clearTimeout(timer);
           await sleep(delay);
           continue;
         }
@@ -72,17 +96,17 @@ export async function cachedRequest(url, options = {}) {
         throw error;
       }
       const body = Buffer.from(await response.arrayBuffer());
+      clearTimeout(timer);
       const meta = {
         requestUrl: url, finalUrl: response.url || url, status: response.status,
         headers: responseHeaders, capturedAt: new Date().toISOString(),
       };
       if (cache) {
-        await ensureDir(path.dirname(targets.body));
-        await fs.writeFile(targets.body, body);
-        await writeJson(targets.meta, meta);
+        await writeCachedResponse(targets, body, meta);
       }
       return { ...meta, body, fromCache: false };
     } catch (error) {
+      clearTimeout(timer);
       lastError = error;
       if (error.retryable === false) break;
       if (attempt < retries) await sleep(Math.min(30_000, 750 * (2 ** attempt)));
@@ -132,7 +156,7 @@ export async function resolveExternalRedirect(startUrl) {
   try {
     for (let hop = 0; hop < 10; hop += 1) {
       const result = await cachedRequest(current, {
-        method: 'HEAD', redirect: 'manual', cache: true, kind: 'redirect', retries: 3,
+        method: 'HEAD', redirect: 'manual', cache: true, kind: 'redirect', retries: 1, timeoutMs: 15_000,
       });
       const location = result.headers.location;
       if (![301, 302, 303, 307, 308].includes(result.status) || !location) {
@@ -144,8 +168,8 @@ export async function resolveExternalRedirect(startUrl) {
   } catch (headError) {
     try {
       const result = await cachedRequest(startUrl, {
-        method: 'GET', redirect: 'manual', cache: false, kind: 'redirect-get', retries: 2,
-        headers: { range: 'bytes=0-0' },
+        method: 'GET', redirect: 'manual', cache: false, kind: 'redirect-get', retries: 1,
+        timeoutMs: 15_000, headers: { range: 'bytes=0-0' },
       });
       const location = result.headers.location;
       return location
