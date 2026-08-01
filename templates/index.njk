@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+{% block content %}
+<section class="index-hero">
+  <p class="kicker">One-time public information snapshot</p>
+  <h1>{{ heading }}</h1>
+  <p>Every archived item is listed on this page. Search and filters run only in your browser.</p>
+  <div class="count-line"><strong data-result-count>{{ mods.length | number }}</strong> visible of {{ mods.length | number }}</div>
+</section>
+
+<section class="filter-panel" aria-label="Archive filters">
+  <label class="search-field"><span>Search</span><input type="search" data-filter="search" placeholder="Name, author, GUID…"></label>
+  {% if not addonOnly %}
+  <label><span>SPT version</span><select data-filter="spt"><option value="">All versions</option>{% for version in sptVersions %}<option value="{{ version }}">{{ version }}</option>{% endfor %}</select></label>
+  <label><span>Category</span><select data-filter="category"><option value="">All categories</option>{% for category in categories %}<option value="{{ category }}">{{ category }}</option>{% endfor %}</select></label>
+  <label><span>Flags</span><select data-filter="flag"><option value="">Any</option><option value="fika">Fika compatible</option><option value="featured">Featured</option><option value="ai">Contains AI</option><option value="ads">Contains ads</option></select></label>
+  {% endif %}
+  <label><span>Sort</span><select data-filter="sort"><option value="name">Name</option><option value="downloads">Most downloaded</option><option value="updated">Recently updated</option></select></label>
+</section>
+
+<section class="card-grid" data-card-grid aria-live="polite">
+  {% for item in mods %}{% include "_card.njk" %}{% endfor %}
+</section>
+<p class="no-results" data-no-results hidden>No archived items match these filters.</p>
+
+{% if showAddons %}
+<section class="section-heading">
+  <div><p class="kicker">Related content</p><h2>Archived addons</h2></div>
+  <a class="text-link" href="{{ addonsHref }}">Open addon index →</a>
+</section>
+<section class="card-grid compact-grid">
+  {% for item in addons %}{% include "_card.njk" %}{% else %}<p class="empty-state">No addons were discovered.</p>{% endfor %}
+</section>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,83 @@
+{% extends "layout.njk" %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ modsHref if record.type == 'mod' else addonsHref }}">{{ 'Mods' if record.type == 'mod' else 'Addons' }}</a><span aria-hidden="true">/</span><span>{{ record.name }}</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="{{ record.thumbnailHref }}" alt="{{ record.name }} thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">{{ 'Mod' if record.type == 'mod' else 'Addon' }}</span>
+      {% if record.featured %}<span class="badge badge-featured">Featured</span>{% endif %}
+      {% if record.category %}<span class="badge">{{ record.category.name }}</span>{% endif %}
+    </div>
+    <h1>{{ record.name }}</h1>
+    <p class="hero-teaser">{{ record.teaser or 'No teaser was available in the snapshot.' }}</p>
+    <div class="author-list">
+      {% if record.owner %}<span class="author"><img src="{{ record.owner.avatarHref }}" alt="" width="32" height="32">{{ record.owner.name }}{% if record.page.authorRoles.length %}<small>{{ record.page.authorRoles | join(', ') }}</small>{% endif %}</span>{% endif %}
+      {% for author in record.additional_authors %}<span class="author"><img src="{{ author.avatarHref }}" alt="" width="32" height="32">{{ author.name }}</span>{% endfor %}
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>{{ record.downloads | number }}</dd></div>
+    {% if record.type == 'mod' %}<div><dt>Favourites</dt><dd>{{ record.favourites_count | number }}</dd></div>{% endif %}
+    {% if record.page.modlistCount !== null %}<div><dt>Mod lists</dt><dd>{{ record.page.modlistCount | number }}</dd></div>{% endif %}
+  </dl>
+</article>
+
+{% if record.capture.status != 'complete' %}<div class="warning-box"><strong>Incomplete capture:</strong> {{ record.capture.error or 'The original page was unavailable.' }}</div>{% endif %}
+{% if record.shows_profile_binding_notice %}<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>{% endif %}
+{% if record.cheat_notice %}<div class="warning-box warning-danger">Forge displayed a cheat-related notice for this item.</div>{% endif %}
+{% if record.contains_ads %}<div class="warning-box">The author marked this item as containing advertising.</div>{% endif %}
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="{{ record.name }} content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>{{ record.versions.length }}</span></a>
+      {% if record.type == 'mod' and record.addons.length %}<a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>{{ record.addons.length }}</span></a>{% endif %}
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description">{{ record.descriptionHtml | safe }}</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      {% for version in record.versions %}
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>{{ version.version }}</h2></div><time datetime="{{ version.published_at }}">{{ version.published_at | date }}</time></header>
+          <div class="version-badges">
+            {% if version.spt_version_constraint %}<span class="badge">SPT {{ version.spt_version_constraint }}</span>{% endif %}
+            {% if version.mod_version_constraint %}<span class="badge">Parent mod {{ version.mod_version_constraint }}</span>{% endif %}
+            {% if version.fika_compatibility %}<span class="badge badge-muted">Fika: {{ version.fika_compatibility }}</span>{% endif %}
+            <span>{{ version.downloads | number }} downloads</span><span>{{ version.content_length | bytes }}</span>
+          </div>
+          <div class="prose version-notes">{{ version.descriptionHtml | safe }}</div>
+          {% if version.dependencies.length %}<div class="dependencies"><h3>Dependencies</h3><ul>{% for dependency in version.dependencies %}<li>{% if dependency.localHref %}<a href="{{ dependency.localHref }}">{{ dependency.name or dependency.guid }}</a>{% else %}{{ dependency.name or dependency.guid }}{% endif %}{% if dependency.version_constraint %} <code>{{ dependency.version_constraint }}</code>{% endif %}</li>{% endfor %}</ul></div>{% endif %}
+          {% if version.virus_total_links and version.virus_total_links.length %}<div class="virus-links"><strong>VirusTotal:</strong>{% for link in version.virus_total_links %} <a href="{{ link.url or link }}" target="_blank" rel="noreferrer noopener">report {{ loop.index }}</a>{% endfor %}</div>{% endif %}
+          <div class="download-row">
+          {% if version.download.type == 'external' %}<a class="download-button" href="{{ version.download.url }}" target="_blank" rel="noreferrer noopener">Download externally</a>
+          {% else %}<p class="nuked">nuked from forge, {% if version.download.sourceUrl %}<a href="{{ version.download.sourceUrl }}" target="_blank" rel="noreferrer noopener">try source code url</a>{% else %}try source code url{% endif %}</p>{% endif %}
+          </div>
+        </article>
+      {% else %}<p class="empty-state">No versions were available in the snapshot.</p>{% endfor %}
+      </div>
+    </section>
+    {% if record.type == 'mod' and record.addons.length %}<section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid">{% for item in record.addons %}{% include "_card.njk" %}{% endfor %}</div></section>{% endif %}
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      {% if record.parent %}<div><dt>Parent mod</dt><dd><a href="{{ record.parent.href }}">{{ record.parent.name }}</a></dd></div>{% endif %}
+      {% if record.guid %}<div><dt>GUID</dt><dd><code>{{ record.guid }}</code></dd></div>{% endif %}
+      {% if record.license %}<div><dt>License</dt><dd>{{ record.license.name or record.license.short_name }}</dd></div>{% endif %}
+      {% if record.category %}<div><dt>Category</dt><dd>{{ record.category.name }}</dd></div>{% endif %}
+      <div><dt>Published</dt><dd>{{ record.published_at | date }}</dd></div>
+      <div><dt>Updated</dt><dd>{{ record.updated_at | date }}</dd></div>
+      {% if record.fika_compatibility is defined %}<div><dt>Fika</dt><dd>{{ 'Compatible version available' if record.fika_compatibility else 'Not confirmed' }}</dd></div>{% endif %}
+    </dl>
+    {% if record.source_code_links and record.source_code_links.length %}<h3>Source code</h3><ul class="source-list">{% for source in record.source_code_links %}<li><a href="{{ source.url }}" target="_blank" rel="noreferrer noopener">{{ source.label or source.url }}</a></li>{% endfor %}</ul>{% endif %}
+    {% if record.contains_ai_content %}<div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose">{{ record.aiDisclosureHtml | safe }}</div></div>{% endif %}
+  </aside>
+</div>
+{% endblock %}

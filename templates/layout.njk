@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>{{ title }} · Forge static archive</title>
+  <link rel="stylesheet" href="{{ cssHref }}">
+  <script defer src="{{ jsHref }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ homeHref }}" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ modsHref }}">Mods</a>
+        <a href="{{ addonsHref }}">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken {{ snapshotDate | date }}. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>{{ manifest.modCount | number }} mods · {{ manifest.addonCount | number }} addons · snapshot {{ snapshotDate | date }}</p>
+    </div>
+  </footer>
+</body>
+</html>
+

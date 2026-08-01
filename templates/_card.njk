@@ -1,0 +1,35 @@
+<article class="mod-card" data-archive-card
+  data-name="{{ item.name | lower }}"
+  data-search="{{ item.searchText }}"
+  data-category="{{ item.category.name if item.category else '' }}"
+  data-spt="{{ item.sptVersions | join(',') }}"
+  data-fika="{{ 'yes' if item.fika_compatibility else 'no' }}"
+  data-featured="{{ 'yes' if item.featured else 'no' }}"
+  data-ai="{{ 'yes' if item.contains_ai_content else 'no' }}"
+  data-ads="{{ 'yes' if item.contains_ads else 'no' }}"
+  data-downloads="{{ item.downloads or 0 }}"
+  data-updated="{{ item.updated_at or '' }}">
+  <a class="card-image" href="{{ item.href }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ item.thumbnailHref }}" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      {% if item.type == 'addon' %}<span class="badge badge-muted">Addon</span>{% endif %}
+      {% if item.featured %}<span class="badge badge-featured">Featured</span>{% endif %}
+      {% if item.category %}<span class="badge">{{ item.category.name }}</span>{% endif %}
+    </div>
+    <h2><a href="{{ item.href }}">{{ item.name }}</a></h2>
+    <p class="teaser">{{ item.teaser or 'No teaser was available.' }}</p>
+    <div class="card-meta">
+      <span>by {{ item.owner.name if item.owner else 'Unknown author' }}</span>
+      <span>{{ item.downloads | number }} downloads</span>
+    </div>
+    <div class="compat-row">
+      {% if item.sptVersions.length %}<span>SPT {{ item.sptVersions[0] }}{% if item.sptVersions.length > 1 %} +{% endif %}</span>{% endif %}
+      {% if item.fika_compatibility %}<span class="status-good">Fika</span>{% endif %}
+      {% if item.contains_ai_content %}<span>AI disclosure</span>{% endif %}
+      {% if item.contains_ads %}<span>Contains ads</span>{% endif %}
+    </div>
+  </div>
+</article>
+
