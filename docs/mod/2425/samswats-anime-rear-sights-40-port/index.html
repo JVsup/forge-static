@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SamSWAT&#39;s Anime Rear Sights - 4.0 Port · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SamSWAT&#39;s Anime Rear Sights - 4.0 Port</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f76148d28c2ef6325dff37f6736ddbed22fe3b90354b71ce3176e608a2d7fe61.webp" alt="SamSWAT&#39;s Anime Rear Sights - 4.0 Port thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SamSWAT&#39;s Anime Rear Sights - 4.0 Port</h1>
+    <p class="hero-teaser">Adds 24 anime styled rear sights that are sold by Mechanic.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/7d50fa9c12137ab20b06d728e330d470f9c1fa7c3a5499410ca984a1a58a6f4b.webp" alt="" width="32" height="32">yuyui.moe</span>
+      <span class="author"><img src="../../../assets/a4cb137ff6023ec52024ba369f781435b2093654df112c5a95e84a138d40d0e6.webp" alt="" width="32" height="32">SamSWAT</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>7,455</dd></div>
+    <div><dt>Favourites</dt><dd>6</dd></div>
+    <div><dt>Mod lists</dt><dd>14</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SamSWAT&#39;s Anime Rear Sights - 4.0 Port content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>This mods adds new Rear Iron Sights with anime art at the back, so you can fulfill your dream to raid with your Waifu.</p>
+<h2>Features</h2>
+<ul>
+<li>Adds 24 rear sights with anime girls on them. 8 for MCX and 16 for MBUS weapons.</li>
+<li>Rear sights are sold by the Mechanic and on the Flea Market</li>
+<li>Easily add new and edit current iron sights by editing JSON files (guide below)</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest versions on the Releases page</li>
+<li>Extract the downloaded ZIP file on the root of your SPT Installation</li>
+<li>Start up the server</li>
+</ol>
+<h2>How to add new sights or edit them</h2>
+<p>This mod has a small JSON interpreter that allows you to add and edit new back iron sights into the game.</p>
+<h3>items.jsonc</h3>
+<p>All you have to do is open <code>db/items.jsonc</code> with your preferred text editor and add the follow structure for your iron sight:</p>
+<pre><code>{
+  "id": "YOUR_ITEM_MONGOID",
+  "clone_from_tpl": "ITEM_TO_CLONE_FROM_MONGOID",
+  "bundle_path": "path/to/your/bundle.bundle",
+  "price": 4000, // Item price. This will be used on Handbook and Mechanic
+  "ergonomics": 3 // Ergo boost. You can set this to any value, but play nice ;) (or dont, I'm not the SPT police)
+}
+</code></pre>
+<h3>Locales</h3>
+<p>Then, you need to add the Name, ShortName and Description of your item, otherwise it will have a weird name.
+To do that, open <code>db/locales/en.json</code> with your preferred text editor and add the follow structure:</p>
+<pre><code>"YOUR_ITEM_MONGOID": {
+    "name": "Your beautiful item name",
+    "short_name": "Short name",
+    "description": "Very detailed and incredible item description that will give the player a lot of information and totally not be useless"
+}
+</code></pre>
+<h2>Credits</h2>
+<ul>
+<li><span class="dead-link"><strong>Rexana</strong></span> - For giving the idea.</li>
+<li><span class="dead-link"><strong>GrooveyPenguinX</strong></span> - For making <a target="_blank" class="external-link" href="https://github.com/GrooveypenguinX/WTT-BundleMaster" rel="noreferrer noopener">WTT-BundleMaster</a>, used to fix the original bundles</li>
+<li><span class="dead-link"><strong>SamSWAT</strong></span> - For making the <a target="_blank" class="external-link" href="../../316/anime-rear-sights/" rel="noreferrer noopener">original mod and bundles</a></li>
+<li><a target="_blank" class="external-link" href="https://steamcommunity.com/profiles/76561198224517144" rel="noreferrer noopener"><strong>ApertureAwesome</strong></a> - <a target="_blank" class="external-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1628771637" rel="noreferrer noopener">Girls Frontline M4 SOPMOD II</a>.</li>
+<li><a target="_blank" class="external-link" href="https://steamcommunity.com/profiles/76561198224517144" rel="noreferrer noopener"><strong>ApertureAwesome</strong></a> - <a target="_blank" class="external-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1636845240" rel="noreferrer noopener">Ram &amp; Rem</a></li>
+<li><a target="_blank" class="external-link" href="https://steamcommunity.com/profiles/76561198020115276" rel="noreferrer noopener"><strong>Farengar</strong></a>, <a target="_blank" class="external-link" href="https://steamcommunity.com/profiles/76561198057580968" rel="noreferrer noopener"><strong>tac.error</strong></a>, <a target="_blank" class="external-link" href="https://steamcommunity.com/profiles/76561198104088584" rel="noreferrer noopener"><strong>Rymd</strong></a> - <a target="_blank" class="external-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1484273642" rel="noreferrer noopener">Ai Fuyuumi</a></li>
+<li><a target="_blank" class="external-link" href="https://www.reddit.com/user/SUMERIKAN/" rel="noreferrer noopener"><strong>Sumerikan</strong></a> - <a target="_blank" class="external-link" href="https://www.reddit.com/r/PhantomForces/comments/cenaum/animu_sight_anti/" rel="noreferrer noopener">Art for Anti 1 &amp; 2</a></li>
+<li>And one more unknown artist…</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-07-17T22:03:00.000000Z">17 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>659 downloads</span><span>3.8 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changelog</h1>
+<ul>
+<li>General optimizations (Mod loads in ~100ms)</li>
+<li>Fixed Epic’s All in One incompatibility.
+<ul>
+<li>Epic AIO was overwriting my filters, so I decided to load the filters last.</li>
+</ul>
+</li>
+<li>Sight names/description now applies to all locales, even if one isn’t really configured.</li>
+<li>Added sights to static loot pool.
+<ul>
+<li>Didn’t have time to test this. Let me know if there’s a need to increase spawn chance.</li>
+</ul>
+</li>
+<li>Added missing Anti sight (It had locale, but no item registered)</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a target="_blank" class="external-link" href="https://github.com/yuyuimoe/SamSwat-AnimeSights-4.0/compare/1.0.0...1.3.0" rel="noreferrer noopener">https://github.com/yuyuimoe/SamSwat-AnimeSights-4.0/compare/1.0.0...1.3.0</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/647d70e1a45cdcfd2f6fc8556261dcb6e96a8880e5f05f5fea4151283beeed74" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1089774424/c2e1759e-c5ba-44b4-89f9-3693aa9e356f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A21Z&amp;rscd=attachment%3B+filename%3DWeebSights-1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A03Z&amp;ske=2026-08-01T21%3A11%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=49q0l0y7eFarvDabX9jgKDGGjKMd49xiaosmL0cZBmA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3DWeebSights-1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-11-05T18:07:00.000000Z">5 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,796 downloads</span><span>3.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>This version marks the full release of the mod.</p>
+<p>Known issues:</p>
+<ul>
+<li>Sights will not spawn in containers. Which means it can only be bought</li>
+<li>English is the only language being loaded.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7bec7fdcdc1dcbbea78f29f6f83750089e29fcb04b6618d48fac4e9e41d0f288" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1089774424/b4eae7d4-547e-4447-b890-d250f4a959c9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A18%3A27Z&amp;rscd=attachment%3B+filename%3DWeebSights-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A16Z&amp;ske=2026-08-01T21%3A18%3A27Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=vsul7rhtEChEXl1zjDtNEoMl3hhIIL4Expn8peQjZMA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3DWeebSights-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>moe.yuyui.animesightsport</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>5 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/yuyuimoe/SamSwat-AnimeSights-4.0/" target="_blank" rel="noreferrer noopener">https://github.com/yuyuimoe/SamSwat-AnimeSights-4.0/</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

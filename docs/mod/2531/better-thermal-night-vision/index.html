@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Better Thermal &amp; Night Vision · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Better Thermal &amp; Night Vision</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/a81d8f1447b50ee2cbe9fd9deac001e4c07977ae9da2199967653d5fdf971229.webp" alt="Better Thermal &amp; Night Vision thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Better Thermal &amp; Night Vision</h1>
+    <p class="hero-teaser">Solve FPS, Pixel, Noise, Blur, Scanline, Mask of Thermals &amp; NV. Add Red-Hot T7, allow optic scope</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4ac584c962c3346401d93ae2e83094c176c2a5e1fd3f7636be5e3129a057664c.webp" alt="" width="32" height="32">ciallomako</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>23,151</dd></div>
+    <div><dt>Favourites</dt><dd>55</dd></div>
+    <div><dt>Mod lists</dt><dd>80</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Better Thermal &amp; Night Vision content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Make Thermals &amp; NV Great Again</h1>
+<p>Toggle anything in F12 menu</p>
+<h3>Remove limits for Thermal Scopes &amp; T7</h3>
+<ul>
+<li><em>All limiting effects are disabled by default</em><br>
+Pixelation<br>
+FPS Limit<br>
+Scanline / Glitch<br>
+Noise<br>
+Motion Blur<br>
+Distant Blur<br>
+Edge Aberration</li>
+</ul>
+<h3>Customize Thermal Scopes</h3>
+<ul>
+<li>Visible cutoff distance: <strong>100–2000 m</strong></li>
+<li>Depth Fade (Visibility on far distance)</li>
+<li>Custom Thermal color (Brightness / ColorDiff / ColorShift. Need <strong>BepInEx Advanced settings</strong> checked. Better disable custom color if you used more than one thermal scopes)</li>
+</ul>
+<h3>Customize T-7 Thermal</h3>
+<ul>
+<li>Compatible optic scopes (mainly for 1x scopes. No heat color for zoomable scopes due to double rendering method in tarkov)</li>
+<li>Depth Fade (Visibility distance)</li>
+<li>Remove surrounding black screen mask (Fullscreen)</li>
+<li>Toggle Red-Hot heat mode</li>
+<li>Edit Red-Hot color (Brightness / ColorDiff / ColorShift. Need <strong>BepInEx Advanced settings</strong> checked)</li>
+</ul>
+<h3>Night Vision</h3>
+<ul>
+<li>Disable Noise</li>
+<li>Remove surrounding black screen mask (Fullscreen)</li>
+<li>Increase the vision brightness of scopes while using helmet-NV (configurable)</li>
+</ul>
+<h1>Compatiblity &amp; Other</h1>
+<ul>
+<li>Conflict with Amands Graphic’s NV functions, try disable NV things in this or Amands’ mod. Turn noise intensity down to zero in Amands fix NV problem.</li>
+<li>T7 &amp; NV settings work on thermal &amp; NV view such as ThermalMode in <a target="_blank" class="external-link" href="../../1454/cwx-megamod/" rel="noreferrer noopener">CWX-MegaMod</a></li>
+<li>This mod overwrite settings from <a target="_blank" class="external-link" href="../../2056/realistic-thermal-scopes/" rel="noreferrer noopener">Realistic Thermal</a> or other similar mods.</li>
+<li>Might conflict to Borkel’s real NV or other mod. Test on your own, if some is error (like screen mask) try to enable the selections to recover vanilla things in F12 menu of this mod, and see if it’s okay.</li>
+<li>To increase zero distance of thermal scopes, use <a target="_blank" class="external-link" href="../../236/server-value-modifier-svm/" rel="noreferrer noopener">SVM mod</a> and add these to “Default IIC” on last page “Advance feature”:</li>
+</ul>
+<pre><code>5a1eaa87fcdbcb001865f75e:CalibrationDistances:0:[50,100,150,200,250,300]
+6478641c19d732620e045e17:CalibrationDistances:0:[50,100,150,200,250,300]
+5d1b5e94d7ad1a2b865a96b0:CalibrationDistances:0:[50,100,150,200,250,300,350,400]
+63fc44e2429a8a166c7f61e6:CalibrationDistances:0:[50,100,150,200,250,300,350,400]
+</code></pre>
+<h1>Function Preview image</h1>
+<p>Thermal scopes<br>
+<img loading="lazy" decoding="async" src="../../../assets/ecdfeb0cd50af5883d8d341a08ee33ca1220e7ddc7bf75c32c680632166e4c78.webp" alt="Thermal scope"><br>
+Brightness fix of zoomable scope when using NV<br>
+<img loading="lazy" decoding="async" src="../../../assets/5d1c6cc8f19e5aa10b653c5a80d09c9c87312dbeee7d5e98c5b22e15af6d9be0.webp" alt="NV scope brightness"><br>
+White-Red hot mode T7 with advanced setting Colordiff=0.25<br>
+<img loading="lazy" decoding="async" src="../../../assets/d8b2c22306aa706836b52620fb7cf6f6bf2f98f29e7a65e995731d4199323fae.webp" alt="Redhot T7 with advance setting Colordiff = 0.25"><br>
+Allowed scopes, zoomable scopes won’t have thermal color, 1x scopes can (as the title figure of this mod)<br>
+<img loading="lazy" decoding="async" src="../../../assets/be3d4c6aa9d922bdc9d4ff088d168cda3de71ad7149c781338c3cc7af78878d6.webp" alt="T7 with zoomable scopes"></p>
+<h1>How to install or uninstall</h1>
+<p>Download the ZIP, open and drag the BepInEx folder to your SPT main folder<br>
+To uninstall, just remove the folder BepInEx/plugins/BetterThermalNightVision</p>
+<h1>Acknowledge</h1>
+<p>Idea credits to <em><a target="_blank" class="external-link" href="https://sns.oddba.cn/104565.html" rel="noreferrer noopener">GOOKLE’s better thermal</a></em> and many other similar mods.<br>
+T7 compatible optic scopes credits to <em><a target="_blank" class="external-link" href="https://sns.oddba.cn/43205.html" rel="noreferrer noopener">woohoofly’s client thermal mods</a></em>.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.2</h2></div><time datetime="2026-02-05T02:20:00.000000Z">5 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>15,164 downloads</span><span>10.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Can save custom color of thermal scopes forever.
+Add a reset button to recover default values by the first scope mode used in raid.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9d5c5aae2bb34bba69b6d71b0e13b36e312b07b4cb80ade1a91fc285cdbfd5be" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/e18ac7f6-b85f-4c00-a23b-803ae8e5da9f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A21%3A01Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.3.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A20%3A08Z&amp;ske=2026-08-01T20%3A21%3A01Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=uhDlVEj0KEz9%2BrjTCTde3wyWBAZ70MrIu6%2Bz7ghLnbI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.3.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.1</h2></div><time datetime="2026-02-04T21:02:00.000000Z">4 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>207 downloads</span><span>10.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fix scope brightness didn’t work when entering hideout before raid.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/86d243c22dbe955db947ca20e4b59f48f1e019f980f88cb9799c4cbe355eb488" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/e87f0614-03e6-494d-80b2-e80e25dff3e3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A20%3A05Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.3.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A19%3A10Z&amp;ske=2026-08-01T20%3A20%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Sv96prmbalwlcY1poAMQwmhgf8XKJPIHVTn%2FvMHN04I%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.3.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-02-04T18:40:00.000000Z">4 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>69 downloads</span><span>10.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Add a fix for brightness of zoomable scopes vision while using helmet NV.<br>
+The brightness can be customized.
+(check Description page to see image)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3daa59ead9cb6da21ef8436240233bab3b8adc27e0195bfe0cdacb03d1c4f28e" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/85fa24d8-0866-4a8c-b92a-560c98e2ac03?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A38%3A58Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A38%3A32Z&amp;ske=2026-08-01T20%3A38%3A58Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UZ6ZNmsArAzw0kOU6vX7dGn%2FmVlOhzHl%2FtpGcRrtiiY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.3</h2></div><time datetime="2026-01-22T10:11:00.000000Z">22 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,069 downloads</span><span>9.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fix Night Vision noise disabler.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/d26b282523cd19fd3cb7c0124cd156fc185007e01db17b32a6cf2f7b2b9de9c7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/e7f1c628-b288-46e2-aee0-61ba73d0f38a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A25Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.2.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A32Z&amp;ske=2026-08-01T20%3A23%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2BphbVDruusyyudUJ7UiuyZdeQT9192zH0P7gulViM30%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.2.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2026-01-06T07:08:00.000000Z">6 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,410 downloads</span><span>9.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fix thermal scope view distance applied to normal scopes.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f0885dd27a14c1dfeb17b731ddea2b34d8a7fc0c7bc739bc98e35e92151e6866" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/815c953a-1364-416c-bac8-49d9765301ed?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A29%3A08Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A28%3A31Z&amp;ske=2026-08-01T20%3A29%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eaYsmp%2B1eorj1djS4%2B3YTWnud4WyurvTjv%2B%2BSya1gCQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-01-05T12:28:00.000000Z">5 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>546 downloads</span><span>9.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed when using &gt;1 thermal scopes, the thermal values of first scope will cover the others.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/691b2f9ed8eeed02b782641c4b5e501101396a630fe910a00cb6491757809f7c" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/31a84a1a-cdc1-403b-b846-d2bd7a795da5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A31%3A03Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A30%3A28Z&amp;ske=2026-08-01T20%3A31%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=oiSX3L36V7Q8KkIyxn0BJYu0goEqMAVvVsIm1JoLIYA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-01-04T14:46:00.000000Z">4 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>912 downloads</span><span>9.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>T7 can use optic scope (1x scopes has thermal color, while zoomable scopes can’t)<br>
+Add Red-Hot mode T7.<br>
+Can change T7 view distance.<br>
+Add advanced settings for customize thermal color shift / bright / contrast.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/0b31dd196658d24bf525f39b0d731156b16f86f2ee9bd177862005c4fca8eeaa" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/2c34db4c-ac2e-44dc-8639-d6bdefb7e60e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A33%3A17Z&amp;rscd=attachment%3B+filename%3DBetterThermalNightVision-v1.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A33%3A02Z&amp;ske=2026-08-01T20%3A33%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=RPjkpvN0rz90wnfXbby%2FRZy%2BLvjIr4fgr%2Bw%2BoVhVw1s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterThermalNightVision-v1.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-01-03T20:46:00.000000Z">3 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>774 downloads</span><span>3.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>For SPT 4.0.x</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b14e8adfae432817f84ff32a41e7ca017fecf5d415987371e48ee6a38e766e14" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1127381265/ff6f2644-a6d7-471e-a276-17a93caa43a3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A15%3A27Z&amp;rscd=attachment%3B+filename%3DBetterNightThermalVision-v1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A15%3A08Z&amp;ske=2026-08-01T20%3A15%3A27Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=zDcdCt%2Bz3qJPt3UDoRfzc6loRd5b3LLL5QGHmm%2BSTzk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ5NywibmJmIjoxNzg1NjEzMTk3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VMDmKMqsoHk7QDozApghb_YE9aLIqNOXGShHpUyQu0s&amp;response-content-disposition=attachment%3B%20filename%3DBetterNightThermalVision-v1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>ciallo.betterthermalnightvision</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>3 January 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Klamist/BetterNightThermalVision" target="_blank" rel="noreferrer noopener">https://github.com/Klamist/BetterNightThermalVision</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

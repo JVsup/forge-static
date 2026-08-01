@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Hardcore Rules · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Hardcore Rules</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/a96559b8c528537664fac63033fd2fd953ecc1cf6b385a103d7a5259aa8b8cd1.webp" alt="Hardcore Rules thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Hardcore Rules</h1>
+    <p class="hero-teaser">Is SPT getting too easy? Too much nice gear collecting dust in your stash? Fix that problem with a hardcore playthrough similar to DeadlySlob&#39;s hardcore rules for live Tarkov.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/299742898d0119230d8fc57a3305f662df2556138d7c811dd842d65426649420.svg" alt="" width="32" height="32">DanW</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>11,032</dd></div>
+    <div><dt>Favourites</dt><dd>8</dd></div>
+    <div><dt>Mod lists</dt><dd>15</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Hardcore Rules content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Is SPT getting too easy? Too much nice gear collecting dust in your stash? Fix that problem with a hardcore playthrough similar to <a target="_blank" class="external-link" href="https://www.twitlonger.com/show/n_1sr500b" rel="noreferrer noopener">DeadlySlob’s hardcore rules for live Tarkov</a>. I was inspired by <a target="_blank" class="external-link" href="../../129/fins-hardcore-options/" rel="noreferrer noopener">Fin’s Hardcore Options</a> and made a new version that simply implements the hardcore rulesets by DeadlySlob and other streamers.</p>
+<p>To start a new hardcore playthrough, create a new profile in the SPT launcher using the “Hardcore Playthrough” edition this mod adds. By default, this mod will be active when a profile using the “Hardcore Playthrough” edition is loaded, and it will be deactivated when any other profile edition is loaded.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/dcb91c3fbc340c947b57aac0bb21abf9ec70d94bd90b695f03490927e56affdb.webp" alt="Hardcore Playthrough profile type image"></p>
+<p>If you’re using an existing hardcore profile from a previous version of this mod (that was compatible with SPT 3.9.x), you can still use it if you do one of the following:</p>
+<ul>
+<li>Set <strong>use_for_all_profiles=true</strong> in <em>config.json</em> to apply the hardcore ruleset to all profiles, regardless of their edition</li>
+<li>Change <strong>info.edition</strong> to <strong>“Hardcore Playthrough”</strong> (case-sensitive) in the JSON data for your profile. <strong>Always make a backup before manually changing your profile!</strong></li>
+</ul>
+<p><strong>If you’re using <a target="_blank" class="external-link" href="../../2326/project-fika/" rel="noreferrer noopener">Fika</a>, do not mix players who are using hardcore profiles with players who are not.</strong> This will result in trader inventories and flea-market item availability not working correctly for some players.</p>
+<p>This mod is highly customizable, so you can change the configuration to match the level of difficulty you want. Here are the settings you can change in the <strong>config.json</strong> file in this mod:</p>
+<ul>
+<li><strong>services.flea_market.enabled</strong>: if this is <em>false</em>, you can’t list new offers, and there won’t be any player offers. You can only use the flea-market interface to browse trader offers.</li>
+<li><strong>services.flea_market.only_barter_offers</strong>: if you’ve enabled the flea market, you can set this to <em>false</em> to disable all offers using currency.</li>
+<li><strong>services.disable_trader_repairs</strong>: Only repair kits can be used for repairs.</li>
+<li><strong>services.disable_insurance</strong>: All items will be blacklisted from insurance, and the insurance screen will not be displayed when loading into a raid. In case you want to turn this off and on during a playthrough, this will not remove insurance for any items that were previously insured.</li>
+<li><strong>services.disable_post_raid_healing</strong>: Disables Therapist’s post-raid healing, but the screen will still be shown so you can review the damage you received during the raid.</li>
+<li><strong>services.disable_scav_raids</strong>: Disables Scav raids.</li>
+<li><strong>traders.disable_fence</strong>: Allows you to remove all of Fence’s offers. You can still sell items to Fence.</li>
+<li><strong>traders.disable_starting_gifts</strong>: Prapor and Mechanic no longer give you starting gifts.</li>
+<li><strong>traders.barters_only</strong>: Removes all trader offers using currency unless they’re explicitly whitelisted below.</li>
+<li><strong>traders.allow_GPCoins</strong>: Allows trader offers for GP coins to be considered barter offers. As of SPT 3.9.0, GP coins are considered currency.</li>
+<li><strong>traders.whitelist_only</strong>: Removes all trader offers unless they’re explicitly whitelisted in this mod.</li>
+<li><strong>traders.whitelist_items</strong>: If only barters are allowed, use this to whitelist items (or parents of items) even if they’re not barters. You can find ID’s for items using <a target="_blank" class="external-link" href="https://db.sp-tarkov.com/search/" rel="noreferrer noopener">https://db.sp-tarkov.com/search/</a> or find them in <em>[SPT install directory]\SPT\SPT_Data\database\templates\items.json</em>.</li>
+<li><strong>traders.whitelist_traders</strong>: An array of the ID’s of traders that will not have their offers modified. Trader ID’s can be viewed when the server starts if <strong>debug.enabled=true</strong>.</li>
+<li><strong>secureContainer.only_use_whitelists_in_this_mod</strong>: If this is <em>true</em>, you can’t put anything in secure containers unless you explicitly whitelist them. If this is <em>false</em>, the following whitelists are ignored and the default EFT ones are used instead. This restriction also applies to items contained within the one you’re trying to put in your secure container. For example, you can put a docs case in your secure container, but you cannot put a docs case containing currency in your secure container. Similarly, you can put a docs case containing examined keys into your secure container while in your stash, but you cannot do this in-raid. If you remove a docs case containing examined keys from your secure container while in-raid, you’ll need to remove all the examined keys before you’ll be allowed to put the docs case back into your secure container. For this reason, be careful about unexamined keys! If you examine them and then remove them from your secure container, you’ll be unable to put them back in while you’re in-raid.</li>
+<li><strong>secureContainer.whitelist.global</strong>: The items (or parents of items) in this whitelist are applied all the time.</li>
+<li><strong>secureContainer.whitelist.inHideout</strong>: The items in this whitelist are applied only while not in-raid.</li>
+</ul>
+<p>The following items are whitelisted for trader offers by default:</p>
+<ul>
+<li>All currency (you can exchange RUB for USD, etc. as much as you want)</li>
+<li>All inventory containers (item cases, Scav junkboxes, etc.)</li>
+<li>All special items (markers, signal jammers, etc.)</li>
+<li>All maps</li>
+<li>Green and yellow flares</li>
+</ul>
+<p>The following items are whitelisted for putting in your secure container by default:</p>
+<ul>
+<li>All keys and keycards (but they must not be examined when in raid)</li>
+<li>Key tool</li>
+<li>Gingy keychain</li>
+<li>Keycard holder</li>
+<li>S I C C case</li>
+<li>Documents case</li>
+</ul>
+<p>Good luck!</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2026-03-02T03:46:00.000000Z">2 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,410 downloads</span><span>35.0 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated for SPT 4.0</li>
+</ul>
+<p><em>Config.json</em> files from previous releases are not compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/468bae2116b8398964e625629fe1bb2aa0c9bde16f545f37ba25afc1f6e404d7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/66401d57-1475-4984-94bc-0d3596c151b8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A42Z&amp;rscd=attachment%3B+filename%3DHardcoreRules-3.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A26Z&amp;ske=2026-08-01T21%3A08%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=sOBSbKlIC1s0V9rqUCxEZbapJxIRApoZvETq%2FTsqHv4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DHardcoreRules-3.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.1</h2></div><time datetime="2025-07-04T14:19:58.000000Z">4 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,933 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>
+<p>Added null checks when filtering trader assorts to help with troubleshooting mod conflicts</p>
+</li>
+<li>
+<p>Only show Info messages if debug.enabled=true</p>
+</li>
+<li>
+<p>Changed from using FileSystem to FileSystemSync</p>
+</li>
+<li>
+<p>Bug fix for exceptions if a trader’s started, success, or fail assorts are null</p>
+</li>
+</ul>
+<p><em>Config.json</em> files from the 2.2.0 release are compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/99e4307b-b02b-4d1e-9aad-d63594278844?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A16Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A43Z&amp;ske=2026-08-01T21%3A14%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=gS7V5kyQlV%2Bv7A1s0lAvLtP129DVbjDppFAJ7R50QXs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.0</h2></div><time datetime="2025-03-22T17:00:03.000000Z">22 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,045 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated for SPT 3.11</li>
+<li>Renamed disable_prapor_starting_gifts to disable_starting_gifts in <em>config.json</em> and made it also disable Mechanic’s starting gift</li>
+</ul>
+<p><em>Config.json</em> files from previous releases are not compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/5b29f753-8e16-4d9d-a83b-ff8720ca0d8f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A13Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A15Z&amp;ske=2026-08-01T21%3A23%3A13Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=OjM9k3LNmvp9S1lYKRHpnYnDwiG5lNwdfB3GaftRz%2BY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2024-12-04T02:49:51.000000Z">4 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>608 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated for SPT 3.10.0</li>
+<li>Refactoring and minor performance improvements</li>
+</ul>
+<p><em>Config.json</em> files from the 2.0.0 - 2.0.2 releases are compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/656b6e7b-f10c-4404-aef9-c07ca1fc37bf?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A27Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A41Z&amp;ske=2026-08-01T21%3A19%3A27Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=v7nnM8xuBb7uqNJVniGSmNGLZgFBlhBGSpqlMhVY3j8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-07-08T03:48:22.000000Z">8 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>293 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated to SPT 3.9.0</li>
+<li>Bug fix for Scav runs being available after creating a new profile until restarting the game</li>
+</ul>
+<p><em>Config.json</em> files from the 1.2.0 through 1.3.2 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/da6f75dd-e3a1-4177-a2ae-cb3ed84f0f43?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A30Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A18Z&amp;ske=2026-08-01T21%3A03%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5gfTDaNTyi4jKjb75ONZRUkj6Xn187mSFp%2B0GuHZOYs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.2</h2></div><time datetime="2024-07-06T23:28:02.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>150 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added config option to disable Prapor’s starting gifts (enabled by default)</li>
+<li>Bug fix for allowing SPT 3.9.0</li>
+</ul>
+<p><em>Config.json</em> files from the 1.2.0 through 1.3.1 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/c63fb5ad-2bb7-434d-acd3-808e97159c11?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A27%3A08Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A32Z&amp;ske=2026-08-01T21%3A27%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=WSdPVPGtPtluaisGYCKP5VHAGrWm%2FOkOnlI163tIjAE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2024-04-03T03:51:51.000000Z">3 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>394 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Changes in 1.3.0 HF1:</strong></p>
+<ul>
+<li>Increased minimum SPT-AKI version to 3.8.0</li>
+</ul>
+<p><strong>Changes in 1.3.0:</strong></p>
+<ul>
+<li><strong>Updated for SPT-AKI 3.8.0</strong></li>
+<li><strong>Whitelisted yellow flares to purchase from traders</strong></li>
+<li>Removed the version number from the directory name in \user\mods\</li>
+<li>Updated client code to be version-agnostic, so it will (hopefully) be compatible with future SPT versions too</li>
+<li>Updated server code per Lint recommendations</li>
+</ul>
+<p><em>Config.json</em> files from the 1.2.0 through 1.2.2 releases are compatible, but yellow flares will not be whitelisted in them by default.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/71446ac8-1cba-472c-8c1a-00db6b30e498?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A04Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A09Z&amp;ske=2026-08-01T21%3A11%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xkUDn57UI2KSAQqlsF6wX76MqCxEpNcU5x1j93nEBfE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2023-10-15T03:04:39.000000Z">15 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>529 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated for SPT-AKI 3.7.1</li>
+<li>Bug fix for cash offers eventually returning to the flea market when <strong>services.flea_market.only_barter_offers=true</strong></li>
+</ul>
+<p><em>Config.json</em> files from the 1.2.0 and 1.2.1 releases are compatible.</p>
+<p>Thanks to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/12229-bayard/" rel="noreferrer noopener">Bayard</a> for help with testing!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/f04a54c1eaa7d7a6279113fd8611fc740228c3c49e8ba2844afe90f01a117707?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/608477626/8e87c408-c7e4-46e6-8a3c-dd20282cb3eb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A03Z&amp;rscd=attachment%3B+filename%3DDanW-SPTHardcoreRules-1.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A54Z&amp;ske=2026-08-01T21%3A15%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=YJcCh6j8am5aavuVMU3KlKJ9HtAlOFj%2F6zBU%2BUM5xjE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&amp;response-content-disposition=attachment%3B%20filename%3DDanW-SPTHardcoreRules-1.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.danw.hardcorerules</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>4 March 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/dwesterwick/SPTHardcoreRules" target="_blank" rel="noreferrer noopener">https://github.com/dwesterwick/SPTHardcoreRules</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

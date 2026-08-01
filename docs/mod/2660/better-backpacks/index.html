@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Better Backpacks · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Better Backpacks</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f2ef0d67fe733f1c5fcf60496d94e0413bff1ec486de861109f528929661c7c2.webp" alt="Better Backpacks thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Better Backpacks</h1>
+    <p class="hero-teaser">Makes backpacks bigger in a balanced way.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/490b5066998b8c499248020ba9827cc8b34da2d60e6c88449c5f9fe5b6c0b91a.webp" alt="" width="32" height="32">Refringe</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>19,635</dd></div>
+    <div><dt>Favourites</dt><dd>72</dd></div>
+    <div><dt>Mod lists</dt><dd>136</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Better Backpacks content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Better Backpacks</h1>
+<blockquote class="is-success">
+<p>Huge thank you to <span class="dead-link">Josh Mate</span> for the original <a target="_blank" class="external-link" href="../../552/josh-mates-better-backpacks/" rel="noreferrer noopener">Better Backpacks</a>. This mod would not be possible without their work. Send them your love! ♥</p>
+</blockquote>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><p>Make backpacks bigger while staying in-line with vanilla gameplay balance.</p>
+<ul>
+<li>Increases backpack grid sizes across all tiers, with buffs scaled by rarity/availability.</li>
+<li>Boss backpack have been made significantly larger to fit their status.</li>
+<li>The backpack grid system has been modified to allow for multi-grid backpacks to be resized properly.</li>
+<li>Configurable backpack sizes with web-based user interface.</li>
+</ul>
+<blockquote class="is-info">
+<p>The backpack sizes have been altered from the original Better Backpacks mod due to the addition of all of the extra bags over time.</p>
+</blockquote></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Install / Configure</div>
+<div class="tab-content"><h3>Vanilla SPT:</h3>
+<ol>
+<li>Decompress the contents of the download into your root SPT directory.</li>
+<li>Run the server.</li>
+<li>Configure the mod using the web UI here:<br>
+<a target="_blank" class="external-link" href="https://127.0.0.1:6969/better-backpacks" rel="noreferrer noopener">https://127.0.0.1:6969/better-backpacks</a></li>
+</ol>
+<hr>
+<h3>Fika</h3>
+<p>If you are using Fika, this mod must be installed into the Fika server, and each client that connects to the server. The <a target="_blank" class="external-link" href="https://wiki.project-fika.com/faqandguides/set-up-required-optional-mods" rel="noreferrer noopener">Fika documentation</a> has a page about setting required mods on a server. The line you’re probably looking to modify in your <code>fika.jsonc</code> is this:</p>
+<pre><code>    "mods": {
+      "required": ["com.refringe.betterbackpacks"],
+      "optional": []
+    },
+</code></pre>
+<p>If you are using the Fika headless client, this mod needs to be installed there as well.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Uninstall</div>
+<div class="tab-content"><blockquote class="is-danger">
+<p>It’s extreamly important to remove all backpacks from your player and stash before removing this mod. Failing to do this may result in your profile becoming corrupted.</p>
+</blockquote>
+<p>Remove the following:</p>
+<ul>
+<li><code>BepInEx/plugins/BetterBackpacks.dll</code></li>
+<li><code>SPT/user/mods/BetterBackpacks</code></li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Issues?</div>
+<div class="tab-content"><p>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/BetterBackpacks/issues" rel="noreferrer noopener">submit a detailed bug report.</a></p></div></div></div>
+<p>♥</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-04-08T19:35:00.000000Z">8 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>19,134 downloads</span><span>27.1 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Add web UI for backpack configuration</li>
+<li>Add dynamic scaling for custom backpacks</li>
+<li>Add debug logging</li>
+<li>Never process the endless backpack</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/c12ec7d84023b62aeadf3d2493dbf69979ac10a95cd92af11741ce7581e8dfc3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1204547553/a8e30f8e-5971-4d29-b08e-d19dc411a54a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A39%3A11Z&amp;rscd=attachment%3B+filename%3DBetterBackpacks-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A38%3A33Z&amp;ske=2026-08-01T20%3A39%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8yTY%2FntdmUhDHlWxZ3z78eFlDjUu4c0dJqTzghwiV68%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OCwibmJmIjoxNzg1NjEzMTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qcJcz5_n9ngG85jvuIhjH9_jzwULqIWsv16aizWzFx8&amp;response-content-disposition=attachment%3B%20filename%3DBetterBackpacks-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-04-08T06:38:00.000000Z">8 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>501 downloads</span><span>13.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Make backpacks bigger while staying in-line with vanilla gameplay.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/2128e29e301ceb92adbd24a495b9c21e2a96d109127446bacc102570a7358bc0" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1204547553/d030e07a-8304-48ef-ab0c-814ce7f8fc2f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A35%3A08Z&amp;rscd=attachment%3B+filename%3DBetterBackpacks-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A34%3A29Z&amp;ske=2026-08-01T20%3A35%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xIriK6%2FokudL0tys7I70KiXc8Pxj0FehvNmzxgr9ol4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ4OCwibmJmIjoxNzg1NjEzMTg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qcJcz5_n9ngG85jvuIhjH9_jzwULqIWsv16aizWzFx8&amp;response-content-disposition=attachment%3B%20filename%3DBetterBackpacks-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.refringe.betterbackpacks</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>8 April 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/refringe/BetterBackpacks" target="_blank" rel="noreferrer noopener">https://github.com/refringe/BetterBackpacks</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

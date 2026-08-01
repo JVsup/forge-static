@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>BotCounter · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>BotCounter</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/014a86fb75ab63c7e203dc8e32331e501f3586b1c5b72a02e53d6f2f108e5171.webp" alt="BotCounter thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>BotCounter</h1>
+    <p class="hero-teaser">Shows all bots alive ingame. Simple UI.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Schluid</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,657</dd></div>
+    <div><dt>Favourites</dt><dd>25</dd></div>
+    <div><dt>Mod lists</dt><dd>17</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="BotCounter content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Hello :)</p>
+<p>I needed this mod but i can´t code so i did it with AI.
+This mod displays all bots in your current raid and adds some new features.</p>
+<hr>
+<p>BotCounter: Key Features</p>
+<p>Real-Time Enemy Monitoring: Actively tracks the total number of bots and bosses currently present in your raid.</p>
+<p>Precision Distance Tracking: Provides the exact distance, in meters, to the nearest enemy within each category.</p>
+<p>Boss Health Monitoring: Displays real-time boss health status, allowing you to track exactly how much damage they have sustained.</p>
+<p>Selective Visibility &amp; Smart Filtering: Total control over your UI layout:</p>
+<p>Group Filtering: Manually toggle specific enemy types on or off based on your needs.</p>
+<p>Auto-Hide Functionality: Automatically conceals empty categories to maintain a clean, minimalist, and unobtrusive HUD.</p>
+<p>Customizable Visuals: Fully personalize the overlay by choosing your preferred text color and adjusting the opacity to fit your playstyle.</p>
+<p>Reliable Detection: Advanced logic accurately identifies active targets and instantly filters out eliminated enemies, including Player Scavs, to prevent “ghost counts”.</p>
+<p>Intelligent Categorization: Automatically differentiates between various bot roles to provide a clear, organized overview of immediate threats.</p>
+<hr>
+<p>New Version 1.9.0</p>
+<ul>
+<li>(Player Scav Fix) &amp; Source Code Fix (GitHub)</li>
+</ul>
+<hr>
+<p>Features (1.8.0):</p>
+<p>Distance Tracking: The UI now displays the exact distance (in meters) to the closest bot within each category.
+[!This option could reduce your performance!] [Solution: Change refresh rate or deactivate this option.]</p>
+<p>Detailed Boss &amp; Guard Names: Instead of grouping all bosses into a single number, the mod now translates internal entity names to display exactly who is on the map.</p>
+<p>Dynamic Boss Health: Boss names will now dynamically change color based on their remaining health percentage across all body parts.</p>
+<p>(Green for =/&gt; 70%, Yellow for =/&gt; 40%, Orange for =/&gt; 10%, Red for &lt;10%).
+Hide Zero Counts: Categories with zero active bots will be completely hidden to keep your screen clean and focused.</p>
+<hr>
+<p>UI &amp; Customization:</p>
+<p>Categorized Settings: The F12 configuration menu has been completely reorganized into clean sections
+(1. Visibility, 2. Display, 3. Colors) for easier navigation.</p>
+<p>Custom Colors &amp; Transparency: You can now set a custom global text color instead of being locked to green, and adjust the overall UI opacity to make the text as visible or subtle as you prefer.</p>
+<hr>
+<p>Performance:</p>
+<p>Improved Tracking Accuracy: Switched the underlying data source to the game’s internal BotsController to provide more reliable spawns and counts.</p>
+<p>True Dead Bot Handling: The mod now accurately identifies and filters out dead bots using a dedicated tracking list, preventing ghost counts.</p>
+<p>Optimized Scanning: Introduced smart dictionary caching. The mod now remembers a bot’s role and faction after the initial scan, saving CPU cycles by not repeatedly analyzing the same entities every update tick.</p>
+<hr>
+<ul>
+<li>
+<p>F12 for configuration.</p>
+</li>
+<li>
+<p>Like almost every mod here, extract the zip archive into your SPT directory:
+\SPT\BepInEx\plugins\BotCounter</p>
+</li>
+<li>
+<p>To uninstall, simply delete the BotCounter Folder from \SPT\BepInEx\plugins\</p>
+</li>
+<li>
+<p>This mod can be uninstalled at any time without affecting your profile.</p>
+</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.9.0</h2></div><time datetime="2026-07-18T18:00:00.000000Z">18 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>1,025 downloads</span><span>8.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Fixed “Player Scav” shown as boss.</li>
+<li>Fixed structure &amp; source code on GitHub  (1.8.0 is wrong)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/240b2fb6b17650a30fb761f6a1338263f6914f6e0c8002e04bc8ac6826b0d018/details" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1275154962/ffdeabe0-1a4f-4c98-b38f-42eb93766023?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A27Z&amp;rscd=attachment%3B+filename%3DBotCounter_1.9.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A37Z&amp;ske=2026-08-01T21%3A13%3A27Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8zAAAJTETyZDe1LRM0lCcLTbSg57sE%2FFOPVmz3ekEwo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DBotCounter_1.9.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.spt.botcounter</code></dd></div>
+      <div><dt>License</dt><dd>The Unlicense</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>20 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Schluid420/BotCounter" target="_blank" rel="noreferrer noopener">https://github.com/Schluid420/BotCounter</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>100% AI</p>
+<p>I needed this mod but i can´t code so i did it with AI.</p>
+<p>If anyone can code it properly i would be very happy.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

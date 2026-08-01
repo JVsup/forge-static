@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Wedge · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Wedge</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/5ce020a0f75b222049561104bcf341fd7b4b45fed43039ccb9304b54cc2a9952.webp" alt="Wedge thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Wedge</h1>
+    <p class="hero-teaser">Every boss in Tarkov sits in his room and waits for you to come to him. You learn his corner, you clear it on your terms, you move on. Wedge doesn&#39;t wait. Wedge is already walking toward you, and he didn&#39;t come alone.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Sipto</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>10,098</dd></div>
+    <div><dt>Favourites</dt><dd>58</dd></div>
+    <div><dt>Mod lists</dt><dd>65</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Wedge content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><h3>Overview</h3>
+<p><strong>THIS IS 100% COMPATIBLE WITH THE BLACKOUT MOD FROM VULTIFY AS WELL</strong></p>
+<p>Adds The Wedge, the Black Division boss from EFT 1.0.5, and his guard squad to most maps. He gets his own spawn type and his own brain rather than being a reskinned existing boss.</p>
+<p>He does not add the Icebreaker map. He’s the boss from it; the map itself is a whole other job.</p>
+<h3>The fight</h3>
+<p>He pushes toward the nearest player instead of camping, opens with flash and smoke on the approach, and then hands the gunfight to SAIN so he still shoots like something you know how to read. His Black Division Operator escort spawns in the same zone and rushes with him, so the squad arrives together rather than trickling in one at a time. His smoke grenades from Icebreaker are not backported yet so I’ve put regular smokes on him for now.</p>
+<p>880 health, roughly double a PMC, and his gear spawns at near-perfect durability.</p>
+<h3>His kit</h3>
+<p><strong>NOW INCLUDES HIS ACTUAL CLOTHING AND GEAR</strong></p>
+<p>Authentic to 1.0.5 EFT. Spiritus LV-119 plate carrier, Team Wendy EXFIL with L3Harris PVS-31A night vision on a Wilcox mount, and an Avon M53A1 gas mask. Weapons are the SCAR-H, SA58, MDR or MP7, with a USP .45 sidearm and a SOG tomahawk.</p>
+<h3>Spawn chance</h3>
+<p>Scales with level — 10% at 15, another 5% every 5 levels, capped at 25%. So level 20 is 15%, level 30 and up is 25%.</p>
+<p>Solo that’s your level. In Fika it averages everyone who’s pinged the server in the last 15 minutes, so one high-level player doesn’t drag the lobby’s odds up on their own.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h3>Requirements</h3>
+<h3>Requirements</h3>
+<p>Install all four of these first. None of them are optional — Wedge will not run without them.</p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>GUID</th>
+<th>Why</th>
+<th>If it’s missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MoreBotsAPI</strong></td>
+<td><code>com.morebotsapi.tacticaltoaster</code></td>
+<td>Supplies the custom boss role Wedge spawns as. There’s no role without it.</td>
+<td>Wedge’s server mod references it directly and won’t load.</td>
+</tr>
+<tr>
+<td><strong>WTT-ContentBackport</strong></td>
+<td><code>com.wtt.contentbackport</code></td>
+<td>Every piece of his Black Division gear and clothing comes from it.</td>
+<td>His kit doesn’t exist and he can’t be generated.</td>
+</tr>
+<tr>
+<td><strong>DrakiaXYZ-BigBrain</strong></td>
+<td><code>xyz.drakia.bigbrain</code></td>
+<td>The rush layer registers against it.</td>
+<td>BepInEx skips the plugin entirely — he’d spawn with no brain.</td>
+</tr>
+<tr>
+<td><strong>Black Division</strong></td>
+<td><code>com.blackdiv.tacticaltoaster</code></td>
+<td>The faction he leads; his guards are its soldiers and share its content.</td>
+<td>His server mod won’t load.</td>
+</tr>
+</tbody>
+</table>
+<p>Both MoreBotsAPI and WTT-ContentBackport ship in several parts (plugin, patcher, server mod) — install them
+whole, don’t cherry-pick files. Two things worth knowing:</p>
+<ul>
+<li><strong>MoreBotsAPI needs DrakiaXYZ-BigBrain itself</strong>, so it’s required twice over.</li>
+<li><strong>WTT-ContentBackport’s server half needs WTT-ServerCommonLib</strong> (<code>com.wtt.commonlib</code>), and installing it
+normally brings <strong>WTT-ClientCommonLib</strong> along too. Both are part of the WTT set rather than extra
+downloads. Wedge uses WTT-ServerCommonLib directly as well, to register the names the end-of-raid screen
+shows for him and his guards.</li>
+</ul>
+<p>Optional:</p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>GUID</th>
+<th>What you lose without it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAIN</td>
+<td>—</td>
+<td>The gunfight. He still spawns, rushes and throws grenades, he just fights on the vanilla brain. Found by reflection, so no assembly reference — if the interop fails he logs a warning and carries on.</td>
+</tr>
+<tr>
+<td>Fika</td>
+<td><code>com.fika.core</code></td>
+<td>Co-op, and the group-average spawn scaling with it.</td>
+</tr>
+</tbody>
+</table>
+<h3>Fika</h3>
+<p>The server mod goes with the SPT server. The client plugin and prepatcher go on whichever machine owns the raid, headless included.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><h3>Server — <code>user/mods/Wedge/config.jsonc</code></h3>
+<p>Restart the server after editing.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>levelScaling</code></td>
+<td>true</td>
+<td>Off falls back to <code>flatChance</code></td>
+</tr>
+<tr>
+<td><code>baseLevel</code> / <code>baseChance</code></td>
+<td>15 / 10</td>
+<td>Where the curve starts</td>
+</tr>
+<tr>
+<td><code>chancePerStep</code> / <code>stepLevels</code></td>
+<td>5 / 5</td>
+<td>+5% every 5 levels</td>
+</tr>
+<tr>
+<td><code>chanceCap</code></td>
+<td>25</td>
+<td>Ceiling</td>
+</tr>
+<tr>
+<td><code>flatChance</code></td>
+<td>15</td>
+<td>Only used with scaling off</td>
+</tr>
+<tr>
+<td><code>groupScaling</code></td>
+<td>true</td>
+<td>Co-op: average the session instead of the host alone</td>
+</tr>
+<tr>
+<td><code>groupWindowMinutes</code></td>
+<td>15</td>
+<td>How recent a ping counts toward that average</td>
+</tr>
+<tr>
+<td><code>escortAmount</code></td>
+<td>3</td>
+<td>Guards</td>
+</tr>
+<tr>
+<td><code>singleZone</code></td>
+<td>true</td>
+<td>Keeps him and the escort arriving together</td>
+</tr>
+<tr>
+<td><code>debugLogs</code></td>
+<td>false</td>
+<td>Verbose server logging</td>
+</tr>
+</tbody>
+</table>
+<p><code>enabledMaps</code> lists where he can turn up: Reserve, Streets, Customs, both Factories, Interchange, Labs, Lighthouse, both Ground Zero tiers, Shoreline, Woods and Labyrinth. Delete an entry to switch that map off.</p>
+<h3>Client — F12, section <em>Wedge</em></h3>
+<ul>
+<li><strong>Enable</strong> — master switch for his client-side behaviour</li>
+<li><strong>Aggressive Rush</strong> — he and his guards push the nearest player when not already in a SAIN firefight</li>
+<li><strong>Grenade Barrage</strong> — flash and smoke on approach</li>
+<li><strong>Rush Radius (m)</strong> — caps how far he’ll chase, so he doesn’t sprint the map from spawn</li>
+<li><strong>Layer Priority</strong> — advanced. Leave it alone unless you know what you’re doing; it has to stay below SAIN’s combat layers at 20+, or he’ll rush when he should be shooting.</li>
+</ul></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.1</h2></div><time datetime="2026-07-30T01:01:00.000000Z">30 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,461 downloads</span><span>13.3 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>Wedge 2.2.1</h1>
+<p>Housekeeping release. No gameplay changes.</p>
+<p><strong>⚠ WTT-ContentBackport must now be 1.1.1 or newer.</strong></p>
+<h2>What changed</h2>
+<ul>
+<li><strong>Dropped the M8230’s two asset bundles</strong> (<code>assets/content/weapons/m8230/client_assets.bundle</code> and
+<code>.../m8230/textures/client_assets.bundle</code>). ContentBackport 1.1.1 ships both itself — its own M8230
+container had always declared them as dependencies without providing them, which is why Wedge
+carried copies. Once both mods shipped the same bundle, whichever loaded second printed a red
+<code>Unable to add bundle:</code> line at server start. Harmless (the first copy wins and the grenade works
+either way), but it reads like a broken install. Download drops from 25 MB to 14 MB.</li>
+<li><strong>Dependency floor raised to WTT-ContentBackport &gt;= 1.1.1</strong> (was 1.1.0). On an older ContentBackport
+those bundles resolve to nothing, so the server refuses to load Wedge rather than run a boss whose
+grenade is invisible. Update ContentBackport first; Wedge itself extracts over your install as usual.</li>
+</ul>
+<p>If you saw those two lines on 2.2.0 with a current ContentBackport, this is the tidy-up.</p>
+<h2>Files</h2>
+<p><code>Wedge-2.2.1.zip</code>
+SHA-256: <code>BDADAE465EBE7F31A980F270A20976F446744D10F21D9A48B84AFB961FDE22B0</code></p>
+<h2>VirusTotal</h2>
+<p>All three DLLs clean, 0/74:</p>
+<ul>
+<li><code>Wedge.Client.dll</code>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8" rel="noreferrer noopener">https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8</a></li>
+<li><code>Wedge.Server.dll</code>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93" rel="noreferrer noopener">https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93</a></li>
+<li><code>Wedge.Prepatch.dll</code> (byte-identical to the 2.1.0/2.2.0 build)
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0" rel="noreferrer noopener">https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0</a></li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/a02d1c9320b0814871631dbc489d440163ae9b86b307e874a3838311ed585b93" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/1c393308-ad93-4e02-ad6b-277d3a150e2e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A21Z&amp;rscd=attachment%3B+filename%3DWedge-2.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A14Z&amp;ske=2026-08-01T21%3A10%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tupW5BxHIzQ3m8Vzd324iEl5J8vGivhQmFZOtSH5%2BKo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.0</h2></div><time datetime="2026-07-27T07:35:00.000000Z">27 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,598 downloads</span><span>23.9 MB</span>
+          </div>
+          <div class="prose version-notes"><p>He keeps his distance, wears ContentBackport’s own gear, and the download drops to less than half.</p>
+<p><strong>⚠ WTT-ContentBackport must be 1.1.0 or newer</strong> (installing it normally brings WTT-ServerCommonLib 2.0.22+, which is also required). His cover, clothing, voice and MP7 parts now come from ContentBackport’s copies, and on anything older the server refuses to load Wedge rather than run half a boss. Update it first; Wedge itself extracts over your install as usual.</p>
+<ul>
+<li><strong>He spawns away from you.</strong> His squad only takes a spawn zone at least 200 m from where everyone is standing at raid start — no more opening a raid with the whole squad next door. It’s an F12 slider (0–500 m); a map with nothing that far simply uses the farthest zone it has.</li>
+<li><strong>He stands down for Black Division.</strong> A raid that has already drawn a Black Division patrol is theirs — Wedge sits it out rather than fielding the faction twice. F12 toggle if you’d rather meet both at once; they’re allies either way and never fight each other.</li>
+<li><strong>ContentBackport’s gear, properly.</strong> The covered helmet is the real arrangement now — a stock Team Wendy EXFIL wearing ContentBackport’s MultiCam Black cover — and his MP7 carries their SF3P flash hider and the full FAB Defense ARS stock, buttstock included, which the old kit was missing. Old Wedge items in your stash stay valid.</li>
+<li><strong>The gas wash is white</strong>, matching 1.0.5, and the M8230’s cook and throw paths got another layer of armour against the vanishing-grenade report.</li>
+<li><strong>F12 grew three sections</strong> — <em>Spawns</em> (the whole chance curve, party averaging, spawn delay, the distance floor, the stand-down toggle), <em>Balance</em> (guards by party size, his and his escort’s health) and <em>Maps</em> (a checkbox per map). On a co-op server the host’s settings are the ones that count. The Lab is in the list, off by default — and stays off while Blackout is installed, since its own Wedge already garrisons the place.</li>
+<li><strong>Weapons rebuilt.</strong> Every gun generates as a proper preset build instead of a parts lottery, and his guards carry Black Division’s own roster.</li>
+<li><strong>He and his guards can no longer turn on each other</strong> — the friendly-fire report is fixed at the root, and the squad survives split spawns.</li>
+<li>Seven bundles ContentBackport now ships were dropped from the download: <strong>63 MB → 25 MB</strong>.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1d706aa6dd998e4f9a409b4de6da93dcc757c1de50d928b1cf48a79612031164" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/29fb4c1a9e8595917a5a7e6309513aee9335d6e4a4aa74310f253ad138453464" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/ce9d8f05-0272-4647-9020-1233cc862b4f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A20Z&amp;rscd=attachment%3B+filename%3DWedge-2.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A51Z&amp;ske=2026-08-01T21%3A25%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6JGAhmj%2FEWPDUUY79%2FTxdJdP8dTyXxIUAKLFOMdteGs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-07-21T03:54:00.000000Z">21 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,101 downloads</span><span>60.4 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li><strong>He and Black Division are one side now.</strong> His squad and any other Black Division patrol treat each other as allies instead of trading fire on sight.</li>
+<li><strong>He’s hostile to everyone else</strong> — scavs, the scav bosses and their guards, PMCs, raiders, rogues, cultists, the Partisan, and the infected. If you run <strong>RUAF</strong> or <strong>UNTAR</strong>, he fights those too. The BTR he leaves alone.</li>
+<li><strong>He’s no longer a scav boss for Fence.</strong> Killing him or his guards as a player scav costs you no Fence standing — he’s an invading faction like Raiders or Rogues, not a scav boss.</li>
+<li><strong>Loot cleanup.</strong> His guards carry the normal four-pocket rig instead of his own boss pockets, the keycard holder case only turns up on Wedge (one at most, not four), euros are capped at 5k, and stims at one to three.</li>
+</ul>
+<p>No new requirements. RUAF and UNTAR are optional — nothing changes if you don’t run them.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0ac7522984b3cf6a5782b2d08ef969a6b3684cef6b24fcac62f09c2edf30594f" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/eb74c8d54898f35fe68f4369657992b51a35ba69d6adf7d0c65dd9e64ee61df0" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/e712272f90a4a07cede064aeaffbc1acc284bca083bb86340e39697a023079b3" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/96b2e2c4-a366-4e53-b758-42945b22afac?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A21Z&amp;rscd=attachment%3B+filename%3DWedge-2.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A22Z&amp;ske=2026-08-01T21%3A19%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=N2Gzg4BBKpI0LvWsQ%2FFJeVTW9VP8TB1KG5fzQA7kgTc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.r2JO38c__3TlzHcTPsk5zWI0F5Rn_Y5AsOhAYm2RFkw&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2026-07-20T19:52:00.000000Z">20 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>348 downloads</span><span>60.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>The profile-error fix. If your server greeted you with a red wall about your profile being invalid over an item it didn’t recognise — the covered EXFIL, the goggles, a Model 8230 — this is that bug. Nothing about how he plays has changed.</p>
+<p><strong>What it was.</strong> The mod registered his items <em>after</em> SPT’s boot-time profile check, so any Wedge gear you kept — worn, stashed, or in the mail — read as an orphaned modded item once per server start. The gear was always fine in play; the boot check just ran before the mod had said the items exist.</p>
+<p><strong>Updating is the whole fix.</strong> The invalid flag never reaches your profile file, so if you only ever saw the error, your gear is still there — update and the red wall is gone.</p>
+<p><strong>If you enabled <code>removeModItemsFromProfile</code></strong> (the workaround SPT’s own error text suggests): those items were deleted from the profile, and attachments go with their parent — that’s how a helmet takes the goggles with it. They’re not coming back; set it back to <code>false</code>, update, and take a new set off the man himself.</p>
+<p>Coming from 0.1.x, read the 2.0.0 notes too: that version added <strong>Black Division</strong> as a new required mod.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a7d64548b01381470a496bbe8fffc4ac7c19fbf72c49fb8a396da0baef3ceb72" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/691d68bc9abc1e29ecded7e9ab44acee3cb9e72cc6645858a83ea817dabcb47d" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/20f2e651f0753eda87a4880217bde76c2b8a5f052e65b7848e36736a35e978ae" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/c730e6c1-7362-40a5-af6a-618e797234e9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A30Z&amp;rscd=attachment%3B+filename%3DWedge-2.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A16Z&amp;ske=2026-08-01T21%3A01%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UqcVMyTnKxzJtw4CjlsYFWZFmM1PqE63TKUuuwlWhh0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbkmgWoNnTURDGthWBi8K46JZlgYPoF3X8pZ4OsMtm0&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-07-19T18:22:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>882 downloads</span><span>60.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>A fix to how the mod identifies itself. Nothing about how he plays has changed. <strong>Should now be identified as verified</strong></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/960ffd4a9952b81da2b86d96e5310c2dfec15ef775975c6502a376ef2c50454b" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/691d68bc9abc1e29ecded7e9ab44acee3cb9e72cc6645858a83ea817dabcb47d" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/fa2547554ff7ecc0a99c70c92e56b8ec6357023e62ddd22cb314957094280e31" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/1db53121-b546-4642-9a58-c0fad0f62c2a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A38Z&amp;rscd=attachment%3B+filename%3DWedge-2.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A08Z&amp;ske=2026-08-01T21%3A22%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1AjtkJS9F3EakStMjZ87dqcDN9p85zn6Jc%2F%2FiIvLqGo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbkmgWoNnTURDGthWBi8K46JZlgYPoF3X8pZ4OsMtm0&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-07-19T17:16:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>88 downloads</span><span>60.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Leads with the fixes, since those matter most if you already run him:</p>
+<ul>
+<li><strong>The raid-end crash is fixed.</strong> If you were hitting <code>[Wedge] raid-end reinject failed: session id provided was empty</code> at the end of a raid — and stuck because taking him off breaks your profile — update rather than remove and it’s gone.</li>
+<li><strong>His Model 8230 grid icon</strong> no longer shows as the smoke grenade it was cloned from.</li>
+<li><strong>Kit fixes</strong> — his meds, ammo and pockets all generate correctly now, and guard counts scale with the size of your party.</li>
+</ul>
+<p>Assets now included:</p>
+<ul>
+<li><strong>His actual 1.0.5 art.</strong> The Black Division stand-in is gone. He wears his own head, fur-lined coat and trousers and speaks with his own voice, and his covered Team Wendy EXFIL, PVS-31A, Avon M53A1 gas mask and Model 8230 gas grenade are his own models.</li>
+<li><strong>The gas is real.</strong> The 8230 leaves a cloud that drains anyone caught in it without a filter, stings the eyes and sets you coughing. A full-face mask shuts it out; a respirator keeps it out of your lungs but not your eyes. Editable in F12.</li>
+<li><strong>A squad, not a scatter.</strong> He calls orders his guards act on — cover, hold, push — and the escort spawns in his zone and rushes in with him.</li>
+<li><strong>His face and voice are playable</strong> for your own PMC in character creation.</li>
+</ul>
+<p><strong>New requirement:</strong> he now needs Black Division (<code>com.blackdiv.tacticaltoaster</code>) installed alongside the others — see the requirements below.</p>
+<p><strong>Known issues / where it differs from 1.0.5</strong></p>
+<p>0.16.9 has no CS-gas mechanic of its own, so a few things are the closest the engine allows rather than a 1:1 recreation:</p>
+<ul>
+<li><strong>The gas cloud and its sting aren’t the authentic 1.0.5 gas.</strong> The cloud is built on the game’s own smoke-grenade system and the effect — damage, blurred and tunnelled vision, coughing — is layered on top. It reads and plays as gas, but the exact look and feel differ from the real thing.</li>
+<li><strong>No gas tripwires.</strong> In 1.0.5 he can lay gas-grenade tripwires; the engine won’t let a bot place that kind of hazard here, so he throws the gas instead.</li>
+<li><strong>The SOG tomahawk is in his kit, not a melee move.</strong> Bot melee isn’t cleanly exposed in this build, so expect gunfights rather than a tomahawk rush.</li>
+<li>He turns up on the existing maps, not the Icebreaker map — that’s a separate job.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li><li><a href="../../2511/wtt-black-division-redacted-home/">WTT - Black Division [REDACTED] Home</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d87b736791ae799b93fcf317334152a4a344846562c7bd35e483b6b34e20e672" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/14e51f02043a2cba10ceba795a21864e81fa456e3c617a0fb0e0697d0a34ac1e" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/95c168264b04388c0d1c543f770a40b8f63ac2b12112d558c436f5ab325b9eb0" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/8ac5244a-a3dc-4a2b-8954-4db14a82b01d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A21Z&amp;rscd=attachment%3B+filename%3DWedge-2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A17Z&amp;ske=2026-08-01T21%3A17%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2FUJ%2BJSrXCxJkFFdzoCHx7YTx3tFHybl77gfMYWuNE4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._k8-1VeTmvUM34UF49tMQVpvUgcF1-mvLFB9Mxmk9Zo&amp;response-content-disposition=attachment%3B%20filename%3DWedge-2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-07-16T06:13:00.000000Z">16 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,325 downloads</span><span>196.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>fixed broken install + name on death screen</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d74a749e7da87164af591e9824a8e2d884306e6c3ee1c82c198e6b12fffe34f4" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/6562727a2cc66ae04ea6542a2c7a52452ccd55a182f24b61ef2db64d02181a3b" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/dbf9d2c08baa65e9072553728d247ae8ccae1270f8e28792d698b3af6d091e25" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/c86bf090-80c5-4b4f-a6b8-bb21d96507bc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A21%3A14Z&amp;rscd=attachment%3B+filename%3DWedge-0.1.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A37Z&amp;ske=2026-08-01T21%3A21%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=B5dpr89WRc6G9aQpLNpBzgcRJlnhdZRRcB%2BxXJeVCPY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OSwibmJmIjoxNzg1NjE2MDc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rIAO9nplAIlzr0rUe9eA6yTeOsrBVEiv31As0Autex0&amp;response-content-disposition=attachment%3B%20filename%3DWedge-0.1.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-16T01:15:00.000000Z">16 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>295 downloads</span><span>192.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>check description.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9582ae607c6227837a69d126e2f02e9b304ddd1c9b2171c3b65f84b0babd02f0" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/0792c969fc55d7df283198fb4bbbfc3e2715ed44417693cf01b955d6e3651a5c" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/67bea12b51a9120fa289795da990a2bacb211b4237d84af3d1b79cc010d53782" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936314/9b815667-fc44-4e03-996a-0b7b3dbd0fd2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A04Z&amp;rscd=attachment%3B+filename%3DWedge-0.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A02Z&amp;ske=2026-08-01T21%3A15%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=MGplK%2BwYeY4X3pwkA5DTfParoHt3TomOGMdzMRm6Oo0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OSwibmJmIjoxNzg1NjE2MDc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rIAO9nplAIlzr0rUe9eA6yTeOsrBVEiv31As0Autex0&amp;response-content-disposition=attachment%3B%20filename%3DWedge-0.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sipto.wedge</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>16 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>30 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/CameronsWorks/Wedge" target="_blank" rel="noreferrer noopener">https://github.com/CameronsWorks/Wedge</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was utilized to create the Mod Photo as well as audit the mod.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

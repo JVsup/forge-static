@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Easy Ammunition · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Easy Ammunition</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f11d77025bcc8230c2253b2d22ae000e43834c540130e772296c5d7314ddef84.webp" alt="Easy Ammunition thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Easy Ammunition</h1>
+    <p class="hero-teaser">This mod changes ammo colors based on their strength and is designed for the server side, so it doesn&#39;t need frequent updates. It&#39;s inspired by Faupi - Munitions Expert, and focuses on being simple and compatible with Single Player Tarkov.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/490b5066998b8c499248020ba9827cc8b34da2d60e6c88449c5f9fe5b6c0b91a.webp" alt="" width="32" height="32">Refringe</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>31,096</dd></div>
+    <div><dt>Favourites</dt><dd>24</dd></div>
+    <div><dt>Mod lists</dt><dd>66</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Easy Ammunition content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>6</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Easy Ammunition</h1>
+<blockquote class="is-warning">
+<p>This mod requires <a target="_blank" class="external-link" href="../../1090/color-converter-api/" rel="noreferrer noopener">Color Converter API</a>. Read the install tab below.</p>
+</blockquote>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><p>Assign background colours to ammunition items based on their penetration values. This allows players to quickly identify the best ammunition without having a PHD in ammunition engineering. This mod is a streamlined server-side adaptation of Faupi - Munitions Expert.</p>
+<p><strong>Vanilla Trash:</strong><br>
+<img loading="lazy" decoding="async" src="../../../assets/1a47587e810186d5acdd8de464964209622a12513e4799ce548cd26a0184fb88.webp" alt="Vanilla.png"></p>
+<p><strong>Easy Ammunition:</strong><br>
+<img loading="lazy" decoding="async" src="../../../assets/be22559fb19e6fd2df9bd08a1e5738a03cb596dce4c1a56eaa9d5479db6ce62f.webp" alt="ColorConverter.png"></p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Install</div>
+<div class="tab-content"><h3>Vanilla SPT:</h3>
+<ol>
+<li>Install <a target="_blank" class="external-link" href="../../1090/color-converter-api/" rel="noreferrer noopener">Color Converter API</a>.</li>
+<li>Decompress the contents of the download into your root SPT directory.</li>
+<li>Optionally, open the <code>SPT/user/mods/Refringe-EasyAmmunition/config.json</code> file to adjust configuration.</li>
+</ol>
+<h3>Fika</h3>
+<p>If you are using Fika, this mod must be installed into the Fika server, and the <a target="_blank" class="external-link" href="../../1090/color-converter-api/" rel="noreferrer noopener">Color Converter API</a> dependancy must be installed into <strong>every</strong> client that connects to the server. The <a target="_blank" class="external-link" href="https://wiki.project-fika.com/faqandguides/set-up-required-optional-mods" rel="noreferrer noopener">Fika documentation</a> has a page about setting required mods on a server. The line you’re probably looking to modify in your <code>fika.jsonc</code> is this:</p>
+<pre><code>    "mods": {
+      "required": ["com.rairai.colorconverterapi.eft"],
+      "optional": []
+    },
+</code></pre>
+<p>If you are using the Fika headless client I’ve always assumed that the Color Converter API needs to be installed there as well. So… I can at least confirm that it doesn’t hurt.  ツ</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Issues?</div>
+<div class="tab-content"><p>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Shout-outs</div>
+<div class="tab-content"><ul>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/3286-faupi/" rel="noreferrer noopener">@Faupi</a>, for the original <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/348-munitions-expert-ammo-stats-in-inspect-view/" rel="noreferrer noopener">Munitions Expert</a> mod.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/12898-cwx/" rel="noreferrer noopener">@CWX</a>, for keeping Faupi’s mod updated in <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/554-faupi-munitions-expert/" rel="noreferrer noopener">Faupi - Munitions Expert</a>.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/3655-kikirio/" rel="noreferrer noopener">@kikirio</a>, for helping integrate this feature into the <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/554-faupi-munitions-expert/" rel="noreferrer noopener">Faupi - Munitions Expert</a> mod.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/6798-rairaitheraichu/" rel="noreferrer noopener">@RaiRaiTheRaichu</a>, for the awesome work on the <a target="_blank" class="external-link" href="../../1090/color-converter-api/" rel="noreferrer noopener">Color Converter API</a>.</li>
+</ul>
+<p>This mod would not be possible without their work. Send them your love! ♥</p></div></div></div>
+<p>♥</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-04-06T00:32:00.000000Z">6 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>5,258 downloads</span><span>8.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Updated to support SPT v4.0</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v4.0 release.</li>
+<li><a target="_blank" class="external-link" href="../../1090/color-converter-api/" rel="noreferrer noopener">Color Converter API</a> is no longer optional. Get it.</li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../1090/color-converter-api/">Color Converter API</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9fd8c01ff6f6466b81c8b7c0454700b78ed78d6539a84228af27da6763ad9d35" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/a0ea8fda-5a3b-4b6b-8c6d-6bfd6e449072?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A52Z&amp;rscd=attachment%3B+filename%3DRefringe-EasyAmmunition.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A55Z&amp;ske=2026-08-01T21%3A20%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=QmgdZyVBDi9GaMWHKv21%2F3xydDeucX%2BiyEM189FhJAE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3DRefringe-EasyAmmunition.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.2</h2></div><time datetime="2025-07-08T02:41:54.000000Z">8 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,240 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Updated to support SPT v3.11</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v3.11 release.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1509-color-converter-api/" rel="noreferrer noopener">Color Converter API</a> enables darker background shades for higher penetration ammunition.</li>
+<li>The configuration file is in <strong>JSON5</strong> format. The file extension is not a mistake. <em><strong>Do not rename it!</strong></em></li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/1c11c2e1-9ba6-47e6-8451-de5b8f30f5e2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A30Z&amp;rscd=attachment%3B+filename%3Drefringe-easyammunition-1.4.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A26Z&amp;ske=2026-08-01T21%3A08%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KhwbesHOxWKdrS9ZSRb6i6Zdb4xzmqHMif48b%2F1B9KA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3Drefringe-easyammunition-1.4.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.1</h2></div><time datetime="2025-01-23T19:59:13.000000Z">23 January 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,144 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Updated to support SPT v3.10</li>
+<li>Drops ESLint and Prettier for Biome</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v3.10 release.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1509-color-converter-api/" rel="noreferrer noopener">Color Converter API</a> enables darker background shades for higher penetration ammunition.</li>
+<li>The configuration file is in <strong>JSON5</strong> format. The file extension is not a mistake. <em><strong>Do not rename it!</strong></em></li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/3dd25355-37eb-41d3-af0f-106da97366ce?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A36Z&amp;rscd=attachment%3B+filename%3Drefringe-easyammunition-1.4.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A18Z&amp;ske=2026-08-01T21%3A14%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SVB3nT5iWTr9F3J6bBrCgSCSzPsfsgXp9pLywGtqS1k%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3Drefringe-easyammunition-1.4.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-07-10T02:21:33.000000Z">10 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,363 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Updated to support SPT v3.9</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v3.9 release.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1509-color-converter-api/" rel="noreferrer noopener">Color Converter API</a> enables darker background shades for higher penetration ammunition.</li>
+<li>The configuration file is in <strong>JSON5</strong> format. The file extension is not a mistake. <em><strong>Do not rename it!</strong></em></li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/4c858f46-7ecc-4ed1-86c7-c7de911d7d6a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A59Z&amp;rscd=attachment%3B+filename%3Drefringe-easyammunition-1.4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A21Z&amp;ske=2026-08-01T21%3A24%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8SwJ5mh899iYVDdiW635irilM%2Fi0%2FaUvc50zNjHBsoQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MiwibmJmIjoxNzg1NjE2MTYyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cQ3NRg8jEZborAYUji4p0LCSHR6jyVUw1kB4lbUNchU&amp;response-content-disposition=attachment%3B%20filename%3Drefringe-easyammunition-1.4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2024-04-17T04:03:09.000000Z">17 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,568 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Updated to support SPT v3.8</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v3.8 release.</li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1509-color-converter-api/" rel="noreferrer noopener">Color Converter API</a> enables darker background shades for higher penetration ammunition.</li>
+<li>The configuration file is in <strong>JSON5</strong> format. The file extension is not a mistake. <em><strong>Do not rename it.</strong></em></li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/a4f21f94-4597-457f-aeab-0c2b6730c0a4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A55Z&amp;rscd=attachment%3B+filename%3Drefringe-easyammunition-1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A15Z&amp;ske=2026-08-01T21%3A25%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8RDoIIGrV0bV0dWZflCHE65Wl7s4PkNEBccwHh5dR8E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&amp;response-content-disposition=attachment%3B%20filename%3Drefringe-easyammunition-1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2023-10-17T02:50:37.000000Z">17 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.7.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,803 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2>Updates:</h2>
+<ul>
+<li>Made updates for SPT v3.7 compatibility.</li>
+<li>Now compatible with RaiRaiTheRaichu’s <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1509-color-converter-api/" rel="noreferrer noopener">Color Converter API</a> for custom colours.</li>
+<li>Background colours in the same tier will become a shade darker depending on penetration.</li>
+<li>The configuration file structure has been updated. <em><strong>You can not use your old versions!</strong></em></li>
+<li>Configuration file is now even more strictly validated.</li>
+<li>Refactored mod structure to be cleaner.</li>
+<li>Updated npm dependencies to be in-line with SPT core.</li>
+</ul>
+<h2>Notes:</h2>
+<ul>
+<li>This version should be compatible with any SPT v3.7 release.</li>
+<li>The configuration file is in <strong>JSON5</strong> format. The file extension is not a mistake. <em><strong>Do not rename it.</strong></em></li>
+</ul>
+<h2>Issues?</h2>
+<ul>
+<li>If you experience any problems, please <a target="_blank" class="external-link" href="https://github.com/refringe/EasyAmmunition/issues" rel="noreferrer noopener">submit a detailed bug report.</a></li>
+</ul>
+<p>♥</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/659916565/365cca49-d92d-42da-8718-e06d556f40fc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A05Z&amp;rscd=attachment%3B+filename%3Drefringe-easyammunition-1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A35Z&amp;ske=2026-08-01T21%3A05%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=vhHXGYP5HfJNr2CwNO7uk2uotd1xBoOuye0YgTT%2FTTo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&amp;response-content-disposition=attachment%3B%20filename%3Drefringe-easyammunition-1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.refringe.easyammunition</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>29 June 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/refringe/EasyAmmunition" target="_blank" rel="noreferrer noopener">https://github.com/refringe/EasyAmmunition</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

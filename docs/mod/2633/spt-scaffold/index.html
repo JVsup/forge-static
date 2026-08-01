@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SPT Scaffold · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SPT Scaffold</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/86a1bf7ca6f220a9bad80d8671de5536ac8a91ae4204234fb7446f769c6f5f2d.webp" alt="SPT Scaffold thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SPT Scaffold</h1>
+    <p class="hero-teaser">Interactive TUI wizard to scaffold ready-to-build SPT 4.x mod projects in seconds.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/a2ce8b41f6d730a0a631b8974a70d551e11557fdf97a96e1229d808ed22118f3.webp" alt="" width="32" height="32">viniHNS</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>371</dd></div>
+    <div><dt>Favourites</dt><dd>3</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+<div class="warning-box">The author marked this item as containing advertising.</div>
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SPT Scaffold content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><blockquote>
+<h1>Mods on Hiatus / Support Paused</h1>
+<ul>
+<li><strong>Status:</strong> No updates planned due to focus on other projects.</li>
+<li><strong>Open Invitation:</strong> The community has full permission to update, modify, and redistribute these mods. Feel free to fork the repository and build your own version.</li>
+</ul>
+</blockquote>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">What is this?</div>
+<div class="tab-content"><p><img loading="lazy" decoding="async" src="../../../assets/547f373eb58e4c19f060ac52a7576a155b708fb94220930e1577a8a665f4ec05.webp" alt="terminal"></p>
+<p>A terminal wizard (TUI) that scaffolds a ready-to-build <strong>SPT 4.x</strong> mod project in seconds — no manual setup required.</p>
+<p>Supports both <strong>server mods</strong> (C# / .NET 9 / NuGet) and <strong>client mods</strong> (BepInEx / netstandard2.1).</p>
+<p>Just run the binary, answer a few prompts, and get a fully configured project with correct namespaces, references, packaging target, and README.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><ul>
+<li>Interactive <strong>step-by-step TUI</strong> — no flags, no config files to edit</li>
+<li><strong>Live SPT version picker</strong> — fetches available versions from NuGet so you always pin the right one</li>
+<li><strong>Server mod</strong> — generates a <code>.csproj</code> pre-wired with <code>SPTarkov.Common</code>, <code>SPTarkov.DI</code>, and <code>SPTarkov.Server.Core</code></li>
+<li><strong>Client mod</strong> — generates a <code>.csproj</code> targeting <code>netstandard2.1</code> with local DLL references auto-resolved from your SPT install path</li>
+<li>Correct <strong>C# namespace</strong> and metadata filled with your name, version, and GUID</li>
+<li><strong>Build + packaging target</strong> baked into <code>.csproj</code> — <code>dotnet build</code> produces a ready-to-distribute <code>.zip</code></li>
+<li><strong>Multiple starter templates</strong> per mod type</li>
+<li><strong>License picker</strong> with 17 SPDX options</li>
+<li>Also generates a <code>.sln</code>, <code>README.md</code>, and <code>.gitignore</code></li>
+<li>Input validation on every field (mod name, semver, URL, SPT install path, etc.)</li>
+</ul></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Templates</div>
+<div class="tab-content"><p><strong>Server mod templates:</strong></p>
+<ul>
+<li><code>Empty</code> — minimal <code>ModMetadata</code> + <code>IOnLoad</code> entry point</li>
+<li><code>Edit Database</code> — <code>DatabaseService</code> injection example</li>
+<li><code>Read JSON Config</code> — reads a custom <code>config.json</code> via <code>ModHelper</code></li>
+</ul>
+<p><strong>Client mod templates:</strong></p>
+<ul>
+<li><code>Empty</code> — minimal <code>BaseUnityPlugin</code> with <code>Awake()</code></li>
+<li><code>BepInEx Config</code> — comprehensive <code>Config.Bind</code> examples (bool, int/float sliders, string, enum, keybinds, color picker)</li>
+<li><code>Harmony Patch</code> — <code>ModulePatch</code> with <code>Prefix</code>/<code>Postfix</code> in a <code>Patches/</code> subfolder</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Generated Project Structure</div>
+<div class="tab-content"><p><strong>Server mod:</strong></p>
+<pre><code>MyMod/
+├── MyMod.sln
+├── MyMod.csproj   ← NuGet refs + auto-zip packaging target
+├── Mod.cs         ← ModMetadata + IOnLoad entry point
+├── README.md
+└── .gitignore
+</code></pre>
+<p><strong>Client mod:</strong></p>
+<pre><code>MyMod/
+├── MyMod.sln
+├── MyMod.csproj   ← Local DLL refs + auto-zip + PostBuild copy to BepInEx/plugins/
+├── Plugin.cs      ← BaseUnityPlugin + [BepInPlugin]
+├── README.md
+└── .gitignore
+</code></pre></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Usage</div>
+<div class="tab-content"><ol>
+<li>Download the latest binary from the <strong>Files</strong> tab</li>
+<li>Place <code>spt-scaffold.exe</code> inside the folder where you want your mod created</li>
+<li>Run it — the wizard will ask for:
+<ul>
+<li><strong>Mod Type</strong> — <code>server</code> or <code>client</code></li>
+<li><strong>Template</strong> — starter template for your mod type</li>
+<li><strong>SPT Install Path</strong> <em>(client mods only)</em> — used to resolve local DLL references</li>
+<li><strong>Mod Name</strong> (used as C# namespace and GUID)</li>
+<li><strong>Author</strong></li>
+<li><strong>Version</strong> (semver, defaults to <code>1.0.0</code>)</li>
+<li><strong>SPT Compatibility</strong> (pick from live NuGet versions)</li>
+<li><strong>Description</strong> <em>(optional)</em></li>
+<li><strong>Repository URL</strong> <em>(optional)</em></li>
+<li><strong>License</strong></li>
+</ul>
+</li>
+<li>Done — open the generated folder in your IDE and start coding</li>
+</ol></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Contributing a Template</div>
+<div class="tab-content"><p>Want a template added to the wizard? Open a Pull Request on <a target="_blank" class="external-link" href="https://github.com/viniHNS/spt-scaffold/pulls" rel="noreferrer noopener">GitHub</a>.</p>
+<p>A template is just a folder with two things:</p>
+<p><strong>1. <code>template.json</code></strong> — displayed in the picker UI:</p>
+<pre><code>{
+  "Label": "My Template",
+  "Desc": "Short description shown in the wizard"
+}
+</code></pre>
+<p><strong>2. One or more <code>.tmpl</code> files</strong> — the filename (minus <code>.tmpl</code>) becomes the generated file.
+Templates use Go’s <code>text/template</code> syntax. Available fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{{.ModName}}</code></td>
+<td>Mod name (also used as namespace)</td>
+</tr>
+<tr>
+<td><code>{{.Author}}</code></td>
+<td>Author name</td>
+</tr>
+<tr>
+<td><code>{{.Version}}</code></td>
+<td>Mod version (semver)</td>
+</tr>
+<tr>
+<td><code>{{.SptVersion}}</code></td>
+<td>Pinned SPT version (e.g. <code>4.0.13</code>)</td>
+</tr>
+<tr>
+<td><code>{{.SptVersionRange}}</code></td>
+<td>Version range (e.g. <code>~4.0.0</code>)</td>
+</tr>
+<tr>
+<td><code>{{.Desc}}</code></td>
+<td>Mod description</td>
+</tr>
+<tr>
+<td><code>{{.RepoURL}}</code></td>
+<td>Repository URL</td>
+</tr>
+<tr>
+<td><code>{{.License}}</code></td>
+<td>SPDX license identifier</td>
+</tr>
+<tr>
+<td><code>{{.ProjectGuid}}</code></td>
+<td>Auto-generated UUID for <code>.sln</code></td>
+</tr>
+<tr>
+<td><code>{{.SptInstallPath}}</code></td>
+<td>SPT install path <em>(client mods only)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Folder location:</strong></p>
+<ul>
+<li>Server template → <code>internal/templates/server/myTemplateName/</code></li>
+<li>Client template → <code>internal/templates/client/myTemplateName/</code></li>
+</ul>
+<p>Look at the existing templates in those folders as a reference before writing your own.</p></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Requirements</div>
+<div class="tab-content"><ul>
+<li>Windows x64</li>
+<li>.NET 9 SDK — to <strong>build</strong> generated server mods</li>
+<li>An existing SPT installation — required for <strong>client mods</strong> (DLL references are resolved from it)</li>
+</ul></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Issues</div>
+<div class="tab-content"><p>Issues? Open one <a target="_blank" class="external-link" href="https://github.com/viniHNS/spt-scaffold/issues" rel="noreferrer noopener">HERE</a></p></div></div></div>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/Q5Q116JYQN" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/27dab3ba29fe5097be450545c46ec7f97796db7e8d3bbdff6c8d05a64ef678e0.svg" alt="ko-fi"></a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0</h2></div><time datetime="2026-03-21T19:56:00.000000Z">21 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>271 downloads</span><span>5.0 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>Features &amp; Improvements</h2>
+<ul>
+<li><strong>Client Mods Support</strong>: Complete scaffolding for BepInEx client plugins targeting <code>netstandard2.1</code> with automatic <code>PostBuild</code> events to sync the output DLL directly into your SPT <code>BepInEx/plugins</code> folder.</li>
+<li><strong>New Client Templates</strong>:
+<ul>
+<li><code>empty</code>: Minimal BepInEx plugin with Awake() entry point.</li>
+<li><code>harmonyPatch</code>: Generates a structured <code>ModulePatch</code> example ready for Prefix/Postfix patching.</li>
+<li><code>bepinexConfig</code>: Generates comprehensive examples for <code>Config.Bind</code> (sliders, keybinds, strings, toggles).</li>
+</ul>
+</li>
+<li><strong>New Server Templates</strong>:
+<ul>
+<li><code>empty</code>: Minimal server mod with just a logging example.</li>
+<li><code>editDatabase</code>: Example showing how to edit SPT database values.</li>
+<li><code>readJsonConfig</code>: Allows loading a custom <code>config.json</code> straight from the server mod structure.</li>
+</ul>
+</li>
+<li><strong>Dynamic Template Engine</strong>: Refactored the core scaffolding to use external <code>.tmpl</code> files bundled via <code>go:embed</code>. Template selection screens now dynamically load entries from <code>template.json</code> metadata files.</li>
+<li><strong>Community Templates Support</strong>: Because of the new dynamic engine, users can now easily contribute their own scaffold templates! Just create a new folder with <code>.tmpl</code> files and a <code>template.json</code> in <code>internal/templates/</code> and submit a Pull Request.</li>
+<li><strong>TUI Enhancements</strong>:
+<ul>
+<li>Dynamic step navigation (skips SPT path for server mods).</li>
+<li>Character counter for descriptions.</li>
+<li>Graceful active item bounds-checking on lists.</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/42befdf23c70544cd41db6fd094f6262077446d984cc8c17e840ee5f3a2b1aa6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1184799164/808484b7-7a76-408e-a29a-ca8e8486faeb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A32Z&amp;rscd=attachment%3B+filename%3Dspt-scaffold.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A17Z&amp;ske=2026-08-01T20%3A58%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TLlVpSN%2FHXCwzH72OXy1n5eVA9fr98iVTfF8Ta3RYZE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIxMCwibmJmIjoxNzg1NjE1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.GYVzDUPNdCX8sUBhgqwZ0Uz8MSk2jfnJ8PcnSPwIxrw&amp;response-content-disposition=attachment%3B%20filename%3Dspt-scaffold.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.0</h2></div><time datetime="2026-03-18T00:34:00.000000Z">18 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>100 downloads</span><span>5.0 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>v0.1.0 — Initial Release</h2>
+<p>First public release of <strong>spt-scaffold</strong> — a terminal wizard that generates a ready-to-build SPT 4.x C# server mod project in seconds.</p>
+<h3>What’s included</h3>
+<ul>
+<li>Interactive step-by-step TUI — no flags, no config files</li>
+<li>Live SPT version picker fetched from NuGet</li>
+<li>Generates <code>.csproj</code> pre-wired with <code>SPTarkov.Common</code>, <code>SPTarkov.DI</code>, and <code>SPTarkov.Server.Core</code></li>
+<li>Auto-filled <code>ModMetadata</code> with your name, version, and GUID</li>
+<li><code>dotnet build</code> produces a ready-to-distribute <code>.zip</code></li>
+<li>17 SPDX license options</li>
+<li>Also generates <code>README.md</code> and <code>.gitignore</code></li>
+<li>Input validation on every field</li>
+</ul>
+<h3>Download</h3>
+<p>Grab <code>spt-scaffold.exe</code>, place it in your target folder, and run it.</p>
+<p><strong>Requires:</strong> Windows x64 · .NET 9 SDK (to build the generated project)</p>
+<blockquote>
+<p><strong>Windows SmartScreen warning?</strong> This is expected for unsigned binaries.
+You can safely click <strong>More info → Run anyway</strong>, or build from source if you prefer.</p>
+</blockquote>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2b590122385f9aa6b25a9fbcb3083e8267c5784efbb8a28ef9895b415594ea40/" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1184799164/11fff41b-007e-40e6-9ad7-1b7a37a21ead?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A29Z&amp;rscd=attachment%3B+filename%3Dspt-scaffold.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A26Z&amp;ske=2026-08-01T21%3A15%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Edl1adWTarJ%2FY%2FWcqzg8F2L3X5ael82G0KKOBsLtO34%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIxMCwibmJmIjoxNzg1NjE1OTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.GYVzDUPNdCX8sUBhgqwZ0Uz8MSk2jfnJ8PcnSPwIxrw&amp;response-content-disposition=attachment%3B%20filename%3Dspt-scaffold.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vinihns.sptscaffold</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>18 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/viniHNS/spt-scaffold" target="_blank" rel="noreferrer noopener">https://github.com/viniHNS/spt-scaffold</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

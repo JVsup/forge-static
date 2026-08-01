@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Southern-Hemisphere-Seasons · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Southern-Hemisphere-Seasons</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/dc3dee701ed902e2e9929d156adb2a78bf5676a4eccb861c82e77aab330c9bd7.webp" alt="Southern-Hemisphere-Seasons thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Southern-Hemisphere-Seasons</h1>
+    <p class="hero-teaser">The Southern-Hemisphere-Seasons mod aligns the in-game seasons with the real-world seasons for players in the Southern Hemisphere.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8bb8e075785c66d961c359a767593e86ce4cafe51fe745acdb9f71d399f247ab.webp" alt="" width="32" height="32">Dildz</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,078</dd></div>
+    <div><dt>Favourites</dt><dd>2</dd></div>
+    <div><dt>Mod lists</dt><dd>5</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Southern-Hemisphere-Seasons content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><p>Automatically adjusts the in-game season based on the southern hemisphere dates and the system date, ensuring that the season reflects the real-world time of year.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>1. Download and Extract:</p>
+<p>- Download the mod package zip from releases and extract it into your SPT directory.</p>
+<p>2. Configuration:</p>
+<p>- The mod comes with a config file where you can enable or disable the mod, force a season etc.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Config Options</div>
+<div class="tab-content"><p>The mod includes several configuration options that can be adjusted in the config folder.</p>
+<p>&gt; <strong>SPT 3.11.x version:</strong></p>
+<p>- “enabled”: true,    // enable or disable the mod</p>
+<p>- “stormChance”: 0.1,  // chance for a storm during Summer (0 to 1 - where 0.1 = 10% / 0.2 = 20% etc)</p>
+<p>- “forceSeason”: null  // force a specific season (null = auto, 0 = Summer, 1 = Autumn, 2 = Winter, 3 = Spring, 4 = Late Autumn, 5 = Early Spring, 6 = Storm)</p>
+<p>------------------------------------------------------------------------</p>
+<p>&gt; <strong>SPT 4.0.0 version:</strong></p>
+<p>- “enabled”: true,                // enable or disable the mod</p>
+<p>- “forceSeason”: null,            // force a specific season (null = auto, 0 = Summer, 1 = Autumn, 2 = Winter, 3 = Spring, 4 = Late Autumn, 5 = Early Spring)
+- “allowEventSeason”: false       // if true, let SPT seasonal events (e.g. Christmas) override this mod’s season (default: false)</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">How It Works</div>
+<div class="tab-content"><p>1. Season Determination: The mod calculates the current season based on the server’s system date and time. It follows the Southern Hemisphere’s seasonal calendar:</p>
+<p>- Summer: December 1 - February 28</p>
+<p>- Autumn: March 1 - April 30</p>
+<p>- Late Autumn: May 1 - May 31</p>
+<p>- Winter: June 1 - August 31</p>
+<p>- Early Spring: September 1 - September 30</p>
+<p>- Spring: October 1 - November 30</p>
+<p>2. Persistence: The mod recalculates the season, ensuring that the correct season is always in effect.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Known Issues</div>
+<div class="tab-content"><p>- The mod defaults to summer if there is any issue determining the current season.<br>
+- Ensure the server’s time zone is correctly configured, as the mod relies on the system date to determine the season.</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><p>This mod is provided as-is, with no official support. If bugs are reported I will do my best to fix.</p>
+<p>It is intended for tinkerers and advanced users who understand how to modify and troubleshoot their game environment.</p>
+<p>Please make sure to back up your game and mod files before making any changes.</p></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">License</div>
+<div class="tab-content"><p>This mod is licensed under the MIT License. See the LICENSE file for more details.</p></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Credits:</div>
+<div class="tab-content"><p>- <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/27036-dewardiandev/" rel="noreferrer noopener">DewardianDev</a> for the original <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2052-all-the-seasons/" rel="noreferrer noopener">All The Seasons</a> mod which this is based on.</p>
+<p>- <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/20801-sheepy/" rel="noreferrer noopener">sheepy</a> for the <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2118-simple-season-selector/" rel="noreferrer noopener">Simple Season Selector</a> mod which I used as a reference for updating to SPT 3.10.X as well as adapting certain features.</p>
+<p>- <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/37013-bushtail/" rel="noreferrer noopener">bushtail</a> for the <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2610-random-season-ripoff/" rel="noreferrer noopener">Random Season Ripoff</a> mod which I used as a reference for updating to SPT 3.11.X as well as adapting certain features.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-03-22T09:35:00.000000Z">22 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>544 downloads</span><span>22.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Ported mod to SPT 4.0.X</p>
+<ul>
+<li>Checks &amp; updates season based on system date/time every hour</li>
+<li>Added seasonal event override</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/beddfa12bd7b71352c3fdf18b274186265343db6bf099894c45a462584f4753f" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/857304815/469d0e6d-e900-42fa-92f1-1cc886c65f6e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A45Z&amp;rscd=attachment%3B+filename%3DSouthernHemisphereSeasons-v2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A01Z&amp;ske=2026-08-01T20%3A58%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=L4YejgPTi7SLYzu%2BXCG%2FBV0E939hjoj6AT4p6z4X%2BSE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY3OSwibmJmIjoxNzg1NjE1Mzc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-S1_x8hYrGtmEu9khO_ApZW2Npo5OOSy7zf2CwxBs4g&amp;response-content-disposition=attachment%3B%20filename%3DSouthernHemisphereSeasons-v2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2025-03-23T10:36:21.000000Z">23 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>642 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for SPT 3.11.X<br>
+Checks &amp; updates season based on system date at raid start</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4a316980c2221370a0b4fa3c08461629b20c28790082dd290fb264d8b2d79965/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/857304815/38d6349c-2f6e-4761-b1fb-e1b449e3df33?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A09Z&amp;rscd=attachment%3B+filename%3DSouthern-Hemisphere-Seasons-1.4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A19Z&amp;ske=2026-08-01T21%3A04%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2BhwuT%2BGFk2HybdVdRBu4pKc8xqwrFy4KSCA2PnJwNUM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY4MCwibmJmIjoxNzg1NjE1MzgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IdRJikKMtV16vg_6MOhFSJafn4secUQE7WE3EyRtwgY&amp;response-content-disposition=attachment%3B%20filename%3DSouthern-Hemisphere-Seasons-1.4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2024-12-02T08:46:30.000000Z">2 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>115 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for SPT 3.10.X<br>
+Additional ‘Late Autumn’ season implemented, ‘Early Spring’ &amp; ‘Storm’ cause raid loading to fail &amp; have been disabled until a fix is found.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4a316980c2221370a0b4fa3c08461629b20c28790082dd290fb264d8b2d79965/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/Dildz/Southern-Hemisphere-Seasons/tree/SPT3.11.x" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.dildz.southern-hemisphere-seasons</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>22 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Dildz/Southern-Hemisphere-Seasons/tree/SPT3.11.x" target="_blank" rel="noreferrer noopener">v3.11.x</a></li><li><a href="https://github.com/Dildz/Southern-Hemisphere-Seasons/tree/SPT4.0.x" target="_blank" rel="noreferrer noopener">v4.0.x</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

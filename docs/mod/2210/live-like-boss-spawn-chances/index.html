@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Live Like Boss Spawn Chances · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Live Like Boss Spawn Chances</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/85d8333951fb865a8b2fc617d574f5b97b1a1f5bcbc56f0ed7d4749dbf2b25d3.webp" alt="Live Like Boss Spawn Chances thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Live Like Boss Spawn Chances</h1>
+    <p class="hero-teaser">Simulates boss spawn chances gradually increasing throughout a &quot;wipe&quot; based on your player level and in-raid hours</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/299742898d0119230d8fc57a3305f662df2556138d7c811dd842d65426649420.svg" alt="" width="32" height="32">DanW</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,421</dd></div>
+    <div><dt>Favourites</dt><dd>4</dd></div>
+    <div><dt>Mod lists</dt><dd>10</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Live Like Boss Spawn Chances content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Instead of having late-wipe boss spawn chances causing your regular death during a new playthough, this mod will keep spawn chances closer to BSG’s early-wipe values. After you reach a certain player level and in-raid hours (combined between PMC and Scav profiles), boss chances will gradually start increasing. After you reach a certain player level and in-raid hours, boss chances will be left at their (default) late-wipe values. However, some bosses will always have the same spawn chances, such as Raiders on Labs and Rogues on Lighthouse. Also, other “event” boss spawns will be eliminated such as Bloodhounds and “crazy” Scavs.</p>
+<p>Bosses (that aren’t ignored or blocked from spawning) will have their spawn chances scaled using the following system:</p>
+<ol>
+<li>The overall range that spawn chances are allowed to be scaled is 20%-&gt;100% by default. For example, if you’re starting a new profile and Reshala normally spawns at 30%, he will instead spawn at 20% of that value (6%). Later in your “wipe”, he will return to spawning at 30% again.</li>
+<li>Once you’re above a certain player level AND above a certain number of in-raid hours, boss spawn chances will start gradually increasing until you hit an upper threshold for both player level AND in-raid hours. After this point, boss spawn chances will remain at their vanilla SPT (late-wipe) values. By default, spawn-rate scaling is linear between the lower and upper thresholds, but this can be adjusted in <em>config.json</em>.</li>
+<li>After you exceed an even higher player level (40 by default), boss spawn chances will remain at their vanilla SPT (late-wipe) values regardless of your in-raid hours. This allows SPT Dev accounts to keep vanilla boss spawn rates.</li>
+<li>Spawn rates will be calculated each time the game is started. As you progress in your “wipe” or switch to another profile, spawn rates will change accordingly.</li>
+</ol>
+<p>This mod is highly configurable in <em>config.json</em> and allows the following to be adjusted:</p>
+<ul>
+<li>adjustment_factors: whether player level, player in-raid hours, or both will be used to adjust boss spawn chances</li>
+<li>adjustments_disabled_after_player_level: the upper threshold described in step (3) above which no spawn-rate scaling will occur.</li>
+<li>thresholds.adjustment_range: the upper and lower scaling amounts that can be applied to boss spawn rates (20% minimum and 100% maximum, relative to vanilla SPT values, by default).</li>
+<li>thresholds.player_level and thresholds.player_hours: The range of player levels and in-raid hours between which boss spawn rates will be scaled. If either value is below its corresponding minimum threshold, boss spawn rates will be scaled by the minimum value in thresholds.adjustment_range. After both values are above their corresponding maximum thresholds, boss spawn rates will be scaled by the maximum value in thresholds.adjustment_range. Otherwise, scaling will be determined by whichever value (player level or in-raid hours) has the least amount of “progression” defined by these ranges.</li>
+<li>ignored_bosses: the bosses on each map that will not have their spawn rates adjusted by this mod. By default, this includes Rogues and Zryachiy on Lighthouse, Raiders on Labs, and Santa on all maps.</li>
+<li>blocked_bosses: the bosses that will be blocked from spawning on all maps. By default, this includes Bloodhounds and “crazy” Scavs.</li>
+<li>disable_weekly_boss_rotation: disables a random boss being forced to have a 100% spawn chance each week (implemented by SPT)</li>
+<li>chance_progression_rate: the scaling curve that will be applied when either player level or in-raid hours are between their corresponding ranges defined in thresholds. By default, scaling is linear.</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>Due to rounding error, spawn rates might not exactly match vanilla SPT values after switching from a new profile to a Dev (or other late-wipe) profile. However, they should be close enough that you won’t notice a difference.</li>
+<li>If you’re using a multi-player mod, spawn rates will only be set using the host’s profile.</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-07-20T03:10:00.000000Z">20 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>284 downloads</span><span>17.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Bug fix for exception when starting the game</li>
+</ul>
+<p><em>config.json</em> files from the previous release are not compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/2fc8e22b4fcd111fc9ba8f3c27d0562ff58158e3f422c8af29170079ff70ab09" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1012850962/73669b53-a206-4003-8939-c1a8a00683a1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A05Z&amp;rscd=attachment%3B+filename%3DLiveLikeBossSpawnChances-2.0.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A26Z&amp;ske=2026-08-01T20%3A59%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=cSjwwD3Uuoxx7T3rsO3JLzOpvVsiFTHPXtzl1q4NLH0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk5MSwibmJmIjoxNzg1NjE1NjkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b9oj_twWXcwqeWJ19Gaxc0SRHmR92hqrKSa-AR4nLXM&amp;response-content-disposition=attachment%3B%20filename%3DLiveLikeBossSpawnChances-2.0.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-07-19T04:11:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>67 downloads</span><span>17.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated to SPT 4.0</li>
+<li>Added config.json option to disable SPT’s weekly boss rotation</li>
+<li>Added Labyrinth bosses and BTR to ignored bosses in config.json</li>
+<li>Added “skier” to blocked bosses in config.json</li>
+<li>Revised config.json field names to follow a consistent naming scheme</li>
+</ul>
+<p><em>config.json</em> files from the previous release are not compatible.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/10d0d7a30e072c962e12685c39c61ca3d8948c42c0be77a353c0a6c13d03a865" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1012850962/d406055e-f9ba-4e89-86de-aae4a42f553e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A43Z&amp;rscd=attachment%3B+filename%3DLiveLikeBossSpawnChances-2.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A49Z&amp;ske=2026-08-01T21%3A03%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=zY9EoDsj7ygSF8SJx77mltlOk%2FEDe9XCgm8tcgubhDo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk5MSwibmJmIjoxNzg1NjE1NjkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b9oj_twWXcwqeWJ19Gaxc0SRHmR92hqrKSa-AR4nLXM&amp;response-content-disposition=attachment%3B%20filename%3DLiveLikeBossSpawnChances-2.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-07-03T03:31:11.000000Z">3 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,070 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3a836b86b607146510e0e489a888b0f72e3d5c965ea8431fa9f76ffcf9425079?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1012850962/497ea5af-3e97-47a4-af70-51ded70474df?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A30Z&amp;rscd=attachment%3B+filename%3DDanW-LiveLikeBossSpawnChances.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A19Z&amp;ske=2026-08-01T20%3A57%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ni5td2kDS%2BHMdqHRVApqV6Fsky9V4D0JYVZYzdsjkDQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk5MSwibmJmIjoxNzg1NjE1NjkxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b9oj_twWXcwqeWJ19Gaxc0SRHmR92hqrKSa-AR4nLXM&amp;response-content-disposition=attachment%3B%20filename%3DDanW-LiveLikeBossSpawnChances.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.danw.livelikebossspawnchances</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>3 July 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/dwesterwick/SPTLiveLikeBossSpawnChances" target="_blank" rel="noreferrer noopener">https://github.com/dwesterwick/SPTLiveLikeBossSpawnChances</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

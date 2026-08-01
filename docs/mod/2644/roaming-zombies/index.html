@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Roaming Zombies · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Roaming Zombies</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/1f5f74d8a9818daf52d60a6d4fb9fe3ef3a2bc622103591269989e7c976a05a7.webp" alt="Roaming Zombies thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Roaming Zombies</h1>
+    <p class="hero-teaser">Turn every raid into survival horror. Mixed hordes of infected spawn on every map, any time of day</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8e7eba78715e3dc82c1fe75a970a3f3ee07da4b0933cf56e96561bcc659f3e5c.webp" alt="" width="32" height="32">Dr.Braun</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>7,625</dd></div>
+    <div><dt>Favourites</dt><dd>29</dd></div>
+    <div><dt>Mod lists</dt><dd>44</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Roaming Zombies content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Roaming Zombies</h1>
+<p><strong>Turn every raid into survival horror.</strong> Mixed hordes of infected spawn on every map, any time of day — melee zombies hunt you down and swing knives, pistol zombies shoot from cover. One horde per raid. You get a notification, then they come.</p>
+<blockquote>
+<p><em>“The dead are rising… zombies have been spotted nearby.”</em></p>
+</blockquote>
+<hr>
+<h2>⚠️ Read this before installing</h2>
+<p><strong>Zombies are genuinely dangerous.</strong> This isn’t cosmetic — a horde on Labs or night Factory can absolutely wipe you. Melee zombies chain knife attacks at 1-second intervals, pistol zombies engage from 15 meters with real aim, and EFT’s infection contact damage stacks on top when they get close. Bring ammo, watch your six, and don’t get cornered.</p>
+<hr>
+<h2>What you get</h2>
+<ul>
+<li><strong>Mixed hordes</strong> on every map — melee + pistol zombies drawn from all four infected types (<code>infectedAssault</code>, <code>infectedPmc</code>, <code>infectedCivil</code>, <code>infectedLaborant</code>)</li>
+<li><strong>Real knife swings</strong> with native animations and damage — armor reduction works correctly because hits go through EFT’s standard <code>KnifeCollider</code> pipeline</li>
+<li><strong>Active pursuit</strong> — melee zombies pathfind toward the closest human player and face you before each swing</li>
+<li><strong>Pistol zombies</strong> engage from range using EFT’s standard shoot AI</li>
+<li><strong>HUD notification + alert sound</strong> when the horde arrives</li>
+<li><strong>Any time of day</strong> — no more night-only restriction, zombies come whenever you’re in a raid</li>
+<li><strong>Persists across raids</strong> — no re-enabling needed</li>
+</ul>
+<h2>Platform &amp; mod compatibility</h2>
+<ul>
+<li>✅ <strong>Solo SPT</strong> — plug and play</li>
+<li>✅ <strong>Fika host</strong> — host drives AI for all players in session</li>
+<li>✅ <strong>Fika headless</strong> — install client DLL on the headless, zombies hunt every connected player</li>
+<li>✅ <strong>Acid’s Bot Placement System (ABPS)</strong> — horde re-injected after ABPS’s post-raid wipe, both mods coexist cleanly</li>
+<li>✅ <strong>SAIN</strong> — SAIN explicitly excludes infected bot types from its overrides, so they don’t fight</li>
+</ul>
+<p><strong>No mod dependencies.</strong> No BigBrain, no MoreBotsAPI. Self-contained.</p>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release ZIP</li>
+<li>Extract into your SPT root folder — files drop into the correct locations automatically:
+<ul>
+<li><code>BepInEx/plugins/ZombieHorde/ZombieHorde.Client.dll</code></li>
+<li><code>SPT/user/mods/ZombieHorde/ZombieHorde.Server.dll</code> + <code>config.json</code></li>
+</ul>
+</li>
+<li>Restart SPT Server and launch the game</li>
+</ol>
+<p><strong>Fika-specific:</strong> install the client DLL on whichever machine drives bot AI — that’s the host in a host/client session, or the <strong>headless</strong> in a headless session. Player-only machines can still install it for the horde notification + alert sound.</p>
+<h2>Configuration</h2>
+<p>Edit <code>SPT/user/mods/ZombieHorde/config.json</code> to tune:</p>
+<ul>
+<li><strong>Per-map spawn chance</strong> (0–100%) — default tuned from 30% on huge maps like Woods up to 100% on Labs and night Factory</li>
+<li><strong>Horde size</strong> — default 8–16 melee zombies + 4–8 pistol zombies per raid</li>
+<li><strong>Spawn delay</strong> — default 120 seconds so you can load in before they arrive</li>
+<li><strong><code>alwaysSpawn: true</code></strong> — “100% on every map” override if you want guaranteed hordes everywhere</li>
+</ul>
+<h2>Optional: custom alert sound</h2>
+<p>Drop <code>horde_alert.ogg</code> (or <code>.wav</code>) into <code>BepInEx/plugins/ZombieHorde/</code> and it’ll play when the first zombie of the horde is detected.</p>
+<h2>F12 settings panel</h2>
+<p>If you have <a target="_blank" class="external-link" href="https://github.com/BepInEx/BepInEx.ConfigurationManager" rel="noreferrer noopener">BepInEx ConfigurationManager</a>, press <strong>F12</strong> in-raid to toggle the horde notification and alert audio live.</p>
+<h2>Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPT</td>
+<td><code>~4.0.13</code></td>
+</tr>
+<tr>
+<td>BepInEx ConfigurationManager</td>
+<td>optional (for F12 panel)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Thanks to the SPT modding community for dnSpy help, SAIN for making the compat research straightforward, and BSG for leaving just enough of the Halloween event wiring in place to hack together..</em></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-04-19T01:07:00.000000Z">19 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>5,918 downloads</span><span>19.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>The one that makes zombies threatening - No more Bluetooth damage through walls</h2>
+<p>Previous versions of Roaming Zombies had infected bots that shambled around harmlessly — a bizarre touch-damage effect was the only way they could hurt you. <strong>v1.2.0 is a different mod.</strong> Melee zombies now actively hunt you, face you before each swing, and chain knife attacks. Pistol zombies engage from range with a Makarov using EFT’s standard shoot AI. Both vectors do real damage through EFT’s native pipeline, so armor class reduction works correctly.</p>
+<blockquote>
+<p>⚠️ <strong>I cannot stress this enough — zombies are a real challenge now.</strong> A horde on Labs or night Factory will wipe you if you’re not paying attention.</p>
+</blockquote>
+<h2>What’s new</h2>
+<h3>Melee zombies</h3>
+<ul>
+<li><strong>Real knife swing animations</strong>  — proper animation, proper hit-cast, proper damage</li>
+<li><strong>Active pursuit</strong> — zombies pathfind toward the closest human player and face you before each swing so the hit actually lands</li>
+<li><strong>1-second swing cadence</strong> — they’ll chain attacks if you don’t move</li>
+<li><strong>Native damage</strong> —  so armor class reduction works naturally (old reflection hack that bypassed armor is gone)</li>
+</ul>
+<h3>Pistol zombies (new)</h3>
+<ul>
+<li>Spawn as a secondary horde</li>
+<li>Engage you from 15 m with a Makarov, using EFT’s standard shoot AI</li>
+<li>Configurable via new <code>pistolHordeSize</code> config (default 1-2 per infected type)</li>
+</ul>
+<h3>Platform support</h3>
+<ul>
+<li><strong>Fika headless works end-to-end.</strong> Zombies hunt and attack the closest human player even when there’s no local player on the machine running bot AI. Just install the client DLL on the headless too.</li>
+<li><strong>ABPS coexistence</strong> confirmed. The router re-injects zombies after ABPS’s post-raid wipe runs.</li>
+<li><strong>SAIN coexistence</strong> confirmed. SAIN’s own <code>StrictExclusionList</code> keeps it out of our zombies’ brains.</li>
+</ul>
+<p><strong>Fika users:</strong> the client DLL must be on whichever machine drives bot AI. For Fika headless sessions, that’s the headless — put the client DLL in <code>&lt;headless&gt;/BepInEx/plugins/ZombieHorde/</code>. Player machines can have it too for local notifications + audio.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/8dba970c8b5cb1091194dd51cf36607134d8fe93aea8ebac6e689751dce4e909?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1194873259/37985dc2-82b6-419f-8f3c-3c9701174ef1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A37Z&amp;rscd=attachment%3B+filename%3DZombieHorde.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A56Z&amp;ske=2026-08-01T21%3A22%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=H1Gi49RZN7S8C0w099tFwhxEWSVJywKKl6Q11mTYDaE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3DZombieHorde.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-04-18T20:19:00.000000Z">18 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>95 downloads</span><span>20.7 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>v1.1.1 — ABPS Persistence &amp; Fika Headless Fixes</h1>
+<p>Two long-standing compatibility issues fixed this release.</p>
+<h2>ABPS (Acid’s Bot Placement System) persistence</h2>
+<h2>Fika headless spawn fix</h2>
+<h2>Other improvements</h2>
+<ul>
+<li><strong>F12 settings panel</strong> — with <a target="_blank" class="external-link" href="https://github.com/BepInEx/BepInEx.ConfigurationManager" rel="noreferrer noopener">BepInEx ConfigurationManager</a>, press F12 to live-tune melee damage, range, cooldown, and notification toggles without leaving a raid</li>
+<li><strong><code>spawnChance</code> is a real percentage</strong> — server-side dice roll. <code>30</code> actually means ~30% of raids (was coerced to 100% by EFT internals)</li>
+<li><strong><code>alwaysSpawn</code> config option</strong> — bypasses dice rolls + bot caps, forces a horde every raid</li>
+<li><strong>Default <code>spawnDelaySeconds</code> 30 → 120</strong> so players load in before the horde</li>
+<li>Melee damage 35 → 5, range 4m → 2m</li>
+</ul>
+<h2>Compatibility</h2>
+<p>SPT <code>~4.0.13</code> · Fika solo/host/headless · <strong>ABPS compatible</strong> · Optional BepInEx ConfigurationManager for F12 UI</p>
+<h2>Known limitation</h2>
+<p>Zombies don’t play attack animations — EFT’s Halloween event system is dead code in this build. Damage is applied via proximity reflection.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/2346167404131bedcbafec612f891bccd9c13f8e3a81d09c54fef95e25ea6d1b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1194873259/0aad63c1-aebb-4274-a82c-7056b3611258?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A30Z&amp;rscd=attachment%3B+filename%3DZombieHorde.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A26Z&amp;ske=2026-08-01T20%3A58%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BGrvXIOAYcaMVG3RVBSe1PvAzEaMKwsKWH9dUwsVw%2F0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3DZombieHorde.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-28T23:37:00.000000Z">28 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,612 downloads</span><span>1005.4 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Roaming Zombies</h2>
+<p>When the sun goes down, the dead come out.</p>
+<p>Roaming Zombies adds infected hordes to every map in SPT. Night raids are no longer safe — a mixed pack of zombie scavs, PMCs, civilians, and laborants will spawn and hunt you down. You’ll get one warning.</p>
+<hr>
+<h3>Features</h3>
+<ul>
+<li>🧟 Mixed horde of infected scavs, PMCs, civilians &amp; laborants</li>
+<li>🌙 Night raids only (22:00 – 06:00 in-game time)</li>
+<li>⏱️ One horde per raid, spawns on a configurable timer</li>
+<li>🔔 HUD alert when the horde is detected</li>
+<li>🔊 Optional custom alert sound — drop your own <code>.ogg</code> or <code>.wav</code></li>
+<li>🤝 Fika co-op compatible</li>
+</ul>
+<hr>
+<h3>Configuration</h3>
+<p>All settings are in <code>SPT/user/mods/ZombieHorde/config.json</code></p>
+<ul>
+<li><strong>Horde size</strong> — min/max bots spawned per zombie type</li>
+<li><strong>Spawn delay</strong> — seconds after raid start before the horde arrives</li>
+<li><strong>Spawn chance</strong> — per-map percentage, set to <code>0</code> to disable a map entirely</li>
+</ul>
+<hr>
+<h3>Fika</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server mod</strong></td>
+<td>Install on SPT server as normal</td>
+</tr>
+<tr>
+<td><strong>Client mod</strong></td>
+<td>All players install for the full experience (alert + sound). Zombies spawn regardless.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>Requirements</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPT</strong></td>
+<td><code>~4.0.13</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/6196fe4ce905e42f3cb43a0cb36110843f24514a30ea78b3ebcc339fb8b700e7?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1194873259/32f0c854-fdef-450d-943e-7909611d9141?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A05Z&amp;rscd=attachment%3B+filename%3DZombieHorde.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A17Z&amp;ske=2026-08-01T21%3A01%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TKOAw7l0ZNC7p64WEcFjCO1wV3YmMssp0B%2Bc3uv5BMY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3DZombieHorde.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vonbraunz.roamingzombies</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Vonbraunz/SPT-Roaming-Zombies" target="_blank" rel="noreferrer noopener">https://github.com/Vonbraunz/SPT-Roaming-Zombies</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

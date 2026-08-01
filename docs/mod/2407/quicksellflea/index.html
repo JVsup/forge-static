@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>QuickSellFlea · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>QuickSellFlea</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/cf5e3525d1b2dd82268e4a8cc9f2b7489801565d2be73599cb022b81dfef6fd5.webp" alt="QuickSellFlea thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      <span class="badge badge-featured">Featured</span>
+      <span class="badge"></span>
+    </div>
+    <h1>QuickSellFlea</h1>
+    <p class="hero-teaser">Tired of placing orders on the flea? Tired of having to install 20 mods to quick sell on flea? Now you can instantly place it with the average price - with just ONE click and no other mods needed!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c9fa8449ac96861ab59f8a51cd15c779ad0f174f7ea31909485698018bf0d633.webp" alt="" width="32" height="32">Lacyway</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>28,629</dd></div>
+    <div><dt>Favourites</dt><dd>55</dd></div>
+    <div><dt>Mod lists</dt><dd>106</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="QuickSellFlea content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>When in your main menu stash, or hideout, hold <strong>CTRL</strong> (default, can be changed) and right-click an item to post it on the flea with the average price. 100% client-sided, no server mod or other dependencies needed.</p>
+<p>You can toggle whether to show listing price or average price in the tooltip in the F12 menu.</p>
+<p>The idea came from <strong>Simdola</strong>, who tried other similar mods. The problem is that they require either a server side component, or another mod to be used. This mod is very simple, performant, safe and has very little interference with base game logic.</p>
+<h3>New with 1.3.0</h3>
+<ul>
+<li>Added UIFixes multi-select integration (thank you <strong>tyfon</strong> for being awesome)</li>
+<li>Added 2 new options:
+<ul>
+<li><strong>Bypass Limit</strong>: The mod will now ignore your post limit on the flea</li>
+<li><strong>Hotkey</strong>: The hotkey to hold down to show the interaction</li>
+</ul>
+</li>
+</ul>
+<h3>New with 1.1.3</h3>
+<ul>
+<li>You can now choose the currency you want to list in
+<ul>
+<li>The mod automatically calculates the average price of the currency</li>
+</ul>
+</li>
+</ul>
+<h3>New with 1.1.0</h3>
+<ul>
+<li>You can now hold SHIFT while posting to post <em><strong>all</strong></em> items of similar type</li>
+</ul>
+<p>The text will show ([1s, 10x] 1000) where S represents stacks, X amount (e.g. for stackable ammo) and 1000 is the total gain from posting it (or listing price, depending on your settings).
+
+</p>
+<h3>Limitations:</h3>
+<ul>
+<li>You can only place the same amount that you are restricted to on the flea (the button won’t appear otherwise)</li>
+<li>If you right-click a stacked item, it will always place the full stack. Split before posting</li>
+<li>This does not let you post normally flea-restricted items</li>
+<li>This does not bypass FiR requirements for the flea</li>
+</ul>
+<h3>Bugs:</h3>
+<ul>
+<li>Sometimes the SPT server doesn’t execute the callback properly, this happens even without the mod. If you see a flashing item you need to restart the game. This needs to be fixed by the SPT development team. (as of <code>1.3.1</code> this has been fixed with a workaround)</li>
+</ul>
+<p>You can support me on Ko-Fi</p>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/lacyway" rel="noreferrer noopener">Click</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.1</h2></div><time datetime="2026-05-06T14:30:00.000000Z">6 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>9,724 downloads</span><span>16.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added “Skip Mode” that bypasses the callback bug in SPT, defaults to <code>true</code>, which fixes blinking items</li>
+<li>Fixed typo</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/265a9207d780c0aeeac1acb26c02f2c3289c669904cc6d087dd3bdc4ae5b5d3f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/405f228d-da8f-47f9-b431-2eccc7e45369?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A40Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A23Z&amp;ske=2026-08-01T21%3A11%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2FuxJIoD9tpKZpMvQW2X1u%2BCmw%2BUYIUg7yShS1VBmYMQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MSwibmJmIjoxNzg1NjE1ODQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6rv2bCk8jdzbjpKLgzIHOjyWstRznhwGjz1PJ0MaOC4&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-05-05T19:51:00.000000Z">5 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>252 downloads</span><span>16.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>QuickSellFlea now strips the bloat, killing the need for fragile dependencies and sluggish middleware that plague inferior alternatives. It delivers pure, native execution that maximizes SPT performance while ensuring total version stability. Other mods are now obsolete legacy junk; this is the lean, high-fidelity standard for instant flea market gratification.</p>
+<ul>
+<li>Added UIFixes multi-select integration (thank you <strong>tyfon</strong> for being awesome)</li>
+<li>Refactored the code base to be more effective</li>
+<li>Added 2 new options:
+<ul>
+<li><strong>Bypass Limit</strong>: The mod will now ignore your post limit on the flea</li>
+<li><strong>Hotkey</strong>: The hotkey to hold down to show the interaction</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f350e239bbec3e25e853efb0e4a1b2ac0cb898b6409baa9e666f98b04c8e35a1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/50b8eccd-83e7-46b3-8e29-176b4a65048d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A34Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A33Z&amp;ske=2026-08-01T21%3A15%3A34Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=AZGwncz8RUmz3JvUUDNaW2u6tHJZ0PP9ll%2FVeIgi69Y%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MSwibmJmIjoxNzg1NjE1ODQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6rv2bCk8jdzbjpKLgzIHOjyWstRznhwGjz1PJ0MaOC4&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-03-10T12:17:00.000000Z">10 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>4,124 downloads</span><span>13.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added keybind to quickly change posting currency (Default: Insert)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/173ba8977c4f1fcd9b3d14451d2f83e29b010215c6114c303b5c5d98758681f5?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/b3377b95-5ee1-4b11-8889-b1a97bda3aa7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A28Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A34Z&amp;ske=2026-08-01T21%3A23%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9d%2FrZXpeliXGxdV5iokGEaN31ppt%2FU0tX7CkkyqEFXM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MSwibmJmIjoxNzg1NjE1ODQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6rv2bCk8jdzbjpKLgzIHOjyWstRznhwGjz1PJ0MaOC4&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2025-12-03T07:40:00.000000Z">3 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.7</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>8,986 downloads</span><span>12.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added an option to change the listing currency in the F12 menu
+<ul>
+<li>Choose from RUB, USD and EUR</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/dd654e6cb946fa38ca8e631299e6c9fd83c52099cb3cdc77763a8171594c73bf?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/6f436e80-d9ef-4d23-a329-2e284de1a009?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A33Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A04Z&amp;ske=2026-08-01T21%3A11%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lqYhW4Oee5nlPOxkRdGox2Fs2j4sE0JKLA4Z1JeWejs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MiwibmJmIjoxNzg1NjE1ODQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._C6a6YhNLZyig_Qy3r1KcPWGWRwL56EcddB1jgRJJ3U&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-29T17:29:00.000000Z">29 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.7</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>743 downloads</span><span>12.1 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>You can no longer bypass <code>Found In Raid</code> restrictions on the flea with the mod
+<ul>
+<li>This means if only FiR items are allowed, the item has to be FiR for the menu to show up</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6c2324463acc8b867dd47aaa2acb147c3910757f7d244c0321bded31754f9595?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/ef0322b5-3ad7-4636-8c30-02eb3e718882?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A09Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A40Z&amp;ske=2026-08-01T21%3A02%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=IjWIUWaHvfIatRmJ%2BLQOm2E%2FMx8VrX72uFM%2FovXuS6k%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MiwibmJmIjoxNzg1NjE1ODQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._C6a6YhNLZyig_Qy3r1KcPWGWRwL56EcddB1jgRJJ3U&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2025-11-03T08:39:00.000000Z">3 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,795 downloads</span><span>12.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Improved item event handling</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YmU4MDU2YzkyNzBiYjk2Y2E2ZGUzZDdmMDc2OTQ1NmE6MTc2MjE1OTE2MQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/c38b15c4-7a09-422d-b878-9de19afd3754?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A23Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A23Z&amp;ske=2026-08-01T21%3A22%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=r3jY2fSIEqEtha5OsZFBOUrMiMpsQJ9QLbbTWsoCZgk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MiwibmJmIjoxNzg1NjE1ODQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._C6a6YhNLZyig_Qy3r1KcPWGWRwL56EcddB1jgRJJ3U&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-11-03T08:11:00.000000Z">3 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>80 downloads</span><span>12.1 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added the ability to hold SHIFT and post <em><strong>all</strong></em> items of similar type</li>
+<li>The money gained is now more accurately calculated</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9acb2b962e7f31e0268a5c24c0dd66a48b54c9b08c4d3cd281a6047fe6dfc9e5?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/7949e69c-7bf9-4fbc-9281-cda6eb0cac4b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A16%3A39Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A05Z&amp;ske=2026-08-01T21%3A16%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=3Vx99UqXcp1EeEBr5cC%2BY5YdEgFLZ%2BTd32GgznzNtAw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-10-29T12:16:00.000000Z">29 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>925 downloads</span><span>11.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3ea59b6cba76787a93e24b20b7116f3786c5a18362b40e2e2e2fd8b8602958ad?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085643827/7b2dec17-c6f3-493b-b7a9-6c1b4206579d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A05Z&amp;rscd=attachment%3B+filename%3DQuickSellFlea.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A28Z&amp;ske=2026-08-01T21%3A02%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=M2Re18naVYdq1L5OUpwNtEsksDCrm0rDXB1U0M6nSEA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3DQuickSellFlea.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.lacyway.csf</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-ND 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>29 October 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Lacyway/QuickSellFlea" target="_blank" rel="noreferrer noopener">Client</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

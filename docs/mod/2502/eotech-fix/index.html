@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>EOTech Fix · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>EOTech Fix</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/877eda76d0cec114db1d5b5c205f3625935da84beccfd42ce7bd352b620e4b42.webp" alt="EOTech Fix thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>EOTech Fix</h1>
+    <p class="hero-teaser">Aims to fix the long standing accuracy issues with some collimator sights</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>10,580</dd></div>
+    <div><dt>Favourites</dt><dd>36</dd></div>
+    <div><dt>Mod lists</dt><dd>72</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="EOTech Fix content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>NOTE: If you are using SPT-VR, you do not need this mod, it’s built into SPT-VR already</strong></p>
+<p>So, before I took over development on the SPT-VR mod, I noticed that a lot of sights, mainly EOTech Holo sights, have an accuracy issue. Something a lot of people have always thought but as far as I know, no one was ever able to fully confirm. Well the VR mod made it VERY apparent. Me and the original dev looked at the material values and I noticed MarkScale, suggested he set it to 1 and use MarkShift to adjust the crosshair instead and what do ya know? It fixed it.</p>
+<p>Basically, the issue with EOTech’s and other sights with accuracy issues, appears to be due to a value on the collimator sight material called “_MarkScale”. I assume BSG uses this value to adjust the size of the crosshair on the sight, the problem is that scaling the crosshair this way results in broken accuracy unless you’re looking directly down the middle of the sight.</p>
+<p>This mod basically forces MarkScale value to 1 and changes another material value called “MarkShift” to adjust the crosshair back to the correct position.</p>
+<p>After having this in the VR mod for a while, I figured I might as well release it as a separate mod because I know I’ve heard a lot of people bring up accuracy issues with these sights on flatscreen too. I imagine this would do wonders for people that use mods that significantly changes gun handling and gun view model.</p>
+<p>I am not sure if this has compatibility issues with any other mods, if it does, please let me know.</p>
+<p>You can support my work on ko-fi: <a target="_blank" class="external-link" href="https://ko-fi.com/matsix" rel="noreferrer noopener">https://ko-fi.com/matsix</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2025-12-18T21:39:00.000000Z">18 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>9,590 downloads</span><span>3.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Just fixes the version number in the mod so that mod managers don’t see it as outdated</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/91f3e7011d7c4e5be0057459f5c4564f7d3c34084771a60d0fa1716e44a53a24?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/ab4f81e3-cf4d-4900-8507-23e0a11267af?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A14Z&amp;rscd=attachment%3B+filename%3DEOTechFix.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A35Z&amp;ske=2026-08-01T21%3A14%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UCgJCHMUJmu%2F2lRwXWAp0q2qhnwNmDliKghBb7CPJuc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&amp;response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-12-16T02:23:00.000000Z">16 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>930 downloads</span><span>3.0 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Just an adjustment to the zip directory to be “plugins” instead of “Plugins” for linux users</li>
+<li>Also removed small part of code that was left over from a different mod of mine (it had no effect on anything it was just a value)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/10ebe0e10d53bd557bb621671652697b8f82ce3c73778ce313b37e77444337d8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/189ff6fd-d207-453c-ac1a-859adfc1d8fc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A20Z&amp;rscd=attachment%3B+filename%3DEOTechFix.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A22Z&amp;ske=2026-08-01T21%3A02%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Fuffho8Ypib1g3LqGi6j0iLqa%2FR5RXdMw8vZdOR%2BemQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&amp;response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-12-16T00:09:00.000000Z">16 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>60 downloads</span><span>3.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release, check description for what this mod does</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cd1d6349af8c8ccc522b6c23b486c0e60fcb516a67a125a3753d1699c5ee12e3?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1117145469/58a663e8-5019-4070-b79e-c6c5f81102ba?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A25Z&amp;rscd=attachment%3B+filename%3DEOTechFix.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A06Z&amp;ske=2026-08-01T21%3A03%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=O%2FI2bVeHknYm%2FY2DHR1pK3GZ9RilkpPheHjKyazVKlk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MSwibmJmIjoxNzg1NjE1ODUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ICFcBbXmvuIduHl_IVeJJQqOT55B9BRlMBVt3asft00&amp;response-content-disposition=attachment%3B%20filename%3DEOTechFix.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.matsix.eotechfix</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>16 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/matsixx/EOTechFix" target="_blank" rel="noreferrer noopener">https://github.com/matsixx/EOTechFix</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

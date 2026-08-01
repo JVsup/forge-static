@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Jero Backpack · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Jero Backpack</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/07a02172ce7e7ebffaae1b39a411aadcad44d0d19ee44fb5006e71f19c92f0f7.webp" alt="Jero Backpack thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Jero Backpack</h1>
+    <p class="hero-teaser">Increases backpack inventory space by resizing grids. Supports custom sizes and blacklist.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/3b64fa4cd8f5dc099dcd4297158b80339fb9c4886d3d70f7e5dd08517953a793.webp" alt="" width="32" height="32">jero</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>19,336</dd></div>
+    <div><dt>Favourites</dt><dd>11</dd></div>
+    <div><dt>Mod lists</dt><dd>19</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Jero Backpack content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Jero’s Backpack Rework</h1>
+<p><em>Inspired by Josh Mate’s Better Backpacks mod.</em></p>
+<p>This mod automatically resizes backpack grids to provide more logical inventory space. <strong>Automatically detects all backpacks by Parent ID</strong>, working with vanilla and modded backpacks.</p>
+<hr>
+<h2>Configuration</h2>
+<h3>Default Size Mappings</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Old HxV &gt;</th>
+<th align="center">New HxV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">6x8</td>
+<td align="center"><strong>6x11</strong></td>
+</tr>
+<tr>
+<td align="center">6x7</td>
+<td align="center"><strong>6x10</strong></td>
+</tr>
+<tr>
+<td align="center">5x7</td>
+<td align="center"><strong>5x10</strong></td>
+</tr>
+<tr>
+<td align="center">5x6</td>
+<td align="center"><strong>5x8</strong></td>
+</tr>
+<tr>
+<td align="center">3x8</td>
+<td align="center"><strong>4x9</strong></td>
+</tr>
+<tr>
+<td align="center">5x5</td>
+<td align="center"><strong>5x7</strong></td>
+</tr>
+<tr>
+<td align="center">5x4</td>
+<td align="center"><strong>5x6</strong></td>
+</tr>
+<tr>
+<td align="center">4x5</td>
+<td align="center"><strong>5x6</strong></td>
+</tr>
+<tr>
+<td align="center">4x4</td>
+<td align="center"><strong>4x6</strong></td>
+</tr>
+<tr>
+<td align="center">2x7</td>
+<td align="center"><strong>3x7</strong></td>
+</tr>
+<tr>
+<td align="center">4x3</td>
+<td align="center"><strong>4x4</strong></td>
+</tr>
+<tr>
+<td align="center">3x4</td>
+<td align="center"><strong>4x4</strong></td>
+</tr>
+<tr>
+<td align="center">3x3</td>
+<td align="center"><strong>4x3</strong></td>
+</tr>
+<tr>
+<td align="center">4x2</td>
+<td align="center"><strong>4x3</strong></td>
+</tr>
+<tr>
+<td align="center">3x2</td>
+<td align="center"><strong>3x3</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Modify size mappings in <code>config.json</code>.</h3>
+<p><strong>Important</strong>: When modifying <code>config.json</code>, only change <code>NewHorizontal</code> and <code>NewVertical</code> values. <strong>Do not modify <code>OldHorizontal</code> and <code>OldVertical</code></strong> - these are used as keys to match backpacks and changing them will break the mapping.</p>
+<h3>Custom Sizes (<code>item.json</code>)</h3>
+<p>Set specific sizes for individual backpacks:</p>
+<pre><code>{
+    "Backpacks": {
+        "itemId": { "ItemName": "Name", "Horizontal": 6, "Vertical": 11 }
+    }
+}
+</code></pre>
+<h3>Blacklist (<code>blacklist.json</code>)</h3>
+<p>Exclude backpacks from resizing:</p>
+<pre><code>{
+    "Blacklist": {
+        "itemId": { "ItemName": "Name" }
+    }
+}
+</code></pre>
+<p><strong>Note</strong>: Backpacks with multiple grids are automatically skipped and cannot be resized.</p>
+<hr>
+<p>⚠️ Clean Installation Required</p>
+<p>Please delete the old mod folder before installing this version!</p>
+<p>📁<strong>Installation</strong></p>
+<ul>
+<li>Drag folder from zip file directly into your SPT install folder</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="Install Mod"></p>
+<hr>
+<h2>Compatibility</h2>
+<p>This mod directly edits the properties of vanilla items. It will <strong>conflict</strong> with any other mod that also alters the stats of these same backpacks. It should be compatible with everything else.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2025-11-17T02:42:00.000000Z">17 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,008 downloads</span><span>6.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>JeroBackpack v3.0.0</p>
+<hr>
+<p>Main changes:</p>
+<pre><code>Automatic backpack detection by Parent ID
+Automatically works with backpacks from other mods
+New size mapping system
+Support for item.json (customizations) and blacklist.json
+</code></pre>
+<p>The new version includes all updated configuration files.</p>
+<hr>
+<p>⚠️ Clean Installation Required</p>
+<p>Please delete the old mod folder before installing this version!</p>
+<hr>
+<p>VirusTotal:</p>
+<p>jerobackpack.7z
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1</a></p>
+<p>jerobackpack.dll
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d2b12287072d2e2157dd8cb24aa16446618f96b25391d80f390e016ef446f341?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/ea53b1c6c8e4d7a850e9eb86230ac0c7c7d4d4ff4e90c169a7e0e1e2efd5f1de?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/c2112e5a-3dbc-4448-8316-33aec22ea199?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A41Z&amp;rscd=attachment%3B+filename%3Djerobackpack.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A20Z&amp;ske=2026-08-01T21%3A10%3A41Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=57%2BEw%2BrQX1Gf9JZ4IPip9wfxvK7aDxmqwA3p8Pv8tH0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3Djerobackpack.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-10-15T19:13:00.000000Z">15 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.2</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>5,152 downloads</span><span>17.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Introduce external JSON configuration</p>
+<p>This refactor fundamentally changes how the mod is configured by moving all backpack size data from a hardcoded dictionary into an external config/config.json file.</p>
+<pre><code>Allows users to easily customize backpack sizes without recompiling the mod.
+The mod now reads all settings from the JSON file on server startup.
+Added a non-functional 'ItemName' field to the config for better readability and user experience.
+Bumps the mod version to 2.0.0 to reflect this significant breaking change.
+</code></pre>
+<p>VirusTotal:</p>
+<p>jerobackpack.zip
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1</a></p>
+<p>jerobackpack.dll
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/4042a04719810efc8fe162c0ad2b055d792e5778d482d1d7d2c1380f15dd2a6c?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/4042a04719810efc8fe162c0ad2b055d792e5778d482d1d7d2c1380f15dd2a6c?nocache=1</a></p>
+<p>config.json
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/97950452fe5798cd64257d7934bf0b595d30d627efda87f76a65769d32c37d7b?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/97950452fe5798cd64257d7934bf0b595d30d627efda87f76a65769d32c37d7b?nocache=1</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8a7a0a3022b902136eb49c1ca2f06c97b4170234ed5e5c764477487bb1965f83?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/bfad8e01-f67c-441e-a8b1-72d3e4115069?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A05Z&amp;rscd=attachment%3B+filename%3Djerobackpack.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A14Z&amp;ske=2026-08-01T21%3A00%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=I%2B5h0b0c9vhHe3HR2fIlomKKSpWBIjIL2njAAC6lilQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3Djerobackpack.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-10-14T22:00:00.000000Z">14 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,176 downloads</span><span>17.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Rework on backpack sizes</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b067fc00d3295f3b831d13a4bd5ab1c749b802e57b8e2529dc4d09bb1b4134ff" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1076436712/bfad8e01-f67c-441e-a8b1-72d3e4115069?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A05Z&amp;rscd=attachment%3B+filename%3Djerobackpack.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A14Z&amp;ske=2026-08-01T21%3A00%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=I%2B5h0b0c9vhHe3HR2fIlomKKSpWBIjIL2njAAC6lilQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3Djerobackpack.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.jero.jerobackpack</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>14 October 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/silviohmartins/JeroBackpack" target="_blank" rel="noreferrer noopener">https://github.com/silviohmartins/JeroBackpack</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

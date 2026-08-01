@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Gambler - Trader · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Gambler - Trader</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/e454640c44d11fe2e30a6766081dba52c665bb066cad0d36c3298611a3b0630a.webp" alt="Gambler - Trader thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Gambler - Trader</h1>
+    <p class="hero-teaser">The Gambler offers various mystery boxes for PMCs who desire to gamble their way to riches or go broke trying. This trader also offers random kit generation with the new Mystery Loadout Box, which provides all the equipment you need to run a raid.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/fe20af3870bedcbfbcf57f6d14d1ef0e6e9f9093b3e12cf5e52ed25032fb96ba.webp" alt="" width="32" height="32">Hood</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>46,321</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Gambler - Trader content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>12</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h5>I’d say I’m around half way finished with a new 4.0+ version of this mod. I’m hoping to have it out before June but there is still quite a bit to do so no promises. Sorry for long wait I haven’t had much extra time to work on this behemoth of a mod but I don’t want it to die so I’ll keep pushing (Last edited May 16 2026)</h5>
+<p><strong>Gambler Overview</strong></p>
+<p>The Gambler trader sells a variety of configurable mystery boxes that offer new ways to gamble for riches and better player equipment. Gambler specifically offers ways to randomly generate loadouts and gear at the click of a button. All gambling containers except for loadouts are dynamically priced by the Gambler depending on all possible rewards in each mystery box, specific odds for each tier of items in each gamble, and the configurable return of investment each mystery box has over time. Price balancing occurs on server start and can be configured in the config settings of the mod, this is explained further in the trader features section below.</p>
+<p><strong>Highly Recommended Mods</strong></p>
+<ul>
+<li><strong><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1860-ui-fixes/" rel="noreferrer noopener">UI Fixes</a> - Provides ability to set a hot key to open mystery boxes quickly, instead of right clicking every container and pressing ‘unbox’</strong></li>
+<li><strong><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1508-kaeno-traderscrolling/" rel="noreferrer noopener">Kaeno Trader Scrolling</a> - If you have too many traders this mod allows you to scroll to reach all of them</strong></li>
+<li><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1561-live-flea-prices/" rel="noreferrer noopener"><strong>Live Flea Prices</strong></a> <strong>- Mystery box prices will feel much more balanced with this mod. Very Highly recommended!</strong></li>
+<li><strong><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2690-definitive-weapon-variants/" rel="noreferrer noopener">Definitive Weapon Variants</a> - Adds weapon variants to weapon mystery box pool.</strong></li>
+</ul>
+<p><strong>Trader Features</strong></p>
+<p><strong>Dynamically Priced Mystery Boxes</strong></p>
+<ul>
+<li>All Mystery Boxes will automatically have its trader sold price dynamically calculated on server startup depending on the price of all rewards in each individual mystery box, mystery box odds for each reward tier, and the expected return of investment that is expected from each gamble. (Each component can be adjusted and changed in the config file.)</li>
+</ul>
+<p><strong>Highly Configurable Mystery Boxes:</strong></p>
+<ul>
+<li><strong>Price:</strong>
+<ul>
+<li>
+<p>Flea market price of each rewards is used to calculate the final price of each mystery box.</p>
+<ul>
+<li>Compatible with <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1561-live-flea-prices/" rel="noreferrer noopener">Live Flea Prices</a> Mod and all price generation will occur after live flea prices is loaded.</li>
+</ul>
+</li>
+<li>
+<p>Each mystery box can be manually priced if you don’t want to use dynamic price generation in the config.</p>
+</li>
+</ul>
+</li>
+<li><strong>Odds:</strong>
+<ul>
+<li>Percentage weights of each reward tier can be adjusted in the config and will play a major factor in the final price.
+<ul>
+<li>Example: increasing the “keycard_red”: 0.1, value to 10.0 will increase the odds of rewarding a red keycard from 0.1% to 10.0%. Each new gamble with the keycard mystery box will have a 10% to unbox a red keycard. This make the keycard mystery box much more rewarding, and now much more expensive.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Expected Return on Investment:</strong>
+<ul>
+<li>Each mystery container has a “_profit_percentage” in the config file which determines how profitable a mystery container should be.</li>
+<li>Example:
+<ul>
+<li>If the config has the following: “armor_profit_percentage”: 1.10, The Armor Mystery Box will on average return 110% of your money back. Making your money back and 10% profit.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Current Available Mystery Boxes</strong></p>
+<p><strong>Mystery Wallet</strong></p>
+<ul>
+<li>Gamble your roubles for a chance to win even more roubles or lose it all!</li>
+<li>The most equal gamble offered by the Gambler. 50% you make money, 50% chance you lose. How far will you go?</li>
+</ul>
+<p><strong>Mystery Key</strong></p>
+<ul>
+<li>Includes all available keys that can be found in Tarkov, ranges from all common keys, uncommon keys, rare keys, and extremely rare keys.</li>
+</ul>
+<p><strong>Mystery Keycard</strong></p>
+<ul>
+<li>Includes all Labs keycards. Offers ability to gamble for a regular access keycard for a little cheaper, a chance for a rarer keycard, or a chance at unboxing nothing.</li>
+</ul>
+<p><strong>Mystery Loadout</strong></p>
+<ul>
+<li>Unboxes a whole raid kit in one unbox. Includes weapon, ammo, gear, meds, and food. Loadout is randomly generated in tiers: scav, mid-wipe, late-wipe, and meme kits. Loadout generation is randomised depending on the tier unboxed and includes a small chance that generation can upgrade or downgrade tiers of all items to increase variety and randomness.</li>
+</ul>
+<p><strong>Premium Mystery Loadout</strong></p>
+<ul>
+<li>Unboxes a late-wipe kit, all random generation can include items from the mid-wipe tier for added variety and randomness</li>
+</ul>
+<p><strong>Weapon Mystery Box</strong></p>
+<ul>
+<li>1000+ weapons available to be unboxed, Includes Meta weapons, early wipe weapons, late wipe weapons, base weapons, and Meme/cursed weapons</li>
+</ul>
+<p><strong>Mystery Ammo</strong></p>
+<ul>
+<li>Gamble your roubles for a chance at unboxing some rare ammunition, be careful as these can be a money sink, but can be worth it for a chance at some late wipe ammunition.</li>
+</ul>
+<p><strong>Mystery 2.5 Million Rouble 50/50</strong></p>
+<ul>
+<li>Looking to double up your roubles? This mystery container offers a 50/50 chance for 5 million roubles or nothing at all. If your feeling lucky you might just end up rich or end up like a Timmy who lost it all and has to start doing loot runs on the Streets to make ends meet.</li>
+</ul>
+<p><strong>Mystery Bitcoin 50/50</strong></p>
+<ul>
+<li>Gamble your Bitcoins for a chance at double or nothing</li>
+</ul>
+<p><strong>Mystery GP Coin 50/50</strong></p>
+<ul>
+<li>Gamble your GP Coins for a chance at double or nothing</li>
+</ul>
+<p><strong>Mystery Medical Kit</strong></p>
+<ul>
+<li>The Gambler offers a fresh set of medical supplies in exchange for a few barter medical items</li>
+</ul>
+<p><strong>Premium Weapon Mystery Box</strong></p>
+<p><strong>Armour Mystery Box</strong></p>
+<p><strong>Premium Armour Mystery Box</strong></p>
+<p><strong>Tactical Rig Mystery Box</strong></p>
+<p><strong>Helmet Mystery Box</strong></p>
+<p><strong>Headset Mystery Box</strong></p>
+<p><strong>Backpack Mystery Box</strong></p>
+<p><strong>Melee Mystery Box</strong></p>
+<p><strong>Mystery Food</strong></p>
+<p><strong>Current Development Plans</strong></p>
+<ul>
+<li>
+<p><strong>The plan for Update 0.2.9 is to overhaul weapon generation to a new tiered system which will add many more weapons to generate:</strong></p>
+<ul>
+<li><strong>New:</strong>
+<ul>
+<li><strong>Base Weapons, Scav Weapon, Early Wipe Weapons, Mid Wipe Weapons, and Meta Weapons</strong></li>
+</ul>
+</li>
+<li><strong>Currently</strong>
+<ul>
+<li><strong>Base Weapons, Scav Weapons, Average Weapons, Meta Weapons</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Planned Custom Gambler Items</strong></p>
+<ul>
+<li> Gambler Poker Chips - Rare currency chips that can be bartered to the Gambler for rewards</li>
+</ul>
+</li>
+<li>
+<p><strong>Quests</strong> (PlannedTM) I’m not sure to be honest. I have an idea for lore and questline mystery box unlocks, but creating actually good quests is very time consuming and there is not that many on the hub that actually do it.</p>
+<ul>
+<li>Trader quest progression will include mystery container unlocks and the further you complete quests, more useful and interesting mystery containers will unlock.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Installation</strong></p>
+<ol>
+<li>Remove any old version of the Gambler trader before installing any new update located in SPT/user/mods.</li>
+<li>Download the mod, open zip file then drag and drop ‘user’ folder into your SPT directory.</li>
+<li>You don’t have to worry about load order anymore as that is handled by the mod now.</li>
+</ol>
+<p><strong>Config Features:</strong> GamblerTrader\config\config.jsonc</p>
+<ul>
+<li>Ability to change mystery container prices, stock, and odds of each outcome (Current Odds are subject to change in updates)</li>
+<li>Profitability settings of each mystery container will directly influence each mystery container price</li>
+<li>All Mystery containers offer the ability to be disabled if you don’t want the Gambler to offer certain mystery containers</li>
+</ul>
+<p><strong>Known Compatibility Issues:</strong></p>
+<ul>
+<li><strong>Raid Overhaul</strong> - Make sure The Gambler loads before Raid Overhaul in the Load Order. The console will spam handbook price issues if not properly loaded before Raid Overhaul</li>
+</ul>
+<p><strong>Support:</strong></p>
+<p>Suggestions are welcomed! If you find a bug, you can message me hood on discord or write a comment explaining it here and I’ll look into patching it</p>
+<p>This mod was inspired by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1515-viktoriya-the-gambler-reupload/#overview" rel="noreferrer noopener">VIKTORIYA</a> and contains a few mystery containers I enjoyed from that mod as I don’t think it will ever be updated.</p>
+<p>If you like what I do and want to support me you can always <a target="_blank" class="external-link" href="https://ko-fi.com/hood3" rel="noreferrer noopener">buy me a coffee</a></p>
+<p><strong>Trader Stock</strong></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.8</h2></div><time datetime="2025-05-16T06:17:36.000000Z">16 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,536 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.11.x</strong></p>
+<ul>
+<li>Fixed trader assort error that could occur randomly during sessions.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/818463149/4d0966d0-0d98-4d8c-a361-4ea6f38ae4f9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A29Z&amp;rscd=attachment%3B+filename%3DGamblerTrader0.2.8.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A58Z&amp;ske=2026-08-01T21%3A11%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=r3RH0SXfBLh%2FuZVO0Wy5MpIwys%2BrS59tJvkkDhMX33U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NCwibmJmIjoxNzg1NjE1MjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.P0NknY-k1W9skARikDJ62GNVu-JjsHbkCKBQWo3cmYk&amp;response-content-disposition=attachment%3B%20filename%3DGamblerTrader0.2.8.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.7</h2></div><time datetime="2025-05-15T04:31:05.000000Z">15 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>608 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.11.x</strong></p>
+<p>This is the initial 3.11.x update which includes some major bug fixes and some small new additions.</p>
+<ul>
+<li>Updated to SPT 3.11.x</li>
+<li>added 3 new coin flips: 100k, 500k, and 1 Million Roubles.</li>
+<li>updated helmet pool generation with much more variation.</li>
+<li>added mod compatibility with the latest Live Flea Prices v1.5.1 and The Blacklist v2.0.4b.</li>
+<li>Fixed errors that could occur when unboxing containers that were not Gambler containers i.e. Ref containers and mods like SamSWAT’s Helicopter Crash Sites.</li>
+<li>fixed a few issues during container price generation that caused some items to become marginally price inflated.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/818463149/230d18c0-da63-4a04-96b1-5c7e1ef94b2f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A31Z&amp;rscd=attachment%3B+filename%3DGamblerTrader0.2.7.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A01Z&amp;ske=2026-08-01T21%3A14%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=I6sxz9b4QHD%2BRRHnzxuWJQa2sK4%2B%2FWGN6z%2BlAsFAxKI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NCwibmJmIjoxNzg1NjE1MjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.P0NknY-k1W9skARikDJ62GNVu-JjsHbkCKBQWo3cmYk&amp;response-content-disposition=attachment%3B%20filename%3DGamblerTrader0.2.7.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.6</h2></div><time datetime="2025-03-14T22:47:25.000000Z">14 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,834 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.10.x</strong></p>
+<p>Gambler Trader v0.2.6 is the first update in SPT 3.10.x and won’t be the last. Sorry for the terribly long wait, but I’ll make sure to release an SPT 3.11 version pretty quickly once it is released. Any future updates I release in the upcoming 3.11 version will be ported to this 3.10.x release for a while, until it is not needed anymore. Mostly bug fixes, but maybe new additions as well…</p>
+<p>0.2.6 Patch Notes.</p>
+<ul>
+<li>Updated and overhauled weapon preset loot pool.
+<ul>
+<li>Originally there were about 305 weapons in the previous loot pool, now there are over 1000+ weapons that exist in the new weapon generation pool. Mostly Meta weapons and average tiered weapons have been overhauled and have many more variations. Scav weapons will also be updated in a future patch, but are still the same as before for now.</li>
+</ul>
+</li>
+<li>Added New Premium Mystery Loadout Box:
+<ul>
+<li>Contains a high tier loadout with a small chance for some gear and items to drop to average tier for slight randomness and added variation.</li>
+</ul>
+</li>
+<li>Updated Armor generation pool:
+<ul>
+<li>All tiers of armor generation now have variations of armors with different armor class plates. For example, Kirasa armors can now generate in the high tier armor pool with class 6 plates. This is meant to add slight variations and more randomness to the armor preset pool.</li>
+</ul>
+</li>
+<li>Removed golden AKM attachments
+<ul>
+<li>I don’t know how to stop the golden akm attachments from being sold on Fence, and I think found on scavs? Whatever the case, the golden akm was meant as a extremely rare easter egg unbox, but I don’t like that the attachments are randomly spawning so I will disable for now…</li>
+</ul>
+</li>
+<li>Fixed previous load order issue:
+<ul>
+<li>Live Flea Prices mod will now always load before the Gambler trader so all item prices are updated before mystery box price generation.</li>
+</ul>
+</li>
+</ul>
+<p>As with all of these new additions and changes, they are NOT perfect and there probably WILL be bugs and errors that I haven’t came across yet. Please document and comment any and all issues that you come across. I appreciate all of your feedback and help.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/818463149/a0a6e245-03c3-49a2-8657-7b43ae540570?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A02Z&amp;rscd=attachment%3B+filename%3DGamblerTrader0.2.6.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A47Z&amp;ske=2026-08-01T21%3A06%3A02Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9%2BDZcF0U8%2FRpePjBQqPL9BrdGZUHkGqEGi9csQ0rYy4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzA1NCwibmJmIjoxNzg1NjE1MjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.kjA9PKIrRBaTEOPbOStazA94NzMBuPNMjT4zbLcO5H0&amp;response-content-disposition=attachment%3B%20filename%3DGamblerTrader0.2.6.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.3</h2></div><time datetime="2024-07-26T23:26:52.000000Z">26 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,091 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.x</strong></p>
+<p><strong>LOAD ORDER: Make sure TheGambler loads last or close to last, as any mod you have that manipulates flea market or trader prices will have a major effect on the balancing of each gambling container.</strong></p>
+<p><strong>Update 0.2.3 includes updates to loadout generation, major balancing changes, a few new additions to the weapon mystery box, and more…</strong></p>
+<p><strong>Loadout Generation</strong></p>
+<ul>
+<li>Added splints to generation pool</li>
+<li>Added grenades to generation pool</li>
+<li>Added face coverings to generation pool</li>
+<li>Each tier of loadout will have a slight chance of generating equipment and items of a higher or lower rarity
+<ul>
+<li>This change is meant to add more variety as now generation of items isn’t guaranteed to be of a certain rarity. For example scav tier loadouts can sometimes generate better armour or better backpack, etc…</li>
+</ul>
+</li>
+<li>Removed chance to receive stock weapons
+<ul>
+<li>Scav tier weapons have replaced the chance for the original chance of stock weapons, as the scav tier weapon pool has a lot more weapons to generate from in this update</li>
+</ul>
+</li>
+</ul>
+<p><strong>Weapon Mystery Box</strong></p>
+<ul>
+<li>Added 50 new scav tier weapons</li>
+<li>Added 12 new semi-modded weapons</li>
+<li>Added 11 new meme/cursed weapons
+<ul>
+<li>Includes a new meme tier Golden foil wrapped AKM (My first attempt at learning the unity editor and learning how to create assets)</li>
+</ul>
+</li>
+<li>Added 18 default weapons
+<ul>
+<li>All default weapons available in Tarkov are now available to be unboxed</li>
+</ul>
+</li>
+</ul>
+<p><strong>Mystery Keycard</strong></p>
+<ul>
+<li>Slightly increased odds for rarer keycards</li>
+</ul>
+<p><strong>Automatic Mystery Container Price Balancer</strong></p>
+<ul>
+<li>All mystery containers (excluding Mystery Loadout) are now officially price generated by the automatic price balancer.
+<ul>
+<li>Weapon Mystery Box and Mystery Helmet will calculate the price of the base weapon/helmet and all the included attachments when determining the final container price.</li>
+</ul>
+</li>
+<li>Rewrote how containers are price generated. Now all calculations are much more accurate than the previous implementation.</li>
+<li>Container price generation during server load is now much faster, pretty much instantaneous.</li>
+</ul>
+<p><strong>BALANCING:</strong></p>
+<ul>
+<li>
+<p>Most Mystery Containers now have infinite trader stock as I’m much more confident with the automatic price balancing as this change allows the player to gamble until they are broke.</p>
+</li>
+<li>
+<p>Re-calibrated overall chance to profit on all containers:</p>
+<ul>
+<li>With the change of allowing infinite container stock and better automatic price balancing, all containers are set at a fair price to allow the player to gamble to their hearts content. Most containers will be a little more expensive than before, but keep in mind there is always a chance to strike it rich, as everything is a gamble.</li>
+</ul>
+</li>
+<li>
+<p>The only main issue I am having with balancing is the price of blacklisted items that don’t have a finite price that everyone agrees on. This is something that will continue to updated on. Blacklisted item prices like ammo and armour can always be changed in the config at “mystery_container_override_price” if you want to take a look at how I’ve been pricing items that are injected into the automatic price balancer.</p>
+</li>
+</ul>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Fixed mistakenly mixed up weapon mystery box tiers, which created weapons of different tiers than expected.</li>
+</ul>
+<p><strong>New Meme tier Golden Foil AKM available in the Weapon Mystery Box</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/818463149/c4808593-6bb9-495f-9823-72f3e16e3f78?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A25Z&amp;rscd=attachment%3B+filename%3DTheGambler0.2.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A04Z&amp;ske=2026-08-01T20%3A56%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7IJDvMUK6TbrkiAz36nm5UJHrdm69bwdlPtSFnqmPKc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzA1NCwibmJmIjoxNzg1NjE1MjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.kjA9PKIrRBaTEOPbOStazA94NzMBuPNMjT4zbLcO5H0&amp;response-content-disposition=attachment%3B%20filename%3DTheGambler0.2.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.2</h2></div><time datetime="2024-07-17T00:59:06.000000Z">17 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,353 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>**SPT 3.9.x</p>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fixed Error when unboxing Ref Unlocked Weapon Crate</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/818463149/82a86c68-3f99-4330-bed9-1fe556abb129?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A49%3A00Z&amp;rscd=attachment%3B+filename%3DTheGambler.0.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A48%3A48Z&amp;ske=2026-08-01T20%3A49%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=aQS87I1%2FCcdhcM%2FUHRJpXHyTQncJ%2Fnd%2FKa4E9oz96%2BE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NCwibmJmIjoxNzg1NjE1MjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.P0NknY-k1W9skARikDJ62GNVu-JjsHbkCKBQWo3cmYk&amp;response-content-disposition=attachment%3B%20filename%3DTheGambler.0.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.1</h2></div><time datetime="2024-07-15T08:11:57.000000Z">15 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>959 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.x<br>
+</strong></p>
+<p><strong>Known Bugs: There is an error that occurs when unboxing the new Ref weapon crates, I’m currently looking into this issue Fixed in update 0.2.2</strong></p>
+<p><strong>Update 0.2.1:</strong> Includes a balancing patch for the new Mystery Loadout generator and new keys in the Mystery Key container</p>
+<p><strong>CHANGES:</strong></p>
+<p><strong>Mystery Loadout</strong></p>
+<ul>
+<li>Slightly Reduced chance of receiving very low end equipment and weapons as these items were generating much more frequently than intended</li>
+<li>Meme/cursed weapons now have a better chance at generating higher end gear and ammo</li>
+<li>Generated Helmets that are not headset compatible will now not generate headsets in the loadout at all</li>
+<li>Improved Food generation consistency</li>
+<li>Reduced trader stock slightly (You can always increase this in the config if you want more stock or price lowering as I’m still trying to balance the price in future upates)</li>
+</ul>
+<p><strong>Mystery Key</strong></p>
+<ul>
+<li>Added 73 new keys to the loot pool, including the new Ref trader keys</li>
+</ul>
+<p><strong>CONFIG:</strong></p>
+<ul>
+<li>Made notes of each mystery container that aren’t currently price generated on server startup, prices of these containers can always be changed manually in the config</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1I6DmmDJ4K8t0TI84M7BEjd1YZZucSwmp/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0+b</h2></div><time datetime="2024-07-13T03:04:52.000000Z">13 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>368 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.8.3 Final Release</strong></p>
+<p><strong>Update 0.2.0</strong></p>
+<ul>
+<li>Includes everything in the above patchnotes, except the addition of the Kukri in the Melee Mystery Box</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1YiGaKk3S09lYyWObxzW7Z1xAdDx6L-Bz/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0+a</h2></div><time datetime="2024-07-13T03:06:02.000000Z">13 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,174 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.0</strong></p>
+<p><strong>3.8.3 version available below</strong></p>
+<p><strong>Update 0.2.0 -</strong> Feeling too lazy to gather all the gear you need before loading into a raid? In this new update, the Gambler offers everything you need at the click of a button with the new Loadout Mystery Bag. This update also includes the new Medical Mystery Kit, a few mystery container changes, and a balancing overhaul for a few other mystery containers</p>
+<p><strong>ADDED</strong></p>
+<ul>
+<li><strong>Loadout Mystery Bag</strong>
+<ul>
+<li>One kit, one unbox. Includes all gear and equipment you need for a raid—all in one mystery box.</li>
+<li>Items include:
+<ul>
+<li>Weapon, Extra Magazines, Ammo, Helmet, Armour, Rig, Backpack, Food, Drink, and Medical Supplies</li>
+</ul>
+</li>
+<li>Unboxed items are randomly generated and correlate by rarity, meaning if you unbox a meta/highly modded weapon you will have a high chance of generating high end gear and equipment with it. Semi-modded and lower tier weapons will have a higher chance of generating gear of lower rarity as well. Although if you receive a meme/cursed weapon all gear generation will be completely random just for complete meme tier randomness.</li>
+<li>This feature is still a work in progress and is not perfect. More config options and balancing will appear in future updates, which allow the ability to adjust the loadout odds and items for yourself if you’d like.</li>
+</ul>
+</li>
+<li><strong>Weapon Mystery Box</strong>
+<ul>
+<li>Added 69 new Weapons:
+<ul>
+<li>22 heavily modded weapons</li>
+<li>27 semi-modded weapons</li>
+<li>13 scav tier weapons</li>
+<li>7 meme tier weapons</li>
+<li>A few existing weapons were redesigned.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Mystery Medical Kit</strong>
+<ul>
+<li>The Gambler offers a fresh set of medical supplies, in exchange for a few barter medical items.</li>
+</ul>
+</li>
+<li><strong>Mystery Melee</strong>
+<ul>
+<li>Added Kukri to loot pool.</li>
+</ul>
+</li>
+</ul>
+<p><strong>BALANCING</strong></p>
+<ul>
+<li><strong>Weapon Mystery Box (Buff</strong>)
+<ul>
+<li>Reconfigured the odds for each rarity, Greatly reducing the chance of receiving a base weapon with zero added attachments as these weapons had a really high chance before and were very boring to receive as frequently as they were previously.</li>
+</ul>
+</li>
+<li><strong>Mystery Ammo: (Buff)</strong>
+<ul>
+<li>Increased the minimum and maximum amount of ammunition generated for most calibers.</li>
+<li>Increased chances of receiving rarer ammunition.</li>
+<li>Reduced trader stock significantly.</li>
+</ul>
+</li>
+<li><strong>Mystery Keycard: (Buff)</strong>
+<ul>
+<li>Removed chance to receive nothing as a reward.</li>
+<li>Increased chances to unbox a few rare Keycards.</li>
+<li>Price will rice accordingly with these changes.</li>
+</ul>
+</li>
+<li><strong>Mystery Wallet: (Slight Buff)</strong>
+<ul>
+<li>
+<p>Added new odds to receive 25k Roubles, slighly buffing the mystery wallet and reducing the chance of receiving nothing to 25%.</p>
+</li>
+<li>
+<p>Altered other remaining odds slightly.</p>
+</li>
+</ul>
+</li>
+<li>A few other containers have had their odds and expected profit adjusted.</li>
+</ul>
+<p><strong>CHANGES</strong></p>
+<ul>
+<li>
+<p>Updated many mystery container descriptions.</p>
+</li>
+<li>
+<p>Refactored and overhauled Gambling mechanic and design of Mystery Containers in preparation for the ability to let players be able to create their own mystery containers with the capability of being shared with others. (future update…)</p>
+</li>
+<li>
+<p>Increased speed of mystery container price generation during server startup.</p>
+</li>
+<li>
+<p>Fixed .366 Mystery Ammo price generation from erroring out and becoming a default price.</p>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1TjR-D6tjLGkVyPNJhVCq0_lh_ZcKqrtd/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.11</h2></div><time datetime="2024-07-08T08:07:46.000000Z">8 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,567 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.0</strong></p>
+<p><strong>FIXES</strong></p>
+<ul>
+<li>Fixed bug when unboxing any Mystery Ammo container would generate an invalid amount of ammunition which caused any Gambler generated ammo sold on the flea market to error out.
+<ul>
+<li>It is probably best to delete all previously unboxed ammunition from the Gambler as these rounds may cause an unknown amount of errors.</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1PAzl4OHJ-jn8rfImcv7t0Hc2fzpMJ3wy/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.10</h2></div><time datetime="2024-07-06T23:01:42.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>802 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.0</strong></p>
+<p>Updated for SPT 3.9.0</p>
+<ul>
+<li>Fixed a few locales</li>
+<li>Minor mystery container profit percentage balancing</li>
+</ul>
+<p>(Will update a few mystery containers with new SPT 3.9.0 items in future update 0.2.0)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1INCp22QZU2HRLiM1x_DCBCGRFkDMDexg/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.9</h2></div><time datetime="2024-07-01T21:00:23.000000Z">1 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,143 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.8.3 - I have edited the (0.1.11) bug fix into this version as it was a major bug</strong></p>
+<p><strong>If you are updating this mod be sure to delete the mod folder “TheGambler” in SPT/user/mods, then install the new version</strong></p>
+<p><strong>0.1.9 This update includes a few bug fixes and a couple features, but mainly a balancing update to the new Ammo Mystery containers. My thinking is that I want Mystery Ammo to be a viable way to slowly generate good ammo, albeit kinda expensive. Maybe even locking away some of the better caliber Mystery Ammos behind quest reward unlocks in the future, but as of now it’s something I’m thinking about.</strong></p>
+<p><strong>Added</strong></p>
+<ul>
+<li>Mystery Food:
+<ul>
+<li>Contains every food and drink available in Tarkov</li>
+</ul>
+</li>
+</ul>
+<p><strong>BALANCING</strong></p>
+<ul>
+<li>Rebalanced odds of Mystery Tactical Rig</li>
+<li>Lowered profitability calculation of Premium Armor Mystery Box by 10%</li>
+<li>Decreased stock and maximum rounds generated for most Mystery Ammo containers</li>
+</ul>
+<p><strong>CONFIG</strong></p>
+<ul>
+<li>Cleaned up config details to be more readable</li>
+<li>Added Toggles for each mystery container type, such that if you want to disable a mystery container from being sold by the Gambler you can do so</li>
+</ul>
+<p><strong>FIXES</strong></p>
+<ul>
+<li>Fixed Bitcoin and GP coin games not showing the roll result in server console</li>
+<li>Fixed Premium Armor Mystery Box profitability calculation not working as intended</li>
+<li>Fixed handbook/flea market prices of most Mystery Containers so they aren’t extremely cheap. All Mystery Containers are flea market banned by default, but if you have a mod that disables the flea market blacklist they will appear on the flea market.</li>
+</ul>
+<p><strong>KNOWN BUGS</strong></p>
+<ul>
+<li>Generated Mystery Ammo sold on the flea market can bug out and can return as a negative round. All Mystery ammo will now generate as not found in raid for now.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.google.com/file/d/1wHlpzAxbx5iGWNgnNnxTDYdWQH0XJ9hK/view?usp=sharing" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.1</h2></div><time datetime="2024-06-04T08:22:31.000000Z">4 June 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>856 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>If you are updating this mod be sure to delete the mod folder “TheGambler” in SPT/user/mods then install the new version</strong></p>
+<p>Added:</p>
+<p>- New Stimulant Mystery Box (includes every stim in 3.8.3 SPT)</p>
+<p>- Added 45 new keys to the Key Mystery Box</p>
+<p>Balancing:</p>
+<p>Keycard Mystery Box</p>
+<p>- Adjusted all rarities</p>
+<p>- Lowered price drastically</p>
+<p>Key Mystery Box</p>
+<p>- Adjusted rare and extremely rare keys chances to be lower.</p>
+<p>- Lowered price drastically.</p>
+<p>Melee Mystery Box</p>
+<p>- Adjusted rare and extremely rare keys chances to be lower.</p>
+<p>- Lowered price drastically.</p>
+<p>Fixes:</p>
+<p>- Trader profile image location fixed to prevent other modded traders from sharing the same image.</p>
+<p>- Attempt to fix virus detectors from flagging The Gambler as a virus by removing unnecessary files</p>
+<p>These changes are meant to make mystery boxes more obtainable and hopefully more fun to open</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a53607bcd8a2f8bcceb23bdc6e321cb8549974079ee3c6a3f5dddb92e54a3962?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://www.dropbox.com/scl/fi/b6vtsosrec6lsimoijkqs/TheGambler.zip?rlkey=5sql1hjy7tvcdvfas4o2hkwqk&amp;st=vubl8yf6&amp;dl=0" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>3 June 2024</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Hood26/TheGambler" target="_blank" rel="noreferrer noopener">https://github.com/Hood26/TheGambler</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

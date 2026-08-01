@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>RZCustomProfiles · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>RZCustomProfiles</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/ff33e8f8bfac813c5614d11a01af797203f81e56166cf2cc754c6fbd2db48e3e.webp" alt="RZCustomProfiles thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>RZCustomProfiles</h1>
+    <p class="hero-teaser">Profile template manager.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/699f4bb396a6fd0ad8117040ea6c7ea499b1d8e23ab3adafeffb107c02815cc4.webp" alt="" width="32" height="32">RemzDNB</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,440</dd></div>
+    <div><dt>Favourites</dt><dd>5</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="RZCustomProfiles content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><blockquote>
+<p>Define custom profile editions that appear in the SPT launcher at character creation, each with their own starting items, trader standings and more.</p>
+</blockquote>
+<p><em>This is part of my personal suite of mods that I use to run my server.</em></p>
+<p><em>All in all a pretty boring mod, but the basics deserve a clean foundation, so here it is.</em></p>
+<hr>
+<hr>
+<hr>
+<h2>⚫ How it works</h2>
+<p>The mod runs at server startup and registers your custom profiles into SPT’s profile template system. When a player creates a new character in the launcher, your editions appear alongside (or instead of) the vanilla SPT ones.</p>
+<p>Each profile is defined by a separate <code>.json</code> file dropped in the <code>profiles/</code> folder. All files are loaded automatically, just drop and go.</p>
+<p>Global settings (unlocks, blacklists, enabled base profiles) are controlled via <code>masterConfig.json</code>.</p>
+<hr>
+<hr>
+<hr>
+<h2>⚫ masterConfig.json</h2>
+<p><em>Applied at server start, globally for all profiles.</em></p>
+<ul>
+<li><strong><code>EnabledBaseProfiles</code></strong> — List of vanilla SPT profiles to keep visible in the launcher alongside your custom ones.</li>
+<li><strong><code>UnlockAllOutfits</code></strong> — Unlocks all Ragman outfits.</li>
+<li><strong><code>UnlockHideoutCustomizations</code></strong> — Unlocks hideout customization items by category. Set a category to <code>false</code> to leave it locked.</li>
+<li><strong><code>UnlockJaeger</code></strong> — Unlocks Jaeger by default.</li>
+<li><strong><code>UnlockRef</code></strong> — Unlocks Ref by default.</li>
+<li><strong><code>ExaminedCategoryBlacklist</code></strong> — Excludes all items belonging to the listed categories.</li>
+<li><strong><code>ExaminedBlacklist</code></strong> — Excludes specific items by TPL.</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h2>⚫ Profile files</h2>
+<h3>Identity</h3>
+<ul>
+<li><strong><code>Enabled</code></strong> — Whether this profile is registered and visible in the launcher.</li>
+<li><strong><code>BaseProfile</code></strong> — Vanilla SPT profile to clone as a base (same indices as <code>EnabledBaseProfiles</code>).</li>
+<li><strong><code>Name</code></strong> — Profile name shown in the launcher.</li>
+<li><strong><code>Description</code></strong> — Profile description shown in the launcher.</li>
+</ul>
+<hr>
+<h3>Progression</h3>
+<ul>
+<li><strong><code>AllItemsExamined</code></strong> — Examine all handbook items on character creation. Respects <code>ExaminedCategoryBlacklist</code> and <code>ExaminedBlacklist</code>.</li>
+<li><strong><code>MaxLevel</code></strong> — Start at max level.</li>
+<li><strong><code>StartingLevel</code></strong> — Start at a specific level (1 to max). Ignored if <code>MaxLevel</code> is true. <code>null</code> = leave unchanged from base profile.</li>
+<li><strong><code>StartingPrestigeLevel</code></strong> — Starting prestige level (1–4). <code>null</code> = no prestige applied.</li>
+<li><strong><code>MaxSkills</code></strong> — Max out all skills.</li>
+<li><strong><code>SkillOverrides</code></strong> — Override specific skills individually (values 0–51). Ignored if <code>MaxSkills</code> is true.</li>
+</ul>
+<hr>
+<h3>Inventory</h3>
+<ul>
+<li><strong><code>ClearEquipment</code></strong> — Wipe equipped items from the base profile.</li>
+<li><strong><code>ClearStash</code></strong> — Wipe stash items from the base profile before injecting additional items.</li>
+<li><strong><code>SecureContainer</code></strong> — Override the starting secure container.</li>
+<li><strong><code>AdditionalStartingItems</code></strong> — Items injected into the stash on character creation. If <code>ClearStash</code> is false, they are added on top of whatever the base profile already contains. For items with required slots (weapons, armor…), missing children are resolved automatically from the database.</li>
+</ul>
+<hr>
+<h3>Traders</h3>
+<ul>
+<li><strong><code>TradersLoyalty</code></strong> — Per-trader standing and sales sum, keyed by trader ID.</li>
+</ul>
+<hr>
+<h3>Hideout</h3>
+<ul>
+<li><strong><code>HideoutStartingLevels</code></strong> — Starting level for each hideout area.</li>
+</ul>
+<blockquote>
+<p>💡 <code>HideoutStartingLevels</code> entries are optional : delete any area you don’t want to override.</p>
+</blockquote>
+<hr>
+<hr>
+<hr>
+<p><em>If you made it this far without falling asleep, you earned a cat picture.</em></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/a184b8d07f0f3c49c89255a3f09f4fdc3178759ee3f0b964e961434beb29ee37.webp" alt="cat"></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-03-08T19:15:00.000000Z">8 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,195 downloads</span><span>27.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added UnlockHideoutCustomizations</li>
+<li>General cleanup</li>
+<li>Final version, I’m done with this pain in the ass mod</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a2f949a177218a53d718de8bb5948831eea781f22f749ea6f6feb1a52e2d0600?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=12ODJA6TkORZTfaimRiUKR7ySw_mAqwt0&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2026-03-07T21:33:00.000000Z">7 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>34 downloads</span><span>25.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added StartingPrestigeLevel in profile configs</li>
+<li>Fixed broken TradersLoyalty settings</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZThjNWE1ODk4NzBhYjU3ZDg1MjRjYjI3M2RkMmVmMWM6MTc3MjkxOTIyNQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1q-EIlsFNleYS9P60rZK-oxhutY_lCV8t&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-03-06T16:34:00.000000Z">6 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>68 downloads</span><span>24.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Lib dependency removed for real this time, sorry about that</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d8aa48c0c09183c91058da77601a6fd560f464b31d3f9664252338bd6bcce822?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1hIZoLQ-2AYGCOmWR4qpM-X77hIyRnZSt&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-03-05T18:49:00.000000Z">5 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>35 downloads</span><span>24.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added <code>StartingLevel</code> profile option</li>
+<li>Added <code>SkillOverrides</code> profile option</li>
+<li>Added missing hideout areas in profile files</li>
+<li>ExamineAll feature moved from CustomEconomy</li>
+<li>Removed dependency on RZShared, you can delete it if updating.</li>
+<li>Please create new profile configs from the update exampleConfig.json</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZjQ5OTE4ZTZkN2NkODU0OTYxNGQ3MGY2M2FmM2VkY2M6MTc3MjczNjU3OQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1dpvhEeb6Zs6PU03JtgB7MoYdnZb4TyJs&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-03T21:13:00.000000Z">3 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>108 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>uwu</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZDJjZjUxNDczMGJkN2JlMDQ5ODNlNDBlNTAyOWE2NWE6MTc3MjU3MjM2OA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/remzdnb/RZ-SPTMods" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.rz.customprofiles</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>3 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/remzdnb/RZ-SPTMods" target="_blank" rel="noreferrer noopener">https://github.com/remzdnb/RZ-SPTMods</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

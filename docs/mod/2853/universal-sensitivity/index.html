@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Universal Sensitivity · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Universal Sensitivity</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/76566b2054d5e3c31acb83ca83faf7e8d49bad8c2d9a7b8c0bd889755a95c53c.webp" alt="Universal Sensitivity thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Universal Sensitivity</h1>
+    <p class="hero-teaser">Tarkov turns your mouse down every time you sprint, jump, crouch or go prone — and never tells you. One sensitivity, everywhere, with free look finally on your mouse instead of the engine&#39;s.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Sipto</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>421</dd></div>
+    <div><dt>Favourites</dt><dd>3</dd></div>
+    <div><dt>Mod lists</dt><dd>5</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Universal Sensitivity content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><h3>Overview</h3>
+<p>One mouse sensitivity, everywhere. The game quietly scales your look speed down while you sprint, jump, crouch, go prone or sit in the transitions between poses, and drains it further with your stamina mid-sprint. This removes all of it: turning at a dead sprint feels exactly like turning while standing.</p>
+<p>Jumping needed two extra fixes, because mid-air the game doesn’t just cut your sensitivity. It eases your body toward where you’re looking instead of taking the turn outright, and it caps how far any single frame is allowed to rotate — which is why slow drags felt right while fast flicks came out clipped. Both are corrected: an airborne flick lands the frame you make it.</p>
+<p>Free look is brought in line too. Vanilla alt-look ignores your sensitivity setting entirely and runs at a speed the engine hardwires; here it rides your sensitivity, stepped up 3x.</p>
+<h3>What it deliberately leaves alone</h3>
+<p>Gear. Heavy armor and helmets that slow your turns still do, scopes keep their aim sensitivity, and the weight system is untouched — including everything weight does to the jump itself: height, takeoff timing, the overweight penalty. The game runs gear through a separate path from the action penalties, so the cut is clean.</p>
+<p>There’s nothing to configure; the numbers are the point.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h3>Requirements</h3>
+<p><strong>Nothing.</strong> No dependencies, no integrations.</p>
+<h3>Steps</h3>
+<ol>
+<li>Download the archive.</li>
+<li>Extract it into your SPT folder — the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>.</li>
+<li>Merge when Windows asks. <code>UniversalSensitivity</code> lands in <code>BepInEx/plugins</code>.</li>
+<li>Launch.</li>
+</ol>
+<p>Client-side only. Nothing goes in <code>user/mods</code>, and in a Fika group only you need it.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><p>Everything is gated to your own player, so bots and Fika teammates turn exactly as they always did.</p>
+<p>Don’t run it alongside <strong>Sprint Sensitivity Fixer</strong> — this covers everything that mod does, and they’d both compensate the same sprint.</p>
+<p>Built against SPT 4.0.13 on stable named classes only — no obfuscated hooks.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-28T01:41:00.000000Z">28 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>421 downloads</span><span>5.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>check mod description</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8622ba25c166b4a063ed91d16f86a4d47b786b361ec62d0ef2aceb633b79c866" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1314414170/04459bdb-a196-4af7-857c-f69cf6c2a936?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A10Z&amp;rscd=attachment%3B+filename%3DUniversalSensitivity-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A27Z&amp;ske=2026-08-01T21%3A07%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=c7exJmE6qfRhaJscbO2wBcnyBE1a17Cgx%2Bk182XItpA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&amp;response-content-disposition=attachment%3B%20filename%3DUniversalSensitivity-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sipto.universalsensitivity</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/CameronsWorks/UniversalSensitivity" target="_blank" rel="noreferrer noopener">https://github.com/CameronsWorks/UniversalSensitivity</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was utilized to create the Mod Photo as well as audit the mod.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

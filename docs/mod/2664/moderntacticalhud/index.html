@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>ModernTacticalHUD · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>ModernTacticalHUD</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/faeb044910362a9e62aa34c1770966db6f6821f5071906e1087b2437faa6a3d7.webp" alt="ModernTacticalHUD thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>ModernTacticalHUD</h1>
+    <p class="hero-teaser">BallisticCalculator, FCS and more info on screen.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c8239b2f133696eda16a4198cc594f820753d63635dd1559910d6f514c2c8201.webp" alt="" width="32" height="32">HiddenCirno</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,228</dd></div>
+    <div><dt>Favourites</dt><dd>7</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="ModernTacticalHUD content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Project Spark: Modern Tactical HUD</h1>
+<p>A Fire Control System (FCS) and tactical information UI mod designed for SPT.</p>
+<p><a target="_blank" class="external-link" href="https://github.com/HiddenCirno/EFTBallisticCalculator/blob/main/preview.png" rel="noreferrer noopener">See preview here</a></p>
+<p><strong>What can it do?</strong></p>
+<ul>
+<li>Predicts the ballistic impact point based on a given distance while aiming down sights.</li>
+<li>Displays data including distance, heading, angle, bullet parameters, estimated muzzle velocity, and time of flight (TOF).</li>
+<li>Shows some very cool~ stuff on your screen, like wind speed, wind direction, temperature, and atmospheric pressure. Of course, they are all entirely fake :P</li>
+<li>Monitors various vital information and data in real-time and displays them seamlessly on your screen.</li>
+<li>Includes weapon status, available throwables, biometric health status, active buff/debuff effects, and a squad status brief.</li>
+</ul>
+<p><strong>How to install?</strong></p>
+<ul>
+<li>Download the latest release from the Releases section on the right. Extract the archive and simply drop the <code>BepInEx</code> folder into your game’s root directory, overwriting if necessary.</li>
+</ul>
+<p><strong>Compatibility?</strong></p>
+<ul>
+<li><strong>Fika:</strong> Fully compatible. I haven’t encountered any issues during my actual testing.</li>
+<li><strong>Fika.Co-op:</strong> Unsure/Untested. I don’t have the environment to test this. The FCS relies on the client’s Camera system to function; hopefully, BSG isn’t rendering other players’ cameras.</li>
+<li><strong>Fika.Headless:</strong> Unsure/Untested. Same as above.</li>
+<li><strong>Realism:</strong> They are definitely incompatible now. This project is built on SPT 4.0.13, while Realism is currently on 3.11.4. I extracted the ballistic algorithm and rebuilt it as utility methods, but Realism likely uses its own ballistic parameters. Furthermore, <code>GClass</code> obfuscation changes with every BSG version update.</li>
+</ul>
+<p><strong>Usage Guide</strong></p>
+<ul>
+<li>Upon entering a raid, various information panels will appear on your screen. The left side houses the FCS status, environment sensors (all environmental data except time and location are simulated), and squad status. The right side displays health and active buffs (invisible when no effects are active). The top shows the weapon panel and throwables.</li>
+<li>The FCS panel will display current distance, incline/elevation angle, cant angle, bullet parameters, muzzle velocity, and TOF.</li>
+<li>Press the <strong>T</strong> key to set your crosshair position as the target. The FCS will automatically measure the horizontal distance to the point, calculate the fire control data, and predict the impact point.</li>
+<li>The predicted impact point is represented by a glowing yellow dot, which is visible while aiming down sights (ADS).</li>
+<li>If the crosshair is aimed at an invalid target (such as the sky), the distance data will automatically clear.</li>
+<li>Press the <strong>Backspace</strong> key to manually clear the fire control data.</li>
+<li>By holding <strong>Ctrl, Alt, or Shift</strong> along with the <strong>Up/Down Arrow keys</strong>, you can manually input the distance or calibrate/adjust the current data.</li>
+<li>The impact prediction dot remains visible even if you toggle off all HUD elements. However, since I didn’t set up a standalone distance display, I highly recommend keeping at least the FCS panel active to accurately judge your engagement distance.</li>
+<li>Everything can be configuration in F12 Menu, panel’s location, colors, size, turn on or off it, override all colors….</li>
+</ul>
+<p><strong>I Need Translate!</strong></p>
+<ul>
+<li>You can find language file in <code>YourGamePath/BepInEx/plugins/ModrenTacHUD/locales</code>, there have 2 folders, menu include cfg menu’s locale and ui include ui text’s locale, create your language’s file and give a pull request for mod’s repo,  i will accept it and add in next release, you can also share your language file for other peoples, I don’t mind.</li>
+<li>In the language file, <code>Language</code> mean how your lang will display in F12 Menu(you can find default lang  <code>English</code> and <code>简体中文</code>, if you create a new language file, make sure to change it(like <code>日本語</code>).</li>
+</ul>
+<p><strong>Special Thanks</strong></p>
+<p>To koloskovnick and his MedEffectsHUD. I referenced the code used for fetching and updating buff effects. The original project uses the MIT license, and I would like to credit them here.</p>
+<p><a target="_blank" class="external-link" href="https://github.com/KoloskovNikolay/MedEffectsHUD" rel="noreferrer noopener">MedEffectsHUD</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-04-17T16:53:00.000000Z">17 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,652 downloads</span><span>65.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Reworked the Team Panel. It should now function correctly and is strictly enabled only in a Fika environment.</p>
+<p>Added a Boss Panel to display High-Value / High-Threat Targets (HVTs).</p>
+<p>Due to UI space constraints, the Boss Panel currently only tracks Bosses, Cultists, Bloodhounds, and the Black Division (added by the WTT’s Black Division mod, it’s pretty good, if you don’t downloaded before,  there is the link: <a target="_blank" class="external-link" href="../../2511/wtt-black-division-redacted-home/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2511/wtt-black-division-redacted-home</a>).</p>
+<p>Reworked the rendering logic for the left-side panels. If your Team Panel appears misaligned, please reset its X-offset in the config file.</p>
+<p>Modified the Active Buff Manager. It can now correctly display the remaining duration of Painkiller effects.</p>
+<p>Have fun! :)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c3ccd9baa9a3e2ac25aef072a1a7951bd8bff3099bb295d175ff1e0b595ca826?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1205055796/8ef5d4a9-064b-4aad-82cf-9cca6b3c20f9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A22Z&amp;rscd=attachment%3B+filename%3DModernTacHUD-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A02Z&amp;ske=2026-08-01T21%3A04%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2Fk6d58CogAtcfY%2B7%2FaP7jHRddF10K%2FjKeYGDOH9Ojjo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MSwibmJmIjoxNzg1NjE1OTQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.aZhjlVaE-EpXClpSsFjck6VAXVZy4GaRChxdIP8cZHw&amp;response-content-disposition=attachment%3B%20filename%3DModernTacHUD-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-04-13T11:35:00.000000Z">13 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>576 downloads</span><span>59.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First avaiable version, with all features worked.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/33e7fb0daf68f93540b987f59f898a9bd608e61a3e581dfc6916970abbdefe3b/behavior" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1205055796/36c63497-2e88-4d41-930d-cd80bedc2d87?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A03Z&amp;rscd=attachment%3B+filename%3DModernTacHUD-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A50Z&amp;ske=2026-08-01T21%3A08%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mtoKj07Il4h7SdNzXrXhBCU8wS9ot%2BHTWqlR4YXM7Ic%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI0MiwibmJmIjoxNzg1NjE1OTQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.q8KlIslyyenAm0_4NP1B4vrLUxV9jsVbxBDvkjba1ME&amp;response-content-disposition=attachment%3B%20filename%3DModernTacHUD-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>eft.hiddenhiraigi.ballisticcalculator</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>13 April 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/HiddenCirno/EFTBallisticCalculator" target="_blank" rel="noreferrer noopener">https://github.com/HiddenCirno/EFTBallisticCalculator</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

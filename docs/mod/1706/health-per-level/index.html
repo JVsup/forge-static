@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Health Per Level · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Health Per Level</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/0d66e6dd90e8c7e8def0370110811c4ac3d3c4c3f169ce5a20919c64cb9daca1.webp" alt="Health Per Level thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Health Per Level</h1>
+    <p class="hero-teaser">Increase health depending on player level</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/35a9a4a1fca7f51b542086d0d52f14ee248ce08c172bbf8edbe2b0792b68b5b6.webp" alt="" width="32" height="32">fryciarz7</span>
+      <span class="author"><img src="../../../assets/e8c49a076e5014f19660156bcda9dee97c10ac49a49c55219f565d0c679641a7.svg" alt="" width="32" height="32">Capataina</span><span class="author"><img src="../../../assets/d32ea7a91357b0be3ad57a1b4ba69f6e8759d94218167de1a5af4ae26d164131.webp" alt="" width="32" height="32">MNSTR</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>37,647</dd></div>
+    <div><dt>Favourites</dt><dd>34</dd></div>
+    <div><dt>Mod lists</dt><dd>41</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Health Per Level content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Original mod by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/22851-capataina/" rel="noreferrer noopener">Capataina</a> found <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1423-health-per-level/" rel="noreferrer noopener">here</a>, updated by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/45400-mnstr/" rel="noreferrer noopener">MNSTR</a> found <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1690-health-per-level-reboot/" rel="noreferrer noopener">here</a>.</p>
+<p><em><strong>If they decide they want to continue development on the mod and want mine removed I will</strong></em> but until then I will be taking it over and iterating on it.</p>
+<p><strong>Description:</strong></p>
+<p>Config has since been split into two parts which all hinges on the first line of “split_PMC_and_Scav”; if it is set to <em>false</em> then the mod will only use the PMC values for everything.</p>
+<p>Pretty simple, it increases your maximum health depending on the level of the player. The base amount is as follows:</p>
+<p>Chest: <strong>2</strong></p>
+<p>Head: <strong>2</strong></p>
+<p>Left Arm: <strong>3</strong></p>
+<p>Left Leg: <strong>3</strong></p>
+<p>Right Arm: <strong>3</strong></p>
+<p>Right Leg: <strong>3</strong></p>
+<p>Stomach: <strong>2</strong></p>
+<p>Total: <strong>18</strong> health per increment (the default is <strong>every 5 levels</strong>)</p>
+<p>Mod also takes into consideration your Health skill level. For every increment (by default <strong>every 1 skill level</strong>) you get additional <strong>7</strong> HP (by default, as there are 7 body parts).</p>
+<p>This is <strong>turned on</strong> by default and can be configured for both PMC and Scav in config file → “health_per_health_skill_level”.</p>
+<p>Increment and HP values are configurable:</p>
+<ul>
+<li>How many skill levels per increment: “health_skill_levels_per_increment”,</li>
+<li>How many HP per body part: “health_skill_&lt;bodypart&gt;”.</li>
+</ul>
+<p>Alternative Health Boost</p>
+<p>Big thanks to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/32305-teacrab131/" rel="noreferrer noopener">TeaCrab131</a> for developing alternative method of health boost. Currently 3.11 doesn’t have any AI mod yet, the bots are very aggressively trying to aim for the head, so a head_boost multiplier is added so players have a bit more leeway when it comes to surviving head shots. Disabled by default.</p>
+<p>Added option for Alternative mode of adding bonus health.</p>
+<ul>
+<li>Each part of the body has a customized base health</li>
+<li>Each part of the body receives bonus health at <strong>different level intervals</strong></li>
+<li>Health skill provides a skill level x percentage boost to the customized base health</li>
+<li>Health skill level bonus is now a multiplier on the Alternative Base Health Preset</li>
+<li>Head HP modifier to help surviving aimbots (default x 3.0)</li>
+<li>Staggered health bonus per nth-level:
+<ul>
+<li>Every 3 level: Arm HP <strong>+3</strong></li>
+<li>Every 5 level: Stomach HP <strong>+7</strong> and Leg HP <strong>+5</strong></li>
+<li>Every 7 level: Head HP <strong>+5</strong>, Thorax HP <strong>+7</strong></li>
+</ul>
+</li>
+</ul>
+<p>Alt BaseLv. 21Lv. 51Lv. 99 (+)SkillEliteABSOLUTE MAXThorax90+41+49+100 (98)+60+120310Head30 (90)+15+35+75 (70)+15 (45)+30 (90)135 (255)Stomach90+28+70+135 (133)+37+75300Arms60+21+51+100 (99)+22+45205Legs75+20+50+100 (95)+30+60235 Currently this mod changes HP of player only, not AIs.</p>
+<p>This mod changes HP of AIs as well, configurable and enabled by default.</p>
+<p><strong>Config:</strong></p>
+<p>To change health values go to config/config.json5</p>
+<ul>
+<li>Whether or not the health values for PlayerScav and PMC should be split/independent of each other,</li>
+<li>Should the mod keep bleeding chance somewhat consistent,</li>
+<li>Should the mod increase your resistance to bleeding <strong>by a very small margin</strong>,</li>
+<li>How many levels until health increase (default is 5),</li>
+<li>How much to increase each body part by per increment,</li>
+<li>The base health of the PMC/Scav as well,</li>
+<li>Should it consider your Health skill level,</li>
+<li>How many Health skill levels until health increase (default is 1),</li>
+<li>How much to increase each body part by per Health skill increment.</li>
+</ul>
+<p><strong>Installation:</strong></p>
+<p>Unzip <em>capatainamnstrfryciarz7-healthperlevel.zip</em> into your SPT folder</p>
+<p>Uninstallation:</p>
+<p>If you are willing to remove this mod, first disable the mod in it’s config file and start the server and the game so the health pools are restored to default.</p>
+<p>Want to support my work? Buy me a Coffee <a target="_blank" class="external-link" href="https://ko-fi.com/fryciarz7/tip" rel="noreferrer noopener">ko-fi/fryciarz7</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-03-17T10:23:00.000000Z">17 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>8,225 downloads</span><span>18.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Now, every time you level-up your Metabolism skill, your Energy and Hydration stat also increases.
+By default both go by 1 every 1 Metabolism level.</p>
+<p>Thanks to <span class="dead-link">fallen7633</span> for suggesting this.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/639f563a99b4d21807969171e120d1b36242752c84d4ba82380893287cec21c1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/724ba840-9387-4424-aa1a-6bb5d968f3a7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A37Z&amp;rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A24Z&amp;ske=2026-08-01T21%3A07%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Bi0mVrYOVxKsuKmwQ3nYQrgBzr5eujJ3fChLQAvkVW4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&amp;response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.3</h2></div><time datetime="2026-01-19T10:41:00.000000Z">19 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,843 downloads</span><span>13.8 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Implements default health restore feature
+<ul>
+<li>requires game start to restore and save <em>new</em> values</li>
+</ul>
+</li>
+<li>changes int to float for health values
+<ul>
+<li>values are rounded <strong>down</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/46a73c6b2fa17ebe51cb241774ddc5014c2a76b492e83cb212bbd042a1e7f6c0" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/451f67d7-4684-4022-aacf-03aeb70e91c1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A27Z&amp;rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A55%3A34Z&amp;ske=2026-08-01T20%3A56%3A27Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=gEc4UXC35ySJBqBlZjSNUGtNaN89%2F7tkpm%2FWNqJBr58%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&amp;response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2026-01-15T10:28:00.000000Z">15 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>625 downloads</span><span>18.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Changes the method of health update midgame to a completely different approach. This method might not update health when completing tasks.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c952f50b3e5aab2790c575ef6059c7fd6172017cab51ee616f5406836a325af3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1106278406/17c45884-ca29-4231-b0d8-a9eb6b06f182?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A50%3A19Z&amp;rscd=attachment%3B+filename%3Dfryciarz7-HealthPerLevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A49%3A43Z&amp;ske=2026-08-01T20%3A50%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=q7Ta7%2BM%2FuXAW0DDvNMmQJdNZL43gPT8RgXNGrvraHuw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MCwibmJmIjoxNzg1NjE1MzUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Ru6SmiGCqTf7HtE7wClv-kZNQ7GS4tqGrwZxi3mbFig&amp;response-content-disposition=attachment%3B%20filename%3Dfryciarz7-HealthPerLevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2025-05-13T09:04:45.000000Z">13 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>7,694 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>updates types and references</li>
+<li>[bugfix] Fixed Bot’s Health Changes</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/850631921/8fa0f709-2ff5-466f-9fd2-c6df4f1dc09d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A33Z&amp;rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A50Z&amp;ske=2026-08-01T21%3A10%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rir1ubgbTqU7SPjfj7lPySGpiMWU4vc2yhhhnFjUVgc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&amp;response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2025-04-01T04:31:57.000000Z">1 April 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,158 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added alternative method of getting bonus HP. by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/32305-teacrab131/" rel="noreferrer noopener">TeaCrab131</a>
+<ul>
+<li>Each part of the body has a customized base health</li>
+<li>Because currently 3.11 doesn’t have any AI mod yet, the bots are very aggressively trying to aim for the head, so a head_boost multiplier is added so players have a bit more leeway when it comes to surviving head shots.</li>
+<li>Each part of the body receives bonus health at different level intervals</li>
+<li>Health skill provides a skill level x percentage boost to the customized base health</li>
+<li>Added related configurations to Config Json, default false.</li>
+</ul>
+</li>
+<li>checks for Personal Traner and displayes an error by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/3530-fryciarz7/" rel="noreferrer noopener">fryciarz7</a>
+<ul>
+<li>same way it does for Realism, but this time you cannot disable this message. These mods are conflicting.</li>
+</ul>
+</li>
+<li>README.MD for alternative method + elite/max level bonus + value adjustment. by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/32305-teacrab131/" rel="noreferrer noopener">TeaCrab131</a>
+<ul>
+<li>Head HP modifier to help surviving aimbots (default x 3.0)</li>
+<li>Staggered health bonus per nth-level:
+<ul>
+<li>Every 3 level: Arm HP +3</li>
+<li>Every 5 level: Stomach HP +7 and Leg HP +5</li>
+<li>Every 7 level: Head HP +5, Thorax HP +7</li>
+</ul>
+</li>
+<li>Health skill level bonus is now a multiplier on the Alternative Base Health Preset</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/850631921/0e7a6106-b310-4eaf-84da-33cdd88825b2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A29Z&amp;rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A04Z&amp;ske=2026-08-01T21%3A05%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Ev6lrr1A9HyS99jict1sYiuBLWQFnAK0U9e83LIJHoc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&amp;response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-03-26T11:49:39.000000Z">26 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,066 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Update to 3.11</p>
+<p>I am currently taking a break from SPT and checked on the mod out of curiosity. Stuff seems to work fine.</p>
+<p>Please report issues over GitHub if you find something.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/850631921/1d5431f5-925c-4f7f-b865-6078068ddf49?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A50%3A40Z&amp;rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A50%3A28Z&amp;ske=2026-08-01T20%3A50%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=y0xKLv5VaA5GzVPpiWAPMbGpt87zt%2Fu%2FuQhrv%2BNYYYQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MiwibmJmIjoxNzg1NjE1MzUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJnNQ7ZwqwwXXN1AICs4S4ZPQOCken9YPzZzTYWVvjQ&amp;response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.7</h2></div><time datetime="2024-11-26T18:50:07.000000Z">26 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,231 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>updates to 3.10</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aa8f4666b2358b385aae79dc5c90c1c1be25c9d63905c1a8aeda6b6c15a927f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/850631921/eeaa31f2-7fed-458c-8b4a-ffe74e0ba19a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A50%3A36Z&amp;rscd=attachment%3B+filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A50%3A25Z&amp;ske=2026-08-01T20%3A50%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=VlZ%2BPk8qAZIpDJ1kFkftkM1CeYrCoE5pD6kq0fc8rFs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY2MywibmJmIjoxNzg1NjE1MzYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yoVsfzTRkUKtCcEo-_BN2dQutYiTZSDpSoPvAxSx0Z4&amp;response-content-disposition=attachment%3B%20filename%3Dcapatainamnstrfryciarz7-healthperlevel.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.fryciarz7.spt.hpl</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 3.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>2 September 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/fryciarz7/HealthPerLevel/tree/master" target="_blank" rel="noreferrer noopener">3.11</a></li><li><a href="https://github.com/fryciarz7/HealthPerLevel-CSharp" target="_blank" rel="noreferrer noopener">4.0</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>FSR4 Bridge · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>FSR4 Bridge</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/df11d0c465cdf94c480ab51a8f4626f3ad3cc79ef94a887bad849eb13bbe4104.webp" alt="FSR4 Bridge thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>FSR4 Bridge</h1>
+    <p class="hero-teaser">Implements native FSR4 upscaler support</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,604</dd></div>
+    <div><dt>Favourites</dt><dd>10</dd></div>
+    <div><dt>Mod lists</dt><dd>18</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="FSR4 Bridge content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>FSR4 Bridge - AMD FSR4 for SPT</h1>
+<p>Routes the game’s FSR3 upscaler to <strong>AMD FSR4</strong> (or the latest <strong>FSR 3.1.x</strong> as a fallback) via a
+native D3D11 -&gt; D3D12 bridge. This is built using the latest FSR SDK, so it supports FSR 4.1.1 which works with RDNA3.</p>
+<p>If your card does not support FSR4 and you select it, it will auto fallback to 3.1.x.</p>
+<p><strong>NOTE: Keep in mind, this is a <em>bridge</em>, which means it needs to convert dx11 output to dx12 and back to dx11. It is extra processing power to do, on top of FSR4 itself being heavier in general. You may notice performance drop compared to FSR3.0 especially if you are using an RDNA3 card</strong></p>
+<h2>How to Use</h2>
+<ol>
+<li>In the game’s <strong>Graphics</strong> settings, select an <strong>FSR3</strong> quality mode</li>
+<li>In the BepInEx <strong>config</strong> (F12 ConfigurationManager, or edit
+<code>BepInEx/config/com.matsix.fsr4bridge.cfg</code>), set <strong>Enable FSR4 = true</strong>.</li>
+</ol>
+<h2>BepInEx Config</h2>
+<ul>
+<li><strong>Enable FSR4</strong> - the master toggle.</li>
+<li><strong>Sharpness</strong> (0–1) - RCAS post-sharpen. FSR4 is smoother than FSR3 by design (bypassing the game’s
+own FSR3 sharpen pass too), so raise this (~0.6–0.9) if edges look soft.</li>
+<li><strong>Native AA</strong> - Toggle between native resolution AA and upscaled AA</li>
+</ul>
+<h2>SPT-VR Support</h2>
+<p>You will need to be on version 1.3.1+ of SPT-VR for this bridge to work (will be available soon). I had to add special support for the VR mod since it changes
+a lot of upscaler code.</p>
+<h2>Credits</h2>
+<ul>
+<li>AMD Fidelity FX SDK - <a target="_blank" class="external-link" href="https://gpuopen.com/amd-fidelityfx-sdk/" rel="noreferrer noopener">https://gpuopen.com/amd-fidelityfx-sdk/</a></li>
+<li>Claude for a lot of the bridge logic</li>
+</ul>
+<p>You can support my work on Ko-fi:
+<a target="_blank" class="external-link" href="https://ko-fi.com/matsix" rel="noreferrer noopener">https://ko-fi.com/matsix</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-07-11T02:33:00.000000Z">11 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>993 downloads</span><span>18.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Changelog:</strong></p>
+<p>To anyone that was having issues with performance before, please try this update and let me know how it is now. Personally I’ve seen a pretty big improvement.</p>
+<ul>
+<li>GetNativeTexturePtr was being called every frame a lot more than it should’ve been, I think this was the biggest hit on performance people were experiencing</li>
+<li>Various other small optimizations</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8665fdf4a89311e1623611629cabb23ace7f6fac0b0efaff1e2fd8d9ddc924ba?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1290328555/77ed83e3-2671-4db9-a58c-324af5725643?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A11Z&amp;rscd=attachment%3B+filename%3DFSR4Bridge-v1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A33Z&amp;ske=2026-08-01T21%3A22%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=AbMgcU4%2Bt13rXOV32Cjl%2BZRbpUJJINNJtvdh3%2B6HwYc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&amp;response-content-disposition=attachment%3B%20filename%3DFSR4Bridge-v1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-07-07T13:44:00.000000Z">7 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>283 downloads</span><span>18.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Fixes a TDR caused when enabling/disabling settings in bepinex config</li>
+</ul>
+<p><strong>Regarding performance - this is not a complete direct FSR4 implementation because that’s not possible due to Tarkov being DX11 and FSR4 does not support DX11. So this is doing the same thing optiscaler does pretty much except built into Tarkov directly to work best with Tarkov. This converts DX11 output to DX12 and back to DX11 so it needs to do extra processing. RDNA3 cards, I imagine would have an even harder time with this.</strong></p>
+<p>Another thing to note - if you’re testing performance in hideout, that is not a good representation. After a lot of testing, enabling this mod costs about 0.5ms frametime on my 9070 xt (on flatscreen). So the higher your FPS is, the bigger of a drop you’ll see. Go into a raid, look towards the middle of the map and enable/disable and see if it affects FPS. Let me know if you’re still seeing big drops in those cases.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6b374e73bc4a907df405de20c426db2ce09f60dbd79adfbbcce25f15421be8b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1290328555/24e02048-2c41-4200-ad2c-99a2ea9e0758?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A56Z&amp;rscd=attachment%3B+filename%3DSPT-FSR4-Bridge-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A21Z&amp;ske=2026-08-01T21%3A14%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5tWo1PabRpRqWlue8Q9oYjbhDLDkAeN45er26%2FYMVKQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&amp;response-content-disposition=attachment%3B%20filename%3DSPT-FSR4-Bridge-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-05T21:47:00.000000Z">5 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>328 downloads</span><span>18.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p>First release of the mod. This is a complete native implementation of FSR4 into SPTarkov. It overrides FSR3 in the game.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a6a90fcfca2a4a4d36ac15273078dd8ed3b1ffffe72a2265ff7e38211502c5c6/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1290328555/ae03550f-23b9-427b-a5c3-0cc0f2605d01?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A06Z&amp;rscd=attachment%3B+filename%3DSPT-FSR4-Bridge-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A55Z&amp;ske=2026-08-01T21%3A15%3A06Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Ge4S0VFbnjLGtodUzGFjh7%2BZyCpVddG741QMhK6ySjU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzg1NywibmJmIjoxNzg1NjE2MDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7h8PSiAd-1ilydoy9C2eYXCLg28FF0JymJbYwGDxMI0&amp;response-content-disposition=attachment%3B%20filename%3DSPT-FSR4-Bridge-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.matsix.fsr4bridge</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>5 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/matsixx/SPT-FSR4-Bridge" target="_blank" rel="noreferrer noopener">https://github.com/matsixx/SPT-FSR4-Bridge</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to help write the bridge logic in C++</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

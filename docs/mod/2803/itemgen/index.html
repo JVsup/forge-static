@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>ItemGen · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>ItemGen</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/da4968ae68f297c2a9e05c4678e4e81169bb3795f0bc1c64db91897b7f746df2.webp" alt="ItemGen thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>ItemGen</h1>
+    <p class="hero-teaser">A server-side framework for SPTarkov that lets anyone, including non-programmers, create custom items using simple JSON packs. Includes a web-based tool for generating packs visually and a client-side bundle injector for custom 3D models.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0a375ce54aa7e016c44b8a0a6413dcbe3e3ae68147f4f5fd3d8cfb7f7f2330b6.webp" alt="" width="32" height="32">shaneeexd</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,497</dd></div>
+    <div><dt>Favourites</dt><dd>20</dd></div>
+    <div><dt>Mod lists</dt><dd>11</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="ItemGen content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>10</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>ItemGen - Custom Item Framework</h1>
+<p><strong>ItemGen</strong> is a server-side framework for SPTarkov that lets anyone create custom items - quest items, keys, containers, and stims - using simple JSON packs, no programming required. Custom 3D models and use animations are supported through the included client bundle injector.</p>
+<h2>What It Does</h2>
+<ul>
+<li>Loads item packs from <code>user/mods/ItemGen/items/</code></li>
+<li>Clones existing item templates and overrides names, descriptions, stats, prices, and stack sizes</li>
+<li>Registers custom items with the item database, handbook, and flea market</li>
+<li>Supports <strong>Quest Items</strong>, <strong>Keys</strong>, <strong>Containers</strong>, and <strong>Stims</strong> with category-specific behavior</li>
+<li>Adds custom items to vanilla traders with configurable prices, loyalty levels, and stock</li>
+<li>Handles all item registration, validation, and locale injection internally</li>
+<li>Includes a client-side bundle injector for custom 3D models and use animations via <code>BepInEx/plugins/Serenity-ItemGen/bundles/</code></li>
+</ul>
+<h2>Web Tool</h2>
+<p>Create item packs visually with the <a target="_blank" class="external-link" href="https://itemgen-tool.netlify.app" rel="noreferrer noopener"><strong>ItemGen Tool</strong></a> - pick a base item template, set your custom stats and details, configure traders, drop in custom bundle files, and export a ready-to-use zip.</p>
+<h2>Installation</h2>
+<ol>
+<li>Drag the <code>SPT</code> and <code>BepInEx</code> folders from the mod archive into your SPT installation directory.</li>
+<li>Start the server. ItemGen loads automatically and waits for item packs.</li>
+</ol>
+<h2>Making an Item Pack</h2>
+<ol>
+<li>Open the ItemGen Tool.</li>
+<li>Select a base item template, set your custom name, description, and stats.</li>
+<li>Configure traders and, if needed, drop custom bundle files into the Bundles tab for custom 3D models.</li>
+<li>Click <strong>Export</strong> to download a zip.</li>
+<li>Drag the <code>SPT</code> folder (and <code>BepInEx</code> if bundles are included) into your SPT install to test (<strong>ALWAYS</strong> use a new temporary profile when testing).</li>
+</ol>
+<blockquote>
+<p><strong>Tip</strong>: Always test on a new developer profile (and make sure to clear temp cache) so you can verify trader listings, item rendering, and bundle injection without affecting your main save.</p>
+</blockquote>
+<h2>Publishing an Item Pack Addon</h2>
+<p>The ItemGen Tool export zip is already structured for distribution, users just drag the <code>SPT</code> folder into their install directory.</p>
+<p>When publishing:</p>
+<ol>
+<li><strong>State the dependency</strong>: Your add-on pack requires <strong>ItemGen v1.0.0</strong> for SPT 4.0.13.</li>
+<li><strong>Do not include</strong> the ItemGen DLL or other authors’ packs in your zip.</li>
+<li><strong>Test</strong> by extracting and running the server before publishing.</li>
+</ol>
+<h2>Dependencies</h2>
+<ul>
+<li>SPTarkov 4.0.13</li>
+</ul>
+<h2>More Information</h2>
+<p>View my framework mods and user created add-ons for them <a target="_blank" class="external-link" href="https://serenity-workshop.netlify.app" rel="noreferrer noopener">here.</a></p>
+<p>See the full documentation, JSON reference, and examples in the <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/ItemGen/blob/main/README.md" rel="noreferrer noopener">GitHub README</a>.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2026-07-27T07:06:00.000000Z">27 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>925 downloads</span><span>52.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.5.0 Changelog</h2>
+<ul>
+<li><strong>BetterKeys compatibility</strong> - ItemGen keys now integrate with BetterKeys: map-specific background colors, key descriptions with Tips, Required Extracts, Required Quests, and Behind the Lock loot info.</li>
+<li><strong>Custom models for keys</strong> - keys now support Custom Model and Use Model bundle paths, matching the same pattern used by other item types.</li>
+<li><strong>Bartering for custom items</strong> - custom items can now be added as barter offers in trader inventories.</li>
+<li><strong>Removed custom stim patch</strong> - the stim effects/damage patch has been removed due to instability and conflicts with other items.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/Nzg1NGNjNDhmZmEzYWM5MWIzNTg2Nzg5YzM1Y2ZlODA6MTc4NTEzNTk4OQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1sQmHtxyD3W_3oynTTGFZjhBRii-iNM7B&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.2</h2></div><time datetime="2026-07-24T16:23:00.000000Z">24 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>79 downloads</span><span>52.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.4.2 Changelog</h2>
+<ul>
+<li>Fixed an issue where EffectsHealth/EffectsDamage properties were being dropped</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YzJmNTUzY2NkMzgzYjFkYjZkZTk2NmRlYTQyZmQwZWY6MTc4NDkxMDUzNA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1dYV8Q2ddk7vb7XrmS525aG2hn8ZbTxZn&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.1</h2></div><time datetime="2026-07-24T01:41:00.000000Z">24 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>24 downloads</span><span>52.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.4.1 Changelog</h2>
+<ul>
+<li>Added bundle injection/override values for quest items</li>
+<li>Added stash item size with icon scaling for quest items</li>
+<li>Updated tool to accommodate these</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MWRiYTM1NDE1Y2U1NTY0ZjQxZDQxNWQ5M2NkYmI4NTM6MTc4NDg1NzI1NA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1oFKOadDJrgVOhq66w83fwFLw1XkS6sxC&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2026-07-20T18:21:00.000000Z">20 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>101 downloads</span><span>51.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.4.0 Changelog</h2>
+<ul>
+<li><strong>Custom Barter items</strong> - a new <code>barters</code> category lets you clone any vanilla barter item, override <code>parent</code>/<code>handbookParentId</code>, <code>stackMaxSize</code>, <code>width</code>/<code>height</code>, <code>itemSound</code>, and <code>properties</code>.</li>
+<li><strong>Custom Food and Drink items</strong> - a new <code>foodDrinks</code> category lets you create one-use snacks or multi-use food/drink items with configurable <code>maxResource</code>/<code>resource</code>, <code>foodUseTime</code>, <code>foodEffectType</code>, health effects (Hydration/Energy), and damage effects.</li>
+<li><strong>Fixed vanilla stims and meds</strong> - the <code>StimEffectsDamagePatch</code> no longer runs on vanilla items, so default stims and other misc items can be used in raid again.</li>
+<li><strong>Stim-only guard</strong> - the <code>StimEffectsDamagePatch</code> and <code>StimEffectsDamageMultiPatch</code> now explicitly exit for non-stim meds, and the multi-patch is gated to custom items only, so other modded healing items will not be affected.</li>
+<li><strong>Workbench crafting</strong> - every custom item type can now have a hideout workbench craft recipe with requirements, workbench level, craft time, and output count. A new <code>Crafting</code> section in the tool lets you configure these recipes.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTE1NTcyZDE5MGVmOGMzOTljNzdlZjU5OTc5MzE0NjE6MTc4NDU3MTY5MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1tNIzwYiqE6OUBUhrSrnppr947t1JgZEK&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.5</h2></div><time datetime="2026-07-13T23:21:00.000000Z">13 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>161 downloads</span><span>47.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.3.5 Changelog</h2>
+<ul>
+<li><strong>Container loot pool injection</strong> - every item type can now be added to vanilla container loot tables. The new <code>Loot</code> section in the tool lets you enable loot injection, pick container IDs, and set rarity.</li>
+<li><strong>Fixed client icon scaling</strong> - fixed a bug where the item icon scaling would affect other items in the stash.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NzYwMWM5ODhkYzg4MjdiYmYzZDhiZjk0YWRmNDkxZGU6MTc4Mzk4NDkxMg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1vm6N32S_miKn670WVav-HFyr3XQ1Sqmk&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.5</h2></div><time datetime="2026-07-12T23:55:00.000000Z">12 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>32 downloads</span><span>42.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.2.5 Changelog</h2>
+<ul>
+<li><strong>Custom secure containers</strong> - a new feature integrated into the existing container section: create a custom container and toggle <code>isSecured</code> so it behaves like a secure container in-game.</li>
+<li><strong>Raw JSON properties editor</strong> - new for all existing item types. Add any extra field in the <code>Raw Properties JSON</code> panel; the game will register those fields even though they are not in the UI.</li>
+<li><strong>Reduced server logging</strong> - item generators no longer log per-item success messages. Final startup output now shows <code>registered/enabled</code> counts for each item type plus total trader entries; per-item errors and warnings are still logged.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTU2MTJjODY2MjNiMGVlZDE1ZmEyMmI3ZDFhMjk0ZWY6MTc4MzkwMDU3MQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1SzP01J5phjaijhLTPdzujxSIJXCnGYBg&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-07-12T22:06:00.000000Z">12 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6 downloads</span><span>41.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.2.1 Changelog</h2>
+<ul>
+<li><strong>Client-side icon scaling</strong> - custom items now render their inventory icon at the size defined by <code>Width</code>/<code>Height</code>, preventing oversized icons from overlapping adjacent slots.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NGU2OWJjYTA3ZWYwZTRiOTkyMDEwMGQxOTM4NWYyZjU6MTc4Mzg5NDAwMw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=19433fObZjHPf0aXSfgdTaWEl4P_IIz6t&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-07-12T18:30:00.000000Z">12 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>11 downloads</span><span>43.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>v1.2.0 Changelog</h3>
+<ul>
+<li><strong>Custom keys now work on vanilla doors</strong>: Custom keys can be assigned to vanilla doors, including multiple keys per door via door-key mappings.</li>
+<li><strong>New MedKit category</strong>: Create custom medkits by cloning Salewa, IFAK, and AFAK templates with full control over HP resource, healing cost, effects, and custom bundles.</li>
+<li><strong>Bundle injection supports medkits</strong>: Custom medkit loot and use model bundles are loaded automatically.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NDU1YWY5Y2Q0MTU4OTQ1NTBkNjcyNTE2ZWJhZGE5ZjU6MTc4Mzg4MTA1MQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=17rqopeFRS4JJoAJ6tp46F7xSwM6tGjw7&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-07-11T04:16:00.000000Z">11 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>58 downloads</span><span>37.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>v1.1.0 Changelog</h3>
+<ul>
+<li><strong>Custom containers in secure containers</strong>: Custom containers can now be set to valid placed inside secure containers.</li>
+<li><strong>Fracture healing stims</strong>: Stims can now use <code>EffectsDamage</code> to heal fractures.</li>
+<li><strong>Multi-limb healing limit</strong>: Added <code>maxBodyPartsToHeal</code> so one stim can heal multiple limbs up to a set limit. (Experimental)</li>
+<li><strong>Decimal stim buff values</strong>: Buff <code>value</code>, <code>delay</code>, <code>duration</code> and <code>chance</code> now support decimal numbers.</li>
+<li><strong>SkillName ignored for non-SkillRate buffs</strong>: <code>skillName</code> is only used when the buff type is <code>SkillRate</code>.</li>
+<li><strong>Web tool updates</strong>: Added fields for <code>EffectsDamage</code>, <code>EffectsHealth</code>, <code>maxBodyPartsToHeal</code>, and decimal buff inputs.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MzgxMDYxYjc1OTFkODRmYWI3MGJjNWRlODU4OTEyZWI6MTc4Mzc0MzQyMQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1CwmfhN5CNnOamyslunqWLu0yxVDHXM1t&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-07T00:28:00.000000Z">7 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>197 downloads</span><span>32.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release</p>
+<p><strong>Note:</strong> Quest items and keys will register fine, but are mainly to be used with the upcoming release of the “Map Editor Lite” mod.</p>
+<p><strong>This is a very early version of the mod, many items to be added in the future.</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/Yzc3M2YyZmQ5Y2EyODk0NmQ0YjRhNjFiYjU5NDE5ZDM6MTc4MzM4NDE0MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1YkNpI_ysQ8WAKhd04f8eGv5AogJ-H6Gu&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.serenity.itemgen</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ShaneeexD/ItemGen" target="_blank" rel="noreferrer noopener">https://github.com/ShaneeexD/ItemGen</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, as well as descriptions. The code is thoroughly reviewed by me before anything is published.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

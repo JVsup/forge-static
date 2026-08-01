@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>VCO - Viewmodel Camera Offset · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>VCO - Viewmodel Camera Offset</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/7c54f2c3a103033906cba85ff36068525d1918e314c4d11465442c4c4ad16b1a.png" alt="VCO - Viewmodel Camera Offset thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>VCO - Viewmodel Camera Offset</h1>
+    <p class="hero-teaser">A simple client mod that allows you to offset the player camera for cosmetic purposes.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0909819d5a03c53cbdbed3b9fc16d6463f5fcfdd60b956e64d77f93013a9397b.webp" alt="" width="32" height="32">Devraccoon</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>10,351</dd></div>
+    <div><dt>Favourites</dt><dd>13</dd></div>
+    <div><dt>Mod lists</dt><dd>38</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="VCO - Viewmodel Camera Offset content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3><em><strong><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2749-samswat-s-increasedfov-3-11/" rel="noreferrer noopener">INCREASEDFOV</a> AND <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix/" rel="noreferrer noopener">FOVFIX</a> ARE INCOMPATIBLE!!! USE AT YOUR OWN VOLITION!</strong></em></h3>
+<h3>I repeat: <em><strong>INCREASEDFOV AND FOVFIX ARE INCOMPATIBLE. THEY WILL CLASH IF USED TOGETHER!</strong></em></h3>
+<p><em><strong>After discussing with the SPT community, I decided to write a mod that lets you offset the player camera without affecting the rest of the body. This unintentionally “fixed” the bizarre way some rifles are pushed into the player’s shoulder. It also allows you to move your player view up, down, sideways, back and forth with very little restriction.</strong></em></p>
+<p><em><strong>With version 1.0.1, VCO supports viewmodel Presets and a detection system. More on these further below.</strong></em></p>
+<h2><em><strong><strong>Here’s a comparison for the SCAR-H:</strong></strong></em></h2>
+<p><em><strong><strong><a target="_blank" class="external-link" href="https://i.imgur.com/3WYdjuz.jpeg" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/1f1a5061b74ebfed5cf95ace525083be2eba86118b68677b58d71d640bd8a0c5.webp" alt="3WYdjuz.jpeg"></a></strong></strong></em></p>
+<p><strong><em>Values used for the altered offset:</em> <em>Horizontal offset: <strong>-0.01</strong> Vertical offset: <strong>0.065</strong> FOV: <strong>80</strong></em></strong></p>
+<h3><strong>Active Aim</strong></h3>
+<div class="youtube-lite" data-video-id="ekMUR-E-8VA" data-embed-url="https://www.youtube-nocookie.com/embed/ekMUR-E-8VA?autoplay=1"><img src="../../../assets/7b3cc45a2c8b983da59d258dcc1f37d5ee3b207a5b9a155802f86e94e81907f7.webp" alt="YouTube video thumbnail" loading="lazy" decoding="async"></div>
+<h3><em><strong><strong>Available mod settings</strong> (Hotkey: F12)</strong></em></h3>
+<p>**<em>Setting Range (<strong>value</strong>) <strong>↓ Export section ↓</strong>  Preset Name (for exporting) Lets you type a preset name Export Preset Exports the preset name with the current offset values on-click <strong>↓ Field of View section ↓<br>
+Enable expanded range Toggles ability to unrestrict FOV <strong>↓ Offsets section ↓</strong><br>
+X Camera Offset -0.5 to 0.5 (<strong>default: 0.05</strong>) Y Camera Offset -0.5 to 0.5 (<strong>default: 0.05</strong>) Z Camera Offset -0.5 to 0.5 (<strong>default: 0.05</strong>) <strong>↓ Settings section ↓</strong><br>
+Select Preset (dropdown) Allows for selecting and using an existing preset Delete the current preset Deletes the curently selected preset, if it exists Toggle the offsets on/off Immediately toggles the viewmodel patch on/off in realtime Toggle automatic weapon detection Toggles the detection system for if you only want the viewmodel patch on with specific weapons</strong></em></p>
+<h3><em><strong><strong>Installation</strong></strong></em></h3>
+<p><em><strong>Download the mod Open the archive <code>hazelify.VCO-X.X.X-XXX.zip</code> with <a target="_blank" class="external-link" href="https://7-zip.org/download.html" rel="noreferrer noopener">7-Zip</a> Drag and drop the <code>BepInEx</code> folder into your main SPT folder (where SPT.Server.exe is) Profit</strong></em></p>
+<h3><em><strong><strong>Credits</strong></strong></em></h3>
+<p><em><strong><code>**net.hazelify**</code> on Discord. For support, go to the <a target="_blank" class="external-link" href="https://discord.com/invite/Xn9msqQZan" rel="noreferrer noopener">SPT Discord community</a> and ping me!</strong></em></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.4</h2></div><time datetime="2026-01-11T21:29:00.000000Z">11 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,352 downloads</span><span>12.2 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Changelog</div>
+<div class="tab-content"><ul>
+<li>Fixed the Refresh presets list option not working;
+<ul>
+<li>Once clicked, you have to click away from the BepInEx menu and re-open it</li>
+</ul>
+</li>
+<li>Minor code cleanup</li>
+</ul></div></div></div>
+<hr>
+<p>Please report any bugs you find via the comment section. There may be bugs I have not found yet.</p>
+<ul>
+<li>Describe your problem;
+<ul>
+<li>What you were doing when it occurred;
+<ul>
+<li>How you were trying to do said thing when it occurred.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c80ee24ce4c1eab1b176325d3a71c02a79e72ad643ca9a4271e81b13f29a0906?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/e8b7a8d5-d43a-4332-b804-dd534a0655f5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A31Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.1.4-4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A40Z&amp;ske=2026-08-01T21%3A07%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=t4foee%2B6X4LKvhOSC0yR0ltd402caMECCRz3Ei4%2FVQM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg5OCwibmJmIjoxNzg1NjE1NTk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yHkzvnoACvo0dyLHDu1gussfiKdsRjiZ_QlDcBaYEXA&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.1.4-4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2025-11-19T17:16:00.000000Z">19 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,491 downloads</span><span>11.6 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">Changelog</div>
+<div class="tab-content"><ul>
+<li>
+<p>Merged Active Aim into its own section in the F12 menu;</p>
+</li>
+<li>
+<p>Added Active Aim mode option;</p>
+<ul>
+<li>Choose between <code>toggle</code> or <code>hold</code> mode</li>
+</ul>
+</li>
+</ul></div></div></div>
+<hr>
+<p>Please report any bugs you find via the comment section. There may be bugs I have not found yet.</p>
+<ul>
+<li>Describe your problem;
+<ul>
+<li>What you were doing when it occurred;
+<ul>
+<li>How you were trying to do said thing when it occurred.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/219c2cfc456a376db3a3d6d1e6791c326f210185b57192cc47cf4a790a0e7010?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/ff3bc06f-38bf-4ad7-956d-0464fe05b10b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A09Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.1.3-4.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A03Z&amp;ske=2026-08-01T21%3A19%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ipaCBRE6LmEbqr2Fjs8fdBY15K%2F1dP33xEjIr8xU6DQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg5OSwibmJmIjoxNzg1NjE1NTk5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7e2w7_hLRotEOGAenuv9BVexGfHQfrq2-v-lV9Mfbdg&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.1.3-4.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-18T19:12:00.000000Z">18 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>160 downloads</span><span>11.4 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-3-panel-1" class="tab-panel"><div class="tab-title">Changelog</div>
+<div class="tab-content"><ul>
+<li>Fixed Active Aim, consistent across raids;</li>
+<li>Reverted <code>Automatic weapon detection</code> function to be disabled by default;</li>
+<li><strong>DELETE THE ORIGINAL CONFIG BEFORE INSTALLING!</strong>
+<ul>
+<li>BepInEx &gt; config &gt; <code>hazelify.vco.cfg</code></li>
+</ul>
+</li>
+</ul></div></div></div>
+<hr>
+<p>Please report any bugs you find via the comment section. There may be bugs I have not found yet.</p>
+<ul>
+<li>Describe your problem;
+<ul>
+<li>What you were doing when it occurred;
+<ul>
+<li>How you were trying to do said thing when it occurred.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/84a164696b1ccc21fe9345c672b2490b817537fd0a5613ac2e9dfbf3cc452f83?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/c10f69df-da06-4e7c-a52b-7ed70093701a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A53Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.1.2-4.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A00Z&amp;ske=2026-08-01T21%3A01%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=QLPTqaqqfh7BV3QMq7gfF8TIyGbFkYSbRc%2FWuw1Hyz0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg5OCwibmJmIjoxNzg1NjE1NTk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yHkzvnoACvo0dyLHDu1gussfiKdsRjiZ_QlDcBaYEXA&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.1.2-4.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2025-11-18T02:50:00.000000Z">18 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>138 downloads</span><span>11.4 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-4-panel-1" class="tab-panel"><div class="tab-title">Changelog</div>
+<div class="tab-content"><ul>
+<li>(Hopefully) fixed Active Aim; brief testing in raid worked fine</li>
+</ul></div></div></div>
+<hr>
+<p>Please report any bugs you find via the comment section. There may be bugs I have not found yet.</p>
+<ul>
+<li>Describe your problem;
+<ul>
+<li>What you were doing when it occurred;
+<ul>
+<li>How you were trying to do said thing when it occurred.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ac068f2928e7a9d1612c6de43f22625e4ae83499e43796d42e500063a98276de?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/38e32a46-3013-4b62-8313-163c2aa075f5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A16%3A16Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.1.1-4.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A00Z&amp;ske=2026-08-01T21%3A16%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=h%2BQ5xKbvmCQz%2Ff1sTngzHFy6CAcnl3d2UrxJCrY5pW0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg5OSwibmJmIjoxNzg1NjE1NTk5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7e2w7_hLRotEOGAenuv9BVexGfHQfrq2-v-lV9Mfbdg&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.1.1-4.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-10-20T00:53:00.000000Z">20 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>888 downloads</span><span>11.4 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>Updates!</h3>
+<ul>
+<li>Added <strong>Active Aim</strong> feature; it’s a far cry from Realism’s Active Aim, but it’s mine and and I’m proud.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e5b3ab0068c87dbf7d88b8d65a61523907208b91e174ac005007201f65805f58?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/19ec8f1c-0c08-4476-92a0-c4bc0985fa32?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A43Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.1.0-400.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A03Z&amp;ske=2026-08-01T20%3A56%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=V4JQR49B02UmTwXc9ls0glBkX%2FIhfLNkdzdGW27PruA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTg5OSwibmJmIjoxNzg1NjE1NTk5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7e2w7_hLRotEOGAenuv9BVexGfHQfrq2-v-lV9Mfbdg&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.1.0-400.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.6</h2></div><time datetime="2025-10-20T01:19:00.000000Z">20 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>209 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>Updates!</h3>
+<ul>
+<li>Added <strong>Active Aim</strong> feature; it’s a far cry from Realism’s Active Aim, but it’s mine and and I’m proud.</li>
+<li>Backported to 3.11</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/241f9ef9a99aad6e56a11d8e33ac8c15ed19c452b971ea163495e8679baf0de2?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/1811b57d-42af-4a10-af85-c3cc0268be6e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A26Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.0.6-311.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A43Z&amp;ske=2026-08-01T21%3A11%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rSJ5a6JIBmCjxI7%2FtT%2Fu7kGlSYaw4pJ04TrOduzX2uU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTkxOSwibmJmIjoxNzg1NjE1NjE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YDyXBczMJe6XwCVRNTBD6-NjGJPSsluvcB4ZqiKlJrA&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.0.6-311.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.5</h2></div><time datetime="2025-10-12T02:39:00.000000Z">12 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>434 downloads</span><span>10.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>Updates!</h3>
+<p>VirusTotal: <a target="_blank" class="external-link" href="https://github.com/minihazel/hazelify.VCO/releases/tag/1.0.5-400" rel="noreferrer noopener">Linked on the repo</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b0964c08b39b8c0ea7919718757e929c8f44d8bd5a2887783ae17fb23a26559e?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/dc717c58-4467-4067-91e4-c88a10611807?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A26Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.0.5-400.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A19Z&amp;ske=2026-08-01T21%3A15%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1v7idHB7Nk7p3mIrH88NNMl81K2gLQb4mpjPa2KNZZY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTkxOSwibmJmIjoxNzg1NjE1NjE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YDyXBczMJe6XwCVRNTBD6-NjGJPSsluvcB4ZqiKlJrA&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.0.5-400.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.4</h2></div><time datetime="2025-06-12T21:15:16.000000Z">12 June 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,203 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>Updates!</h3>
+<p>VirusTotal: <a target="_blank" class="external-link" href="https://github.com/minihazel/hazelify.VCO/releases/tag/1.0.4-311" rel="noreferrer noopener">Linked on the repo</a></p>
+<p><strong>Changelog</strong></p>
+<ul>
+<li>Removed interference compatibility between <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/942-fontaine-s-fov-fix/" rel="noreferrer noopener"><strong>FOVFix</strong></a>/<strong><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2749-samswat-s-increasedfov-3-11/" rel="noreferrer noopener">IncreasedFOV</a></strong> and VCO, they should all be able to run simultaneously now</li>
+<li>[WIP] Working on a configurator UI to deal with weapons list and presets.</li>
+</ul>
+<p><strong>Coming soon:</strong></p>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/Hor0UCO.png" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/99b1ded7fa30f3e19b47769b11bdead2cf0e0963b3c609bb939263cb027fffbf.webp" alt="Hor0UCO.png"></a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c424fb7cd89179d5f8e8f2cda644504227b8421926320c53a5900685893e039b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/957272361/175933af-b232-4b7e-a3a8-9e5de9e58417?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A01Z&amp;rscd=attachment%3B+filename%3Dhazelify.VCO-1.0.4-311.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A05Z&amp;ske=2026-08-01T21%3A00%3A01Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=hB8FQs3lT4a3yM7eITKuZZkpPUuEHtWEFrDRKpKOhBY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTkxOSwibmJmIjoxNzg1NjE1NjE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YDyXBczMJe6XwCVRNTBD6-NjGJPSsluvcB4ZqiKlJrA&amp;response-content-disposition=attachment%3B%20filename%3Dhazelify.VCO-1.0.4-311.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.hazelify.vco</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>30 March 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/minihazel/hazelify.VCO" target="_blank" rel="noreferrer noopener">https://github.com/minihazel/hazelify.VCO</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

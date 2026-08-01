@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Fika Discord Presence · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Fika Discord Presence</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/2b8a5206b1ad806b5e251f180eea6831df415c1c5600ea261b61938059b1fc27.png" alt="Fika Discord Presence thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Fika Discord Presence</h1>
+    <p class="hero-teaser">Discord integration for all !</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4c6e9ba2aabd745707986e7924da510131e3f7054492576d4e195237d3dc400a.svg" alt="" width="32" height="32">Fiodor</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>646</dd></div>
+    <div><dt>Favourites</dt><dd>4</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Fika Discord Presence content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1><strong>Fika Discord Presence</strong></h1>
+<p>Displays live Fika server status in Discord using a webhook.
+Shows online players, raid status, activity, and optional Weekly Boss information parsed from SPT logs (compatible with ABPS if installed).</p>
+<hr>
+<h2><strong>Example</strong></h2>
+<p><img loading="lazy" decoding="async" src="../../../assets/b40effad129af6a3339701ae8a1a8272b660b934a227db0ecad5c7141c0b3ec5.webp" alt="Description"></p>
+<hr>
+<h2><strong>Features</strong></h2>
+<ul>
+<li>Live player list from the Fika API</li>
+<li>Raid / out-of-raid activity detection</li>
+<li>Side display (<em>PMC / Scav</em>) during raids.</li>
+<li>Activity duration tracking</li>
+<li>Weekly Boss detection from SPT logs</li>
+<li>Auto-creates and edits a single persistent Discord message</li>
+<li>Live config reload <em>(no restart required for most settings)</em></li>
+<li>Extremely customizable (Icons, colors, weekly boss display, names of categories, refresh rate…)</li>
+</ul>
+<hr>
+<h2><strong>Requirements</strong></h2>
+<ul>
+<li>Fika</li>
+<li>Discord webhook URL</li>
+</ul>
+<hr>
+<h2><strong>Installation</strong></h2>
+<ol>
+<li>Place the mod folder inside your Tarkov install folder.</li>
+<li>Open config.json.</li>
+<li>Insert:
+<ul>
+<li>Discord.WebhookUrl (<a target="_blank" class="external-link" href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks" rel="noreferrer noopener">https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks</a>)</li>
+<li>Fika.ApiKey (Found in SPTInstallFolder\SPT\user\mods\fika-server\assets\configs\fika.jsonc)</li>
+<li>LogFolderPath (X:\Your\Tarkov\Folder\SPT\user\logs\spt)</li>
+</ul>
+</li>
+</ol>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="Archived image"></p>
+<p>Thumbnail by agus raharjo, inverted by me.</p>
+<hr>
+<h1>Disclaimer:</h1>
+<p>After having thought about it for a while I’m going to retire from modding for the time being.</p>
+<p>I’m relying way too much on AI to do most of the heavy work. Whenever I see AI art I can’t stop myself from being disgusted by it and I’ve come to feel the same way about AI mods.
+Hence why I’ve decided to stop modding altogether and dedicate the free time I have to learn C# and Unity.</p>
+<p>The only thing I’ll keep updated will be the per-scope config for PiP-Disabler.</p>
+<p>If anyone wants to maintain my mods they’re free to do so !
+Although PiP-Disabler is an absolute mess and would probably need to be rewritten from the ground up to be maintainable…</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-02-11T10:23:00.000000Z">11 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>588 downloads</span><span>20.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Removed RAM creep due to not disposing of objects before creating new ones + added periodic GC.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2326/project-fika/">Project Fika</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a43de8a7f7412b3521a272ddf122c0a35ee15b5b4c5f46a453009f94486243a7?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1154302194/cc1ea72c-1490-47ab-8505-f1bb6c338a33?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A10Z&amp;rscd=attachment%3B+filename%3DFikaDiscordPresence.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A59Z&amp;ske=2026-08-01T21%3A20%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2F%2BHCDE2RyLBH0wcRpC6sk%2BX1ZVbAWN2a02FiDYfiujg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DFikaDiscordPresence.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-02-10T10:39:00.000000Z">10 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>53 downloads</span><span>20.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added a fallback to standard SPT weekly boss system if no ABPS line is found in the log.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2326/project-fika/">Project Fika</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/72bfd2594b3aa19317c1c27d1aff409573ac59bc61671310675aac59833ec421?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1154302194/6ccfc332-75b9-4442-a831-4eec7ed6cca2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A32Z&amp;rscd=attachment%3B+filename%3DFikaDiscordPresence.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A42Z&amp;ske=2026-08-01T21%3A13%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Im8s3k2FwzyTh0vqOLpERm%2BKi4DvSlYkwz7q8W9M5W4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DFikaDiscordPresence.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-10T09:29:00.000000Z">10 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>5 downloads</span><span>19.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release !</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2097/abps-acids-bot-placement-system/">ABPS - Acid&#39;s Bot Placement System</a></li><li><a href="../../2326/project-fika/">Project Fika</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4a98ef1a5d63db720ee87a26d52804c2be15b5c4be62d3feb562639457088a78/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1154302194/3472ec84-6c1c-4cc6-98ee-78c7c0e3a8f4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A43Z&amp;rscd=attachment%3B+filename%3DFikaDiscordPresence.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A02Z&amp;ske=2026-08-01T21%3A12%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=B%2FO47s53%2FZbc1MNy8%2BbpZNIHsVrFuXwahp9WyLDWEoQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DFikaDiscordPresence.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.fiodor.fikadiscordpresence</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>10 February 2026</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Fiodorwellfme/FikaDiscordPresence" target="_blank" rel="noreferrer noopener">https://github.com/Fiodorwellfme/FikaDiscordPresence</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

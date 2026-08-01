@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Custom First Aid Kits · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Custom First Aid Kits</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f84f427b766264a1bfb515de6272c186900b48e8ee9f1cfd2de44766800726f7.webp" alt="Custom First Aid Kits thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Custom First Aid Kits</h1>
+    <p class="hero-teaser">Makes first aid kits into containers that hold medical items. Traders sell first aid kits that come with supplies included. Make your own IFAKs!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4c44a4d7e5983932ee42aa1ae22be567804c6b7d52815e36a25f5926036b75d7.svg" alt="" width="32" height="32">kyoukopan</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,570</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Custom First Aid Kits content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3>Thanks for your support folks. I do not plan to update this mod further; apologies for any inconvenience or disappointment. Feel free to reupload/fork this if you want</h3>
+<h3>First Aid Kit Changes</h3>
+<p>This server mod aims to make first aid kits a bit more realistic, turning them into containers and optionally replacing the original medkits altogether. You can place bandages, hemostats, splints, injectors, balms, emergency water, and AI-2 in most of them (CAR does not hold hemostats for balance purposes).</p>
+<p>E.g. to use an IFAK, you place bandages &amp; tourniquets inside and carry it with you.</p>
+<p>The custom first aid kits are sold by traders and come with medical items in them. They also sell empty IFAK and AFAK pouches for you to add to your kit.</p>
+<p><strong>Note:</strong> This mod requires the client mod <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2380-traders-sell-bundles/" rel="noreferrer noopener">TradersSellBundles</a>!</p>
+<h3>Healing</h3>
+<p>Whole blood (WB) can be bought from Therapist LL1 or crafted at Medstation level 1. It can be used to heal, since medkits are now just containers. For SPT Realism, you can use WB to heal out of raid and with vanilla SPT you should be able to use it in raid.</p>
+<p>If you have set replaceBaseItems=false (see config section), the original medkits will still be usable to heal with.</p>
+<h3>Installation</h3>
+<p>1. Ensure you have <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2380-traders-sell-bundles/" rel="noreferrer noopener">TradersSellBundles</a></p>
+<p>2. Unzip the *.zip file</p>
+<p>3. Copy/drag the <code>user</code> folder into your SPT directory</p>
+<h3>Config</h3>
+<p>The replaceBaseItems in config.json can be <em>true</em> or <em>false</em>.</p>
+<ul>
+<li>If <em>true</em>, the original medkits will be replaced with the custom ones. If <em>false,</em> the custom medkits will be added as separate items to the game, and the originals will retain their original behavior.</li>
+<li>If <em>true</em>, when bots spawn with medkits, we will try to insert items into them (so you don’t pick up empty medkits off someone you just killed).</li>
+</ul>
+<p>allowInCustomContainers in config.json is an array that you can use to specify any additional modded or vanilla containers that should accept this mod’s items.</p>
+<ul>
+<li>Because the medkits in this mod don’t use the base medical item class, other mods’ medical containers might not accept them without this config. Please make sure to load this after the mod that introduces the containers.</li>
+</ul>
+<h3>Compatibility</h3>
+<p>Mods that I used during testing (should be compatible): SPT Realism, Algorithmic Level Progression, SWAG/DONUTS, SAIN.</p>
+<p>It is highly recommended to use this mod with SPT Realism, as most of my testing is done with Realism. I do test separately with vanilla to try and make sure things work without Realism, but it’s always possible I missed something.</p>
+<p>If you are having issues with Realism, try making sure this loads after Realism.</p>
+<p>When uninstalling this mod, make sure to delete any custom items and try to empty all your medkits of items before uninstalling!</p>
+<h3>Known/Possible Issues</h3>
+<ul>
+<li>(Not implemented) Items are not added to medkits that are found as loot during raids</li>
+<li>(Not implemented) The custom medkits created when replaceBaseItems=false have not been added to bot/world loot tables, so they are not expected to spawn on bots/in raid in this case</li>
+<li>(Possible issue) Because replaceBaseItems=true modifies the original medkit items, there is always a possibility that this can cause bugs</li>
+<li>(Known issue) Dropping a medkit and then using the interaction menu to search the dropped item doesn’t display all the items in the container. Upon picking it up again, you should see all the items. This seems to be an issue that happens with other mods as well that introduce multi-grid containers.</li>
+</ul>
+<h3>Acknowledgements</h3>
+<p>- Whole blood model by <a target="_blank" class="external-link" href="https://sketchfab.com/3d-models/blood-bag-c5d5f9b7a9a84440bb16ca5ce660901c" rel="noreferrer noopener">FLO_wav on Sketchfab</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.1</h2></div><time datetime="2024-10-10T10:23:45.000000Z">10 October 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,744 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/c0649c1cd7854659e4f8b3f8dacd1fdd269857bee7154bacbcd6498cbe49726d?nocache=1" rel="noreferrer noopener">VirusTotal Result</a></p>
+<h3>Hotfixes</h3>
+<ul>
+<li>Text for non-English locales was not displaying properly</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c0649c1cd7854659e4f8b3f8dacd1fdd269857bee7154bacbcd6498cbe49726d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/kyoukopan/CustomFirstAidKits/releases/tag/v0.2.1" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>28 September 2024</dd></div>
+      <div><dt>Updated</dt><dd>13 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/kyoukopan/CustomFirstAidKits" target="_blank" rel="noreferrer noopener">https://github.com/kyoukopan/CustomFirstAidKits</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

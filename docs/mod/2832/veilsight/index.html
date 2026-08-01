@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>VEILSIGHT · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>VEILSIGHT</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/74969938150edc8bc098dba82b3957f9dc0aa0805f7325793cf913c35fe309c9.webp" alt="VEILSIGHT thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>VEILSIGHT</h1>
+    <p class="hero-teaser">Darkness should matter.  VeilSight makes Tarkov&#39;s lighting affect how quickly enemies confirm you as a target.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/68137e316916f75e9eef6a13f6451d8b2f55bd442692968b1d982ac54619c46c.webp" alt="" width="32" height="32">sheriffpowpow_</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,774</dd></div>
+    <div><dt>Favourites</dt><dd>41</dd></div>
+    <div><dt>Mod lists</dt><dd>36</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="VEILSIGHT content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>VEILSIGHT</p>
+<p>Darkness should matter.</p>
+<p>VeilSight makes Tarkov’s lighting affect how quickly enemies confirm you as a target. Stay in shadow and you gain a brief, distance-based detection advantage. Step into strong light or switch on a flashlight and that advantage disappears.</p>
+<p>It is lightweight, predictable, and designed to improve stealth without replacing EFT’s combat AI or making the player invisible.</p>
+<p>FEATURES</p>
+<ul>
+<li>Live exposure based on daylight, darkness, indoor lighting, nearby fixtures, stance, and weapon lights</li>
+<li>A compact amber meter showing your current exposure</li>
+<li>Separate behavior for DIM and DARK conditions</li>
+<li>Distance-scaled delays with guaranteed eventual detection</li>
+<li>Flashlights expose you; lasers do not</li>
+<li>Two straightforward balance presets</li>
+<li>Configurable meter position, size, smoothing, and visibility</li>
+<li>Fail-open safeguards: missing lighting data never grants accidental protection</li>
+</ul>
+<p>BALANCE PRESETS</p>
+<p>Forgiving is the default and provides the full validated stealth effect. It is a good match for easier or slower AI presets.</p>
+<p>Standard shortens the effect by 20% for default or faster AI behavior.</p>
+<p>Both presets stop helping inside 6 metres. VeilSight does not inspect or modify SAIN settings; simply choose the preset that best matches your AI setup.</p>
+<p>EXPOSURE METER</p>
+<p>The meter reads from DARK on the left through DIM to BRIGHT on the right. Its motion is smoothed for readability, but gameplay always uses the latest exposure sample. The meter brightens as your exposure rises and can be moved, resized, or disabled in the configuration.</p>
+<p>INSTALLATION</p>
+<p>Extract the ZIP directly into your main SPT folder. The installed file should be:</p>
+<p>BepInEx/plugins/VeilSight/VeilSight.dll</p>
+<p>Built for SPT 4.0.13. No server-side mod is required.</p>
+<p>CONFIGURATION</p>
+<p>Press F12 in game, open the mod configuration menu, and select VeilSight. Settings can also be edited directly in:</p>
+<p>BepInEx/config/bastudio.veilsight.cfg</p>
+<p>Detailed diagnostics are disabled by default and should only be enabled for troubleshooting or bug reports.</p>
+<p>COMPATIBILITY AND KNOWN LIMITATIONS</p>
+<p>VeilSight was developed and tested in a modded SPT environment including SAIN, Amands’s Graphics, Better Night Skies, Dynamic Maps, Game Panel HUD, and Fontaine’s FOV Fix. HUD overlap can be resolved with the meter position and scale settings.</p>
+<p>Mods that replace the same EFT visibility-confirmation method may conflict. Multiplayer synchronization is outside the scope of version 1.0.0.</p>
+<p>Factory is broadly supported, but some angled ceiling-light shafts are visual effects without a matching physical light signal. VeilSight recognizes their surrounding illumination, but the meter may not react at the exact moment you cross the visible beam. Purely decorative emissive surfaces can have the same limitation when the map provides no corresponding light component.</p>
+<p>Labs, Factory day/night, and Labyrinth receive dedicated handling for their unusual lighting setups.</p>
+<p>TECHNICAL SCOPE</p>
+<p>VeilSight changes only the enemy-to-local-player visibility-confirmation step. It does not replace hearing, searching, aiming, shooting, memory, or general bot behavior. BRIGHT conditions bypass the effect, DIM and DARK use separate capped curves, and stale or invalid exposure data always fails open.</p>
+<p>INSPIRATION</p>
+<p>That’s Lit was an important inspiration for this project. I loved the original mod and have a lot of respect for what it brought to SPT.</p>
+<p>VeilSight is a new, independent implementation built specifically for SPT 4.0.13. It is intended to stand on its own as a performance-conscious replacement for players who want the complete lighting-to-detection experience, rather than an add-on that must run beside the original. Its focused design uses low-frequency sampling, cached scene and weapon lights, one narrow visibility hook, no server component, and no hard dependency on an AI overhaul. That keeps the runtime work small and predictable while still handling the full exposure and delayed-detection loop.</p>
+<p>No code from That’s Lit is included in VeilSight. Apparently, you folks really enjoy lurking in dark corners; Saaame lol.</p>
+<p>LICENSE</p>
+<p>VeilSight was created by Sherrifpowpow and is released under the MIT License. See LICENSE.txt for the full terms.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-07-20T02:14:00.000000Z">20 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,750 downloads</span><span>16.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>The ffirst version’s Zip directory entries had zero attributes and omit two parent-directory records; a stricter extractor can therefore mess up the unpacking.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/e27cc5a53a6d2acb9b0306da147d18923a96a4a774337a0c4afed3f2fe5bed3b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306108331/94c00c4d-203c-4992-a595-b8ce83af9ee3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A29Z&amp;rscd=attachment%3B+filename%3DVeilSight-1.0.1-SPT-4.0.13.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A29Z&amp;ske=2026-08-01T21%3A05%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=URcpEQjHjlk6dR40FKoA9mSKRjV50vX41sWYT%2F9BE%2Fk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2h1_3-famJDS7sPVL6AHgKhhO5EqK_sb_xxQwaKghdY&amp;response-content-disposition=attachment%3B%20filename%3DVeilSight-1.0.1-SPT-4.0.13.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-20T01:30:00.000000Z">20 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>24 downloads</span><span>16.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>first iteration</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/32dee24ec1371910d5bc8ff4865d1ef9fec89edf7eca34f34be3b67f1e5130f5?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306108331/bbbb25b7-118e-4758-a2ce-d9e20256bc05?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A08Z&amp;rscd=attachment%3B+filename%3DVeilSight-1.0.0-SPT-4.0.13.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A04Z&amp;ske=2026-08-01T21%3A17%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=g1QJqTWFAanrOU2%2FSd9QowTJYQQ7kxOGkeRzHAEUqNo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3OCwibmJmIjoxNzg1NjE2MDc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2h1_3-famJDS7sPVL6AHgKhhO5EqK_sb_xxQwaKghdY&amp;response-content-disposition=attachment%3B%20filename%3DVeilSight-1.0.0-SPT-4.0.13.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sherrifpowpow.veilsight</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>20 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Sherrifpowpow/VeilSight/archive/refs/tags/v1.0.0.zip" target="_blank" rel="noreferrer noopener">https://github.com/Sherrifpowpow/VeilSight/archive/refs/tags/v1.0.0.zip</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

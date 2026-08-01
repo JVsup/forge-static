@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Dynamic External Resolution Patch (DERP) · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Dynamic External Resolution Patch (DERP)</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/e6a9a49fd466eaa3660eb96efb4e60e2708866771956d935051e67976791b60a.webp" alt="Dynamic External Resolution Patch (DERP) thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Dynamic External Resolution Patch (DERP)</h1>
+    <p class="hero-teaser">Dynamically change the resolution of the external image rendering when we enter the optical sight, which gives us an increase in frame rate</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Sh1ba</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>20,682</dd></div>
+    <div><dt>Favourites</dt><dd>38</dd></div>
+    <div><dt>Mod lists</dt><dd>72</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Dynamic External Resolution Patch (DERP) content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>What this mod does</h1>
+<p>Escape from Tarkov uses “picture in picture” (PiP) to render weapon scopes. This means the game’s engine has to render the entire scene twice. Once for your main screen and a second time inside the scope’s view. This is very demanding on system performance and often causes significant FPS drops. This mod changes rendering resolution of main screen when using scopes which can boost performance.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/7196a659301b1e843df4a7acc7503ae4c2acda6d5bb96f73a7858f6b0175b98b.webp" alt="Archived image"></p>
+<h1>Installation</h1>
+<p><img loading="lazy" decoding="async" src="../../../assets/e96d5e055187368c9617d5fe238ef111d83ecb9e3d05f613e13e8d8f77a7f21b.webp" alt="Archived image"></p>
+<h1>How to change settings</h1>
+<p>Press F12 in game and find this mod in mode menu.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/8120b2d31a249205fc980f8252c46bced8b2ab0de085b3d050634914992da6e8.webp" alt="Archived image"></p>
+<p>Here you can change settings</p>
+<p>Sampling downgrade changes resolution with TAA enabled(no FSR/DLSS).</p>
+<p>0 - no change
+25 - 75% of default resolution
+50 - 50% of default resolution
+75 - 25% of default resolution
+100 - 0% of default resolution (dont use it)</p>
+<p>50% TAA example</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/8120b2d31a249205fc980f8252c46bced8b2ab0de085b3d050634914992da6e8.webp" alt="Archived image"></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/3eaba12cd862bc0fbde2cf10f370e89b03b09633ef57058010c7b77aed8e3b7d.webp" alt="Archived image"></p>
+<p>80% TAA example</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/1db1619a1dd0344453be53282fe9bbe0706f24e23b72d0f10e9dab2f05d71605.webp" alt="Archived image"></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/927da3a6797c303d7db188914fb616121e30b3405218f0e99d3e7024f57d39f6.webp" alt="Archived image"></p>
+<p>FSR/DLSS settings changes FSR/DLSS preset of external image when scoped. Preset in game settings sets for image in scope.</p>
+<p><strong>Setting this same as your game settings does nothing(this is why black flickers disappear)</strong></p>
+<h1>Known bugs</h1>
+<ol>
+<li>
+<p>Black flickering when ADSing with FSR/DLSS enabled. Dont know how to fix this. Only solution is to use TAA instead of FSR/DLSS. On my PC setup it changes nothing because of CPU bottleneck.</p>
+</li>
+<li>
+<p>Black strips/flickering black screen using TAA. Not so often but can happen. Try changing settings in game and mod menu and it go away.</p>
+</li>
+</ol>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-03-12T02:13:00.000000Z">12 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,570 downloads</span><span>6.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed typo preventing FSR 3 from working with certain mod settings.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9769256242697324062bc3c832a9f49af0c73d0510947eb1bdf94a5d21f9f561" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file-analysis/ZTUwMDVmNmRiZTUwNDAwMDliOWQxMmUxZmUyNTA1MTg6MTc3MzI4MTQ3Ng==" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1007720366/aff27256-5c93-4e55-9173-67c1396f0e88?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A05Z&amp;rscd=attachment%3B+filename%3DDynamic-External-Resolution-1.1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A35Z&amp;ske=2026-08-01T21%3A05%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=JykHMFB%2BvDh6%2Fi0qDGjnWPO%2FjOgQY%2F6dUPsChF48spM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk4NSwibmJmIjoxNzg1NjE1Njg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Li7UmFMTOaughKwSR-HYx_YixgAupP5N3KciYSu_KmY&amp;response-content-disposition=attachment%3B%20filename%3DDynamic-External-Resolution-1.1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-11-12T18:58:00.000000Z">12 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>7,494 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Seems to work unchanged on 4.0.4. Probably works on any 4.X.X</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/2d9798be981a754ec40e15bba3645bc586883ebae775578dbf5025be4a7449d9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/Shibatsui/SPT-Dynamic-External-Resolution/releases/tag/3.11" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-06-24T13:14:41.000000Z">24 June 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,618 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/7f03471b7dd0ebb117e2b2caf94e5a6d3f23febca669ec077c691663093d17ed?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/Shibatsui/SPT-Dynamic-External-Resolution/releases/tag/3.11" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.shibatsu.dynamicexternalresolution</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>24 June 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Shibatsui/SPT-Dynamic-External-Resolution/releases/tag/3.11" target="_blank" rel="noreferrer noopener">https://github.com/Shibatsui/SPT-Dynamic-External-Resolution/releases/tag/3.11</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

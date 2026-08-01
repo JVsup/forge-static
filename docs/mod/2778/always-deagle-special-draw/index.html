@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Always Deagle Special Draw · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Always Deagle Special Draw</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/11d90235a689b91ca1619a00af9b34d9120951c7aadd6e97934e3a7c8ef5978c.webp" alt="Always Deagle Special Draw thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Always Deagle Special Draw</h1>
+    <p class="hero-teaser">Always triggers the special Desert Eagle spin animation when drawing the weapon.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/88497395e964f1db99e227efd9e8e7c5cc70b3202282c482f7a2ae4d8b2b772c.webp" alt="" width="32" height="32">vastth</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>956</dd></div>
+    <div><dt>Favourites</dt><dd>6</dd></div>
+    <div><dt>Mod lists</dt><dd>14</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Always Deagle Special Draw content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Always Deagle Special Draw</h1>
+<p><img loading="lazy" decoding="async" src="../../../assets/52b106f6e73f27b2f969b11c01ab39a48e7640842be1bdecd84a013f7f9ca11f.webp" alt="Always Deagle Special Draw Preview"></p>
+<p><strong>Always Deagle Special Draw</strong> is a lightweight BepInEx client-side plugin that triggers the Desert Eagle’s special spinning draw animation every time you switch to it.</p>
+<p>By default, <em>Escape from Tarkov</em> only plays the Desert Eagle’s special draw animation under specific internal conditions. This mod changes that behavior, making the stylish spin animation consistent and predictable: whenever you equip or switch to a Desert Eagle, the special draw animation will play automatically.</p>
+<h2>What This Mod Does</h2>
+<p>This mod forces the Desert Eagle to use its special spinning draw animation when the weapon is drawn.</p>
+<p>In simple terms:</p>
+<ul>
+<li>Draw the Desert Eagle → special spinning animation plays</li>
+<li>No mastery requirement</li>
+</ul>
+<p>The goal of this mod is purely visual and stylistic. It does not add any new weapons, change weapon stats, or rebalance the Desert Eagle.</p>
+<h2>Features</h2>
+<ul>
+<li>Always triggers the Desert Eagle’s special draw animation</li>
+<li>Does not change weapon damage, recoil, ergonomics, durability, ammo, or ballistics</li>
+<li>Designed only to affect the Desert Eagle’s draw behavior</li>
+<li>Includes protection logic for empty-chamber and empty-weapon draw states</li>
+<li>Configurable through the BepInEx config file</li>
+</ul>
+<h2>Why Use This Mod?</h2>
+<p>The Desert Eagle has one of the most recognizable and stylish special draw animations in the game, but its original trigger conditions are restrictive and inconsistent.</p>
+<p>This mod makes the animation reliable.</p>
+<p>If you want the Desert Eagle to look more stylish every time you pull it out, this mod does exactly that.</p>
+<h2>Installation</h2>
+<p>Extract the downloaded archive directly into your SPT game root folder.</p>
+<p>The final file path should look like this:</p>
+<p>BepInEx/plugins/AlwaysDeagleSpecialDraw.dll</p>
+<p>For example, if your game is installed at:</p>
+<p>D:/SPT/</p>
+<p>then the plugin should be located at:</p>
+<p>D:/SPT/BepInEx/plugins/AlwaysDeagleSpecialDraw.dll</p>
+<h2>Configuration Notes</h2>
+<h3>Preserve Empty Chamber Magazine Draw</h3>
+<p>When the Desert Eagle’s chamber is empty but the installed magazine contains ammo, the original chambering behavior is preserved.</p>
+<p>This helps avoid forcing the spin animation in situations where the game should naturally play a chambering-related draw animation.</p>
+<h3>Preserve Empty Weapon Draw State</h3>
+<p>When the chamber is empty and there is no positive ammo signal from the magazine, the original empty-weapon animation state is preserved.</p>
+<p>This helps protect animation behavior related to slide-lock, empty magazines, and reloading.</p>
+<h3>Restore Weapon Level After Chambering Delay</h3>
+<p>Controls how long the plugin waits before restoring the weapon animation level after an empty-chamber draw.</p>
+<p>This is mainly used to avoid interfering with later reload animations.</p>
+<h2>Compatibility</h2>
+<p>This is a client-side BepInEx plugin.</p>
+<p>It is intended to be installed on the game client where you want the Desert Eagle special draw animation behavior to apply.</p>
+<p>This mod should not affect server-side progression, inventory, traders, quests, AI, loot, or weapon balancing.</p>
+<p>For Fika or co-op setups, install it on the client where the visual draw behavior is needed.</p>
+<h2>Known Notes</h2>
+<p>The mod includes safeguards for empty-chamber and empty-weapon states, but animation behavior may still vary depending on weapon state, magazine state, and other animation-related mods.</p>
+<p>If you use other mods that patch weapon animations, reload logic, or firearm controller behavior, please test compatibility in your own setup.</p>
+<h2>Credits</h2>
+<p>Created for players who want the Desert Eagle to always feel as stylish as it looks.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-06-27T02:47:00.000000Z">27 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>981 downloads</span><span>6.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed the issue where the Desert Eagle would jam when quickly reloading with an empty magazine!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/14b886b7e33d2c5692ef83ec86e43835ca58608e3495193e3fd3282a1b00787d/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1281510541/e86e111b-3299-44c7-b4ff-5f3e9eb00caa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A34%3A35Z&amp;rscd=attachment%3B+filename%3DAlwaysDeagleSpecialDraw-1.0.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A33%3A48Z&amp;ske=2026-08-01T20%3A34%3A35Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZSWT%2FGXPFv0ORtgPW2C3MmbC9ivLMTf0IckDGuJhQ2M%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzIyMiwibmJmIjoxNzg1NjEyOTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HCn3JoGd8Mcb0YbvF3Bi9bWbHPHFGXs_l2wWXF6NIog&amp;response-content-disposition=attachment%3B%20filename%3DAlwaysDeagleSpecialDraw-1.0.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vastth.deaglespindraw</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/vastth/Deagle-Spin-Always" target="_blank" rel="noreferrer noopener">https://github.com/vastth/Deagle-Spin-Always</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

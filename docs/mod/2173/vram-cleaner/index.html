@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>VRAM Cleaner · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>VRAM Cleaner</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/3f128dfa413a58a2aafafc8fb09a9f46c2c7913e78f6234e7115f4b992830e23.webp" alt="VRAM Cleaner thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>VRAM Cleaner</h1>
+    <p class="hero-teaser">Clears up unused assets after raid start timer finishes</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>80,861</dd></div>
+    <div><dt>Favourites</dt><dd>115</dd></div>
+    <div><dt>Mod lists</dt><dd>235</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="VRAM Cleaner content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>NOTE: I just want to dispel some misinformation that gets tossed around about this mod. First, I mention in this description that I’m not sure if it causes issues with other mods, so far I have never experienced a single issue. Second, there is no reason NOT to install this mod, it only does good, less VRAM usage = good. And third, this doesn’t just remove pre-allocation. Unity on DX11 doesn’t reserve a fixed VRAM pool. Tarkov’s VRAM stats with the fps 3 command, I’m 99% sure is not accurate, check task manager to see actual VRAM usage.</strong></p>
+<p>Have you ever wanted to play SPT at 12k resolution but your VRAM keeps maxing out?</p>
+<p>Well, now you can! No not really, but this mod should help clear up about 1-2GB of VRAM. There will be a small lag spike right after the start raid countdown finishes, this only happens once at the start of each raid.</p>
+<p>This mod unloads unused assets such as textures, meshes, and audio and as a result, clears up a chunk of VRAM.</p>
+<p>After testing, I haven’t noticed any negative side effects from this, I also can’t confirm if it’ll cause issues for other mods that load any assets like textures/models. If anyone does notice any negative side effects let me know what it breaks and I’ll add a list here for what it’s not compatible with. It should definitely work with base SPT and other just general non-asset related mods.</p>
+<p>I’ve made this mainly for the SPT VR mod I’m working on because VRAM usage can get pretty insane on there, figured it’d be better as a mod on its own though because I tested it on flat screen and found it clears up a good amount of VRAM even on there. Check out SPTVR - <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2419-spt-vr/" rel="noreferrer noopener">SPT-VR  </a></p>
+
+<p><strong>Compatibility:</strong></p>
+<p><strong>This may have compatibility issues with the declutter mod</strong></p>
+<p>Install instructions:</p>
+<ol>
+<li>Move Bepinex folder into your SPT folder</li>
+<li><strong>Don’t</strong> install onto a fika headless client</li>
+</ol>
+<p>Support me on ko-fi <a target="_blank" class="external-link" href="https://ko-fi.com/matsix" rel="noreferrer noopener">https://ko-fi.com/matsix</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2025-10-26T17:45:00.000000Z">26 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>54,099 downloads</span><span>3.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Small update:</p>
+<ul>
+<li>Updated GUID to follow SPT 4.0.1 mod upload standards</li>
+</ul>
+<p>No other changes at all, mod worked for 4.0 already</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/315565b52a4609acb3350fca3e84ae564a569ab6091979858ffe310132027988/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/998035688/46d81cb9-a7e0-47a2-8dc7-3e391a0666a4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A53Z&amp;rscd=attachment%3B+filename%3DSPTVRAMCleaner-v1.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A27Z&amp;ske=2026-08-01T21%3A13%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=MANp7YAeqm8JoPHcJM3CvjoLm2puyJ82%2BTFdu7JcQXg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk3NywibmJmIjoxNzg1NjE1Njc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VElkddRwoobXjUxHkab5pdHxS4wi3JE640dnzDGQHTQ&amp;response-content-disposition=attachment%3B%20filename%3DSPTVRAMCleaner-v1.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2025-06-13T18:04:13.000000Z">13 June 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>22,756 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Hotfix:</p>
+<ul>
+<li>Added a check to see if the cleaner ran at the start of the raid and avoid any calls to run it again during raid (this is just for compatibility sake with other mods if there’s any UI mods that call EFT.UI.PreloaderUI.ShowRaidStartInfo regularly)</li>
+</ul>
+<p>Also, just want to explain something about this. I know someone in the comments mentioned that EFT allocates VRAM so this mod could functionally be doing nothing. I’m not so sure about that though, something weird is going on. When you use the fps 3 command to view VRAM usage, you’ll notice, none of the VRAM usage numbers in there change with this mod installed vs not installed. Despite that, VRAM usage still shows a considerable drop in windows task manager. I have no idea what’s going on here but it doesn’t seem to break anything so it could be BSG not handling VRAM allocation right or something weird is going on with the fps 3 command monitor.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/61677fdc97d0050a35a1a07be4f7fd8c3d619a3fe7bc699c794589558e99ba41?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/matsixx/SPTVRAMCleaner/releases/tag/v1.0.2" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.matsix.sptvramcleaner</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 June 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/matsixx/SPTVRAMCleaner" target="_blank" rel="noreferrer noopener">https://github.com/matsixx/SPTVRAMCleaner</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

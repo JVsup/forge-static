@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Blackout · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Blackout</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/c8cf56eb88c1d9eb2f4259bf9baa20a9f8df623acda02370308735cd10967fc3.webp" alt="Blackout thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Blackout</h1>
+    <p class="hero-teaser">Recreates the live EFT Blackout event on Labs. The power dies, the facility goes dark, and you take on the Wedge and his Black Division guards by flashlight. Real darkness, extract lockdown, keypad code doors, and a boss with his live MP7 loadout.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/cbb2be3b13f4d7256c1d5f6dc10af5cbb030b667d0c3971ccac2a3dcf19dc134.webp" alt="" width="32" height="32">Vultify</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>6,072</dd></div>
+    <div><dt>Favourites</dt><dd>42</dd></div>
+    <div><dt>Mod lists</dt><dd>33</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Blackout content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>1</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><p>Recreates the live EFT “Blackout” event on Labs. Seconds into the raid the generators die, the lights go out, and you run the facility on emergency power while the Wedge and his Black Division hold the floors.</p>
+<p>Configure event roll chance in the config.json</p>
+<h3>The blackout</h3>
+<ul>
+<li>Darkness Done in my own image. BSGs version and settings for darkness were unobtainable (by me at least)</li>
+<li>The live event’s power-cut sound and intercom announcement through the map’s own PA speakers</li>
+<li>Amber emergency floods at the real event positions, keycard LEDs stay lit like live keeps them</li>
+<li>Extract lockdown: only the two gates are live, and one press of the Arsenal Storage Room switch opens both</li>
+<li>Keycard doors take a fresh 4-digit code each raid instead of swipes, written on the admin office whiteboard in the event’s own marker digits</li>
+</ul>
+<h3>Wedge and Black Division Guards</h3>
+<ul>
+<li>The Wedge holds Labs every raid with 4-5 Black Division Guards, no waves, our own bot types</li>
+<li>He and his guards are friendly toward WTT’s separate Black Division mod, so you can run both</li>
+<li>His real live loadout: the MP7A1 “Wedge” preset with the suppressor always on, his own face, clothing and voice lines from the live files, the M53A1 gas mask, EXFIL helmet and LV-119 Icebreaker</li>
+<li>SAIN runs their combat when installed (the Wedge under Bosses at boss grade, his guards under their own “Black Division” tab at raider grade)</li>
+<li>The Wedge always carries the TerraGroup Labs arsenal storage room key - single use, and the door can’t be breached. Killing him is the way in</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Recommended</div>
+<div class="tab-content"><p>-WTT Black Divsion: Set <code>LabsStartchance</code> to 100 and <code>LabsGateChance</code> to 100</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Install Instructions</div>
+<div class="tab-content"><ol>
+<li>Extract the archive</li>
+<li>Drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root directory</li>
+<li>Requires WTT-CommonLib, WTT-ContentBackport, and MoreBotsAPI (client + server halves). SAIN recommended.</li>
+<li>Load into Labs</li>
+</ol></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Known Limitations / Bugs</div>
+<div class="tab-content"><ul>
+<li>Should be compatible with the Wedge Mod. Mine controls labs and his every other map. we compared factions, enum values and everything to make sure they don’t conflict for now.</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><p>Found a bug or have a question? Leave a comment here, or reach out in my thread on the SPT Discord: <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1521972310595338260" rel="noreferrer noopener">https://discord.com/channels/875684761291599922/1521972310595338260</a></p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.1</h2></div><time datetime="2026-07-30T00:29:00.000000Z">30 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,680 downloads</span><span>5.9 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>Fixed</h2>
+<p><strong>The server room racks no longer disappear when the lights cut.</strong> Labs’ light scene holds solid props as well as light fixtures.</p>
+<h2>Changed</h2>
+<p><code>blackoutChance</code> is re-read before every roll instead of only when the server starts, so editing <code>config.json</code> no longer needs a server restart. One thing to know about the timing: the roll for your next raid is made when your current one ends, so an edit while you are in a raid applies to the very next one, and an edit made in the menu applies to the one after that.</p>
+<h2>Install</h2>
+<p>Extract and drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root. The archive layout has not changed, so install straight over the top of 2.1.0 without deleting anything first.</p>
+<h2>Co-op</h2>
+<p>The <strong>Blackout Fika</strong> addon is unchanged and does not need updating. It requires Blackout 2.1.0 or newer, so 2.1.1 covers it.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7ac368bf1a7ae723bda9470f587e4b67244963e9e65164bdd70bd1975245de6a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306069981/f64d694b-3dac-4787-897d-9a83a1010f5c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A36%3A26Z&amp;rscd=attachment%3B+filename%3DBlackout_2.1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A36%3A06Z&amp;ske=2026-08-01T20%3A36%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=QiJVzx8L%2BJT%2FqlS%2FtAGa1dJEmKn8k2JY3trNm1tmz58%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&amp;response-content-disposition=attachment%3B%20filename%3DBlackout_2.1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-07-28T23:39:00.000000Z">28 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>924 downloads</span><span>5.9 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>Fika co-op support</h2>
+<p>Blackout now runs the same for everyone in a Fika raid. The lights cut for the whole group at once, the admin office switch opens the gates for every player instead of only the one who pulled it, and a keycard door someone else opens with the emergency code is open for you too.</p>
+<h3>Which downloads do I need?</h3>
+<p><strong>Playing with Fika:</strong> this version <strong>plus</strong> the separate <strong>Blackout Fika</strong> addon, under the Addons tab on this page. Both are needed. The addon is a single file and there is nothing to configure. It requires Blackout 2.1.0 or newer, so update the mod first.</p>
+<p><strong>Playing solo:</strong> just this version, and you are done. Everything above sits inactive without the addon, so nothing about your raids changes. It is worth updating anyway, since it is what makes co-op possible if you ever want to run the event with friends later.</p>
+<h2>Also in this version</h2>
+<ul>
+<li>The emergency code is rolled by the server instead of by each player, so everyone in a raid reads the same four digits off the same whiteboard</li>
+<li>The server log is down to two lines instead of six. A clean start is quiet now, and each raid gets one line saying whether it rolled a blackout</li>
+<li>The F12 menu is gone. <code>blackoutChance</code> in <code>config.json</code> already did the same job, and setting it to 0 switches the event off entirely</li>
+</ul>
+<h2>Install</h2>
+<p>Extract and drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root. The archive layout has not changed since 2.0.0, so you can install straight over the top without deleting anything first.</p>
+<h2>Requirements</h2>
+<ul>
+<li>SPT 4.0.x</li>
+<li>WTT-CommonLib 2.0.22 or newer, both halves</li>
+<li>WTT-ContentBackport 1.1.0 or newer, both halves</li>
+<li>MoreBotsAPI, both halves</li>
+<li>Fika only if you want co-op, and only with the addon</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7996a5eaf3b7d92cd1659469eaaf334160b3d8fd312a3fe77d4910c53492ade8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306069981/c27e0d05-9821-4ab6-ac96-f5336ecb1434?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A24%3A53Z&amp;rscd=attachment%3B+filename%3DBlackout_2.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A24%3A46Z&amp;ske=2026-08-01T20%3A24%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eurmADHcUjFILF4xrK4Wjt8qfOx5hv1UhgBp4ksG8Vw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&amp;response-content-disposition=attachment%3B%20filename%3DBlackout_2.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-07-25T22:36:00.000000Z">25 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>2,334 downloads</span><span>5.9 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>Dependencies changed</h2>
+<ul>
+<li><strong>WTT-ContentBackport 1.1.0 or newer</strong> (both halves, server and client)</li>
+<li><strong>WTT-CommonLib 2.0.22 or newer</strong> (both halves)</li>
+</ul>
+<p>Content Backport 1.1.0 backported the same live items Blackout was shipping: the MP7 ARS adapter and FX-KPOS stock, the SF3P flash hider, the ComTac VI, the EXFIL helmets and the Wedge cover, the LV-119, and Wedge’s face, clothing and voicelines. Two mods adding the same things meant duplicate items in the handbook and a stack of errors on every server start. Blackout now points at theirs, so there is one copy of everything and it stays in sync with whatever they ship.</p>
+<h2>Removed</h2>
+<ul>
+<li>Every asset bundle. The download went from about 61 MB to under 6 MB</li>
+<li>Wedge’s gear items, his clothing, his head and his voice, all of which Content Backport provides now</li>
+<li>The custom black Team Wendy helmet that only existed to hold the helmet cover. Content Backport adds the cover slot to the normal black one, so it earns its keep no more</li>
+</ul>
+<h2>Updating from 1.1.0 or older</h2>
+<p><strong>Delete both of these folders before you extract:</strong></p>
+<ul>
+<li><code>BepInEx/plugins/Blackout</code></li>
+<li><code>SPT/user/mods/Blackout</code></li>
+</ul>
+<p>Then drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root as usual.</p>
+<p>This matters more than it normally would. 2.0.0 ships no bundles at all, so installing over the top leaves roughly 60 MB of old bundle files behind, and those now fight with Content Backport’s copies of the same assets. Deleting first is the whole fix.</p>
+<p>Fresh installs can ignore all of that and just extract.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ddf1d85bd41831e6d5d8ee98a493417ae5881a4863ffb3c8944f3ae7b02178d9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306069981/f0150ebf-8915-4db7-83f9-afd5ec58e58b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A28%3A11Z&amp;rscd=attachment%3B+filename%3DBlackout_2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A28%3A07Z&amp;ske=2026-08-01T20%3A28%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rLsyMTfZ6Q4Bv0bXbOqNSUA8z9V4fc8zF5blIOnREwk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&amp;response-content-disposition=attachment%3B%20filename%3DBlackout_2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-07-25T20:35:00.000000Z">25 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>232 downloads</span><span>60.9 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>Added</h2>
+<ul>
+<li>The blackout is a per raid roll now instead of firing on every Labs run, so you never know which one goes dark until the lights cut. 25% by default. Set <code>blackoutChance</code> in <code>SPT/user/mods/Blackout/config.json</code> to change it, or put it to 100 if you want the old behaviour back</li>
+</ul>
+<h2>Changed</h2>
+<ul>
+<li>The LV-119’s soft armor inserts are built in and can no longer be left out, the same as every other armor in the game</li>
+</ul>
+<h2>Fixed</h2>
+<ul>
+<li>The Wedge’s armor was spawning with their plates but no soft armor, so he was taking full damage anywhere the plates didn’t cover. He gets his inserts now</li>
+<li>The vehicles at the hangar and parking gates were disappearing the moment the lights went out, collision and all, so you could walk straight through where a car was parked. They stay put now, and they still stop bullets</li>
+</ul>
+<h2>Updating</h2>
+<p>Extract and drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root, straight over the top of 1.0.0. Nothing was renamed or moved, so there is nothing to delete first. The only new file is <code>config.json</code>.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/05040f11f01dd0ef4d294a0ae6370042291796e4037fd0f640657f6f7617f673?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306069981/6f9425e4-1f80-4978-88c2-25a00a8afbdc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A13%3A59Z&amp;rscd=attachment%3B+filename%3DBlackout_1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A13%3A38Z&amp;ske=2026-08-01T20%3A13%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=LHbBXlGtX%2BK4DWK7QiogmXmwq0U3SYECOlTdVAR8Icw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTAyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OQt1K7AYOL-II3ZAIB1R_aJ3_GLfFFKpEQ40_1THtkc&amp;response-content-disposition=attachment%3B%20filename%3DBlackout_1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-25T06:35:00.000000Z">25 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>902 downloads</span><span>60.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>-Initial Release</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d8240db57ad36df38ec8afbc0b99323b6c70c7b8cc114b00bbd06c81e4916585/details" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1306069981/921cc2f3-0f4b-43c4-a87c-8575644d5f1f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A26%3A53Z&amp;rscd=attachment%3B+filename%3DBlackout_1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A26%3A51Z&amp;ske=2026-08-01T20%3A26%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=gltbae7Me7D6b2KPbuNGbIIvUvGHYKcS27L%2FiA5XvX8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTAyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OQt1K7AYOL-II3ZAIB1R_aJ3_GLfFFKpEQ40_1THtkc&amp;response-content-disposition=attachment%3B%20filename%3DBlackout_1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="blackout - fika patch"
+  data-search="blackout - fika patch makes blackout fika compatible  vultify"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="265"
+  data-updated="2026-07-29T06:02:18.000000Z">
+  <a class="card-image" href="../../../addon/95/blackout-fika-patch/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/c8cf56eb88c1d9eb2f4259bf9baa20a9f8df623acda02370308735cd10967fc3.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/95/blackout-fika-patch/">Blackout - Fika Patch</a></h2>
+    <p class="teaser">Makes Blackout Fika compatible </p>
+    <div class="card-meta">
+      <span>by Vultify</span>
+      <span>265 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vultify.blackout</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>25 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>30 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Vultify/Blackout" target="_blank" rel="noreferrer noopener">https://github.com/Vultify/Blackout</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>Ai was used to make the mod picture.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Mission Control · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Mission Control</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/cc5a08dcd1ab0fd6def7c311da3b6b55a39c12eca3a228778ba57fb0e6eaeaa8.webp" alt="Mission Control thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Mission Control</h1>
+    <p class="hero-teaser">Limits visible quests to a configurable number of random slots. Reroll anytime at Prapor.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/032e8eb1dc5bfb128bea205be7fad106914be43e0f5f7e1dc8fbe3aa5304e167.webp" alt="" width="32" height="32">Chazut</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>865</dd></div>
+    <div><dt>Favourites</dt><dd>1</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Mission Control content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><p>Tarkov has hundreds of quests. Even without mods, the quest list quickly becomes overwhelming — you don’t know what to prioritize, which weapon to bring, or which map to play.</p>
+<p><strong>MissionControl picks 3 random quests from the ones you’ve unlocked and hides the rest.</strong> Complete one, a new one appears from your unlocked pool. Stuck? Buy a reroll at Prapor to get fresh picks.</p>
+<blockquote>
+<p><strong>By default, only vanilla quests are filtered.</strong> Modded quests are always visible and don’t consume slots. You can change this in the config.</p>
+</blockquote>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>Only <strong>3 quests visible</strong> at a time, randomly picked from your unlocked quests</li>
+<li>Complete a quest → a new random one appears instantly</li>
+<li><strong>Reroll at Prapor</strong> — buy the Mission Reroll item to get 3 fresh picks. Stuck quests stay visible but stop consuming slots</li>
+<li><strong>Trader whitelist</strong> — some traders’ quests are always visible (configurable by name)</li>
+<li>Per-profile persistence across server restarts</li>
+<li>Safe for existing profiles — remove the mod and all quests come back</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>Extract the zip in your SPT root folder:</p>
+<blockquote>
+<p>The client plugin handles quest list refresh after completing a quest and after purchasing a reroll.</p>
+</blockquote></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><p>Edit <code>SPT/user/mods/MissionControl/config/config.jsonc</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_slots</code></td>
+<td><code>3</code></td>
+<td>How many quests you see at once (in-progress + available)</td>
+</tr>
+<tr>
+<td><code>filter_modded_quests</code></td>
+<td><code>false</code></td>
+<td>Only vanilla quests are filtered. Set to <code>true</code> to also filter modded quests</td>
+</tr>
+<tr>
+<td><code>trader_whitelist</code></td>
+<td><code>["Kolya", "Guiding Light"]</code></td>
+<td>These traders’ quests are always visible (case-insensitive, works with modded traders)</td>
+</tr>
+<tr>
+<td><code>reroll_cost</code></td>
+<td><code>50000</code></td>
+<td>Rouble price for the Mission Reroll item at Prapor</td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td><code>false</code></td>
+<td>Verbose server logging</td>
+</tr>
+<tr>
+<td><code>debug_refresh</code></td>
+<td><code>false</code></td>
+<td>Clear all saved selections on server start (dev only)</td>
+</tr>
+</tbody>
+</table>
+<p>If a trader name in the whitelist is not found, the server log will list all available trader names.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Reroll</div>
+<div class="tab-content"><p>Buy the <strong>“Mission Reroll”</strong> item at <strong>Prapor</strong> (Loyalty Level 1, 50,000₽ by default).</p>
+<p><strong>What happens:</strong></p>
+<ol>
+<li>Your current in-progress quests become <strong>exempt</strong> — they stay visible but stop counting toward the slot limit</li>
+<li>3 fresh random quests are picked from your unlocked pool</li>
+<li>The game reloads your profile automatically</li>
+</ol>
+<p><strong>Why?</strong> If you’re stuck on 3 difficult quests and can’t progress, the reroll lets you get new ones without abandoning the old ones. You temporarily have more than 3 active quests until you finish the old ones.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">How It Works</div>
+<div class="tab-content"><p><strong>Install → play. That’s it.</strong></p>
+<p>From all the quests you’ve unlocked (met the level/prerequisite requirements), MissionControl randomly picks a few and hides the rest. The selection is persistent — you see the same quests until you complete them or buy a reroll.</p>
+<p><strong>Quest slots:</strong></p>
+<ul>
+<li>You have 3 slots (configurable). In-progress and available quests both count</li>
+<li>0 quests accepted → 3 random available quests shown</li>
+<li>1 quest accepted → 2 random available quests shown</li>
+<li>3 quests accepted → no new quests shown until you complete some</li>
+<li>Complete a quest → a new random one fills the slot immediately</li>
+<li>Failed quests stay in their slot (restart from the UI)</li>
+</ul>
+<p><strong>After a reroll:</strong></p>
+<ul>
+<li>Old in-progress quests stop counting toward slots (they’re “exempt”)</li>
+<li>3 new quests fill your slots</li>
+<li>Finishing an exempt quest → it disappears, no new slot opens</li>
+<li>Finishing a new quest → a fresh random one takes its place</li>
+</ul>
+<p><strong>Modded quests (default behavior):</strong></p>
+<ul>
+<li>Modded quests are always visible and never consume slots</li>
+<li>Only vanilla quests are subject to the slot limit</li>
+<li>Change this with <code>filter_modded_quests: true</code></li>
+</ul>
+<p><strong>Nothing is permanent.</strong> Remove the mod and all quests return to normal. Safe for existing profiles.</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><ul>
+<li><strong>SPT 4.0.x</strong></li>
+<li>Works with <strong>any quest mod</strong> — modded quests are detected automatically</li>
+<li>Works with <strong>custom traders</strong> — whitelist by name</li>
+<li>Safe for <strong>existing profiles</strong> — if you have more quests accepted than <code>max_slots</code>, no new quests are shown until you drop below the limit</li>
+</ul></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Issues</div>
+<div class="tab-content"><p>Report them on <a target="_blank" class="external-link" href="https://github.com/Chazut/MissionControl/issues" rel="noreferrer noopener">GitHub</a>.</p></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><p>If you enjoy MissionControl and want to support my work, feel free to buy me a coffee!</p>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/chazut" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/27dab3ba29fe5097be450545c46ec7f97796db7e8d3bbdff6c8d05a64ef678e0.svg" alt="ko-fi"></a></p>
+<p>All my mods are free and open source. Your support keeps me motivated to create more!</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-04-13T10:00:00.000000Z">13 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>652 downloads</span><span>26.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Change</h2>
+<ul>
+<li><strong>Jaeger unlock chain always visible</strong> — Saving the Mole → Gunsmith Part 1 → Introduction are never filtered, so you can’t get locked out of Jaeger.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/45b1c0e73c6a6c6b47cb90102b55507b24ae3762554583fcc7d32a387d29ea76?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1199640770/d30b4657-bda0-42e6-a22c-ec19398daeec?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A58Z&amp;rscd=attachment%3B+filename%3DMissionControl-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A55Z&amp;ske=2026-08-01T21%3A01%3A58Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=FO6jeJ9S35aSvUmA1l5zBLrrDAR3jNp624G4KWdrHcw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&amp;response-content-disposition=attachment%3B%20filename%3DMissionControl-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-04-02T23:00:00.000000Z">2 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>218 downloads</span><span>26.7 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>MissionControl v1.0.0 — Focus your quests</h1>
+<p>Too many quests? MissionControl limits your quest list to just <strong>3 quests at a time</strong>, randomly picked from the ones you’ve already unlocked. Complete one, a new one appears. Simple.</p>
+<blockquote>
+<p>By default, only vanilla quests are filtered. Modded quests remain fully visible.</p>
+</blockquote>
+<h2>How it works</h2>
+<ul>
+<li>From all the quests you’ve unlocked, only <strong>3 are shown</strong> at a time (configurable)</li>
+<li>Complete a quest → a new random one is picked from your remaining unlocked quests</li>
+<li>Accepted quests count toward the limit — if you have 3 active, no new ones appear until you finish some</li>
+<li>Failed quests stay in their slot so you can restart them</li>
+</ul>
+<h2>Reroll</h2>
+<p>Stuck on difficult quests? Buy the <strong>Mission Reroll</strong> item at <strong>Prapor</strong> (50,000₽ by default).</p>
+<ul>
+<li>Your current in-progress quests stay visible but <strong>stop counting</strong> toward the slot limit</li>
+<li>3 fresh random quests are picked from your unlocked quests</li>
+<li>Once you finish the old ones, you’re back to the normal 3-slot flow</li>
+</ul>
+<h2>Configuration highlights</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_slots</code></td>
+<td><code>3</code></td>
+<td>How many quests you see at once</td>
+</tr>
+<tr>
+<td><code>filter_modded_quests</code></td>
+<td><code>false</code></td>
+<td>Set to <code>true</code> to also filter modded quests</td>
+</tr>
+<tr>
+<td><code>trader_whitelist</code></td>
+<td><code>["Kolya", "Guiding Light"]</code></td>
+<td>These traders’ quests are always visible</td>
+</tr>
+<tr>
+<td><code>reroll_cost</code></td>
+<td><code>50000</code></td>
+<td>Rouble price for the reroll item</td>
+</tr>
+</tbody>
+</table>
+<p>Edit <code>SPT/user/mods/MissionControl/config/config.jsonc</code> to customize.</p>
+<h2>Installation</h2>
+<p>Extract the zip into your SPT root folder. Both the server mod and client plugin are included.</p>
+<p><strong>Requires both:</strong></p>
+<ul>
+<li><code>SPT/user/mods/MissionControl/</code> — server mod</li>
+<li><code>BepInEx/plugins/MissionControl.Client.dll</code> — client plugin (handles quest refresh)</li>
+</ul>
+<h2>Compatibility</h2>
+<ul>
+<li>SPT 4.0.x</li>
+<li>Works with any quest mod</li>
+<li>Safe for existing profiles</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/e3b6fe54d61d1e80695280cd2e753a502b94b8c439f790da85501d2600130e16?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1199640770/519ec688-0fe7-4323-8470-2b76f52a1d44?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A26Z&amp;rscd=attachment%3B+filename%3DMissionControl-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A57Z&amp;ske=2026-08-01T21%3A25%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Z%2B6wRSIWO42TmXideUjJ6dZKh8JRRE0TfVH3u4S9kFg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&amp;response-content-disposition=attachment%3B%20filename%3DMissionControl-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.chazut.missioncontrol</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>2 April 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Chazut/MissionControl" target="_blank" rel="noreferrer noopener">https://github.com/Chazut/MissionControl</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

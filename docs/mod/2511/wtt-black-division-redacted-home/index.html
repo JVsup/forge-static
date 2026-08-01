@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>WTT - Black Division [REDACTED] Home · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>WTT - Black Division [REDACTED] Home</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f1ce1279d6164999fe3ef6996fe9a32c6030cc970b54760930c7a0acec0de7e3.webp" alt="WTT - Black Division [REDACTED] Home thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>WTT - Black Division [REDACTED] Home</h1>
+    <p class="hero-teaser">[REDACTED]</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/18f3cbd1fc679580ff54a27f4f10d30a1cf49cfd0534a60a47891399c5bbd314.svg" alt="" width="32" height="32">TacticalToaster</span>
+      <span class="author"><img src="../../../assets/935ecb0127d2ea236270faa079fffebd95b2907ac6d624be31833f2f699fd051.webp" alt="" width="32" height="32">Tron</span><span class="author"><img src="../../../assets/0eeedc1600fe92c49dc4e348ebca22a594f613e02856dcc89047dde665e3da2c.webp" alt="" width="32" height="32">GrooveypenguinX</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>69,435</dd></div>
+    <div><dt>Favourites</dt><dd>188</dd></div>
+    <div><dt>Mod lists</dt><dd>318</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="WTT - Black Division [REDACTED] Home content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>1</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><img loading="lazy" decoding="async" src="../../../assets/d2973f69baf20ddc58b967947ed8b565a2a0769e88f1388860011a18ac2d9708.webp" alt="Black Division"></p>
+<p>Black Division [REDACTED] Home adds Black Division as a proper faction. They are an elite and secretive PMC currently under the employment of TerraGroup, presumably cleaning up any loose ends the company left in Tarkov. It’s best not to dig too deep into TG’s secrets, or else you might end up becoming a target.</p>
+<h2>INSTALL INSTRUCTIONS</h2>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/3N6gTe2.gif" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/f8a882020797ae7b0f90dc418fa7bf212be49d7205750ccf2c1ace20c747fbae.webp" alt="vKRw58b.gif"></a></p>
+<p>This mod requires BigBrain, MoreBotsAPI, WTT Content Backport and WTTCommonLib to run. Waypoint is not required currently but recommended. I also recommend SAIN for enhancing the combat behavior of the Black Division bots and for configuring their characteristics.</p>
+<h2>Note on uninstalling when using SAIN</h2>
+<p>Seems I found what causes a non-aggression bug, at least with SAIN and my bot mods. If you uninstall a custom bot mod that uses MoreBotsAPI then SAIN will keep references to the now-removed bots in its Default Bot Config Values folder, causing client errors that prevent SAIN from loading properly for bots and disabling their combat behaviors. Deleting the files in this folder and letting SAIN reset them fixes the problem.</p>
+<h2>Features</h2>
+<div class="tabset"><div id="tabset-3-panel-1" class="tab-panel"><div class="tab-title">Shhhh…</div>
+<div class="tab-content"><p>That’s for you to find out.</p></div></div></div>
+<h2>Config</h2>
+<p>There is a config file in the server part of the mod called <code>config.jsonc</code>. You can modify the spawn chances of random hunts, times hunts can appear, the maps hunts can spawn on, alongside the spawn chances for Labs gate and starting groups.</p>
+<h2>Compatability</h2>
+<div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">SAIN</div>
+<div class="tab-content"><p>These bots function with SAIN and through the MoreBotsAPI there is support for customizing the bots characteristics like you would other bot types.</p></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">Spawn Mods</div>
+<div class="tab-content"><p>Should work with most spawn mods as long as they don’t override boss spawns that aren’t vanilla. My previous UNTAR mod was tested with ABPS and MOAR and it worked with those. I haven’t tested with any of the new 4.0.0 spawn mods so let me know if there are incompatabilities I might be able to address.</p>
+<p>Also, if you disable bosses in any way these bots won’t spawn. They use the vanilla boss spawn system.</p></div></div>
+<div id="tabset-2-panel-3" class="tab-panel"><div class="tab-title">Armory</div>
+<div class="tab-content"><p>If WTT Armory is installed, the BD bots will use some of the weapons and attachments from the mod. As more updates come additional loadout options, both vanilla and incorporating Armory, will be implemented.</p></div></div></div>
+<h1>Credits and Thanks</h1>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Credits</div>
+<div class="tab-content"><p>Thanks to the WTT team for <del>abducting</del> having me on the team! I’m excited to be able to contribute to the project. They all worked incredibly hard to backport the 1.0 content for Christmas so be sure to thank them.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">What is WTT?</div>
+<div class="tab-content"><p><strong>What is Welcome To Tarkov?</strong></p>
+<p>Welcome To Tarkov (WTT) is a mod for SPT AKI that has been in development for over a year. What started as a small passion project has grown in size to incorporate 15+ core members as well as contributions from other well-known mod authors and friends of WTT alike.</p>
+<p><strong>How does Welcome To Tarkov change the game?</strong></p>
+<p>As a mod, WTT overhauls SPT AKI, touching on almost every vanilla game system, as well as adding completely new systems to the game and its core mechanics. Inspired by open-world hardcore survival projects like STALKER: Anomaly and STALKER: GAMMA, WTT takes SPT’s artificial multiplayer MMO difficulty adders and replaces them with a challenging world economy, loot scarcity rebalancing, a lore friendly quest overhaul, and a map-traveling system built from rewritten portions of the Traveler mod allowing seamless travel between maps. Aside from its changes to the game’s core properties, WTT also adds to the world’s variety of traders, NPC’s, characters, items, and quests:</p>
+<ul>
+<li>Over 1,000 custom bundles adding new weapons, attachments, wearables, containers, food, medical, and barter items.</li>
+<li>New bosses with their own custom gear that will be properly incorporated into WTT’s quest lines.</li>
+<li>New, meaningful traders with their own lore-friendly quests and narrative elements to help the player progress through the story-line of WTT.</li>
+<li>New playable characters and outfits that will add to the player’s customization abilities.</li>
+<li>New quest types incorporating brand new map extraction points, putting the player’s knowledge and familiarization of SPT’s maps to the test.
+Welcome To Tarkov stands as one of the largest mods created for SPT AKI thus far.</li>
+</ul>
+<p><strong>When does Welcome To Tarkov release?</strong></p>
+<p>Thursday.</p>
+<p><strong>Which Thursday?</strong></p>
+<p>TBD</p>
+<p><strong>Want to follow our progress?</strong></p>
+<p>You can follow the project through it’s development in our discord here:</p>
+<p><a target="_blank" class="external-link" href="https://discord.gg/WelcomeToTarkov" rel="noreferrer noopener">https://discord.gg/WelcomeToTarkov</a></p></div></div></div>
+<h2>Support Me!</h2>
+<p>Buy me a Java Monster so I can fix my broken releases faster after I get back home from work. Or don’t, I’ll still do it for free. <a target="_blank" class="external-link" href="https://ko-fi.com/tacticaltoaster" rel="noreferrer noopener">https://ko-fi.com/tacticaltoaster</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-08-01T03:07:00.000000Z">1 August 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,180 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>1.2.0 - Wedge and some tweaks</h1>
+<p>Added Wedge</p>
+<ul>
+<li>Spawns on Labs at the start with a varying amount of followers. These followers use loadouts similar to what is found on Icebreaker in live.</li>
+<li>The labsStartChance is now the spawn chance for Wedge to spawn at the start of a Labs raid.</li>
+</ul>
+<p>Rebalanced BD loot</p>
+<ul>
+<li>Pockets and backpack loot are now simplified and specific. No more USEC whatever keys lmao.</li>
+<li>BD now uses flash grenades only. This will be adjusted in the future when more specific types are added.</li>
+<li>Chance to spawn Labs access keycards in pockets.</li>
+</ul>
+<p>Adjusted BD behavior</p>
+<ul>
+<li>These are experimental adjustments. BD should be more reactive, aggressive, and suppress the player more often. I’ll be looking into more ways to make BD difficult but fair, including new combat behaviors.</li>
+</ul>
+<p>CS Gas Support</p>
+<ul>
+<li>Wedge and his followers will use CS gas grenades if you have the CS Gas mod (<a target="_blank" class="external-link" href="../../2864/manimals-cs-gas/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2864/manimals-cs-gas</a>) installed.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f8c02c0955c4f952a750cfef94d46f3fd5b36c60bbf76599d2f4bb4cf82d8a1d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/df6ccbb7-e84c-4a71-b05e-6cf7e697dbc2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A56Z&amp;rscd=attachment%3B+filename%3Dblackdiv-120-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A06Z&amp;ske=2026-08-01T21%3A24%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=MPuTGSYyPBSyKorymEbA0CIr0SkJQDLWj4jgUeOpg84%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-120-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2026-07-04T03:22:00.000000Z">4 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>14,434 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>1.1.3 - Crash fix</h1>
+<ul>
+<li>Fixed issue where disabling raiders or removing raider vanilla spawns in ABPS would cause a server crash.</li>
+</ul>
+<p>If you were experiencing the “Object reference not set to an instance of an object” error, this should fix it.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/63ad0d0db18ce85ab1b541cc9e08eed673962360ce9703ff8702b9ebfb35da8d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/0ddd9d87-9b7d-4b44-ab22-e0767b29821d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A20Z&amp;rscd=attachment%3B+filename%3Dblackdiv-113-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A06Z&amp;ske=2026-08-01T21%3A20%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pMeFGjnfc8YfdjtMfdI6gDeYY46CigHoLdkR1psJmSs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-113-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2026-07-02T22:08:00.000000Z">2 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,445 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>1.1.2 - Config and Spawning fixes! (Delete old version before installing new)</h1>
+<ul>
+<li>Hunt map config is properly working now.</li>
+<li>Hunt behavior should be fully working properly now. (It was a one line fix…)</li>
+<li>New config options to adjust the min and max sizes of hunt groups.</li>
+</ul>
+<p>This SHOULD also fix some issues with spawning in regards to using with ABPS.</p>
+<p>Also, if you’re using this (or any custom bot mods) on Fika with Headless, all clients alongside the headless client needs both this and the MoreBotsAPI mod installed. The game does not know these custom bot types exist if these mods are not installed.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/437574a68efce95f77abc14c76a45de2070c852352b8223db8d67f323a93af29?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/457bdae4-e895-498a-8aca-77d0edaa554a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A19Z&amp;rscd=attachment%3B+filename%3Dblackdiv-112-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A51Z&amp;ske=2026-08-01T21%3A09%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wnkQdchIxV7jUIaD%2BJHBRddJ885wQyOaZH3fQ6UUcz0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-112-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-05-01T22:47:00.000000Z">1 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>18,195 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>1.1.1</h1>
+<ul>
+<li>Mod slot warning fix (Slot: mod_scope_001 does not exist for weapon: 66e718dc498d978477e0ba75 weapon_zid_rpd_762x39 on blackdivassault)</li>
+<li>Hunt behavior fix</li>
+<li>Black Division now uses Raider brains instead of Rogue brains</li>
+<li>Experimental behavior removal to improve BD aggression and activity</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ab56ce0ffdc511fce8cbe81070e2d1dd1a55185d76d5f9b5c9a83bfcdb3e9d1a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/d0d58fd7-494d-480f-9e58-4e573bc1c6d9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A57Z&amp;rscd=attachment%3B+filename%3Dblackdiv-111-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A48Z&amp;ske=2026-08-01T21%3A20%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=0npfPij2KQ7ufsDGW3V%2Ftk7Lc%2F5swWH%2F5dqsb3UtscY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NCwibmJmIjoxNzg1NjE1ODU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pWITp8_ZBenZmUbLdE4MfEbCKiiA7_VieqNGQDHATK4&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-111-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-04-30T04:49:00.000000Z">30 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,524 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>1.1.0 - The thing you’ve all been waiting for</h1>
+<ul>
+<li>New spawn config (in the server part of the mod, config.jsonc)</li>
+<li>Hunt behavior moved to MoreBotsAPI</li>
+</ul>
+<p>The spawn chance is a flat chance to see BD in your raid. The min and max spawn times are the percentage of the raid time they’ll spawn within. There is a bias that makes them more likely to spawn towards the max time though, so they will still tend to lag behind but stay within the range.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a1c97d7fd9db2fc34958d3f5e5653710dbcb9573395f9d1aacb365f7b6a76df6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/1a3d3d39-79ca-4673-a1b8-7501d257600d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A20Z&amp;rscd=attachment%3B+filename%3Dblackdiv-110-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A49Z&amp;ske=2026-08-01T21%3A15%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BZBcWMGnJsXIO5LS6GjduTv79H5aP%2Fl9B7Cu9uxXWM8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NSwibmJmIjoxNzg1NjE1ODU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9XAMvKxGmeQlX09PIJzpjTqOu0AlME3hP_LZQNT9sfo&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-110-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-12-29T04:19:00.000000Z">29 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>27,507 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><p>1.0.1</p>
+<ul>
+<li>Fix to error spam with Fika Headless (mod seems to work with Fika with no problems atm)</li>
+<li>Fix to WTT Armory integration not working</li>
+<li>Fix related to currency generation on BD</li>
+<li>Disabled debug logs, no more spawn spam in server console</li>
+<li>Balance adjustments
+<ul>
+<li>BD rewards more XP per kill</li>
+<li>BD health changed to match live</li>
+<li>BD sight range and angles nerfed, should be less punishing on large/open maps</li>
+<li>BD spawn chances on Labs buffed</li>
+<li>BD spawn chances on other maps very slightly nerfed</li>
+<li>BD groups will be smaller on maps other than Labs</li>
+<li>BD can now spawn on Labyrinth and Reserve</li>
+<li>Weapon spawn chances adjusted, expect to see more rifles</li>
+<li>Added all the known BD names from live</li>
+</ul>
+</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f330bacf88d5e88a319c45f5545352c7c69466371573bf014f0c3256b0451b51/details" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/1c7137af-6488-44b2-a1c3-028af6f1c50c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A13Z&amp;rscd=attachment%3B+filename%3Dblackdiv-101.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A18Z&amp;ske=2026-08-01T20%3A58%3A13Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9YqXbrwY86JKrv7xxXtS0iKRIj5JGBG%2Fcp1O9l3VT5c%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NSwibmJmIjoxNzg1NjE1ODU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9XAMvKxGmeQlX09PIJzpjTqOu0AlME3hP_LZQNT9sfo&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-101.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-12-26T07:46:00.000000Z">26 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,150 downloads</span><span>1.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>WTT Black Division [REDACTED] Home 1.0.0 Release</h1>
+<p>Untested with Fika, includes custom bot behaviors that might not work with Fika.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2512/wtt-content-backport/">WTT - Content Backport</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8e0c77f4142e0de2ce0bde3b6ad1c86f0915f52a008e8bd04181d1c92399a754?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122090709/6d00ec18-1faa-456b-91c9-178c2fc6e56a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A21Z&amp;rscd=attachment%3B+filename%3Dblackdiv-100.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A28Z&amp;ske=2026-08-01T21%3A07%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=gWBTh5vvnDJhYcsaPzVB4VMGG1nFdD3LjUas0Fb9rK0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NywibmJmIjoxNzg1NjE1ODU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.adsrl5ajJo5eBoQzHifPSfT3KCmfBtkEpYzeiCFTJmM&amp;response-content-disposition=attachment%3B%20filename%3Dblackdiv-100.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="black div spawn notifier"
+  data-search="black div spawn notifier black division spawn with notification ciallomako"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="5660"
+  data-updated="2026-07-28T09:59:43.000000Z">
+  <a class="card-image" href="../../../addon/34/black-div-spawn-notifier/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/8796513e537f1ceebd2afaba297f2196fef1e26af430125b2e9e65e7e7363c02.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/34/black-div-spawn-notifier/">Black Div spawn notifier</a></h2>
+    <p class="teaser">Black Division spawn with notification</p>
+    <div class="card-meta">
+      <span>by ciallomako</span>
+      <span>5,660 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.blackdiv.tacticaltoaster</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/TacticalToaster/BlackDiv" target="_blank" rel="noreferrer noopener">https://github.com/TacticalToaster/BlackDiv</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

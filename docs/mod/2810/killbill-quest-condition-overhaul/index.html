@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Kill&amp;Bill - Quest Condition Overhaul · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Kill&amp;Bill - Quest Condition Overhaul</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/2234af78398803530a42f4472f43cbc233aaea46ceb13b40f0ca496ba327296e.webp" alt="Kill&amp;Bill - Quest Condition Overhaul thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Kill&amp;Bill - Quest Condition Overhaul</h1>
+    <p class="hero-teaser">Turns existing quests into kill, dogtag, or money handover objectives while preserving quest chains, traders, and rewards.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c842c299719604981c502eed6bd16a75ca9864af23f9a209eb3706aea00754d1.webp" alt="" width="32" height="32">Kazusa</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,669</dd></div>
+    <div><dt>Favourites</dt><dd>12</dd></div>
+    <div><dt>Mod lists</dt><dd>10</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Kill&amp;Bill - Quest Condition Overhaul content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Kill &amp; Bill - Quest Completion Overhaul</h1>
+<p>Tarkov no longer needs excuses.<br>
+Traders no longer care how the job gets done. They only care about the result.</p>
+<p>In the end, every quest comes down to three things:</p>
+<p><strong>Kill the target. Bring back proof. Pay the bill.</strong></p>
+<p>Kill &amp; Bill replaces existing quest completion requirements with a more direct, mercenary-style system built around kills, PMC dogtags, and money.</p>
+<p>No more running in circles.<br>
+No more checklist busywork.<br>
+The traders want results, proof, or cash.</p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">About</div>
+<div class="tab-content"><p>Kill &amp; Bill is a quest completion condition overhaul for <strong>SPT 4.0</strong>.</p>
+<p>It rewrites the <code>AvailableForFinish</code> conditions of loaded quests and replaces them with one of three objective types:</p>
+<ul>
+<li>Kill targets</li>
+<li>Turn in PMC dogtags</li>
+<li>Pay money</li>
+</ul>
+<p>The mod preserves existing quest IDs, quest chains, unlock order, traders, rewards, and <code>AvailableForStart</code> conditions.</p>
+<p>It supports deterministic generation through a configurable seed. Using the same seed and configuration produces the same quest objectives.</p>
+<p>Quest objective text is automatically updated to match the generated completion conditions.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Objectives</div>
+<div class="tab-content"><h4>Kill</h4>
+<p>Quests may require the player to kill PMC or SCAV targets.</p>
+<p>The following values can be configured:</p>
+<ul>
+<li>Required kill count</li>
+<li>PMC target weight</li>
+<li>SCAV target weight</li>
+</ul>
+<h4>Dogtags</h4>
+<p>Quests may require PMC dogtags as proof of completion.</p>
+<p>The following options are configurable:</p>
+<ul>
+<li>Required dogtag count</li>
+<li>Found-in-raid requirement</li>
+<li>Support for dogtags added by <strong>WTT - Content Backport</strong></li>
+<li>Item ID used by the objective</li>
+</ul>
+<p>Changing the item ID also allows the objective to require a different item.</p>
+<h4>Money</h4>
+<p>Quests may require a money payment instead of a combat objective.</p>
+<p>Minimum and maximum payment amounts can be configured.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><p>The mod includes a <code>config.jsonc</code> file.</p>
+<p>Available settings include:</p>
+<ul>
+<li>Enable or disable the mod</li>
+<li>Process all loaded quests</li>
+<li>Include or exclude specific traders</li>
+<li>Exclude specific quests</li>
+<li>Set the randomization seed</li>
+<li>Adjust kill, dogtag, and money objective weights</li>
+<li>Configure kill count ranges</li>
+<li>Configure PMC and SCAV target weights</li>
+<li>Configure dogtag requirements</li>
+<li>Configure money ranges</li>
+<li>Customize objective text templates</li>
+</ul>
+<p>Changing the seed or configuration generates a different set of quest completion conditions.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><ol>
+<li>Download the release archive.</li>
+<li>Extract it into your SPT root directory.</li>
+<li>Confirm that the mod folder is located at:</li>
+</ol>
+<pre><code>SPT/user/mods/kazusa-QuestConditionOverhaul
+</code></pre>
+<p>Start the SPT Server.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><p>Kill &amp; Bill processes quests during the PostDBLoad stage.</p>
+<p>It supports vanilla quests and can process modded quests that are loaded before it applies its changes.</p>
+<p>Compatibility issues may occur with mods that also add, remove, or rewrite AvailableForFinish conditions. When multiple mods modify the same quest conditions, the final result depends on load order.</p>
+<p>Using Kill &amp; Bill together with another quest completion randomizer is not recommended.</p>
+<p>Mods that only add quests, modify rewards, or change start conditions are generally less likely to conflict.</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p>塔科夫不再需要借口。
+商人们不再关心过程，他们只看结果。</p>
+<p>任务最终只剩下三件事：</p>
+<p><strong>杀掉目标、带回证据、付清账单。</strong></p>
+<p>Kill &amp; Bill 会将任务完成条件重写为更直接、更雇佣兵化的目标系统：击杀、提交 PMC 狗牌、支付金钱。</p>
+<p>不再绕流程。
+不再跑清单。
+商人要的只有结果、证据，或者钱。</p>
+<h4>模组介绍</h4>
+<p>Kill &amp; Bill 是一个面向 SPT 4.0 的任务完成条件重制模组。</p>
+<p>它不会添加新任务，也不会改变任务链、商人归属或任务奖励。模组只会重写已加载任务的完成条件，并将其替换为以下三类目标之一：</p>
+<ul>
+<li>击杀目标</li>
+<li>提交 PMC 狗牌</li>
+<li>支付金钱</li>
+</ul>
+<p>任务 ID、任务链、解锁顺序、所属商人和奖励都会保留。</p>
+<h4>主要功能</h4>
+<ul>
+<li>支持原版任务，以及在本模组之前加载的其他模组任务</li>
+<li>重写任务的 <code>AvailableForFinish</code> 完成条件</li>
+<li>保留原始任务 ID、任务链、商人和奖励</li>
+<li>不修改 <code>AvailableForStart</code> 开始条件</li>
+<li>支持通过配置种子进行确定性生成</li>
+<li>相同种子和相同配置会生成相同的任务完成条件</li>
+<li>可配置击杀、狗牌、金钱三类目标的生成权重</li>
+<li>自动重写任务目标文本，使其匹配新的完成条件</li>
+</ul>
+<h4>三类目标</h4>
+<h5>击杀</h5>
+<p>任务会被转换为击杀目标。
+击杀数量和目标类型权重可在配置文件中调整。</p>
+<h5>狗牌</h5>
+<p>任务会要求提交 PMC 狗牌，作为目标已被处理的证明。</p>
+<p>你可以在配置中调整：</p>
+<ul>
+<li>狗牌是否必须来自战局</li>
+<li>是否使用 WTT - Content Backport 新增的狗牌</li>
+<li>狗牌提交数量</li>
+</ul>
+<p>理论上，也可以通过修改物品 ID 将提交目标替换为其他物品。</p>
+<h5>金钱</h5>
+<p>有些任务不需要子弹。
+只需要付清账单。</p>
+<p>金钱提交范围可在配置文件中调整。</p>
+<h4>配置</h4>
+<p>模组包含 <code>config.jsonc</code> 配置文件。</p>
+<p>你可以调整：</p>
+<ul>
+<li>是否启用模组</li>
+<li>是否处理所有已加载任务</li>
+<li>指定包含和排除的商人</li>
+<li>指定排除的任务</li>
+<li>随机化种子</li>
+<li>三类目标的生成权重</li>
+<li>击杀目标数量范围</li>
+<li>PMC / SCAV 目标权重</li>
+<li>狗牌提交需求</li>
+<li>金钱提交范围</li>
+<li>任务目标文本模板</li>
+</ul>
+<p>修改种子或配置后，会生成另一套任务完成条件。</p>
+<h4>安装方式</h4>
+<ol>
+<li>下载 release 压缩包。</li>
+<li>解压到 SPT 根目录。</li>
+<li>确保模组文件夹位于：</li>
+</ol>
+<p><code>SPT/user/mods/kazusa-QuestConditionOverhaul</code></p>
+<ol start="4">
+<li>启动 SPT Server。</li>
+</ol>
+<h4>兼容性说明</h4>
+<p>Kill &amp; Bill 会在 <code>PostDBLoad</code> 阶段修改已经加载的任务完成条件。</p>
+<p>它不会生成新任务，不会重新分配商人，不会重写任务链，也不会修改任务奖励。</p>
+<p>理论上，它可以作用于大多数已加载的模组商人任务。</p>
+<p>如果同时使用其他会添加、删除或重写 <code>AvailableForFinish</code> 条件的任务重制模组，可能会出现功能重叠。最终效果通常取决于哪个模组最后应用修改。</p>
+<p>为了获得最佳体验，不建议同时启用其他任务完成条件随机化模组。只添加任务、修改奖励或调整开始条件的模组通常更容易兼容。
+{.endtabset}</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-07-10T16:43:00.000000Z">10 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,302 downloads</span><span>35.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Remove dead config <code>setLocationToAny</code></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/66f762e43b92a48afbd53f8024a11b35e1f0e25ee37917f262d317c3604d17f9/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1293852482/80de0711-3ff8-40f7-ba2d-d2274b327f3f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A17Z&amp;rscd=attachment%3B+filename%3Dkazusa-QuestConditionOverhaul-1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A10Z&amp;ske=2026-08-01T21%3A26%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5k2kqv%2Fa4S1cvpPTKDkzVnyzhuCrAc%2FktVFg%2BKLQ%2FWI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.o0HJuSWgYbQKnQAHJ_KSxLqe8VTHD6fp3c9ZWaMz11Q&amp;response-content-disposition=attachment%3B%20filename%3Dkazusa-QuestConditionOverhaul-1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-07-10T06:29:00.000000Z">10 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>102 downloads</span><span>36.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Release Notes - v1.0.1</h1>
+<ul>
+<li><strong>ID-Bool Trader Configuration</strong>: Refactored <code>targetTraderIds</code> and <code>excludedTraderIds</code> into key-value pairs (<code>ID: true/false</code>). Default config now pre-populates all vanilla traders with comments to prevent JSON formatting errors.</li>
+<li><strong>Auto-Discovery for Modded Traders</strong>: On startup, the mod scans all quests, resolves localized nicknames for any newly found modded traders, and automatically appends them to <code>config.jsonc</code> (defaulting to <code>false</code>) while fully preserving comments and formatting.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e0e852d96f6c884f35e23ad26b6a5bdb2f13923b9021a916247700602c17a2f1/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1293852482/198cf145-89a2-4490-934c-767b89cfc597?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A35Z&amp;rscd=attachment%3B+filename%3Dkazusa-QuestConditionOverhaul-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A01Z&amp;ske=2026-08-01T21%3A12%3A35Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eso9m52UO%2FoO3KIo3WjQ2wbyw9ZXpLiV%2Fy%2BH%2BbgIdik%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2NSwibmJmIjoxNzg1NjE2MDY1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JeBznZjJy0yMWbVfAyYGSX-1_y_0vEUQ67F288U8X0c&amp;response-content-disposition=attachment%3B%20filename%3Dkazusa-QuestConditionOverhaul-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-09T04:00:00.000000Z">9 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>265 downloads</span><span>35.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Tested on SPT 4.0.13 only.</p>
+<p>Other SPT 4.0.x versions have not been tested, but this mod is expected to be compatible with them as long as the relevant quest data structure and SPT mod API remain unchanged. If you test it on another version, please leave a comment with your result.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2b737ed20ee5cd6dd77262541b2794e746d3df703dafd3e2129e6961f2fe48d7/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1293852482/14636d3a-02cd-4799-80f4-bdea2fbb4196?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A18Z&amp;rscd=attachment%3B+filename%3Dkazusa-QuestConditionOverhaul-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A30Z&amp;ske=2026-08-01T21%3A08%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wpyFUEIQc3gOzNhe0v71C2e5kKvI%2F%2BjtL5QliIIByIg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2NiwibmJmIjoxNzg1NjE2MDY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.o0HJuSWgYbQKnQAHJ_KSxLqe8VTHD6fp3c9ZWaMz11Q&amp;response-content-disposition=attachment%3B%20filename%3Dkazusa-QuestConditionOverhaul-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.kazusa.questconditionoverhaul</code></dd></div>
+      <div><dt>License</dt><dd>GNU AGPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>17 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Kazu5a/QuestConditionOverhaul" target="_blank" rel="noreferrer noopener">https://github.com/Kazu5a/QuestConditionOverhaul</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to assist with converting my original hardcoded quest-condition modification script into this SPT mod.</p>
+<p>AI assistance included helping identify the relevant SPT classes, methods, and project structure needed for the mod implementation. The mod concept, behavior, and original script logic are my own.</p>
+<p>The thumbnail/icon image was AI generated.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

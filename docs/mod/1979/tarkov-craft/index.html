@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Tarkov Craft · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Tarkov Craft</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f126467527ef2656c5b194146b4baed24d04da272e9fdebd3417934e1f3aa1f1.webp" alt="Tarkov Craft thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Tarkov Craft</h1>
+    <p class="hero-teaser">A web-based tool for creating custom hideout craft recipes.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/a2ce8b41f6d730a0a631b8974a70d551e11557fdf97a96e1229d808ed22118f3.webp" alt="" width="32" height="32">viniHNS</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>4,282</dd></div>
+    <div><dt>Favourites</dt><dd>5</dd></div>
+    <div><dt>Mod lists</dt><dd>5</dd></div>
+  </dl>
+</article>
+
+
+
+
+<div class="warning-box">The author marked this item as containing advertising.</div>
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Tarkov Craft content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><blockquote>
+<h1>Mods on Hiatus / Support Paused</h1>
+<ul>
+<li><strong>Status:</strong> No updates planned due to focus on other projects.</li>
+<li><strong>Open Invitation:</strong> The community has full permission to update, modify, and redistribute these mods. Feel free to fork the repository and build your own version.</li>
+</ul>
+</blockquote>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Basics</div>
+<div class="tab-content"><h3>Try the tool <a target="_blank" class="external-link" href="https://vinihns.github.io/TarkovCraft/" rel="noreferrer noopener">HERE</a></h3>
+<p>Tarkov Craft is a web-based tool to create and customize crafting recipes and barter trades. With an intuitive interface, you can experiment with ingredients, tools, and crafting times while generating JSONs for easy integration into your projects.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">JSON Structure</div>
+<div class="tab-content"><p>Each craft is exported as a JSON object following SPT’s hideout recipe format:</p>
+<pre><code>{
+  "_id": "507f1f77bcf86cd799439011",
+  "areaType": 10,
+  "requirements": [
+    {
+      "areaType": 10,
+      "requiredLevel": 2,
+      "type": "Area"
+    },
+    {
+      "templateId": "5c0e874186f7745dc7616606",
+      "count": 2,
+      "isFunctional": false,
+      "isEncoded": false,
+      "type": "Item"
+    }
+  ],
+  "productionTime": 7200,
+  "needFuelForAllProductionTime": false,
+  "locked": false,
+  "endProduct": "5c0e874186f7745dc7616606",
+  "continuous": false,
+  "count": 1,
+  "productionLimitCount": 0,
+  "isEncoded": false,
+  "isCodeProduction": false
+}
+</code></pre>
+<hr></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Usage</div>
+<div class="tab-content"><h3>Option 1 — Use with TarkovCraft Loader (no coding required)</h3>
+<p>If you don’t want to write a mod from scratch, use <strong><a target="_blank" class="external-link" href="../../2628/tarkov-craft-loader/" rel="noreferrer noopener">TarkovCraft Loader</a></strong> — drop your exported JSON file into the mod’s folder and it will inject your custom crafts into the SPT server automatically.</p>
+<h3>Option 2 — Use the JSON in your own mod</h3>
+<p>If you’re building your own mod, copy the exported JSON and push the recipes into SPT</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Known Issues</div>
+<div class="tab-content"><ul>
+<li>If you find any bugs, please report them</li>
+</ul></div></div></div>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/Q5Q116JYQN" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/27dab3ba29fe5097be450545c46ec7f97796db7e8d3bbdff6c8d05a64ef678e0.svg" alt="ko-fi"></a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-03-14T18:59:00.000000Z">14 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>345 downloads</span><span>474.7 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Tarkov Craft v2.0.0 — Full Rewrite</h2>
+<p>Complete rewrite from the ground up. Same purpose, entirely new codebase.</p>
+<p><strong>What changed</strong></p>
+<ul>
+<li>New UI built from scratch with an EFT-inspired design</li>
+<li>Item search rebuilt as a virtual-scroll combobox with keyboard navigation</li>
+</ul>
+<p><strong>What was dropped</strong></p>
+<ul>
+<li>Quest creation</li>
+<li>Barter creation</li>
+</ul>
+<p>These may return in future releases as separate modules.</p>
+<h3>Try the tool <a target="_blank" class="external-link" href="https://vinihns.github.io/TarkovCraft/" rel="noreferrer noopener">HERE</a></h3>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ab026a46ba9fb1b3e86bb29db8e39120dd9804c660fea4c3d1a8fd49c8b09e8c?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/920038075/7642004a-7163-4409-ac0a-2ee03d74af11?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A49Z&amp;rscd=attachment%3B+filename%3DTarkovCraft-page.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A50Z&amp;ske=2026-08-01T21%3A02%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=s1lQfkeVH%2FPZHJ9PijUD3AxdI3Yib4LrskBA%2FPYW%2FzA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgzMywibmJmIjoxNzg1NjE1NTMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0oRrYngX-xykP9NskjF_hX3yIJx0N48O7QJC6gZQqFw&amp;response-content-disposition=attachment%3B%20filename%3DTarkovCraft-page.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.4</h2></div><time datetime="2025-07-14T18:54:31.000000Z">14 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,344 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>- Updated to 3.11.x</p>
+<p>- The quest creation feature has been removed due to technical issues and to better align the mod with its core purpose.</p>
+<p>- I’ve tested the mod with 5 new crafts and barters on a clean SPT installation, and it loaded normally for me. If you encounter any issues, please let me know!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/396824841666b82fedae52ce8cfd26563997bc2a57286c2edb6a032005f0afc0" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://vinihns.github.io/TarkovCraft/" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vinihns.tarkovcraft</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>23 January 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/viniHNS/TarkovCraft" target="_blank" rel="noreferrer noopener">https://github.com/viniHNS/TarkovCraft</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>(Completed + FIKA) Quests Extended · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>(Completed + FIKA) Quests Extended</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/ba6a01e72ee61a33d7f1d174bc58a5c20324294893bf540d08930e380ad3884f.webp" alt="(Completed + FIKA) Quests Extended thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>(Completed + FIKA) Quests Extended</h1>
+    <p class="hero-teaser">For when Jaeger isn&#39;t interesting enough</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/95c6fc44d994a20ec4a0b31905424831a2318cd8d92c45e059c2d44e90b7ffea.webp" alt="" width="32" height="32">LightoftheWorld</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>21,884</dd></div>
+    <div><dt>Favourites</dt><dd>55</dd></div>
+    <div><dt>Mod lists</dt><dd>137</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="(Completed + FIKA) Quests Extended content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>10</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>NOTE</strong>
+This mod is considered “complete”. I will no longer be working on this mod outside of bug fixes. Read the 5.0.0 version message for further explanation. Thanks!</p>
+<p>Quests Extended is a client mod, originally authored by CJ, that expands the list of conditions that can be used within quests, with the goal of allowing for more unique / interesting quest designs. There are currently <strong>62</strong> additional conditions, including things like activating power switches, restoring health, and searching containers. Also, this mod contains the power to make true “multiple choice” quests, and grants greater freedom in how quests can be started.</p>
+<p><strong>Please install this mod before installing a trader that utilizes this mod.</strong></p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Mods that use QE</div>
+<div class="tab-content"><p><strong>Flea market quests:</strong> <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2292-flea-market-quests/?highlight=flea%20mark#overview" rel="noreferrer noopener">Flea Market Quests</a></p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Quest Creators</div>
+<div class="tab-content"><p>I will create a proper wiki on GitHub eventually, but for now, here’s a speedrun of the absolute basics:</p>
+<p>When creating a quest. create a <strong>CounterCreator</strong> condition that looks something like the following (expand image):</p>
+<p>What’s most important is that the condition itself is impossible to complete; in this case, you are required to kill a pmc from 5555 meters away. This prevents accidental progress on quests. The bottom ‘value’ just under the ‘type’ is important, however, as that will determine how many times your custom condition needs to be met. For example, if you want the player to heal 300 health, set that value to 300.</p>
+<p>Keep the id that’s highlighted in mind when we go to the next step. The id in that spot (and only that spot, of the three ids that exist per counter creator) is important.</p>
+<p>Create a new .json file and place it in ../BepInEx/plugins/QuestsExtended/Quests. If this new json is anywhere else, it will not be registered. Within this .json, you want something akin to this for each quest (expand image):</p>
+<p>The id outside the brackets and the id next to “QuestId” should be the same, and are the id of the quest itself. For each CounterCreator task you have in your quest, create the condition like you see in the image. Remember that highlighted id I mentioned earlier? Place it in the “ConditionId” spot. Check the “Conditions List” tab to see a full list of all custom conditions currently in the mod. The “Locations” can be multiple locations; if you want to have a quest that tracks on Interchange and Customs, but nowhere else, that will work.</p>
+<p>Certain quest conditions have additional features. For example, most of the health-related quests can utilize “IncludeBodyParts” (See image below)</p>
+<p>When you are creating a release of your mod, I highly recommend you pre-include the .json in its correct path in your download, as that will minimize work on the end user and should prevent complications if the end user downloads your mod first and this one second.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Condition Types</div>
+<div class="tab-content"><p>The following is a list of conditions currently in a mod. Some extra comments might be on conditions if they need more explaining. They are separated into multiple catagories for sorting purposes, but implementing any of them is the exact same: Simply copy the Exact Spelling And Capitalization into the “ConditionType”.</p>
+<p>General:</p>
+<p><strong>EncumberedTimeInSeconds</strong> //If the weight indicator in the inventory is yellow or orange, this will increase.</p>
+<p><strong>OverEncumberedTimeInSeconds</strong> //If the weight indicator in the inventory is red, this will increase.</p>
+<p><strong>MoveDistance</strong> //None of the “MoveDistance” tasks are mutually exclusive. If the player is moving quietly while crouched, all three of the conditions will increase</p>
+<p><strong>MoveDistanceWhileRunning</strong></p>
+<p><strong>MoveDistanceWhileCrouched</strong></p>
+<p><strong>MoveDistanceWhileProne</strong></p>
+<p><strong>MoveDistanceWhileSilent</strong> //‘Moving Silently’ means the player is moving slow enough to gain CovertMovement experience. Roughly speaking, if the sound icon in the bottom left is in the left third of the bar, this should increase.</p>
+<p><strong>SearchContainer</strong></p>
+<p><strong>LootItem</strong></p>
+<p><strong>ActivatePowerSwitch</strong></p>
+<p><strong>UseKey</strong></p>
+<p><strong>CompleteWorkout//WILL BE ADDED IN 2.0.3</strong></p>
+<p><strong>CompleteOptionals</strong>  //See the dedicated “Quests with optional tasks” tab</p>
+<p>Combat:</p>
+<p><strong>DamageWithAny</strong></p>
+<p><strong>DamageWithAR</strong></p>
+<p><strong>DamageWithDMR</strong></p>
+<p><strong>DamageWithGL</strong></p>
+<p><strong>DamageWithLMG</strong></p>
+<p><strong>DamageWithMelee</strong></p>
+<p><strong>DamageWithPistols</strong></p>
+<p><strong>DamageWithRevolvers</strong></p>
+<p><strong>DamageWithShotguns</strong></p>
+<p><strong>DamageWithSMG</strong></p>
+<p><strong>DamageWithSnipers</strong></p>
+<p><strong>DamageWithThrowables</strong></p>
+<p><strong>DamageToArmour</strong> //This tracks the amount of durability lost on the enemy armour.</p>
+<p><strong>DestroyEnemyBodyParts</strong> //Blacking any body part, including the head or thorax.</p>
+<p><strong>KillsWhileADS</strong></p>
+<p><strong>KillsWhileCrouched</strong></p>
+<p><strong>KillsWhileProne</strong></p>
+<p><strong>KillsWhileMounted</strong></p>
+<p><strong>KillsWhileSilent</strong> //See comment on “MoveDistanceWhileSilent”</p>
+<p><strong>KillsWhileBlindFiring</strong></p>
+<p><strong>MountedKillsWithLMG</strong></p>
+<p><strong>DestroyLegsWithSMG</strong></p>
+<p><strong>RevolverKillsWithoutADS</strong> //AKA hipfire kills with Revolvers</p>
+<p><strong>DamageToArmourWithShotguns</strong></p>
+<p><strong>TotalShotDistanceWithSnipers</strong> //Every time damage with a sniper rifle is dealt, the distance between the player and the target will be added to this condition. If I hit one bot at 30m and a second at 50m, this condition will be at 80/x. If I then hit someone at 65 m next raid, this task will be at 145/x.</p>
+<p>Medical:</p>
+<p><strong>FixLightBleed</strong></p>
+<p><strong>FixHeavyBleed</strong></p>
+<p><strong>FixAnyBleed</strong></p>
+<p><strong>FixFracture</strong></p>
+<p><strong>HealthLoss</strong></p>
+<p><strong>HealthGain</strong></p>
+<p><strong>DestroyBodyPart</strong> //This means the PLAYER gets a blacked limb, this is not a “destroy limbs on the enemy”. That is in Combat</p>
+<p><strong>RestoreBodyPart</strong>  //Fun fact: A ‘UseItem’ task set to trigger on the use of either surgical kit will accomplish the same thing.</p>
+<p>Hideout:</p>
+<p><strong>CraftItem</strong></p>
+<p><strong>CraftCyclicItem</strong> (Water filter, bitcoin farm, booze generator)</p>
+<p><strong>CollectScavCase</strong></p>
+<p><strong>CollectCultistOffering</strong></p>
+<p><strong>CompleteWorkout</strong></p>
+<p>Trading:</p>
+<p><strong>CompleteAnyTransaction</strong> (Use subconditions to modify this!)</p>
+<p><strong>SpendMoneyOnTransaction</strong> (Buying items)</p>
+<p><strong>EarnMoneyOnTransaction</strong> (Selling items)</p>
+<p>Misc:</p>
+<p><strong>FixAnyMalfunction</strong></p>
+<p><strong>FixARMalfunction</strong></p>
+<p><strong>FixDMRMalfunction</strong></p>
+<p><strong>FixLMGMalfunction</strong></p>
+<p><strong>FixPistolMalfunction</strong></p>
+<p><strong>FixShotgunMalfunction</strong></p>
+<p><strong>FixSMGMalfunction</strong></p>
+<p><strong>FixSniperMalfunction</strong></p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">SubConditions</div>
+<div class="tab-content"><p>Below is a list of all of the “Subconditions” you can put on a QE condition. Think of theses like your “distance”, “equipment”, “found in raid only” type things in normal EFT conditions. I will include a range of values if there’s a limited amount, or examples of what you would put if there is a theoretically infinite range of values (such as specific ids)</p>
+<p>It is important to note that ALL of these can be null; in other words, you will only need to add these to your conditions if you are using them. If not, save yourself the time.</p>
+<p>Bools (true/false):</p>
+<p><strong>IsFail</strong> (Is your QE condition for a Fail condition instead of a “complete” condition? If so, mark this as true!)</p>
+<p>Lists (make sure values are in brackets! [])
+<strong>Locations[]</strong>: Identical to normal quest crafting, be sure to utilize the correct name. “any” also works as a condition, though since this can be null, you don’t need it. Useable for any quest.</p>
+<p><strong>Include/ExcludeBodyParts</strong>: [“Head”, “Chest”, “Stomach”, “LeftArm”, “RightArm”, “LeftLeg”, “RightLeg”]. Identical to normal quest crafting. Used in combat-related quests.</p>
+<p><strong>Workstations</strong> (Try to be case sensitive): [“IntelligenceCenter”, “Kitchen”, “MedStation”, “WaterCloset”(Lavatory), “Workbench”]. Used in CraftAnyItem.</p>
+<p><strong>CyclicWorkstations</strong> (Try to be case sensitive): [“BitcoinFarm”, “WaterCollector”, “BoozeGenerator”]. Used in CraftCyclicItem.</p>
+<p><strong>TraderIds[]</strong>: You can place any vanilla trader id or any custom trader id to specify which trader(s) you wish the player to trade with. Used in Trading quests.</p>
+<p><strong>CurrencyTypes:</strong> [“EUR”, “RUB”, “USD”]. Used to specify if trades must be done with the specific type of currency. Used in Trading quests.</p>
+<p>IT IS IMPORTANT TO NOTE: CurrencyTypes is a UNIQUE subcondition in that the primary condition actually changed based off of the existence of this subcondition. If you do NOT specify a CurrencyType, then <strong>all transactions will convert to the rouble value and increment the quest based off that</strong>. For example, a condition to spend 2 million of no specified currency will increment on any currency type, whereas the same condition with the specification of “RUB” will only increment when roubles are used.</p>
+<p><strong>EnemyTypes</strong>: [“USEC”, “BEAR”, “SCAV” or “SAVAGE”]. Currently there is no “pmc” option: You must put both “USEC” and “BEAR” if you want to replicate a “pmc” option. I will probably add “pmc” in the next patch, I didn’t notice it was missing until I was writing this lol. Used in most Combat quests</p>
+<p><strong>KeyIds[]</strong>: The item id for the key(s) needs to be placed inside the []. Keys and Keycards work here. If you don’t know how to find an item id, you probably aren’t ready to be making quests with QE yet. Used in UseKey</p>
+<p><strong>QuestsToStart[]</strong>: Please see “Multiple Choice Quests” for more information. Any quest ID you place into this list will become AVAILABLE FOR START, as if you had just completed the quest that would naturally unlock the one you place here. Used on any quest</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Quests with optional tasks</div>
+<div class="tab-content"><p>1.7.5 introduces the “CompleteOptionals” condition, which allows you to create a list of ‘optional’ conditions under one main condition and have the player complete X amount of the ‘optional’s. To create an optional task , you simply add the id of the parent condition to the “parentId” spot when creating the ‘optional’ condition (this is a vanilla feature in Tarkov). The optional tasks may be vanilla conditions or QE conditions, both work. When the player completes an optional objective, <em>only</em> the quest that the completed optional objective is in will increase. In the future, I might add a “CompleteAnyOptionals”, but for now it is only per-quest.</p>
+<p>While I have tested this condition a fair amount, it is still experimental. Use with caution.</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Multiple Choice Quests</div>
+<div class="tab-content"><p>Create an impossible “AvailableForStart” task (similar to creating an impossible “AvailableForFinish” condition). I recommend a simple “level 99” condition:</p>
+<p>Within your custom conditions json, you will need to add some things (click to enlarge):</p>
+<p>You will notice that this quest has an extra line defined BEFORE the “condition:[]”: “IsMultipleChoiceStarter”: true. You only need this line if the quest is actually an MCS, it’s assumed false for other quests. Additionally, *most* conditions have an additional thing: “QuestsToStart”: [““]. You made add one or more QUEST Ids to this list, and those quests will automatically be started as soon as the quest is finished (happens before the quest is technically turned in, btw). You will notice that the “CompleteOptionals” itself doesn’t have a QuestsToStart; this is because that condition will always be completed, so any ids you might put there will always be triggered (so if you want a certain quest after this one no matter what, have it unlock normally upon quest completion.) You need to place every condition in a quest that is marked as “IsMultipleChoiceStarter” into this .json. If a specific condition does not start a task, leave QuestsToStart empty for that condition.</p>
+<p>You will additionally notice that there is an “EmptyWithQuestStarter” condition type. <strong>Use “EmptyWithQuestStarter” if the task is a vanilla condition, and not a QE condition.</strong> The reason you need to include the condition in the json is so that your multiple choice quest will actually work.</p></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">FIKA Compatibility</div>
+<div class="tab-content"><p>I am not currently planning on making this mod 100% compatible with FIKA. I would need to re-write 95% of the code in the mod to handle multiple players. The mod is currently <em>extremely</em> set on there being one player. If you use FIKA for the performance increase or other features but you still play solo, you <em>should</em> be able to use this mod without issues. I have tried to make that specific case functional. If QE ever becomes fully FIKA compatible in the future, it will be a separate download: Singleplayer and Multiplayer would simply be too different for this mod to try and handle in one.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>5.0.0</h2></div><time datetime="2026-07-30T04:05:00.000000Z">30 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>623 downloads</span><span>46.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>The final (major) version of Quests Extended. 100% FIKA compatible in all aspects: Multi choice quest loading, per-player quest progression (even in the same raid).</p>
+<p>With this publication, my work on QE is done. All modders have my permission to add onto the mod if they wish, though I don’t know what else there is to be added outside of optimizations. Your creativity is the limit. It was my pleasure to bring this mod to you all and contribute to the SPT project in this way. Another thank you to CJ for originally creating this mod and allowing me to take over it and make it what it is today.</p>
+<p>I will “maintain” this mod as far as bug fixes go, but content updates are finished. If someone does decide to add to this mod, let me know. I would love to help you do that, and I want to know how this mod continues to grow, if it does.</p>
+<p>Thank you.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6415394b18b9bdfb6457811d081aee974077b28aaf79a5bd049e407241931d69?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/aafb83fbdfc8e005ace63c899fccf5fa47900d6b5bf11be1538018c54b274a07?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/746d1f7e-eb25-4b5d-84c5-4cde4b02d2cb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A04%3A40Z&amp;rscd=attachment%3B+filename%3DQuestsExtended500.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A04%3A36Z&amp;ske=2026-08-01T20%3A04%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Sa43qj2mpElYuk06PmmCAVaNMiBBBTp3mOVGPZW2jAA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3NywibmJmIjoxNzg1NjEyNTc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0UsokThoeoYfB5mcoBXracgU5Eu3GITUS8qejQGb-dg&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended500.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.3</h2></div><time datetime="2026-03-25T21:44:00.000000Z">25 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>10,007 downloads</span><span>41.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>It’s been a minute. Thank you, Chazu.</p>
+<p>Chazu fixed quest conditions that relied on PhysicalQuestController.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZDNhMTM4N2I3OWEwZmFhYTE2ZjFhNzFiMzZlNjRhNWE6MTc3NDQ3NTA3Mg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/b42a0f8c-b3a9-4080-acc2-a590bd4f6c7d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A38Z&amp;rscd=attachment%3B+filename%3DQuestsExtended403.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A57Z&amp;ske=2026-08-01T20%3A23%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=XphQeluMGdXNbc2cAkbHFrlMaVYgWYt9d9mTSG4gmDM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3OCwibmJmIjoxNzg1NjEyNTc4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.s0mg2pa5c7Qx8El-XLXfxHXTxU9vxgcG4oXyAUQYAqE&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended403.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.2</h2></div><time datetime="2026-01-02T19:32:00.000000Z">2 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,096 downloads</span><span>41.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Metadata updates</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fef437895fb64542ec3833a535ca044b60ab2129cf3467c0c2564fed9ab04821?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/05570f48-691f-460d-a000-dea9e9209ffb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A15Z&amp;rscd=attachment%3B+filename%3DQuestsExtended402.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A23%3A15Z&amp;ske=2026-08-01T20%3A23%3A15Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1PbLGIojBH9DM3wz8Ouu1byra%2BAS%2ByIY%2B46pv95NuCs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg3OSwibmJmIjoxNzg1NjEyNTc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dw8YNo7jFESjOfHbRk1HueyL1otHKr-mBCQ6yzWwiTU&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended402.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.1</h2></div><time datetime="2025-12-31T05:18:00.000000Z">31 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>471 downloads</span><span>41.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Improved SaveData creation and check logic to prevent it from breaking.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/39cadf47e76c76e513e4ff5604a2f471b7969dd57b8b65bccb099a3c0b7c03e4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/112a5ced-9c57-4a09-b234-f174a961f7c6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A22%3A20Z&amp;rscd=attachment%3B+filename%3DQuestsExtended401Fix.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A21%3A43Z&amp;ske=2026-08-01T20%3A22%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=WYPX7c3uC9DqA90UBgpozj9FviQKFVnlByJGhd34Io4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MCwibmJmIjoxNzg1NjEyNTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9BqeD63JBxHi6VHIEL7lqWn0cjorOr6JSPVNRXXg5To&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended401Fix.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.0</h2></div><time datetime="2025-12-14T11:01:00.000000Z">14 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>619 downloads</span><span>58.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>“Kept you waiting, huh?”</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d6ab80f534562269c15a76aade01d397350df3f3118440da65d48a6a71b2e2d7?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/c85da3ca-1b02-4233-8959-b7f703ffbb07?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A02%3A44Z&amp;rscd=attachment%3B+filename%3DQuestsExtended400.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A01%3A56Z&amp;ske=2026-08-01T20%3A02%3A44Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qPX%2By85VjKtzbMOBwdNZ0K9zOPxqMmY7oDvyXM1ejME%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MCwibmJmIjoxNzg1NjEyNTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9BqeD63JBxHi6VHIEL7lqWn0cjorOr6JSPVNRXXg5To&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended400.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.3.3</h2></div><time datetime="2025-10-31T13:15:00.000000Z">31 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>371 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed a longstanding issue that was causing significant troubles with the mod. The mod should now be fairly bug-free. I will continue to patch bugs, but (hopefully!) this is the last planned update for 3.11.x. 4.0 versions will be 4.X.X to mark the change.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/06dbe19a4bd0a565d61b797d7f7a6a1a1169f74ca4d6b3b5e597972e8f54f490?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/30eb068f-3da7-4554-b234-8c017ea1ae7c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A07%3A50Z&amp;rscd=attachment%3B+filename%3DQuestsExtended333.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A07%3A20Z&amp;ske=2026-08-01T20%3A07%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=GS6BqBHJP88LzV9cIu%2FOSY5lVMdwU%2Fl0M1wcuujjT4M%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MSwibmJmIjoxNzg1NjEyNTgxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.z2OdFgprNaHLUGgD8Ucifye3jJpSGXof9FJwjWXHz8E&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended333.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.3.2</h2></div><time datetime="2025-10-11T00:00:00.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>192 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>I packaged 3.3.1 incorrectly like a complete idiot. This fixes that. Enough people have downloaded 3.3.1 that I decided to push a new version instead of just editing the download so that people know.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9c6300ccad2da36c072ed1fdf2bb7523a9d907b821ca01dcb0eb59d75fb99d1e?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/4a609a70-84b0-473a-bd4d-b959c1248593?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A04%3A52Z&amp;rscd=attachment%3B+filename%3DQuestsExtended332.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A04%3A43Z&amp;ske=2026-08-01T20%3A04%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=oXZEYB5IvKnxZmtHXt6FKoAhVN2454TdcZoXTS%2FAmxY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MiwibmJmIjoxNzg1NjEyNTgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ec4nZ36PHFWXY1c4tmyFKhnto4xRkM6KLgBlWbjuKBY&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended332.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.3.1</h2></div><time datetime="2025-10-08T10:00:00.000000Z">8 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>128 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>-Changed “CraftItem” to be “CraftAnyItem” (matches published documentation)
+-Backend work to prevent a possible softlock in which a quest that was started “the QE way” is not accepted before the game is closed, therefore preventing them from ever seeing the quest.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9c6300ccad2da36c072ed1fdf2bb7523a9d907b821ca01dcb0eb59d75fb99d1e?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/0bcd5ea8-41cb-4da5-aa0b-545af326aff5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A28%3A42Z&amp;rscd=attachment%3B+filename%3DQuestsExtended331.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A28%3A03Z&amp;ske=2026-08-01T20%3A28%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xI6Q63MktjgSbo8Qekc%2FXly2x9p%2B3Cf%2BQlB9FUbQE18%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MywibmJmIjoxNzg1NjEyNTgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gRfqQQ0QitxKLjkZcUyr1gc_4SH7FA4iD2uWkIDAPf0&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended331.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.3.0</h2></div><time datetime="2025-10-05T07:40:00.000000Z">5 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>160 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>NEW FEATURES:
+-The mod is now “semi-compatible” with FIKA. See the new description tab, but the short version is this: If you “solo-play” FIKA, you should be totally good. If you actually play FIKA with multiple people (y’know, like you’re meant to), its uh… it’s better than last version.</p>
+<p>NEW QUEST CONDITIONS:
+“UseKey” (Works with keys and keycards)</p>
+<p>NEW SUBCONDITIONS:
+KeyId
+Zones (Technically existed but wasn’t utilized until now)</p>
+<p>Should be fairly bug-free. Massive appreciation to Austib once again for being the perfect tester. Every developer needs someone like him.</p>
+<p>This is the version that Guiding Light is planning to release with.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9c6300ccad2da36c072ed1fdf2bb7523a9d907b821ca01dcb0eb59d75fb99d1e?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/8f761495-0a65-4172-a269-72f2abba0512?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A37Z&amp;rscd=attachment%3B+filename%3DQuestsExtended330.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A23%3A18Z&amp;ske=2026-08-01T20%3A23%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KioyQj9VqwqZPvwkBsJ0VgombVOJL0zX2VA4mG%2Fc3KU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4MywibmJmIjoxNzg1NjEyNTgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gRfqQQ0QitxKLjkZcUyr1gc_4SH7FA4iD2uWkIDAPf0&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended330.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.2.4</h2></div><time datetime="2025-08-30T08:21:02.000000Z">30 August 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>686 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>-Fixed an error caused by vibe coding at 1am (I’m going to sleep…)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0ec2056c80af4ad8faa333205cc545b153525535f1878a70bc6e830bf76b9e6a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/959462149/1762a8d1-b792-4b37-be1b-6e9f749c0798?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A17%3A03Z&amp;rscd=attachment%3B+filename%3DQuestsExtended324.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A16%3A43Z&amp;ske=2026-08-01T20%3A17%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=k1bDZyURAFKD0Gr3XBVdiKQ0TxkapvYGMSeZIxB7Qww%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMjg4NCwibmJmIjoxNzg1NjEyNTg0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2qeE5Bp3a1AFltKdu6ke9S4563GNDrqeVxA_16WeGAM&amp;response-content-disposition=attachment%3B%20filename%3DQuestsExtended324.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.lightoftheworld.questsextended</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>18 April 2025</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Light-of-the-World/QuestsExtended" target="_blank" rel="noreferrer noopener">https://github.com/Light-of-the-World/QuestsExtended</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

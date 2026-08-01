@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>TraderGen · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>TraderGen</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/1dae3ce97d1b807fa661a222bd368e27190fd46a3c66bccf36df38e547cdb511.webp" alt="TraderGen thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>TraderGen</h1>
+    <p class="hero-teaser">A dependency/framework mod that lets anyone, including non-programmers, create custom traders for SPTarkov using simple JSON files.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0a375ce54aa7e016c44b8a0a6413dcbe3e3ae68147f4f5fd3d8cfb7f7f2330b6.webp" alt="" width="32" height="32">shaneeexd</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,026</dd></div>
+    <div><dt>Favourites</dt><dd>24</dd></div>
+    <div><dt>Mod lists</dt><dd>8</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="TraderGen content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>10</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>3</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>TraderGen - Custom Trader Framework</h1>
+<p><strong>TraderGen</strong> is a server-side framework for SPTarkov that lets anyone create custom traders using simple JSON files, no programming required.</p>
+<h2>What It Does</h2>
+<ul>
+<li>Loads trader packs from <code>user/mods/TraderGen/traders/</code></li>
+<li>Registers traders, assort items, loyalty levels, and custom quests automatically</li>
+<li>Supports <strong>story quests</strong> with multiple objectives (kill, handover, survive/extract)</li>
+<li>Handles all image routing and locale registration internally</li>
+</ul>
+<h2>Web Tool</h2>
+<p>Create trader packs visually with the <a target="_blank" class="external-link" href="https://tradergen-tool.netlify.app" rel="noreferrer noopener"><strong>TraderGen Tool</strong></a> — fill in forms, upload images, and export a ready-to-use zip.</p>
+<h2>Installation</h2>
+<ol>
+<li>Drag the <code>SPT</code> folder from the mod archive into your SPT installation directory.</li>
+<li>Start the server. TraderGen loads automatically and waits for trader packs.</li>
+</ol>
+<h2>Making a Trader Pack</h2>
+<ol>
+<li>Open the <a target="_blank" class="external-link" href="https://tradergen-tool.netlify.app" rel="noreferrer noopener">TraderGen Tool</a>.</li>
+<li>Fill in trader details, loyalty levels, items, and optional quests.</li>
+<li>Click <strong>Export</strong> to download a zip.</li>
+<li>Drag the <code>SPT</code> folder into your SPT install to test (ALWAYS use a new temporary profile when testing).</li>
+</ol>
+<blockquote>
+<p><strong>Do not rename any files or images after exporting.</strong> The mod references them by their generated names (e.g., <code>avatar.jpg</code>, <code>tpl_*.jpg</code>) - renaming will break the pack.</p>
+</blockquote>
+<h2>In-Game Export Feature</h2>
+<p>This allows you to export weapon builds, as well as armour, rig setups, and even containers with items in them and import them into the web app to add to your trader, making the process far easier.</p>
+<p>Read about it <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/SPT-TraderGen#export-feature" rel="noreferrer noopener">here</a>.</p>
+<h2>Publishing a Trader Pack</h2>
+<p>The TraderGen Tool export zip is already structured for distribution — users just drag the <code>SPT</code> folder into their install directory.</p>
+<p>When publishing:</p>
+<ol>
+<li><strong>State the dependencies</strong>: Your add-on requires <code>com.serenity.tradergen</code> v2.0.3+ and <code>com.wtt.commonlib</code> v2.0.20+ (WTT - CommonLib)</li>
+<li><strong>Do not include</strong> the TraderGen/WTT-CommonLib DLL or other authors’ packs in your zip</li>
+<li><strong>Include your assets</strong>: Ensure <code>assets/avatar.jpg</code> and any quest icons are present — <strong>do not rename them</strong>, the mod references them by their generated names</li>
+</ol>
+<h2>Dependencies</h2>
+<ul>
+<li>SPTarkov 4.0.13</li>
+<li>WTT - CommonLib 2.0.20+</li>
+</ul>
+<h2>More Information</h2>
+<p>View my framework mods and user created add-ons for them <a target="_blank" class="external-link" href="https://serenity-workshop.netlify.app" rel="noreferrer noopener">here.</a></p>
+<p>See the full documentation, JSON reference, and examples in the <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/SPT-TraderGen/blob/main/README.md" rel="noreferrer noopener">GitHub README</a>.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.0</h2></div><time datetime="2026-07-30T19:23:00.000000Z">30 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>115 downloads</span><span>249.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v2.2.0 Changelog</h2>
+<ul>
+<li>Assort items unlocked via quest are now properly integrated so they show within quest rewards</li>
+<li>Productions schemes can now also be set as a quest reward</li>
+<li>Web tool updated with a new <code>Schemes</code> tab for making custom hideout crafts</li>
+<li>Updated web tool so that assort items unlocked via quest in the assorts tab are auto synced to the quest reward section of the chosen quest</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OTg0ZTJhNTBmMmY0ZjVmZWQ2ZTc0NjU4ZDFiYzlkYWE6MTc4NTQzOTQwNA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1EUfxUExhJrysecuvI5eykXgrSOpjJOJv&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-07-05T15:51:00.000000Z">5 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>484 downloads</span><span>253.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>v2.1.0 Changelog</h1>
+<p><strong>New quest objectives</strong></p>
+<ul>
+<li>Find Item - track picking up a specific item in raid. Supports custom quest items created with ItemGen (Coming out soon along with Map Editor Lite).</li>
+<li>Leave Item at Location - place any item in a custom zone without an animation, similar to the vanilla “Farming - Part 1” quest.</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Fixed custom zones on Factory and Ground Zero so a single zone entry now works across both map variants (day/night, Sandbox/Sandbox_high).</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ODM1NDdkNGEwZTQxODZmMDkzYjA1ODAyNGUwNWE5OTY6MTc4MzI2NjY5Mg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1hoPJ2W2K-MJ2_j2C2RXsBt--ofoCG_oy&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.3</h2></div><time datetime="2026-06-28T17:58:00.000000Z">28 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>899 downloads</span><span>248.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added the ability to set any pre-requisite quest to unlock the trader if “Unlock by default” is false</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MGFkNzBjZjQyMjAxNDgzMTE4MWRkMGRmMjYyYjE0OGM6MTc4MjY2OTQ5Ng==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1s4wYOsxQgSaxfYNp4cjzCNAU8PA0i65B&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2026-06-26T14:18:00.000000Z">26 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>238 downloads</span><span>247.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>HOTFIX</strong></p>
+<ul>
+<li>Changed trader standing quest reward to use InvariantCulture</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZjZhYTYzNmU4MDdiMWIxZjYxYWU1MDk3NTFiZmQyNTc6MTc4MjQ4MzQ5NA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1gzI2rsK9Nw-sTpHrcnGMRGPgTsahfHeu&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-06-25T23:34:00.000000Z">25 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>16 downloads</span><span>248.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>HOTFIX</strong></p>
+<ul>
+<li>Hand in item objectives now correctly maps the item ID when no custom text is provided</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YjRhZTBjMTI2MWVjYTNhYTNjYzMzOTg3NmQxYjg1Zjg6MTc4MjQzMDQ3MQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1LzXVfm4TWYQcG2LW05TQERc-nvcI4ypf&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-06-25T21:36:00.000000Z">25 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>7 downloads</span><span>248.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Mod:</strong>
+You can make zone specific quests now (early version):</p>
+<ul>
+<li>Visit specific locations Objective</li>
+<li>Place markers in designated areas Objective</li>
+<li>Kill in designated areas Objective</li>
+</ul>
+<p>Trader insurance has now been implemented, also allowing to set the Min-Max return time, and the storage time.</p>
+<p>Custom pocket sizes can now be set as a quest reward.</p>
+<p><strong>Web App:</strong></p>
+<ul>
+<li>Added zone based quest objectives to the UI</li>
+<li>Updated assortment tab to allow easy ammo pack creation with auto fill</li>
+<li>If changing trader ID, the id’s within the quests will now automatically match the trader ID</li>
+<li>Added settings UI for insurance (if enabled)</li>
+</ul>
+<p><strong>Bug fixes:</strong></p>
+<ul>
+<li>Loyalty Coef levels now work</li>
+<li>Disabling “Buyer Enabled” now correctly disallows the trader to purchase items from the player</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MGFlYWI4NWFlOTZlODNiODI1NWYzOWEwMzZkY2U2MTc6MTc4MjQyMzM4MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1uY9C3iH5DtGH87HWqCocESGhCdtRKmPF&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.8.0</h2></div><time datetime="2026-06-24T14:47:00.000000Z">24 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>23 downloads</span><span>230.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Mod:</strong></p>
+<ul>
+<li>Allow setting quest objective for extract to use a specific extract only</li>
+<li>Added ability to give stash expansion as a quest reward</li>
+<li>Added ability to give skill xp as a quest reward</li>
+<li>Added ability to give weapon/equipment builds as reward</li>
+<li>Added ability to lock item assorts behind certain quests</li>
+<li>Added ability to stack item assorts (e.g. GP coins in bag)</li>
+<li><strong>(STILL WIP)</strong> Ability to give fully custom pockets as a quest reward</li>
+</ul>
+<p><strong>Web App:</strong></p>
+<ul>
+<li>Can now load vanilla traders for reference</li>
+<li>Small QOL features for item mapping</li>
+<li>Search bar in assortments and quests tabs for filtering</li>
+<li>Import from TraderGen added to quest item rewards</li>
+<li>Lock item assorts behind quest completion</li>
+<li>Added “amount” to item assorts/rewards</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MmJlMWRjMzUwYTg1YWFjNWM4NWI0MWU1MzIzY2MzZjk6MTc4MjMxMjQ1Mw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1Q4amgO4KogACzNSg8AlLlb375tQoJFu6&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.0</h2></div><time datetime="2026-06-19T00:48:00.000000Z">19 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>150 downloads</span><span>221.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>Additions:</h3>
+<ul>
+<li>Ability to state buy category whitelist for trader</li>
+<li>Ability to set dogtags as a barter option, with level/side</li>
+<li>Ability to make weapon presets in-game and export them to the tool</li>
+<li>Ability to export armour &amp; rig setups in-game and export them to the tool</li>
+<li>Ability to export any item container with items in it and export them to the tool</li>
+<li>Client patch for the last 3 above additions</li>
+</ul>
+<h3>Minor Changes</h3>
+<ul>
+<li>Currency &amp; 0 value (handbook) items are auto prohibited for traders to buy to stop overflow errors</li>
+<li>Client patch overrides IsExchangeable to allow traders to sell gear with items inside (this does not work the other way around - you cannot accidentally sell a full bag)</li>
+</ul>
+<h3>Web Tool:</h3>
+<ul>
+<li>Added a few more slot ids in the attachment dropdown list</li>
+<li>Added Buy Categories drop down in trader general tab - defaults to all if none selected</li>
+<li>Added import button in assortment list page for weapon builds/armour etc from the client side patch</li>
+</ul>
+<h2>How to use the export feature</h2>
+<p>Read <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/SPT-TraderGen#export-feature" rel="noreferrer noopener">this</a>.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OWM0ZDBkYjc0ZWIwODYyYzBkMGVlNTBmY2FmZWI4Y2E6MTc4MTgzMDE0Nw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1nnYBDncqKT0CYpCmxWdpg4CaInnlYcrc&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2026-06-18T03:09:00.000000Z">18 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>51 downloads</span><span>209.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>ADDED:</h1>
+<h2>Advanced Quest Objectives</h2>
+<ul>
+<li>Elimination quests with weapon restrictions (e.g. With Mosin Sniper)</li>
+<li>Elimination quests with equipment requirements (e.g. Wearing Paca)</li>
+<li>Distance-based kill requirements (Min/Max distance, cannot combine these)</li>
+<li>Headshot/body-part specific kills</li>
+<li>Time-of-day restrictions (day/night)</li>
+<li>Multiple combined restrictions (e.g. “Kill 5 Scavs on Woods at night using a PPSh”)</li>
+</ul>
+<h2>Raid-Specific Objectives</h2>
+<ul>
+<li>Kill X enemies in a single raid</li>
+<li>Progress that resets if raid conditions are not met</li>
+</ul>
+<h2>Trader Additions/Changes</h2>
+<ul>
+<li>Ability to add and modify advanced items (custom weapon builds - armour with plates etc.)</li>
+</ul>
+<h2>Tool</h2>
+<ul>
+<li>Web app updated to apply for the updates (QOL features to come)</li>
+</ul>
+<p>Much more to come, see the <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/SPT-TraderGen/blob/main/Roadmap.md" rel="noreferrer noopener">roadmap</a></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MjEzNTgxZmRlZWFmNzNmNGZiNTI2ZDVkNzU1MjA4ZGY6MTc4MTc1MjI5Mw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1mv2indxz49rIZshYjKrePCeOn3d_Ikd1&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2026-06-17T20:06:00.000000Z">17 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>43 downloads</span><span>205.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b03bcbb56a4ccc3e3ec15f684615ba4254c50e92bc6818fe7e7e1456d048e305?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1J-juH0rNLvI2ySoSIhuHsrq0CMmlkIzY&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="mr. kerman (en)"
+  data-search="mr. kerman (en) this mod adds mr. kerman to the game. he acts as a merchant and quest giver. help mr. kerman get to the bottom of the truth. thealexj"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="224"
+  data-updated="2026-07-28T10:13:43.000000Z">
+  <a class="card-image" href="../../../addon/84/mr-kerman-en/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/8cac163ae3ab764dd1af6f93f90fc77fd5fe5cb59e5ae1c719f545382311b211.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/84/mr-kerman-en/">Mr. Kerman (EN)</a></h2>
+    <p class="teaser">This mod adds Mr. Kerman to the game. He acts as a merchant and quest giver. Help Mr. Kerman get to the bottom of the truth.</p>
+    <div class="card-meta">
+      <span>by TheAlexJ</span>
+      <span>224 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="mr. kerman (ru)"
+  data-search="mr. kerman (ru) этот мод добавляет в игру мистера кермана. он выступает в роли торговца и выдаёт задания. помогите мистеру керману докопаться до истины. thealexj"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="54"
+  data-updated="2026-07-28T10:13:38.000000Z">
+  <a class="card-image" href="../../../addon/85/mr-kerman-ru/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/8cac163ae3ab764dd1af6f93f90fc77fd5fe5cb59e5ae1c719f545382311b211.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/85/mr-kerman-ru/">Mr. Kerman (RU)</a></h2>
+    <p class="teaser">Этот мод добавляет в игру Мистера Кермана. Он выступает в роли торговца и выдаёт задания. Помогите Мистеру Керману докопаться до истины.</p>
+    <div class="card-meta">
+      <span>by TheAlexJ</span>
+      <span>54 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="the apprentice — gunsmith trader"
+  data-search="the apprentice — gunsmith trader mechanic&#39;s former apprentice sells every gunsmith contract weapon pre-assembled. no workbench, no parts hunting — unlocked through a four-quest storyline. praetorianguard"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="yes"
+  data-ads="no"
+  data-downloads="64"
+  data-updated="2026-07-28T10:12:36.000000Z">
+  <a class="card-image" href="../../../addon/88/the-apprentice-gunsmith-trader/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/6036d518115c1419d12148ccf3ea3d58baf196c73a04a7f7ea1e9f7620879db6.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/88/the-apprentice-gunsmith-trader/">The Apprentice — Gunsmith Trader</a></h2>
+    <p class="teaser">Mechanic&#39;s former apprentice sells every Gunsmith contract weapon pre-assembled. No workbench, no parts hunting — unlocked through a four-quest storyline.</p>
+    <div class="card-meta">
+      <span>by PraetorianGuard</span>
+      <span>64 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      <span>AI disclosure</span>
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.serenity.tradergen</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>17 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>31 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ShaneeexD/SPT-TraderGen" target="_blank" rel="noreferrer noopener">https://github.com/ShaneeexD/SPT-TraderGen</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, as well as descriptions. The code is thoroughly reviewed by me before anything is published.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

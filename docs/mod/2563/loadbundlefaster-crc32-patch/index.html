@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>LoadBundleFaster (Crc32 Patch) · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>LoadBundleFaster (Crc32 Patch)</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/afff848fcebdd8095dd07c5013fbce90c22c872b1eb514d823fca70e5d23f4b5.webp" alt="LoadBundleFaster (Crc32 Patch) thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>LoadBundleFaster (Crc32 Patch)</h1>
+    <p class="hero-teaser">Drastically reduces bundle loading times for Remote/Headless connections by replacing legacy Mono code with hardware-accelerated (PCLMULQDQ) native instructions.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/d74a9153bcbc55be1bc31e84e184abc7ff9348ad589a0f1c832fe3cce9189ad1.webp" alt="" width="32" height="32">s8ga</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>13,414</dd></div>
+    <div><dt>Favourites</dt><dd>26</dd></div>
+    <div><dt>Mod lists</dt><dd>122</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="LoadBundleFaster (Crc32 Patch) content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3>Description</h3>
+<h1>LoadBundleFaster: Hardware Accelerated Bundle Loader</h1>
+<p><strong>LoadBundleFaster</strong> is a performance plugin that replaces SPT’s slow, software-based CRC32 checksum calculation with a high-performance native implementation using Intel’s <strong>PCLMULQDQ</strong> hardware instructions.</p>
+<h3>Performance Demo</h3>
+<p>Load time comparison: <strong>Native Patch vs. Stock SPT</strong> (Remote Connection)</p>
+<p><a target="_blank" class="external-link" href="https://raw.githubusercontent.com/s8ga/SPT_PatchCrc32/refs/heads/main/StaticAssets/SPT_Crc32PatchDemoVideo_OUTPUT.mp4" rel="noreferrer noopener">https://raw.githubusercontent.com/s8ga/SPT_PatchCrc32/refs/heads/main/StaticAssets/SPT_Crc32PatchDemoVideo_OUTPUT.mp4</a></p>
+<p><em>(Video: Left = Patched, Right = Unpatched. Observe the significant reduction in “Loading data” time.)</em></p>
+<h3>Scope of Optimization (Read Before Installing)</h3>
+<p>This mod is a specialized tool designed to solve a specific bottleneck. To manage expectations, please note:</p>
+<ul>
+<li><strong>What it SPEEDS UP:</strong> The <strong>“Bundle Loading”</strong> screen during the initial <strong>Client Startup screen</strong>. It optimizes the process where the client verifies Mod Bundles before reaching the main menu.</li>
+<li><strong>What it DOES NOT affect:</strong> This mod <strong>does not</strong> improve your raid loading times, nor does it increase your in-game FPS.</li>
+</ul>
+<h3>Who is this for? (Important!)</h3>
+<p><strong>This mod is specifically designed for: Remote / Headless Server Users.</strong></p>
+<p>Due to <a target="_blank" class="external-link" href="https://github.com/sp-tarkov/modules/blob/master/project/SPT.Custom/Utils/BundleManager.cs" rel="noreferrer noopener">how</a> SPT handles file verification, you only need this mod if your Client connects to the Server using <strong>ANY IP address OTHER THAN <code>127.0.0.1</code> or <code>localhost</code>.</strong></p>
+<h4>Why? The Technical Reason</h4>
+<ul>
+<li><strong>Localhost (Single PC / 127.0.0.1):</strong> When you play on the same PC as the server (127.0.0.1), SPT <strong>skips</strong> CRC32 verification entirely to protect your local files. This mod will have no effect because the slow function is never called.</li>
+<li><strong>Remote/Network Connection (Any IP other than 127.0.0.1):</strong> When connecting to a separate server PC, SPT must verify the integrity of cached bundles. It calculates a CRC32 checksum for every single file. The legacy Mono runtime does this very slowly, causing long load times. <strong>This mod fixes that bottleneck.</strong></li>
+</ul>
+<h3>Hardware Requirements</h3>
+<ul>
+<li>CPU: Must support SSE4.1 and PCLMULQDQ instructions.</li>
+<li>In human terms: Unless your CPU was stolen from a museum, you are fine.</li>
+<li>The Litmus Test: If your PC can even launch Escape From Tarkov (let alone play it), your CPU is already way too powerful for this project. If you are capable of getting “Head, Eyes,” you are capable of running this plugin.</li>
+<li>(Basically, any Intel CPU after 2010 or AMD CPU after 2011 works perfectly.)</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>Download the s8_SPT_PatchCRC32-v1.0.0-win-x86_64.7z
+` from the <a target="_blank" class="external-link" href="https://github.com/s8ga/SPT_PatchCrc32/releases/tag/v1.0.0" rel="noreferrer noopener">Releases Tab</a>.</li>
+<li>Extract the contents into your SPT root directory (where <code>BepInEx</code> is located).</li>
+<li>The plugin (<code>com.s8.spt_patchcrc32.dll</code>) and the native library (<code>libcrc32_pclmulqdq.dll</code>) will be placed automatically.</li>
+</ol>
+<h3>Technical Details (For the curious)</h3>
+<h4>The Bottleneck</h4>
+<p>Escape From Tarkov runs on a version of Unity using an older Mono runtime. This runtime’s JIT compiler lacks “Automatic Vectorization” (Auto-SIMD). As a result, standard C# CRC32 calculations are processed byte-by-byte (scalar), which is incredibly slow for large data bundles.</p>
+<p><strong>The Evidence (FlameGraph):</strong>
+<img loading="lazy" decoding="async" src="../../../assets/589d464137d0c00fa57c764cbf01f1a721d0d36f74c061d6291aadd28fa86e89.webp" alt="FlameGraph Analysis"></p>
+<ul>
+<li><strong>Right (Stock):</strong> The large red block shows <code>Utils.Crc32.HashToUInt32</code> consuming a massive amount of CPU time during the update loop.</li>
+<li><strong>Left (Patched):</strong> The bottleneck is gone. The calculation is instant.</li>
+</ul>
+<h4>The Solution: Native Bypass</h4>
+<p>We utilize <strong>Native DLL Interop</strong> to bypass the Mono JIT entirely.</p>
+<ol>
+<li><strong>Interop:</strong> The mod intercepts the <code>HashToUInt32</code> call.</li>
+<li><strong>Hardware Acceleration:</strong> It passes the data to a custom C DLL (<code>libcrc32_pclmulqdq.dll</code>).</li>
+<li><strong>PCLMULQDQ:</strong> We use the <em>Carry-less Multiplication</em> instruction set (adopted from zlib-ng/Intel). This allows the CPU to “fold” and process large chunks of data in parallel directly on the hardware, rather than in software loops.</li>
+</ol>
+<p><strong>Result:</strong> A verified <strong>1000x+ speed increase</strong> in raw calculation throughput compared to the SPT C# reference implementation. <a target="_blank" class="external-link" href="https://github.com/user-attachments/files/24854363/test-output.log" rel="noreferrer noopener">Proof</a></p>
+<hr>
+<p><strong>Source Code:</strong> <a target="_blank" class="external-link" href="https://github.com/s8ga/SPT_PatchCrc32" rel="noreferrer noopener">GitHub Repository</a>
+<strong>Credits:</strong> SPT Team, zlib-ng project, Intel Corporation.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-01-26T06:56:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0 &lt;=4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>13,414 downloads</span><span>16.9 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Initial release</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bd87208ffbaea1504e4e7602e7acad0e8bdd7c53a057af51550c60f9211c841c" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1141878192/ed32bae1-e771-4257-a8c1-3cd9bda5b522?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A32Z&amp;rscd=attachment%3B+filename%3Ds8_SPT_PatchCRC32-v1.0.0-win-x86_64.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A09Z&amp;ske=2026-08-01T21%3A12%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=P%2FcP4Qoy6XJz4iCro3nGNk75RUvoVBZ1mhXOv84IWv0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2NiwibmJmIjoxNzg1NjE1ODY2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZLj4syfh1J-z_PlP5GUF9DQIxd3Gpu0cmex04uwU8Zo&amp;response-content-disposition=attachment%3B%20filename%3Ds8_SPT_PatchCRC32-v1.0.0-win-x86_64.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.s8.sptpatchcrc32</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 January 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/s8ga/SPT_PatchCrc32" target="_blank" rel="noreferrer noopener">https://github.com/s8ga/SPT_PatchCrc32</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

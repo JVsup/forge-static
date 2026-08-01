@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Bosses Extravaganza · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Bosses Extravaganza</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/481c62ed15cb6a850701b5acace3bb98fb4b4c5ae7fe7b71891b1ec0d36e90f6.webp" alt="Bosses Extravaganza thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Bosses Extravaganza</h1>
+    <p class="hero-teaser">Ya&#39;ll want more chaos right? Tagilla in the Dorms? Set a configurable chance for each boss on all maps! Highly configurable</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0a5b77865854b9cc8e04ed8d63addd025c514c899c218dfe6ebbe2688106d25d.webp" alt="" width="32" height="32">Wrath_Jr</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,785</dd></div>
+    <div><dt>Favourites</dt><dd>21</dd></div>
+    <div><dt>Mod lists</dt><dd>24</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Bosses Extravaganza content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h2>Bosses Extravaganza</h2>
+<p>Bosses Extravaganza lets vanilla Tarkov bosses spawn on additional maps while preserving their original followers, escorts and spawn behavior.</p>
+<p>The goal is not to replace vanilla boss spawns, but to add extra boss encounters on top of them. Vanilla bosses, modded bosses and existing map spawns are preserved.</p>
+<h2>Features</h2>
+<ul>
+<li>Configurable boss spawn chances per map</li>
+<li>Configurable maximum number of additional bosses per raid</li>
+<li>Preserves vanilla boss spawns</li>
+<li>Preserves boss guards, escorts and followers</li>
+<li>Preserves modded boss spawns</li>
+<li>Boss-specific zone rules and overrides</li>
+<li>Smart zone validation using real spawn points</li>
+<li>Optional exclusion of problematic zones</li>
+<li>Special handling for heavy boss groups such as Kaban and Glukhar</li>
+<li>Server-side only</li>
+</ul>
+<h2>Gameplay Philosophy</h2>
+<p>Bosses Extravaganza is designed to create more intense and unpredictable raids without randomly dumping bosses anywhere.</p>
+<p>Heavy boss groups are restricted to strong, believable combat zones. Solo bosses have more flexibility. The mod tries to avoid invalid or broken spawn zones and keeps boss placement configurable.</p>
+<p>The  **DEFAULT ** config is set as following, but you can change everything at your liking :</p>
+<ul>
+<li>Maximum <strong>3 additional boss group per raid</strong> (configurable)</li>
+<li>Smaller bosses usually have a <strong>7% chance</strong>  (configurable)</li>
+<li>Large boss groups such as <strong>Glukhar</strong>, <strong>Kaban</strong> and the <strong>Goons</strong> usually have a <strong>4% chance</strong>  (configurable)</li>
+<li><strong>Labs and Labyrinth are disabled by default</strong>  (configurable)</li>
+<li>Vanilla spawns are preserved</li>
+</ul>
+<h2>Important</h2>
+<p>A value of <code>0</code> in the config means Bosses Extravaganza will not add that boss on that map. It is intended to avoid dupplicates of bosses. For example , <strong>Reshalla is 0 on Customs - it means SPT will use vanilla spawn behavior (and whatever %chance you setted with SVM or other ways. Partisan is 0% on Wood, Customs, Lighthouse, Shoreline.. and so on..</strong></p>
+<h2>Example:</h2>
+<p>With the 0 value, the map “Customs” (bigmap) can still spawn Reshala(bossBully), Partisan, and Goons(bossKnight) normally (either with vanilla values, SVM, or other ways of your choice).
+Bosses Extravaganza may additionally roll Killa, Sanitar, Kaban, Glukhar, etc., depending on your config.
+If a boss is already present in the raid data, the mod avoids adding a duplicate of that same boss.
+Same thing for Tagilla on Factory just below. 0 means the mod doesn’t touch the spawn value as he is the native vanilla boss on this map.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/223480be39aa3efc04038751a2c3a1ce706ccb6422bc4f8821dae4c711d14f2b.webp" alt="Bosses Extravaganza Config preview"></p>
+<p>##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<h2>Installation</h2>
+<p>Extract the archive into your SPT folder.
+Expected path:</p>
+<pre><code>SPT/user/mods/BossesExtravaganza/
+</code></pre>
+<p>The folder should contain:</p>
+<pre><code>BossesExtravaganza.dll
+config.json
+</code></pre>
+<h2>Compatibility</h2>
+<p>Built for SPT 4.0.13.</p>
+<p>This mod is server-side only.
+##+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<h2>Recommanded Mods :</h2>
+<p><strong>I highly recommand this mod to be used along :</strong></p>
+<ul>
+<li>Dynamic Maps : <a target="_blank" class="external-link" href="../../1431/dynamic-maps/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/1431/dynamic-maps</a></li>
+</ul>
+<p>and</p>
+<ul>
+<li>Boss Notifier : <a target="_blank" class="external-link" href="../../2543/bossnotifier/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2543/bossnotifier</a></li>
+</ul>
+<p>and you might want some airstrike support sh%t coming from the sky to help ya if some combo of bosses are spawning together (enjoy having Kaban, Glukhar, Reshalla, and Kollontay ((AND THEIR 24 COMBINED GUARDS!!!)) all spawning at Fortress (scav base) on Customs lmao.. but that’s totally up to you !</p>
+<p><img loading="lazy" decoding="async" src="../../../static/image-unavailable.svg" alt="Bosses Extravaganza Config preview"></p>
+<p><img loading="lazy" decoding="async" src="../../../static/image-unavailable.svg" alt="Bosses Extravaganza Config preview"></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/630092940323233aeec2c0e52011a50f818d92a987df754b93f13b1c623a82d2.webp" alt="Bosses Extravaganza Config preview"></p>
+<p>ENJOY !</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-06-21T19:50:00.000000Z">21 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,785 downloads</span><span>24.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>R E L E A S E    1.0</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/a88fd5a065c232e4e67770abe39837a5a32d395f7883bbc44611ce70534d9e59" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1275951319/1d8bc417-8f1c-4d94-85d9-39894b7d07bf?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A35%3A45Z&amp;rscd=attachment%3B+filename%3DBossesExtravaganza.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A35%3A18Z&amp;ske=2026-08-01T20%3A35%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wDak6uL6S%2FpWV7ufU%2FwF7lg429FY7xrAkLpinsMsW98%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUzMywibmJmIjoxNzg1NjEzMjMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lSZZTiWHia63nWXSvhslHDXz7ReQL-p-9Ed-2w2W5Uo&amp;response-content-disposition=attachment%3B%20filename%3DBossesExtravaganza.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.lorenzobecker.bossesextravaganza</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>21 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/LorenzoBecker/BossesExtravaganza" target="_blank" rel="noreferrer noopener">https://github.com/LorenzoBecker/BossesExtravaganza</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used as an assistance tool for parts of the development process, including debugging, refactoring suggestions, documentation, and release packaging. The mod’s thumbnail has been generated by AI aswell.</p>
+<p>The mod concept, gameplay design, configuration, testing, balancing and final implementation decisions were handled manually by the author.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

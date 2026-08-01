@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Old Colored Keycards · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Old Colored Keycards</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/13cf2f10f2589d7b6966324589df472969f49acb5fe81a93da237e7f7a5e6111.webp" alt="Old Colored Keycards thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Old Colored Keycards</h1>
+    <p class="hero-teaser">Changes colored keycards back to their infinite use state and returns their high flea pricing. Can also be customised to make them a certain limited amount of uses you decide.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/12fee22339a51c6cc86c2a29b80620c4ad1429dd7f1a6cc47e77731021eb8458.webp" alt="" width="32" height="32">Fums</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>7,058</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Old Colored Keycards content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>IMPORTANT -</strong> If you use LiveFleaPrices and intend to use the (default) setting of updating the prices of the keycards to the old Flea values, please read below. If you do not do what is documented, it will NOT update the prices.</p>
+<p>With this mod you are able to change the amount of uses a colored labs keycard has and also change the Flea Market value of it to that of pre 0.15. By default, the keycards will be unlimited use and cost a lot more to purchase on the flea, see the full values below.</p>
+<h3>CONFIGURATION</h3>
+<p>Inside the mod folder you will find a config folder followed by config.json. In here you can change two fields.</p>
+<p><strong>customUses</strong> -&gt; (Int eg 40): Change the amount of max uses you want your keycards to have. Note that setting it to infinite negates this.</p>
+<p><strong>infiniteUse</strong> -&gt; (Bool eg true) [Enabled by default]: If you wish to make your keycards infinite (or not) set this to true or false depending. As this mod focuses on reverting this change, this is enabled by default</p>
+<p><strong>updatePrices</strong> -&gt; (Bool eg true) [Enabled by default]: True will replace the existing keycard prices with ones from July-August 2024 (end of 0.14 wipe, just before keycard value was nuked and limit on use was implemented in 0.15)</p>
+<p>Current base prices are:</p>
+<p>TerraGroup Labs keycard (Blue): ₽6,100,000</p>
+<p>TerraGroup Labs keycard (Red): ₽11,300,000</p>
+<p>TerraGroup Labs keycard (Green): ₽11,500,000</p>
+<p>TerraGroup Labs keycard (Black): ₽1,650,000</p>
+<p>TerraGroup Labs keycard (Violet): ₽4,000,000</p>
+<p>TerraGroup Labs keycard (Yellow): ₽2,300,000</p>
+
+<p>IMPORTANT IF YOU USE LIVEFLEAPRICES &amp; OLDCOLOREDKEYCARDS UPDATED KEYCARD PRICES</p>
+<p>You must change your config\blacklist.json in LiveFleaPrices to include the keycard IDs. Basically, if you don’t blacklist anything, it should look like:</p>
+<p>[ “5c1d0c5f86f7744bb2683cf0”, “5c1d0efb86f7744baf2e7b7b”, “5c1d0dc586f7744baf2e7b79”, “5c1d0f4986f7744bb01837fa”, “5c1e495a86f7743109743dfb”, “5c1d0d6d86f7744bb2683e1f” ]</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2025-05-11T14:28:18.000000Z">11 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,479 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated to SPT 3.11 - No changes made to the actual mod just to the version as it was already working, thanks to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/25159-lightoftheworld/" rel="noreferrer noopener">Light of the World</a> for testing and confirming.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/60847ec9971e42bee77c0aed0466d3a4b53095b025a3c66eb9fcaa797d3059e0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/914972592/db18f1c0-8920-4fee-90e2-0a6ab1ae35f4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A36Z&amp;rscd=attachment%3B+filename%3DFums-OldColoredKeycards-1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A59Z&amp;ske=2026-08-01T21%3A14%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pNmezGcDckLbOxHjV1%2FjjWbYfpxyo6AqbpSca04sHa0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgxNywibmJmIjoxNzg1NjE1NTE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.D_Km1zKhOAtdVXXlxi_2f-jH0btM53zPlMngoQttKDM&amp;response-content-disposition=attachment%3B%20filename%3DFums-OldColoredKeycards-1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>10 January 2025</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/MrFums/OldColoredKeycards" target="_blank" rel="noreferrer noopener">https://github.com/MrFums/OldColoredKeycards</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

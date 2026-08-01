@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Moe-TradeMarker · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Moe-TradeMarker</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="Moe-TradeMarker thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Moe-TradeMarker</h1>
+    <p class="hero-teaser">Shows NPC trader-bought items, can block flea resale, and now supports QuickSell.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">moucashi</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>191</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    <div><dt>Mod lists</dt><dd>1</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Moe-TradeMarker content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Moe-TradeMarker helps you tell trader-bought items apart at a glance. When you buy something from an NPC trader, the mod shows a small trader badge on the item in your client, so you can quickly see where it came from and avoid mixing trader stock with raid loot or other items. By default, it can also stop marked trader-bought items from being listed on the flea market, making trader resale rules easier to enforce in your SPT profile.</p>
+<h2>What You Get</h2>
+<ul>
+<li>Small trader markers on items bought from NPC traders.</li>
+<li>Trader names in item hover tooltips.</li>
+<li>Optional flea market protection for marked trader-bought items.</li>
+<li>QuickSell (<code>com.swiftxp.spt.showmethemoney.quicksell</code>) support: restricted trader-marked items are kept out of QuickSell flea listings.</li>
+<li>Global and per-trader settings if you want to loosen or disable the rules.</li>
+<li>Client options for marker position and color.</li>
+<li>Expanded multilingual display support for player-facing marker text.</li>
+<li>Auto language mode that follows the detected game language when possible.</li>
+</ul>
+<h2>Installation</h2>
+<p>Extract the archive into your SPT root directory. The archive contains:</p>
+<p><code>BepInEx/plugins/Moe-TradeMarker/</code>
+<code>SPT/user/mods/Moe-TradeMarker/</code></p>
+<h2>Configuration</h2>
+<p>Server options are in <code>SPT/user/mods/Moe-TradeMarker/config.json</code>.
+Client display options can be changed from the BepInEx config menu.</p>
+<h2>Compatibility</h2>
+<p>Built for SPT 4.0+. Tested against SPTarkov 4.0.13.</p>
+<p>Player-facing text is localized for SPT-supported languages including English, Chinese, French, German, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, and Turkish. English is used as the fallback.</p>
+<p>Also compatible with QuickSell (<code>com.swiftxp.spt.showmethemoney.quicksell</code>) from Show Me The Money: Moe-TradeMarker prevents restricted trader-marked items from being passed into QuickSell flea listings.</p>
+<hr>
+<h2>中文说明</h2>
+<p>Moe-TradeMarker 的目标很简单：让你一眼看出哪些物品是从 NPC 商人那里买来的。购买后的物品会在客户端显示小型商人角标，你可以更轻松地区分商人货、战局掉落和其他来源的物品。默认情况下，它还可以阻止带有商人标记的物品上架跳蚤市场，帮助你在 SPT 存档中更稳定地执行“商人货不可转卖”的规则。</p>
+<h2>你会得到什么</h2>
+<ul>
+<li>NPC 商人购买的物品会显示小型商人角标。</li>
+<li>物品悬浮提示会显示对应商人名称。</li>
+<li>可选的跳蚤市场限制，防止商人货被转卖。</li>
+<li>已适配 QuickSell（<code>com.swiftxp.spt.showmethemoney.quicksell</code>）：受限制的商人标记物品不会通过 QuickSell 上架跳蚤市场。</li>
+<li>可以全局或按商人调整购买标记和跳蚤限制。</li>
+<li>可以在 BepInEx 配置菜单中调整角标位置和颜色。</li>
+<li>扩展玩家可见标记文本的多语言显示支持。</li>
+<li>Auto 语言模式会尽量跟随检测到的游戏语言。</li>
+</ul>
+<h2>安装</h2>
+<p>将压缩包解压到 SPT 根目录。压缩包包含：</p>
+<p><code>BepInEx/plugins/Moe-TradeMarker/</code>
+<code>SPT/user/mods/Moe-TradeMarker/</code></p>
+<h2>配置</h2>
+<p>服务端配置位于 <code>SPT/user/mods/Moe-TradeMarker/config.json</code>。
+客户端显示选项可在 BepInEx 配置菜单中调整。</p>
+<h2>兼容性</h2>
+<p>适用于 SPT 4.0+。源码中测试目标依赖版本为 SPTarkov 4.0.13。</p>
+<p>玩家可见文本已适配 SPT 支持的语言，包括英文、中文、法语、德语、意大利语、日语、韩语、波兰语、葡萄牙语、俄语、西班牙语和土耳其语等；英文作为回退语言。</p>
+<p>现已适配 Show Me The Money 的 QuickSell（<code>com.swiftxp.spt.showmethemoney.quicksell</code>）：Moe-TradeMarker 会阻止受限制的商人标记物品进入 QuickSell 的跳蚤上架流程。</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-06-12T10:44:00.000000Z">12 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>153 downloads</span><span>101.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Official 1.0.0 release: change the default trader marker color to pink (<code>1.00 0.50 0.50 1.00</code>) for better visibility and keep the documented default value in sync.</p>
+<p>1.0.0 正式版：将默认商人标记颜色调整为粉红色（<code>1.00 0.50 0.50 1.00</code>），提升可见性，并同步中英文 README 中的默认值说明。</p>
+<p>SHA256: 96D9C64005CE58E38DDCC4C135FAB2A02381FF6BE96C3187AA3EB7F48C492B12</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/96D9C64005CE58E38DDCC4C135FAB2A02381FF6BE96C3187AA3EB7F48C492B12" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/b58b3cce-7dc6-42ba-ab42-42e0cf2e3186?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A20Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A51Z&amp;ske=2026-08-01T21%3A25%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=C9I4i5O9j%2FoqOGxaDiBWkQFEOnnHXlkrwW94T1MiSv0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxNiwibmJmIjoxNzg1NjE2MDE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.obkhcHlGav8uIMlw-Dv0fM9HsSIbOegAWcwGMvPfefs&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.5.0</h2></div><time datetime="2026-06-12T10:07:00.000000Z">12 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2 downloads</span><span>101.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Add compatibility with QuickSell (<code>com.swiftxp.spt.showmethemoney.quicksell</code>) from Show Me The Money: restricted trader-marked items are no longer sent through QuickSell’s flea listing flow.</p>
+<p>新增对 Show Me The Money QuickSell（<code>com.swiftxp.spt.showmethemoney.quicksell</code>）的适配：受限制的商人标记物品不会再通过 QuickSell 进入跳蚤市场上架流程。</p>
+<p>SHA256: 81C525A05A1A623BC89B8DDFB8700361C3EFC29DA4C2B8DE46828F7A920D063A</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/81C525A05A1A623BC89B8DDFB8700361C3EFC29DA4C2B8DE46828F7A920D063A" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/4d2c8a49-b009-45c1-bb3c-fc0e321ab814?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A56Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.5.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A30Z&amp;ske=2026-08-01T21%3A24%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=JIi8Z2ISvCREfAcjGod%2BAIvBthzKEe0E55hedT%2BxL6s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxNiwibmJmIjoxNzg1NjE2MDE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.obkhcHlGav8uIMlw-Dv0fM9HsSIbOegAWcwGMvPfefs&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.5.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.3</h2></div><time datetime="2026-06-12T09:42:00.000000Z">12 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1 downloads</span><span>99.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Prevent restricted trader-marked items from opening the flea market listing flow.</p>
+<p>阻止受限的商人标记物品进入跳蚤市场上架流程。</p>
+<p>SHA256: 28C8263FB884552CED608DFD90988496CF1FBE94967C00D7C69E9B4A670595C4</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/28C8263FB884552CED608DFD90988496CF1FBE94967C00D7C69E9B4A670595C4" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/462212fe-1268-4ff3-a602-7392494197a7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A48Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.4.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A07Z&amp;ske=2026-08-01T21%3A01%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2BngZnpOJc7zxL806Bq4lT6NwVCr%2Ff%2F%2BtaS%2FG2zxKqvc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxNiwibmJmIjoxNzg1NjE2MDE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.obkhcHlGav8uIMlw-Dv0fM9HsSIbOegAWcwGMvPfefs&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.4.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.3</h2></div><time datetime="2026-06-12T07:53:00.000000Z">12 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4 downloads</span><span>94.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed trader marker tooltip display in the client.</p>
+<p>修复客户端商人标记提示显示。</p>
+<p>SHA256: 085F554887EF020B269D1BBA797FA87963D4C42ECC127D21EADB6613C705B29E</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/085F554887EF020B269D1BBA797FA87963D4C42ECC127D21EADB6613C705B29E" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/e2a4daba-13fc-4c00-8e46-645c33856ece?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A05Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.3.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A30Z&amp;ske=2026-08-01T21%3A11%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=R4mGbWKSexMqi9FrNSC2tpsj5jFelm3YlK5nNMJLZS0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxNywibmJmIjoxNzg1NjE2MDE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.c2YXT5iu6j-XWWIC8jm0hti9Uwu6-I73GyI4_Jcckqs&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.3.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.0</h2></div><time datetime="2026-06-12T02:20:00.000000Z">12 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>14 downloads</span><span>92.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Expanded multilingual localization support.</p>
+<p>扩展多语言本地化支持。</p>
+<p>SHA256: C8B904B483D7839CE6772DC92B78B6C85FA619CA3ED73C9DCF1D3D3C2D6C957A</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/C8B904B483D7839CE6772DC92B78B6C85FA619CA3ED73C9DCF1D3D3C2D6C957A" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/59c50c8e-031e-43ce-a9c4-9d8e98551db2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A48Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A03Z&amp;ske=2026-08-01T21%3A25%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KO9CT%2FoTlkz5k8%2BlXK4DFsqgGCEcx9K8r2c9KogyEPw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxNywibmJmIjoxNzg1NjE2MDE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.c2YXT5iu6j-XWWIC8jm0hti9Uwu6-I73GyI4_Jcckqs&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.2</h2></div><time datetime="2026-06-11T21:34:00.000000Z">11 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>7 downloads</span><span>68.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added language synchronization and localization support.</p>
+<p>添加语言同步与本地化支持。</p>
+<p>SHA256: F587C86C50C053DB2E06F6A946DB2E44C8329FC364EE5FE916D86F541B26B9EC</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/F587C86C50C053DB2E06F6A946DB2E44C8329FC364EE5FE916D86F541B26B9EC" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/8d8694c0-2c5c-4ad7-afa1-ac49872bafcb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A40Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A58Z&amp;ske=2026-08-01T21%3A26%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Z3GisVgzti73BBXD4gGyoL8Y2dN9W%2B9V6wB1eYixWR0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.6</h2></div><time datetime="2026-06-11T20:26:00.000000Z">11 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2 downloads</span><span>54.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed the trader marker badge display issue.</p>
+<p>修复商人角标显示问题。</p>
+<p>SHA256: 16455E4A6E5069717096BE824EE8D26F895BE22788D562A5E47EFBFF0BDBFB2F</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/16455E4A6E5069717096BE824EE8D26F895BE22788D562A5E47EFBFF0BDBFB2F" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/ad55c2cb-574e-4c00-8e9f-69260bddcc88?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A19Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.1.6.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A07Z&amp;ske=2026-08-01T21%3A01%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ctOJS1e8eASMYoARPD%2BMzfH5yAfUhpH%2FsYuZ76Ksr3I%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOCwibmJmIjoxNzg1NjE2MDE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MEdxbPhLhiCv9ORkaR8LwWLEuFmpndfPee38RJKBue4&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.1.6.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.0</h2></div><time datetime="2026-06-11T18:14:00.000000Z">11 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>8 downloads</span><span>47.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Forge release.</p>
+<ul>
+<li>Marks items purchased from NPC traders with <code>upd.tradeMarker.traderId</code>.</li>
+<li>Blocks marked trader-bought items from flea listing by default.</li>
+<li>Adds configurable server switches for purchase marking and flea restrictions.</li>
+<li>Includes the client-side marker and tooltip support when built with SPT client references.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4323774E6F90BA3CA8883C083091AF2F1495B7616C39F3DDE6C4BFA25DD6A176" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1266400674/70f98c15-bb4e-4bfc-95b4-2f23060510a6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A18%3A45Z&amp;rscd=attachment%3B+filename%3DMoe-TradeMarker-0.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A17Z&amp;ske=2026-08-01T21%3A18%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=vVxEUkcDVJ8P9jWfTW3muPNG9CO%2BcgvuZIcEYHf%2Bpds%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DMoe-TradeMarker-0.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>moe.trade.marker.server</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>11 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/moucashi/moe-trade-marker" target="_blank" rel="noreferrer noopener">https://github.com/moucashi/moe-trade-marker</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

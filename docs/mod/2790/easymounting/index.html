@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>EasyMounting · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>EasyMounting</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/565f740e88e6963666a43e348ebe27933cd74d41e36f3a41ade4673ad2ae4559.webp" alt="EasyMounting thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>EasyMounting</h1>
+    <p class="hero-teaser">No more existential dreads while trying to mount your weapon</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c9c669d7102ca042ddc0d42b8fbc88ad89c2119c17e1618a6c7b80b00857dd50.webp" alt="" width="32" height="32">maschine</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,537</dd></div>
+    <div><dt>Favourites</dt><dd>30</dd></div>
+    <div><dt>Mod lists</dt><dd>55</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="EasyMounting content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h2>Overview</h2>
+<p>An SPT mod bundle that makes bipod deployment and weapon mounting (ledges, windowsills,
+railings, etc.) far less picky about the surface. Two parts, shipped together:</p>
+<ul>
+<li><strong>Server mod</strong> - relaxes the surface-detection tolerances stored in <code>globals.json</code> via simple presets. Handles the vast majority of cases on its own.</li>
+<li><strong>Client plugin</strong> - patches the handful of mounting checks hardcoded in the game client that no server config can reach, up to and including some deliberately “cursed” bypasses.</li>
+</ul>
+<p>Neither strictly requires the other, but they’re designed to be used together - some spots only
+become mountable with both installed.</p>
+<h2>What it does</h2>
+<p>Vanilla EFT is fairly strict about what counts as a valid mounting point: the surface angle
+tolerance, accepted height range, and detection resolution in <code>globals.json</code> under
+<code>MountingSettings</code> reject a lot of real-world edge cases (tilted ledges, thin railings, uneven
+cover). The server mod overwrites those values in memory at server startup according to the
+preset you pick, plus widens how far up/down you can look while mounted. The client plugin then
+covers what’s left: railings whose collision lives on a physics layer the detection rays never
+query, spots too tight for the body-clearance check, and even paper-thin colliders that have no
+top surface for the scan to find at all.</p>
+<h2>Installation</h2>
+<p>As usual, unzip to your SPT directory.</p>
+<p>All details in <a target="_blank" class="external-link" href="https://github.com/maschine34675/EasyMounting/blob/main/README.md" rel="noreferrer noopener">README.md</a></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/8ac7dc48bce844d1a7ea294499d571aad047855afdea3842d21f0aa91764e603.webp" alt="example"></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/4ca978f6d584cbec2882e6059cedc182b063d1ff0000825d800322ac3c334cd3.webp" alt="example"></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/6340074868c6a2c7a782e0b822d18c4e0704c412b04b2ffa6072745cab1dcc33.webp" alt="example"></p>
+<hr>
+<p>Let me know if you run into any problems or have suggestions for improvement.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-07-23T19:12:00.000000Z">23 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,090 downloads</span><span>31.8 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added an option that generates a support package containing all the necessary information for debugging.</li>
+<li>If you’re not having any issues with the mod, you don’t need to update it.</li>
+</ul>
+<p><strong>How to use:</strong> Configure the hotkey in the F12 menu; when you press it, a 10-second timer starts. Try to mount at the appropriate location; the folder containing the ZIP file will open automatically once the timer expires. Send it using a file-sharing service of your choice.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/95fd617f5d98f33196f95d884b720010a5f87d1a34ef67d257ab32bdc9c35ece?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/a726951c621899e770ffcdfc8232e1c253a82e4cca325a5a6d2fb2d17cd19214?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/312baa4d-94c5-4964-b087-2ec191abdef9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A49Z&amp;rscd=attachment%3B+filename%3DEasyMounting-1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A39Z&amp;ske=2026-08-01T21%3A25%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xn%2FfzxB6ga27%2BaysuXcZAbiKJOPPq37aPoDEGPyWSGk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&amp;response-content-disposition=attachment%3B%20filename%3DEasyMounting-1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-07-10T19:10:00.000000Z">10 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,384 downloads</span><span>25.0 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li><strong>New bundled client plugin:</strong> unlocks mounting spots that no server setting could ever reach.</li>
+<li><strong>Thin railings are finally mountable:</strong> some railings have paper-thin collision the game could literally never detect as a surface; the plugin now handles these.</li>
+<li><strong>Tight spots now work:</strong> spots that are geometrically valid but too tight for vanilla anti-clip check now mount properly</li>
+<li><strong>Fixes a vanilla weapon bug:</strong> weapons with broken mounting data (e.g. the TRG M10) were basically unmountable; they now rest properly on the surface.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/67b9fde6abaf72a808424b41e11437c41dd681c9df3afc1e428c30363eb425fa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/8cd6c3ec397176d3020d34d37aae19e3d72b7100c5c2ca8e6da3564161b3ffa5?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/4de2b0ec-e6c2-400a-a959-8bab9a50a1e2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A53Z&amp;rscd=attachment%3B+filename%3Dmaschine-EasyMounting-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A23Z&amp;ske=2026-08-01T21%3A09%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ibnYzecjN6g7bmjWrIEJhwKZGcijrHVQTEm8NbiO1WM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&amp;response-content-disposition=attachment%3B%20filename%3Dmaschine-EasyMounting-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-02T16:01:00.000000Z">2 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,063 downloads</span><span>11.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cee087997d338783770804b24f705a609fb7ffd0179d0538d2cef7c5c4d7c28e" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1286395592/10336a0f-360f-47f7-9ff5-54503ceb258e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A45Z&amp;rscd=attachment%3B+filename%3Dmaschine-EasyMounting-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A30Z&amp;ske=2026-08-01T21%3A19%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=glokUy6qA2CsFU0ndQ7sg2SkmLUAY9wkIRuEQmj2oPY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM1MCwibmJmIjoxNzg1NjE2MDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TlJCy_bWbgc0tbn4UCq9gDKjOU3IlIEcwyABKqhJZaU&amp;response-content-disposition=attachment%3B%20filename%3Dmaschine-EasyMounting-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.maschine.easymounting</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>2 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>30 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/maschine34675/EasyMounting" target="_blank" rel="noreferrer noopener">https://github.com/maschine34675/EasyMounting</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to find the correct classes/methods to patch in the game’s source code. The thumbnail is AI generated.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

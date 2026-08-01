@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Adjust Insurance Prices · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Adjust Insurance Prices</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/1ca902ae84b529eafcc4d740a8075c27991e35a8e3dff6703181b1ddccec2518.webp" alt="Adjust Insurance Prices thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Adjust Insurance Prices</h1>
+    <p class="hero-teaser">Easily adjust insurance prices globally, or by item category.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/d9ff4acaea0371ae6c5f351946ce0be57d23da322fbcd8abc899c28c7f2041cf.webp" alt="" width="32" height="32">Xenyx</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>137</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    <div><dt>Mod lists</dt><dd>2</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Adjust Insurance Prices content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Ever feel like insurance cost is insignificant, or cheese deaths with <a target="_blank" class="external-link" href="../../2394/instant-insurance/" rel="noreferrer noopener">Instant Insurance</a> (like me) so you get everything back instantly, but want there to be some penalty for dying? This mod lets you adjust how much traders charge to insure your items globally, or by item category.</p>
+<h3>What you can configure in <code>config.jsonc</code></h3>
+<p>Set a global multiplier for all items, and optionally override it for any of these categories:</p>
+<ul>
+<li>Weapons</li>
+<li>Weapon attachments</li>
+<li>Night vision / thermal headwear</li>
+<li>Body armor (vests)</li>
+<li>Armor plates</li>
+<li>Rigs (armored and unarmored)</li>
+<li>Backpacks</li>
+<li>Helmets &amp; hats</li>
+<li>Helmet attachments</li>
+<li>Face masks &amp; covers</li>
+<li>Headsets</li>
+<li>Eyewear</li>
+</ul>
+<p>Any category you don’t override uses the global multiplier, so you only need to configure what you care about. You can even make insurance cheaper if you’re really down bad. Accepted values range from 0.1× to 25×.</p>
+<h3>Why so many categories?</h3>
+<p>Tarkov groups a lot of gear under a few broad parent types, so a single “armor”
+setting would group helmets, plates, eyewear and face covers all together.
+I also noticed some items are deceptive, such as night vision counting as a weapon mod.</p>
+<h3>Installation (server)</h3>
+<ul>
+<li>Extract the contents of the <code>.zip</code> into your SPT directory so it merges into <code>SPT/user/mods/</code>.</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-07-24T05:17:00.000000Z">24 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>87 downloads</span><span>10.6 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Important</h1>
+<p>The <code>config.jsonc</code> from version 1.0.0 is <strong>not</strong> compatible with this version. You will have to re-input your custom values into the new config file supplied with this release.</p>
+<h2>Changes</h2>
+<ul>
+<li>
+<p>Added new insurance price override categories for armored and unarmored versions of rigs, face covers and headwear (helmets/hats). Previously, all armored and unarmored items of these types were grouped together.</p>
+</li>
+<li>
+<p>Added config file versioning, so the use of old/unsupported config files with newer mod versions will warn the user at server start.</p>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cb21315afefb16636877b154725a1d7c0657ea376e471f516f0e57edacd284ce" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1307615979/895d4da4-f47c-4cf2-af69-e3534d0ec525?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A24%3A10Z&amp;rscd=attachment%3B+filename%3DAdjustInsurancePrices-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A23%3A56Z&amp;ske=2026-08-01T20%3A24%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KmTsZFn%2B4%2BYDRsto43ARgxbfLX%2FggNA5uBtp6KeBbek%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEyMiwibmJmIjoxNzg1NjEyODIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1bUUH-4ig3miRUwUQHpjgyAue5sI3wYh-02I1byLJgE&amp;response-content-disposition=attachment%3B%20filename%3DAdjustInsurancePrices-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-21T13:27:00.000000Z">21 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>50 downloads</span><span>8.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial 1.0.0 release.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ff11024e269fdf12fda361de2d514d71849d8ddb9e87474f2b87c09fd6ef59f3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1307615979/10833178-d98e-4edf-96e2-a56cde9a3ce6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A28%3A51Z&amp;rscd=attachment%3B+filename%3DAdjustInsurancePrices-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A28%3A40Z&amp;ske=2026-08-01T20%3A28%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=GBKckIDwRv9TXDhteCMQn0WsibY%2BmKCBvwGhfGfGUWs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEyMywibmJmIjoxNzg1NjEyODIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9pf01yTrzWPZg_I4aXcI-wJOSBrywhNZr2P2C6lmMA&amp;response-content-disposition=attachment%3B%20filename%3DAdjustInsurancePrices-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.xenyx.adjustinsuranceprices</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>21 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/XenyxNZ/AdjustInsurancePrices" target="_blank" rel="noreferrer noopener">https://github.com/XenyxNZ/AdjustInsurancePrices</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p><strong>AI usage</strong>: AI (Claude) was used during development as an assistant, primarily for:</p>
+<ul>
+<li>
+<p>Code review and debugging.</p>
+</li>
+<li>
+<p>Analyzing the game’s item database to map base-class hierarchies for item categories.</p>
+</li>
+</ul>
+<p>I have several years of programming experience across multiple languages, and have a complete understanding of the code used in this mod. The mod’s concept and design are my own.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

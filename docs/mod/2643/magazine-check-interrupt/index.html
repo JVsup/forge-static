@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Magazine Check Interrupt · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Magazine Check Interrupt</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/1a3123bac500fbbccdca0e6bce7796504c165ff0be7ea049eadd060d26babdad.webp" alt="Magazine Check Interrupt thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Magazine Check Interrupt</h1>
+    <p class="hero-teaser">Seamlessly transition from a magazine check to a reload!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/48fc1216029eb67a29c7ed64ac5124f25ab2ef57a56f5a042451f1f5e83504b4.webp" alt="" width="32" height="32">ozen</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>10,003</dd></div>
+    <div><dt>Favourites</dt><dd>59</dd></div>
+    <div><dt>Mod lists</dt><dd>148</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Magazine Check Interrupt content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>Mag Check Interrupt</strong> allows you to interrupt a magazine check mid-animation and transition into a reload.</p>
+<hr>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><h4>Features</h4>
+<ul>
+<li>Continue directly into a reload, no need to wait for the magazine check animation to finish</li>
+<li>Finish the magazine check animation if no action is taken</li>
+<li>Slow down animation during the reload window, to give you ample time to decide if you need to reload. Animations vary per magazine and some can be fast</li>
+<li>Configuration is available client side</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/389b1694164f1e2576e974dbf1f0e8833adbd106ffa4ca761e61426c19f53ce8.webp" alt="Showcase gif"></p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h4>Installation</h4>
+<ul>
+<li>Extract the contents of the .zip archive into your SPT folder.</li>
+</ul>
+<h4>Note to Fika users:</h4>
+<ul>
+<li>Must be installed on the <strong>host</strong> and <strong>all clients</strong></li>
+<li>Configuration is set by the host</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/f8a882020797ae7b0f90dc418fa7bf212be49d7205750ccf2c1ace20c747fbae.webp" alt="Installation">
+Thank you <span class="dead-link">DrakiaXYZ</span> for the gif</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><h4>Configuration</h4>
+<h4>Server Side</h4>
+<p>In the BepInEx configuration manager <code>F12</code></p>
+<ul>
+<li><code>Enable Slow Animation</code> - Slow down the magazine check animation for a brief moment. Default is <code>true</code></li>
+</ul>
+<p>Advanced Configuration</p>
+<ul>
+<li><code>Reload Window Start</code> - How early you can reload during the magazine check animation, in normalized time</li>
+<li><code>Reload Window End</code> - How late you can reload during the magazine check animation, in normalized time</li>
+<li><code>Slow Percentage</code> - Multiplier for the magazine check animation speed when Slow Animation is enabled</li>
+<li><code>Slow Animation Start</code> - When to start slowing down the magazine check animation, in normalized time</li>
+<li><code>Slow Animation End</code> - When to restore speed of the magazine check animation, in normalized time</li>
+<li><code>Smoothing Max Delta</code> - Max delta for the smoothing of the slow animation. A higher value slows/restores the animation faster</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><h4>Compatibility</h4>
+<ul>
+<li>Compatible with <a target="_blank" class="external-link" href="../../2326/project-fika/" rel="noreferrer noopener">Project Fika</a>. Must be installed on the <strong>host</strong> and <strong>all clients</strong></li>
+<li>Compatible with <a target="_blank" class="external-link" href="../../1342/ui-fixes/" rel="noreferrer noopener">UI Fixes</a>’ Reload in Place feature</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><h4>Known Issues</h4>
+<ul>
+<li>Animation events involving sounds may still fire on reload, resulting in duplicated sounds</li>
+<li>Timings may vary slightly depending on the weapon/magazine animation</li>
+</ul>
+<h4>Support</h4>
+<p>If you find any bugs, or have feature suggestions, feel free to post them on the comment section, or open an issue on GitHub, or most preferably through the <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1374428464999829555" rel="noreferrer noopener">SPT Discord, <code>ozen</code></a></p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Credits</div>
+<div class="tab-content"><h4>Credits</h4>
+<ul>
+<li>Thanks to <span class="dead-link">Tyfon</span> for lending me his Fika config sync code!</li>
+</ul></div></div></div>
+<hr>
+<p>If you enjoy my work, you can <a target="_blank" class="external-link" href="https://ko-fi.com/ozenm" rel="noreferrer noopener">buy me a coffee</a> ☕</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-04-24T19:02:00.000000Z">24 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>7,325 downloads</span><span>18.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added:</p>
+<ul>
+<li>Reload mode options for keybind conflict</li>
+</ul>
+<p>Modified:</p>
+<ul>
+<li>Recompile for Fika 2.2.4 and up</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f3b931196663c2f02caceedb14ef9c58fac2cb085dfe555eddd68f424cb5d42a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1189709000/005a68be-8261-4bad-981c-e3e15aacf294?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A02Z&amp;rscd=attachment%3B+filename%3Dozen-MagCheckInterrupt-1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A47Z&amp;ske=2026-08-01T21%3A06%3A02Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=04oX%2F16gaIUy%2BbGPht7uRlAw8eTNF3VaEqYyttNqiBQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3Dozen-MagCheckInterrupt-1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-04-02T19:02:00.000000Z">2 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,843 downloads</span><span>18.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added:</p>
+<ul>
+<li>Compatibility with UI Fixes’ Reload in Place feature</li>
+<li>Support for conflicting reload and ammo check keybinds</li>
+<li>Ability to quick reload during magazine check</li>
+</ul>
+<p>Fixed:</p>
+<ul>
+<li>Not working for weapons with top-loading support (bolt actions, sks, etc.)</li>
+<li>Mag check animation hidden while sprinting</li>
+<li>Weapon breaking in the hideout with Fika installed</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/880a33ca55a64b2ea9fee6ead7f021e47fce568906e7a3d18dc648ac824a42d1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1189709000/af580d92-e920-4b58-8b26-defcb77b523d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A54Z&amp;rscd=attachment%3B+filename%3Dozen-MagCheckInterrupt-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A10Z&amp;ske=2026-08-01T21%3A15%3A54Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=37CWC5aQuZlqIZwzvkLMGVibC5VVFSF8rq99QabBrXk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3Dozen-MagCheckInterrupt-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-28T18:47:00.000000Z">28 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>835 downloads</span><span>13.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d228350c41b077a9bfe18ae9a521f4079f51e2baea5be2cd9eed04a2c42a7e64?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1189709000/f117c3cd-0d28-483d-b3ce-d950281fa183?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A23Z&amp;rscd=attachment%3B+filename%3Dozen-MagCheckInterrupt-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A18Z&amp;ske=2026-08-01T21%3A03%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=XD56fwTePSI6gWdZDPCrYYZhaK%2BvX9ftMpOzOB%2Btx5E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3Dozen-MagCheckInterrupt-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.ozen.magcheckinterrupt</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ozen-m/SPT-MagCheckInterrupt" target="_blank" rel="noreferrer noopener">https://github.com/ozen-m/SPT-MagCheckInterrupt</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SmartAction · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SmartAction</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/de96e4ae8179efcd1744ff365c25d66440e4ff0b66e1aa805c85f8b01c41b606.webp" alt="SmartAction thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>SmartAction</h1>
+    <p class="hero-teaser">Increases or decreases healing/consumable usage speed. Auto-cancels when fully healed. Quickly cancel CMS/Surv12 surgery in panic moments. Allows walking during surgery and sprinting while healing or using consumables.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/5f1c070078a6f4e2332fecef2ae3d5dadf75258f93c10450af62434b4c9d1cd0.webp" alt="" width="32" height="32">Netnikogo</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>13,054</dd></div>
+    <div><dt>Favourites</dt><dd>1</dd></div>
+    <div><dt>Mod lists</dt><dd>2</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SmartAction content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="youtube-lite" data-video-id="69hObBjUO6E" data-embed-url="https://www.youtube-nocookie.com/embed/69hObBjUO6E?autoplay=1"><img src="../../../assets/543a13d5d1430db919f5c7a3f9b3055c077d8ce64333b4a7bafcfee77d5a307b.webp" alt="YouTube video thumbnail" loading="lazy" decoding="async"></div>
+<p><strong>Adaptive healing speed</strong></p>
+<p><strong>Dynamically speeds up or slows down speed consummable/healing on your current movement state (Idle / Walk / Sprint)</strong></p>
+<p><strong>Auto‑finish healed</strong></p>
+<p>The mod automatically detects when the targeted body part <strong>is fully healed</strong> in finish. (The premature end of healing triggers the treatment of bleeding, fractures, etc.)</p>
+<p><strong>Quick‑cancel surgery</strong></p>
+<p>Ability to drop CMS and Surv12 from your hands in <strong>emergency situations</strong> if an enemy is approaching, and recover your weapon twice as fast. (to cancel mouse right fast interval = 200ms)</p>
+<p><strong>Movement</strong></p>
+<p>Can sprint when use consommable / healing. Can walk and sprint when surgery</p>
+<p>In the F12 menu, you can adjust the speeds :</p>
+<p>10 = Vanilla, no speed modification</p>
+<p>15 means x1.5 etc […]</p>
+<p>The mod’s logic is designed so that when you’re stationary, you take the time to heal or use consumables.</p>
+<p>When you move, it’s much harder to heal, so the speed slows down, and when you run, it’s even worse.</p>
+<p>Therefore, the logic is as follows: <strong>Stationary = x1.5 (default), Walk = Vanilla, Sprint = x0.9</strong>.</p>
+<p>Installation :</p>
+<p>Exctract SmartAction directory containing DLL to `\\BepInEx\\plugins\\</p>
+<p><strong>Troubleshooting / Debug Mode</strong></p>
+<p>If you encounter any <strong>issues</strong>, you can enable debug mode by editing the file:</p>
+<p><code>\\\\BepInEx\\\\plugins\\\\SmartAction\\\\debug.cfg</code></p>
+<p>Set the value to: <code>true</code></p>
+<p>his will generate a <code>.txt</code> log file in the same folder to help identify the problem.</p>
+<p>Don’t leave debug mode enabled all the time — it may impact performance</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-05-12T22:20:32.000000Z">12 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,054 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/33dd1d5bd08f976478cb909a9c73e58262c9aea46a0d80d75d8f03572d8ab1ef?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/981606701/4b8fc29d-771a-45b2-8960-9ee6b8b77a58?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A29Z&amp;rscd=attachment%3B+filename%3DSmartAction.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A05Z&amp;ske=2026-08-01T20%3A59%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=n%2BHjUv5iTYtEGNix%2FCQFPgoFJY%2BSe3H6YNbX6LhtWhw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk2OCwibmJmIjoxNzg1NjE1NjY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UrjifmoIGrXMleo0V963E6EDV8vyOqKXKzzo_sNqFQU&amp;response-content-disposition=attachment%3B%20filename%3DSmartAction.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>12 May 2025</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/yox92/SmartAction" target="_blank" rel="noreferrer noopener">https://github.com/yox92/SmartAction</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

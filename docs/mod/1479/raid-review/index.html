@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Raid Review · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Raid Review</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/706e2698a99c0793ef47ae498aff8eccb84f548f7c12925eb4210c0724edd34e.webp" alt="Raid Review thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Raid Review</h1>
+    <p class="hero-teaser">A web-based post raid replay system of your SPT raids; detailed replay system with heatmap overlay, review kills, lootings, positional data, and just get a general understanding of what was going on in your raids!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0888fd5809a3f95856c4a1d170366443287ff376170aeb4f0ba23631a565a1ec.webp" alt="" width="32" height="32">ekky</span>
+      <span class="author"><img src="../../../assets/032e8eb1dc5bfb128bea205be7fad106914be43e0f5f7e1dc8fbe3aa5304e167.webp" alt="" width="32" height="32">Chazut</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>48,689</dd></div>
+    <div><dt>Favourites</dt><dd>56</dd></div>
+    <div><dt>Mod lists</dt><dd>123</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Raid Review content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>16</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="youtube-lite" data-video-id="3zeOvJPrJFg" data-embed-url="https://www.youtube-nocookie.com/embed/3zeOvJPrJFg?autoplay=1"><img src="../../../assets/c0e554bc5ae0a41425bf15ec380c5ea8e10db67e02412c73b3a4f583b01b2e13.webp" alt="YouTube video thumbnail" loading="lazy" decoding="async"></div>
+<blockquote>
+<p>This mod has been updated by Chazut recently, thank you so much for your work to get it compatible with 4.0. Sorry I have not had a chance to work on this for quite sometime, but Chazut is a legend for making this happen. Enjoy the mod 😊 - Ekky</p>
+</blockquote>
+<p>To use this mod, make sure the SPT Server is running, play a few raids with the mod installed of course.</p>
+<p>Once you’ve played a few raids, open the web client from in-game by hitting <strong>F5</strong> or opening your browser, and going to <a target="_blank" class="external-link" href="http://127.0.0.1:7829" rel="noreferrer noopener">http://127.0.0.1:7829</a>.</p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>Download your compatible version from the ‘versions’ tab.</p>
+<p>Each particular version will have specific installation / upgrade notes, please refer to this before commenting!</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Fika Install</div>
+<div class="tab-content"><p>Raid Review is compatible with <strong>Fika</strong> (both regular hosted and headless).</p>
+<p><strong>Regular Fika (host + clients)</strong></p>
+<ul>
+<li>Install Raid Review normally on the <strong>host’s</strong> machine (the player who creates the lobby)</li>
+<li>The host records everything — all bots, all connected players, kills, loot, positions</li>
+<li>Connected players don’t need Raid Review installed</li>
+</ul>
+<p><strong>Fika Headless</strong></p>
+<ul>
+<li>Install Raid Review on the <strong>headless client</strong> only</li>
+<li>The headless records all bots and connected human players</li>
+<li>Since the headless has no “main player”, the raid type will always show as <strong>PMC</strong></li>
+<li>All connected players appear as USEC/BEAR PMCs in the leaderboard (the mod can’t distinguish them from AI PMCs)</li>
+<li>Everything else works normally: map replay, kills, loot, bot behavior, charts</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: Only install on ONE machine — either the host or the headless, not both.</p>
+</blockquote></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Leaderboard</div>
+<div class="tab-content"><p>The post-raid leaderboard gives you a full breakdown of everyone in the raid at a glance.</p>
+<ul>
+<li><strong>Faction badges</strong> — Color-coded side column (USEC, BEAR, Scav, Raider, etc.) with a “Player” badge for you</li>
+<li><strong>Status column</strong> — KIA or Alive, no ambiguity</li>
+<li><strong>Sortable columns</strong> — Click to sort by Level, Kills, Looted items, or Accuracy</li>
+<li><strong>Accuracy bars</strong> — Mini progress bars color-coded green/yellow/red</li>
+<li><strong>Kill relationships</strong> — Click any row to highlight their victims (green) and killer (red); dead players show “killed by X (weapon, distance, bodyPart)”</li>
+<li><strong>Loot value</strong> — “Value” column shows total handbook price of items looted; “Spawn Val.” shows bot gear value at spawn</li>
+<li><strong>Your row highlighted</strong> — Gold left border accent so you always find yourself</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/8d13c5408e657e4269a3eac0caca20d80431dca02019c6e83bccfc4896af619b.png" alt="Leaderboard"></p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Map Replay</div>
+<div class="tab-content"><p>Replay the entire raid on an interactive map with full positional tracking.</p>
+<ul>
+<li><strong>Animated replay</strong> — Watch every player and bot move in real-time with a timeline scrubber</li>
+<li><strong>Follow mode</strong> — Click any player in the legend to lock the camera on them</li>
+<li><strong>Map layers</strong> — Toggle between different floor levels for multi-story maps</li>
+<li><strong>Player tooltips</strong> — Hover any dot or legend entry for player info, faction, and level</li>
+<li><strong>Timeline events</strong> — Click events in the timeline bar to jump to that moment</li>
+<li><strong>BTR tracking</strong> — BTR shown with a dedicated APC silhouette icon</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/edc3f7137fe6e8d772f7f2544e6d2c1830a94602174987a726654d3f912d4aae.webp" alt="Map Replay"></p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Kill Visualization</div>
+<div class="tab-content"><p>See exactly who killed who, where, and when — all on the map.</p>
+<ul>
+<li><strong>Kill lines</strong> — Hover a player to draw red dashed lines from killer to each victim with skull icons</li>
+<li><strong>Death markers</strong> — Dead players appear at their death position on hover with a killfeed tooltip</li>
+<li><strong>Legend highlights</strong> — Victims glow green, the killer glows red in the legend panel</li>
+<li><strong>Killfeed tooltip</strong> — Shows weapon used, distance, body part hit, and full kill/death history</li>
+<li><strong>Timeline-aware</strong> — Kill lines only show for events that happened before the current timeline position</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/9313e062bb3f50b9ed5d807fec3318b474e65c942e1655b9ea412b7523865ab8.webp" alt="Kill Visualization"></p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Charts &amp; Stats</div>
+<div class="tab-content"><p>Dive into raid analytics with interactive charts and detailed tooltips.</p>
+<ul>
+<li><strong>Active Bots Over Time</strong> — Line chart with faction breakdown in tooltip</li>
+<li><strong>Kills Over Time</strong> — Each data point shows a killfeed-style tooltip (attacker → victim, weapon)</li>
+<li><strong>Looting Over Time</strong> — Tooltip shows who looted what item</li>
+<li><strong>Projectiles Over Time</strong> — Tooltip shows shooter and weapon</li>
+<li><strong>Bots By Faction</strong> — Pie chart with player names on hover</li>
+<li><strong>PMC Personalities</strong> — Pie chart of SAIN personality distribution (requires SAIN)</li>
+<li><strong>Bots By Difficulty</strong> — Pie chart of bot difficulty levels</li>
+<li><strong>Color-coded timeline</strong> — Red for kills, orange for drops, green for looting events</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/cfa527105f687b2602daf8ac81541bd04aa6684bc7a6304aabd998c176fd3a21.webp" alt="Chart1">
+<img loading="lazy" decoding="async" src="../../../assets/8128c419ebe75c7d0ebb8b4aa5b91de7a69062fe3ad42c4b6f79c25014f6599e.webp" alt="Chart2">
+<img loading="lazy" decoding="async" src="../../../assets/0aa65fe1618be987f41cc6870a148f264c508b627da8b3e374f49370b3476636.webp" alt="Chart3">
+<img loading="lazy" decoding="async" src="../../../assets/671479b6bf6182f78b6dac920e4c858cbdde65d89f58ff44dfe6a900771c69cc.webp" alt="Chart4">
+<img loading="lazy" decoding="async" src="../../../assets/0955b8551a48f90015f393c8e85262e898e392df2c1ffdfd28120bef31547651.png" alt="Chart5"></p></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Bot Behavior</div>
+<div class="tab-content"><p>See what every bot was thinking during the raid. Works best with <strong>SAIN</strong> installed, but supports vanilla AI too.</p>
+<ul>
+<li><strong>Behavior rings</strong> — Colored rings around bot markers on the map showing their current AI state</li>
+<li><strong>10 behavior categories</strong> — Combat (red), Search (orange), Movement (blue), Patrol (gray), Medical (pink), Loot (yellow), Flee (purple), Extract (green), Grenade (dark orange), Other</li>
+<li><strong>Behavior tooltips</strong> — Hover any bot to see their current decision in the map tooltip</li>
+<li><strong>Gantt timeline</strong> — Dedicated <code>/behavior</code> page with horizontal timeline bars per bot</li>
+<li><strong>Zoom &amp; scroll</strong> — Scroll-to-zoom on the Gantt chart, draggable scrollbar for navigation</li>
+<li><strong>Spawn/death indicators</strong> — Hatched bars before spawn and after death</li>
+<li><strong>Idle vs Patrol</strong> — Granular peace-mode tracking distinguishes standing still from patrolling</li>
+<li><strong>SAIN deep integration</strong> — Reads <code>CurrentCombatDecision</code>, <code>CurrentSelfDecision</code>, <code>CurrentSquadDecision</code>, and <code>ActiveLayer</code> via reflection</li>
+<li><strong>Vanilla fallback</strong> — Uses <code>LastDecision</code> when SAIN is not installed</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/e421af791f21d205d4c664a04b18cbec9062b74d9249b691ff7d1818b506f144.webp" alt="Behavior1">
+<img loading="lazy" decoding="async" src="../../../assets/09deb2f5b49c621ac6419fede6b67330001aee459ebc266f41787f3823758eb7.webp" alt="Behavior2">
+<img loading="lazy" decoding="async" src="../../../assets/c0981bb4b5d5ee7971cbdd2e65da54cb4ad6b10b57cc1a8593d40489be8917aa.png" alt="Behavior3"></p></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Loose Loot</div>
+<div class="tab-content"><p>Visualize every piece of loot that spawned in the raid — on the ground and inside containers.</p>
+<ul>
+<li><strong>Map overlay</strong> — Thousands of loot markers rendered as lightweight SVG circles, color-coded by value:
+<ul>
+<li>Gray (&lt;10K), White (10-50K), Blue (50-100K), Purple (100-500K), Gold (&gt;500K)</li>
+</ul>
+</li>
+<li><strong>Ground items</strong> — Diamond-shaped markers at exact spawn position</li>
+<li><strong>Container contents</strong> — Grouped markers showing all items inside a container in one tooltip</li>
+<li><strong>Dropped items</strong> — Dashed markers appear when players/bots drop items, disappear when picked back up</li>
+<li><strong>Price filter</strong> — Slider to set minimum value threshold (default 50K₽)</li>
+<li><strong>Sidebar panel</strong> — Sortable item list with search, price filter, ground/container toggle</li>
+<li><strong>Hover to locate</strong> — Hover any item in the sidebar to highlight it on the map with a tooltip</li>
+<li><strong>Click to pan</strong> — Click an item in the list to center the map on its position</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/8cf3d095b9e7d6d14dea0ea16cbb4460f293fede6ba8c2df43ba3354d6fdb8e2.webp" alt="Loose Loot"></p></div></div>
+<div id="tabset-1-panel-9" class="tab-panel"><div class="tab-title">Bot Inventory</div>
+<div class="tab-content"><p>Inspect what gear any bot spawned with.</p>
+<ul>
+<li><strong>Inventory panel</strong> — Collapsible section in the map sidebar with a bot dropdown selector</li>
+<li><strong>Slot grouping</strong> — Items organized by equipment slot: Weapons, Armor, Backpack, TacticalVest, Pockets, etc.</li>
+<li><strong>Weapon attachments</strong> — Shown as indented sub-items under each weapon</li>
+<li><strong>Item details</strong> — Name, quantity, and handbook price for every item</li>
+<li><strong>Total value</strong> — Spawn value sum displayed at the top of the panel</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/f6eeaf083d70a3a4566372042415fe2dc37c5b77a87793791a240e287e9fad21.png" alt="Bot Inventory"></p></div></div>
+<div id="tabset-1-panel-10" class="tab-panel"><div class="tab-title">Supported Mods</div>
+<div class="tab-content"><p>Raid Review unlocks extra visualizations when these mods are installed.
+None are required — install only what you use.</p>
+<p><strong><a target="_blank" class="external-link" href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/" rel="noreferrer noopener">SAIN</a></strong> <em>(highly recommended)</em></p>
+<ul>
+<li>See what every bot was thinking — combat, search, fleeing, looting, etc.</li>
+<li>Coloured behavior rings on the map + a full timeline per bot</li>
+<li>PMC personality breakdown chart (Rats, Chads, Timmys…)</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="https://github.com/Chazut/ORBIT" rel="noreferrer noopener">ORBIT</a></strong></p>
+<ul>
+<li>See each squad’s long-term goals on the map (loot a rich area, hunt PvP, run a quest)</li>
+<li>Bot tooltips tell you <em>why</em> a bot is heading somewhere or extracting</li>
+<li>Click a bot to see its whole squad’s plan</li>
+<li>Map overlay of ORBIT’s force field showing where bots are being pulled</li>
+</ul>
+<p><strong>Phobos</strong></p>
+<ul>
+<li>Bot objective tooltips and map overlay for Phobos AI dispatch</li>
+<li>Visualizes the advection + player-attraction fields</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener">QuestingBots</a></strong></p>
+<ul>
+<li>Bot tooltips show which quest they’re currently running</li>
+<li>Quest objective shows up on the behavior timeline</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a></strong></p>
+<ul>
+<li>Bots show up as “looting” on the map and timeline when they’re rummaging</li>
+</ul>
+<p><strong>Faction mods</strong> — <a target="_blank" class="external-link" href="../../2427/ruaf-come-home/" rel="noreferrer noopener">RUAF Come Home</a>, <a target="_blank" class="external-link" href="../../2342/untar-go-home/" rel="noreferrer noopener">UNTAR Go Home</a>, <a target="_blank" class="external-link" href="../../2511/wtt-black-division-redacted-home/" rel="noreferrer noopener">Black Division</a></p>
+<ul>
+<li>Their bots get their own faction badges in the leaderboard</li>
+</ul></div></div>
+<div id="tabset-1-panel-11" class="tab-panel"><div class="tab-title">Issues</div>
+<div class="tab-content"><p>Report them on <a target="_blank" class="external-link" href="https://github.com/Chazut/SPT-RaidReview/issues" rel="noreferrer noopener">GitHub</a>, it’s much easier for me to track and fix!</p></div></div>
+<div id="tabset-1-panel-12" class="tab-panel"><div class="tab-title">Credits</div>
+<div class="tab-content"><ul>
+<li><strong>ekky</strong> for creating Raid Review.</li>
+<li>The entire SPT team for an amazing framework, and documentation.</li>
+<li>SPT Discord, specfically people active in the ‘mod-development’ and ‘dev-community’ channels.</li>
+<li>The folks over at ‘tarkov.dev’ for having an Open Sourced MIT Licensed repo that I could fork the interactive map from, litterally saved me weeks of work.</li>
+<li>You for downloading the mod, and taking the time to install it.</li>
+</ul></div></div>
+<div id="tabset-1-panel-13" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><blockquote>
+<p>I have removed my Ko-Fi link as I’m no longer actively maintaining this, however, please see below users that supported the project in the past - Ekky</p>
+</blockquote>
+<p>If you enjoy the 4.0 update and the new features, you can support Chazut’s work:</p>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/chazut" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/27dab3ba29fe5097be450545c46ec7f97796db7e8d3bbdff6c8d05a64ef678e0.svg" alt="ko-fi"></a></p>
+<p><strong>Past supporters (from Ekky’s original Ko-Fi)</strong></p>
+<ul>
+<li>AnotherGermanFool</li>
+<li>Rakugaki</li>
+<li>PRiles</li>
+<li>Delphy</li>
+<li>Anonymous</li>
+<li>Fejlip</li>
+<li>FNARGUNNER</li>
+<li>Watsy</li>
+<li>Malec</li>
+<li>legojoe</li>
+<li>Gavor</li>
+<li>dgrrr</li>
+<li>Knight</li>
+<li>MadByte</li>
+</ul>
+<p>… and honestly, the greatest donation message of all time:</p>
+<blockquote>
+<p>“THANK YOU!!!! I was sending some $ to my girlfriend for her birthday today, and I thought, Why don’t I send some $ to someone who actually has given me pleasure! (lol) Thanks for this it helps me understand the game much better!” - dgrrr</p>
+</blockquote></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2026-07-23T14:41:00.000000Z">23 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,056 downloads</span><span>5.3 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>QuestingBots integration, now official</h2>
+<p>Questing Bots 0.11.0 added a proper API for other mods, and Raid Review now uses it. If you run QB, your raid replays show what each bot was doing:</p>
+<ul>
+<li>Quest names in the behavior tooltips</li>
+<li>Quest objectives on the map</li>
+<li>A <strong>Bot Quests</strong> panel listing who is working on what (EFT quests and QB custom quests)</li>
+</ul>
+<p>No setup needed, it just works when both mods are installed. Older QB versions still use the previous integration.</p>
+<h2>New bot labels</h2>
+<ul>
+<li>UNTAR hunters are now labeled <strong>UNTAR Hunter</strong> instead of Raider</li>
+<li>ISB <strong>White Tusk</strong> commanders are properly named</li>
+<li><strong>Wedge</strong> (boss mod) shows as a boss with his guards, with map markers</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/37f41efd2e659211c07f25401ab7b1bd1973365dc0324666882294b9f1ea908a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/25aeda75-82fe-4bd0-88cf-4fcad81385f2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A42Z&amp;rscd=attachment%3B+filename%3Draid_review__1.4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A28Z&amp;ske=2026-08-01T21%3A03%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=CSII%2FgLe00wfXGjLswul8H1nKbMF54NLUT18OCuct3s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-06-30T20:56:00.000000Z">30 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,919 downloads</span><span>5.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p>This one is all about <strong>showing what ORBIT bots are actually doing</strong>, plus Combine faction support.</p>
+<h2>🟢 ORBIT behaviour, properly labelled</h2>
+<p>ORBIT-driven bots now read as ORBIT in the behaviour timeline and on the map:</p>
+<ul>
+<li>ORBIT patrol shows as a green <strong>“Orbiting”</strong> state, with a green ring on orbiting bots on the map.</li>
+<li>Bots holding a position read as <strong>“Guarding”</strong> (dark green), and bots running a loot session read as ORBIT looting</li>
+<li>Behaviour labels now show <strong>which mod is driving</strong> the decision (ORBIT / SAIN / etc.)</li>
+<li>Idle behaviour that wasn’t actually SAIN is no longer mislabelled as SAIN.</li>
+</ul>
+<h2>🪖 New faction</h2>
+<ul>
+<li><strong>Combine Soldiers</strong> (Manimal’s faction) now show up in the leaderboard and on the map with their proper roles, instead of all being lumped in as generic “Follower”.</li>
+</ul>
+<h2>🐛 Fixes</h2>
+<ul>
+<li>Fixed the <strong>Reserve Bunkers</strong> map layer rendering at the wrong offset.</li>
+</ul>
+<h2>📦 Packaging</h2>
+<ul>
+<li>Release zips now <strong>extract correctly on Linux</strong>, proper forward-slash paths.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/67fa62625d9e153826a62a7939fbe4526a8908fc2e6f974b04f6a45c69048711?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/134cdb28-0c20-4cd0-9a61-647490700fc0?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A31Z&amp;rscd=attachment%3B+filename%3Draid_review__1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A20Z&amp;ske=2026-08-01T21%3A07%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=FttgsIIEmg7GbXTZ%2BLXLLqzTocZ085qvZvalQVcQNEo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-06-15T07:03:00.000000Z">15 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,606 downloads</span><span>5.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Performance pass + map replay polish.</p>
+<h2>⚡ Performance</h2>
+<p>A big overhaul of how raid data is written to disk, aimed mainly at folks who saw stutter during raids:</p>
+<ul>
+<li><strong>No more per-line file writes.</strong> The position stream used to open, write and close the CSV file once per line — hundreds of times a second in a busy raid. It now keeps the file open and flushes on a timer, which kills the stutter on network drives and write-through RAID arrays.</li>
+<li><strong>SQLite is much lighter under load.</strong> WAL mode, connection pooling and batched inserts mean incoming data no longer queues up behind a single write lock. High fire-rate firefights (one row per shot) are now buffered and written in the background.</li>
+<li><strong>Raid pages load faster the more raids you keep.</strong> Added database indexes so the detail views stop scanning every table from top to bottom.</li>
+</ul>
+<h2>🗺️ Map Replay</h2>
+<ul>
+<li><strong>Tooltip flicker is fixed</strong>. Hovering a bot, item, objective or loot tooltip while the replay is playing no longer strobes.</li>
+<li><strong>The followed player’s name no longer jitters.</strong> It used to wobble a pixel or two while following an entity; it’s stable now.</li>
+<li><strong>Speed multipliers actually work.</strong> 16x used to cap out at whatever your machine could render. Playback now skips frames at high speed, so 16x really is 16x.</li>
+</ul>
+<h2>🤖 New Faction</h2>
+<ul>
+<li><strong>ISB faction support.</strong> ISB bots now show up as their own faction (own colour, marker and roles) instead of all being lumped in as “Follower”.</li>
+</ul>
+<h2>🐛 Fixes</h2>
+<ul>
+<li>ORBIT integration no longer floods the server log with thousands of “API ready” lines every raid.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/63e29277173d0b5bc0f5b55a3488ec8a4146eaa79aadcb2e282aee1011f6e65b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/329c3fc4-a3c9-46d0-8bcb-cf3253910d42?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A53Z&amp;rscd=attachment%3B+filename%3Draid_review__1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A59Z&amp;ske=2026-08-01T21%3A07%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xubELwgx017KJ5GBw5wpfcM2jTHUOPFsxA73%2Ffbrz1Y%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-06-02T16:38:00.000000Z">2 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,060 downloads</span><span>5.4 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>🐛 Fix</h2>
+<ul>
+<li>Garbage collector no longer crashes the server on startup when a legacy DB carries orphan rows from older migrations.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/29908aa359a59016c8928fdb293eaf1401b7f708f6b4c6c244a8763081351120?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/b7d5f22e-54d4-4857-ac3c-325c68beec5f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A54%3A22Z&amp;rscd=attachment%3B+filename%3Draid_review__1.1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A54%3A18Z&amp;ske=2026-08-01T20%3A54%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tj9nefOlxyqa5N9m3fgfK1Z9VUHcriJxHU9B2ljT5pQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-05-27T21:49:00.000000Z">27 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>554 downloads</span><span>5.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Big release — new AI mod integrations, Linux + Fika headless support, secure-websocket / reverse proxy support, and a pile of visualization polish.</p>
+<h2>🤖 New AI Mod Integrations</h2>
+<p><a target="_blank" class="external-link" href="../../2706/orbit/" rel="noreferrer noopener">ORBIT</a> — squad AI overhaul that exposes a public telemetry API. Raid Review links directly against it (no reflection) and visualizes per-squad main objectives on the map, advection field overlay, extract reasons in bot tooltips, and live bot decisions on the timeline.</p>
+<p><strong>Phobos</strong> — supported via reflection (no public API), gated by an F12 toggle with a no-support disclaimer.</p>
+<p><a target="_blank" class="external-link" href="../../1109/questing-bots/" rel="noreferrer noopener">QuestingBots</a> — same reflection-based integration, behind an F12 toggle.</p>
+<p><a target="_blank" class="external-link" href="../../812/looting-bots/" rel="noreferrer noopener">LootingBots</a> — BigBrain layer detection so a bot looting is reflected in its decision overlay.</p>
+<h2>🌐 Networking</h2>
+<ul>
+<li><strong>Secure WebSockets</strong> support (TLS / WSS) for reverse-proxy setups thanks to <a target="_blank" class="external-link" href="https://github.com/robpneu" rel="noreferrer noopener">@robpneu</a> (#16)</li>
+<li><strong>Linux</strong> support — cross-platform SQLite via <code>e_sqlite3</code> instead of <code>winsqlite3</code>, runtime resolver for <code>win-x64</code> / <code>linux-x64</code> / <code>linux-arm64</code></li>
+<li><strong>Fika</strong> headless client compatibility (host or headless, not both)</li>
+</ul>
+<h2>🗺️ Map + Visualization</h2>
+<ul>
+<li>Grenade trajectory visualization with arc + impact marker</li>
+<li>Loot float animations when items move</li>
+<li>Hit-flash animations on player markers when damaged</li>
+<li>HP visualization on dots, fixed maxHealth bug, unified loot float
+colours</li>
+<li>Persist map-overlay preferences in localStorage</li>
+<li>Interchange bounds fix</li>
+</ul>
+<h2>👥 Leaderboard + Bot Behavior</h2>
+<ul>
+<li><strong>SAIN reflection cache</strong> with idle / patrol differentiation</li>
+<li><strong>BigBrain follower / regroup</strong> layer detection</li>
+<li><strong>Extracted</strong> status surfaced for bots and main player</li>
+<li>Per-row extract reason in hover tooltip</li>
+<li>Remnant faction (RUAF Hardcore) classification</li>
+</ul>
+<h2>🐛 Fixes</h2>
+<ul>
+<li>Resolve short names from SPT locale instead of returning template ID keys</li>
+<li>Fix garbage collector deleting all finished raids on startup</li>
+<li>Fix foreign key constraints to reference <code>raid.raidId</code></li>
+<li>Don’t add colon to server address if no port is specified</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/40e73d97dcbf3412e8996cfcb02ca015d85e3f6ed8296d0a87ae2fb9bc8ef734?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/d682cc89-1c5c-41be-8415-d28fb635b641?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A52Z&amp;rscd=attachment%3B+filename%3Draid_review__1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A23Z&amp;ske=2026-08-01T21%3A12%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nhk%2FnVsiclLd2B%2BTEUZzYu1ebis8Ka4oAQu7jXdLfWQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-03-21T20:07:00.000000Z">21 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,137 downloads</span><span>4.7 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>1.0.2 - Linux support</h2>
+<ul>
+<li><strong>Linux support</strong> — switch from <code>winsqlite3</code> to cross-platform <code>e_sqlite3</code> with native runtime resolution</li>
+<li><strong>Cross-platform publish</strong> — single zip with both win-x64 and linux-x64 native runtimes</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li><strong>Translator DOM crash fix</strong> — add <code>translate="no"</code> to prevent browser translators from breaking React</li>
+<li><strong>Fix GarbageCollector crash</strong>: Delete child tables before parent <code>raid</code> table to respect foreign key constraints.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0636c82bad11d58c312595227e332f2a2cf3d580bb02dfdb879939e303f46b53?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/6a5698a3-d593-493c-b095-052e86c3a3ac?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A06Z&amp;rscd=attachment%3B+filename%3Draid_review__1.0.2.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A50Z&amp;ske=2026-08-01T20%3A57%3A06Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bSznvGTXR9C09oXlCFmoGl6upF3sa8heAKjtbDWa8sg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1NywibmJmIjoxNzg1NjE1MjU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v719MFt20KFbQUgOL45_FMrfjfgLSlHiQYoO6-rkhJ8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.0.2.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-03-03T19:31:00.000000Z">3 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>709 downloads</span><span>3.1 MB</span>
+          </div>
+          <div class="prose version-notes"><p>🎮 Fika Support</p>
+<p>Raid Review now works with Fika! Both regular hosted sessions and headless clients are supported.</p>
+<ul>
+<li><strong>Fika (regular)</strong>: install on the host only — the host records everything for all players</li>
+<li><strong>Fika headless</strong>: install on the headless client only — all bots and connected players are tracked</li>
+<li>Note: on headless, raid type shows as “PMC” (even Scav runs) since there’s no main player to detect SCAV/PMC</li>
+</ul>
+<p>Thanks to JayV-222 for testing and reporting, and Shynd for the headless client insights!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3798f58903e21e576fff0f88a4d8c7ea32fcee6cab410372f6e49bb7cda082ef?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/4a811d10-5b8d-4ee8-9127-4208a3ec8f5e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A32Z&amp;rscd=attachment%3B+filename%3Draid_review__1.0.1_windows.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A57Z&amp;ske=2026-08-01T21%3A14%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=4VR6r6zaoIb496y4q5FrcJxTif9Y5AYv2h2Osfl8IQE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1OCwibmJmIjoxNzg1NjE1MjU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.8nBluKfptXIFpyR-z1XSM5eogRkBBphXquv1iZECVk8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.0.1_windows.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-02T17:40:00.000000Z">2 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>190 downloads</span><span>3.1 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>🚀 MASSIVE UPDATE — Bot Behavior Tracking, Loose Loot Map, Full UI Overhaul</h1>
+<p>Major update with new tracking systems, redesigned interface, and deep visualization tools.</p>
+<blockquote>
+<p>Originally created by <span class="dead-link">Ekky</span>, this 1.0.0 release represents my personal vision for the mod — built on top of the original foundation. - <span class="dead-link">Chazu</span></p>
+</blockquote>
+<h2>What’s New for 1.0 ?</h2>
+<h3>Bot Behavior Tracking <em>(new)</em></h3>
+<p>Works best with <strong>SAIN</strong> installed, but supports vanilla AI too.</p>
+<ul>
+<li><strong>Colored rings</strong> around bots on the map showing their current AI decision</li>
+<li><strong>10 behavior categories</strong>: Combat, Search, Movement, Patrol, Medical, Loot, Flee, Extract, Grenade, Other</li>
+<li><strong>Behavior timeline page</strong> — Gantt-style view of every bot’s decisions over time, with zoom and scrollbar</li>
+</ul>
+<h3>Loose Loot Map <em>(new)</em></h3>
+<ul>
+<li>Visualize <strong>every loot spawn</strong> in the raid (ground items + container contents)</li>
+<li>Color-coded by value: Gray (&lt;10K), White (10-50K), Blue (50-100K), Purple (100-500K), Gold (&gt;500K)</li>
+<li><strong>Container tooltips</strong> listing all items inside</li>
+<li><strong>Dropped items</strong> appear as dashed markers, disappear when picked back up</li>
+<li><strong>Sidebar panel</strong> with sortable item list, search, price filter slider</li>
+<li>Hover an item in the list → <strong>highlights it on the map</strong></li>
+</ul>
+<h3>Loot Value Tracking <em>(new)</em></h3>
+<ul>
+<li>Every loot event now includes <strong>handbook base price</strong></li>
+<li><strong>“Value” column</strong> in leaderboard — total price of items looted per player</li>
+<li><strong>“Spawn Val.” column</strong> — total gear value of bots at spawn</li>
+</ul>
+<h3>Bot Inventory Inspector <em>(new)</em></h3>
+<ul>
+<li>Inspect any bot’s <strong>full spawn loadout</strong> from the map sidebar</li>
+<li>Items grouped by slot: Weapons, Armor, Backpack, Vest, Pockets…</li>
+<li>Weapon <strong>attachments</strong> shown as sub-items</li>
+<li>Total spawn value displayed</li>
+</ul>
+<h3>Leaderboard Redesign</h3>
+<ul>
+<li>Color-coded <strong>faction badges</strong> (USEC, BEAR, Scav, Raider, etc.)</li>
+<li><strong>Sortable columns</strong>: Level, Kills, Looted, Accuracy</li>
+<li>Accuracy shown as <strong>mini progress bars</strong> (green/yellow/red)</li>
+<li><strong>Click any row</strong> to highlight their victims (green) and killer (red)</li>
+<li>Dead players show who killed them, with what weapon, distance, and body part</li>
+<li>Your row always highlighted with a gold accent</li>
+</ul>
+<h3>Kill Visualization (Map)</h3>
+<ul>
+<li><strong>Hover any player</strong> to see red kill lines drawn to their victims with skull markers</li>
+<li>Dead players appear at their <strong>death position</strong> with a killfeed tooltip</li>
+<li>Legend highlights victims in green, killer in red</li>
+<li>Fully <strong>timeline-aware</strong> — only shows events up to the current replay position</li>
+</ul>
+<h3>Charts &amp; Stats</h3>
+<ul>
+<li><strong>Reworked tooltips</strong> on every chart: Active Bots (faction breakdown), Kills (killfeed), Looting (player + item), Projectiles (shooter + weapon)</li>
+<li>New <strong>pie charts</strong>: Bots By Faction, PMC Personalities, Bots By Difficulty</li>
+<li>Weapon names now tracked and displayed in kill data</li>
+<li>Timeline actions color-coded: red (killed), orange (dropped), green (looted)</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li><strong>BTR</strong> shown with a dedicated APC icon, classified as “Special”</li>
+<li>Fixed loot tracking: internal inventory moves (slot swaps) no longer count as loot</li>
+<li>Fixed boolean mismatch between client and frontend on loot events</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Extract the archive into your SPT folder</li>
+<li>Start the SPT server, play a raid, then open <a target="_blank" class="external-link" href="http://127.0.0.1:7829" rel="noreferrer noopener">http://127.0.0.1:7829</a> or press <strong>F5</strong> in-game</li>
+</ol>
+<h2>Compatibility</h2>
+<ul>
+<li><strong>SPT 4.0.X</strong></li>
+<li><strong>SAIN</strong> recommended (not required) for bot behavior tracking and personality data</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/04a98c6f14c88432a2c50a4b3fa4dd3c0870357dbc777ca0e03fe911da8c21e6" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/5b5299b8-e605-4ee6-90f6-31993f80167a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A19Z&amp;rscd=attachment%3B+filename%3Draid_review__1.0.0_windows.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A48Z&amp;ske=2026-08-01T21%3A14%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=y5zsAxN21zG44JxypmpIDoMtrh6IZmwXbCBlVjF7CLU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1OSwibmJmIjoxNzg1NjE1MjU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PQQ_jYgPkuoszdmKxeAi8WvLj2cw3Odf_w2OHvHYTw8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__1.0.0_windows.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.5.1</h2></div><time datetime="2026-03-01T09:12:00.000000Z">1 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>189 downloads</span><span>3.0 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>0.5.1 — Labyrinth Support &amp; Map Calibration Fix</h2>
+<h3>New</h3>
+<ul>
+<li><strong>The Labyrinth</strong> is now supported with satellite map rendering</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><strong>Player positions on Woods</strong> were offset from their real locations — all map data has been recalibrated to match the latest tarkov.dev tile sources</li>
+<li><strong>Reserve</strong> now has satellite tile rendering (previously SVG only)</li>
+<li><strong>Maps without SVG</strong> (Labyrinth, The Lab) no longer show a black screen — the viewer automatically switches to satellite view</li>
+<li>Updated tile sources for Ground Zero, Customs, Shoreline (summer variants), Factory, Interchange, Streets, and The Lab</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c77e878c745cd6ac024e6b4a361f73e70a6d1ceda4dc41ee354408f3c6ec868f" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/9971720c-c728-40f5-9061-8f00ea0a1f28?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A07Z&amp;rscd=attachment%3B+filename%3Draid_review__0.5.1_windows.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A09Z&amp;ske=2026-08-01T21%3A03%3A07Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fN9R6A8YJyxKk0dOwBaTikkuLdUhiMIh4YrubuP%2BmPs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1OSwibmJmIjoxNzg1NjE1MjU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PQQ_jYgPkuoszdmKxeAi8WvLj2cw3Odf_w2OHvHYTw8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__0.5.1_windows.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.5.0</h2></div><time datetime="2026-02-28T01:06:00.000000Z">28 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>197 downloads</span><span>3.0 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s New in 0.5.0</h2>
+<p><img loading="lazy" decoding="async" src="../../../static/image-unavailable.svg" alt="Map Replay"></p>
+<h3>Custom Faction Mod Support</h3>
+<p>Support for popular faction mods — their bots now show up with proper names, colors, and markers on the map:</p>
+<ul>
+<li><a target="_blank" class="external-link" href="../../2562/the-mercenary/" rel="noreferrer noopener"><strong>The Mercenary</strong></a> (gold)</li>
+<li><a target="_blank" class="external-link" href="../../2427/ruaf-come-home/" rel="noreferrer noopener"><strong>RUAF Come Home</strong></a> (steel blue)</li>
+<li><a target="_blank" class="external-link" href="../../2342/untar-go-home/" rel="noreferrer noopener"><strong>UNTAR Go Home</strong></a> (light blue)</li>
+<li><a target="_blank" class="external-link" href="../../2511/wtt-black-division-redacted-home/" rel="noreferrer noopener"><strong>Black Division</strong></a> (dark grey)</li>
+</ul>
+<p>Faction detection works with or without SAIN installed.</p>
+<h3>Map Replay — Redesigned Legend</h3>
+<p>The legend sidebar is now grouped by category: PMC, Player Scav, Boss, Goons, Followers, Special, Faction, and Scav. Each section is collapsible (Scav collapsed by default). PMCs are sub-grouped by team, factions by type.</p>
+<h3>Map Replay — New Markers</h3>
+<ul>
+<li>Bosses, goons, faction bots, and special types now have <strong>square markers with letter labels</strong> (e.g. Ki for Killa, BP for BigPipe, R for RUAF)</li>
+<li>PMCs have <strong>numbered circle markers</strong> matching their team</li>
+<li>Scavs keep simple colored dots</li>
+<li>Legend icons now match the map markers</li>
+</ul>
+<h3>Map Replay — Hover Tooltips</h3>
+<p>Hover over any player dot on the map to see their name and AI brain/difficulty.</p>
+<h3>Map Replay — Killfeed</h3>
+<p>The killfeed now shows colored markers next to killer and victim names, so you can instantly tell who’s who.</p>
+<h3>Quality of Life</h3>
+<ul>
+<li>PMCs are now colored by team instead of spawn order</li>
+<li>Two-pass rendering: player dots always render on top of path lines</li>
+<li>Hovering a player in the legend now correctly highlights them on the map</li>
+</ul>
+<h3>Install</h3>
+<ul>
+<li>Just extract the zip at your SPT root — the old <code>RAID_REVIEW__0.4.0.dll</code> is automatically removed on first launch</li>
+<li>Client DLL renamed to <code>RAID_REVIEW.dll</code> (no more version in filename)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/50d1f6ad3d0a32ac876cb2464d37ca3f46f2b0deb99f2e9d7b2e219198588ce7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/c19f29e6-8306-4b7e-bd30-28955ef041b4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A44Z&amp;rscd=attachment%3B+filename%3Draid_review__0.5.0_windows.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A37Z&amp;ske=2026-08-01T21%3A07%3A44Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Ue%2BbTrJWSy%2Bcuf8qWQXjBcpmUW6pK4BbMyxeviS6ZRY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1OSwibmJmIjoxNzg1NjE1MjU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PQQ_jYgPkuoszdmKxeAi8WvLj2cw3Odf_w2OHvHYTw8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__0.5.0_windows.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.0</h2></div><time datetime="2026-02-26T23:28:00.000000Z">26 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>236 downloads</span><span>3.0 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>v0.4.0 — SPT 4.0.X Support</h2>
+<p>Raid Review has been updated to work with SPT 4.0! The server mod has been completely rewritten to support the new SPT 4.0 architecture.</p>
+<h3>What’s new</h3>
+<ul>
+<li>Full compatibility with SPT 4.0.X</li>
+<li>Updated SAIN integration (SAIN 4.0 supported)</li>
+</ul>
+<h3>Installation</h3>
+<p>Extract the zip into your SPT installation folder. That’s it!</p>
+<h3>Requirements</h3>
+<ul>
+<li>SPT 4.0.X</li>
+<li>Windows 10/11</li>
+<li>SAIN is optional but recommended for detailed bot info</li>
+</ul>
+<h3>Credits</h3>
+<ul>
+<li><a target="_blank" class="external-link" href="https://github.com/ekky-llc" rel="noreferrer noopener">ekky</a> — Original author</li>
+<li><a target="_blank" class="external-link" href="https://github.com/Chazut" rel="noreferrer noopener">Chazu</a> — SPT 4.0.X port &amp; maintenance</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a5c2cc1603252b991ac855bb323ca52950a365941d5efc18be3fe5b234fddf38" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/815818778/e7d6f3f9-a605-4ebe-9f50-3127da25223c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A44Z&amp;rscd=attachment%3B+filename%3Draid_review__0.4.0_windows.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A45Z&amp;ske=2026-08-01T21%3A02%3A44Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tjtWh%2FfZxgQAvJDkBlsc%2BzyBmV8XAMhwbl0JnX4Zu5U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU1OSwibmJmIjoxNzg1NjE1MjU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PQQ_jYgPkuoszdmKxeAi8WvLj2cw3Odf_w2OHvHYTw8&amp;response-content-disposition=attachment%3B%20filename%3Draid_review__0.4.0_windows.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.0+test-r1-v311x</h2></div><time datetime="2025-07-27T04:57:21.000000Z">27 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,862 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>⚠️ WARNING - TEST BUILD</strong></p>
+<p>I’ve pushed a test build for the v3.11 uplift, it’s the earliest working variation I could get running end-to-end again, so if you want to help test, you can grab it now.</p>
+<p><strong>If you find something that is broken, please let me know here:🔗 <a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/issues" rel="noreferrer noopener">https://github.com/ekky-llc/spt-raid-review/issues</a></strong></p>
+<h3><strong>Summary of Patch Notes</strong></h3>
+<ul>
+<li>Added Global Settings screen to give users control over certain toggles</li>
+<li>Introduced raid import/export support</li>
+<li>Added public Community Hub with discord account registration and raid sharing</li>
+<li>Added support for Cyrillic transliteration in scav names</li>
+<li>Improved mobile support across the app</li>
+<li>Refined raid sharing workflow and error handling</li>
+<li>Cleaned up the navigation and added better feedback/loading indicators</li>
+<li>Replaced raw error messages with proper error screens</li>
+<li>Added token verification and validation on community uploads</li>
+<li>Added server rate limiting to prevent spam</li>
+<li>Switched to faster and lighter backend infrastructure</li>
+<li>Client mod updated to support SAIN v4.0.0</li>
+<li>Fixed issues with mod crashes during startup</li>
+<li>Temporarily disabled some health checks and removed unused FikaHost logic</li>
+<li>General bug fixes and performance improvements</li>
+<li>Reworked some backend queries for better stability</li>
+<li>Continued work on raid merging (in progress)</li>
+</ul>
+<h3><strong>Known Issues</strong></h3>
+<ul>
+<li>The community hub is broken right now, I am aware, and working on fixing this at the moment.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c085868189bbf47dfde536e512faf0808809e09347de2513111e0a790793c44d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/ekky-llc/spt-raid-review/releases/tag/v0.4.0__test__r1" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.0+v310x</h2></div><time datetime="2024-12-07T05:01:31.000000Z">7 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>8,393 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2><strong>💖 Updated for 3.10.X</strong></h2>
+<h2><strong>Please refer to installation/upgrade notes in the link, especially if you have a previous version installed, please follow the upgrade notes!</strong></h2>
+<p><em>Summary of patch notes</em></p>
+<ul>
+<li>🖱 <strong>Menu Fixes</strong>
+<ul>
+<li>Fixed menu item insertion to use the Awake method for initialization.</li>
+<li>Adjusted to utilize SetUnlockStatus in line with the new EFT version logic.</li>
+<li>Renamed menu item from <em>“RAID REVIEW MOD”</em> to <em>“RAID REWIEV”</em>, saving space while still describing its purpose.</li>
+<li><strong>Credits</strong>: Change by <strong>Oli</strong> (<a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/releases#54" rel="noreferrer noopener">#54</a>).</li>
+</ul>
+</li>
+<li>🖼 <strong>UI Updates</strong>
+<ul>
+<li>Renamed <em>Stats</em> to <em>Overview</em> to better describe its function.</li>
+<li>Changed <em>Charts</em> to <em>Stats</em>, reflecting their actual purpose.</li>
+<li>Added desktop mouseover tooltips for K, L, and A% in <em>RaidOverview.tsx</em> to clarify what these represent.</li>
+<li><strong>Credits</strong>: Changes by <strong>Oli</strong> (<a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/releases#55" rel="noreferrer noopener">#55</a>, <a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/releases#56" rel="noreferrer noopener">#56</a>).</li>
+<li>Added <em>Sandbox_high (Ground Zero for &gt; level 20)</em> with additional spawn spots.</li>
+<li><strong>Credits</strong>: Additions by <strong>Rob Neu</strong> (<a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/releases#57" rel="noreferrer noopener">#57</a>).</li>
+</ul>
+</li>
+<li>🧹 <strong>Taskbar Menu Cleanup</strong>
+<ul>
+<li>Removed redundant <em>NewInformation</em> child from the handbook menu.</li>
+<li>Renamed duplicated objects to <em>RaidReview</em> and <em>RaidReviewButton</em> for clarity.</li>
+<li><strong>Credits</strong>: Cleanup by <strong>Rob Neu</strong> (<a target="_blank" class="external-link" href="https://github.com/ekky-llc/spt-raid-review/releases#59" rel="noreferrer noopener">#59</a>).</li>
+</ul>
+</li>
+<li>🛠 <strong>3.10.X Compatibility</strong>
+<ul>
+<li>Updated server-side mod types to prepare for the new EFT build.</li>
+<li>Fixed build issues for the private client.</li>
+<li><strong>Credits</strong>: Compatibility updates by <strong>Ekky</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><em>Roadmap Items:</em></p>
+<ul>
+<li>📽️ Moments Snipping
+<ul>
+<li>Plan to implement a moments/snipping feature, so you can save specific moments in a raid</li>
+</ul>
+</li>
+<li>✉️ Sharing
+<ul>
+<li>Plan to implement an online hub with a similar UI to the local Raid Review, where you can publish raids or moments with others.</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c085868189bbf47dfde536e512faf0808809e09347de2513111e0a790793c44d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/ekky-llc/spt-raid-review/releases/tag/v0.3.0" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0+v39x</h2></div><time datetime="2024-07-30T12:01:37.000000Z">30 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>15,744 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2><strong>💥 Ballistics/Projectile Tracking, Charts, and UI Rework</strong></h2>
+<h2><strong>Please refer to installation/upgrade notes in the link, especially if you have a previous version installed, please follow the upgrade notes!</strong></h2>
+<p><em>Summary of patch notes</em></p>
+<p>G’day nerds, last update for a few months will be AFK for ~10 weeks, so unlikely you’ll see this project get updates for a while, if you’re a smart cookie you can fix bugs yourself.</p>
+<p>Anyway, here are the goodies:</p>
+<p>- 🎯 Added ballistics/projectile tracking, now all ballistics and projectile paths are tracked and displayed in the replay mode. <a target="_blank" class="external-link" href="https://i.imgur.com/Vn6idvd.png" rel="noreferrer noopener">EXAMPLE</a></p>
+<p>- 🖼 UI Rework, with my future plans for a public hub, I reworked the UI so I could share interfaces and code between a public and private instance of the web client. Nothing too crazy, but it’s much easier to navigate now, and adding features will also be easier. <a target="_blank" class="external-link" href="https://i.imgur.com/hS5nflB.png" rel="noreferrer noopener">EXAMPLE</a></p>
+<p>- 🔥🦊Firefox compatibility is back! All you Firefox enjoyers can thank <strong>Drwsif</strong></p>
+<p>- 📈 Added a charting library to the Web Interface, and calculated stats such as Active Bots, Kill Activity, Looting Activity, and Projectile Activity throughout a Raid. Should help all of you that use this mod for Spawn/AI Overhaul debugging. <a target="_blank" class="external-link" href="https://i.imgur.com/NgAd0iC.png" rel="noreferrer noopener">EXAMPLE</a></p>
+<p>- 📋 Implementation of a per raid leaderboard so you can quickly see all the players/bots, including total kills, looting, and projectile accuracy.</p>
+<p>- 🚰 Fixed memory leak for Loot Tracking, which also fixed compatibility with Realism Mod, so the mask breathing issue is fixed now (sorry about that).</p>
+<p>- 🐞 Various bug fixes, mostly one’s found by <strong>Chazu</strong> related to the SAIN integration, thank you, you’re a legend!</p>
+<p>- 🔧Configuration file changes for server-side mod, now allows for the Raid Tracker timeout settings to be adjusted (niche request).</p>
+<p><strong>Uploading 3.8.X Version Soon<br>
+- I will say that this will be the final 3.8.X compatible update, all future updates will be for 3.9.X, from the looks of things I’m one of the few last 3.8.X enjoyers, so I’ll move onto 3.9.X when I return.</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c085868189bbf47dfde536e512faf0808809e09347de2513111e0a790793c44d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/ekky-llc/spt-raid-review/releases/tag/v0.2.0" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.1+v38x</h2></div><time datetime="2024-07-09T11:47:02.000000Z">9 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>828 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2><strong>🚀 Performance update, heatmap changes, bug fixes and project clean-up</strong></h2>
+<h2><strong>Please refer to installation/upgrade notes in the link, especially if you have a previous version installed, please follow the upgrade notes!</strong></h2>
+<p><em>Summary of patch notes</em></p>
+<p>Yo; few changes, so have a read if you’re interested.</p>
+<p>v3.9.0 will be my next milestone, it will just be this version (v0.1.1) compatible with v3.9.0</p>
+<p>Otherwise, install and have fun!</p>
+<ul>
+<li>🚀 Performance fixes; updated playback system to use HTML Canvas instead of SVG DOM Elements for faster and smoother animations.</li>
+<li>💧 Fixed memory leak; discovered memory leak in the playback that would draw 80,000 extra nodes than required and would continue to build up overtime until the browser crashed (my bad; too little sleep I suppose… no one reads these patch notes right?).</li>
+<li>😪 Project changes; restructured projects so I could start sharing components between private and public instances of Raid Review (coming soon tm).</li>
+<li>🗺 Playback interface: slight changes to the UI, and better exposure of the positional/heatmap toggle.</li>
+<li>🧠 Added caching: utilising client-side caching for positional data, should help with load times.</li>
+<li>🐞 Bug fixes; other various bug fixes and changes.</li>
+<li>🔧 Other changes…</li>
+</ul>
+<p>Thanks for reading ✌️</p>
+<p>Known Issues</p>
+<p>Not compatible with Mozilla Firefox, issues rendering the playback system.<br>
+Integration with SAIN 3.0.0 does not pick up on bot difficulty, only personality.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c085868189bbf47dfde536e512faf0808809e09347de2513111e0a790793c44d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/ekky-llc/spt-raid-review/releases/tag/v0.1.1" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.1+next-v39x</h2></div><time datetime="2024-07-09T13:40:34.000000Z">9 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,299 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>**⬆️ Upgrade to support SPT v3.9.X</p>
+<h2>⚠️ Early port to 3.9.X - this has not been extensively tested, I ran three raids, two of which had SAIN 3.0 installed, and they all worked.**</h2>
+<h2><strong>Please refer to installation/upgrade notes in the link, especially if you have a previous version installed, please follow the upgrade notes!</strong></h2>
+<p><em>Summary of patch notes</em></p>
+<p>The exact same as the <strong>v0.1.1 Released for v3.8.X</strong>, this is just a compatibility upgrade to v3.9.X.</p>
+<p>Known Issues</p>
+<p>Not compatible with Mozilla Firefox, issues rendering the playback system.<br>
+Integration with SAIN 3.0.0 does not pick up on bot difficulty, only personality.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c085868189bbf47dfde536e512faf0808809e09347de2513111e0a790793c44d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/ekky-llc/spt-raid-review/releases/tag/v0.1.1_NEXT" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>ekky.raidreview</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>11 June 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ekky-llc/spt-raid-review" target="_blank" rel="noreferrer noopener">Original</a></li><li><a href="https://github.com/Chazut/SPT-RaidReview" target="_blank" rel="noreferrer noopener">SPT 4.0.X</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

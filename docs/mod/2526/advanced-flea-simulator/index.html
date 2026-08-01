@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Advanced Flea Simulator · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Advanced Flea Simulator</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/ba34d6958f3f5ce357e3580bc7f0dc328d7244ff49bd9141c7eba1b0ae1c4514.webp" alt="Advanced Flea Simulator thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Advanced Flea Simulator</h1>
+    <p class="hero-teaser">Highly configurable simulator that aims to make using the flea market closer to how it feels to use in the live game.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/9d50cd2608e318772bab6a26a2d03f38f9a2a753328fc886dc21a5f6acb9dd4a.webp" alt="" width="32" height="32">minesettimi</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>6,360</dd></div>
+    <div><dt>Favourites</dt><dd>13</dd></div>
+    <div><dt>Mod lists</dt><dd>32</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Advanced Flea Simulator content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>9</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><p>Want the flea market to be less static than vanilla?
+Want the flea prices to be not as dependent on BSG’s changes to 1.0?</p>
+<p>This mod aims to simulate a flea market with YOUR specifications</p>
+<ul>
+<li>Item price simulation</li>
+<li>Dynamic offer generation</li>
+<li>Dynamic position based sell chance and delay</li>
+<li>Early wipe price simulation</li>
+<li>Progressive Flea Support</li>
+<li>Advanced configuration</li>
+</ul>
+<hr>
+<p>Some items can be calm:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/29d7ec311118eaaa96533f8487d0a0d751c62525616564e36086eeb8c259bbf6.webp" alt="calm"></p>
+<p>Some items can be chaotic:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/bfdbc560dabe7e6f82d2c6cbeb9417a91a3b63be0bd89f37154d989b2da95fb3.webp" alt="chaotic"></p>
+<p>Some can be in-between:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/dfa20c243ffe82edf80bc43278be7155eafe99157b6bda8f95ab1c3ccf4da655.webp" alt="middle"></p>
+<p>And some can be weird:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/f635e328773d4808a2f56f1a3e24a2041e00e782efef060518261ac57ddacc4e.webp" alt="weird"></p>
+<hr>
+<p>Every item can be assigned different simulation data that changes how they are simulated by the mod.
+Even modded items can be simulated!</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><p><strong>Item Simulations</strong></p>
+<p>The mod will simulate the flea market with prices going up in down in varying degrees of unpredictability.
+How often these prices are simulated and the behavior of every item is configurable.</p>
+<p><strong>Dynamic Offers</strong></p>
+<p>Creates fake PMC offers based on the configured supply of an item.
+High supply items such as bundles of wires will have more available offers with higher quantities.
+Rarer items such as marked keys generate with less offers.</p>
+<p><strong>Dynamic Selling</strong></p>
+<p>Adds a custom system for determining if your item offers get sold and when they get sold.
+The chances are dependent on how much the configured supply and demand an item has and what position your item is when sorted by price.
+Your item has the largest chance of being sold when cheaper than any other item!
+But when its more expensive than others, it will take longer and have a bigger chance at not selling.</p>
+<p><strong>Early Wipe Simulation</strong></p>
+<p>Features an ability to modify prices and features based on the look of the prices during an early wipe in live EFT.
+The length of early wipe depends on configuration. The early wipe will make the prices start out far from their usual and then return to their regular prices by the end.</p>
+<p><strong>Progressive Flea Support</strong></p>
+<p>Features a progressive flea configuration which allows configuring categories or specific items to be locked in the flea. This feature removes the need to configure SPT’s built in flea config (which isn’t recommended)<br>
+The system also features default values and a configuration to allow flea from level 1.</p>
+<p>It starts off disabled but can be enabled with a preset config option. The default config comes with EFT 1.0’s level locks.</p>
+<p><strong>Advanced Configuration</strong></p>
+<p>Most features in this mod are configurable through a preset system! Check out the Config tab for more info.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Config</div>
+<div class="tab-content"><h5>The default config currently needs some more tweaking. Some outlier items may behave differently than expected.</h5>
+<p>This mod features a preset based system to allow for easier config saving and transfer.<br>
+<strong>Some values will not change an already simulated market! You can fully reset by deleting state.json</strong></p>
+<p>A default config is included with the files. It features comments that describe what every value does.</p>
+<p>To make your own config, first duplicate the default config file in the Presets folder, change the name and author, and then set your new config in loader.json. (<em>The mod will not cover for making out of bound variables or making min variables higher than max.</em>)</p>
+<p>Feel free to share your config by creating an addon for this mod!</p>
+<hr>
+<p>The config operates off of assigning items to categories and then using the categories for how the item should be simulated.
+Every config should come with a default category that sets the default values for each other category, if another config doesn’t have a value it will be sourced from this category.</p>
+<p>Features are also togglable through the core config. If you don’t want offers to be generated, selling chances to be changed, or early wipe prices to be simulated, then you can turn them off.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Common Issues</div>
+<div class="tab-content"><p><strong>All items are very expensive</strong><br>
+This is typically caused by early wipe prices which most items start high and go much lower, they can be disabled within the config.</p>
+<p><strong>Items won’t sell</strong><br>
+If the items are being sold cheaper than every other item, the demand for the item might be low. If the demand is really low the item can take up to an hour in the default config.</p>
+<p><strong>Item price not behaving as it should/mod behavior is not as expected</strong><br>
+The default config might not be suited to how you want the market to work. I suggest creating a new config using the instructions in the Config section.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><p><strong>Incompatible</strong><br>
+Delayed Flea Sales - This mod overrides the same code.</p>
+<p><strong>Compatibility Issues</strong><br>
+Fast Sell Mods - Typically these will place the item for sale at a price that will sell the best for vanilla SPT so if using one of these, expect that they might not sell as frequently.
+Live Flea Prices - This mod adjusts prices on a regular basis. Compatible if simulation is disabled AND Live Flea Orice’s refresh flea config setting is set to false.
+Dynamic Flea Prices - Price adjustments are not compatible unless simulation is disabled.</p>
+<p><strong>Compatible</strong>
+The Blacklist</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Debug</div>
+<div class="tab-content"><p>There are several debug features to help test item simulations. They are all featured in the core section of the config.</p>
+<p>The most notable debug tool is the <strong>debugSimulation</strong>, if you set it to true and enter an item’s tplId in <strong>debugItem</strong>, it will generate a .csv file that features 3 months of price data.
+The number of rows generated is dynamically based on your simulation rate.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.1</h2></div><time datetime="2026-07-28T15:20:00.000000Z">28 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>214 downloads</span><span>33.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Simulation can now be disabled in the preset config which allows for the use of the sell and/or buy system with vanilla prices or other pricing mods.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZGY5ZWFkZjRjMTY1YWYyOGE5NzE0OTM0YTc3YjE4NzA6MTc4NTI1Mjk1OQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/2c780147-2e4d-4acd-aa1b-03f58570b4e3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A25%3A06Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-v1.4.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A25%3A05Z&amp;ske=2026-08-01T20%3A25%3A06Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=dzja6hq7fxF3EkvLzIJ7FhKNMkyGWZsPkjoR1RAhah4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMSwibmJmIjoxNzg1NjEyODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OM_eySSLArPAaKWbf7VdX8S9XPLqIqxwFVPBdhzytls&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.4.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-07-26T15:50:00.000000Z">26 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>140 downloads</span><span>33.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Removed progressive flea config<br>
+<strong>(IF YOU USED A CUSTOM PROGRESSIVE CONFIG, INSTALL THE STANDALONE MOD AND MIGRATE THE CONFIG SETTINGS BEFORE STARTING SERVER!)</strong></p>
+<p>Increased default minimum demand sell chance to 90% from 50%<br>
+Clarified a few comments in the default config</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d2f829858f5a21a05670e664c58aff5a8585937d53d9b3d54d9a08739928972c?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/72f6f6f8-6a2d-4d5e-a11f-3c5175cbd0ba?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A12%3A45Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-v1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A12%3A15Z&amp;ske=2026-08-01T20%3A12%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5X3h8sTcCejCH7Et%2FfiDQwoPuB2nlnTzFO7zQJcc1hY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMSwibmJmIjoxNzg1NjEyODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.OM_eySSLArPAaKWbf7VdX8S9XPLqIqxwFVPBdhzytls&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2026-02-12T15:13:00.000000Z">12 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,688 downloads</span><span>35.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>More overflow precautions</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8f137125bb74a9a9020dfbf06e2170797c5bcd516ca354f024d554156d3b46d9" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/323ab8d2-183f-4f91-a500-2bad50852873?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A24%3A53Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-v1.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A24%3A35Z&amp;ske=2026-08-01T20%3A24%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Vt7qyWBjUzuIm7j3VZsiqIir0Mmf%2Fd7gMBxCw6tGw9M%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMiwibmJmIjoxNzg1NjEyODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WG1qe5-5IJasHUU7c58BH4RhapjrKRCgkAdy5PIHM3Y&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-02-11T20:43:00.000000Z">11 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>112 downloads</span><span>35.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>fixes item prices being too high or too low crashing the mod</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/77bb5b218e3e04744705a773163e8fb1e1e8407557b936ec46974c0ae587c55e" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/f2df388b-13c8-4177-9661-f2a0d35c4576?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A14%3A36Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-v1.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A13%3A38Z&amp;ske=2026-08-01T20%3A14%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1VecCeiRSKw1Sa7o3m8MXABeJk2a9KVDqSf55RLZ%2B54%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzMywibmJmIjoxNzg1NjEyODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.j3l2ysW8xhspvTS6C-nrS40It-YAX7rhlSBJw2xwPKI&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-v1.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-01-03T21:03:00.000000Z">3 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,722 downloads</span><span>35.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added a “deals” system where when you sell items further below minimum, the chances of selling rise and the delay drop.</p>
+<p>Made the demand to sell delay curve exponential. The max delay from selling an item gets higher as demand decreases instead of being linear.</p>
+<p>Changed some data points</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8c6ee9659170d3e3bae944f7e557d498be2faa750edc95d5c526f7668fcfaab7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/31940f7e-42d6-4586-a297-3cd15e302d21?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A11%3A47Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-V1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A11%3A18Z&amp;ske=2026-08-01T20%3A11%3A47Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ojCp4I1jajOVNjWFWFmaiFzmdBcyWOFZZqcA5MN%2FQLQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNCwibmJmIjoxNzg1NjEyODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bqwIaxjLjhZXAXMfGIX4s9JEMKtfPoWlffqKYzrEJX8&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-01-02T23:24:00.000000Z">2 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>170 downloads</span><span>34.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added progressive flea configuration which allows for locking specific items or categories behind levels. It is disabled by default.
+Added simulation interpolation which runs simulations for time missed when server was offline.
+Fixed offer count slowly reducing over time</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/56fad1e8998a720a64ea82a2b2608e37722445da3b1cd097b96dede6f040288e" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/d291515d-4414-422a-b33d-2257b7974808?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A32%3A13Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-V1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A31%3A34Z&amp;ske=2026-08-01T20%3A32%3A13Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kNBdlgT3rKa9EZuwVHrHjcA6WfqTq1GzhSwl8czgp80%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNCwibmJmIjoxNzg1NjEyODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bqwIaxjLjhZXAXMfGIX4s9JEMKtfPoWlffqKYzrEJX8&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-01-02T03:24:00.000000Z">2 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>209 downloads</span><span>31.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>added config feature to disable early wipe when creating fresh market if a profile exists over a specific level
+fixed issue where loader.json causes a crash
+fixed crash when an non-indexed item has offers created for it</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e2bc6acd20eb10255dbba001d3e55b8befe31cadbee745651f08855cc0d442b7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/58d0849b-9d98-4ca4-a669-73f1c8820c9f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A11%3A10Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-V1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A10%3A32Z&amp;ske=2026-08-01T20%3A11%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6nuPvDiAKmMtgh%2FYaknkumUWW2VYlvyaONAG2NdBagY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNSwibmJmIjoxNzg1NjEyODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vYn9ukIvftyruR2q0iY6d1K_r57tgjHvScrhBCp8HrU&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-01-01T21:20:00.000000Z">1 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>75 downloads</span><span>31.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixes loader.json not being generated</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fce6c4b0baa8f12059c7dacb739f425e47193862e81e1b2a753cde88e5202891" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/2c8e72de-a6fb-4864-b9f4-a9484fb87247?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A30%3A07Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-V1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A29%3A49Z&amp;ske=2026-08-01T20%3A30%3A07Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=b%2FdUgMnDY%2Fc4VCPi%2BQhWZm6Iqblt2UcJYseQ96b2j%2BU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNiwibmJmIjoxNzg1NjEyODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.QyNU6oz16kyooKKnuX_bGasHuhhgvkxe9XX-PBRLgts&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-01-01T20:09:00.000000Z">1 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>30 downloads</span><span>31.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/79efbb3d77b3b6bf038a98f2dab4cc5b7937d77f1d2f75c7e8f6d60aa112e512" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122455430/57ca2ecc-3cf7-46bd-9180-77925fe6c76f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A27%3A42Z&amp;rscd=attachment%3B+filename%3DFleaSimulator-V1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A26%3A55Z&amp;ske=2026-08-01T20%3A27%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mH1dVNoZNT1EU6I5NekY7DOc1vFe8nu2eBPsXXjwEKE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzEzNywibmJmIjoxNzg1NjEyODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xFj53J_NhzWJxYCwpo0jcttT7hjlHQ1pav0pXjQmQY0&amp;response-content-disposition=attachment%3B%20filename%3DFleaSimulator-V1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.minesettimi.advfleasimulator</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 January 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/minesettimi/FleaSimulator" target="_blank" rel="noreferrer noopener">https://github.com/minesettimi/FleaSimulator</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

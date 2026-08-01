@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>The Blacklist - flea market enhancements · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>The Blacklist - flea market enhancements</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/384e98f68647a05cce3015a004f0ff87be1593bbab59de599c31a48d6c3f4aad.webp" alt="The Blacklist - flea market enhancements thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>The Blacklist - flea market enhancements</h1>
+    <p class="hero-teaser">Disables the BSG blacklist in the flea market. Rebalances the prices of blacklisted ammo like Igolnik. Speeds up sell times for offers. Additional configs to set flea prices for any item in the game.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/345d93da3f4e64aea26d3987d951a86b6ff8934c6d9cc0ec018d2ceb993c8ad6.webp" alt="" width="32" height="32">Platinum</span>
+      <span class="author"><img src="../../../assets/45625ff13077d0321c0df02f603c0a7e849097435958d409cacc59b35f53b1a1.webp" alt="" width="32" height="32">ArchangelWTF</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>153,274</dd></div>
+    <div><dt>Favourites</dt><dd>58</dd></div>
+    <div><dt>Mod lists</dt><dd>134</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="The Blacklist - flea market enhancements content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>9</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><p><strong>Features:</strong></p>
+<p>- Disables the ‘BSG Blacklist’ in the flea market so you can buy/sell high end ammo and gear again.</p>
+<p>- Rebalances the price of ammo depending on their stats (details below). The default flea prices for high end ammo were too low, Igolnik was cheaper than some low level bullets.</p>
+<p>- Rebalances the price of some blacklisted guns.</p>
+<p>- Configuration to make cheap offers made by you sell faster.</p>
+<p>- Configuration to reduce number of items for sale on the flea market to simulate scarcity.</p>
+<p>- Configuration to add an extra offer slot.</p>
+<p>- Configuration to allow you to set a custom price override for items on the flea market.</p>
+<p>- Configuration to blacklist any item on the flea market.</p>
+<p><strong>Ammo pricing:</strong></p>
+<p>Pricing for high end ammo is based on their penetration power and damage. Higher the pentration and damage, higher the price. Formula:</p>
+<p>newPrice = advancedConfig.baselineBulletPrice * penetrationMultiplier * damageMultiplier * config.blacklistedAmmoAdditionalPriceMultiplier;</p>
+<p>To increase the price of the previously blacklisted ammo across the board, simply increase the <em>blacklistedAmmoAdditionalPriceMultiplier</em> setting in config.json.</p>
+<p>Enable <em>useBalancedPricingForAllAmmo</em> in config.json to apply the above formula to all bullets and shotgun rounds.</p>
+<p><strong>Custom flea market pricing:</strong></p>
+<p>You can change the flea pricing of any item using the customItemConfigs[] setting in config.json.</p>
+<p>First, get the item._id from <a target="_blank" class="external-link" href="https://db.sp-tarkov.com/search" rel="noreferrer noopener">https://db.sp-tarkov.com/search</a></p>
+<p>Then add a new entry to customItemConfigs, following the existing pattern:</p>
+<p>{</p>
+<p>“itemId”: “5c0a840b86f7742ffa4f2482”, // item._id you just got from above</p>
+<p>“fleaPriceMultiplier”: 1.5, // the new price will be the existing price times this number</p>
+<p>“fleaPriceOverride”: 42069 // if you add a value for this, this will be the flea market value, ignoring the multiplier above</p>
+<p>}</p>
+<p><strong>Blacklist items:</strong></p>
+<p>Similarly, you can blacklist any item using the above customItemConfigs. Just find the itemId and set property “blacklisted” to true.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p><strong>Installation</strong>:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="Archived image">
+(In the GIF it says ‘Live Flea Prices’, but the installation is the same)</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configurations</div>
+<div class="tab-content"><p>The configs have comments or notes about each of the settings so they should be quite self-explanatory. Let me know if you want more details about a certain config.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.1</h2></div><time datetime="2025-12-24T15:00:00.000000Z">24 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>25,879 downloads</span><span>20.6 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added a missing dogtag that was not blacklisted on the flea</li>
+<li>Added an option to allow only Found in Raid items to be sold to the flea</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e4711d571daa838fbc1e019ef55879bf560bb92a819d953995ceb6930084f10c" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/945806265/f46d6634-bcdc-41dd-8eee-530f24f23619?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A30Z&amp;rscd=attachment%3B+filename%3Dplatinum-theblacklist-3.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A16Z&amp;ske=2026-08-01T21%3A03%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kKBFmlCLISs7aTJ3WNXOHmRNJSbc11OuDOJ0Yl7GasY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&amp;response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist-3.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2025-10-24T14:49:00.000000Z">24 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>12,709 downloads</span><span>20.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Updated to SPT 4.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZTk5ODY0MmRjNTQzNWFhN2Y5YWMxNGVmNzRhNDhhNDA6MTc2MTMxNzM1Mw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/945806265/104b6fb0-9164-4895-a3e7-36dfaf0a68d6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A38Z&amp;rscd=attachment%3B+filename%3Dplatinum-theblacklist-3.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A24Z&amp;ske=2026-08-01T21%3A19%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8vmkXRLLCm2%2BTUGCpEvsLoAAa9dKaQd205C2NI5KByM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&amp;response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist-3.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.4+b</h2></div><time datetime="2025-03-24T08:06:40.000000Z">24 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>21,993 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Beta/Untested.</p>
+<p>Try fix blacklisted items not being allowed to be sold on Flea Market.</p>
+<p>For SPT 3.11</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/896436054/0c46eb3e-3e8e-424f-9278-fcb6f8394ca7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A49Z&amp;rscd=attachment%3B+filename%3Dplatinum-theblacklist.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A32Z&amp;ske=2026-08-01T21%3A26%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=dPhy12ytKcorksSAVogflROtYJUXeVenIL3JDRI09m8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQwMywibmJmIjoxNzg1NjE2MTAzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.YjkPruDT2d7s4FpLnoT10rlmdCfxwFayXdp3NMIp9SE&amp;response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.3+b</h2></div><time datetime="2025-03-21T11:00:05.000000Z">21 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,297 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for SPT 3.11. Beta/Untested.</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/896436054/708b056c-3222-4823-8a8e-9e7f7d1ab425?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A51Z&amp;rscd=attachment%3B+filename%3Dplatinum-theblacklist.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A27Z&amp;ske=2026-08-01T21%3A11%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=RWG8260uH6X4W1qNJgS48sKQ3YR20yM%2FfqcnVqCJQ%2Bw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3Dplatinum-theblacklist.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2+b</h2></div><time datetime="2024-11-27T09:53:23.000000Z">27 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>19,079 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated to SPT 3.10 by <a target="_blank" class="external-link" href="https://dev.sp-tarkov.com/Archangel" rel="noreferrer noopener">Archangel</a> (again, thanks for your help!)<br>
+Beta release because I havent functionally tested it.<br>
+Blacklisted new dogtags.</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/sp-tarkov" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2024-07-17T11:43:02.000000Z">17 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>20,226 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for SPT 3.9.X</p>
+<p>All credits to <a target="_blank" class="external-link" href="https://dev.sp-tarkov.com/Archangel" rel="noreferrer noopener">Archangel</a> who did the work.</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/sp-tarkov" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2024-04-03T08:48:58.000000Z">3 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>17,698 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for SPT-AKI 3.8.*</p>
+<ul>
+<li>Overhauled most of the code</li>
+<li>Fix issue where prices weren’t being updated properly due to async load in v1</li>
+<li>Removed logic surrounding armour prices because of the new armour system</li>
+<li>Added bunch of extra features to the configs</li>
+<li>Updated pricing of most blacklisted ammo</li>
+</ul>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/sp-tarkov" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.1</h2></div><time datetime="2023-10-09T09:06:47.000000Z">9 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.7.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>15,531 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated SPT-AKI version to 3.7.*</p>
+<p>Feel free to use existing v1.3.0 mod if you have made changes to your configs.</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/sp-tarkov" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2023-08-02T09:57:07.000000Z">2 August 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.7.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,934 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>For SPT-AKI 3.5.* &amp; 3.6.* &amp; 3.7.*</p>
+<p>Changelog:</p>
+<ul>
+<li>Updated ammo price calculation so mid-tier blacklisted ammo like M856A1 starts around 1000 roubles. Works well with the SPT Realism mod as there is a bigger variance with all the ammo types.</li>
+<li>Added config.useBalancedPricingForAllAmmo that balances the price for all ammo. Effectively, it makes non blacklisted ammo a little bit more expensive on the flea. Default off.</li>
+</ul>
+<p>If you have updated your config.json significantly already, I recommend you copy your changes and paste them back into the updated config.json. Sorry for any inconvenience.</p>
+</div>
+          
+          
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/sp-tarkov" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.platinum.theblacklist</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>11 February 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ArchangelWTF/spt-the-blacklist" target="_blank" rel="noreferrer noopener">C#</a></li><li><a href="https://github.com/gndworks/spt-the-blacklist" target="_blank" rel="noreferrer noopener">Node</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

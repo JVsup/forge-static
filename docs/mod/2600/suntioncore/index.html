@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SuntionCore · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SuntionCore</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="SuntionCore thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SuntionCore</h1>
+    <p class="hero-teaser">Some commonly used methods extracted and optimized from the mods I&#39;ve created, suitable for SPT server mods.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f5eaacedfe1588811ded2c8c177c945c2a8c466690409b71c461969786ce18c9.webp" alt="" width="32" height="32">Suntion</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,585</dd></div>
+    <div><dt>Favourites</dt><dd>10</dd></div>
+    <div><dt>Mod lists</dt><dd>3</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SuntionCore content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>4</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p>A utility library extracted and optimized from various mods, specifically designed for <strong>SPT (Single Player Tarkov)</strong> server modding.</p>
+<p>The current stable version (v1.0.0) includes core functionalities for <strong>File Size Calculation &amp; Formatting</strong>, <strong>Internationalization (I18N)</strong>, and a <strong>Modular Logging System</strong>.</p>
+<blockquote>
+<p><strong>Tip:</strong> For detailed code examples and implementation patterns, please refer to the <code>SuntionCore.Tests</code> project included in the source repository.</p>
+</blockquote>
+<hr>
+<h3>Key Features</h3>
+<h4>1. Magnitude Formatter</h4>
+<p>A robust tool for formatting numerical values with dynamic units (e.g., KB, MB, GB).</p>
+<ul>
+<li>Provides sealed configuration types (<code>MagnitudeConfig</code>) and common presets (<code>MagnitudePreset</code>).</li>
+<li>Automatically formats numbers into readable strings based on step thresholds (e.g., <code>12.12 KB</code>, <code>36.24 MB</code>).</li>
+</ul>
+<h4>2. File Size Utilities (<code>FileSizeUtil</code>)</h4>
+<p>Efficient tools for handling file metrics.</p>
+<ul>
+<li>Calculate raw file sizes in bytes via static methods or string extensions.</li>
+<li>Convert file paths directly into human-readable size strings with customizable decimal precision.</li>
+<li>Includes built-in exception handling for invalid paths or inaccessible files.</li>
+</ul>
+<h4>3. Internationalization (<code>I18N</code>)</h4>
+<p>A comprehensive multi-language management system.</p>
+<ul>
+<li><strong>Instance Management:</strong> Supports multiple independent translation contexts identified by name.</li>
+<li><strong>Dynamic Loading:</strong> Batch loads language files (<code>xx.json</code>) from directories.</li>
+<li><strong>Advanced Syntax:</strong>
+<ul>
+<li>Chain keys using <code>::</code> for concatenated translations.</li>
+<li>Parameter replacement using <code>{{VariableName}}</code> syntax.</li>
+</ul>
+</li>
+<li><strong>Database Integration:</strong> Optional integration with <code>DatabaseServer</code> to track and utilize SPT’s native localization dictionaries (<code>SptLocals</code>).</li>
+</ul>
+<h4>4. Modular Logging (<code>ModLogger</code>)</h4>
+<p>A dedicated logging system designed to separate mod-specific logs from the main server output.</p>
+<ul>
+<li><strong>Isolation:</strong> Each mod writes to its own log file(s), preventing main log pollution.</li>
+<li><strong>Strategies:</strong> Supports single-file rotation and multi-file separation by log level (Info, Warn, Error, Debug).</li>
+<li><strong>Auto-Cleanup:</strong> Configurable file size limits to automatically purge old logs upon server startup.</li>
+<li><strong>Thread-Safe:</strong> Ensures safe concurrent access across multiple threads.</li>
+</ul>
+<p><strong>Since all the above functions of this module manage instances through static properties, you can use them anywhere</strong></p>
+<blockquote>
+<p><strong><code>ModLogger</code></strong> is particularly suitable for recording debugging information that needs to be output, without having to search through the SPT logs for your own logs among other module logs.</p>
+</blockquote>
+<hr>
+<h3>How to Reference This Library</h3>
+<h4>&gt;= v1.2.0</h4>
+<p>Add PackageReference By <strong>NuGet</strong></p>
+<p>.csproj:</p>
+<pre><code>&lt;ItemGroup&gt;
+    &lt;PackageReference Include="SuntionCore" Version="x.x.x" /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<h4>Old Version</h4>
+<p>To use SuntionCore in your own mod project:</p>
+<ol>
+<li><strong>Copy DLL:</strong> Install this mod to your SPT instance, then copy <code>SuntionCore.dll</code> from <code>user/mods/SuntionCore/</code> into a <code>libs</code> folder within your mod project.</li>
+<li><strong>Update Project File:</strong> Add the following reference to your <code>.csproj</code> file:
+<pre><code>&lt;ItemGroup&gt;
+    &lt;Reference Include="SuntionCore.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<em>Note: Ensure <code>&lt;Private&gt;</code> is set to <code>False</code> to prevent bundling the DLL with your mod output.</em></li>
+</ol>
+<p>Create mod dependencies using the following code:</p>
+<pre><code>class YourModMetadata
+{
+    public override Dictionary&lt;string, Range&gt;? ModDependencies { get; init; } = new()
+    {
+        { "com.suntion.suntioncore", new Range("&gt;=1.0.0") }
+    };
+}
+</code></pre>
+<hr>
+<h3>Quick Usage Overview</h3>
+<h4>String Extensions</h4>
+<p>Extend standard strings with powerful utility methods:</p>
+<ul>
+<li><code>.ToFileSize()</code>: Returns a formatted file size string (e.g., <code>"61.23 KB"</code>).</li>
+<li><code>.CalFileSize()</code>: Returns the raw file size in bytes (<code>long</code>).</li>
+<li><code>.Translate()</code>: Retrieves localized text with support for key chaining and argument injection.</li>
+</ul>
+<h4>Workflow Examples</h4>
+<p><strong>Formatting Numbers:</strong>
+Use <code>MagnitudeFormatter</code> to convert raw values into unit-based strings instantly.</p>
+<p><strong>Handling Files:</strong>
+Call <code>FileSizeUtil.GetFileSize(path)</code> to get a readable size string, or use the extension method on any path string.</p>
+<p><strong>Localization:</strong></p>
+<ol>
+<li>Initialize with <code>I18N.Initialize(databaseServer)</code>. (This initialization is required <strong>only</strong> if you need the I18N system to track SPT’s native translation dictionary based on the current language. Once initialized, you can access this dictionary via the <code>SptLocals</code> property.)</li>
+<li>Get an instance via <code>I18N.GetOrCreateI18N("MyMod")</code>.</li>
+<li>Load JSON language packs and switch languages dynamically.</li>
+<li>Translate keys with automatic parameter substitution.</li>
+</ol>
+<p><strong>Logging:</strong></p>
+<ol>
+<li>Create a logger: <code>ModLogger.GetOrCreateLogger("MyMod")</code>.</li>
+<li>Log messages using <code>.Info()</code>, <code>.Warn()</code>, <code>.Error()</code>, or <code>.Debug()</code>.</li>
+<li>Logs are automatically written to <code>user/mods/SuntionCore/ModLogs</code>.</li>
+</ol>
+<hr>
+<h3>Documentation &amp; API</h3>
+<p>For complete API definitions, method signatures, and advanced configuration options, please consult the dedicated API manuals:</p>
+<ul>
+<li><strong>English:</strong> <code>API_EN.md</code></li>
+<li><strong>Chinese:</strong> <code>API_ZH.md</code></li>
+</ul>
+<hr>
+<h3>Credits</h3>
+<p>Inspired by and built upon the concepts of:</p>
+<ul>
+<li><strong>MassivesoftCore &amp; MassivesoftWeapons</strong>: For SPT library architecture and referencing standards.</li>
+<li><strong>SPT Item Creator</strong>: For local mod logging concepts.</li>
+<li><strong>Raid Record</strong>: For file size calculation and internationalization logic.</li>
+<li><strong>SuntionCore (Original Mod)</strong>: For magnitude-based value formatting.</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p>一个从多个模组中提取并优化的工具库，专为 <strong>SPT (单机塔科夫)</strong> 服务端模组开发设计。</p>
+<p>当前稳定版本 (v1.0.0) 包含了 <strong>文件大小计算与格式化</strong>、<strong>国际化 (I18N)</strong> 以及 <strong>模块化日志系统</strong> 等核心功能。</p>
+<blockquote>
+<p><strong>提示：</strong> 如需详细的代码示例和实现模式，请参考源代码仓库中包含的 <code>SuntionCore.Tests</code> 项目。</p>
+</blockquote>
+<hr>
+<h3>主要特性</h3>
+<h4>1. 量级格式化器 (Magnitude Formatter)</h4>
+<p>一个强大的工具，用于格式化带有动态单位（如 KB、MB、GB）的数值。</p>
+<ul>
+<li>提供密封的配置类型 (<code>MagnitudeConfig</code>) 和常用预设 (<code>MagnitudePreset</code>)。</li>
+<li>根据步进阈值自动将数字格式化为可读字符串（例如 <code>12.12 KB</code>, <code>36.24 MB</code>）。</li>
+</ul>
+<h4>2. 文件大小工具 (<code>FileSizeUtil</code>)</h4>
+<p>处理文件指标的高效工具。</p>
+<ul>
+<li>通过静态方法或字符串扩展计算原始文件大小（字节）。</li>
+<li>直接将文件路径转换为人类可读的大小字符串，支持自定义小数精度。</li>
+<li>包含对无效路径或无法访问文件的内置异常处理。</li>
+</ul>
+<h4>3. 国际化 (<code>I18N</code>)</h4>
+<p>一个全面的多语言管理系统。</p>
+<ul>
+<li><strong>实例管理：</strong> 支持多个由名称标识的独立翻译上下文。</li>
+<li><strong>动态加载：</strong> 从目录批量加载语言文件 (<code>xx.json</code>)。</li>
+<li><strong>高级语法：</strong>
+<ul>
+<li>使用 <code>::</code> 连接键以实现串联翻译。</li>
+<li>使用 <code>{{VariableName}}</code> 语法进行参数替换。</li>
+</ul>
+</li>
+<li><strong>数据库集成：</strong> 可选择与 <code>DatabaseServer</code> 集成，以跟踪和利用 SPT 的原生本地化词典 (<code>SptLocals</code>)。</li>
+</ul>
+<h4>4. 模块化日志 (<code>ModLogger</code>)</h4>
+<p>一个专用的日志系统，旨在将特定模组的日志与主服务器输出分离。</p>
+<ul>
+<li><strong>隔离性：</strong> 每个模组写入自己的日志文件，防止主日志被污染。</li>
+<li><strong>策略：</strong> 支持单文件轮转和按日志级别（Info, Warn, Error, Debug）分离到多文件。</li>
+<li><strong>自动清理：</strong> 可配置文件大小限制，在服务器启动时自动清理旧日志。</li>
+<li><strong>线程安全：</strong> 确保跨多个线程的并发访问安全。</li>
+</ul>
+<p><strong>由于本模块以上所有功能均通过静态属性管理实例，因此您可以在任何地方使用它们</strong></p>
+<blockquote>
+<p><strong><code>ModLogger</code></strong> 特别适合记录需要输出的调试信息，而无需在 SPT 日志中从其他模块的日志里费力查找您自己的日志。</p>
+</blockquote>
+<hr>
+<h3>如何引用此库</h3>
+<h4>&gt;= v1.2.0</h4>
+<p>使用<strong>NuGet</strong>添加包引用:</p>
+<p>.csproj:</p>
+<pre><code>&lt;ItemGroup&gt;
+    &lt;PackageReference Include="SuntionCore" Version="x.x.x" /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<h4>旧版本</h4>
+<p>要在您自己的模组项目中使用 SuntionCore：</p>
+<ol>
+<li><strong>复制 DLL：</strong> 将此模组安装到您的 SPT 实例中，然后将 <code>user/mods/SuntionCore/</code> 目录下的 <code>SuntionCore.dll</code> 复制到您的模组项目中的 <code>libs</code> 文件夹内。</li>
+<li><strong>更新项目文件：</strong> 在您的 <code>.csproj</code> 文件中添加以下引用：
+<pre><code>&lt;ItemGroup&gt;
+    &lt;Reference Include="SuntionCore.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<em>注意：确保将 <code>&lt;Private&gt;</code> 设置为 <code>False</code>，以防止将 DLL 打包到您的模组输出中。</em></li>
+</ol>
+<p>使用以下代码创建模组依赖：</p>
+<pre><code>class YourModMetadata
+{
+    public override Dictionary&lt;string, Range&gt;? ModDependencies { get; init; } = new()
+    {
+        { "com.suntion.suntioncore", new Range("&gt;=1.0.0") }
+    };
+}
+</code></pre>
+<hr>
+<h3>快速使用概览</h3>
+<h4>字符串扩展</h4>
+<p>为标准字符串扩展强大的实用方法：</p>
+<ul>
+<li><code>.ToFileSize()</code>: 返回格式化的文件大小字符串（例如 <code>"61.23 KB"</code>）。</li>
+<li><code>.CalFileSize()</code>: 返回原始文件大小（字节，<code>long</code> 类型）。</li>
+<li><code>.Translate()</code>: 获取本地化文本，支持键链接和参数注入。</li>
+</ul>
+<h4>工作流示例</h4>
+<p><strong>格式化数字：</strong>
+使用 <code>MagnitudeFormatter</code> 立即将原始值转换为基于单位的字符串。</p>
+<p><strong>处理文件：</strong>
+调用 <code>FileSizeUtil.GetFileSize(path)</code> 获取可读的大小字符串，或在任何路径字符串上使用扩展方法。</p>
+<p><strong>本地化：</strong></p>
+<ol>
+<li>使用 <code>I18N.Initialize(databaseServer)</code> 初始化。（<strong>仅当</strong>您需要 I18N 系统根据当前语言跟踪 SPT 的原生翻译词典时，才需要此初始化。初始化后，您可以通过 <code>SptLocals</code> 属性访问此词典。）</li>
+<li>通过 <code>I18N.GetOrCreateI18N("MyMod")</code> 获取一个实例。</li>
+<li>加载 JSON 语言包并动态切换语言。</li>
+<li>使用自动参数替换翻译键。</li>
+</ol>
+<p><strong>日志记录：</strong></p>
+<ol>
+<li>创建日志记录器：<code>ModLogger.GetOrCreateLogger("MyMod")</code>。</li>
+<li>使用 <code>.Info()</code>, <code>.Warn()</code>, <code>.Error()</code> 或 <code>.Debug()</code> 记录消息。</li>
+<li>日志将自动写入 <code>user/mods/SuntionCore/ModLogs</code> 目录。</li>
+</ol>
+<hr>
+<h3>文档与 API</h3>
+<p>有关完整的 API 定义、方法签名和高级配置选项，请查阅专门的 API 手册：</p>
+<ul>
+<li><strong>英文：</strong> <code>API_EN.md</code></li>
+<li><strong>中文：</strong> <code>API_ZH.md</code></li>
+</ul>
+<hr>
+<h3>致谢</h3>
+<p>灵感源自并构建于以下项目的概念：</p>
+<ul>
+<li><strong>MassivesoftCore &amp; MassivesoftWeapons</strong>：关于 SPT 库架构和引用标准。</li>
+<li><strong>SPT Item Creator</strong>：关于本地模组日志记录的概念。</li>
+<li><strong>Raid Record</strong>：关于文件大小计算和国际化逻辑。</li>
+<li><strong>SuntionCore (原始模组)</strong>：关于基于量级的数值格式化。</li>
+</ul></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-03-15T17:44:00.000000Z">15 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,651 downloads</span><span>13.4 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p>New Features</p>
+<ul>
+<li>
+<p><strong>Hash Utility Class (<code>HashUtil</code>)</strong></p>
+<ul>
+<li>Added a universal hash calculation service supporting multiple algorithms: <code>SHA1</code>, <code>SHA256</code>, <code>MD5</code>, <code>SHA384</code>, <code>SHA512</code> (default is <code>SHA256</code>)</li>
+<li>Provides simple static methods: <code>Hash(string text, HashAlgo hashAlgo)</code> and <code>Hash(byte[] data, HashAlgo hashAlgo)</code></li>
+<li><strong>Security Notice</strong>: Clearly distinguishes between recommended algorithms (SHA-2 series) and legacy algorithms (SHA1, MD5) with their applicable scenarios</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation Improvements</strong></p>
+<ul>
+<li>Updated Chinese and English README and API documentation, added <code>HashUtil</code> usage instructions</li>
+</ul>
+</li>
+</ul>
+<p>Optimizations and Adjustments</p>
+<ul>
+<li><strong>Centralized Module Constants Management</strong>
+<ul>
+<li>Centralized module name and logger instance management for improved code maintainability</li>
+</ul>
+</li>
+<li><strong>Logging System Optimization</strong>
+<ul>
+<li>Simplified log access method, unified usage of <code>SuntionCoreMod.Logger</code></li>
+</ul>
+</li>
+</ul>
+<p>Version Information</p>
+<ul>
+<li>Module version updated to <strong><code>1.2.0</code></strong></li>
+<li><strong>Compatibility</strong>: No breaking changes, existing features remain unaffected</li>
+</ul>
+<p>Developer Notes</p>
+<ul>
+<li>When using the hash utility, please note: <code>SHA1</code> and <code>MD5</code> are only suitable for non-security-sensitive scenarios (such as file verification), it is recommended to use <code>SHA256</code> and above algorithms</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p>新增功能</p>
+<ul>
+<li>
+<p><strong>哈希工具类 (<code>HashUtil</code>)</strong></p>
+<ul>
+<li>新增通用哈希计算服务，支持 <code>SHA1</code>、<code>SHA256</code>、<code>MD5</code>、<code>SHA384</code>、<code>SHA512</code> 多种算法（默认 <code>SHA256</code>）</li>
+<li>提供简单易用的静态方法：<code>Hash(string text, HashAlgo hashAlgo)</code> 和 <code>Hash(byte[] data, HashAlgo hashAlgo)</code></li>
+<li><strong>安全提示</strong>：明确区分推荐算法（SHA-2 系列）与遗留算法（SHA1、MD5）的适用场景</li>
+</ul>
+</li>
+<li>
+<p><strong>文档完善</strong></p>
+<ul>
+<li>更新中英文 README 和 API 文档，新增 <code>HashUtil</code> 使用说明</li>
+</ul>
+</li>
+</ul>
+<p>优化与调整</p>
+<ul>
+<li><strong>模组常量统一管理</strong>
+<ul>
+<li>将模组名称和日志实例集中管理，提升代码可维护性</li>
+</ul>
+</li>
+<li><strong>日志系统优化</strong>
+<ul>
+<li>简化日志获取方式，统一使用 <code>SuntionCoreMod.Logger</code></li>
+</ul>
+</li>
+</ul>
+<p>版本信息</p>
+<ul>
+<li>模组版本号更新至 <strong><code>1.2.0</code></strong></li>
+<li><strong>兼容性</strong>：无破坏性变更，现有功能不受影响</li>
+</ul>
+<p>开发者注意事项</p>
+<ul>
+<li>使用哈希工具时请注意：<code>SHA1</code> 和 <code>MD5</code> 仅适用于非安全敏感场景（如文件校验），推荐使用 <code>SHA256</code> 及以上算法</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cfee3b6e5957c97f64837161a17a2552cc6f822923fb36670fde917cbbee1cdc/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/3a46d48f-f0ea-42fd-89af-ad4d9cd179c5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A23Z&amp;rscd=attachment%3B+filename%3DSuntionCore-1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A16Z&amp;ske=2026-08-01T21%3A20%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=am54tRff7zaKhTENaEprmnA0pkIdqhKIRxlMQl1%2BnWM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore-1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-02-24T15:00:00.000000Z">24 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>824 downloads</span><span>14.7 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Version 1.1.0 Release Notes</h3>
+<h4>Chore: Core Library Update</h4>
+<p><strong>Observability Improvements: Enhanced Log Tracking and Exception Context Information</strong></p>
+<p>This release focuses on improving the robustness and debuggability of the core library, particularly in edge cases related to object disposal and missing localization data. No public API changes have been introduced.</p>
+<ul>
+<li>
+<p><strong>Refactored <code>ModLogger.LogMessage</code> Logic</strong></p>
+<ul>
+<li>Improved error handling when the logger instance has been disposed (<code>_disposed</code> state).</li>
+<li>Instead of failing silently, the system now outputs red-highlighted error logs directly via <code>Console.WriteLine</code>.</li>
+<li>These diagnostic messages fully capture the context of the failure, including:
+<ul>
+<li>The affected stream type (<code>LogWriterStream</code>).</li>
+<li>The original log message that was attempted.</li>
+<li>The full exception stack trace (<code>StackTrace</code>).</li>
+</ul>
+</li>
+<li>This ensures that critical post-disposal logging attempts are always visible and traceable.</li>
+</ul>
+</li>
+<li>
+<p><strong>Refined <code>I18N</code> Exception Prompts</strong></p>
+<ul>
+<li>Enhanced the <code>NotLoadLanguageException</code> to provide clearer, more actionable error messages.</li>
+<li>The exception now dynamically injects relevant context to distinguish between two common failure scenarios:
+<ol>
+<li><strong>Setting the current language:</strong> The error message now includes the <code>CurrentLang</code> that was being set when the failure occurred.</li>
+<li><strong>Retrieving translation keys:</strong> The error message now specifies the missing <code>key</code> that the system attempted to translate.</li>
+</ol>
+</li>
+<li>This improvement significantly increases troubleshooting efficiency by immediately identifying the root cause of translation failures.</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>版本 1.1.0 更新日志</h3>
+<h4>项目配置：核心库更新</h4>
+<p><strong>可观测性改进：增强对象释放后的日志追踪与异常上下文信息</strong></p>
+<p>本次更新专注于提高核心库在边缘情况下的鲁棒性和可调试性，特别是涉及对象已释放或本地化数据丢失的场景。本次更新未引入任何公共 API 变更。</p>
+<ul>
+<li>
+<p><strong>重构 <code>ModLogger.LogMessage</code> 逻辑</strong></p>
+<ul>
+<li>改进了当日志记录器实例已被释放（<code>_disposed</code> 状态）时的错误处理。</li>
+<li>系统不再静默失败，而是直接通过 <code>Console.WriteLine</code> 输出红色高亮显示的错误日志。</li>
+<li>这些诊断消息完整地捕获了失败时的上下文信息，包括：
+<ul>
+<li>受影响的流类型（<code>LogWriterStream</code>）。</li>
+<li>尝试记录的原始日志消息。</li>
+<li>完整的异常堆栈跟踪（<code>StackTrace</code>）。</li>
+</ul>
+</li>
+<li>此举确保了在对象释放后关键的日志记录尝试始终可见且可追溯。</li>
+</ul>
+</li>
+<li>
+<p><strong>完善 <code>I18N</code> 异常提示</strong></p>
+<ul>
+<li>增强了 <code>NotLoadLanguageException</code>，以提供更清晰、更具操作性的错误消息。</li>
+<li>该异常现在会动态注入相关的上下文信息，以区分两种常见的失败场景：
+<ol>
+<li><strong>设置当前语言：</strong> 错误消息现在会包含导致失败时正在设置的 <code>CurrentLang</code>（当前语言）。</li>
+<li><strong>检索翻译键：</strong> 错误消息现在会指定系统尝试翻译时缺失的 <code>key</code>（键名）。</li>
+</ol>
+</li>
+<li>此项改进通过立即识别翻译失败的根本原因，显著提高了故障排查效率。</li>
+</ul>
+</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8845811cb07e8e43bb973dadc3670bf8600ba0e7fd2dd0bed69df545cc3d812d/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/738557e4-692d-49e4-8c84-8d839e98fbcc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A18Z&amp;rscd=attachment%3B+filename%3DSuntionCore-1.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A59Z&amp;ske=2026-08-01T21%3A24%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=FK2%2FGxuevbz64z67unTh3A%2F226uIPVcO5clJ6oa3gRs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore-1.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-22T11:28:00.000000Z">22 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>75 downloads</span><span>14.5 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-3-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Core Features Ready</h3>
+<p>Officially released core functionalities including <strong>Magnitude Formatting (new)</strong> , Internationalization (i18n), File Utilities, and the Logging System.</p>
+<h4>Regarding API Changes</h4>
+<p>Only APIs related to <strong>Magnitude Formatting</strong> (<code>MagnitudeFormatter</code>) have been added. There are <strong>no changes</strong> to the usage or signatures of existing public APIs.</p>
+<hr>
+<h3>Test Infrastructure: Built Complete Automated Testing Environment</h3>
+<ul>
+<li><strong>Configuration Optimization</strong>: Simplified the test project to a single target (<code>net9.0</code>) and added an MSBuild target to automatically copy <code>TestFiles</code> resources to the output directory.</li>
+<li><strong>Standardization Control</strong>: Created <code>.gitattributes</code> to enforce <code>binary</code> storage mode for binary files (<code>*.dat</code>, <code>*.dll</code>), preventing encoding corruption.</li>
+<li><strong>Architecture Refactoring</strong>: Introduced a <code>TestData</code> constant class for unified path management and moved <code>MagnitudeFormatterTest</code> to a dedicated namespace directory.</li>
+<li><strong>Internal Exposure</strong>: Used <code>[InternalsVisibleTo]</code> to expose internal members to the test assembly and added the <code>IsStreamReady</code> method for assertions.</li>
+</ul>
+<hr>
+<h3>Test Coverage: Executed Full-Module Integration and Stress Testing</h3>
+<ul>
+<li><strong>FileSizeUtil</strong>: Verified consistency between static methods and the <code>.ToFileSize()</code> string extension.</li>
+<li><strong>I18N</strong>: Covered the full workflow including language loading, chained translation (<code>::</code>), parameter replacement (<code>{{}}</code>), dynamic switching, and data extension.</li>
+<li><strong>ModLogger</strong>: Executed stress tests with 500 random loads, simulating multi-instance, multi-level log writing, and exception stack tracing.</li>
+</ul>
+<hr>
+<h3>Documentation: Added Reference Guide and API Manual</h3>
+<ul>
+<li><strong>Reference Tutorial</strong>: Added a “How to Reference This Library” section to both Chinese and English READMEs, detailing DLL copying and <code>.csproj</code> configuration (<code>Private=False</code>).</li>
+<li><strong>API Manual</strong>: Created <code>API_ZH.md</code> and <code>API_EN.md</code> containing definitions for all public interfaces; migrated detailed tables from the README to these files.</li>
+<li><strong>Usage Guidelines</strong>: Explicitly directed users to refer to the <code>SuntionCore.Tests</code> project for concrete code examples.</li>
+<li><strong>Acknowledgments Update</strong>: Added links and functional descriptions for the official SuntionCore mod.</li>
+</ul></div></div>
+<div id="tabset-3-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>核心功能就绪</h3>
+<p>正式发布核心功能，包括<strong>全新的量级格式化</strong>、国际化 (i18n)、文件工具和日志系统。</p>
+<h4>关于 API 变更</h4>
+<p>仅新增了与<strong>量级格式化</strong> (<code>MagnitudeFormatter</code>) 相关的 API。现有公共 API 的用法和签名<strong>均未改变</strong>。</p>
+<hr>
+<h3>测试基础设施：构建完整的自动化测试环境</h3>
+<ul>
+<li><strong>配置优化</strong>：将测试项目简化为单一目标框架 (<code>net9.0</code>)，并添加 MSBuild 目标以自动将 <code>TestFiles</code> 资源复制到输出目录。</li>
+<li><strong>标准化控制</strong>：创建 <code>.gitattributes</code> 文件，强制二进制文件（<code>*.dat</code>, <code>*.dll</code>）以 <code>binary</code> 模式存储，防止编码损坏。</li>
+<li><strong>架构重构</strong>：引入 <code>TestData</code> 常量类以统一管理路径，并将 <code>MagnitudeFormatterTest</code> 移至专用的命名空间目录。</li>
+<li><strong>内部成员暴露</strong>：使用 <code>[InternalsVisibleTo]</code> 将内部成员暴露给测试程序集，并添加了 <code>IsStreamReady</code> 方法用于断言。</li>
+</ul>
+<hr>
+<h3>测试覆盖：执行全模块集成与压力测试</h3>
+<ul>
+<li><strong>FileSizeUtil</strong>：验证了静态方法与 <code>.ToFileSize()</code> 字符串扩展之间的一致性。</li>
+<li><strong>I18N</strong>：覆盖了完整工作流程，包括语言加载、链式翻译 (<code>::</code>)、参数替换 (<code>{{}}</code>)、动态切换和数据扩展。</li>
+<li><strong>ModLogger</strong>：执行了 500 次随机负载的压力测试，模拟了多实例、多级别日志写入和异常堆栈跟踪。</li>
+</ul>
+<hr>
+<h3>文档：新增参考指南与 API 手册</h3>
+<ul>
+<li><strong>引用教程</strong>：在中文和英文 README 中均新增了“如何引用此库”部分，详细说明了 DLL 复制和 <code>.csproj</code> 配置 (<code>Private=False</code>)。</li>
+<li><strong>API 手册</strong>：创建了 <code>API_ZH.md</code> 和 <code>API_EN.md</code>，包含所有公共接口的定义；并将 README 中的详细表格迁移至这些文件。</li>
+<li><strong>使用指南</strong>：明确引导用户参考 <code>SuntionCore.Tests</code> 项目以获取具体的代码示例。</li>
+<li><strong>致谢更新</strong>：添加了官方 SuntionCore 模组的链接和功能描述。</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6f4bc76da4595a1c786b0e8b1d309c528fbcd32f428da4921554a1e8436ada7a/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/9596b646-be16-4a64-8724-a4eeb1943e6e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A31Z&amp;rscd=attachment%3B+filename%3DSuntionCore-1.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A56Z&amp;ske=2026-08-01T21%3A14%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SNjFMMSaZgyHNGcmNiLOicDO2HVQT0ydJglumJcPy4E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore-1.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.0</h2></div><time datetime="2026-02-21T16:03:00.000000Z">21 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>35 downloads</span><span>11.7 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-4-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p><strong>New Features:</strong></p>
+<ul>
+<li><strong>File Size Utility</strong> - Supports byte calculation and human-readable format conversion</li>
+<li><strong>Multi-instance Internationalization System</strong> - Supports JSON language packs, parameter substitution, and multi-key concatenation</li>
+<li><strong>Modular Logging System</strong> - Creates independent log files for each mod, supports level-based separation and automatic rotation</li>
+</ul>
+<p><strong>Configuration Notes:</strong></p>
+<ul>
+<li>Default log path: <code>user/mods/SuntionCore/ModLogs</code></li>
+<li>Default log size limit: 1MB (configurable)</li>
+</ul></div></div>
+<div id="tabset-4-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p><strong>新特性：</strong></p>
+<ul>
+<li><strong>文件大小工具</strong> - 支持字节计算与人类可读格式转换</li>
+<li><strong>多实例国际化系统</strong> - 支持 JSON 语言包、参数替换及多键串联</li>
+<li><strong>模块化日志系统</strong> - 为每个模组创建独立日志文件，支持按级别分离与自动轮转</li>
+</ul>
+<p><strong>配置说明：</strong></p>
+<ul>
+<li>默认日志路径：<code>user/mods/SuntionCore/ModLogs</code></li>
+<li>默认日志大小限制：1MB（可配置）</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2b3253b5c8ace0b91599e45085adfff25534ce41d6b5876a22dcbe153c05f098/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/23f6c42e-103d-4581-b594-74edc79c3d57?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A18Z&amp;rscd=attachment%3B+filename%3DSuntionCore-0.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A07Z&amp;ske=2026-08-01T21%3A11%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tDyidJT4I0dcLUcq3a9QtsjtbwqaLM37F022xFseafc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore-0.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.suntion.suntioncore</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>21 February 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/SunYanbox/SuntionCore" target="_blank" rel="noreferrer noopener">https://github.com/SunYanbox/SuntionCore</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Simple Workout QTE · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Simple Workout QTE</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/13e95fe88b7c16ced38a413b1179dfe9d63e787fbadf0171c8f82c64fe6fac41.webp" alt="Simple Workout QTE thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Simple Workout QTE</h1>
+    <p class="hero-teaser">Workout QTE in hideout is now much easier, and configurable!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/71add5183d0802d4850ed79eee2f09dbbcef162e15f72ce1388ddbdd26c74377.webp" alt="" width="32" height="32">acidphantasm</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>51,522</dd></div>
+    <div><dt>Favourites</dt><dd>73</dd></div>
+    <div><dt>Mod lists</dt><dd>153</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Simple Workout QTE content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>This mod was built to be extremely simple with as little impact as possible. The default configuration effectively halves the speed of the QTE, and doubles the size of the success window.</p>
+<p>Default config looks like this:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/9873d6a23dfd86a2876238c9a3379e2a36ee096c2423e4fa054ba4f1ae84285e.webp" alt="Zp1MYuB.gif"></p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">INSTALLATION</div>
+<div class="tab-content"><ol>
+<li>Open the downloaded 7z file in 7-zip</li>
+<li>Select the SPT folder in the 7z file in 7-zip</li>
+<li>Drag the SPT folder from 7-zip into your root SPT folder</li>
+</ol>
+<p>Demonstration Video (yoink):</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="wMIskD3.gif"></p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">UNINSTALLATION</div>
+<div class="tab-content"><hr>
+<ol>
+<li>Delete <code>/ROOTSPT/Bepinex/plugins/acidphantasm-simpleworkoutqte</code></li>
+<li>Delete <code>/ROOTSPT/SPT/user/mods/acidphantasm-simpleworkoutqte</code></li>
+<li>Done</li>
+</ol></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">CONFIG</div>
+<div class="tab-content"><hr>
+<p>SPT/user/mods/acidphantasm-simpleworkoutqte/config/config.json</p>
+<p>Configuration Options</p>
+<hr>
+<p>EasyMode</p>
+<p><strong>Enable</strong></p>
+<p>Enables or disables Easy Mode.</p>
+<ul>
+<li>false = normal configurable system</li>
+<li>true = simplified easy training mode</li>
+</ul>
+<p><strong>NumberOfReps</strong></p>
+<p>Number of repetitions used when Easy Mode is enabled.</p>
+<hr>
+<p>NonEasyMode</p>
+<p><strong>NumberOfReps</strong></p>
+<p>Number of repetitions used in standard mode training.</p>
+<hr>
+<p><strong>StartSpeed</strong></p>
+<p>Initial speed of the QTE indicator.</p>
+<p><strong>EndSpeed</strong></p>
+<p>Final speed of the QTE indicator.</p>
+<ul>
+<li>Lower values = slower movement</li>
+<li>Higher values = faster movement over time</li>
+</ul>
+<hr>
+<p><strong>StartX</strong></p>
+<p>Starting X-axis value (controls QTE size/position scaling).</p>
+<p><strong>EndX</strong></p>
+<p>Ending X-axis value (controls QTE size/position scaling).</p>
+<ul>
+<li>Lower = smaller</li>
+<li>Higher = larger</li>
+</ul>
+<hr>
+<p><strong>StartY</strong></p>
+<p>Starting Y-axis value (controls success window size).</p>
+<p><strong>EndY</strong></p>
+<p>Ending Y-axis value (controls success window size).</p>
+<ul>
+<li>Lower = smaller window</li>
+<li>Higher = larger window</li>
+</ul>
+<hr>
+<p><strong>ProgressionType</strong></p>
+<p>Defines how difficulty scales over time.</p>
+<ul>
+<li>“Exponential” = accelerates over time</li>
+<li>“Linear” = constant rate progression</li>
+</ul>
+<hr>
+<p>MusclePainTime</p>
+<p>Duration of muscle pain after training.</p>
+<ul>
+<li>Value is in seconds</li>
+<li>Example: 43200 = 12 hours</li>
+</ul>
+<hr>
+<p>SuccessEnergyCost</p>
+<p>Energy lost on successful QTE completion.</p>
+<ul>
+<li>Negative values reduce energy</li>
+<li>Example: -2 = lose 2 energy</li>
+</ul>
+<hr>
+<p>SuccessHydrationCost</p>
+<p>Hydration lost on successful QTE completion.</p>
+<ul>
+<li>Negative values reduce hydration</li>
+<li>Example: -2 = lose 2 hydration</li>
+</ul>
+<hr>
+<p>FailureEnergyCost</p>
+<p>Energy lost on failed QTE completion.</p>
+<ul>
+<li>Negative values reduce energy</li>
+<li>Example: -4 = lose 4 energy</li>
+</ul>
+<hr>
+<p>FailureHydrationCost</p>
+<p>Hydration lost on failed QTE completion.</p>
+<ul>
+<li>Negative values reduce hydration</li>
+<li>Example: -4 = lose 4 hydration</li>
+</ul>
+<hr>
+<p>SkillLevel0ExpMultiplier</p>
+<p>XP multiplier at skill level 0+.</p>
+<hr>
+<p>SkillLevel10ExpMultiplier</p>
+<p>XP multiplier at skill level 10+.</p>
+<hr>
+<p>SkillLevel20ExpMultiplier</p>
+<p>XP multiplier at skill level 20+.</p>
+<hr>
+<p>SkillLevel30ExpMultiplier</p>
+<p>XP multiplier at skill level 30+.</p>
+<hr>
+<p>SkillLevel40ExpMultiplier</p>
+<p>XP multiplier at skill level 40+.</p>
+<hr>
+<p>SkillRewardWeights</p>
+<p>Defines probability weighting for skill gains.</p>
+<ul>
+<li>Higher value = more likely to be selected</li>
+<li>0 = disabled</li>
+</ul>
+<p>Example:</p>
+<p>Strength: 25<br>
+Endurance: 25<br>
+Others: 0</p>
+<hr>
+<p>SkillReferenceSheet</p>
+<p>Reference list of valid skill enum values used in SkillRewardWeights.</p>
+<p><a target="_blank" class="external-link" href="https://wiki.sp-tarkov.com/en/modding/references/skills-reference" rel="noreferrer noopener">https://wiki.sp-tarkov.com/en/modding/references/skills-reference</a></p></div></div></div>
+<p>If you enjoy my work - you can <a target="_blank" class="external-link" href="https://ko-fi.com/acidphantasm" rel="noreferrer noopener">buy me a coffee</a>~</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.1</h2></div><time datetime="2026-04-15T22:42:00.000000Z">15 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>11,007 downloads</span><span>12.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 4.0.x</strong></h3>
+<p>Changes</p>
+<ul>
+<li>Load Order PostDB + 420</li>
+<li>Adjusted Exponential to be more… exponential</li>
+</ul>
+<p>If you have an issue, putting it on the mod comments with zero information will get you zero results. Go to the SPT Discord.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8a59d3a889563115251841a02a518fc91960ba980ee7fe449abd543d8d2ca936?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1074490616/02643fb8-652f-46f7-bba8-740cf322f171?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A49Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A48Z&amp;ske=2026-08-01T21%3A01%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6EAjTSXCxQh9oUNMzXrjjyEDqMM2nSWNRzM8Q7J9OlQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-04-13T23:26:00.000000Z">13 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>473 downloads</span><span>12.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 4.0.x</strong></h3>
+<p>New Features</p>
+<ul>
+<li>Configurable number of reps</li>
+<li>Configurable weighted skill selection (no longer just Strength+Endurance)</li>
+<li>Configurable Energy/Hydration</li>
+<li>Skill exp multipliers are now every 10 levels instead of 0, 10 and 25</li>
+<li>Non Easy-Mode is fully configurable with options for speed, size, and difficulty (Exponential or Linear)</li>
+</ul>
+<p>Now includes a client side!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aef477a1f36a97976df1a65d5c7c2e2ea6b1124c9ca1beea1d51b698d462498a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1074490616/f601d387-02d8-43c1-8dc6-917ade2e8789?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A49%3A00Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A48%3A45Z&amp;ske=2026-08-01T20%3A49%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=67Or0sdrL1IAlcgBKLfNhaKR9Ydldo6bx%2BKZowwMIOU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-10-11T22:51:00.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>17,736 downloads</span><span>5.4 KB</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 4.0.x</strong></h3>
+<p>No functionality change</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ddba72da44339baa975b19846e34b8dea190f3b87daa9b32f8f47db87c939071?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1074490616/17029bd3-b73b-4548-aa21-ef232dc47d5b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A00Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A57Z&amp;ske=2026-08-01T20%3A59%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=arJBdyZ8dqXrP53LFpUDFoL9%2BuTPeL3IlQnwNamhdy0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2025-03-15T20:26:26.000000Z">15 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>10,241 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.11.x</strong></h3>
+<p>3.11 Update</p>
+<p>Changes</p>
+<ul>
+<li>Experience Multiplier exposed to config</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/45c47ef10eed5e4fbeca369a9faec04db8a8dc336c382306592675951051c240?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/805967475/725938e6-d06d-4048-98b1-d0b984b335dd?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A46Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A54Z&amp;ske=2026-08-01T20%3A59%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=NQ4CC0YGlTAcG1AUwTzWcVs%2BqabZ855iqOTDVJcoBvQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2024-11-26T15:06:09.000000Z">26 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,950 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.10.x</strong></p>
+<p>3.10 Update</p>
+<ul>
+<li>Increased experience gains</li>
+<li>Halved duration of Muscle Pain (timer configurable)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/45c47ef10eed5e4fbeca369a9faec04db8a8dc336c382306592675951051c240?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/805967475/a034222a-dcac-4bde-b571-a87af1520ba8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A49%3A09Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A48%3A11Z&amp;ske=2026-08-01T20%3A49%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=sOMLTrcoTV9ahKLeRUvNV%2BHDs51R7pOb9fWkINohViE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2024-07-06T19:39:33.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,913 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.9.X</strong></p>
+<p>Updated to 3.9.0</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/45c47ef10eed5e4fbeca369a9faec04db8a8dc336c382306592675951051c240?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/805967475/b430122e-ebdf-47da-b825-1891602a49fb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A51%3A42Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A51%3A22Z&amp;ske=2026-08-01T20%3A51%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=O5hYiYwmbZehdciypywC2TU4x%2BGMFgg3G9kemXmfzU4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NCwibmJmIjoxNzg1NjE1MjQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XSsiWgM1IK3WyDEtcUjFqRImotqX9FbKckLM99mF9_s&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2024-05-26T01:50:39.000000Z">26 May 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,202 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.8.X</strong></p>
+<p>Initial Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/45c47ef10eed5e4fbeca369a9faec04db8a8dc336c382306592675951051c240?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/805967475/3f31fa26-2f8a-4caf-8fb1-5ff0a4c28023?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A50%3A30Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-simpleworkoutqte.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A50%3A25Z&amp;ske=2026-08-01T20%3A50%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Es86Px3mLTHifP2Z0Txcn6ILvKuc5IH3aFdMJkbjMBg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0NiwibmJmIjoxNzg1NjE1MjQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.X5ec63q7gLBSgKrqCd7da4eXFL3B7URV8IpVoKjnTjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-simpleworkoutqte.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.acidphantasm.simpleworkoutqte</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 May 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/acidphantasm/acidphantasm-simpleworkoutqte" target="_blank" rel="noreferrer noopener">3.11</a></li><li><a href="https://github.com/acidphantasm/simpleworkoutqte-csharp" target="_blank" rel="noreferrer noopener">4.0</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

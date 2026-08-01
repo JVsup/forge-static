@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Task List Fixes · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Task List Fixes</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/b071e958bd6b30f475739fd0353cd4a9b597c18f3e3aaa439e82014ec6ab5261.webp" alt="Task List Fixes thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Task List Fixes</h1>
+    <p class="hero-teaser">Do you want to fix sorting, improve sorting, and improve performance? Grab Task List Fixes and you&#39;ll get it all in one simple DLL</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f1d2533c994ed91f540679bbc6ee02e42ba70149b776e37c1534147c67e656a6.webp" alt="" width="32" height="32">DrakiaXYZ</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>75,844</dd></div>
+    <div><dt>Favourites</dt><dd>72</dd></div>
+    <div><dt>Mod lists</dt><dd>177</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Task List Fixes content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>8</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3><strong>Installation</strong></h3>
+<p>1) Open the downloaded zip file in 7-zip</p>
+<p>2) Select the folders in the zip file in 7-zip</p>
+<p>3) Drag the selected folders from 7-zip into your SPT folder</p>
+<p>Demonstration Video (Yes, it’s Quest Tracker, but the same concept applies to all of my mods, I’m not making mod-specific extraction example videos):</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/e96d5e055187368c9617d5fe238ef111d83ecb9e3d05f613e13e8d8f77a7f21b.webp" alt="Install Gif"></p>
+<h3><strong>Description</strong></h3>
+<p>Fix a few issues people have encountered with the Task list:</p>
+<ul>
+<li>Task list is now properly sorted alphabetically by the selected column</li>
+<li>Sorting by trader now sorts by their nickname, instead of their ID</li>
+<li>Sorting by location now sorts by its name, instead of its ID</li>
+<li>Progress column data is now cached for sorting, to reduce the time it takes to sort by the Progress column</li>
+</ul>
+<p>Togglable Options:</p>
+<ul>
+<li>Add a new feature that defaults the sort order of columns to a more sane value when changing between columns
+<ul>
+<li>
+<p>Task, Trader and Location will now default to sorting in ascending order</p>
+</li>
+<li>
+<p>Progress and Status will now default to sorting in descending order</p>
+</li>
+</ul>
+</li>
+<li>Improved sorting order to include sub-sorting, to make finding quests in your list a lot easier
+<ul>
+<li>Sorting by trader now sub-sorts by location, then name</li>
+<li>Sorting by location now sub-sorts by trader, then name</li>
+<li>Sorting by type now sub-sorts by name</li>
+<li>Sorting by status now sub-sorts by name</li>
+<li>Sorting by progress now sub-sorts by name</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Compatibility</strong></h3>
+<p>Note that this mod is not compatible with other task list sorting fix mods, as they will all be modifying the same method and conflict with each other.</p>
+<p>Functionality-wise, this mod both fixes sorting, and improves it, so should cover all cases that might be resolved by other mods.</p>
+<p>If you enjoy my work, you can <a target="_blank" class="external-link" href="https://ko-fi.com/drakiaxyz" rel="noreferrer noopener">feed my caffeine addiction</a></p>
+<p><strong>NOTE: Any requests for assistance MUST be accompanied by the “BepInEx/LogOutput.log” file. Any support request without this file provided will be met with a request for this file, then ignored. Log content can be uploaded to: <a target="_blank" class="external-link" href="https://pastebin.com/" rel="noreferrer noopener">https://pastebin.com/</a></strong></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.1</h2></div><time datetime="2025-10-16T02:42:00.000000Z">16 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>19,974 downloads</span><span>7.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Fix pinned task separator not appearing</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1acffedb4b8e9bdf13c9d026da3a63f1b3aff2d55093023e108d1e5c100adaee?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/f974db0d-08e9-4053-a4f7-ef4623d4666a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A45Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.7.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A15Z&amp;ske=2026-08-01T21%3A26%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=VydmWd56U3%2F7KPKx9scRt%2FHeuopQNP9QqHuKAJlFXkU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMSwibmJmIjoxNzg1NjE2MTIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qbhMeS4KJ3qNU3L72ZBCSJaeYND-psNGb9oTj_kiM3w&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.7.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.0</h2></div><time datetime="2025-10-11T19:30:03.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,112 downloads</span><span>7.6 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Update for SPT 4.0.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3f2ead4fa772e9d46048daf1eb2f6d4af49acbba300b880ed9271620649caef9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/0b5bea93-3ab2-4219-bb21-e0108d824e7e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A18%3A07Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.7.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A41Z&amp;ske=2026-08-01T21%3A18%3A07Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=YWxS%2FJ10ITA4zzHCE2FtIUODkq1WNf7%2F%2F4qrJ8OCM0c%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMSwibmJmIjoxNzg1NjE2MTIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qbhMeS4KJ3qNU3L72ZBCSJaeYND-psNGb9oTj_kiM3w&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.7.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2025-03-28T04:19:32.000000Z">28 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>11,942 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<ul>
+<li>Update for SPT 3.11</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/10956b58-37f6-40f7-938f-591a8eae02d2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A11Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.6.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A47Z&amp;ske=2026-08-01T21%3A10%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=s0ua4W4Q7aoIN3QagNLJeUKU3qrm%2BpSzrRHPY3CM%2FJo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMSwibmJmIjoxNzg1NjE2MTIxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qbhMeS4KJ3qNU3L72ZBCSJaeYND-psNGb9oTj_kiM3w&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.6.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2024-07-06T19:19:46.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>11,742 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.9.x</h3>
+<ul>
+<li>Update for 3.9.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/cc462c21-79e7-4df9-8caf-5415f7b9fd9b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A29%3A12Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.5.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A28%3A43Z&amp;ske=2026-08-01T21%3A29%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KjsaMl4LHShTs9Y58e3ESo0fNRzTQ2SBpS1sTDE0OQY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.5.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-04-01T21:20:32.000000Z">1 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>9,573 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.8.0</h3>
+<p>Update for 3.8.0</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/da8ac064-9cdf-4735-817f-0e289a530964?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A22Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.4.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A10Z&amp;ske=2026-08-01T21%3A25%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=GiiwHSXmEDplzzWtW72dDdghhxvE6qLqqJaksBaKIiQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.4.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2023-11-02T22:06:59.000000Z">2 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.6</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>5,727 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This mod is now relatively version independent, but is only tested on SPT 3.7.1-3.7.6</h3>
+<ul>
+<li>Fix error notification when running on older SPT versions</li>
+<li>Allow remembering sort state, will be restored on game start and saved between task panel loads (Disabled by default, enable in F12 menu)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/d6cfd642-f672-4495-a76e-50bddc0aef09?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A16Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A16Z&amp;ske=2026-08-01T21%3A25%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=dOB06dlaoH1QoIV5a%2BD4XqOYfynlRgQWES2cweY7WYU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2023-10-31T19:53:10.000000Z">31 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>760 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1+</h3>
+<ul>
+<li>Huge rewrite to be compatible with my upcoming Quest Tracker mod</li>
+<li>Mod is now relatively version agnostic going forward (Not known to be compatible with SPT versions prior to 3.7.1)</li>
+</ul>
+<p>Tested compatible with SPT versions:</p>
+<ul>
+<li>3.7.1</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/d7102903-97a6-40ab-9c3a-0e6347d5a87c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A03Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A31Z&amp;ske=2026-08-01T21%3A13%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=3VnZHOlEoorJm2zn9JS%2Bu35EQBo7Av16Tjbnn%2FxAKTs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2023-10-14T20:22:17.000000Z">14 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,995 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1</h3>
+<p>Update for 3.7.1 / 26535</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4df88d5901f7f9014a9fe3ff1a2f23c079c276b0b43929c81994813b011571c9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/622292568/a0c01af4-5bd5-459e-9686-f7b0d90cdce7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A28Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-TaskListFixes-1.2.1_3.7.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A51Z&amp;ske=2026-08-01T21%3A23%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=o6I4tasy0gqBn3A2LSPXplPEBNZsbIYlT8NBrEWg81s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-TaskListFixes-1.2.1_3.7.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>xyz.drakia.tasklistfixes</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 April 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/DrakiaXYZ/SPT-TaskListFixes" target="_blank" rel="noreferrer noopener">https://github.com/DrakiaXYZ/SPT-TaskListFixes</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

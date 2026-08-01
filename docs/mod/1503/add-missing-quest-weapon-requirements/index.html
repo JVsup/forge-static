@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Add Missing Quest Weapon Requirements · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Add Missing Quest Weapon Requirements</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/5b05cd9c90ebc691b6a8d1afc6c5a3ac6efeb88df79d0aca58031e7d15506ab0.webp" alt="Add Missing Quest Weapon Requirements thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Add Missing Quest Weapon Requirements</h1>
+    <p class="hero-teaser">Dynamically reads and applies overrides to the weapon restrictions of kill/eliminate conditions of quests based on override files. Normally, the conditions&#39; weapons need to be manually updated for every added gun. This mod aims to automate this process.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/1e809a2d30b2593b5f3b211e2f56f04cc9e67be97af7c72b762a80f268d55489.svg" alt="" width="32" height="32">GuiltyMan</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>11,585</dd></div>
+    <div><dt>Favourites</dt><dd>22</dd></div>
+    <div><dt>Mod lists</dt><dd>82</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Add Missing Quest Weapon Requirements content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>15</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>1</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>AddMissingQuestRequirements</h1>
+<blockquote>
+<p>Server-side SPT 4.x mod that auto-expands quest weapon requirements to include modded clones.</p>
+</blockquote>
+<p>A server-side SPT mod that automatically includes <strong>modded weapons and attachments</strong> in base-game quest conditions.</p>
+<p>Every vanilla quest that says <em>“kill 10 PMCs with an AK-74”</em> implicitly means “any modded AK-74 clone too”  but the game only counts the specific weapon IDs BSG listed. This mod fixes that at server startup: it figures out what category each weapon and attachment belongs to, then expands quest conditions to include every same-category item installed on your server.</p>
+<p><strong>No in-raid cost.</strong> Everything happens once, when the server boots. Nothing is patched on the fly.</p>
+<blockquote>
+<p>For an expanded set of fine-tuned configurations and overrides, see the addon: <a target="_blank" class="external-link" href="../../../addon/74/amqwr-patches-addon/" rel="noreferrer noopener">https://forge.sp-tarkov.com/addon/74/amqwr-patches-addon#description</a></p>
+</blockquote>
+<hr>
+<h2>Install</h2>
+<ol>
+<li>
+<p>Build or download the release. Drop the whole folder into <code>SPT/</code>:</p>
+<pre><code>SPT/user/mods/GuiltyMan-AddMissingQuestRequirements/
+    AddMissingQuestRequirements.dll
+    config/
+        config.jsonc
+    MissingQuestWeapons/
+        QuestOverrides.jsonc
+        WeaponOverrides.jsonc
+        AttachmentOverrides.jsonc
+</code></pre>
+</li>
+<li>
+<p>Start the SPT server. You should see one line in the server console:</p>
+<blockquote>
+<p><code>AddMissingQuestRequirements ready in 1047ms — 20 of 49 weapon-quests changed (50 of 918 conditions). Weapons: 203 items across 66 types. Attachments: 1990 items across 1338 types.</code></p>
+</blockquote>
+</li>
+<li>
+<p>Launch the game. Quest kill counts should now tick on modded weapons of the same type.</p>
+</li>
+</ol>
+<p><strong>Nothing to configure to use the mod</strong> — defaults cover all vanilla quests. Read on only if you want to customize behaviour or add support for your own mods.</p>
+<hr>
+<h2>Getting help</h2>
+<p>Turn on <code>"debug": true</code> and restart the server once, then open an issue with:</p>
+<ol>
+<li>Your <code>config.jsonc</code>, <code>WeaponOverrides.jsonc</code>, <code>QuestOverrides.jsonc</code>, <code>AttachmentOverrides.jsonc</code>.</li>
+<li><code>AddMissingQuestRequirements-debug-report.json</code> and <code>AddMissingQuestRequirements-debug-report.html</code> from next to the DLL.</li>
+<li><code>AddMissingQuestRequirements.log</code> from next to the DLL.</li>
+<li>A description of the quest / weapon / attachment that’s misbehaving.</li>
+</ol>
+<hr>
+<p>More information at github: <a target="_blank" class="external-link" href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" rel="noreferrer noopener">https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.3.0</h2></div><time datetime="2026-06-01T14:21:00.000000Z">1 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,961 downloads</span><span>91.4 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>Fixes</h3>
+<ul>
+<li>Override item IDs are now matched case-insensitively against the item database and folded to the DB’s canonical casing. Miscased IDs (e.g. uppercase Massivesoft template IDs) in manualTypeOverrides, canBeUsedAs, and quest includedWeapons / excludedWeapons / includedMods / excludedMods previously no-opped silently; they now work and are written back into quests with the correct casing.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Code-level default rule tags every bolt-action rifle under the SniperRifle node (_props.BoltAction == true) as BoltActionSniperRifle, removing the need for per-weapon manual overrides. Guarded by hasAncestor: SniperRifle so the bolt-action TOZ-106 shotgun is not mistagged.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2c9b7a8ed040a1c63d2d68183c318c8d68c7e914e8a734ac915c3438494b50bd?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/82dfd7c9-ebe9-4d7d-b19c-aab251ac690a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A28%3A32Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A28%3A06Z&amp;ske=2026-08-01T20%3A28%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SI8FQmuDBVe5RuMdeYcCkOjVKnCRIxthRm4kJB3iD%2B0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzMiwibmJmIjoxNzg1NjEyNzMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGY3w6uUveC63cJX4Yb5nJXSyX9su6AxkU-5foV4-zc&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.2.0</h2></div><time datetime="2026-05-23T21:25:00.000000Z">23 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>413 downloads</span><span>90.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>New</p>
+<ul>
+<li>
+<p>Rules can opt-in with “applyToManualOverrides”: true to stack on weapons already listed in manualTypeOverrides. Use for grouping rules  that should still fire when the weapon also carries a structural override like
+“AssaultRifle,AssaultCarbine”.</p>
+<p>Default off — existing configs unchanged.</p>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NjE0YjFiM2M4ZjgyN2JkOTAyYThkMjdhMzVhYmM0NzE6MTc3OTU3MTQ4OA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/6563ced1-f044-4fab-a032-ec636d2e57c5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A26%3A11Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A25%3A55Z&amp;ske=2026-08-01T20%3A26%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xiMipWAg%2F4g6OTKf%2B%2FawGnvazYsSqqTqXQbGgBi4fl8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzMywibmJmIjoxNzg1NjEyNzMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.58tS6Bzd_2g0uDBCHZcSvS6ITqWeNOY9FHujmAZkJp8&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2026-05-16T13:17:00.000000Z">16 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>427 downloads</span><span>90.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed</p>
+<ul>
+<li>includedMods and excludedMods settings stay on their own side. No more cross-leak into the opposite list.</li>
+<li>excludedMods category settings now grow the list instead of shrinking it.</li>
+</ul>
+<p>New</p>
+<ul>
+<li>Added ‘includedModBundles’ and  ‘excludedModBundles’ fields to QuestOverrides. Expands as cartesian-and combinations.</li>
+<li>Per-line safety cap for cartesian expansion (default 500 combos, adjustable in config.jsonc).</li>
+</ul>
+<p>Other</p>
+<ul>
+<li>Startup notice if old patches use the affected excludedMods setting.</li>
+<li>Inspector report shows the new combo lines.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/66caf752cad8880878eb5a6768798ba4d1969e98b5e0ab5a776a441d9d79f690?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/e95d1555-dd94-4024-be2b-c7afaa1541c1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A17%3A51Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A17%3A40Z&amp;ske=2026-08-01T20%3A17%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZtVuW4syZtOjx9OPd2vrLeityXbCgo8P2atxXwR%2B8Uc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNCwibmJmIjoxNzg1NjEyNzM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fhdwpd92Q2aPFtMOEnOMqrU5LVQz8N817UFF7PnWYLw&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.5</h2></div><time datetime="2026-05-13T16:08:00.000000Z">13 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>299 downloads</span><span>88.1 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Fix: HTML/JSON report no longer shows MatchedType / NextBestType badges for conditions whose override uses expansionMode: NoExpansion or WhitelistOnly. Type-match info only appears under Auto, where it reflects actual pipeline behavior.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YzM4ZjBjNDljZGMwYWI1OTYyMDRiMWNiNjY1NjlhMDI6MTc3ODY4ODU0OQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/92f11080-f3ef-40e0-99fe-083bd122b676?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A22%3A32Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A02Z&amp;ske=2026-08-01T20%3A22%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=FrJge%2B8picJdIpE0q5UThR8LsI2PnpHmKkyJr%2BAHlEg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNSwibmJmIjoxNzg1NjEyNzM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Q6N6pzf0hCr58IW5SThGxvapSd2dJ-zMPLcdGjbXY6c&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.4</h2></div><time datetime="2026-05-11T21:23:00.000000Z">11 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>226 downloads</span><span>88.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixes</p>
+<ul>
+<li>Quest overrides using “expansionMode”: 2 with includedWeapons now actually add those weapons.</li>
+<li>Conflicting override modes from different mods now resolve correctly when merging.</li>
+</ul>
+<p>Inspector report</p>
+<ul>
+<li>Manually-blacklisted quests and quests with nothing to expand are now flagged separately from real no-ops.</li>
+<li>Quests tab filter: pick any combination of Blacklisted / No eligible / Noop / Expanded. Defaults to showing only expanded quests.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MmZjYmU3ZjhjYzBhMmNjZDA4NzczOTcyNDg3MDg1MzU6MTc3ODUzNDU3NA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/b937c9ae-9d41-49bc-8596-670183f3373f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A16Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A44Z&amp;ske=2026-08-01T20%3A23%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5fhHT6XROHWOa7Uac4gry0yqkT4Fv1acWNuqg0wXt9U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNSwibmJmIjoxNzg1NjEyNzM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Q6N6pzf0hCr58IW5SThGxvapSd2dJ-zMPLcdGjbXY6c&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.3</h2></div><time datetime="2026-05-11T15:51:00.000000Z">11 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>97 downloads</span><span>87.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixes</p>
+<ul>
+<li>Override merge no longer drops ModsExpansionMode, IncludedMods, ExcludedMods — user-authored values for these three keys now actually reach the pipeline.</li>
+<li>Per-condition overrides now match the outer CounterCreator id (the one quest editors surface), not just the inner sub-condition id. Specific entries that previously fell through to Auto now apply.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YWU3YzUxYjg1ODEwNTFkMTUwYTUxMWExMTNhMGIxNWI6MTc3ODUxNDY4Nw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/be4829c1-1956-4d05-b59f-bf7e21c8bca3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A15%3A00Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A14%3A46Z&amp;ske=2026-08-01T20%3A15%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=cKTAaKpPZTLHgugtD6dWZVddwAewkjHZLoA1C5dZHSY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNiwibmJmIjoxNzg1NjEyNzM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.j3HSpv7J505uwYGnLgRhOfQuEeCWnZajaOCQGsIdc5o&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements-v2.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2026-05-10T21:20:00.000000Z">10 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>191 downloads</span><span>87.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Updated mod load order</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fd2bb14aad9f234880a7dfcd92389ec119fc58dc4ddf41e187df094dbc8c45e8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/f210cb0b-3188-41b5-9a7e-6216ea22288b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A12%3A36Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A12%3A00Z&amp;ske=2026-08-01T20%3A12%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KSGwIq30lwmFqiDYPN0o%2BR7c7mmfi2JjIu0zG8wRiBg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzNywibmJmIjoxNzg1NjEyNzM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2PPa2c53rMFwFQD9ujxQI2NNJoM76sgsqi-wcu4EPPk&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-05-10T18:14:00.000000Z">10 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>77 downloads</span><span>87.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fix config migration</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/451f96960e379e6e6b04448a9451c02cc8afd7f95bcc2a3037417b06bf371f57" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/ec544eec-60a4-4aae-80eb-464dc692475d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A24%3A23Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A23%3A41Z&amp;ske=2026-08-01T20%3A24%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=3ab1MNygXu7mKndgh0zIWHUNtHK%2BeEPB15zvcHoF3cI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOCwibmJmIjoxNzg1NjEyNzM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qQye3XNh5OU1fGSJC8ymyTxt0hT7pUq3CjS_KN_S04g&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-05-10T13:00:00.000000Z">10 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>122 downloads</span><span>83.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changelog</h1>
+<h2>2.0.0 — SPT 4.0 rewrite</h2>
+<p>Full C# port of the TypeScript mod. Targets SPT <code>~4.0.0</code>.</p>
+<h3>Migration from 1.5.0</h3>
+<p><strong>Drop your old <code>config/</code> and <code>MissingQuestWeapons/</code> files in as-is — they will be migrated automatically on first load.</strong> Migrated files are rewritten in the new format and stamped with a <code>version</code> field; the old format is treated as v0.</p>
+<p>What the migrator does:</p>
+<ul>
+<li><code>config.jsonc</code>: fixes the <code>categorizeWithLessRestrive</code> typo, drops the unused <code>delay</code> field.</li>
+<li><code>OverriddenWeapons.jsonc</code> → <code>WeaponOverrides.jsonc</code>: <code>Override</code> block becomes <code>manualTypeOverrides</code>, <code>CustomCategories</code> becomes <code>customTypeRules</code>.</li>
+<li><code>QuestOverrides.jsonc</code>: structure preserved, version stamped.</li>
+<li>New <code>AttachmentOverrides.jsonc</code> is optional — defaults cover the full attachment tree.</li>
+</ul>
+<p>No manual edits required for a stock 1.5.0 install.</p>
+<h3>New</h3>
+<ul>
+<li>Attachment-condition expansion (<code>weaponModsInclusive</code> / <code>weaponModsExclusive</code>) — supports mod-added quests with no <code>weapon</code> array.</li>
+<li>Rule-chain type detection — bolt-action / pump-action / revolver / caliber checks are config, not code.</li>
+<li>Per-condition override matching by structural properties, not only condition ID.</li>
+<li>Opt-in <code>bestCandidateExpansion</code> and <code>validateOverrideIds</code>.</li>
+<li>Inspector CLI + local web UI for offline iteration on configs without launching SPT.</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>delay</code> config field (was a no-op).</li>
+<li><code>logType</code> — replaced by always-on file log + SPT console, gated by <code>debug</code>.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e69427846f35e1dd5282770cf053258e9f88cb9e1e756219ee6cef7948635b61?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1219211228/a9a6868d-d396-4796-be58-6c278c02cc1a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A30%3A30Z&amp;rscd=attachment%3B+filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A30%3A15Z&amp;ske=2026-08-01T20%3A30%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fAFr0Ht89uP3Sp6aSC%2B4DqZ9egHe7GUe3glWmVeOJ3U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOCwibmJmIjoxNzg1NjEyNzM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.qQye3XNh5OU1fGSJC8ymyTxt0hT7pUq3CjS_KN_S04g&amp;response-content-disposition=attachment%3B%20filename%3DGuiltyMan-AddMissingQuestRequirements.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2025-09-25T22:02:00.000000Z">25 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,043 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Introduced OverrideBehaviour for better handling of weapon overrides between mods</li>
+<li>Added condition-based handling to the quest overrides</li>
+<li>Added blackListedCalibres, weaponTypes and blackListedWeaponTypes to the custom weapon categories</li>
+<li>Fix error handling in tryReadJson</li>
+</ul>
+<p>More information about how to use newly added fields can be found in the repository’s readme.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/817833436/f4ae7142-80f4-4be8-b9b4-c43470f60f94?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A21%3A17Z&amp;rscd=attachment%3B+filename%3Dzz_guiltyman-addmissingquestweaponrequirements.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A21%3A15Z&amp;ske=2026-08-01T20%3A21%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=u4RexzU6HV3FcMMt1YDr5QfL1IxUWq9DnN%2BWbLQVoWE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzAzOSwibmJmIjoxNzg1NjEyNzM5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.MmUSXdJrkPSI4Z-XBNEpiPL2grZ_pMruhX29R0_CdFI&amp;response-content-disposition=attachment%3B%20filename%3Dzz_guiltyman-addmissingquestweaponrequirements.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.2</h2></div><time datetime="2025-08-14T22:09:16.000000Z">14 August 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>710 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Error handling for incorrect overrides</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2025-08-12T00:44:34.000000Z">12 August 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>281 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated for <strong>SPT 3.11.x</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-12-14T17:50:29.000000Z">14 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,089 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Only updated the sptVersion to ensure compatibility with SPT 3.10. If you are still using 3.9, there is no need to update.</p>
+<p>I could not thoroughly test with version 3.10; if any issues arise, please let me know.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2024-07-10T16:27:12.000000Z">10 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,360 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>3.9 support</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2024-07-07T22:17:45.000000Z">7 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>210 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Again thanks <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/52449-therkelsen/" rel="noreferrer noopener">Therkelsen</a> for his contribution.</p>
+<p>For 3.8.x<br>
+Added more modded weapons from:</p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1948-sasha-himik/?highlight=sasha#overview" rel="noreferrer noopener">Sasha Himik</a><br>
+<a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1935-girls-frontline-operation-novensk-trader-and-weapon-pack/#overview" rel="noreferrer noopener">Girls Frontline</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f954e2dcbc3976fce8c711d047c2912b9074a665fbc5cfc7714ed6bb31275622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="amqwr patches addon"
+  data-search="amqwr patches addon manually tuned configs for custom traders and quests so you can do pew-pew with suitable modded weapon hellchickens"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="321"
+  data-updated="2026-07-28T10:12:13.000000Z">
+  <a class="card-image" href="../../../addon/74/amqwr-patches-addon/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/675d6d51edca882e98e9d1e466367d5f8848c6d865953146abb35b1880876e79.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/74/amqwr-patches-addon/">AMQWR Patches Addon</a></h2>
+    <p class="teaser">Manually tuned configs for custom traders and quests so you can do pew-pew with suitable modded weapon</p>
+    <div class="card-meta">
+      <span>by hellchickens</span>
+      <span>321 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.guiltyman.addmissingquestrequirements</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>24 June 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements" target="_blank" rel="noreferrer noopener">https://github.com/theGuiltyMan/SPT-Add-Missing-Quest-Weapon-Requirements</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

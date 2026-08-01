@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Career Log · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Career Log</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/0c75082b26bbfc388ebe435c70ee99f3e9e2c9edf95bab2dd2ea97a087c38467.webp" alt="Career Log thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Career Log</h1>
+    <p class="hero-teaser">Your Tarkov career in one place — every raid mapped and logged, lifetime stats, and stash history.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c07a1658f981bba2fea552ea11acdefe48d41d107dac1f3fb1cc41fa4b3b8141.webp" alt="" width="32" height="32">FallegaHQ</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,744</dd></div>
+    <div><dt>Favourites</dt><dd>17</dd></div>
+    <div><dt>Mod lists</dt><dd>22</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Career Log content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Career Log</h1>
+<p><strong>Career Log</strong> keeps a <strong>personal raid history</strong> for your SPT profile: where you went, what you looted, who you killed,
+and how your stash grew over time. After each raid you get a <strong>RAID MAP</strong> and <strong>RAID DEBRIEF</strong>; from the main menu,
+open <strong>RECORDS</strong> for lifetime stats, raid history, and a <strong>Financial</strong> view of stash worth.</p>
+<p><strong>Github:</strong> <a target="_blank" class="external-link" href="https://github.com/FallegaHQ" rel="noreferrer noopener">FallegaHQ</a></p>
+<hr>
+<h2>Support the author</h2>
+<p>Maintenance and compatibility work takes time. If Career Log helps you track your raids and stash, consider
+<strong><a target="_blank" class="external-link" href="https://github.com/sponsors/FallegaHQ" rel="noreferrer noopener">supporting on GitHub Sponsors</a></strong>. There is no paywall — everything stays free
+under the licence below.</p>
+<hr>
+<h2>Thanks</h2>
+<p>People across the <strong>SPT</strong> and <strong>modding</strong> community shared ideas, repros, and “what if you tried…” moments that shaped
+this plugin.</p>
+<p>Map artwork credits live in the mod’s <code>assets/maps/ATTRIBUTION.md</code> when you install from a release package.</p>
+<p>Huge thanks to <strong><span class="dead-link">AcidPhantasm</span></strong> for allowing me to cut the development time by a huge deal after permitting me to use Labyrinth map and a bunch of other stuff.</p>
+<hr>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Install</div>
+<div class="tab-content"><h4>What you need</h4>
+<ul>
+<li>A working <strong>SPT 4.x</strong> install.</li>
+<li>This mod.</li>
+<li>The mod turned <strong>on</strong> in its config (see below).</li>
+</ul>
+<p>If you use other mods that change <strong>session end screens</strong>, the <strong>main menu</strong>, or <strong>stash UI</strong>, list them when you report
+a problem.</p>
+<hr>
+<h4>Install</h4>
+<ol>
+<li>Download the release ZIP — the filename looks like <strong><code>Softwyx.CareerLog-1.0.199.zip</code></strong> (the version number changes
+each release).</li>
+<li><strong>Extract</strong> it so that your game folder contains:
+<ul>
+<li><code>BepInEx\plugins\Softwyx.CareerLog\Softwyx.CareerLog.dll</code></li>
+<li><code>BepInEx\plugins\Softwyx.CareerLog\locales\</code></li>
+<li><code>BepInEx\plugins\Softwyx.CareerLog\assets\</code></li>
+</ul>
+</li>
+<li>Start the game.</li>
+</ol>
+<p><strong>First launch</strong> may create:</p>
+<ul>
+<li><code>BepInEx\config\com.softwyx.careerlog.cfg</code></li>
+</ul>
+<p>Edit while the game is <strong>closed</strong>, or use <strong>Configuration Manager</strong> in-game.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Usage</div>
+<div class="tab-content"><h4>After a raid</h4>
+<ol>
+<li>Finish a raid (extract, death, or MIA).</li>
+<li>Step through <strong>RAID MAP</strong> (path + markers) then <strong>RAID DEBRIEF</strong> (loot + counters for that run).</li>
+<li>Optional: enable vanilla <strong>Session statistics</strong> in config to see it after the debrief.</li>
+</ol>
+<h4>Main menu — RECORDS</h4>
+<ol>
+<li>Click <strong>RECORDS</strong> on the main menu.</li>
+<li>Use <strong>Summary</strong>, <strong>Financial</strong>, and <strong>Raid history</strong> tabs.</li>
+<li>Pick a raid for detail and <strong>MAP</strong>.</li>
+<li>Filter <strong>PMC</strong>, <strong>Scav</strong>, or <strong>Combined</strong> as needed.</li>
+</ol>
+<p>Data saves when the raid <strong>ends through the normal session flow</strong>. Force-quits may skip that raid.</p>
+<h4>Settings (overview)</h4>
+<p>Open <strong>Configuration Manager</strong> or edit <code>com.softwyx.careerlog.cfg</code> while the game is <strong>closed</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. General</strong></td>
+<td>Master <strong>Enabled</strong> switch; JSON minify</td>
+</tr>
+<tr>
+<td><strong>2. UI</strong></td>
+<td>Post-raid screens; <strong>RECORDS</strong> button; default side filter</td>
+</tr>
+<tr>
+<td><strong>3. Movement &amp; maps</strong></td>
+<td>Trail sampling and simplification; vanilla statistics toggle</td>
+</tr>
+<tr>
+<td><strong>4. Event collectors</strong></td>
+<td>Map markers — kills, loot value, injuries, healing, merges</td>
+</tr>
+<tr>
+<td><strong>5. Financial</strong></td>
+<td>Stash snapshots on menu; chart style; top-item exclusions</td>
+</tr>
+</tbody>
+</table>
+<p>More details can be found <a target="_blank" class="external-link" href="https://github.com/FallegaHQ/SPT-CareerLog#Settings" rel="noreferrer noopener">here</a>.</p>
+<p>Delete the config with the game <strong>closed</strong> to restore defaults.</p>
+<h4>What you can expect to see</h4>
+<p>Previews: <a target="_blank" class="external-link" href="https://mega.nz/collection/5FJQkD7a#N98zQB3ily730owemPgxoA" rel="noreferrer noopener">HERE</a> (17MB)</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><h4>Known issues / quirks</h4>
+<ol>
+<li><strong>Map missing for a location</strong> — Some maps may show a message that the image is unavailable; movement and markers may
+still be saved.</li>
+<li><strong>Scav runs</strong> — Scav raids are recorded and tagged; they are stored under your <strong>PMC profile</strong> id (for convenience).</li>
+<li><strong>Bring-in gear vs looted gear</strong> — Loot stats and markers try to ignore gear you brought into the raid; edge cases
+(stacks, containers, quest items) may still look odd in rare situations.</li>
+<li><strong>Other session-end or menu UI mods</strong> — Best-effort compatibility. If something breaks, test with only Career Log +
+SPT essentials.</li>
+</ol>
+<hr>
+<h4>How to report a bug or ask for help</h4>
+<ol>
+<li><strong>Mod version</strong> — <code>LogOutput.log</code>, line with <strong>Career Log</strong> / <strong><code>[CLG]</code></strong> and version.</li>
+<li><strong>Game / SPT</strong> — Version numbers if you know them.</li>
+<li><strong>What happened</strong> — One sentence.</li>
+<li><strong>Steps</strong> — Map, side, outcome, buttons clicked.</li>
+<li><strong>Other mods</strong> — Especially UI, session end, economy, maps.</li>
+<li><strong>Logs</strong> — <code>BepInEx\LogOutput.log</code> (game closed).</li>
+</ol>
+<p>If the mod you are using is <strong>not signed by me</strong> then it isn’t from me and I can’t help you with it.</p>
+<p>Use the <strong>download site’s issue tracker or comments</strong>. Do not email about mods.</p></div></div></div>
+<hr>
+<h2>Licence</h2>
+<p>This project is licensed under the <strong>Mozilla Public License 2.0</strong> (MPL-2.0). See the <a target="_blank" class="external-link" href="https://github.com/FallegaHQ/SPT-CareerLog//blob/master/LICENSE" rel="noreferrer noopener"><code>LICENSE</code></a> file for the
+full text.</p>
+<p>SPDX: <code>MPL-2.0</code></p>
+<hr>
+<h2>Disclaimer</h2>
+<p><em>Escape from Tarkov</em> is a trademark of Battlestate Games. This mod is an independent, community-made add-on for <strong>SPT</strong>.
+Use at your own risk. The author is not responsible for lost progress, banned accounts on other services, or damage from
+third-party tools.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.526</h2></div><time datetime="2026-06-14T01:08:00.000000Z">14 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,086 downloads</span><span>1.5 MB</span>
+          </div>
+          <div class="prose version-notes"><blockquote>
+<h3>Version 1.0.526</h3>
+<p><strong>✨ Added</strong></p>
+<ul>
+<li>Anchor-aware financial chart sampling: in the overview charts, you will see more and better organized samples</li>
+<li>Enhanced compatibility with PiT Fireteam mod</li>
+</ul>
+<p><strong>🐛 Fixed</strong></p>
+<ul>
+<li>UI bugs causing other mods to not function correctly</li>
+</ul>
+<p><strong>❌ Removed</strong></p>
+<ul>
+<li>Staggering main menu animation</li>
+</ul>
+</blockquote>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6f2bea39e15dd1ad2ecb59d64babba936ecf9f17531751ed1ff0ca65a2e48b01?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1255858347/10fc479c-4a46-4bb4-8361-05993c08db4a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A58Z&amp;rscd=attachment%3B+filename%3DSoftwyx.CareerLog-1.0.526.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A59Z&amp;ske=2026-08-01T21%3A24%3A58Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7y9Il37YVmvVu3Sn2sF6V3N2rl6dWT9YFuq%2BWK%2F1zRs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI3OSwibmJmIjoxNzg1NjE1OTc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S7wlCBCFVNUsTZPGjn0MpNTbmsKAMtM3s78f2YvLduc&amp;response-content-disposition=attachment%3B%20filename%3DSoftwyx.CareerLog-1.0.526.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.466</h2></div><time datetime="2026-06-01T08:34:00.000000Z">1 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>658 downloads</span><span>1.5 MB</span>
+          </div>
+          <div class="prose version-notes"><blockquote>
+<blockquote>
+<blockquote>
+<h4>Initial Public Release</h4>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b54005c19ad2e65d28c3f1eb786edd65364b2bc52d0364aec2396d9e3b1acc1b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1255858347/64ca3d9c-e4f7-4021-9b46-8b2b8416ab54?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A42Z&amp;rscd=attachment%3B+filename%3DSoftwyx.CareerLog-1.0.466.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A56Z&amp;ske=2026-08-01T21%3A22%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=N%2FCTA1NCE9I8lW1M4ed85TAJt8op9Tgm1S1uVkQ%2Bghg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI3OSwibmJmIjoxNzg1NjE1OTc5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S7wlCBCFVNUsTZPGjn0MpNTbmsKAMtM3s78f2YvLduc&amp;response-content-disposition=attachment%3B%20filename%3DSoftwyx.CareerLog-1.0.466.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.softwyx.careerlog</code></dd></div>
+      <div><dt>License</dt><dd>Mozilla Public License 2.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/FallegaHQ/SPT-CareerLog" target="_blank" rel="noreferrer noopener">https://github.com/FallegaHQ/SPT-CareerLog</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

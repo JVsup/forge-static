@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>BigBrain · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>BigBrain</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="BigBrain thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>BigBrain</h1>
+    <p class="hero-teaser">A library for adding extra logic layers to existing bot brains</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f1d2533c994ed91f540679bbc6ee02e42ba70149b776e37c1534147c67e656a6.webp" alt="" width="32" height="32">DrakiaXYZ</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,264,911</dd></div>
+    <div><dt>Favourites</dt><dd>563</dd></div>
+    <div><dt>Mod lists</dt><dd>700</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="BigBrain content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>11</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>This is a library meant for use by developers, and may be required as a dependency for some plugins. Installing it by itself will have no effect on your game, without another plugin that utilizes it.</strong></p>
+<h3>Installation</h3>
+<p>1) Open the downloaded zip file in <strong><a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip</a></strong></p>
+<p>2) Select the folders in the zip file in <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener"><strong>7-zip</strong></a></p>
+<p>3) Drag the selected folders from <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener"><strong>7-zip</strong></a> into your SPT folder</p>
+<p>Demonstration Video (Yes, it’s Quest Tracker, but the same concept applies to all of my mods, I’m not making mod-specific extraction example videos):</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/e96d5e055187368c9617d5fe238ef111d83ecb9e3d05f613e13e8d8f77a7f21b.webp" alt="Install Gif"></p>
+<h3>What is BigBrain</h3>
+<p>Have you ever wanted to take full control of bots, but found that patching into methods only gets you so far? BigBrain will allow you to insert your own logic layers into bot brains, at whatever priority you want, allowing you to take full control of the bots. If you’ve ever wanted to completely re-write how a bot behaves in certain circumstances, you are also able to remove original layers, so you don’t have to worry about the original BSG brains conflicting with yours.</p>
+<h3>Mod Developer Notice</h3>
+<p>Please do not bundle BigBrain directly with your plugin, link users to this mod page to download and install it alongside your plugin. This allows multiple mods to utilize it, without risk of one mod or another being bundled with an old version of BigBrain and potentially breaking things.</p>
+<h3>Documentation</h3>
+<p>Documentation is still a to-do, for now the code is the documentation.</p>
+<p>I’ve created a test brain that re-implements the logic of the “PatrolAssault” layer, which can be found on GitHub: <a target="_blank" class="external-link" href="https://github.com/DrakiaXYZ/SPT-BrainTest" rel="noreferrer noopener">https://github.com/DrakiaXYZ/SPT-BrainTest</a></p>
+<p>Note due to this being an almost direct re-implementation of the “PatrolAssault” layer, that was mostly used for testing that I was able to interact with all of the things required to re-implement a base logic layer, the logic may not be implemented in the most concise or best manner.</p>
+<p>If you enjoy my work, you can <a target="_blank" class="external-link" href="https://ko-fi.com/drakiaxyz" rel="noreferrer noopener">feed my caffeine addiction</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2025-10-11T19:30:03.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>284,357 downloads</span><span>16.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Update to SPT 4.0.0</li>
+<li>Thanks to Archangel!</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/b5f54c4896413696bb2a3b55a12d6a5808ad6f03e94b6fbfb2b28fcbe5982402?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/e4bdadd5-1182-49f3-89e4-74523fe743fb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A36%3A48Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.4.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A36%3A05Z&amp;ske=2026-08-01T20%3A36%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KijXizNev9dESav1CGc%2BQRZD8v6wjHbBweXi7LP%2Bmig%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.4.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.2</h2></div><time datetime="2025-03-16T01:10:36.000000Z">16 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>215,124 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<p>* Fix exceptions when a custom layer doesn’t exist in the base node dictionary</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/315e220e-868c-4bae-b7e8-44bfa958539e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A22%3A38Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.3.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A11Z&amp;ske=2026-08-01T20%3A22%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rIWL0%2FMmlIkVXRWs4JubUPfI2Irpdsi3xpITDwM%2BXvE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.3.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.1</h2></div><time datetime="2025-03-15T23:17:20.000000Z">15 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>917 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<p>Fix issue with some bots being less aggressive than expected</p>
+<ul>
+<li>Switch to using further up the class chain for the base logic type</li>
+<li>Switch to using newly publicized methods/fields for BotAgentUpdatePatch, so we can keep the code closer to the original for comparison purposes</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/19bb8deb-48f0-42f6-ad27-9188722f92c6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A16%3A50Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.3.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A16%3A35Z&amp;ske=2026-08-01T20%3A16%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qoCafCx%2BSsdNN5A67T2NG6yDiZa8Z%2B8F5yZesgq66bo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.3.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2025-03-15T20:00:20.000000Z">15 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>945 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<p>Update for SPT 3.11</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/d653c3a9-58d7-47c8-b19a-bb435c397084?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A18%3A57Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.3.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A18%3A24Z&amp;ske=2026-08-01T20%3A18%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pCcNYxBKGYFuNXxCjkjvx3jANamYC60Pa57G5BkUE%2FU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.3.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2024-11-27T05:14:26.000000Z">27 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>145,898 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.10.x</h3>
+<ul>
+<li>Update for SPT 3.10.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/b0a59b17-4930-4de1-a1b4-16ac5f18da6d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A29%3A52Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A29%3A43Z&amp;ske=2026-08-01T20%3A29%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=h0BHaXjbVmB8W5dTw4zY4LVCuUXigdw8dIByE0BfxZA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2024-10-01T05:26:58.000000Z">1 October 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>64,597 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.9.x</h3>
+<ul>
+<li>Allow layers to be removed and restored during the raid. Thanks <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/30866-danw/" rel="noreferrer noopener">DanW</a>!</li>
+</ul>
+<p>Note that this doesn’t change anything for end users, but adds functionality useful for other mod developers</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/cc580318-f7a4-443e-b0ff-c62af9311da4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A26%3A48Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A26%3A26Z&amp;ske=2026-08-01T20%3A26%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=O8R9nnqtJYnNNZcO9Tu%2F4WXz3hk51mnXrS2H6w%2FaIUs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxNywibmJmIjoxNzg1NjEzMjE3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Vs1HoTLX3RzhHKeHyfg6KR9ijihf2BXtg_0fR4HJb18&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2024-07-20T02:34:36.000000Z">20 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>121,253 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.9.x</h3>
+<ul>
+<li>Add Read-Only Properties to allow other mods to get Custom Layer and Logic Information</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/25a7ee04-d7d8-4384-9823-22b423283d91?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A36%3A53Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A36%3A30Z&amp;ske=2026-08-01T20%3A36%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=G7E%2FCJQtbZW680EkghmMy6Czt%2FNNrIpfviwEf2LQAmQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxOCwibmJmIjoxNzg1NjEzMjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jOKka19hMj7HZFGdutgXKPLj0zb27vykpW9bWzcNS3U&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2024-07-06T19:18:45.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>30,454 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.9.x</h3>
+<ul>
+<li>Update for 3.9.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/fd427a86-4ccc-4cd7-a7c6-07897dc3e4bb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A26%3A11Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-1.0.0_3.9.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A25%3A23Z&amp;ske=2026-08-01T20%3A26%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qP3bfU7C7sZd%2Bn8Tz4Rj1t09mN%2BgdLm8zmShd84PN3I%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxOCwibmJmIjoxNzg1NjEzMjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jOKka19hMj7HZFGdutgXKPLj0zb27vykpW9bWzcNS3U&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-1.0.0_3.9.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.0</h2></div><time datetime="2024-04-01T21:20:07.000000Z">1 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>173,342 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.8.0</h3>
+<ul>
+<li>Update for 3.8.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/41d3d0bc-aa27-453f-afa8-30b249a7b538?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A23%3A28Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-0.4.0_3.8.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A23%3A25Z&amp;ske=2026-08-01T20%3A23%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=vT9av6wncWhOedmH2taNr6g0PJ86GEnxXu05dfqOy6M%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxOCwibmJmIjoxNzg1NjEzMjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jOKka19hMj7HZFGdutgXKPLj0zb27vykpW9bWzcNS3U&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-0.4.0_3.8.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.2</h2></div><time datetime="2023-11-27T05:20:13.000000Z">27 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.6</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>100,928 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1-3.7.6</h3>
+<p>Improved error handling</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/bc58b7e6-3196-4a24-bbcb-b1764d81b9aa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A25%3A04Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-0.3.2_3.7.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A24%3A51Z&amp;ske=2026-08-01T20%3A25%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xBp4XrPWVJ16sfTNPokcRF0WUTKz28zsK3b0IJG%2FGbk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxOCwibmJmIjoxNzg1NjEzMjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jOKka19hMj7HZFGdutgXKPLj0zb27vykpW9bWzcNS3U&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-0.3.2_3.7.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.1</h2></div><time datetime="2023-10-14T20:22:58.000000Z">14 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>40,362 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1, 3.7.2, 3.7.3</h3>
+<p>Update for 3.7.1 / 26535</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3c34b23d3632289fdfd32a15c6bd4a543ef81f4e8532e5a21f4bafd988a27203?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/634726608/da7d52b8-818c-4ebd-8c1f-b44e1bad3281?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A20%3A50Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-BigBrain-0.3.1_3.7.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A20%3A06Z&amp;ske=2026-08-01T20%3A20%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kGo887rLeKjZAb6dNsQLIWVNY8anzpSgcXd58pTvcQA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUxOCwibmJmIjoxNzg1NjEzMjE4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jOKka19hMj7HZFGdutgXKPLj0zb27vykpW9bWzcNS3U&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-BigBrain-0.3.1_3.7.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>xyz.drakia.bigbrain</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>31 May 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/DrakiaXYZ/SPT-BigBrain" target="_blank" rel="noreferrer noopener">https://github.com/DrakiaXYZ/SPT-BigBrain</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

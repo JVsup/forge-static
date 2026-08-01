@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>UNTAR Go Home! · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>UNTAR Go Home!</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/d2308cfdcf0fcb5b687935da0f0d769db7604fd5f6992f3f85352b645f7e7349.webp" alt="UNTAR Go Home! thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>UNTAR Go Home!</h1>
+    <p class="hero-teaser">Yet they&#39;re still here in Tarkov... New UNTAR bot types patrol the region.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/18f3cbd1fc679580ff54a27f4f10d30a1cf49cfd0534a60a47891399c5bbd314.svg" alt="" width="32" height="32">TacticalToaster</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>32,563</dd></div>
+    <div><dt>Favourites</dt><dd>58</dd></div>
+    <div><dt>Mod lists</dt><dd>145</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="UNTAR Go Home! content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>UNTAR Go Home!</h1>
+<h2>Version 3.0.1 for SPT 4.0.3 out now!</h2>
+<h2>Fully uninstall the old version of this mod by deleting the mod’s folders/files before updating this mod.</h2>
+<h2>Fika has been tested and is supported by both this and RUAF Come Home, my other faction mod. Make sure this and all dependencies are correctly installed on the host, connecting players, and headless if you use that. Also make sure WTT Common Lib is updated to the latest version that supports Fika. When you do all that, things should work properly!</h2>
+<p>Yet they’re still here in Tarkov…</p>
+<p>UNTAR Go Home! adds UNTAR as a proper faction to SPT. Encounter roving patrols of peacekeepers. Their ROE states that they are only to shoot if threatened, so try not to piss them off!</p>
+<h3>INSTALL INSTRUCTIONS</h3>
+<p>Download the .7z file.
+Unzip in your SPT install directory.
+Play SPT!</p>
+<h4>Note for Fika</h4>
+<p>The client-side portion of this mod and its dependencies are required on all connecting clients, the host, and headless if you are using that. Make sure everyone has the plugin and patcher correctly installed before using on Fika.</p>
+<p>UNTAR Go Home! requires <a target="_blank" class="external-link" href="../../902/bigbrain/" rel="noreferrer noopener">BigBrain</a>, MoreBotsAPI, and WTT Common Lib to run.
+<a target="_blank" class="external-link" href="../../827/waypoints-expanded-navmesh/" rel="noreferrer noopener">Waypoint</a> is not required but recommended.
+I also recommend SAIN for enhancing the combat behavior of the UNTAR bots and for configuring their characteristics.
+There’s now support for Couturier if you have that mod installed, adding new clothes (and later gear) to UNTAR bots!</p>
+<h3>Note on uninstalling when using SAIN</h3>
+<p>Seems I found what causes a non-aggression bug, at least with SAIN and my bot mods. If you uninstall a custom bot mod that uses MoreBotsAPI then SAIN will keep references to the now-removed bots in its Default Bot Config Values folder, causing client errors that prevent SAIN from loading properly for bots and disabling their combat behaviors. Deleting the files in this folder and letting SAIN reset them fixes the problem.</p>
+<h2>Features</h2>
+<div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">New Bot Types</div>
+<div class="tab-content"><p>UNTARGH adds completely custom bot types that <strong>don’t replace existing bots</strong>, each with their own loadouts and roles. They are neutral, giving warnings to anyone who strays too close and only firing when ignored or fired upon.</p>
+<h4>UNTAR Grunt</h4>
+<p>The bulk of the UNTAR mission’s combat-ready forces. They’re meant to “keep the peace” and protect civilian members of the mission while they perform their duties. Expect them to be armed with a variety of western weapons while wearing standard UNTAR armor.</p>
+<h4>UNTAR Squad Lead</h4>
+<p>An NCO in charge of a squad of UNTAR grunts. They keep the group in check while donning equipment from their origin nation. They have fancier weapons and gear on average.</p>
+<h4>UNTAR Officer</h4>
+<p>Officers are in charge of ensuring that the mission’s objectives (extract capable civilians, distribute aid to those stranded, and <del>make a f#$% ton of money</del>) are adhered to and completed. Currently, they’re functionally similar to squad leaders besides the fact they always wear a blue beret, but I do intend on expanding their purpose.</p></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">UNTAR Patrols</div>
+<div class="tab-content"><p>Patrols can spawn across several maps in randomly generated patrols at random times during the raid. Their size and composition varies, with some larger patrols being lead by officers and potentially having multiple squad leaders. As more UNTAR types are added patrols will become more varied.</p>
+<h4>Maps</h4>
+<p>Settings related to patrols can be adjusted in the <code>config/main.json</code> server file. This includes adding new maps and zones!
+Patrols will pick a random available spawn zone found in the config file and a time in a defined range. Maps can be configured to have multiple patrols rolled (which also means you can encounter multiple patrols in one raid).</p>
+<p>Currently, patrols will spawn on:</p>
+<ul>
+<li>Woods, 2 possible patrols at a time, decent spawn chance, small-mid sized</li>
+<li>Customs, 1 possible patrol, good spawn chance, mid-big sized</li>
+<li>Interchange, 2 possible patrols at a time, meh spawn chance, small-mid sized</li>
+<li>Shoreline, 1 possible patrol, decent spawn chance, small-mid sized</li>
+<li>Streets, 1 possible patrol, decent spawn chance, mid-big sized.</li>
+</ul></div></div>
+<div id="tabset-2-panel-3" class="tab-panel"><div class="tab-title">UNTAR Checkpoints</div>
+<div class="tab-content"><p>The UNTAR mission has setup a number of checkpoints across the region to regulate the movement of people and illegal goods while keeping an eye on what’s going on. These checkpoints spawn at the start of the raid in areas affiliated with UNTAR, typically near or at extracts. You might have to change your exfil route if you were planning on an easy escape! Config settings allow you to add your own checkpoints or edit existing ones.</p></div></div>
+<div id="tabset-2-panel-4" class="tab-panel"><div class="tab-title">Peacekeeper Integration</div>
+<div class="tab-content"><p>Currently broken. Will be reintegrating through the server part of the mod instead. This will also make it tie directly into the quests that will be coming, with some more fun stuff than just becoming allies to UNTAR bots.</p></div></div>
+<div id="tabset-2-panel-5" class="tab-panel"><div class="tab-title">Planned features</div>
+<div class="tab-content"><ul>
+<li>Services with Peacekeeper related to UNTAR that you can activate in raid. Make UNTAR allies, call in a patrol to come “keep your peace,” or waive checkpoint extract fees once you’re trusted enough by Peacekeeper.</li>
+<li>More UNTAR types. Marksmen, medics, and observers. In addition, I’d like to give current roles some more interactions and purpose.</li>
+</ul>
+<p>Not specific to this mod, but related things I want to work on that you might like if you enjoy the new UNTAR faction:</p>
+<ul>
+<li>Dialogue mod. I don’t want to spoil too much since I still need to do some prototyping to make sure it’s feasible, but there will be integration with my other mods if it is.</li>
+</ul></div></div>
+<div id="tabset-2-panel-6" class="tab-panel"><div class="tab-title">Images</div>
+<div class="tab-content"><p><img loading="lazy" decoding="async" src="../../../assets/a98c5a54e68985b0ae0cb65ad38338288021380232d7d4b7fb411b45d72767ab.webp" alt="Example of a patrol"></p></div></div></div>
+<h2>Config</h2>
+<p>The config folder in the server mod lets you configure things such as patrol spawning and supported maps. Adjust the conditions for different roles to spawn in patrols or add the chance for patrols to spawn on other maps. I’ll add detailed explanations of the config options later but they’re fairly self-explanatory at the moment.</p>
+<h2>Compatability</h2>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">SAIN</div>
+<div class="tab-content"><p>UNTARGH has <em>full</em> (I might’ve missed something. If you notice any problems with SAIN or errors do let me know!) compatability with SAIN, with UNTAR bots using SAIN behaviors and having dedicated config options in SAIN’s settings.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Spawn Mods</div>
+<div class="tab-content"><p>UNTARGH has no specific compatability code at the moment with any spawn mods. I still have to do some testing and collaborate with some authors to make sure UNTAR spawning works 100% with spawn mods. If you encounter any issues with spawning while using these sorts of mods I won’t offer support, but I will accept logs so I can work on ironing out compatability.</p>
+<h4>MOAR</h4>
+<p>MOAR seems to work with UNTARGH, but there’s no additional compatability. Basically, UNTAR works off my spawn system, everything else works on MOAR’s system.</p>
+<h4>ABPS</h4>
+<p>ABPS DOES WORK with UNTAR Go Home! Again, UNTAR patrols use my system and aren’t handled by ABPS but they will spawn while ABPS handles everything else.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Other Bot Behavior Mods (Questing, Looti</div>
+<div class="tab-content"><p>UNTARGH is relatively untested with these mods. Questing Bots and Looting Bots don’t conflict at the very least, so you can play with those just fine from what I can tell. I’ll be conducting some testing and patching in necessary compatability fixes. Eventually, I want to include functionality related to Questing Bots in particular but that’s for a later update.</p></div></div></div>
+<h1>Credits and Thanks</h1>
+<p>Thanks to GrooveypenguinX and nameless___ for letting me reference yalls code, and specifically Groovey for giving me the run down on what I needed to do to get custom bots working. This mod wouldn’t exist without that starting point.</p>
+<p>Thanks to Solarint for making a mod I felt was necessary to have compatability for before publishing this mod. No, seriously, SAIN is amazing and if you don’t already have it installed give it a look.</p>
+<p>Thanks DrakiXYZ for BigBrain, absolutely necessary mod for anything bot-related. I’ll be using BigBrains heavily in future versions of this mod (and more coming mods) to implment some custom behaviors. The less I have to touch BSG’s code the better lmao.</p>
+<p>Goes without saying that thanks should be given to the SPT team for enabling any of this in the first place. Yall rock!</p>
+<h1>Support Me</h1>
+<p>Buy me a Java Monster so when I get back from work I can fix my broken releases at lightning speed. Don’t have to though, I’ll do it for free anyways! <a target="_blank" class="external-link" href="https://ko-fi.com/tacticaltoaster" rel="noreferrer noopener">https://ko-fi.com/tacticaltoaster</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.1.1</h2></div><time datetime="2026-07-03T00:11:00.000000Z">3 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>4,411 downloads</span><span>58.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Patrol posture for checkpoints</li>
+<li>Based on new info from BSG, UNTAR is aggressive to scavs. Will still warn PMCs if too close but otherwise neutral to USEC and BEAR</li>
+<li>Spawn fixes targeted at better ABPS compatibility</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e29bd8b755b096204ca407662903b6dec3c35d00ec62f98d39453581910bbab1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/07640995-e46b-4c26-a6bb-a54f76b6f230?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A04Z&amp;rscd=attachment%3B+filename%3Duntargh-311-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A29Z&amp;ske=2026-08-01T21%3A00%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=uaOuwb6QxsTG%2FeEERi3mIZz25gLX%2B5lazPqmQtId1pM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-311-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.1.0</h2></div><time datetime="2026-04-30T04:59:00.000000Z">30 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>6,809 downloads</span><span>58.1 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>3.1.0</h1>
+<ul>
+<li>Raiders will sometimes hunt UNTAR on maps UNTAR appears on.</li>
+<li>Balance changes.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9ca04cdaa7e0a1261788f69183b93a549f3e201645f11196ed4f3798c9cb1d49?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/053f8b3c-58c4-419b-8e0e-3c57bc4eb435?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A54Z&amp;rscd=attachment%3B+filename%3Duntargh-310-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A21Z&amp;ske=2026-08-01T20%3A56%3A54Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=YDZFMA6GliujWUn0A5zVuD7vu2HXzXyhUw597CxkIyA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-310-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.1</h2></div><time datetime="2025-11-13T04:03:00.000000Z">13 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.3</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>15,878 downloads</span><span>56.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Fika compatability tested for latest Fika version, make sure you install this mod alongside the dependencies correctly for all clients, the host, and headless.</h1>
+<p>Make sure you fully uninstall the old version of the mod before updating to this version, and make sure you update to  MoreBotsAPI version 1.0.1 also. Doing that should fix most of the issues people were running into (there may still be orange warnings about loading types, there are no problems being caused and it’s just a debug message I have to remove), including dying breaking the game and UNTAR bots not firing back after being shot.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6b51d8a11ab28b921d5be130019aa3bc38e20f23d469e44c263ead6d959332b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/dad49506-02b9-42b2-b865-eee4f0e1bb3b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A15Z&amp;rscd=attachment%3B+filename%3Duntargh-301-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A22Z&amp;ske=2026-08-01T21%3A04%3A15Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6HGlHwBmLp%2BLZubPC7sJbbdMRPjuR2NFmtwf9mCn%2FFo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-301-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2025-11-06T07:01:00.000000Z">6 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>431 downloads</span><span>56.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>UNTAR Go Home! 3.0.0 for SPT &gt;=4.0.3</h1>
+<p>New dependencies: WTT Common Lib and MoreBotsAPI. Make sure you also have BigBrain</p>
+<ul>
+<li>A few fixes related to switching everything to the dedicated API.</li>
+<li>Support for Couturier clothes if you have that mod installed, not a dependency though. You’ll see some new pants on UNTAR members.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2426/morebotsapi/">MoreBotsAPI</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cc54906c82e4a988029631b7c1a4622dbe52eb88e02899f032e9ac6ad1ed84a1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/a367c772-a194-4270-8ea7-6f98b2ec1e31?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A52Z&amp;rscd=attachment%3B+filename%3Duntargh-300-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A55Z&amp;ske=2026-08-01T21%3A20%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2rFz8GXhqzpR1qhTX190mHJ1%2BCvf3zV5CrB7WoQ3VkI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-300-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.0</h2></div><time datetime="2025-10-27T04:09:00.000000Z">27 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,245 downloads</span><span>83.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>UNTAR Go Home! 2.1.0 for SPT version 4.0.X</h1>
+<p>This release includes new checkpoint UNTAR squads that spawn at the start of the raid, completely friendly UNTAR bots when you reach Peacekeeper level 3, and various fixes.</p>
+<h2>Additions</h2>
+<ul>
+<li>Added new checkpoint system and custom behaviors. Certain maps have the chance to spawn UNTAR checkpoint groups that will guard a set location. These groups spawn at the start of the raid and mostly occupy areas near or at extracts affiliated with the UNTAR mission (either by the extract name or with signs that signify UNTAR presence). You can define your own checkpoints in the config file!</li>
+<li>Added connection to Peacekeeper. Having level 3 or 4 Peacekeeper makes UNTAR bots friendly to you, allowing you to get closer without being warned to get away. Perfect for extracting from a spot UNTAR has set up a checkpoint. Do be careful though, getting in their face may still upset them!</li>
+<li>Lots of new names from various UN European member nations.</li>
+</ul>
+<h2>Fixes</h2>
+<ul>
+<li>Fixed crash/error when killed by any UNTAR bots.</li>
+<li>Fixed revenge (and other bot WildSpawnType) properties not loading properly, meaning if you killed a bot instantaneously it would not trigger other UNTAR bots from becoming hostile to you.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/344cdd9e2c575484f1ff7e1121bd87cf0321d1396a5d069a3086e929edbf836b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/ab4e3b9a-4494-439e-a720-c97420b287db?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A12Z&amp;rscd=attachment%3B+filename%3Duntargh-210-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A06Z&amp;ske=2026-08-01T21%3A12%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=P%2BH4UJvB1xG3zd1rwi4O3HbowShX9lId3eRLqdmkEyw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-210-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-10-16T20:47:00.000000Z">16 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,737 downloads</span><span>76.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>UNTAR Go Home! for SPT version 4.0.0</h1>
+<p>Only BigBrains required for this version!</p>
+<p>This release is primarily for updating everything to SPT 4.0.0, with some loadout additions.</p>
+<ul>
+<li>Added FAL loadouts to grunts and officers.</li>
+<li>Added front sights to HK 416 handguard for cases where a short 416 is generated without an optic.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a48cfa6b68f66ba7cd82c1f1ac56c602fc779a5e5dcf4a1b998d95583731e724?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/db4b7d82-37b2-4161-89e8-e3b439fb17f8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A57Z&amp;rscd=attachment%3B+filename%3Duntargh-200-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A57Z&amp;ske=2026-08-01T20%3A59%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mZRZKRWGVbf6t5QfXWvbAOF6Rw00Rk%2FdLf26nIa%2BCis%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3Duntargh-200-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-10-07T21:29:00.000000Z">7 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,052 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>1.0.0 release</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ac941779a47f461bd2e3bee8ec2e107e1f243f4ff766950878b24a044cba4d00?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1066609715/ec040d69-6c2e-4e64-b6ac-92e963824920?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A29Z&amp;rscd=attachment%3B+filename%3Dtacticaltoaster-untargohome.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A26Z&amp;ske=2026-08-01T21%3A15%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bMi%2Fg%2BOXqPHAws6LbOJskRk%2FGwi1NNTgO9OuBvNqY%2F0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&amp;response-content-disposition=attachment%3B%20filename%3Dtacticaltoaster-untargohome.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.untargh.tacticaltoaster</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 October 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/TacticalToaster/TacticalToasterUNTARGH" target="_blank" rel="noreferrer noopener">https://github.com/TacticalToaster/TacticalToasterUNTARGH</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

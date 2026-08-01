@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>CraftQueue · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>CraftQueue</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/92a493e7d5a90ac3b3b90e441a53f75d0dd44ad3a6b0c3ac769226f20edea7eb.webp" alt="CraftQueue thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>CraftQueue</h1>
+    <p class="hero-teaser">Queue hideout crafts across all stations and manage them from a web UI - even while you raid</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c9c669d7102ca042ddc0d42b8fbc88ad89c2119c17e1618a6c7b80b00857dd50.webp" alt="" width="32" height="32">maschine</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>224</dd></div>
+    <div><dt>Favourites</dt><dd>7</dd></div>
+    <div><dt>Mod lists</dt><dd>5</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="CraftQueue content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>CraftQueue</strong> moves hideout crafting into one local web page. Queue as many crafts as you like per station - each station works through its list on its own, all stations in parallel.</p>
+<h2>What it does</h2>
+<ul>
+<li><strong>Auto-chains your crafts:</strong> finished items are collected automatically and the next craft starts by itself - even <strong>during raids</strong>, where the server takes over the queue and hands everything back cleanly when you extract.</li>
+<li><strong>One live overview</strong> of every running craft: names, icons, remaining time, and a <em>paused</em> marker when your generator is off. Works while EFT is loading, in a menu, or closed.</li>
+<li><strong>Full recipe browser</strong> with search by product, ingredient, category or station - only showing what your profile has actually unlocked.</li>
+<li><strong>Safe cancelling:</strong> aborting a craft returns its tools to your stash (vanilla would destroy them). Ingredients stay consumed, like in vanilla.</li>
+<li><strong>Nothing starts “for free”:</strong> entries are validated against your real stash (FIR, tools, pinned items, consumables already reserved by the queue) and simply wait if materials go missing.</li>
+<li>Queue survives server restarts; anything ambiguous becomes a visible <em>Needs Review</em> entry instead of a silent duplicate or loss.</li>
+</ul>
+<h2>Why not fully server-side?</h2>
+<p>Outside a raid EFT works on an interactive cached copy of your stash - if the server consumed items behind its back, client and profile would drift apart: “item not found” errors, in the worst case a corrupted profile. Hard-reserving materials would be the same kind of invented transaction, stranding items whenever it gets interrupted. So CraftQueue only uses the game’s real transactions: outside raids your own client starts and collects crafts, and the server takes over exactly while EFT has unloaded the stash during a raid. Materials are reserved logically - queued crafts count against your stash, and if something goes missing the entry simply waits and retries.</p>
+<h2>Usage</h2>
+<ol>
+<li>Install both parts from the archive (<code>BepInEx</code> + <code>SPT</code> folders into your SPT installation).</li>
+<li>Start the server and EFT, then press <strong>F9</strong> in game - your personal page opens in the browser. (Rebindable; the link is also printed in the logs.)</li>
+</ol>
+<p>Runs on the server machine, reachable over LAN by default - handy when EFT and the server are separate machines. Every player gets a <strong>personal link that only sees their own profile</strong>; the host link in the server console manages all profiles.</p>
+<h2>Notes</h2>
+<ul>
+<li><strong>Fika-compatible</strong>: each player manages only their own queue via their personal link.</li>
+<li><strong>Compatible with Hideout In Progress (hip)</strong> - completely separate domains.</li>
+<li><strong>Not compatible with Hideout Automation’s production stacking</strong>: that is a second craft-queue system fighting over the same starts and collections; at minimum disable its production stacking, better run only one of the two.</li>
+<li>Continuous productions (water collector, bitcoin farm), scav case and cultist circle are not queued.</li>
+<li>Outside raids the queue advances while EFT is running; crafts finishing with EFT closed are collected at the next start.</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/650c0c7ff57f7ce321d8fe50c70e5969c5f7ddbcbbebca6342fe28d6cacc980d.webp" alt="example"></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-08-01T13:05:00.000000Z">1 August 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>58 downloads</span><span>105.6 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added: Collapsible groups</li>
+<li>Added: Alternative grouping by station</li>
+<li>Added: Real-time material availability check</li>
+<li>Added: Command dismissal</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7d543bcda58d43ba542e32cef3701ce52044cbcf65122b7e0a57c2760e2619aa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/dbb5cce79748d900f4a5786ddffa4453c620f6c4a3da8f7c562c7c103d7d7dc5?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1318390388/64adfb07-8fed-40f1-92cb-c87d57318f9c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A59Z&amp;rscd=attachment%3B+filename%3Dmaschine-CraftQueue-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A21Z&amp;ske=2026-08-01T21%3A24%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BS%2FIyle2E9lhJVWJES0vqAfAT4ukibtI9dhtx6U241U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MywibmJmIjoxNzg1NjE2MDgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NNcwXWbeJKQyovxN_KOCnzDNH9etLvj2bLpB7WoIRhs&amp;response-content-disposition=attachment%3B%20filename%3Dmaschine-CraftQueue-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-31T14:11:00.000000Z">31 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>166 downloads</span><span>101.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b73f69e3fadf6db544893cc06eadacef3483408cd76750d5109241e906d450a8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/476238536ba7a65b1fd0f072c2c75453cf4d638df69c2eacbbbfb0210d629785?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1318390388/7116116c-637d-44a6-8014-aa318d250b22?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A19Z&amp;rscd=attachment%3B+filename%3Dmaschine-CraftQueue-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A34Z&amp;ske=2026-08-01T21%3A17%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=W3HRg8P6jRlfLlLcgwvM3fZComdOhFc7Lz%2BVoa5ay1Y%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MywibmJmIjoxNzg1NjE2MDgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.NNcwXWbeJKQyovxN_KOCnzDNH9etLvj2bLpB7WoIRhs&amp;response-content-disposition=attachment%3B%20filename%3Dmaschine-CraftQueue-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.maschine.craftqueue</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>31 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/maschine34675/CraftQueue" target="_blank" rel="noreferrer noopener">https://github.com/maschine34675/CraftQueue</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to find the correct classes/methods to patch in the game’s source code. The thumbnail is AI generated.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

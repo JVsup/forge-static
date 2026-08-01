@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>LycorisOni&#39;s FleaAdjustment Mod · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>LycorisOni&#39;s FleaAdjustment Mod</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/a328785926a1a42fb7d71c869d7179a2fcae2ab74e4472b45465e589e479fe60.webp" alt="LycorisOni&#39;s FleaAdjustment Mod thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>LycorisOni&#39;s FleaAdjustment Mod</h1>
+    <p class="hero-teaser">A configurable Single Player Tarkov mod that allows you to adjust flea market prices with a simple multiplier or advanced range-based pricing. With even more precision with a section to adjust specific items.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/07e62c95bc94c3b1df55777a37c507313b9c095a236230989472e9c24c53b754.webp" alt="" width="32" height="32">LycorisOni</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,532</dd></div>
+    <div><dt>Favourites</dt><dd>1</dd></div>
+    <div><dt>Mod lists</dt><dd>3</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="LycorisOni&#39;s FleaAdjustment Mod content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>FleaAdjustment - Single Player Tarkov Flea Market Adjuster</h1>
+<p>Take full control of your Flea economy with somewhat easy to use flea market price adjustments. Great tool to let you modify what you want for your flea to do for the most part.</p>
+<h2>What the hell does this mod do?</h2>
+<p>This mod allows you to set a multiplier on the flea which just will in theory let you pick the prices of any item to be cheaper or more expensive. I think you can even change modded item prices if you find their MongoID.</p>
+<h2>Features</h2>
+<h3>Three Configurations</h3>
+<ol>
+<li>
+<p><strong>Simple Multiplier</strong></p>
+<ul>
+<li>Applies a standard multiplier to every item on the flea.</li>
+<li>Example: 1.5x (50% more expensive), 0.5x (50% cheaper), 2.0x (let it ride let it ride (Twice as expensive))</li>
+</ul>
+</li>
+<li>
+<p><strong>Range Based Pricing</strong></p>
+<ul>
+<li>Define price tiers with different multipliers</li>
+<li>Example: Make items under 10k cheaper (0.8x) but items over 200k more expensive (2.0x)</li>
+<li>Great tool to let you modify a range of items more easily by setting different multipliers for different price tiers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Specific Item Overrides</strong></p>
+<ul>
+<li>Target individual items by their template ID</li>
+<li>This will always apply regardless of if Simple Multiplier is used or Range Based Pricing is used.</li>
+<li>Have a specific item or more you want to be cheaper or hella expensive? Use this function for that!</li>
+</ul>
+</li>
+<li>
+<p><strong>BlacklistAdditions</strong></p>
+<ul>
+<li>Target individual items to add to the blacklist of the flea through their template ID</li>
+<li>Target whole categories to add to the blacklist of the flea through the parent of say an ammo.</li>
+</ul>
+</li>
+</ol>
+<h3>Semi Failsafes</h3>
+<ul>
+<li><strong>Minimum price</strong> (default: 1) - I set this so shit don’t break in theory. Probably redundant though lmao</li>
+<li><strong>Maximum price cap</strong> (default: 500 million) - I set it to this cause in testing this was the most stable flea lets items be in price? Most of you probably won’t make things so expensive though.</li>
+</ul>
+<h3>Easy Configuration</h3>
+<ul>
+<li>Config file is included with simple multiplier set to 50% for half cheaper flea by default with some example items in there like pack of sugar, ghzel body armor and Surv12 kit at different multipliers so you can easily figure out how to add more.</li>
+<li>Changes require server restart obviously</li>
+</ul>
+<h2>Perfect For</h2>
+<ul>
+<li><strong>Hardcore players</strong> who want every rouble to matter modifying it to be as hard as possible.</li>
+<li><strong>Casual players</strong> - Those who just want a cheaper flea. I already set it to 50% by default so there is minimum need to change things.</li>
+<li><strong>Flea Connoisseurs</strong> - Setting up your dedicated flea experience the way you want</li>
+<li><strong>Fika Hosts</strong> - Great for fika users who want to control the flea for everybody that plays with them and keep it balanced to how they like it.</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release</li>
+<li>Extract the <code>FleaAdjustment</code> Folder and slap the contents inside to your SPT installation Folder.</li>
+<li>Edit <code>FleaAdjustment/Config/FleaAdjustmentConfig.json</code> to your liking</li>
+<li>Start your server and enjoy your flea experience your way.</li>
+</ol>
+<h2>License</h2>
+<p>MIT License - See LICENSE file for details</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-12-08T14:17:00.000000Z">8 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,102 downloads</span><span>10.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>This is a semi major change to the mod. Two huge features have been added. You can now add items or whole categories like ammo for example to the flea blacklist. Great addition for fika hosts who want to restrict the flea a good bit or regular users who like to make the flea only have certain categories like keys for example. Up to you how you want to use this update. If there is any bugs please let me know in the comments.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/d07103159bfca3a5c03004e15770ebc6599414ee2278b3880d98fa18fada407d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1102645014/7dfbc2e5-dfdf-425f-9f13-1abac420396e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A21%3A39Z&amp;rscd=attachment%3B+filename%3DFleaAdjustments.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A38Z&amp;ske=2026-08-01T21%3A21%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BWMO3JTup9zWckOBs%2BWtPUpimutOcFSUplvdAH29DJA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NiwibmJmIjoxNzg1NjE1ODQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1nxj-twoWfXXlKb6UXraNDuVI3EMLcBj-_NByfYGzHY&amp;response-content-disposition=attachment%3B%20filename%3DFleaAdjustments.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2025-12-08T11:34:00.000000Z">8 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>11 downloads</span><span>9.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>New Feature! Yippie! I added a new config option that lets you remove listing limits like Ledx being 5 per pack. That can be completely removed by turning “removeFleaListingLimits” to true instead of false.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/decca7119aebfc82b97dee55764844b3787f45575ce9c5326208ef3786fa3818?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1102645014/91220497-3782-4190-90b5-97b636f51a1f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A37Z&amp;rscd=attachment%3B+filename%3DFleaAdjustments.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A49Z&amp;ske=2026-08-01T21%3A07%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SgkIHDIqh6XbpVVfOzUCQFmdWsORemmIQ%2BTTirZBxNQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NiwibmJmIjoxNzg1NjE1ODQ2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1nxj-twoWfXXlKb6UXraNDuVI3EMLcBj-_NByfYGzHY&amp;response-content-disposition=attachment%3B%20filename%3DFleaAdjustments.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.lycorisoni.fleaadjustments</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>23 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/LycorisOni/FleaAdjustments" target="_blank" rel="noreferrer noopener">https://github.com/LycorisOni/FleaAdjustments</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

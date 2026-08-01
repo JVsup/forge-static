@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Event Auto Profile Backup · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Event Auto Profile Backup</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/2fe7b16c6b6c21a1f62712ebf6159b5245aef1f7f95cf8468c6638f632982209.webp" alt="Event Auto Profile Backup thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Event Auto Profile Backup</h1>
+    <p class="hero-teaser">No more worries to backup your profile. Automatic event-based profile backup system with easy restore system.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0011dedaa1b1cb2443b40925296b72011019a3b64934a140f4b44b22b7285278.webp" alt="" width="32" height="32">FriedEngineer</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,231</dd></div>
+    <div><dt>Favourites</dt><dd>14</dd></div>
+    <div><dt>Mod lists</dt><dd>33</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Event Auto Profile Backup content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features and Usage</div>
+<div class="tab-content"><h3>Features</h3>
+<ul>
+<li>Automatically backup your profile when (<em>Configurable</em>)
+<ul>
+<li>Game Client Starts</li>
+<li>Raid Starts</li>
+<li>Raid Ends</li>
+<li>Game Client Logs out</li>
+<li>Whatever events you want! (ADVANCED ONLY. Basic Instructions in the Config tab)</li>
+</ul>
+</li>
+<li>Maximum Backup files Per Profile (<em>Configurable</em>)</li>
+<li>Easy profile backup restoration</li>
+</ul>
+<h3>Usage</h3>
+<p>Creating backups</p>
+<ul>
+<li>Do nothing! Once you install the mod it will automatically start making backups when the configured events occur.</li>
+<li>Backups will be placed in <code>SPT/user/profiles/EventProfileBackups/Backups/profileID-profileUsername/</code>
+<ul>
+<li><em><strong>Each</strong></em> profile will retain a configurable number of backup files (defaults to 20)</li>
+</ul>
+</li>
+<li>Backup file format: year-month-day_hour-minute-second_​event.json<br>
+(Example: 2025-01-14_21-14-49_GameLaunch.json)</li>
+</ul>
+<p>Restoring Backups</p>
+<ul>
+<li>Move or copy the backup file you wish to restore to <code>SPT/user/profiles/EventProfileBackups/ProfilesToRestore</code> folder and then restart the server.</li>
+<li>When the restore is complete the file will be moved to <code>SPT/user/profiles/EventProfileBackups/RestoredProfiles/</code>.</li>
+<li><code>SPT/user/profiles/EventProfileBackups/RestoredProfiles/</code> will retain a number of already restored files (Configurable, defaults to 10)</li>
+</ul>
+<h3>Additional Details</h3>
+<ul>
+<li>Compatible with Fika
+<ul>
+<li>Creates separate backups for each profile</li>
+<li>Does not back up dedicated/headless profiles as they would just take up space unnecessarily.
+<ul>
+<li>v1.7.x (for 3.10) checks for dedicated_</li>
+<li>v1.8.x-v2.0.x (for 3.11-4.0) checks for headless_</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>Extract zip and drop user folder inside of your SPTarkov folder</p>
+<p>Demonstration Video (this is for SAIN, but the same concept applies to all of my mods). Credit to Drakia for the video</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/cb37fe47ffc1630128e6cfe740026187233979518140debb0ed8d4010cabe876.webp" alt="vKRw58b.gif"></p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Config</div>
+<div class="tab-content"><p>For a bit of background, the “events” are triggered when the server receives a call to the specified route. You can enable, disable, and/or rename any of the events. Do not change the Route unless you know what you’re doing. (You should only have to rename them if SPT changes them in a future version and I haven’t updated the mod yet).</p>
+<p>The default config file includes helpful comments so I’ll start by just including it here. Any changes you make will take effect when the server is restarted.</p>
+<pre><code>{
+    // Set to false if you want to disable this mod entirely
+    "Enabled": true,
+
+    // Write logs when a backup is saved
+    "BackupSavedLog": true,
+
+    // Write logs when backups are deleted and the maximum number of backups per profile
+    "MaximumBackupDeleteLog": false,
+    "MaximumBackupPerProfile": 20,
+
+    // Write logs when restored backups are deleted and the maximum number of restored backups
+    "MaximumRestoredDeleteLog": false,
+    "MaximumRestoredFiles": 10,
+
+    "Directory": "./user/profiles/EventProfileBackups",
+
+    // Which events should trigger a backup
+    "AutoBackupEvents": [
+        { "Name": "GameLaunch", "Route": "/client/game/start" },
+        { "Name": "RaidStart", "Route": "/client/match/local/start" },
+        { "Name": "RaidEnd", "Route": "/client/match/local/end" },
+        { "Name": "GameClose", "Route": "/client/game/logout" }
+    ]
+}
+</code></pre>
+<h3><strong>Advanced</strong></h3>
+<p>By moving the routes into the config file I have also made it much easier to add additional events. If you are so inclined, here’s how I would recommend adding a new event</p>
+<ol>
+<li>Figure out the event on which you’d like to automatically create a profile backup.</li>
+<li>Figure out the route that corresponds to that event. The easiest way to do this is to perform the event and simultaneously watch the server logs to see which route was called.</li>
+<li>Add a new line with the event name and route to the list of AutoBackupEvents in the config.jsonc like so:</li>
+</ol>
+<pre><code>// Which events should trigger a backup
+"AutoBackupEvents": [
+    { "Name": "GameLaunch", "Route": "/client/game/start" },
+    { "Name": "RaidStart", "Route": "/client/match/local/start" },
+    { "Name": "RaidEnd", "Route": "/client/match/local/end" },
+    { "Name": "GameClose", "Route": "/client/game/logout" },
+    { "Name": "AnotherEvent", "Route": "/this/is/another/route" }
+</code></pre>
+<p>// Which events should trigger a backup “AutoBackupEvents”: [ { “Enabled”: true, “Name”: “OnGameStart”, “Route”: “/client/game/start” }, { “Enabled”: true, “Name”: “OnRaidStart”, “Route”: “/client/match/local/start” }, { “Enabled”: true, “Name”: “OnRaidEnd”, “Route”: “/client/match/local/end” }, { “Enabled”: true, “Name”: “OnLogout”, “Route”: “/client/game/logout” }, { “Enabled”: true, “Name”: “AnotherEvent”, “Route”: “/this/is/another/route” } ]</p>
+<p>A few words of caution:</p>
+<ul>
+<li>I recommend that you do not add a route that occurs frequently.
+<ul>
+<li>I don’t really know the limit of how often often a backup be made before causing server performance issues from it constantly creating and probably deleting backup files.</li>
+<li>I imagine that a significant number of profile backups of the same event would make it difficult to find the exact one you want.</li>
+</ul>
+</li>
+<li>I do not know if all routes will actually work. I have not tested any beyond the ones included by default so any you add are at your own risk
+<ul>
+<li>If you don’t want to venture into this on your own but you have an idea for an event to that you think should be included by default, please leave a comment on this hub page or open a Github issue <a target="_blank" class="external-link" href="https://github.com/robpneu/spt-eventautoprofilebackup/issues" rel="noreferrer noopener">here</a> and I’ll see what I can do.</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Changes</div>
+<div class="tab-content"><h3>v2.0.0 - For SPT 4.0</h3>
+<p>No functionality change</p>
+<ul>
+<li>Complete rewrite from TypeScript to C# but all previous functionality retained.</li>
+<li>Default backup location has been moved to <code>SPT/user/profiles/EventProfileBackups</code> to match the profile storage location in SPT 4.0.</li>
+</ul>
+<h3>v1.8.0 - For SPT 3.11</h3>
+<p>No functionality change.</p>
+<p>Minor Changes</p>
+<ul>
+<li>Reduce default max backup files per profile to 20</li>
+<li>Swap VFS for FileSystemSync (required by 3.11) and simplify FileSystem calls</li>
+<li>Check for headless_ instead of dedicated_ profiles to ignore (required for 3.11 compatible Fika)</li>
+</ul>
+<h3>v1.7.0 - For SPT 3.10</h3>
+<p>Beyond the necessary changes for basic 3.10 compatibility, I made a few additional changes. Some were to more safely interact with base SPT, the SaveServer and BackupService in particular. The rest are largely based on my opinion or to suit my personal preference of how I envision is the best way use this mod. If you feel strongly about them, please leave a comment where I’d be happy to discuss them. There were a lot of under the hood changes, which you can see in the git history, but here are the high level changes</p>
+<ul>
+<li>Enable Mod by default
+<ul>
+<li>I left the Enable/Disable config flag but it made no sense to me to have the mod disabled by default.</li>
+</ul>
+</li>
+<li>Renamed the mod to “EventAutoProfileBackup”
+<ul>
+<li>I think this more accurately reflects the function and more clearly communicates the difference between this and the SPT BackupService, which creates the user/profiles/backup/ folder for its backups</li>
+</ul>
+</li>
+<li>Backup file format: Was %Event%-%ISO Timeformat%.json. Now year-month-day_hour-minute-second_event.json
+<ul>
+<li>The timestamp portion now uses the format from the SPT Backup Service as I find it more human readable.</li>
+<li>The timestamp now comes first in the name of file as I usually want to see the profile backups sorted by timestamp, not event, so I just put the timestamp first as that is how most filesystems will sort it.</li>
+</ul>
+</li>
+<li>Backup file directory
+<ul>
+<li>Was user/profiles/AutoBackup/sptVersion/profielId/. Now user/profiles/EventAutoBackup/backups/profileUsername-profileID/</li>
+<li>I don’t think it’s necessary to include the SPT version here. It also means that old backup will not be deleted after you update to a new version of SPT. I think the new SPT Backup system handles this case better</li>
+<li>I added the username in addition to the profileId so that it can be more easily identified if there are multiple profiles without opening the json and looking for the username (I imagine most people don’t memorize profileIds but would easily recognize a username)</li>
+</ul>
+</li>
+<li>Easy Profile Restore Process
+<ul>
+<li>Was copy to user/profiles. Now copy to user/profiles/EventAutoBackup/ProfilesToRestore/</li>
+<li>Making it external was safer for the integrity of SPT services.</li>
+<li>Copying to user/profiles and then modifying the files while SPT was running was in conflict with the BackupService and potentially the SaveServer.</li>
+</ul>
+</li>
+<li>Dynamically load endpoints from config
+<ul>
+<li>Allows anyone adventurous enough to add their own events without diving into the code itself</li>
+<li>Cleaned up the code itself a bit by removing a lot of hard coded strings and duplicated code</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Fixed an inherent incompatibility with running it in a Linux hosted environment.</li>
+<li>No longer directly makes changes to the profile files for either backup or restore
+<ul>
+<li>It uses the SaveServer instead, which is the SPT service that is responsible for handling the profile data while the server is running and is responsible for writing the profile .json files.</li>
+<li>This was change was strongly recommended by a few SPT and mod developers in the discord.</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Credits</div>
+<div class="tab-content"><p>I’m obviously building heavily on the work of previous modders. They deserve credit for creating and maintaining this mod for so long.</p>
+<p>Original Mod for SPT 3.1.x-3.2.5 by Lua: <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/808-lua-s-auto-profile-backup/" rel="noreferrer noopener">Lua’s Auto Profile Backup</a></p>
+<p>Update for SPT 3.4-3.5 by Reis: (uploaded in the comments of <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/808-lua-s-auto-profile-backup/" rel="noreferrer noopener">Lua’s Auto Profile Backup</a>)</p>
+<p>Update for SPT 3.6-3.9 by Props : <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1143-lua-s-auto-profile-backup-updated/" rel="noreferrer noopener">Lua’s Auto Profile Backup (Updated)</a></p>
+<p>I also received some great help in the SPT discord from DrakiaXYZ, acidphantasm, and Jehree. Thank you!</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-12-18T06:18:00.000000Z">18 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,437 downloads</span><span>33.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Update for SPT 4.0</p>
+<p>No functionality change</p>
+<ul>
+<li>Complete rewrite from TypeScript to C# but all previous functionality retained.</li>
+<li>Default backup location has been moved to SPT/user/profiles/EventProfileBackups to match the profile storage location in SPT 4.0.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/196039f2132fb71c13b432b732759ae2ce8c6dacf95edd21dd4da4312036fbe3?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118653966/8bc81081-125f-4274-aee8-dc466ad1bdfa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A57Z&amp;rscd=attachment%3B+filename%3DEventAutoProfileBackup.v2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A56Z&amp;ske=2026-08-01T21%3A14%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lvizBiVGeN1Zj1LNVHcbPCNa3kpIaeWgUqpcd1JriqQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgzMiwibmJmIjoxNzg1NjE1NTMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EqF-BXApNcY-o3iDSNNl_cp1_ZDGWlDrg6fzNjMIvu0&amp;response-content-disposition=attachment%3B%20filename%3DEventAutoProfileBackup.v2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.8.0</h2></div><time datetime="2025-05-23T05:03:00.000000Z">23 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>980 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Update for 3.11</p>
+<p>No functionality change.</p>
+<h3>Changes</h3>
+<ul>
+<li>Reduce default max backup files per profile to 20</li>
+<li>Swap VFS for FileSystemSync (required by 3.11) and simplify FileSystem calls</li>
+<li>Check for headless_ instead of dedicated_ profiles to ignore (required for 3.11 compatible Fika)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f1e8a367f40d49a73da44cb479ec2ff5de0a8f29f7e426bb38bebd06788065db" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/bc0e95fd4a7880a3f647fd44017821cc64e5eb78bf5a531c658d98658b717538" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118653966/6d62e4da-11c3-4a4d-b6c6-53e97116c7aa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A09Z&amp;rscd=attachment%3B+filename%3Deventautoprofilebackup-v1.8.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A06Z&amp;ske=2026-08-01T21%3A05%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Q9pw%2BxjO1KL6%2BWiNNVMz23FtqBgPY2Aea7X79TzfNjg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgzMiwibmJmIjoxNzg1NjE1NTMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EqF-BXApNcY-o3iDSNNl_cp1_ZDGWlDrg6fzNjMIvu0&amp;response-content-disposition=attachment%3B%20filename%3Deventautoprofilebackup-v1.8.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.0</h2></div><time datetime="2025-01-20T19:43:00.000000Z">20 January 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>814 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Update for 3.10</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f1e8a367f40d49a73da44cb479ec2ff5de0a8f29f7e426bb38bebd06788065db" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/306f3ff38e8ee8a779c8d933672d2db8c0a9e8c62647ba5a1d01d1db88c4868b?nocache=1" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118653966/8c91e4b6-8710-4aef-955b-09c1b7531fef?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A44Z&amp;rscd=attachment%3B+filename%3Deventautoprofilebackup-v1.7.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A14Z&amp;ske=2026-08-01T21%3A12%3A44Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lxe0WtLfatdKNWLkEPWBMeYjb%2BjiCJ56dTkfFPB1BlY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTgzMiwibmJmIjoxNzg1NjE1NTMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EqF-BXApNcY-o3iDSNNl_cp1_ZDGWlDrg6fzNjMIvu0&amp;response-content-disposition=attachment%3B%20filename%3Deventautoprofilebackup-v1.7.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.friedengineer.eventautoprofilebackup</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>20 January 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/robpneu/SPT-EventAutoProfileBackup" target="_blank" rel="noreferrer noopener">https://github.com/robpneu/SPT-EventAutoProfileBackup</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>BarterItemsStacks · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>BarterItemsStacks</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/3bae3178ec364b0201d09457be7dfc4efb6b98d1ffe79955df0d6ceb5d44bd65.webp" alt="BarterItemsStacks thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>BarterItemsStacks</h1>
+    <p class="hero-teaser">A simple mod that changes the stack size for barter items. And a little more…</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/bdd19848186667d0d31fa476ba2b1307d93ea8d2de15dca11a5579742391fbce.svg" alt="" width="32" height="32">xvotex</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>33,336</dd></div>
+    <div><dt>Favourites</dt><dd>70</dd></div>
+    <div><dt>Mod lists</dt><dd>113</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="BarterItemsStacks content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>13</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>The mod allows changing the maximum stack size for items. And a little more…</strong></p>
+<p>Now allows modifying the following item parameters:</p>
+<ul>
+<li>Maximum stack size</li>
+<li>Maximum resource value</li>
+<li>Height and width</li>
+<li>Weight</li>
+<li>Price</li>
+</ul>
+<p>Stack size and resource values are supported for barter items, medical items, special items, repair kits, food and drinks.  All other parameters should work for all items without any problems.</p>
+<p><strong>Sorting items with resources into stacks may not work correctly due to conflicts with other mods. I can’t track down issues across all mods, so I’ve removed them from the default config. Add them manually and test yourself.</strong></p>
+<p>Config can be edited at:</p>
+<ul>
+<li><code>https://127.0.0.1:6969/bis</code></li>
+</ul>
+<p>Parent IDs can be used to assign properties to item groups. Properties are applied only to direct children. Item IDs take priority over parent IDs.</p>
+<pre><code>Some parents' IDs:
+57864a66245977548f04a81f - Electronics
+6759673c76e93d8eb20b2080 - Flyers
+57864e4c24597754843f8723 - Flammable materials
+590c745b86f7743cc433c5f2 - Others
+57864ee62459775490116fc1 - Batteries
+57864ada245977548638de91 - Building materials
+57864a3d24597754843f8721 - Jewelry
+57864c8c245977548867e7f1 - Medical supplies
+5448e8d04bdc2ddf718b4569 - Food
+5448e8d64bdc2dce718b4568 - Drinks
+567849dd4bdc2d150f8b456e - Maps
+5448f3a64bdc2d60728b456a - Injectors
+5448f3ac4bdc2dce718b4569 - Injury treatment
+5448f3a14bdc2d27728b4569 - Drugs
+5448f39d4bdc2d0a728b4568 - Medkits
+543be5dd4bdc2deb348b4569 - Money
+5448ecbe4bdc2d60728b4568 - Info items
+5447e0e74bdc2d3c308b4567 - Special items
+66abb0743f4d8b145b1612c1 - Multitools
+616eb7aea207f41933308f46 - Repair kits
+57864bb7245977548b3b66c2 - Tools
+
+Other can be found on any wiki.
+Most of them won't work correctly with stack size and max resource.
+</code></pre>
+<p><strong>Price changes require a server restart. Config reload doesn’t work.
+Height and width changes require clearing cache. Press the “Clean Temp Files” in SPT Launcher.
+For all other parameters, only a client restart is required.</strong></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.2</h2></div><time datetime="2026-01-26T16:23:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>18,471 downloads</span><span>2.5 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Config is now auto-generated if missing.</li>
+<li>Sorting should now work correctly, accounting for stack size and resource amount.</li>
+<li>Changed patches for UIFixes and StashManagementHelper. Should work better. Hopefully.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/102149d7ce1cec9d06ebb8e27d9edd24bfd55ae51c65a4673b68c9badcffa529?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/6e26f35e-4541-4cd8-a951-71955d0aa482?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A21%3A40Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A21%3A28Z&amp;ske=2026-08-01T20%3A21%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1K%2FdQjWEFnfwP21YmcpU9yAq8MniZ6TfXrpbkyvOkkc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.1</h2></div><time datetime="2026-01-22T12:36:00.000000Z">22 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>959 downloads</span><span>2.5 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added compatibility with StashManagementHelper</li>
+<li>Items with resource have been removed from the config.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/27737f16aee1b3543345d0652f5e774d5197bc37a5e7aee22d6327054dd972a4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/78c6d857-cc48-4dec-875e-eb7f7f89289f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A37%3A30Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A36%3A37Z&amp;ske=2026-08-01T20%3A37%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=JgmvBq%2F%2FXABljR85%2BZe24RrYa5LQjr0pGmI8Ucg1ZlU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-01-19T14:53:00.000000Z">19 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>402 downloads</span><span>2.6 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added height, width, weight multiplier and price multiplier.</li>
+<li>Added a web page for config.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/47040108431b3df47a8a9df942e34c9e0bedee8717f8e834ed21c77b667c3d3a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/00dd0dd9-4fff-4f0e-a13e-20e5f48a915d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A22%3A42Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.3.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A22%3A01Z&amp;ske=2026-08-01T20%3A22%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nY0gqsf%2FAIDvHWLB5X6IwdzmK9JddYSBpUR0YH4jNdU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.3.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.5</h2></div><time datetime="2026-01-03T06:37:00.000000Z">3 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,979 downloads</span><span>42.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added settings to enable stacking fir and non-fir items</li>
+<li>added IDs to the config from the CornerStore</li>
+<li>removed the patch that allowed stacks to be placed in special slots (does not work correctly)</li>
+<li>removed the patch that changed the checkmark’s position (completely)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cd013a86b99dc421b0f219b557a20c36d518a2330955b79747abf1f580185061?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/a0f17cdd-4f58-4eb9-a09e-28eb2df2d603?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A22%3A00Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.5.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A21%3A47Z&amp;ske=2026-08-01T20%3A22%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8VN%2B1E5m8INdq0iaBJ3LAqTtjPH00mUmMWKmAXezRCM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.5.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.4</h2></div><time datetime="2025-12-22T16:49:00.000000Z">22 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,945 downloads</span><span>31.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Returned the checkmark to its place.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1ee45439785d063fe40210ecd71b55fd0715e1ab782ce3a9f9e4e0ff77e832e6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/9c11b3e5-fe59-4748-a943-87820fe35923?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A26%3A21Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.4.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A26%3A00Z&amp;ske=2026-08-01T20%3A26%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UDwiZCwgSjvsX8jjndfwgFndeJfG5kJKJPVthByq5iU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.4.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.3</h2></div><time datetime="2025-12-21T11:07:00.000000Z">21 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>523 downloads</span><span>31.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Now you can add parent IDs to the config.</li>
+<li>Quests with placement and protection should work correctly</li>
+<li>Staksize indicator is now above the resources.</li>
+<li>Сheckmarker is now under the item name.</li>
+<li>Stack can now be put in a special slot. (but you can’t combine in these slots, unfortunately.)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1ecd48d8303cfc724c3b0c347ad35bfb7308e46fe91d155201ad8e40a2dd27f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/ca4bf590-adbb-4fa3-9f6a-2dc54defa115?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A20%3A30Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.3.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A19%3A35Z&amp;ske=2026-08-01T20%3A20%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=T%2BzhSCWJTHCIZwAPBx5fXQpmLOnHeCJ0izIEcGDH780%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MiwibmJmIjoxNzg1NjEzMTcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HgwzlSOxo0Jvw10w9rQ65EZfCxtMDw_3ugCky8dBEWM&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.3.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2025-12-16T15:23:00.000000Z">16 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,199 downloads</span><span>29.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Changed the config loading a bit (added a rollback).</li>
+<li>Added compatibility with UI Fixes. Sorting didn’t work under certain conditions.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/095b1c65e8afe0f2994d06b401d126aee6640d815de6900847225e67e0a8f225?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/46cd8ab8-760b-4d47-ac03-c8301cab81eb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A38%3A09Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A37%3A51Z&amp;ske=2026-08-01T20%3A38%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=4SNF9Cx8NciY%2FSi0p97HFhRgFa4QlnufMCd2JKuFQpE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2025-12-16T11:41:00.000000Z">16 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>100 downloads</span><span>28.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Removed the upper limit for values in the config. It’s all on your conscience.</li>
+<li>Added additional commented IDs to the config for convenience.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a965c9ba2834b59646469de57e05f3d719535737b48a23b9ca421b021f2fe457?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/94a53fe6-3d63-415d-92e7-dfa5fd705984?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A17%3A43Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A17%3A28Z&amp;ske=2026-08-01T20%3A17%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lUewG1%2FplX%2Fu5puAXGUQt84wiS4nHoawPkZlVhNCIk0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2025-12-15T15:06:00.000000Z">15 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>389 downloads</span><span>26.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Now a little bit more than just for barter items.</p>
+<ul>
+<li>Slightly reworked the config.</li>
+<li>The config now automatically updates after saving. (But you need to restart the game client.)</li>
+<li>You can now set the maximum resource value.</li>
+<li>Fuel/filter/amulet now take one item from the stack.</li>
+<li>Now only items with the maximum resource value are stacked.</li>
+<li>Added a restriction on using a item with a resource from a stack.</li>
+<li>You can no longer place a stack in the Cultist Circle.</li>
+<li>Quests that require placing items now remove one item from the stack.</li>
+<li>Added a check for MedKitComponent, FoodDrinkComponent and RepairKitComponent.</li>
+<li>Added compatibility with the MergeConsumables mod.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/74fa8f697e0a320f75eebed2a479f911f83204a17ed488ca97423b66d53b74be?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/cb0bb70e-1b61-4901-a7b3-a81fb207eccd?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A30%3A01Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A29%3A38Z&amp;ske=2026-08-01T20%3A30%3A01Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6hY7OCK0cA27191t%2BgXGwIpxQgP5gA6v%2BMfIkrFvUZI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-12-07T20:15:00.000000Z">7 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,182 downloads</span><span>16.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>FIR/nonFIR no longer stack</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b13041991e9526ca7e8b53740de7d5eeca1cbfebf80326ad2c459050f9d4d735?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/e61f3ef7-5a84-40cf-8929-333442dd59a3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A15%3A15Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.1.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A14%3A48Z&amp;ske=2026-08-01T20%3A15%3A15Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=M99RMyCOtkw08maeDN1VNQg%2FiwrdkflNqSUxmkUXPDM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.1.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2025-12-07T17:25:00.000000Z">7 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>115 downloads</span><span>16.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Disabled merge patch because it breaks the highlighting of items. For now, FIR and nonFIR stacks still do not work correctly.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1352304274dc7a5a3f9f9aea0794a0c75111df70b0f4155ba72cf23319902968" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/55505b88-f1a8-4ece-a068-0a15482f0b0f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A35%3A12Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A34%3A25Z&amp;ske=2026-08-01T20%3A35%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=XwyZGaHe5D%2BI0p3k8jhXumtmgqWI%2F4emhvktBbgWF1o%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-12-07T16:34:00.000000Z">7 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>56 downloads</span><span>15.1 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>FIR and non-FIR items no longer stack.</li>
+<li>Resource items now display their quantity.</li>
+<li>Resource items can now only be stacked with the same quantity.</li>
+<li>Hideout now consumes the required number of items from the stack.</li>
+<li>HideoutInProgress should work correctly.</li>
+<li>Added several items to items.jsonc.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f4400f4636c9d9cdb0980fddd37829826f68b39957908e266593f2f90a1d8e11?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/419270cd-f719-48bb-902b-c76352d720b5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A34%3A58Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks-1.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A34%3A17Z&amp;ske=2026-08-01T20%3A34%3A58Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qAXXhcCjAth2ut6NLDMxfqBJR1f1Iyzr3qOzEub0eM4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3MywibmJmIjoxNzg1NjEzMTczLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dy8W4LVBe4Zxb6-ysT2RYexGeNQCYmF3C3iKhR60gdc&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks-1.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-12-01T08:32:00.000000Z">1 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,016 downloads</span><span>9.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ddec034989188d6c43f48058868a72cc15e0cc27cdcb9245f22c1a0c5003566b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1107454481/9bf621fb-6866-45b5-85e7-d37503d14373?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A38%3A14Z&amp;rscd=attachment%3B+filename%3DBarterItemsStacks.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A37%3A46Z&amp;ske=2026-08-01T20%3A38%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pbcuM5REWy%2FtgSXIwHNixddzqv%2Bb992q750dOJidvL0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzQ3NCwibmJmIjoxNzg1NjEzMTc0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.g9oza6TxyJUIfe3qdEbcpKd1xBSZV3DSyUm58oFLoyw&amp;response-content-disposition=attachment%3B%20filename%3DBarterItemsStacks.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.slpf.barteritemsstacks</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/slpf/BarterItemsStacks" target="_blank" rel="noreferrer noopener">https://github.com/slpf/BarterItemsStacks</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Nemesis Protocol · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Nemesis Protocol</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/7ace133d59d27e9a684578ad4d5e183a8eecb107fab146a85fe6a4ab390c4575.webp" alt="Nemesis Protocol thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Nemesis Protocol</h1>
+    <p class="hero-teaser">Nemesis Protocol turns ordinary PMC encounters into a persistent rivalry that develops across multiple raids.  Instead of every enemy PMC being a disposable, randomly generated opponent, the mod creates a recurring rival.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/5736ee358e029db9d1ac4e59dddaa6f62b06bcc02e5300b8475029870455cb61.webp" alt="" width="32" height="32">zomboy.</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,475</dd></div>
+    <div><dt>Favourites</dt><dd>20</dd></div>
+    <div><dt>Mod lists</dt><dd>20</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Nemesis Protocol content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Nemesis Protocol</h1>
+<p><strong>Nemesis Protocol turns ordinary PMC encounters into a persistent rivalry that develops across multiple raids.</strong></p>
+<p>Instead of every enemy PMC being a disposable, randomly generated opponent, the mod creates a recurring rival who can remember previous encounters, grow stronger, improve their equipment, and return in future raids.</p>
+<p>Your nemesis is generated as a normal USEC or BEAR PMC, allowing other AI mods to continue controlling their combat behavior, navigation, objectives, looting, and extraction logic. Nemesis Protocol focuses on the persistent identity and progression behind that PMC rather than replacing the existing AI system.</p>
+<p>Every encounter contributes to an ongoing rivalry. Kill your nemesis and they may return stronger. Let them escape and they can continue progressing. If they kill you, their threat level increases and the rivalry becomes more dangerous.</p>
+<h2>Key Features</h2>
+<h3>Persistent Rival PMC</h3>
+<p>Nemesis Protocol creates a recurring enemy PMC with a persistent identity that carries across raids.</p>
+<p>The mod stores information such as:</p>
+<ul>
+<li>Name and faction</li>
+<li>Current level and rank</li>
+<li>Encounter history</li>
+<li>Player kills and nemesis deaths</li>
+<li>Successful escapes</li>
+<li>Rivalry progression</li>
+<li>Last generated equipment tier</li>
+<li>Previous raid outcomes</li>
+</ul>
+<p>Your nemesis is not regenerated from scratch after every raid. Their history follows them.</p>
+<h3>Dynamic Progression</h3>
+<p>The nemesis can gain levels based on configurable events, including:</p>
+<ul>
+<li>Killing the player</li>
+<li>Surviving and escaping a raid</li>
+<li>Reappearing in later raids</li>
+<li>Reaching new rivalry milestones</li>
+</ul>
+<p>Level growth, health scaling, appearance frequency, and progression limits can all be adjusted through the included configuration file.</p>
+<h3>NEMESIS NETWORK</h3>
+<p>Nemesis Network is a separate Messenger contact that functions as the player’s rivalry database and command interface.</p>
+<p>Available commands:</p>
+<ul>
+<li>help</li>
+<li>status</li>
+<li>rivals</li>
+<li>history</li>
+<li>rival 1</li>
+<li>rival </li>
+<li>compat</li>
+<li>compatibility</li>
+</ul>
+<p>Nemesis Network can be used to:</p>
+<ul>
+<li>View the active Nemesis</li>
+<li>Review previous rivals</li>
+<li>Inspect encounter statistics</li>
+<li>Check rivalry progression</li>
+<li>Search for a rival by name</li>
+<li>View APBS compatibility status</li>
+<li>View ORBIT compatibility status</li>
+</ul>
+<p>Nemesis Network handles records and commands, while individual rivals handle their personal messages and taunts.</p>
+<h3>APBS/ORBIT Dependencies</h3>
+<p>If you don’t want to use APBS or ORBIT to control the Nemesis behavior/equipment, simply change the following in your config.jsonc:</p>
+<p>“UseApbsProgression”: false,
+“PreserveOrbitPmcRole”: false,
+“ExactLevelFallbackWithoutApbs”: false,</p>
+<h3>APBS Progression Support</h3>
+<p>When <strong>Acid’s Progressive Bot System — APBS</strong> is installed, Nemesis Protocol passes the nemesis progression level into APBS during bot generation.</p>
+<p>APBS remains responsible for generating the final:</p>
+<ul>
+<li>PMC level</li>
+<li>Equipment tier</li>
+<li>Weapons</li>
+<li>Armor</li>
+<li>Ammunition</li>
+<li>Inventory</li>
+<li>Loot</li>
+</ul>
+<p>This allows the nemesis to naturally receive stronger and more appropriate equipment as the rivalry develops.</p>
+<p>Nemesis Protocol does not overwrite the final APBS-generated loadout after creation.</p>
+<h3>ORBIT Compatibility</h3>
+<p>The nemesis remains a standard USEC or BEAR PMC instead of being converted into a custom boss or unsupported bot role.</p>
+<p>This allows ORBIT to continue managing the PMC’s normal:</p>
+<ul>
+<li>Objectives</li>
+<li>Navigation</li>
+<li>Combat behavior</li>
+<li>Looting</li>
+<li>Decision-making</li>
+<li>Extraction behavior</li>
+</ul>
+<p>Nemesis Protocol manages the persistent rival identity while ORBIT manages what that PMC does during the raid.</p>
+<h3>Configurable Spawn System</h3>
+<p>Control how often your nemesis appears and where encounters can occur.</p>
+<p>Configuration options include:</p>
+<ul>
+<li>Base spawn chance</li>
+<li>Minimum raids between encounters</li>
+<li>Maximum progression level</li>
+<li>Disabled locations</li>
+<li>PMC-side requirements</li>
+<li>Progression rewards</li>
+<li>Health scaling</li>
+<li>Rival messages</li>
+<li>APBS integration</li>
+<li>ORBIT compatibility behavior</li>
+</ul>
+<p>Every option is documented directly inside the included <code>config.jsonc</code> file.</p>
+<h3>Persistent Encounter History</h3>
+<p>Nemesis Protocol records the developing rivalry between the player and the recurring PMC.</p>
+<p>Depending on the outcome of each raid, the mod can track whether:</p>
+<ul>
+<li>The player killed the nemesis</li>
+<li>The nemesis killed the player</li>
+<li>The nemesis survived</li>
+<li>The nemesis escaped</li>
+<li>The encounter ended without a confirmed result</li>
+</ul>
+<p>This history remains connected to the player profile and can continue through future raids.</p>
+<h3>Rival Messages and Status Commands</h3>
+<p>The nemesis can communicate through the SPT messaging system, providing updates and rivalry-themed responses.</p>
+<p>Available chat commands allow the player to inspect information such as:</p>
+<ul>
+<li>Current nemesis status</li>
+<li>Rivalry progression</li>
+<li>Encounter history</li>
+<li>APBS detection</li>
+<li>ORBIT detection</li>
+<li>Current compatibility state</li>
+</ul>
+<p>Message pools can be customized in the configuration.</p>
+<h3>Profile Migration</h3>
+<p>Older Nemesis Protocol rivalry profiles are automatically migrated when newer fields are introduced.</p>
+<p>This allows players to update the mod without intentionally resetting their existing nemesis history.</p>
+<h2>Compatibility</h2>
+<p>Designed for:</p>
+<ul>
+<li><strong>SPT 4.0.13</strong></li>
+<li><strong>APBS</strong></li>
+<li><strong>ORBIT</strong></li>
+<li>Standard USEC and BEAR PMC generation</li>
+</ul>
+<p>Nemesis Protocol is a server-side mod and installs under:</p>
+<p><code>user/mods/ForgeHQ-NemesisProtocol</code></p>
+<p>A separate Nemesis BepInEx plugin is not required for the current feature set.</p>
+<h2>Installation</h2>
+<ol>
+<li>Download and extract the archive.</li>
+<li>Merge the included folder with your main SPT installation.</li>
+<li>Confirm the mod is located at:</li>
+</ol>
+<p><code>SPT/user/mods/ForgeHQ-NemesisProtocol</code></p>
+<ol start="4">
+<li>Start the SPT server.</li>
+<li>Review <code>config.jsonc</code> to customize the experience.</li>
+</ol>
+<h2>Updating</h2>
+<p>When installing an update, preserve the following folder to retain existing rivalry data:</p>
+<p><code>user/mods/ForgeHQ-NemesisProtocol/data/profiles</code></p>
+<p>Do not replace or delete that folder unless you intentionally want to reset your nemesis.</p>
+<h2>Configuration</h2>
+<p>The included <code>config.jsonc</code> contains readable descriptions above every setting.</p>
+<p>Users can configure:</p>
+<ul>
+<li>Nemesis appearance frequency</li>
+<li>Level gains</li>
+<li>Health growth</li>
+<li>Maximum level</li>
+<li>Disabled maps</li>
+<li>Message text</li>
+<li>APBS progression handling</li>
+<li>ORBIT compatibility</li>
+<li>Logging and debugging options</li>
+</ul>
+<p>Restart the SPT server after changing the configuration.</p>
+<h2>Important Notes</h2>
+<p>Nemesis Protocol controls the persistent identity, history, progression, and spawn scheduling of the rival PMC.</p>
+<p>It does not replace the full PMC AI system. Combat behavior remains controlled by the player’s existing AI setup, including ORBIT, SAIN, BigBrain, Waypoints, or standard SPT behavior where applicable.</p>
+<p>The result is a recurring enemy who still behaves like part of the normal SPT ecosystem—but has a reason to remember you.</p>
+<p><strong>Your raids are no longer isolated encounters. Someone is coming back.</strong></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-07-27T22:56:00.000000Z">27 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>879 downloads</span><span>34.6 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>NEMESIS PROTOCOL — CHANGELOG - VERSION 1.0.1</h1>
+<p>ADDED:</p>
+<ul>
+<li>Added unique, persistent Messenger identities for individual Nemeses.</li>
+<li>Rivalry messages now come directly from the Nemesis instead of Nemesis Network.</li>
+<li>Added persistent Russian-style first and last names for Nemeses.</li>
+<li>Added a randomized pool of Tarkov-appropriate Russian names.</li>
+<li>Added Nemesis Network as a separate Messenger contact for rivalry records, statistics, and commands.</li>
+<li>Added the following Nemesis Network commands:</li>
+</ul>
+<p>help
+status
+rivals
+history
+rival 1
+rival 
+compat
+compatibility</p>
+<p>Added detailed rival statistics and encounter information.
+Added live APBS and ORBIT compatibility reporting.
+Added reporting of the detected ORBIT installation path.
+Added automatic data migration for existing Nemesis profiles.
+Added persistent Messenger dialogue IDs for each rival.
+Added storage of the original generated PMC nickname through the internal sourceBotName field.</p>
+<p>CHANGED:</p>
+<ul>
+<li>Creation, repeat-kill, escape, and defeat messages are now sent by the individual rival.</li>
+<li>Nemesis Network now functions as the rivalry database and command interface.</li>
+<li>Existing Nemeses are automatically assigned persistent Russian-style identities.</li>
+<li>Rival detail commands now check the current compatibility status instead of displaying outdated saved information.</li>
+<li>ORBIT detection now searches both the SPT server directory and its parent installation directory.</li>
+<li>Improved support for installations where the SPT server and BepInEx folders are stored in different locations.</li>
+<li>Nemeses remain standard USEC or BEAR PMCs so ORBIT and other installed AI frameworks retain control of their behavior.</li>
+<li>Updated the default configuration values: (Change this to your preference)
+– Spawn chance: 42%
+– Minimum raids between appearances: 0
+– Maximum bonus levels: 16
+– Levels gained per player kill: 2
+– Levels gained per escape: 1
+– Health bonus per rank: 8%
+– Matching-faction replacement: Enabled
+– Nemesis messages: Enabled
+– Escape messages: Enabled
+– APBS progression integration: Enabled
+– ORBIT PMC-role preservation: Enabled
+– Exact-level fallback without APBS: Enabled
+– Compatibility logging: Enabled</li>
+</ul>
+<p>FIXED:</p>
+<ul>
+<li>Fixed Nemesis Network not appearing as a usable Messenger contact.</li>
+<li>Fixed Nemesis Network commands not being routed to the chatbot.</li>
+<li>Fixed the first rivalry message failing to reveal the Nemesis’s identity.</li>
+<li>Fixed individual rival messages appearing under the Nemesis Network name and level.</li>
+<li>Fixed false-negative ORBIT detection when ORBIT was installed under a parent-level BepInEx/plugins folder.</li>
+<li>Fixed the rival details command displaying: “Behavior Authority: SPT/Installed AI mods” after ORBIT had already been detected.</li>
+<li>Rival details now display the current ORBIT behavior-authority status immediately.</li>
+<li>Fixed stale build files occasionally being included in newly compiled packages.</li>
+<li>Fixed build verification incorrectly reporting that the Nemesis chatbot class was missing.</li>
+<li>Improved startup diagnostics for Messenger registration and compatibility detection.</li>
+</ul>
+<p>PROFILE COMPATIBILITY:</p>
+<ul>
+<li>Existing Nemesis progression is preserved.</li>
+<li>Existing rival names and identities are migrated automatically.</li>
+<li>Existing faction, level, rank, and health progression are preserved.</li>
+<li>Existing encounter history and statistics are preserved.</li>
+<li>Existing Messenger identities and conversations are preserved.</li>
+<li>Existing active-rival status is preserved.</li>
+<li>A profile reset is not required.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZTU0YmRmMWMwNmQ2YzhiNjAwZWFlZDNlM2UwNjc0NzU6MTc4NTE5MzAyNg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://raw.githubusercontent.com/ForgeHQ-Mods/NemesisProtocol/main/download/ForgeHQ-NemesisProtocol-v1.0.1.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-26T00:30:00.000000Z">26 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>596 downloads</span><span>33.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>This is the initial version of this mod, changes will be made later if needed.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2097/abps-acids-bot-placement-system/">ABPS - Acid&#39;s Bot Placement System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0101ca3747e640b8bfc4becc6ff9d6080f03d6e9beaaafb47de970b66e8b5dd7/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://raw.githubusercontent.com/ForgeHQ-Mods/NemesisProtocol/main/NemesisProtocol-v1.0.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.forgehq.nemesisprotocol</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ForgeHQ-Mods/NemesisProtocol/tree/main/src" target="_blank" rel="noreferrer noopener">https://github.com/ForgeHQ-Mods/NemesisProtocol/tree/main/src</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>This project used AI to clean up and format the coding to the industry standard, as I can generally code, but don’t tend to follow traditional formatting, aka I provide slop :)</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

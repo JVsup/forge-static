@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Tarkov Rare Collectibles · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Tarkov Rare Collectibles</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/c315c9f63e19f33bef361895dea44dd72724c76fc726a73c55b9cb11df488a6c.webp" alt="Tarkov Rare Collectibles thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Tarkov Rare Collectibles</h1>
+    <p class="hero-teaser">Make Loot Valuable Again! Adds 15 highly valuable and rare collectible items.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/717b9676a1b1959763d00986baba865d78ff1b14abbee5d0205d7dc683758b4d.webp" alt="" width="32" height="32">YellowDoge</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>34,951</dd></div>
+    <div><dt>Favourites</dt><dd>38</dd></div>
+    <div><dt>Mod lists</dt><dd>49</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Tarkov Rare Collectibles content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Do you remember the feeling of finding your first GPU? Do you still remember the excitement of discovering your first LEDX? Don’t you feel that looting in Tarkov nowadays has become a lot more boring? Only marked keys, Lab key cards, and maybe LEDX still give you enough adrenaline. This mod aims to fix that.</p>
+<p>Inspired by other extraction shooters like Arena Breakout: Infinite and Delta Force, <strong>Tarkov Rare Collectibles</strong> is a mod that adds rare collectible items to Escape from Tarkov. These items are highly valuable and extremely rare, often worth over 1 million rubles. Once you find them, you can sell them for a fortune or collect them in your Hall of Fame.</p>
+<hr>
+<h2>Item Properties</h2>
+<ul>
+<li><strong>RARE</strong></li>
+<li><strong>EXPENSIVE</strong></li>
+<li><strong>Banned from Flea</strong></li>
+<li><strong>ONLY select Trader buys them</strong></li>
+<li><strong>ONLY found in raid</strong></li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<ul>
+<li>SPT-4.0: Extract SPT/ folder to SPT root directory</li>
+<li>SPT-3.11: Extract user/ folder to SPT root directory</li>
+</ul>
+<hr>
+<div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">Adjust Loot Spawn Modifier</div>
+<div class="tab-content"><ol>
+<li>Find the config file:</li>
+</ol>
+<ul>
+<li>(SPT-4.0) Open SPT/user/mods/yellowdoge-tarkovrarecollectibles/config/config.json</li>
+<li>(SPT-3.11) Open user/mods/yellowdoge-tarkovrarecollectibles/config/config.json</li>
+</ul>
+<ol start="2">
+<li>
+<p>Adjust “staticLootMultiplier” to multiply the spawn rate for containers (value must be a number, or it will break the code). Adjust  “looseLootMultiplier” to multiply the spawn rate for items outside of containers.</p>
+</li>
+<li>
+<p>The final spawn rate is calculated as “defaultSpawnRate” x “LootMultiplier”. The defaultSpawnRate can be found on the other tabs.</p>
+</li>
+<li>
+<p>Details on Item Spawn:</p>
+</li>
+</ol>
+<ul>
+<li><strong>Spawn Rate</strong>: contains textual descriptions of where each item spawns</li>
+<li><strong>Loose Loot Spawn Locations</strong>: contains textual descriptions of each map’s loose loot spawns</li>
+<li><strong>Loose Loot Spawn Locations (Spoilers)</strong>: contains images of each spawn point for loose loot spawns</li>
+</ul></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">Spawn Rate</div>
+<div class="tab-content"><p>Static Loot spawn chance is per item spawned in each container</p>
+<h4>20-Carat Diamond:</h4>
+<ul>
+<li>0.05% ~ 0.3% spawn chance in Safes (3% in TerraGroup storage room Safe)</li>
+<li>LooseLoot: very rare on Labs Valuable spawn point</li>
+</ul>
+<h4>999.9 Gold Bar:</h4>
+<ul>
+<li>0.8% ~ 5% spawn chance in Safes (7.5% in TerraGroup storage room Safe)</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Gold Clock:</h4>
+<ul>
+<li>0.08% ~ 0.1% spawn chance in Sportbag, Toolbox, Technical supply crate, GroundCache, Suitcase on All maps</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Gold Statue:</h4>
+<ul>
+<li>0.08% ~ 0.1% spawn chance in Sportbag, Jacket, GroundCache, Suitcase on All maps</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Pack of Weed:</h4>
+<ul>
+<li>0.2% ~ 1% spawn chance in Medbag, Jacket, GroundCache, Dead NPC on All maps</li>
+<li>LooseLoot: spawns in the drug lab on Lighthouse and Streets</li>
+</ul>
+<h4>Mona Lisa Replica:</h4>
+<ul>
+<li>2.5% spawn chance in GroundCache on All maps that has GroundCache</li>
+<li>LooseLoot: spawns in Tarcone director’s office, Beluga restaurant office, “Dostoevski” restaurant, Pikes Peak resort</li>
+</ul>
+<h4>Antique Flintlock Replica:</h4>
+<ul>
+<li>0.5% spawn chance in Weapon Crates on Customs/Interchange/Lighthouse/Shoreline/Streets/Woods</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Military Recon Drone:</h4>
+<ul>
+<li>0.5% ~ 0.8% spawn chance in all wooden supply crate on Customs/Lighthouse/Reserve/Shoreline/Woods</li>
+<li>LooseLoot: spawns on various map’s Military spawn point</li>
+</ul>
+<h4>Military Missile:</h4>
+<ul>
+<li>0.2% ~ 0.8% spawn chance in Weapon Crates on Customs/Labs/Lighthouse/Reserve/Woods</li>
+<li>LooseLoot: spawns on various map’s Military spawn point</li>
+</ul>
+<h4>Premium Champagne:</h4>
+<ul>
+<li>0.05% ~ 1% spawn chance in Sportbag, Dead NPC, Suitcase on GroundZero</li>
+<li>LooseLoot: 6 spawns on GroundZero (3 in the winery) and small chance on Labs and Streets’ Valuable spawn point</li>
+</ul>
+<h4>TerraGroup Labs Emergency Power Cell:</h4>
+<ul>
+<li>LooseLoot: ONLY spawns as loose loot in Labs (most spawn points are in the Technical Level)</li>
+</ul>
+<h4>Golden Deer Skull:</h4>
+<ul>
+<li>LooseLoot: ONLY spawns in cultist circles (low chance on exposed ones, higher chance in marked rooms)</li>
+</ul>
+<h4>Gold Lion Figurine:</h4>
+<ul>
+<li>0.2% ~ 1.25% spawn chance in Safes (5% in TerraGroup storage room Safe)</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Antique Gramophone:</h4>
+<ul>
+<li>0.08% ~ 0.1% spawn chance in Sportbag, Drawer, GroundCache, Suitcase on All maps</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul>
+<h4>Dragon Figurine:</h4>
+<ul>
+<li>0.08% ~ 0.1% spawn chance in Sportbag, Drawer, GroundCache, Suitcase on All maps</li>
+<li>LooseLoot: spawns on various map’s Valuable spawn point</li>
+</ul></div></div>
+<div id="tabset-2-panel-3" class="tab-panel"><div class="tab-title">Loose Loot Spawn Locations</div>
+<div class="tab-content"><p>Loose Loot spawn chance is per spawn point per raid</p>
+<h4>Customs</h4>
+<ul>
+<li>4% ~ 5% Missile/Drone spawns in the 2 USEC stash and fortress</li>
+<li>4% Monalisa spawns in Tarcone director’s office</li>
+<li>8% Valuable (GoldStatue/Flintlock/Gramophone/WoodDragon) spawns in Tarcone director’s office and gas station office</li>
+<li>8% Gold Deer Skull spawns in market room</li>
+</ul>
+<h4>Woods</h4>
+<ul>
+<li>5% Missile/Drone spawns in the military camp and USEC camp</li>
+<li>7% Valuable (GoldStatue/Flintlock/Gramophone/WoodDragon) spawns in SCAV camps and sniper mountain bunker</li>
+<li>1% Gold Deer Skull spawns in 2 cultist circles and the new bunker cultist circle</li>
+</ul>
+<h4>Interchange</h4>
+<ul>
+<li>10% Drone spawns on the shelf in OLI and IDEA as well as Tech Shops</li>
+</ul>
+<h4>Reserve</h4>
+<ul>
+<li>10% Missile spawns in the helicopter, inside locked room in garage, on top of train station, and next to the armored vehicle outside E1/E2 bunkers</li>
+<li>5% Gold Deer Skull spawns in market rooms</li>
+</ul>
+<h4>Shoreline</h4>
+<ul>
+<li>8% Valuable (GoldBar/GoldClock/GoldStatue/GoldLion) spawns in resort admin and gas station</li>
+<li>6% Valuable (GoldStatue/Flintlock/Gramophone/WoodDragon) spawns in unlocked cottage, weather station and cabin near car extract</li>
+<li>1% Gold Deer Skull spawns in 2 cultist circles</li>
+</ul>
+<h4>Lighthouse</h4>
+<ul>
+<li>20% Weed spawns in drug lab</li>
+<li>4% Champagne spawns in Pikes Peak resort wine locker</li>
+<li>3% Monalisa spawns on Pikes Peak resort bedroom table</li>
+<li>8% Valuable (GoldBar/GoldClock/Gramophone/WoodDragon) spawns in room opposite to Pikes Peak resort and grand chalet billards room</li>
+<li>5% Missile/Drone spawns in grand chalet and the Rogue camp tents</li>
+<li>3% Gold Deer Skull spawns marked room</li>
+</ul>
+<h4>Labs</h4>
+<ul>
+<li>3% Drone spawns various places</li>
+<li>8% Power Cell spawns various places (mostly in the Technical level)</li>
+<li>10% Valuable (ALL valuables are possible including the diamond) spawns various places</li>
+</ul>
+<h4>Streets</h4>
+<ul>
+<li>20% Weed spawns in drug lab</li>
+<li>4% Monalisa spawns in Beluga restaurant office and “Dostoevski” restaurant’s cultist sacrifice location</li>
+<li>8% Valuable (ALL valuables are possible except the diamond) spawns in grocery store office, real estate office, relaxation room, pinewood hotel restaurant, TerraGroup office</li>
+<li>1% Gold Deer Skull spawns “Dostoevski” restaurant’s cultist circle</li>
+<li>5% Gold Deer Skull spawns marked rooms</li>
+</ul>
+<h4>GroundZero</h4>
+<ul>
+<li>6%(Lv.1)/10%(Lv.21+) Champagn spawns in Capital Insight meeting room, Fusion bar, TerraGroup kitchen, and 3 spawns in Winery</li>
+</ul></div></div>
+<div id="tabset-2-panel-4" class="tab-panel"><div class="tab-title">Loose Loot Spawn Locations (Spoilers)</div>
+<div class="tab-content"><h4>Customs</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/d1837894d33e045ef25812f64e9f97e2452c467eaf909abcdb3af23805d59901.webp" alt="customs_military_0">
+<img loading="lazy" decoding="async" src="../../../assets/d953bf3b9616423c018e0db6b956f63a4a6a8388493762356f70818eefb12ecf.webp" alt="customs_military_1">
+<img loading="lazy" decoding="async" src="../../../assets/191cd35377fa517f4b0a809ba467ffa15de419086419f55d99d22c8ca0c2744a.webp" alt="customs_monalisa">
+<img loading="lazy" decoding="async" src="../../../assets/9c39c01613f00f625082ffb1be50352a46ddf61f4f8f36779ef8102991f0357c.webp" alt="customs_valuable_0">
+<img loading="lazy" decoding="async" src="../../../assets/ebf87fd979847f3f28c1448fe0b170782cd248d7a56bb2f8bd2f539173272368.webp" alt="customs_valuable_1">
+<img loading="lazy" decoding="async" src="../../../assets/27a63e809ff3049fef57b7acbdf460111c19448195617c783a6d654283c2dcd3.webp" alt="customs_deer"></p>
+<h4>Woods</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/41c5cbad2434dcd0a5e87d3f03437ae92ba5d3e79baa21a725f1e60d360c2963.webp" alt="woods_military_0">
+<img loading="lazy" decoding="async" src="../../../assets/9a273ff25a8ed6e9e299cbf9c65edb66d24cd74cb59412173d553a55c6081420.webp" alt="woods_military_1">
+<img loading="lazy" decoding="async" src="../../../assets/59292636519f54a35414d0cad10004bf243de1d5ac72eb0c864cc6a110783766.webp" alt="woods_valuable_0">
+<img loading="lazy" decoding="async" src="../../../assets/86c8dae9e711737c2ebf9d53be82d1bfdfbba55b10774108eac273e9a7c8821f.webp" alt="woods_valuable_1">
+<img loading="lazy" decoding="async" src="../../../assets/63f22d7d5d85839033d0c1af43a2d0a25e24767e8516144d07441fb33097654e.webp" alt="woods_valuable_2">
+<img loading="lazy" decoding="async" src="../../../assets/b1f23b4f5e7fe1c40e38f1b25dcdd8dca457bbc01ede85621cf1d541dbd4e12d.webp" alt="woods_deer_0">
+<img loading="lazy" decoding="async" src="../../../assets/3c24925c661ec9eedef2814796e4b6f087ba647f8f3636365ed5d3a1474bfde4.webp" alt="woods_deer_1">
+<img loading="lazy" decoding="async" src="../../../assets/0ed03c94c44df83bdc1c4daff9ae9327033510096e831f41205f506a6594ef92.webp" alt="woods_deer_2"></p>
+<h4>Interchange</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/7e939de90eb3c4be32273d7d3ca90619242ede16ca87c974d8099e4a6fc5b9f1.webp" alt="interchange_drone_0">
+<img loading="lazy" decoding="async" src="../../../assets/1d56c59ab812c2fd21ed0da5a64305821b82fb7ca11889b6fa88fc8edf12cf8c.webp" alt="interchange_drone_1">
+<img loading="lazy" decoding="async" src="../../../assets/b96e1197a561fcada3b16ebc15982ccf68186071f1d17ba59f940e09b0bdd6b1.webp" alt="interchange_drone_2">
+<img loading="lazy" decoding="async" src="../../../assets/c84923ae08a6ce4babfeebf5725d94ebd4abb7ad73e00b3dcd39808a1fe2a32a.webp" alt="interchange_drone_3">
+<img loading="lazy" decoding="async" src="../../../assets/103efc27bdb3af18303476146808cf4491da6d19155ac6d018925dc07348ea57.webp" alt="interchange_drone_4">
+<img loading="lazy" decoding="async" src="../../../assets/b388a38f91fc82966d357f59eccb74203adda6f4609bf8cb428c560cebd53e2b.webp" alt="interchange_drone_5"></p>
+<h4>Reserve</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/08a5a2dbc7b3a90a76a4bdbad650dce45c971ec831dab722155130a509b059e6.webp" alt="reserve_missile_0">
+<img loading="lazy" decoding="async" src="../../../assets/e8cee875ce595c968c9071cda06b74214425b1fdd3390a576007e52c6621fbc5.webp" alt="reserve_missile_1">
+<img loading="lazy" decoding="async" src="../../../assets/76ba4d2dd1244fcfd86ec23537ebf1e4c52163f1dc6167455938dc3058ccd9fd.webp" alt="reserve_missile_2">
+<img loading="lazy" decoding="async" src="../../../assets/72d531a4287a5068e2c7cb210bf555e6296132ddcb88f4c6dfd7d8a033959c6d.webp" alt="reserve_missile_3">
+<img loading="lazy" decoding="async" src="../../../assets/5b8d1a3c70812f612ee873a383a32dc90bbda52db288dfb436a21ffcc00bef4a.webp" alt="reserve_missile_4">
+<img loading="lazy" decoding="async" src="../../../assets/d15c49577e83583f3394d3cd8cc6954db268774feb11ba1981baa9dc8caa57ce.webp" alt="reserve_missile_5">
+<img loading="lazy" decoding="async" src="../../../assets/11b11da124bab32d4c314669be5ef55148b48d1d0f697c484c9cd7259e0c6238.webp" alt="reserve_deer_0">
+<img loading="lazy" decoding="async" src="../../../assets/3bc2d383cc4a5e6d14c32007187142f6d9c21fd0c8423d7a2ca662ddab296b01.webp" alt="reserve_deer_1">
+<img loading="lazy" decoding="async" src="../../../assets/8a2a7fc3092137489b64516b93e7c3efcf5adb285d9878b5b37616725f9a8b3f.webp" alt="reserve_deer_2"></p>
+<h4>Shoreline</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/ab56be4d2628647ba99f08d3a3a5803649a170065855a098b4bf67084d2432fd.webp" alt="shoreline_valuable2_0">
+<img loading="lazy" decoding="async" src="../../../assets/a256f5ba8520b161a3df7b750d528adc2c4927f4a3a227c7433eecc3f3ddaab3.webp" alt="shoreline_valuable2_1">
+<img loading="lazy" decoding="async" src="../../../assets/b87de84b57890afcc5639de1a41afb06285fe7f69be084aa4829eb65b5f0c926.webp" alt="shoreline_valuable1_0">
+<img loading="lazy" decoding="async" src="../../../assets/892635b043729072ef6612e636579e8dc9aa53a9aaf8827c57b14fcd195bea2a.webp" alt="shoreline_valuable1_1">
+<img loading="lazy" decoding="async" src="../../../assets/f9ff29cdf3c690854569f704ed45105c6bb86b70b8b8ca03af8a5709985d8d05.webp" alt="shoreline_valuable1_2">
+<img loading="lazy" decoding="async" src="../../../assets/ef1ac61ece265e8e24e9dfdaf07371cc38a0efabdeeccd71d361557c80f900e6.webp" alt="shoreline_deer_0">
+<img loading="lazy" decoding="async" src="../../../assets/ec49faea00afcc957b292e9eeff88bf1889d2cdd904a9b78881f8ef72afcd380.webp" alt="shoreline_deer_1"></p>
+<h4>Lighthouse</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/96f9228805da11e357ee717e60f161668a55c543b10c75a4b2ca665ed0697af1.webp" alt="lighthouse_weed_0">
+<img loading="lazy" decoding="async" src="../../../assets/107c2283d5208757650fae57efe868af8bc51e97f17761c8f4cd67a059f1d0ed.webp" alt="lighthouse_weed_1">
+<img loading="lazy" decoding="async" src="../../../assets/e3c1f51b935ab075e71a20beb091d83bcc414557cf294265487942d05fa97a27.webp" alt="lighthouse_champagne">
+<img loading="lazy" decoding="async" src="../../../assets/9403340604e22b5137b26f2862a9f52ea6fce3192350bc176a3a0d566ee7436b.webp" alt="lighthouse_monalisa">
+<img loading="lazy" decoding="async" src="../../../assets/47af2c8e1b9d69a5efe88a690a0c432ac7491cc1b852f48f137ae7fee71149a6.webp" alt="lighthouse_valuable_0">
+<img loading="lazy" decoding="async" src="../../../assets/ea101571d03134fb9ef16e083cec733231a0fb9f11691f6f7cd36cfe29d34e5d.webp" alt="lighthouse_valuable_1">
+<img loading="lazy" decoding="async" src="../../../assets/e21fc859e1fea453b547ab9d1d0cbf2319a18977bbfb337ad5b3a99a45c72713.webp" alt="lighthouse_military_0">
+<img loading="lazy" decoding="async" src="../../../assets/03ec86351821542721abda297d9a1042f4e78893e2a89dc6361bf77224b9039f.webp" alt="lighthouse_military_1">
+<img loading="lazy" decoding="async" src="../../../assets/727b63866a0322b6e10e376e8e5c1c6b8cb1ac504e24ef9ff801ff235b22c335.webp" alt="lighthouse_military_2">
+<img loading="lazy" decoding="async" src="../../../assets/0cc46eeb8fd7921508bcbcf151b9e6e55bd0e5f51f8ec43045e84d08375e6a93.webp" alt="lighthouse_deer"></p>
+<h4>Streets</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/1ad23627e796c62b03643660c3bbfc7a8dbf61189b623a577310a1f9fe137184.webp" alt="streets_weed_0">
+<img loading="lazy" decoding="async" src="../../../assets/e5a4150838227c6f7d35e89b71c574f129dfec39c62277486376a372a17e4481.webp" alt="streets_weed_1">
+<img loading="lazy" decoding="async" src="../../../assets/c35f51471f6db80b3958aff22ba20fee0b6bbb7afb35ea01104bb347820048cb.webp" alt="streets_monalisa_0">
+<img loading="lazy" decoding="async" src="../../../assets/b19e37470a3ec6d317394e05d5598b710b536f278105df0b02856238b4b8f83d.webp" alt="streets_monalisa_1">
+<img loading="lazy" decoding="async" src="../../../assets/72736d147db0d9acf926ab837dec852cb74e720deb366590e455ad461a7cc82d.webp" alt="streets_valuable_0">
+<img loading="lazy" decoding="async" src="../../../assets/5ff228fa8adefac83d913d1be3ae6b9b4f34d9b0e4270ecbe6f6c560799dadf6.webp" alt="streets_valuable_1">
+<img loading="lazy" decoding="async" src="../../../assets/656890cdc9f4b2d3dc1a5af3d8ceec948e5ee963d9f557865416b7bda622f792.webp" alt="streets_valuable_2">
+<img loading="lazy" decoding="async" src="../../../assets/fd1ed6573ce138255781e2eabd6824656f122ba3a97c28cb046d829588b918d0.webp" alt="streets_valuable_3">
+<img loading="lazy" decoding="async" src="../../../assets/7b177125a30349ed064af9c7647a66d105f43ffd2ed3cb65ab176f5591e0503d.webp" alt="streets_valuable_4">
+<img loading="lazy" decoding="async" src="../../../assets/a8e813101edae22940c4f5106e50cc3755e1cded44ec2a64f0f04ad48ed35e9f.webp" alt="streets_deer_0">
+<img loading="lazy" decoding="async" src="../../../assets/a884c2bb93f14d4bc549a91f88f05435919c14cd959751ef5d7f37bf1cce1593.webp" alt="streets_deer_1">
+<img loading="lazy" decoding="async" src="../../../assets/0983ea3695c0be6ebacce68267df72db48dd948dea94312c106f386c09ebc986.webp" alt="streets_deer_2"></p>
+<h4>GroundZero</h4>
+<p><img loading="lazy" decoding="async" src="../../../assets/d27a3852767019037ce2147497ef3271cc82c666626896c4acaad171a9567ba3.webp" alt="groundzero_champagne_0">
+<img loading="lazy" decoding="async" src="../../../assets/0506d5b00e9f4d92061b7e544e1c213c20e7f6b2b00f569fb21c83c09fa638c7.webp" alt="groundzero_champagne_1">
+<img loading="lazy" decoding="async" src="../../../assets/ac3496f390b3a2f2285047adee9449152d1121c89866028016a140ed213c9edb.webp" alt="groundzero_champagne_2">
+<img loading="lazy" decoding="async" src="../../../assets/348cc289257cf67a99509728144384e93b43d0b58bb4c4a2985a26d08d40e60b.webp" alt="groundzero_champagne_3">
+<img loading="lazy" decoding="async" src="../../../assets/62229d770e374dcbfd6e387dc38a4df8f2a9663b74984addecff87337c9ae432.webp" alt="groundzero_champagne_4">
+<img loading="lazy" decoding="async" src="../../../assets/ceb5fe54cc8b818d2d41e5eaa11e2e54ac55186bd7387c790d4a72ed790140d5.webp" alt="groundzero_champagne_5"></p></div></div></div>
+<hr>
+<h2>Licence &amp; Credits</h2>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Licence</div>
+<div class="tab-content"><p>MIT License</p>
+<p>Copyright (c) 2025 TheYellowDoge</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Models Credits</div>
+<div class="tab-content"><ul>
+<li>“Diamond” (<a target="_blank" class="external-link" href="https://skfb.ly/6VQn8" rel="noreferrer noopener">https://skfb.ly/6VQn8</a>) by RBG_illustrations is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Gold Bar Single” (<a target="_blank" class="external-link" href="https://skfb.ly/oTGqw" rel="noreferrer noopener">https://skfb.ly/oTGqw</a>) by ArpitSaini_003 is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Futuristic Smart Power Cell Box Game Ready Props” (<a target="_blank" class="external-link" href="https://skfb.ly/oQXuU" rel="noreferrer noopener">https://skfb.ly/oQXuU</a>) by aleksfotoart is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Flintlock” (<a target="_blank" class="external-link" href="https://skfb.ly/6CG7C" rel="noreferrer noopener">https://skfb.ly/6CG7C</a>) by fly4xy is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Mona Lisa (PBR hires model)” (<a target="_blank" class="external-link" href="https://skfb.ly/6TC79" rel="noreferrer noopener">https://skfb.ly/6TC79</a>) by SebastianSosnowski is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Weed Brick” (<a target="_blank" class="external-link" href="https://skfb.ly/ppFCw" rel="noreferrer noopener">https://skfb.ly/ppFCw</a>) by streetpharmacy is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Eachine E58 Pocket Drone - Game Ready Asset” (<a target="_blank" class="external-link" href="https://skfb.ly/orIx8" rel="noreferrer noopener">https://skfb.ly/orIx8</a>) by the_Thorminator is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Table Clock” (<a target="_blank" class="external-link" href="https://skfb.ly/6WQHw" rel="noreferrer noopener">https://skfb.ly/6WQHw</a>) by Mikhail Kadilnikov is licensed under Creative Commons Attribution-ShareAlike (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by-sa/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by-sa/4.0/</a>).</li>
+<li>“stag lowpoly deer skull” (<a target="_blank" class="external-link" href="https://skfb.ly/oMMV9" rel="noreferrer noopener">https://skfb.ly/oMMV9</a>) by Young is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“HOXXOH GOLD GOLD” (<a target="_blank" class="external-link" href="https://skfb.ly/otyLY" rel="noreferrer noopener">https://skfb.ly/otyLY</a>) by GregoirePopineau is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Art Deco Statue” (<a target="_blank" class="external-link" href="https://skfb.ly/6BVHO" rel="noreferrer noopener">https://skfb.ly/6BVHO</a>) by Grell is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Missile &amp; Bomb Collection - Fighter Jets - Free” (<a target="_blank" class="external-link" href="https://skfb.ly/oJECB" rel="noreferrer noopener">https://skfb.ly/oJECB</a>) by bohmerang is licensed under CC Attribution-NonCommercial-ShareAlike (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>).</li>
+<li>“BakeMyScan - baking example” (<a target="_blank" class="external-link" href="https://skfb.ly/6CJuM" rel="noreferrer noopener">https://skfb.ly/6CJuM</a>) by Loïc Norgeot is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Vintage Gramophone” (<a target="_blank" class="external-link" href="https://skfb.ly/6SFI6" rel="noreferrer noopener">https://skfb.ly/6SFI6</a>) by Maxim Mavrichev is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+<li>“Dragon statuette” (<a target="_blank" class="external-link" href="https://skfb.ly/6xPTG" rel="noreferrer noopener">https://skfb.ly/6xPTG</a>) by Loïc Norgeot is licensed under Creative Commons Attribution (<a target="_blank" class="external-link" href="http://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener">http://creativecommons.org/licenses/by/4.0/</a>).</li>
+</ul></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.5</h2></div><time datetime="2025-10-19T09:18:00.000000Z">19 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>28,510 downloads</span><span>72.9 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Update to SPT 4.0</li>
+<li>Slightly adjust Item prices</li>
+<li>The spawn rate should (?) be the same as the previous version, but not 100% sure, as this is SPT 4.0 and I didn’t have time to test it thoroughly</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/267e40f6e80ba53aedbba241e72a2791049fd15cdd8d565badc0576d3762b245" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://raw.githubusercontent.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/refs/heads/main/distribution/YellowDoge-TarkovRareCollectibles-1.1.5.7z" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.5</h2></div><time datetime="2025-10-13T23:37:00.000000Z">13 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,706 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added 3 more items</li>
+<li>Rebalanced Spawn Rates, Added Loose Loot spawns everywhere, details in mod description</li>
+<li>(working on 4.0 now)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ODMyNjkxN2JlNDE3NjM0MDE4ZjljNjZhNzY1YzY3MTQ6MTc2MDM5ODYzNA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://raw.githubusercontent.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/refs/heads/main/distribution/YellowDoge-TarkovRareCollectibles-1.0.5.7z" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.4</h2></div><time datetime="2025-09-28T03:12:00.000000Z">28 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,684 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h1>Version 1.0.4 update</h1>
+<ul>
+<li>bugfix: fixed items not appearing in handbook (which means mods like ALL THE LOOT REDUX should work with this mod now)</li>
+<li>added loose loot spawn for certain items, like the TerraGroup Labs Emergency Power Cell and Gold Deer Skull</li>
+<li>added French and Chinese locale, because those are the languages I know</li>
+<li>added “Lore” to the items (was gonna make quests, but since these items are way too rare, it feels weird to make you hand them in to complete the quest)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OWM4N2FkYjIzOWNiYWRiZGM2YTFhNjlkODAwZWZjODc6MTc1OTAyOTUwMA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2025-09-21T17:09:44.000000Z">21 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,258 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>- Increased spawn rate for most items except Diamond</p>
+<p>- added static spawn for Power Cell in Labs, Deer Skull still does not spawn (it’s planned to spawn in marked rooms)</p>
+<p>- added a config file to allow adjusting the spawn multiplier for the items<br>
+- There will not be any more updates until I add more items or loose loot spawns</p>
+<p>**HIGHLY RECOMMENDED TO UPDATE TO THIS VERSION**</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/305db1ce81517a20097bc32478987bed664e914f38ab64dfe4250d58678510aa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2025-09-21T04:38:09.000000Z">21 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>434 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>- Updated Gold Items’ color to be darker and less “Yellow”</p>
+<p>- Slightly tuned the static spawn</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/305db1ce81517a20097bc32478987bed664e914f38ab64dfe4250d58678510aa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-09-20T23:27:56.000000Z">20 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>256 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Update the download link to be a direct download.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/305db1ce81517a20097bc32478987bed664e914f38ab64dfe4250d58678510aa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-09-20T22:50:57.000000Z">20 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>103 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/305db1ce81517a20097bc32478987bed664e914f38ab64dfe4250d58678510aa?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.yellowdoge.tarkovrarecollectibles</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>13 October 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main" target="_blank" rel="noreferrer noopener">https://github.com/TheYellowDoge/YellowDoge-TarkovRareCollectibles/tree/main</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

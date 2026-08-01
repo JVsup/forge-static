@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>NARCONet - Mod Sync · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>NARCONet - Mod Sync</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/3d61a9f827816690f0535b7e522804e7fa366403cf73a57a310ee22f054f9191.webp" alt="NARCONet - Mod Sync thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>NARCONet - Mod Sync</h1>
+    <p class="hero-teaser">One Connection. Every Mod. Every Setting. More Reliable than your dealer.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">madmanbeavis</span>
+      <span class="author"><img src="../../../assets/a7839a94ffbaf871a9b4cbf5f3d1aa1a671c43164d61618aac5ec6309c3df8f2.webp" alt="" width="32" height="32">flir</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>10,530</dd></div>
+    <div><dt>Favourites</dt><dd>19</dd></div>
+    <div><dt>Mod lists</dt><dd>51</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="NARCONet - Mod Sync content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3>Security Notice:</h3>
+<blockquote>
+<p>For those downloading mods from a server. Please read the listing of the files that are being downloaded. Practice good cybersecurity and read before accepting updates.</p>
+</blockquote>
+<h2>Flir maintenance</h2>
+<p>I (flir) have take maintenance over from Beavis. I updated many things to squash a lot of bugs and race conditions. This mean YOU (the player) will need to remove all traces of the old versions (dlls in the BepInEx folder but also in the root of your game dir) before installing the new versions. If you do not follow this you’ll get strange errors: “Could not load MadManBeavis’s NarcoNet due to error hashing local files: Could not resolve type with token 01000097 from typeref (expected class ‘NarcoNet.Utilities.FileHash’ in assembly ‘NarcoNet.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null’)”</p>
+<p>This error is because of a stale NarcoNet.Utilities.FileHash.dll somewhere in your tarkov installation.</p>
+<p>This operation is only needed once, during your first installation of my releases (v1.0.16 at the moment of writing). You will normally not need to do it each time.</p>
+<h2>What is NarcoNet?</h2>
+<p>NarcoNet is a powerful synchronization framework for SPT that automatically keeps all clients perfectly in sync with your server’s mod setup. No more manual file copying, no more “why isn’t this working?”, and no more mismatched versions causing mysterious bugs.</p>
+<p>When a player connects to your server, NarcoNet automatically:</p>
+<ul>
+<li><strong>Detects</strong> what mods and configs are missing or outdated</li>
+<li><strong>Downloads</strong> required files directly from the server</li>
+<li><strong>Removes</strong> incompatible or outdated mods</li>
+<li><strong>Restarts</strong> the game (if needed) to apply changes seamlessly</li>
+</ul>
+<p>It’s like having a personal dealer who always delivers exactly what you need, when you need it.</p>
+<hr>
+<h2>Key Features</h2>
+<h3>Automatic File Synchronization</h3>
+<ul>
+<li><strong>Smart Change Detection</strong> - Uses a Git-like changelog system to track file additions, modifications, and deletions</li>
+<li><strong>Incremental Updates</strong> - Only downloads what changed since last sync (no re-downloading everything)</li>
+<li><strong>Fallback Support</strong> - Automatically falls back to full hash comparison if incremental sync fails</li>
+<li><strong>Real-time Progress</strong> - Clean progress UI shows exactly what’s being synced</li>
+</ul>
+<h3>Configurable Sync Paths</h3>
+<ul>
+<li><strong>Server-Side Mods</strong> - Sync your SPT server mods automatically</li>
+<li><strong>Client-Side Mods</strong> - Keep BepInEx plugins, patchers, and configs in sync</li>
+<li><strong>Custom Paths</strong> - Add any directory you want to synchronize</li>
+<li><strong>Exclusion Patterns</strong> - Use glob patterns to exclude specific files or directories</li>
+<li><strong>Per-Path Control</strong> - Set paths as optional, enforced, silent, or restart-required</li>
+</ul>
+<h3>Intelligent Update System</h3>
+<ul>
+<li><strong>Live Updates</strong> - Non-restart-required mods apply instantly (like config changes)</li>
+<li><strong>Restart Management</strong> - Core mods trigger automatic game restart with updater exe</li>
+<li><strong>Integrity Checking</strong> - Fast file hashing ensures nothing gets corrupted</li>
+</ul>
+<h3>Zero-Configuration Client Experience</h3>
+<ul>
+<li><strong>Just Connect</strong> - Clients simply join the server, NarcoNet handles the rest</li>
+<li><strong>Update Prompts</strong> - Clean UI shows what will be synced before proceeding</li>
+<li><strong>Optional vs Required</strong> - Server can mark certain paths as optional for client choice</li>
+<li><strong>Silent Mode</strong> - Server can push updates silently without user prompts</li>
+</ul>
+<h3>Server-Side Control</h3>
+<ul>
+<li><strong>YAML Configuration</strong> - Easy-to-edit config file for all settings</li>
+<li><strong>Version Migration</strong> - Automatic config upgrades between NarcoNet versions</li>
+<li><strong>Flexible Enforcement</strong> - Choose which paths are mandatory vs optional</li>
+<li><strong>Startup Change Detection</strong> - Detects all file changes since last server startup</li>
+</ul>
+<hr>
+<h2>How It Works</h2>
+<h3>Server</h3>
+<ol>
+<li>On startup, NarcoNet scans configured sync paths and detects changes since last run</li>
+<li>Builds a changelog of all files</li>
+<li>Exposes HTTP endpoints for clients to query current state and download files</li>
+<li>Serves files directly from the SPT server installation</li>
+</ol>
+<h3>Client</h3>
+<ol>
+<li>On game launch, connects to server and checks current hashes</li>
+<li>client does full hash comparison</li>
+<li>Downloads required files with progress tracking</li>
+<li>For non-restart paths: applies changes immediately</li>
+<li>For restart-required paths: rename in-use files to another name (.narconet_old)  and places new files in their place then asks user to restart the game</li>
+<li>Upon restart narconet will cleanup all files with the (.narconet_old) extension as they are remnant of renamed files that could not be deleted/replaced when in use.</li>
+</ol>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.16</h2></div><time datetime="2026-04-10T13:30:00.000000Z">10 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,724 downloads</span><span>206.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>[1.0.16] - 2026/04/10</h2>
+<ul>
+<li>ADD: more exclusions for the headless client in the exclusion templates</li>
+<li>ADD: more server exclusions to avoid removing client generated files (those
+are added in the template and will be create in the config file if you start
+your server without a config file)</li>
+</ul>
+<h2>[1.0.15] - 2026/04/06</h2>
+<ul>
+<li>FIX: a potential leak when some hashing errors occur because we did not
+catch the errors</li>
+<li>FIX: a potential issue with reactivating UI elements “blindly” (each frame)
+even it the game was trying to perform a transition and thus hiding our UI
+elements.</li>
+<li>FIX: in case a hashing error occurs, report it to the game error system and
+signal the plugin as “finished loading”.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url-analysis/u-b0a7de238cff624c303e7330ba5cc322d7932f44f4f4d9729f0bf470a7c6d7ca-40f2e3af" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/80043430/packages/generic/narconet/1.0.16/NarcoNet-v1.0.16.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.14</h2></div><time datetime="2026-03-31T08:53:00.000000Z">31 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>487 downloads</span><span>205.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>fix config file unzerialization error (bad template)</p>
+<p>SKIP  v1.0.13 and directly use v1.0.14</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/bde5a1e52c668df052deb2c2b742e45c956f272d5e8015e7ffc2a81ef74b1d44?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/80043430/packages/generic/narconet/1.0.14/NarcoNet-v1.0.14.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.13</h2></div><time datetime="2026-03-29T20:40:00.000000Z">29 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>138 downloads</span><span>205.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>[1.0.13] - 2026/03/10</p>
+<ul>
+<li>CHANGE: fix a subtle bug that could occur with overlapping sync paths and triggered a bad dedup bug on the client only, ending in removing the files because the server only had the files in the narrower sync path</li>
+<li>CHANGED: use sha256 for file hashing dropping old custom algos: less tricky code to maintain and less possible collision. A tad smaller but way safer.</li>
+</ul>
+<p>[1.0.12] - 2026/03/10</p>
+<ul>
+<li>CHANGED: handle leftover empty dir deletion in one pass without restart</li>
+<li>CHANGED: added support for the rename strat for Win10 clients (not the same exception as windows 11)</li>
+<li>CHANGED: added support on client to delete folders when needed</li>
+<li>CHANGED: Added support for server sending empty folders to avoid clients deleting them (AmandsSense/sounds)</li>
+<li>CHANGED: Now all paths start from gameroot, no more “../” and “user” is now reached as “SPT/user”. A migration path updated the server config and for the client Exclusions.json file</li>
+<li>CHANGED: addressed potential threading issues by using volatiles for safety</li>
+<li>CHANGED: correct catch for potential exceptions to avoid letting download timeout slip through</li>
+<li>CHANGED: normalize the path separator to / everywhere for easier cross plateform support</li>
+<li>CHANGED: Use same regex/glob implementation on client and server (common lib)</li>
+<li>CHANGED: Removed the file sampling for big files in favor or full size hash slower but more accurate. Reliability first…</li>
+<li>CHANGE: remove file filtering in http listener (redundant)</li>
+<li>CHANGED: use constants everywhere instead of hard coded strings</li>
+<li>CHANGED: remove the migrator system (legacy) and its support file Version.txt</li>
+<li>CHANGED: remove the old RemovedFiles.json mechanism, not needed anymore since we now have a rename then delete special extension files on startup</li>
+<li>CHANGED: remove the client’s previous-state tracking file, that was only used for conserving client side server-deleted files. This mechanism is possible using the Exclusion.jons file on the client. It will only work if the deleted file is not in an enforced path (which is the desired outcome). This change makes the code slimer and easier to maintain.</li>
+</ul>
+<p>[1.0.11] - 2026/03/09</p>
+<ul>
+<li>Fixed a bug where client default exclusions for headless would be applied on any client thus making DynamicMaps (and some others) impossible to sync from server…</li>
+<li>Removed incremental sync altogether, too brittle too little perf gains</li>
+</ul>
+<p>[1.0.10] - 2026/03/08</p>
+<ul>
+<li>Long story short: dotnet9 exes don’t run on wine headless docker so we removed the updater and replaced its use by a simpler strategy, when a file is locked (in use) we rename it and the put the new one in place with the correct name, then on each startup we remove old renamed files which are not used anymore… This strategy works on Windows AND in the docker headless. And it also removes the need for a specific exe + a manifest file: Simpler is better :p</li>
+<li>FIXED: use gameroot for all file operations instead of GetCurrentDir</li>
+<li>CHANGED: normalized all paths so Linux clients work</li>
+</ul>
+<p>[1.0.9] - 2026/03/07</p>
+<ul>
+<li>FIXED: use a shared HttpClient to avoid the overhead between small files</li>
+<li>ADDED: GZip compression</li>
+<li>CHANGED: 64 KB FileStream buffer instead of 4 KB for less IO overhead on the server</li>
+<li>FIXED: Normalized path management to avoid Linux clients (headless or other) to redownload all files because of “different path”.</li>
+</ul>
+<p>[1.0.8] - 2026/03/07</p>
+<ul>
+<li>ADDED: a file progress bar to see bytes flowing and make sure something is being transfered.</li>
+<li>CHANGED: exclusion patterns to allow writing dir as “dir/” omitting the “**” at the end.</li>
+</ul>
+<p>[1.0.7] - 2026/03/07</p>
+<ul>
+<li>FIXED: headless openend exclusion file and locked it while running.</li>
+<li>FIXED: headless reformatted exclusion file when it should only read it.</li>
+<li>FIXED: client had a fixed timeout even if data was flowing thus being unable to successfully download big files (hollywoodfx 1.2Gb)</li>
+</ul>
+<p>[1.0.6] - 2026/03/07</p>
+<ul>
+<li>CHANGED: Added a FileSystemWatcher to pickup file changes while server is running. This allows admins to upload client-only plugins and just restart clients without a need to restart server.</li>
+<li>FIXED: in incremental sync, clients now skip download if local file already has the correct hash this occurred when a file was present on client before server added it</li>
+<li>CHANGED: server now always hashes the files without taking into account the size or timestamp. This is a tradeoff of some startup speed vs being certain we are 100% correct. I prefer 100% correct vs speed :p</li>
+<li>FIXED: the client downloaded excluded files before discarding them, now it only downloads what it needs</li>
+<li>FIXED: case sensitivity was not the same on server and client. Now both clients and servers will use case sensitive patterns.</li>
+</ul>
+<p>[1.0.5] - 2026/03/07</p>
+<ul>
+<li>FIXED: a bug where the local exclusions (client side excludes) were not respected during the incremental sync (ie: exlusions only worked during the first run but never during subsequent runs)</li>
+<li>Added a dialog to allow client to keep files the server wants to delete while still accepting the update</li>
+<li>Skip-update nagging fix — added WriteNarcoNetData call in SkipUpdatingMods so PreviousSync.json stays current</li>
+<li>VerifyLocalFiles expansion — renamed from VerifyLocalEnforcedFiles and extended to check ALL sync paths, not just enforced ones</li>
+<li>Cleaned-up stale reference to non existing file: BepInEx/patchers/MadManBeavis-NarcoNet-Patcher.dll</li>
+<li>VerifyLocalEnforcedFiles now compares hashes to make sure a local file is valid instead of relying on the sole name.</li>
+<li>Sequence saved before downloads complete (NarcoPlugin.cs)
+Added _pendingSequence field to defer saving until after SyncMods() completes successfully
+Removed early SaveSyncState() calls from both incremental and full sync paths
+Sequence is now saved inside SyncMods() only after all downloads succeed
+When no downloads needed (UpdateCount == 0), sequence is saved immediately</li>
+<li>Semaphore leak in download retries (ServerModule.cs)
+Wrapped the entire retry loop in try/finally to guarantee limiter.Release() on all exit paths
+Previously, if all 5 retries failed and throw was hit, the semaphore slot leaked permanently</li>
+<li>Hash algorithm mismatch (SyncService.cs, deleted FileHasher.cs)
+Server now uses ImoHash (MetroHash128) from NarcoNet.Utilities — same as client
+Deleted FileHasher.cs (MD5-based, varint appended) which could never match client hashes
+Full sync hash comparisons will now work correctly</li>
+<li>Snapshot hashes never populated (SyncService.cs)
+BuildSnapshotAsync now accepts computeHashes parameter
+On first startup (no previous snapshot), all files are hashed during snapshot creation
+On subsequent startups, unchanged file hashes are carried forward from the old snapshot
+Prevents phantom “Modify” changelog entries</li>
+<li>No concurrency protection in ChangeLogService (ChangeLogService.cs)
+Added SemaphoreSlim(1,1) lock for all mutation operations
+Made _changeLog and _lastSnapshot fields volatile for thread-safe reads
+Double-checked locking pattern on LoadChangeLogAsync and LoadSnapshotAsync
+Created LoadChangeLogUnlockedAsync to avoid deadlock when lock is already held</li>
+<li>Incremental sync ignores local drift (NarcoPlugin.cs)
+Added VerifyLocalEnforcedFiles() method that checks enforced remote files exist locally
+Called after both incremental sync paths (new changes + no changes)
+Missing files are added to _addedFiles for re-download</li>
+<li>ImoHash doesn’t use FileShare.Read (ImoHash.cs)
+Added FileShare.Read to FileStream constructor to allow concurrent reads</li>
+<li>Double-deletion of enforced files (ClientSyncService.cs)
+Added !deleteRemovedFiles condition to the enforced deletion loop
+Now only runs the enforced loop when deleteRemovedFiles is off (as intended)</li>
+<li>Server re-hashes on every request (SyncService.cs)
+Added _hashCache field with SemaphoreSlim for thread-safe computation
+Only one hash computation runs at a time; concurrent requests share the result
+Cache is invalidated on startup change detection</li>
+<li>Dependencies:
+switched to avalonia UI instead of Winforms, this allows building the binary from a Linux machine (and thus easier CI builds). This also may allow better Linux client support (I do not use a Linux client to play so can’t say for sure)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3bb3dbf1e89c4404a8c23d8ec7dd4f704d75376d89a8b04c600a6ea7f5966925?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/80043430/packages/generic/narconet/1.0.13/NarcoNet-v1.0.13.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2025-11-15T05:25:00.000000Z">15 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>5,581 downloads</span><span>955.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>In version <strong>1.0.2</strong>, there was a race condition:</p>
+<ul>
+<li>The code that processes files in parallel was previously using a <strong><code>HashSet</code></strong> to collect results.</li>
+<li><code>HashSet&lt;T&gt;</code> is <strong>not thread-safe</strong>: when multiple threads add items at the same time, it can corrupt internal state or throw exceptions.</li>
+<li>That collection has been replaced with a <strong><code>ConcurrentBag&lt;T&gt;</code></strong>, which is specifically designed for <strong>concurrent writes from multiple threads</strong> without additional locking.</li>
+</ul>
+<p>In practical terms:</p>
+<ul>
+<li>Before: parallel file-processing tasks were all writing into a shared <code>HashSet</code>, risking intermittent crashes, missing entries, or corrupted data under load.</li>
+<li>After: the same work is still done in parallel, but results go into a <code>ConcurrentBag</code>, so <strong>each thread can safely add items</strong> without stepping on each other.</li>
+</ul>
+<p>So the race condition was resolved by switching to a <strong>thread-safe collection for shared parallel file processing</strong>, ensuring deterministic and stable behavior during synchronization.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/e9c6be8163eeae380fa4f2680897e02582259ecf5c89e62de035d27689a77fcd?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1090136776/93dae107-1cd8-4493-84a7-1738f1402a9b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A18%3A25Z&amp;rscd=attachment%3B+filename%3Dmadmanbeavis-NARCONet-v1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A23Z&amp;ske=2026-08-01T21%3A18%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=I9f0gnQQxaIDLCgAEDXTBeNXU97Itkyodc3sIv0KcVI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NSwibmJmIjoxNzg1NjE1ODQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.s6jrXHTGr7KM7Mjh0pY7TGUlWs2pI9ht4cuRej_R1eY&amp;response-content-disposition=attachment%3B%20filename%3Dmadmanbeavis-NARCONet-v1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-11-12T13:24:00.000000Z">12 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>600 downloads</span><span>966.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZDk5YmUwNDc1MWE2MjU0N2FlOGUyOTc3MDU4MTdiMGY6MTc2Mjk3MTgyMA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1090136776/d2eafb07-a997-40d1-889e-1b8134a4ec96?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A46Z&amp;rscd=attachment%3B+filename%3DMadmanbeavis-NARCONet-v1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A54Z&amp;ske=2026-08-01T20%3A59%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ggEuKWG%2FhD9G1Anjmkv8h2iyC%2BW54XsgL%2Bkqb%2Fma%2F1I%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NSwibmJmIjoxNzg1NjE1ODQ1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.s6jrXHTGr7KM7Mjh0pY7TGUlWs2pI9ht4cuRej_R1eY&amp;response-content-disposition=attachment%3B%20filename%3DMadmanbeavis-NARCONet-v1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.madmanbeavis.narconet</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>12 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/madmanbeavisx/NarcoNet" target="_blank" rel="noreferrer noopener">https://github.com/madmanbeavisx/NarcoNet</a></li><li><a href="https://gitlab.com/flir063-spt/narconet/" target="_blank" rel="noreferrer noopener">https://gitlab.com/flir063-spt/narconet/</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

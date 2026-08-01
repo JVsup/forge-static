@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>RaidPad · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>RaidPad</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/6798ecc2172f5c91db2902a3059e7a456e56f73cf2b36d0a89bb01424665df21.webp" alt="RaidPad thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>RaidPad</h1>
+    <p class="hero-teaser">Controller working in 4.0.13</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/5c149cb6001c5f94d8c697c5a7522a6adff4e8ef0d37e16f1e1a7037ad23baba.webp" alt="" width="32" height="32">thablackunicorn</span>
+      <span class="author"><img src="../../../assets/6fb3a0a5b5206dd38ef523ad9e440fa6793cae5bd0375bab64f3458df2ba4e3e.webp" alt="" width="32" height="32">Amands2Mello</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,011</dd></div>
+    <div><dt>Favourites</dt><dd>14</dd></div>
+    <div><dt>Mod lists</dt><dd>8</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="RaidPad content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>RaidPad — Controller / Gamepad Support for SPT</h1>
+<p><strong>Play all of SPT with a gamepad — in raid <em>and</em> in the menus.</strong> RaidPad brings full controller support to Single Player Tarkov: movement, aiming (with optional aim assist), shooting, leaning, stances, weapon handling, complete controller-driven inventory &amp; UI navigation, and full control of the <strong>main menu and every out-of-raid screen</strong>. Put the mouse and keyboard down and run your whole session from the couch.</p>
+<blockquote>
+<p>RaidPad is a community revival of the original <strong>AmandsController</strong> by <em>Amands2Mello</em>, updated and fixed to run on <strong>SPT 4.0.x</strong> — see <strong>Credits</strong>.</p>
+</blockquote>
+<hr>
+<h2>What it is</h2>
+<p>RaidPad maps a controller onto every part of the game.</p>
+<ul>
+<li><strong>In raid</strong> you get the full FPS control set — move, look, fire, ADS, lean &amp; step-peek, crouch/prone, walk-speed, weapon switching and the whole weapon-handling suite, quick slots, grenades and healing.</li>
+<li><strong>In any in-raid window</strong> (your stash, gear, containers, grids, context menus, split dialogs, search, trading) the same pad drives the entire interface cell-by-cell, with on-screen button hints so you’re never guessing.</li>
+<li><strong>Out of raid</strong> — main menu, hideout, stash, traders, flea market, settings — your pad drives a cursor across the whole interface, so you never have to reach for the mouse to get <em>into</em> a raid in the first place. EFT’s own pointer is shown while the menu cursor is active, with an optional crosshair overlay as a fallback for exclusive-fullscreen setups.</li>
+</ul>
+<p>It’s a <strong>client-side BepInEx plugin</strong>. No server module, no profile edits — install it, plug in a pad, and play.</p>
+<hr>
+<h2>Controller support</h2>
+<ul>
+<li><strong>Xbox / XInput</strong> controllers work out of the box.</li>
+<li><strong>PlayStation pads (DualShock 4 / DualSense)</strong> work <strong>plugged straight in — no DS4Windows, no Steam Input required.</strong> A built-in raw-HID backend reads the pad over <strong>USB or Bluetooth</strong> and feeds it through the input system. DS4Windows and Steam Input still work if you prefer them.</li>
+</ul>
+<hr>
+<h2>Features</h2>
+<ul>
+<li><strong>Full in-raid control</strong> — movement, look/aim, fire, ADS, lean &amp; step-peek, crouch/prone, walk-speed, weapon switching and the whole weapon-handling suite (reload, check ammo/chamber, fire mode, fold stock, scopes, tactical devices, headlamp/NVG).</li>
+<li><strong>Quick slots &amp; gear on modifiers</strong> — hold a shoulder button to reach med/stim slots, grenades, primary/secondary weapon selection, drop backpack, goggles and more.</li>
+<li><strong>Complete in-raid UI navigation</strong> — drive your stash, gear, containers, grids, slots, context menus, item split, search and trading entirely from the pad, including drag-and-drop with rotate &amp; split.</li>
+<li><strong>Out-of-raid menu cursor</strong> — the pad drives the Windows cursor across the main menu and every out-of-raid screen, including drag-and-drop and item rotate.</li>
+<li><strong>Native PlayStation support</strong> — DualShock 4 / DualSense over USB or Bluetooth, no extra software.</li>
+<li><strong>Optional aim assist</strong> — magnetism, stickiness and auto-aim, each individually tunable (or fully disabled). <strong>Off by default.</strong></li>
+<li><strong>On-screen button hints</strong> — contextual button-block prompts while in menus.</li>
+<li><strong>Xbox &amp; DualSense icon sets</strong> — switchable in the config.</li>
+<li><strong>Fully configurable</strong> — deadzones, sensitivity, invert-Y, double-click/hold timing, UI stick assignments, cursor &amp; scroll speed, rotate key, hint placement and more, all via the in-game <strong>F12</strong> menu (BepInEx ConfigurationManager).</li>
+</ul>
+<hr>
+<h2>Controls (default layout)</h2>
+<blockquote>
+<p>Layout is data-driven and fully remappable. Below is the shipped default. <code>LB</code>/<code>RB</code> act as <strong>modifier buttons</strong> — hold one (or both) and the face buttons / D-pad do something different.</p>
+</blockquote>
+<h3>In raid — base</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Press</th>
+<th>Hold</th>
+<th>Double-tap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Left Stick</strong></td>
+<td>Move</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Left Stick (click)</strong></td>
+<td>Toggle sprint</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Right Stick</strong></td>
+<td>Look / aim</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Right Stick (click)</strong></td>
+<td>Quick knife kick</td>
+<td>Select knife</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>LT</strong></td>
+<td>Aim down sights</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td>Fire</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Jump</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Toggle crouch</td>
+<td>Toggle prone</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>X</strong></td>
+<td>Reload</td>
+<td>Check ammo</td>
+<td>Quick reload</td>
+</tr>
+<tr>
+<td><strong>Y</strong></td>
+<td>Quick-select weapon</td>
+<td>Examine weapon</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>D-Pad Up</strong></td>
+<td>Next tactical device</td>
+<td>Toggle tactical device</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>D-Pad Down</strong></td>
+<td>Change fire mode</td>
+<td>Check fire mode</td>
+<td>Force auto</td>
+</tr>
+<tr>
+<td><strong>D-Pad Left</strong></td>
+<td>Change scope magnification</td>
+<td>Change scope</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>D-Pad Right</strong></td>
+<td>Change scope</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Back / Select</strong></td>
+<td>Open inventory</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3>Hold <strong>LB</strong> + …</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Up</strong></td>
+<td>Throw grenade</td>
+</tr>
+<tr>
+<td><strong>Down</strong></td>
+<td>Select secondary weapon</td>
+</tr>
+<tr>
+<td><strong>Left</strong></td>
+<td>Select 2nd primary weapon</td>
+</tr>
+<tr>
+<td><strong>Right</strong></td>
+<td>Select 1st primary weapon</td>
+</tr>
+<tr>
+<td><strong>A / B / X / Y</strong></td>
+<td>Quick slots 4 / 5 / 6 / 7 (meds, stims, etc.)</td>
+</tr>
+<tr>
+<td><strong>Left Stick (click)</strong></td>
+<td>Drop backpack</td>
+</tr>
+<tr>
+<td><strong>Back</strong></td>
+<td>Toggle goggles / NVG</td>
+</tr>
+</tbody>
+</table>
+<h3>Hold <strong>RB</strong> + …</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>X</strong></td>
+<td>Chamber/unload (Hold: check chamber · Double: unload magazine)</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Walk-pose / movement modifiers (Up/Down cycle walk pose; stick = slow lean)</td>
+</tr>
+<tr>
+<td><strong>Y</strong></td>
+<td>Fold stock</td>
+</tr>
+<tr>
+<td><strong>Left</strong></td>
+<td>Lean left</td>
+</tr>
+<tr>
+<td><strong>Right</strong></td>
+<td>Lean right</td>
+</tr>
+<tr>
+<td><strong>Back</strong></td>
+<td>Switch headlamp mode (Hold: toggle headlamp)</td>
+</tr>
+</tbody>
+</table>
+<h3>Hold <strong>LB + RB</strong> + …</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Up</strong></td>
+<td>Blindfire over cover</td>
+</tr>
+<tr>
+<td><strong>Down</strong></td>
+<td>Blindfire around cover</td>
+</tr>
+<tr>
+<td><strong>Left / Right</strong></td>
+<td>Step / peek left / right</td>
+</tr>
+<tr>
+<td><strong>A / B / X</strong></td>
+<td>Quick slots 8 / 9 / 0</td>
+</tr>
+<tr>
+<td><strong>Y</strong></td>
+<td>Display extraction timer (Double: timer + exits)</td>
+</tr>
+</tbody>
+</table>
+<h3>While aiming (ADS held)</h3>
+<ul>
+<li><strong>Right Stick (click)</strong> — hold breath.</li>
+<li><strong>RB + D-Pad Up/Down</strong> — optic calibration / reticle adjust.</li>
+</ul>
+<h3>In-raid UI &amp; inventory navigation</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D-Pad</strong></td>
+<td>Move selection between cells / items</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Pick up / drag (Hold: open context menu)</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Back / escape</td>
+</tr>
+<tr>
+<td><strong>X</strong></td>
+<td>Use / equip (Hold: use-hold)</td>
+</tr>
+<tr>
+<td><strong>Y</strong></td>
+<td>Quick-move (auto-place to logical slot)</td>
+</tr>
+<tr>
+<td><strong>Right Stick (click)</strong></td>
+<td>Discard item</td>
+</tr>
+<tr>
+<td><strong>LT / RT</strong></td>
+<td>Previous / next tab</td>
+</tr>
+<tr>
+<td><strong>LB</strong></td>
+<td>Secondary bind layer (more context actions)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>While dragging an item (in raid):</strong> <strong>A</strong> drop · <strong>B</strong> cancel · <strong>X</strong> rotate · <strong>Y</strong> split.
+In the <strong>split dialog</strong>, the D-pad adjusts the amount and <strong>A</strong> confirms.</p>
+<h3>Out-of-raid menu cursor</h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Right Stick</strong></td>
+<td>Move cursor</td>
+</tr>
+<tr>
+<td><strong>Left Stick</strong></td>
+<td>Scroll</td>
+</tr>
+<tr>
+<td><strong>A</strong> or <strong>LT</strong></td>
+<td>Left click (hold = drag)</td>
+</tr>
+<tr>
+<td><strong>RT</strong></td>
+<td>Right click</td>
+</tr>
+<tr>
+<td><strong>X / Square</strong></td>
+<td>Rotate held item</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Back / Escape</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Requirements</h2>
+<ul>
+<li><strong>SPT 4.0.13</strong> (built and tested against this build; EFT <code>0.16.9.x</code>).</li>
+<li>A supported controller:
+<ul>
+<li><strong>Xbox / XInput</strong> controllers work out of the box.</li>
+<li><strong>PlayStation pads (DualShock 4 / DualSense)</strong> work <strong>natively</strong> — just plug them in over USB or Bluetooth. DS4Windows and Steam Input are <strong>no longer required</strong> (though still supported if you prefer them). USB is the most reliable connection; Bluetooth is fully supported.</li>
+</ul>
+</li>
+<li>BepInEx (already included with SPT).</li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release.</li>
+<li>Extract the archive into your <strong>SPT install root</strong> so the <code>BepInEx</code> folder merges in. You should end up with:
+<pre><code>&lt;SPT&gt;\BepInEx\plugins\RaidPad.dll
+&lt;SPT&gt;\BepInEx\plugins\SharpDX.dll
+&lt;SPT&gt;\BepInEx\plugins\SharpDX.XInput.dll
+&lt;SPT&gt;\BepInEx\plugins\RaidPad\        (images, layouts, sounds, Default.json)
+</code></pre>
+</li>
+<li><strong>If you have the old <code>AmandsController</code> installed, remove it</strong> — running both at once conflicts (they patch the same methods).</li>
+<li>Connect your controller, launch SPT — your pad drives the menus right away, and the full control set the moment you load into a raid.</li>
+<li>Press <strong>F12</strong> in-game to open the config and tune deadzones, sensitivity, aim assist and cursor speed.</li>
+</ol>
+<hr>
+<h2>Configuration</h2>
+<p>All settings live under the <strong>F12</strong> ConfigurationManager overlay, grouped into: <code>RaidPad</code>, <code>Menu Cursor</code>, <code>Inputs</code>, <code>Aim</code>, <code>Aim Assist</code>, <code>Movement</code>, <code>UI</code>, <code>UI Selected Box</code>, <code>UI Button Blocks</code>.</p>
+<ul>
+<li><strong>Aim assist is off by default</strong> — enable and tune magnetism / stickiness / auto-aim there if you want it.</li>
+<li><strong><code>User Index</code></strong> selects which XInput slot to read. Default <code>0</code> = <strong>Auto</strong> — scans all slots and picks the first connected pad (recommended; required for DS4Windows / Steam Input / virtual pads that may land on any slot). Set <code>1</code>–<code>4</code> to pin a slot. Native PlayStation pads are detected automatically and ignore this setting.</li>
+<li><strong>Menu Cursor</strong> — toggle out-of-raid cursor control, set cursor &amp; scroll speed, the crosshair-overlay fallback, and the <strong>Rotate Key</strong> (the keystroke X / Square sends to rotate a held item — must match EFT’s “Rotate item” bind, default <strong>R</strong>).</li>
+<li><strong>Deadzones &amp; timing</strong> — left/right stick, triggers, double-click and hold delays are all adjustable.</li>
+<li><strong><code>DualsenseIcons</code></strong> — switch on-screen prompts between Xbox and DualSense glyphs.</li>
+<li><strong>UI stick assignments</strong> — choose which stick scrolls, moves windows and skips through the interface.</li>
+</ul>
+<hr>
+<h2>Known notes</h2>
+<ul>
+<li>If a <em>specific</em> interaction misbehaves, please report it with your <code>BepInEx\LogOutput.log</code>.</li>
+<li>A printable control-layout diagram isn’t bundled yet — contributions welcome.</li>
+</ul>
+<hr>
+<h2>Credits</h2>
+<ul>
+<li><strong>Original mod:</strong> <a target="_blank" class="external-link" href="https://github.com/Amands2Mello/AmandsController" rel="noreferrer noopener">AmandsController</a> by <strong>Amands2Mello</strong> — the entire in-raid control scheme and implementation. Huge thanks.</li>
+<li><strong>RaidPad:</strong> SPT 4.0.x revival &amp; maintenance, native PlayStation support, out-of-raid menu cursor.</li>
+<li>Bundled <strong>SharpDX</strong> / <strong>SharpDX.XInput</strong> are © the SharpDX project (MIT).</li>
+<li>Licensed under the <strong>MIT License</strong> (see <code>LICENSE</code>).</li>
+</ul>
+<hr>
+<h2>Changelog</h2>
+<h3>0.5.0 - Mounting, teammate-safe aim assist, menu rotate fix</h3>
+<ul>
+<li><strong>Added  weapon mounting on a controller.</strong> While aiming (ADS), click the <strong>left stick</strong> to mount on cover, windows and ledges.</li>
+<li><strong>Fixed  aim assist no longer locks onto teammates.</strong> Players in your group (e.g. Fika squadmates) and downed players are excluded from aim assist. New toggle <strong>Aim Assist → ExcludeTeammates</strong> (on by default).</li>
+<li><strong>Fixed  rotating items with the menu cursor.</strong> <strong>X / Square</strong> now reliably rotates a held item while you drag it in the out-of-raid menus. RaidPad now rotates the item directly instead of sending the R keystroke, which EFT ignores in menus.</li>
+<li><strong>Added  interface navigation speed.</strong> New <strong>UI → InterfaceStickMoveDelay</strong> sets how fast stick-driven menu selection repeats (higher = slower), handy if you navigate the interface with a stick.</li>
+<li><strong>Note: clearing a weapon malfunction.</strong> EFT has no separate “fix malfunction” key; use the normal controls  <strong>X</strong> (reload) for misfires, <strong>RB + X</strong> (check chamber / unload magazine) for jams.</li>
+</ul>
+<h3>0.4.7 — Rotate items in the menu cursor</h3>
+<ul>
+<li><strong>Added:</strong> press <strong>X / Square</strong> while dragging an item in the out-of-raid menus to <strong>rotate</strong> it, so you can fit awkward items into your inventory without a keyboard. It sends EFT’s “Rotate item” keystroke (default <strong>R</strong>, configurable under <strong>Menu Cursor → Rotate Key</strong>). Right-click in the menus is now on <strong>RT</strong> only.</li>
+</ul>
+<h3>0.4.6 — Out-of-raid menu cursor</h3>
+<ul>
+<li><strong>Added:</strong> the controller now works at the <strong>main menu and every out-of-raid screen</strong>. Out of raid, RaidPad drives the real Windows cursor — right stick moves, left stick scrolls, A/LT left-click (hold to drag), RT right-clicks, B is back/Escape. EFT’s own pointer is shown, with an optional crosshair overlay as a fullscreen fallback. Hands off to the native in-raid controls automatically on raid load, and resumes after.</li>
+</ul>
+<h3>0.4.5 — Bluetooth fix for native PlayStation pads</h3>
+<ul>
+<li><strong>Fixed:</strong> a DualShock 4 / DualSense connected over <strong>Bluetooth</strong> registered no input (buttons and triggers did nothing). Over Bluetooth a PS pad powers up in a “simple” report mode and only sends its full report after the host requests a feature report — RaidPad now does this on connect, switching the pad into full mode. The report layout is also resolved per-report now, so a pad that changes mode mid-session is always read correctly. USB was unaffected. Confirmed working with a DualSense over Bluetooth.</li>
+</ul>
+<h3>0.4.4 — Native PlayStation controller support</h3>
+<ul>
+<li><strong>Added:</strong> DualShock 4 and DualSense pads now work <strong>plugged in directly — no DS4Windows or Steam Input required.</strong> A new built-in raw-HID backend reads the pad over USB or Bluetooth and feeds it through the existing input system. DS4Windows / Steam Input still work if you use them. No extra files to install.</li>
+</ul>
+<h3>0.4.3 — Controller detection</h3>
+<ul>
+<li><strong>Improved:</strong> controller slot detection is now robust. <code>User Index</code> defaults to <code>0</code> = Auto, which scans all four XInput slots and picks the first connected pad. This fixes pads that weren’t detected because a virtual Xbox pad (DS4Windows / Steam Input / ViGEm) landed on a slot other than the first.</li>
+</ul>
+<h3>0.4.2 — Grenade fix</h3>
+<ul>
+<li><strong>Fixed:</strong> the grenade pull-out bind (hold <strong>LB</strong> + <strong>D-pad Up</strong>) only popped the on-screen grenade quick-select bar without actually pulling out a grenade. EFT 0.16.9 split the grenade input into two separate commands, and the old one no longer equips — the bind now sends the new “press throw grenade” command. Works with grenades in pockets or rig. Thanks to PapaCrawl and redlaser42 for reporting.</li>
+</ul>
+<h3>0.4.1 — Button fix</h3>
+<ul>
+<li><strong>Fixed:</strong> in-raid buttons and controller UI navigation did nothing on 0.4.0 (only stick movement worked). The 0.4.0 rebrand renamed the binding classes but <code>Default.json</code> kept the old key names, so no button bindings loaded. Renamed the keys to match — all controls work again. Thanks to the players who reported it.</li>
+</ul>
+<h3>0.4.0 — SPT 4.0.x revival</h3>
+<ul>
+<li>Updated to build and run on <strong>SPT 4.0.13</strong> (EFT <code>0.16.9.x</code>).</li>
+<li><strong>Fixed:</strong> the input loop never ran on EFT 0.16.9 because the controller component was hosted on a standalone GameObject that got destroyed before Unity started ticking it — it now lives on the plugin’s persistent object. (This was the “loads but can’t move” bug.)</li>
+<li><strong>Fixed:</strong> discard-limit guard in quick-move/equip (<code>ItemsDestroyRequired</code> changed from a field to a property in 4.0.x).</li>
+<li>Rebuilt against current SPT/EFT/Unity assemblies; verified all Harmony patch targets and reflection lookups resolve on 4.0.13.</li>
+</ul>
+<h3>0.3.9 and earlier</h3>
+<ul>
+<li>Original AmandsController releases by Amands2Mello (SPT ≤ 3.11).</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.5.0</h2></div><time datetime="2026-06-24T13:30:00.000000Z">24 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>669 downloads</span><span>672.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Changelog</h2>
+<h3>0.5.0 — Mounting, teammate-safe aim assist, menu rotate fix</h3>
+<ul>
+<li><strong>Added — weapon mounting on a controller.</strong> While aiming (ADS), click the <strong>left stick</strong> to mount on cover, windows and ledges.</li>
+<li><strong>Fixed — aim assist no longer locks onto teammates.</strong> Players in your group (e.g. Fika squadmates) and downed players are excluded from aim assist. New toggle <strong>Aim Assist → ExcludeTeammates</strong> (on by default).</li>
+<li><strong>Fixed — rotating items with the menu cursor.</strong> <strong>X / Square</strong> now reliably rotates a held item while you drag it in the out-of-raid menus. RaidPad now rotates the item directly instead of sending the R keystroke, which EFT ignores in menus.</li>
+<li><strong>Added — interface navigation speed.</strong> New <strong>UI → InterfaceStickMoveDelay</strong> sets how fast stick-driven menu selection repeats (higher = slower), handy if you navigate the interface with a stick.</li>
+<li><strong>Note — clearing a weapon malfunction.</strong> EFT has no separate “fix malfunction” key; use the normal controls — <strong>X</strong> (reload) for misfires, <strong>RB + X</strong> (check chamber / unload magazine) for jams.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/77826f6eebab7433d5ab7c46ab80ce164944a476aa593a529dd0dcc4355c0ea7/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1273862600/7605a962-54d6-4980-b284-d008022c132e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A39Z&amp;rscd=attachment%3B+filename%3DRaidPad-0.5.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A53Z&amp;ske=2026-08-01T21%3A08%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=v6aVoCT4GqwT0%2FOJ2Xy024AHIsCG74LKZElOBupYIlI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DRaidPad-0.5.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.5</h2></div><time datetime="2026-06-21T16:27:00.000000Z">21 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>113 downloads</span><span>669.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Changelog</h2>
+<h3>0.4.5 — Bluetooth fix for native PlayStation pads</h3>
+<ul>
+<li><strong>Fixed:</strong> a DualShock 4 / DualSense connected over <strong>Bluetooth</strong> registered no input (buttons and triggers did nothing). Over Bluetooth a PS pad powers up in a “simple” report mode and only sends its full report after the host requests a feature report — RaidPad now does this on connect, switching the pad into full mode. The report layout is also resolved per-report now, so a pad that changes mode mid-session is always read correctly. USB was unaffected. Confirmed working with a DualSense over Bluetooth.</li>
+</ul>
+<h3>0.4.4 — Native PlayStation controller support</h3>
+<ul>
+<li><strong>Added:</strong> DualShock 4 and DualSense pads now work <strong>plugged in directly — no DS4Windows or Steam Input required.</strong> A new built-in raw-HID backend reads the pad over USB or Bluetooth and feeds it through the existing input system. DS4Windows / Steam Input still work if you use them. No extra files to install.</li>
+</ul>
+<h3>0.4.3 — Controller detection</h3>
+<ul>
+<li><strong>Improved:</strong> controller slot detection is now robust. <code>User Index</code> defaults to <code>0</code> = Auto, which scans all four XInput slots and picks the first connected pad. This fixes pads that weren’t detected because a virtual Xbox pad (DS4Windows / Steam Input / ViGEm) landed on a slot other than the first.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6265da087531cf317ae59d5400808fd42f427e0e914ae7d3b85d6475f8ac9525/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1273862600/deabceb7-a56e-489b-90c0-2454284c6ebd?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A43Z&amp;rscd=attachment%3B+filename%3DRaidPad-0.4.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A30Z&amp;ske=2026-08-01T21%3A15%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=HtxBDkNMnu3mAO2HD%2BZE6dMAs%2FVkdY3rwqUAPwBZ7XU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DRaidPad-0.4.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.2</h2></div><time datetime="2026-06-21T00:39:00.000000Z">21 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>65 downloads</span><span>664.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>0.4.2 — Grenade fix</h3>
+<ul>
+<li><strong>Fixed:</strong> the grenade pull-out bind (hold <strong>LB</strong> + <strong>D-pad Up</strong>) only popped the on-screen grenade quick-select bar without actually pulling out a grenade. EFT 0.16.9 split the grenade input into two separate commands, and the old one no longer equips — the bind now sends the new “press throw grenade” command. Works with grenades in pockets or rig. Thanks to PapaCrawl and redlaser42 for reporting.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ea8771359086efb2bf24bcae6bcdb88fbf44fbf7a4cc0d40248e2c5838bc9bca/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1273862600/99ab32ed-caf7-4ea9-902c-3189bf2597ca?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A24Z&amp;rscd=attachment%3B+filename%3DRaidPad-0.4.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A21Z&amp;ske=2026-08-01T21%3A10%3A24Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rTym7y6osBozxw9VAYL4Nfc8EQpUsAQxdhXnT5wQliA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DRaidPad-0.4.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.1</h2></div><time datetime="2026-06-19T13:29:00.000000Z">19 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>110 downloads</span><span>664.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>0.4.1 — Button fix</h3>
+<ul>
+<li><strong>Fixed:</strong> in-raid buttons and controller UI navigation did nothing on 0.4.0 (only stick movement worked). The 0.4.0 renamed the binding classes but <code>Default.json</code> kept the old key names, so no button bindings loaded. Renamed the keys to match, all controls work again. Thanks to the players who reported it.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7bba23bf0b86ce0e01e3c51c6bbd7c793129071016ecc50c9a712e0a29f60966/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1273862600/ca88b455-823c-4d69-8c15-b37e50e1edb2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A35Z&amp;rscd=attachment%3B+filename%3DRaidPad-0.4.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A01Z&amp;ske=2026-08-01T21%3A12%3A35Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9HMVb1fnz0USw8yguc5tXlVMXsRJj%2BcyMO7D%2F%2BCopcM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjMxOSwibmJmIjoxNzg1NjE2MDE5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FzdSEQiUULvMqlvubYOg2fmixw2VBhgPDOwfjnzkQTc&amp;response-content-disposition=attachment%3B%20filename%3DRaidPad-0.4.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.0</h2></div><time datetime="2026-06-19T00:18:00.000000Z">19 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>46 downloads</span><span>664.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>updated with proper links and for spt 4.0.13</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fa6ba8b71359a1e20fc279ca7293699f80e908b40bdfb1c9be3bbb29d63b33de/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/Amands2Mello/AmandsController" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.thablackunicorn.raidpad</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>18 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Amands2Mello/AmandsController" target="_blank" rel="noreferrer noopener">https://github.com/Amands2Mello/AmandsController</a></li><li><a href="https://github.com/SL1C30P3N/RaidPad-0.4.0" target="_blank" rel="noreferrer noopener">https://github.com/SL1C30P3N/RaidPad-0.4.0</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

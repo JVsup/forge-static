@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Inventory Organizing Features · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Inventory Organizing Features</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/7cb89fa18381999619c2428ee33664e5896be0db8c2040185188839ba30a72ea.webp" alt="Inventory Organizing Features thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Inventory Organizing Features</h1>
+    <p class="hero-teaser">Adds several inventory organizing features which rely on item tags, such as sort locking, move locking and container organizing.
+Also adds a button to take out all the items from a container.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/cd340f0d24313d6db823f539f87ee07d408c0d8828caf3af0c2bd4b142b6ecab.webp" alt="" width="32" height="32">Nightingale</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>12,378</dd></div>
+    <div><dt>Favourites</dt><dd>1</dd></div>
+    <div><dt>Mod lists</dt><dd>1</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Inventory Organizing Features content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Description</p>
+<p>This mod adds several inventory organizing features that should save you some time when managing your stash. These features use the in-game item tags. In general, to use it’s features you have to write a @ tag and parameters(if needed) into item’s tag name.</p>
+<h3><strong>Installation</strong></h3>
+<p>Drop the contents of the archive into your SP Tarkov directory.</p>
+<h3><strong>Tags</strong></h3>
+<p>There are several tags you can use:</p>
+<p>@sl - Sort Lock. Prevents the item from being moved when sorting inventory.</p>
+<p>@ml - Move Lock. Prevents the item from being moved by user or when sorting inventory.</p>
+<p>@o - Organize. Makes a container pull items which can fit into it. Items which are being pulled are determined by container’s filters and parameters which user has specified.</p>
+<p>The “Organize” feature is the only one that can use additional parameters. It’s probably not the most elegant solution, but also not the worst and decently usable even as a simple proof of concept.</p>
+<h3><strong>Multiple tags</strong></h3>
+<p>If you wish to specify multiple tags, make sure to separate them with spaces.</p>
+<p>Example: @ml @o, @sl @o, @o money; @ml.</p>
+<h3><strong>“Take Out” button</strong></h3>
+<p>This button is located on container view panel, near the sort and organize button. It’s label should say “T/O”. It takes out every item from the container into it’s parent container. When used on equipped items - transfers contents into stash.</p>
+<p>Demo: <a target="_blank" class="external-link" href="http://streamable.com/0sx49w" rel="noreferrer noopener">https://streamable.com/0sx49w</a></p>
+<h3><strong>How to use the organizing feature</strong></h3>
+<p>First of all add the @o organize tag to container’s tag name.</p>
+<p><em>* Using the organize tag without any parameters will pull any item that container accepts.</em></p>
+<p><strong>If you want to specify any parameters the organize tag must begin with</strong> @o  <strong>(whitespace included) and end with</strong> ; <strong>(semicolon).</strong></p>
+<p><strong>Example:</strong></p>
+<p><strong>- without any parameters @o</strong></p>
+<p><strong>- with some parameters @o categoryParam1|n:nameParam1|–fir;</strong></p>
+<p>Both category and name parameters rely on localized strings, so keep that in mind.</p>
+<p>Both category and name parameters are not case sensitive.</p>
+<p><strong>To confirm that you wrote everything correctly</strong> check the notification which appears after you press Save on the Edit Tag window.</p>
+<p>To execute the organization - press the new button located near the “Sort” button. It has a “Hideout” icon.</p>
+<h3><strong>Category parameter</strong></h3>
+<p>You can specify desired categories by simply writing a <strong>full, exact category name</strong> (e.g. Tools, Gear mods, etc.).</p>
+<p><strong>You can find item’s category when you inspect it or in the handbook.</strong> Categories are showed in the top left corner, under the name, separated by &gt;.</p>
+<p><strong>Handbook:</strong></p>
+<p><strong>When inspecting an item:</strong></p>
+<p>Example: @o ammo; - only the Ammo category.</p>
+<p>If you add ! before categories name, the specified category parameter will be treated as an <em>exclusion</em>.</p>
+<p>Example: @o !magazines; - means everything but Magazines category.</p>
+<h3><strong>Name parameter</strong></h3>
+<p>You can specify a desired name by writing a prefix n: and then the name of an item. The name doesn’t have to be exact, it can be a certain part of it, but be aware that it can also be ambiguous (e.g. if you simply write BP it will pull any item that has “BP” in it’s name).</p>
+<p>Example @o n:igolnik;.</p>
+<p>If you add ! before name parameter, it will be treated as an <em>exclusion</em>.</p>
+<p>Example: @o n:!igolnik; - means everything but items which have “igolnik” in the name.</p>
+<h3><strong>Container priority and order parameter</strong></h3>
+<p>By default organized containers execution is ordered by their implicit priority, where containers with the narrowest conditions are taken first. For example container with tag @o n:igolnik;(selects only items which have “igolnik” in the name) has a higher priority than the one with tag @o(default category, pulls any fitting item).</p>
+<p>If implicit priority doesn’t suffice, you can specify an explicit order number. Containers with explicit order value are prioritized over those without it.</p>
+<p>Example: @o #:3; and @o #:1;, container with order value 1 will pull items earlier than the one with order value 3.</p>
+<h3><strong>Found in raid (and other double-dash parameters)</strong></h3>
+<p>There are some parameters which are prefixed with two dashes:</p>
+<p>--default - default container categories. If no categories are specified, this parameters is implicitly used. Most likely you won’t need it.</p>
+<p>--fir - items must be “Found in raid”.</p>
+<p>--not-fir - items must be not “Found in raid”.</p>
+<h3><strong>Multiple parameters</strong></h3>
+<p>If you want to specify multiple parameters, simply separate them with the | symbol.</p>
+<p>Example:</p>
+<p>@o #:2|muzzle devices|n:ak-74|–fir; - container priority value 2, only items of category “Muzzle devices” and only if item’s name contains “ak-74”, and only found in raid. Basically collects all FiR muzzle devices with AK-74 in the name, like Wafflemaker, JMac, and other suppressors/muzzle breaks.</p>
+<p>@o assault rifles|magazines|weapon parts &amp; mods; - container will pull only Assault Rifles, Magazines and Weapon parts &amp; mods.</p>
+<p>@o n:rouble|n:eur|n:dollar|n:bitc; - container will pull only items which have “rouble” or “eur”, or “dollar”, or “bitc” in their name.</p>
+<h3><strong>Video demonstration/examples</strong></h3>
+<p>Using the “Take out” button.</p>
+<p><a target="_blank" class="external-link" href="http://streamable.com/0sx49w" rel="noreferrer noopener">https://streamable.com/0sx49w</a></p>
+<p>@ml and @sl tags demonstration.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/6k1umi" rel="noreferrer noopener">https://streamable.com/6k1umi</a></p>
+<p>Organizing containers by their default category using @o tag.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/g3jko0" rel="noreferrer noopener">https://streamable.com/g3jko0</a></p>
+<p>Organizing containers by specifying a category name.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/y9779l" rel="noreferrer noopener">https://streamable.com/y9779l</a></p>
+<p>Using the –fir parameter to collect only “Found in raid” items.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/v9ftzx" rel="noreferrer noopener">https://streamable.com/v9ftzx</a></p>
+<p>Organizing ammo, using the name parameters, excluding grenades from ammo containers.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/gzx57t" rel="noreferrer noopener">https://streamable.com/gzx57t</a></p>
+<p>How name parameters work. (Specifically name parameter ambiguity)</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/ct30u6" rel="noreferrer noopener">https://streamable.com/ct30u6</a></p>
+<p>Organizing a container inside of a container.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/joajvl" rel="noreferrer noopener">https://streamable.com/joajvl</a></p>
+<p>Using the order parameter and how it works.</p>
+<p><a target="_blank" class="external-link" href="https://streamable.com/owlso8" rel="noreferrer noopener">https://streamable.com/owlso8</a></p>
+<p><em>* I hope I didn’t make them too quick, but I suppose you can always pause a video.</em></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2023-04-20T20:10:34.000000Z">20 April 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.7.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,844 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Target:</strong> SPT-AKI 3.5.5</p>
+<p>New feature, improvements and a fix for stackable items.</p>
+<ul>
+<li><a target="_blank" class="external-link" href="https://github.com/MiraculousNightingale/spt-aki-inventory-organizing-features/releases/tag/v1.1.0" rel="noreferrer noopener">Changelog</a></li>
+</ul>
+<p><strong><strong>Plugin is built for Client version of SPT-AKI 3.5.5, but should be cross-version compatible.</strong></strong></p>
+<p><strong><strong>(Within reason)</strong></strong></p>
+<p><strong><strong>If you encounter issues always mention your SPT-AKI version.</strong></strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/acb58d90be4a941dd31584634f0d2d2756b6defb44ea621c51ef2e896d017181?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/627887970/ca267817-cfb2-479c-8cbf-8a6ae40d2d7e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A59Z&amp;rscd=attachment%3B+filename%3DNightingale-inventoryorganizingfeatures-1.1.0.SPT-AKI.3.5.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A01%3A23Z&amp;ske=2026-08-01T21%3A01%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=e13dD7BFkyG1PqMUcYKvOVyUCmrAqbI%2F3IfiLXzf0IE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DNightingale-inventoryorganizingfeatures-1.1.0.SPT-AKI.3.5.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0+spt371</h2></div><time datetime="2023-10-25T22:12:35.000000Z">25 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>8,870 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Target:</strong> SPT-AKI 3.7.1</p>
+<p>Updated for the newest version of SPT.</p>
+<p><strong>Plugin is built for the client version of SPT-AKI 3.7.1 but may be compatible with some older versions, although no support for them will be provided.</strong></p>
+<p><strong>In case there is a newer SPT version - you can try it out, it may still work.</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/acb58d90be4a941dd31584634f0d2d2756b6defb44ea621c51ef2e896d017181?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/627887970/4b9cd9e3-15bb-4023-9154-d61376b56baf?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A37Z&amp;rscd=attachment%3B+filename%3DNightingale-inventory_organizing_features-1.1.0-spt371.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A49Z&amp;ske=2026-08-01T21%3A07%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KxH%2BAD9BsC7MKfcz1Tgfp%2FttlJGQv5dJxyszMKPi%2FbY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DNightingale-inventory_organizing_features-1.1.0-spt371.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>University of Illinois/NCSA Open Source License</dd></div>
+      
+      <div><dt>Published</dt><dd>18 April 2023</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/MiraculousNightingale/spt-aki-inventory-organizing-features" target="_blank" rel="noreferrer noopener">https://github.com/MiraculousNightingale/spt-aki-inventory-organizing-features</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

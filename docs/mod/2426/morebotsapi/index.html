@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>MoreBotsAPI · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>MoreBotsAPI</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/677659264a275c6cb8af0fa19a307c66bafa611fdfda0a305087f2f5144875af.webp" alt="MoreBotsAPI thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>MoreBotsAPI</h1>
+    <p class="hero-teaser">API for making the implementation of custom bots easier</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/18f3cbd1fc679580ff54a27f4f10d30a1cf49cfd0534a60a47891399c5bbd314.svg" alt="" width="32" height="32">TacticalToaster</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>82,563</dd></div>
+    <div><dt>Favourites</dt><dd>228</dd></div>
+    <div><dt>Mod lists</dt><dd>354</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="MoreBotsAPI content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>MoreBotsAPI for SPT 4.0.X</h1>
+<p>A client and server API that makes making custom bots a little less infuriating. Create a prepatch and server mod that implements this API and you’ll have the basis for introducing new bosses, factions, and any other custom bot you can think of (maybe, this is still Tarkov).</p>
+<h2>Fika compatible confirmed for version 1.1.0. Make sure you install properly on all clients, the host, and headless with the latest dependencies for any mod that implements this API.</h2>
+<h2>DISCLAIMER</h2>
+<p>This repo uses the CC BY-NC-SA 4.0 License. To implement this API in your own mod, please contact me first for permission. This API does a lot and has the potential to break other mods and people’s games when used incorrectly. In addition, overriding another mod’s WildSpawnType enum values or vanilla values will cause MANY problems and create a headache for everyone involved, trying to find out what exactly is going wrong for users. In addition, this will make it easier for me to track what WildSpawnType enums are being used so there’s no future conflicts.
+</p>
+<h2>Features</h2>
+<ol>
+<li>Adds to WildSpawnType enum on client</li>
+<li>Server properly sends custom bot data to client</li>
+<li>Defining custom bot data in a simple format with JSONs on the server</li>
+<li>Defining client-specific data in a client prepatcher</li>
+<li>SAIN compatability with a little setup
+</li>
+</ol>
+<h2>What’s not included</h2>
+<ol>
+<li>Locales, reference SPT server mod examples for that</li>
+<li>Spawning of custom bots, either implement that using the boss spawn system (UNTAR Go Home uses this method) or create your own system</li>
+<li>Custom behaviors, use BigBrain if you intend on creating completely custom behavior not already found in base EFT bots.
+</li>
+</ol>
+<h2>Installation</h2>
+<ol>
+<li>Download a release version from GitHub or SPT Forge.</li>
+<li>Open the .7z file using 7-Zip</li>
+<li>Drag the SPT and BepInEx folders into your main SPT directory, those folders alongside EscapeFromTarkov.exe should already exist.</li>
+</ol>
+<h2>Note on uninstalling when using SAIN</h2>
+<p>Seems I found what causes a non-aggression bug, at least with SAIN and my bot mods. If you uninstall a custom bot mod that uses MoreBotsAPI then SAIN will keep references to the now-removed bots in its Default Bot Config Values folder, causing client errors that prevent SAIN from loading properly for bots and disabling their combat behaviors. Deleting the files in this folder and letting SAIN reset them fixes the problem.</p>
+<h2>Support Me</h2>
+<p>Buy me a Java Monster so when I get back from work I can fix my broken releases at lightning speed. Don’t have to though, I’ll do it for free anyways!
+<a target="_blank" class="external-link" href="https://ko-fi.com/tacticaltoaster" rel="noreferrer noopener">https://ko-fi.com/tacticaltoaster</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-05-01T22:44:00.000000Z">1 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>39,518 downloads</span><span>43.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Removed excessive client logging caused by hunt behaviors</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/156e99e9571cc46547ef6f89d005f6023988a90fb9f09f205c0254a455aeb744?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/f582981c-eb4f-4406-afd3-a5c0dea83646?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A18%3A14Z&amp;rscd=attachment%3B+filename%3Dmorebotsapi-201-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A54Z&amp;ske=2026-08-01T21%3A18%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=AMmhB%2BydWalQiQEoxSu3RauA8cR0A02rfI9kF%2BkQjZg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-201-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-04-30T04:43:00.000000Z">30 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,696 downloads</span><span>44.0 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Hunt system (used by my other faction mods, free for use in any).</li>
+<li>Improved SAIN Interop (Use the latest version of SAIN when using this version of the API).</li>
+<li>Overhauled faction system that also exists on client. Factions can be configured to have revenge behavior, where they aggro on players for a configurable amount of raids after being killed by a player.</li>
+<li>Load order for some things have changed, which should fix compatibility issues with ABPS not working with custom bots on first raid/some raids.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/95905fc78bb4dd402b1dca48aecab34f6819216788ae25d48f363feeae2dbae1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/63f28898-1134-4cde-ac78-04a9cd4ce5d6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A32Z&amp;rscd=attachment%3B+filename%3Dmorebotsapi-200-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A34Z&amp;ske=2026-08-01T21%3A14%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=IlzAicWLXmFZ3rbilmyWOSmcDtWtGL2AroZ2R9VyZcU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-200-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-11-13T03:57:00.000000Z">13 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>39,186 downloads</span><span>33.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>MoreBotsAPI 1.1.0 for SPT 4.0.X, tested with latest Fika for 4.0.4 (Coop and Headless)</h1>
+<p>I have tested both Coop and Headless on the latest Fika for SPT 4.0.4 and both my faction mods alongside this API work on it. When using Fika, MAKE SURE you have the client part (BepInEx folder, plugins and patchers) of my mods installed on the host, clients, and headless. Also, make sure you update to the latest WTT Common Lib that supports Fika now.</p>
+<ul>
+<li>Added some new API server functionality.</li>
+<li>Added new server config for debug logs and increasing bot cap on all maps by an int.</li>
+<li>By default this mod now increases the bot cap on all maps for 10 to account for the new factions. If you use a spawning mod, it is best to set this new value in the new server config to 0 and let those mods change the bot cap if they do.</li>
+<li>Added new server logger that only logs debug stuff if config value is set. (Should fix the warn messges that don’t cause problems from showing)</li>
+<li>Added show bot zones as a debug option (just shows the names at the center of spawnpoints).</li>
+<li>Fixed potential client error when checking for custom WildSpawnTypes.</li>
+<li>Changed license to CC BY-NC-SA 4.0</li>
+</ul>
+<p>VT link: <a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ba7121d31feaabc6c0a213acbdc7da076b695aca61468fb5505ca6fd34bd757b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/e46f52fa-5f19-4359-8cca-0f9d0cc8c61b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A40Z&amp;rscd=attachment%3B+filename%3Dmorebotsapi-110-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A29Z&amp;ske=2026-08-01T21%3A02%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=HBM0%2BwwS%2BpTABhwiYBj1PIQaREZGcPKfTKEcza3cAKg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-110-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-11-07T00:49:00.000000Z">7 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,587 downloads</span><span>30.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed issue when the player dies they are frozen, the raid doesn’t end, and is essentially a silent crash. That doesn’t happen now. At least shouldn’t, I tested it I swear.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6519684d5258a1fc1cc808def9d0aba32368ba6a58eee5540cd776b3812c9916?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/0e002519-8c8a-4e61-826a-99eb10fafd60?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A28Z&amp;rscd=attachment%3B+filename%3Dmorebotsapi-101-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A40Z&amp;ske=2026-08-01T21%3A04%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=itKLAM1bXMKWfua%2B5qdzZ3a%2BOgtaovwfjamuCob3miI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NCwibmJmIjoxNzg1NjE1ODQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fn6MGWx8qpMSlONJc4v07PeaBjXOHI5v5guVkTLKVa4&amp;response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-101-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-11-06T06:55:00.000000Z">6 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>576 downloads</span><span>30.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/618f192399e1692627bd4ddbed05bbfd4d1217ed3951a11d7cdcf97bc5cf95a2/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1085275890/85962e8f-1152-4546-bea3-306d5f33e29b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A16%3A22Z&amp;rscd=attachment%3B+filename%3Dmorebotsapi-100-release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A49Z&amp;ske=2026-08-01T21%3A16%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZSJ45N5wjVONXtiVZIWUzDgt5hL9YX9BY0DGKWC4GGk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NCwibmJmIjoxNzg1NjE1ODQ0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fn6MGWx8qpMSlONJc4v07PeaBjXOHI5v5guVkTLKVa4&amp;response-content-disposition=attachment%3B%20filename%3Dmorebotsapi-100-release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.morebotsapi.tacticaltoaster</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>6 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/TacticalToaster/MoreBotsAPI" target="_blank" rel="noreferrer noopener">https://github.com/TacticalToaster/MoreBotsAPI</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

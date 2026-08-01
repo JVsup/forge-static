@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SPT-VR · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SPT-VR</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/caed9999c3662214f8fe58624a265a7ae5ba3897bbe632e08b3753f9df32631f.webp" alt="SPT-VR thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SPT-VR</h1>
+    <p class="hero-teaser">SPT-VR brings the immersive, intense experience of Tarkov into the realm of virtual reality. Engage in intense firefights, loot dangerous environments, and survive the unforgiving world of Tarkov—all in full VR.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/e8c49a076e5014f19660156bcda9dee97c10ac49a49c55219f565d0c679641a7.svg" alt="" width="32" height="32">cybensis</span>
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>32,402</dd></div>
+    <div><dt>Favourites</dt><dd>8</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SPT-VR content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>21</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>WARNING: This is an overhaul mod, please treat it as such. That means, don’t install this on top of your current SPT install with a bunch of mods. This mod should always be started on a clean slate. Install other mods one by one and test, if it has issues, remove it.</strong></p>
+<p><strong>IMPORTANT: Strongly recommend installing my cloud mod with this also, default Tarkov clouds don’t work in VR and your skies will just be cloudless without it - <a target="_blank" class="external-link" href="../../2567/cloudsix-volumetric-clouds/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2567/cloudsix-cloud-replacement</a></strong></p>
+<h1>SPT-VR (Single Player Tarkov VR Mod)</h1>
+<p><strong>SPT-VR</strong> brings the immersive, intense experience of Tarkov into the realm of virtual reality. Engage in intense firefights, loot dangerous environments, and survive the unforgiving world of Tarkov—all in full VR.</p>
+<p><a target="_blank" class="external-link" href="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDQxZHN4NTU4ZTd2bHA4czRmbjlsemNhNjBkNHY4aWoxdTR5aHlsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vybnEvzrYKyDTXAITB/giphy.gif" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/95e5c4ec003f81a6ae2037e0d97e9bcba467c134b5d952dd856045e208831d3a.webp" alt="giphy.gif"></a></p>
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#controls">Controls</a></li>
+<li><a href="#fpsgraphics-guide">FPS/Graphics Guide</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contributions">Contributions</a></li>
+<li><a href="#development-environment-setup">Development Environment Setup</a></li>
+<li><a href="#get-in-contact">Get in contact</a></li>
+</ol>
+<h2>Setup</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li><strong>Single Player Tarkov (SPT) Installation</strong>: Make sure you have a working copy of SPT installed.</li>
+<li><strong>SteamVR</strong>: The mod requires SteamVR to support VR hardware.</li>
+</ul>
+<h3>Installation Steps</h3>
+<ol>
+<li><strong>Ensure SPT is up to date</strong>: Make sure you have the latest version of SPT installed on your system.</li>
+<li><strong>Download the latest release</strong>: On the right side of this page (if on GitHub), download the latest release from the “Releases” section.</li>
+<li><strong>Navigate to SPT’s root directory</strong>: This should contain the SPT.Launcher, SPT.Server files, and the BepInEx folder.</li>
+<li><strong>Extract the downloaded files</strong>: Merge the folders from the release with the folders in the SPT installation.</li>
+<li><strong>Launch SteamVR</strong>: Ensure that SteamVR is running and your headset is connected before launching the game.</li>
+<li><strong>Launch the game through the SPT Launcher</strong>.</li>
+</ol>
+<h3>Uninstalling</h3>
+<p>To uninstall the mod, go to your SPT installation and remove the BepInEx/plugins/sptvr/SPT-VR.dll file, which will stop the game from launching in VR. To reinstall it, simply drag the .dll file back into the directory.</p>
+<h2>Controls</h2>
+<h3>Movement</h3>
+<ul>
+<li><strong>Walking:</strong> Left joystick.</li>
+<li><strong>Look around:</strong> Right joystick.</li>
+<li><strong>Sprint:</strong> Click the right joystick.</li>
+<li><strong>Jump:</strong> Push the right joystick up.</li>
+<li><strong>Vault:</strong> Hold the right joystick up at a ledge.</li>
+<li><strong>Crouch:</strong> Pull down on the right joystick, physically crouch, or do both.</li>
+<li><strong>Prone:</strong> Fully crouch, release the joystick, then pull down again.</li>
+</ul>
+<h3>Weapon Controls</h3>
+<ul>
+<li><strong>Fire:</strong> Right trigger.</li>
+<li><strong>Two-hand weapon:</strong> Support the gun with the left grip when it vibrates (toggle option available).</li>
+<li><strong>Aim:</strong> Looking down the sights automatically increases accuracy.</li>
+<li><strong>Steady aim:</strong> Hold the left trigger to hold your breath.</li>
+<li><strong>Weapon interaction mode:</strong> Hold the right grip when not aiming to interact with the weapon:
+<ul>
+<li>Check Magazine</li>
+<li>Reload</li>
+<li>Inspect Weapon</li>
+<li>Fix Malfunction</li>
+<li>Toggle Firemode</li>
+<li>Fold Stock (not implemented yet)</li>
+</ul>
+</li>
+<li><strong>Reload:</strong> Press <strong>B</strong> or use the interaction mode.</li>
+<li><strong>Toggle Firemode:</strong> Press <strong>A</strong> or use the interaction mode when two-handing.</li>
+<li><strong>Change red dot/holo mode:</strong> Press the left grip when your hand vibrates near the sight.</li>
+<li><strong>Change optic zoom:</strong> Pull the right joystick or rotate the left hand near the scope.</li>
+<li><strong>Grenades:</strong> Select from the quick slot radial menu, then hold the right trigger to pull the pin, trigger will act as grip, do throwing motion and let go of trigger to throw. Press left trigger while pin is pulled to reset pin and cancel throw</li>
+<li><strong>Toggle Tactical Device:</strong> While holding secondary grip, press <strong>Y</strong> on secondary controller, long press <strong>Y</strong> to toggle other modes</li>
+<li><strong>Under Barrel Grenade Launcher:</strong> While holding gun with other hand, hold secondary controller trigger and press <strong>X</strong></li>
+</ul>
+<h3>In-Game Interactions</h3>
+<ul>
+<li><strong>Swap Weapon:</strong>
+<ol>
+<li>For a pistol, bring your right hand to your hip and press the right grip.</li>
+<li>For primary weapons, bring your right hand to your shoulder and press the right grip.</li>
+<li>Use the radial menu by holding the right grip at your shoulder.</li>
+</ol>
+</li>
+<li><strong>Quick Slot Items:</strong> Open the radial menu by putting your hand in backpack (over non-dominant shoulder) and press and hold grip, bring into view while keeping grip held, select item with thumbstick and let go of grip</li>
+<li><strong>Interacting with doors/containers/bodies/loose loot/etc:</strong>
+<ol>
+<li>Through a menu by looking at the object, which will bring up the menu where you’re looking, then using the right joystick you can navigate it and use the <strong>A</strong> button to select an option.</li>
+<li>Bring your left hand up to the object and press the left grip to perform the primary operation, or with loose loot you can hold the left grip to pick it up and bring it over your left shoulder and release to place it in your inventory if there is room.</li>
+</ol>
+</li>
+<li><strong>Toggle head visor/night vision:</strong> These can be toggled by bringing the left hand up to your head and pressing the left grip.</li>
+<li><strong>Toggle Head light:</strong> Left hand by head and press trigger instead of grip</li>
+<li><strong>Drop Backpack:</strong> Put left hand in backpack collider (over non-dominant shoulder) and press trigger</li>
+</ul>
+<h3>Menus &amp; Menu Interactions</h3>
+<ul>
+<li><strong>Select:</strong> To interact with menu items, buttons, etc, press the <strong>A</strong> button while hovering over it with your laser pointer.</li>
+<li><strong>Open Inventory:</strong> Press <strong>X</strong> while in a raid.</li>
+<li><strong>Open Menu:</strong> Press <strong>Y</strong> while in a raid.</li>
+<li><strong>Dragging Items:</strong> Hold the right trigger to move items.</li>
+<li><strong>Opening Item Sub-Menu:</strong> While hovering over an item, hold down the <strong>A</strong> button to bring up a dropdown menu for that item.</li>
+<li><strong>Opening Item Display Window:</strong> Double tap <strong>A</strong> while hovering over an item to open the item display window.</li>
+<li><strong>Quick Equip:</strong> While holding the left grip, pressing the <strong>A</strong> button on an item will automatically equip it to its respective slot.</li>
+<li><strong>Quick Transfer Item:</strong> While holding the right grip, pressing the <strong>A</strong> button on an item will automatically transfer it in or out of your inventory.</li>
+</ul>
+<h3>Configuring your experience</h3>
+<p>If you go into the Tarkov settings menu, you will see a VR tab, which allows you to modify some of the VR-specific settings.</p>
+<p>Performance Guide!</p>
+<p>For reference my specs -</p>
+<p>AMD 9070 XT</p>
+<p>32GB of ram</p>
+<p>Ryzen 5 7600x</p>
+<p>NVME SSD</p>
+<ol>
+<li>Install VRAMCleaner - <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2876-vram-cleaner/" rel="noreferrer noopener">VRAM Cleaner</a></li>
+<li>Set all graphics settings to lowest/off except textures, shadows, anisotropic, and LOD/visibility (set those to whatever you want) AA should always be set to off or FXAA, nothing else works (set texture to medium or low if you have 10GB VRAM or less)</li>
+<li>Check boxes on graphics settings at bottom, Grass shadows, high quality color, and streets low quality textures. Everything else unchecked, volumetric lighting is your preference. Another checkbox I suggest using if you are 10GB or less VRAM is Mip Streaming. This free’s up A LOT of VRAM and can help a lot with performance on lower VRAM cards</li>
+<li><em><strong>Use an upscaler - Nvidia DLSS - AMD FSR3</strong></em></li>
+<li>In SteamVR settings, go into your tarkov video settings and set the resolution in there to 100-150%. This is one of the things that hurts performance the most, the lower the better. You need a lot of VRAM if you want to run this at a high resolution (keep in mind if you’re using an upscaler, this setting plays together with that)</li>
+<li>Learn how to use a headless Fika client, I don’t recommend running headless through your own PC but it can help performance, just make sure you have AT LEAST 64GB of ram. In reality, you should run a headless client on a separate PC on your network that has at least 32GB of ram and a decent CPU</li>
+<li>Install a bot spawner mod such as MOAR or ABPS, these are also big helps to performance because the main killer of performance in SPT is the AI. These mods are much better at managing spawns.</li>
+<li>Last thing I’d suggest which may not apply for many people, I disable my 4k monitor whenever I play which seems to help a bit.</li>
+</ol>
+<p><strong>IMPORTANT</strong>: This mod is a <em>very</em> heavy mod, it will not run on a low-end or mid-grade PC. This requires a very high-end PC.</p>
+<p>Minimum GPU Nvidia - Any 30 series+ with 16GB+ of VRAM</p>
+<p>Minimum GPU AMD - Any RX 7000+ RDNA3/4 with 16GB+ of VRAM.</p>
+<p>Minimum CPU - Really I can’t recommend anything other than the AMD X3D chips like the 5800x3d, 9800x3d, etc</p>
+<p>Minimum RAM: 32GB if you have a secondary headless PC, if you’re self hosting you should really have more than 32GB</p>
+<p>Minimum drive - SSD or NVMe SSD, preferably NVMe but this isn’t a big deal</p>
+<p>You may be able to get away with slightly lower specs but this is what I recommend to have an actual playable experience.</p>
+<h2>FAQ</h2>
+<h3>What controllers and headsets are supported?</h3>
+<p>The mod supports most VR headsets. The following controllers work out of the box:</p>
+<ul>
+<li>Quest 2/3</li>
+<li>Valve Index</li>
+<li>Vive</li>
+</ul>
+<p>If your controller isn’t working, configure the control scheme through SteamVR bindings.</p>
+<h3>Does this work with the non-SPT Escape From Tarkov?</h3>
+<p>No, using this mod with the official version of Escape From Tarkov can result in a ban.</p>
+<h3>Does it support FIKA?</h3>
+<p>Yes, it supports FIKA and is fully synced. So you will see other VR players movements and they will see yours, flatscreen players included. If you are using FIKA, you NEED to have the sync module installed that is included in the download. Everyone that connects will need to have it too including flatscreen players otherwise you will have a lot of issues.</p>
+<h3>Are other mods compatible with the VR mod?</h3>
+<p>Several mods have been confirmed to work. However, mods that add a new UI may not work, new guns might be missing features, and some graphics mods may cause issues. Please remove all incompatible mods before reporting any bugs.</p>
+<p>Current list of known compatible mods:</p>
+<ul>
+<li>FIKA</li>
+<li>Hollywood Graphics/FX</li>
+<li>SAIN</li>
+<li>Waypoints</li>
+<li>Declutterer</li>
+<li>BigBrain</li>
+<li>Epic’s AIO modded scopes (still needs some work)</li>
+<li>A lot of others, my best suggestion is to try one at a time, most UI mods that <em>add</em> totally new UI elements will not work properly</li>
+</ul>
+<h3>Do I need to buy this mod?</h3>
+<p>No, the mod is free, and the source code is open-source.</p>
+<h2>Contributions</h2>
+<p>A huge thank you to these primary testers who helped shape the mod:</p>
+<ul>
+<li><strong>groundzeroday</strong>: Check out his work at <a target="_blank" class="external-link" href="https://hexler.net/" rel="noreferrer noopener">hexler.net</a></li>
+<li><strong>Havviks</strong>: Thanks for making the trailer, go watch his videos on <a target="_blank" class="external-link" href="https://www.youtube.com/@HAVVIKS" rel="noreferrer noopener">YouTube</a></li>
+<li><strong>MaTSix</strong>: Offered a lot of helpful ideas which greatly decreased the jankiness of the mod</li>
+</ul>
+<h2>Get in contact</h2>
+<p><strong>Join the discord - <a target="_blank" class="external-link" href="https://discord.gg/U8B8h3s6SN" rel="noreferrer noopener">https://discord.gg/U8B8h3s6SN</a></strong></p>
+<p>If you want to reach out to me personally, you can send an email to <a>cybensis@protonmail.com</a></p>
+<h2>Development Environment Setup</h2>
+<p>If you wish to make your own changes to the mod or want to check it out for any purpose, follow the steps below:</p>
+<ol>
+<li><strong>Clone the Repository</strong>: This can either be done by downloading the source code from the GitHub page or using the command below: git clone <a target="_blank" class="external-link" href="https://github.com/cybensis/SPT-VR.git" rel="noreferrer noopener">https://github.com/cybensis/SPT-VR.git</a></li>
+<li><strong>Open it in your IDE</strong>: I’ve only ever used Visual Studio for development, so I would recommend using that. Opening the .sln file will open Visual Studio, which should already be configured to build without issue.</li>
+<li><strong>Make your changes and build</strong>: After making your changes, to test them simply go to the <em>Build</em> dropdown menu at the top of Visual Studio and select <em>Build Solution</em>.</li>
+<li><strong>Add the build to your SPT installation</strong>: After building the mod, you should find the new file under <em>bin/Debug/TarkovVR.dll</em> or <em>bin/Release/TarkovVR.dll</em> depending on whether you’ve built a debug or release version. Then, in your SPT installation, replace the BepInEx/plugins/sptvr/SPT-VR.dll file with your new one and you should be good to go.</li>
+</ol>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-06-23T22:28:00.000000Z">23 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,017 downloads</span><span>14.1 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Major Update Changelog:</strong></p>
+<p><strong>NOTE:</strong> This is a <em>massive</em> update. So, I expect bugs to come up. I tested as much as I could and fixed as much as I could but there’s no way I could account for every issue. So please, let me know of bugs that come up either in the comments here or on the SPT-VR discord.</p>
+
+<p><strong>IF YOU ARE RUNNING FIKA, FIKASYNC NEEDS TO BE INSTALLED ON ALL CLIENTS INCLUDING HEADLESS, IT IS INCLUDED IN THE ZIP</strong></p>
+
+<p><strong>Manual Eating Interactions</strong></p>
+<ul>
+<li>Manual food eating! First step towards manual interactions, going to be implementing new interactions throughout this year</li>
+<li>All foods now have unique gestures for manual eating, they’re setup to be pretty intuitive and simple, tried to make it as seamless as possible where you barely need to think about it</li>
+</ul>
+<p><strong>Body Dragging</strong></p>
+<ul>
+<li>Added dragging AI bodies around (scavs will still loot the body at it’s original location, I’ll see if I can fix this)</li>
+<li>Added dragging teammates body while it’s in revive state when using Fika</li>
+<li>To loot a body instead of drag, do a quick grip and let go</li>
+</ul>
+<p><strong>Full FIKA Sync</strong></p>
+<ul>
+<li>Synced arms over Fika, other players will now see where you’re aiming</li>
+<li>Synced manual eating</li>
+<li>Synced body dragging</li>
+<li>Synced loose loot holding</li>
+<li>Synced melee hit effects</li>
+<li>Created a separate Fika Sync .dll module so flatscreen players can install it and see the VR player movements too</li>
+</ul>
+<p><strong>Performance</strong></p>
+<ul>
+<li>Added lodbiasfactor slider in VR More settings (big performance boost when lowered but causes a lot of pop-in)</li>
+<li>Fixed frustum culling for distant tree’s, they won’t disappear on the far right of vision anymore</li>
+<li>Added option to change scope resolution in VR settings menu</li>
+</ul>
+<p><strong>Loose Loot Interaction</strong></p>
+<ul>
+<li>White dot will show up on items within a cone coming from the palm of your hand, the circle will grow/shrink based on another smaller raycast coming from your palm. So if multiple items are next to each other, you still have fine control over which item you select. Press grip from a distance when white dot is visible, it’ll pull the item to your hand</li>
+<li>Interact context menu now stays centered on where it is, even when the item it’s connected to is moving</li>
+<li>Context menu will only come up on items when you’re holding and looking at it</li>
+<li>Made it so joystick crouch/prone/jump is only blocked on context menus if the menu has more than one option to scroll to (makes use loose loot mod work, works perfectly with the manual eating) <a target="_blank" class="external-link" href="../../933/use-loose-loot/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/933/use-loose-loot</a></li>
+<li>Fixed null when taking an item that you are currently holding</li>
+<li>Made it so if you have loose loot use mod installed and use food/drink while holding the item, it’ll put it in your inventory if there’s space, if not, it’ll drop the item and put you into eating/drinking state</li>
+<li>Update to held item collision, if the collision causes the item to pull too far from your hand, it’ll auto drop the item. There’s some give to this so it wont just fall out of your hand with small bumps. For example, your hand will need to move about a foot away from whatever item your holding before it drops it</li>
+<li>Significant improvement to held item stability, item gets parented to the hand. Little to no jitter at all while walking with item</li>
+<li>Adjusted collision to use high poly collider instead of low poly for held items. This avoids mismatch of colliders when an item is dropped vs when you pick it up. This made clipping smaller items through stuff a lot harder</li>
+<li>Held items will now be a lot harder to clip through collision, nearly impossible - when item meets collision, it’ll slide along the collision to try and stay connected to your hand, it won’t just get caught and stuck on collision anymore</li>
+</ul>
+<p><strong>VR Setting Menu</strong></p>
+<ul>
+<li>Smooth sliders for all VR slider settings so you can dial in exact offsets for things now, not limited to the ticks (all your current settings should be unchanged, the numbers in the settings menu are just different visibly to standardize and not just have a bunch of random numbers)</li>
+<li>Scrollbar added to VR Settings menu - thanks killdns for the initial work on this, had to do a lot to get it working properly though in my headset and others</li>
+<li>Added secondary VR settings menu called “VR More” which will be used for graphics and interaction related settings</li>
+<li>Added disable mouse input toggle in VR More (fixes the issue where things get highlighted that your laser isn’t pointing at when toggled)</li>
+<li>Added walkeffector toggle in VR settings (this adds walking animation for guns/hands)</li>
+<li>Added option to toggle corpse context menu</li>
+</ul>
+<p><strong>IK Improvements</strong></p>
+<ul>
+<li>Various improvements to IK/Jitter</li>
+<li>Improved left hand rest pose when not two handing a gun</li>
+<li>Shoulders no longer go lower than they should when crouching, this helps keep IK working consistently even when crouched. They always will stay 1-1 with head height</li>
+<li>When crouching both physically and with joystick, your character will now move 1-1 with you. For example, if you look down then crouch really fast, you won’t see your legs lagging behind</li>
+<li>Fixed wrist twisting when running with disable run animation enabled (sometimes it starts twisting again I have no idea why, so not fully fixed yet)</li>
+<li>Big improvement to overall stability when walking on uneven surfaces, this also significantly reduces that sudden jolt up/down when you start/stop walking while crouched</li>
+</ul>
+<p><strong>Variable Scope Rework</strong></p>
+<ul>
+<li>Total rework of variable scopes, it’s all using base Tarkov’s scope code now. I’m just taking full control of the FOV and making it analog. The result of this is that the scopes.json file is no longer needed and every scope should just work, even modded ones</li>
+<li>Adjusted physical zoom dial to make the hand turn the direction you are actually turning your hand</li>
+</ul>
+<p><strong>UI Fixes</strong></p>
+<ul>
+<li>Edit build menu fully re-done, should work just like base eft now</li>
+</ul>
+<p><strong>Various Bug Fixes</strong></p>
+<ul>
+<li>Fixed sako and golden tt two handed grip</li>
+<li>Laser pointer should now stay on loading screen all the way up until the countdown ends (only on fika, base spt is weird)</li>
+<li>Fix to right click menu closing - no more stuck right click menu, if you click away from the menu, it’ll close now as it should</li>
+</ul>
+<p><strong>Mod support</strong></p>
+<ul>
+<li>Added support for weapon customizer mod (moving attachments on rails, it all #justworks)</li>
+<li>Added support for Loose Loot Use mod, works perfectly with the manual eating</li>
+</ul>
+<p><strong>Git pulls from killdns- Thank you! - <a target="_blank" class="external-link" href="https://github.com/killdns" rel="noreferrer noopener">https://github.com/killdns</a></strong></p>
+<ul>
+<li>Held items will not get stuck mid air anymore while walking - fix by killdns</li>
+<li>Arm stamina drain and weight gets added when holding an item - done by killdns</li>
+<li>Vive wand compatibility improvement and scroll bar in VR settings menu - done by killdns</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2567/cloudsix-volumetric-clouds/">CloudSix - Volumetric Clouds</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/99e1036a20df92be9c19b1fef0b1cd0bad4738c4d065049ec6da953aff9923ab?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/a88bfb48-7103-44ac-ab17-5f29874df6f0?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A10Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A59Z&amp;ske=2026-08-01T21%3A08%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Y5KbznQEirC0gMsrh2PCNf6kpWIeZknN0aCFIbtllx8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxMiwibmJmIjoxNzg1NjE1NDEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b_CjAtOL1fWPPyp6VtTtZw1_Xk469YD1kfCzNv8-Ddg&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.6</h2></div><time datetime="2026-04-27T20:10:00.000000Z">27 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>951 downloads</span><span>14.0 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Fixes an issue with not being able to extract after dying with the latest Fika</li>
+</ul>
+<p>Quick Note - I know I’ve been pretty quiet/slow on updates for this mod lately. Kinda been obsessed with the side project with the clouds… but that’s now released into version 3.0.0 and it may even be the final version. So, any modding work I do going forward should just be on this VR mod.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2567/cloudsix-volumetric-clouds/">CloudSix - Volumetric Clouds</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d5df4ab715398e3c2d2359c360c4fff47902b29bcf05a9102de853e571d8acb9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/d8e11a2a-26f2-4006-93dd-43bb860988f8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A55%3A50Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.6.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A55%3A23Z&amp;ske=2026-08-01T20%3A55%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ngILwH%2BL0uGhuBQ%2Fg81J1mikLIqhOuQ%2BETbd%2FsKGA%2FI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxMiwibmJmIjoxNzg1NjE1NDEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b_CjAtOL1fWPPyp6VtTtZw1_Xk469YD1kfCzNv8-Ddg&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.6.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.5</h2></div><time datetime="2026-03-12T18:47:00.000000Z">12 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>870 downloads</span><span>14.0 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>NOTE: If you are experiencing crashes while using dynamic maps, remove the mod. Not sure what’s up with it but it is causing crashes for someone that tests this VR mod</strong></p>
+<p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Added a patch to reduce VRAM usage of dynamic maps</li>
+<li>Fixed the hang when opening the map with dynamic maps installed (this freeze actually happens on the flatscreen version of the mod too, it is just jarring in VR so I fixed it)</li>
+<li>Removed eye adaptation</li>
+</ul>
+<p>The removal of eye adaptation is pretty significant. Everything won’t get absurdly dark now when there’s an overcast. Eye adaptation usually just isn’t good in VR. Keep in mind, this will make nights considerably darker, tbh tarkov nights are a bit too bright anyway. I suggest using this mod too for darkness in interiors - <a target="_blank" class="external-link" href="../../2613/brighter-interiors/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2613/reduce-fake-interior-shadows#description</a></p>
+<p>Don’t forget to install my cloud mod if you haven’t already. I have it connected to this as a dependency.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2567/cloudsix-volumetric-clouds/">CloudSix - Volumetric Clouds</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/28bf066aaebf8e31351a77071705d00c32f8c1fe9ed93a01bc6f3b9281ff07eb?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/6079e770-5822-4162-ada5-19e4df88daf2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A49%3A56Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A49%3A42Z&amp;ske=2026-08-01T20%3A49%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=HcIU%2B%2BADafnvV6ini6aFJkop4a%2BxA1NKmCflMhLPewI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxMiwibmJmIjoxNzg1NjE1NDEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.b_CjAtOL1fWPPyp6VtTtZw1_Xk469YD1kfCzNv8-Ddg&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.4</h2></div><time datetime="2026-03-09T06:36:00.000000Z">9 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>122 downloads</span><span>14.0 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>1.2.4 Upcoming Changes</strong></p>
+<ul>
+<li>Clouds have now been removed from SPT-VR - Download it here, big update for it too! - <a target="_blank" class="external-link" href="../../2567/cloudsix-volumetric-clouds/" rel="noreferrer noopener">https://forge.sp-tarkov.com/mod/2567/cloudsix-cloud-replacement</a></li>
+<li>Fixed DLSS/FSR quality changing mid-raid</li>
+<li>Added support for Dynamic maps, the current version of Dynamic Maps has a few issues so you may see some nulls in your logs. Everything works though - Hold trigger and move to move the map around, hold trigger and move thumbstick up and down to zoom in/out</li>
+</ul>
+<p><strong>NOTE:</strong> Just to explain why I removed the clouds from SPT-VR - it just started getting confusing working with both of them moving changes between the two and testing on both. Separating it makes it so I just need to test them on flatscreen and if they’re working good there I know they’ll be good in VR. Also, this gives you the option of using older versions of my clouds.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2567/cloudsix-volumetric-clouds/">CloudSix - Volumetric Clouds</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e02a5f1764be40167c9bacd7bc1f471843fc8d211647bf4c4dc0f65251f70e43?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/b0a40b59-19d3-481e-9aeb-841876728f39?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A59Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A06Z&amp;ske=2026-08-01T21%3A03%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=PTuzGO%2BDmekVo4rkySo1xpV26MbcWHpo1odPula0rSo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxMywibmJmIjoxNzg1NjE1NDEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Mu42wJunVV-aOO-fmze_6366U30LQp2hgbaP3zB0CQI&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.3</h2></div><time datetime="2026-02-17T01:09:00.000000Z">17 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>535 downloads</span><span>15.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog:</strong></p>
+<p><strong>NOTE: This build currently has a bug where DLSS/FSR quality will not change when changing the setting mid-raid. I have fixed this for the next update.</strong></p>
+<ul>
+<li>Adjustment to clouds, night will now have a base cloud color and brightness set. Having the night colors/brightness be based dynamically on the moon color wasn’t good and also hollywood graphics moon brightness adjustments made the clouds too bright</li>
+<li>Artifacting around grass during winter season with ambient occlusion enabled fixed</li>
+<li>Disabling DLSS will now work properly, it wasn’t working at all before</li>
+<li>DLSS will not disable anymore while in inventory</li>
+<li>Complete re-write of the upscaler quality selection, it’s much cleaner now</li>
+<li>The above re-write fixes a really bad issue with DLSS that I didn’t notice, DLSS will now set the correct quality upon loading into hideout/raid</li>
+</ul>
+<p>So regarding the last point, a tester noticed that when they turned DLSS off then back on mid-game, they would get better performance. After investigating this, I found that a bug was pretty much resetting your render resolution to 1x effectively gaining you no performance benefits. Disabling and re-enabling it would fix it. This is now resolved, so some people may notice a pretty good improvement in performance if you used DLSS.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f27dac09c22e40b023e3a1c640345089d5d484b373e976f86869b7c128261034?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/fab05298-9ff5-469d-9785-fd0642d97b73?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A24Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A04Z&amp;ske=2026-08-01T21%3A04%3A24Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mAtM4h%2FLqzLl%2F%2Bns3AkRZ6b5SRURP%2FSsD%2FNBPXD8%2BRg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxMywibmJmIjoxNzg1NjE1NDEzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Mu42wJunVV-aOO-fmze_6366U30LQp2hgbaP3zB0CQI&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.2</h2></div><time datetime="2026-02-01T03:11:00.000000Z">1 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>619 downloads</span><span>15.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>NOTE: Just a reminder, if you are using SPT-VR, you don’t need my other two mods, AO Replacer and CloudSix. It’s built into SPT-VR because it requires it</strong></p>
+<p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Various bug fixes to cloud code that wasn’t noticeable in-game</li>
+<li>Fixed an issue where clouds didn’t spawn when going into your next raid</li>
+<li>Fixed an issue where clouds weren’t appearing in scopes</li>
+<li>Restored Tarkov’s cloud terrain shadows (they don’t line up with my clouds unfortunately but if you’re not paying attention to that it is a nice effect)</li>
+<li>Fixed an issue where disabling DLSS wasn’t working</li>
+<li>Adjusted AO to use Deferred/Gbuffer, this reduces the amount of AO you will see but it is a more accurate use of AO</li>
+<li>Fixed an issue where setting TAA in graphics settings would break rendering</li>
+<li>Fixed GPUInstancer frustum and occlusion culling in VR so the disable frustum and occlusion culling options in VR settings will be removed (tree’s still cull in the far right of your right eye, wasn’t able to figure out what culling is doing this)</li>
+<li>Reduced a forced lodbiasfactor from 3 down to 1.5</li>
+</ul>
+<p>About that last point - This has been forced to 3 for a while in the mod, I never paid much mind to it but when I was messing with that value in flatscreen, I noticed it would drop fps by 20-30 in some areas if set to 3. Unsure if this will have much of an effect on performance in VR though.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/049f2761bb8b449e52ee988e5c9b2fd802312db8f76d81d8d080340da29d03fb?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/ca321f6a-2c30-4f1d-953a-da26e8120266?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A51Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A34Z&amp;ske=2026-08-01T20%3A56%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nGzCWOjoC83h96Nc3Y6i0L20NpG3Lqxmqz8bWnEHScc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIxNCwibmJmIjoxNzg1NjE1NDE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.8v04CrGQhBfwscchrOYo0F-MU78K0_whtz0upje3shc&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-01-26T05:21:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>279 downloads</span><span>15.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><em><strong>NOTE: If you are using Fika, update it! Extracting from raid will cause a crash if you’re not on the latest version of Fika</strong></em></p>
+<p><strong>Update Changelog - The graphics update!</strong></p>
+<p>Just want to start by saying, this is mainly a graphics update for the mod to try and get things looking better. There’s two big parts of this update, new clouds, and new ambient occlusion method that is fully compatible with VR - GTAO. The clouds are using a totally custom made shader by me, I have spent <em>a lot</em> of time on this shader. Basically, it’s significantly more physically aware (I feel they look better than tarkov’s built in clouds at times). The GTAO completely replaces Tarkov’s AO and it works properly in VR, which means same shading in both eyes and it’s also a lot more accurate AO than Tarkov’s built in HBAO.</p>
+<ul>
+<li>Improved upscaler support, just adjusted some things with jitter and the way things were being rendered which may improve quality (no more DLAA, to my surprise, DLAA actually uses a special wrapper that Tarkov does not support so it was not working properly)</li>
+<li><em><strong>Totally rewrote my custom cloud shader and scripting. It looks A LOT better now, the dome is now massive, you won’t see like the far buildings on customs behind the clouds anymore. Cloud lighting is fully dynamic based off the direction of the sun and color of sky/sun. Clouds are now being rendered directly through commandbuffer to avoid being effected by post fx, this keeps the clouds from being totally blown out</strong></em></li>
+<li><em><strong>New AO implementation which totally replaces Tarkov’s AO. It’s now using GTAO instead of HBAO which is more accurate and also VR/Stereo compatible so you’ll see the shading the same in both eyes. To use it, just set the ambient occlusion setting in graphics tab to your preferred quality (colored ultra is the same as ultra)</strong></em></li>
+<li>Fixed Fika extract issue</li>
+<li>Added support for new Fika loading bar</li>
+<li>Fixed a long standing issue with MDR’s and possibly other guns getting stuck in animation if you med or eat while in inventory</li>
+<li><em><strong>New weapon weight system, it’s actually the best way to play now imo. It’s not as restrictive as it was, you’ll feel the weapon weight but if you pull/move your hand fast enough, it’ll respond much faster. So you’ll be able to make those quick adjustments without feeling like you’re pulling the gun through water</strong></em></li>
+<li>Re-added fog but I have it disabled by default, I’m going to look into a total fog replacement at some point. The fog I was using does not work nicely with the upscalers at all</li>
+<li>Going prone no longer hides arms. Found out with Gbtonzee that my changes I made a while back to shoulder placement completely resolved the broken arms while prone</li>
+<li>Dedicated in-game keyboard toggle - Thanks @mayoi for this! Check their github here - <a target="_blank" class="external-link" href="https://github.com/dasanibroto" rel="noreferrer noopener">https://github.com/dasanibroto</a> - Hope it helps people that can’t use the steamvr keyboard (they have another <em>add-on</em> they’re working on for sptvr that a lot of people have asked for )</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/5cd8136992a580df4e81ef5d3d7e02f0fd8778ff5ba2f460bb484b238ac9fd26?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/dd469980-e5f4-4e47-9fbe-23c75fcfdb17?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A43Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A28Z&amp;ske=2026-08-01T21%3A09%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=RlVTxPcu5QO3lxu%2B5h4ct1BbBcnXHjaPgkTMEAW37sc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIyOCwibmJmIjoxNzg1NjE1NDI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S6a8t9wQThF0JYzLzj8R21Sm-AohmkPA5TdcRng-CPg&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-01-05T04:00:00.000000Z">5 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,098 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Massively Small Feature Update!</strong></p>
+<ul>
+<li>DLSS, FSR2, and FSR3 are now fully supported!</li>
+<li>Various long standing null fixes such as the “OnClick” null</li>
+<li>Anti Aliasing and upscaler settings work in the graphics settings menu now (the AA option only works for off and FXAA)</li>
+<li>Temporarily disabled fog completely, the custom fog I was using to replace tarkov’s fog does not work nicely with upscalers because of the camera jitter. I’ll look into a new solution, I tried really damn hard to fix it with no luck.</li>
+</ul>
+<p>But yeah, this is a HUGE improvement to visual clarity AND performance. Especially for Nvidia users, DLSS with preset K looks actually really damn good in VR.</p>
+<p>This is a long time coming. It’s something I’ve been trying to get working since I’ve taken over on development. To say this was hard to figure out… is an understatement. Basically soon after the last update, I had an idea that partially worked for it and since then I’ve been non-stop every day all day working on getting it all working properly. One thing led to another, I ended up writing up A LOT of a custom stuff here. It was a massive headache, I never realized how many small details go into these upscaler solutions…</p>
+<ul>
+<li>Custom stereo upscaler wrapper for all upscalers (except FSR1 because really.. why would you use that)</li>
+<li>Custom jitter handler for the camera</li>
+<li>Lots of patching work to bypass tarkov’s rendering systems and settings to set my own quality presets</li>
+</ul>
+<p>Quality settings are not the same as normal FSR/DLSS, I adjusted the scaling to better fit VR, you don’t want to scale up <em>too</em> much, that looks terrible in VR.</p>
+<p>Quality: 1x for DLSS which is just DLAA - 0.95x for FSR, FSR needs a bit of upscaling to work properly</p>
+<p>Balanced: 0.8x</p>
+<p>Performance: 0.7x</p>
+<p>Ultra Performance: 0.5x</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/50fa5d069755b724011994ad03c2b0bf2abcdac9a51744187a7416ecb97bcc90?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/d2054947-81c0-43d7-95c7-f26c67e9f765?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A45Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A31Z&amp;ske=2026-08-01T21%3A11%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mV%2Fg02Pw%2BPvxF%2BUkna1C2%2B6W1qZMwpYzG1Xec5l89xM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIyOCwibmJmIjoxNzg1NjE1NDI4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S6a8t9wQThF0JYzLzj8R21Sm-AohmkPA5TdcRng-CPg&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.4</h2></div><time datetime="2025-12-28T23:53:00.000000Z">28 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>344 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix changelog</strong>:</p>
+<ul>
+<li>Disabled a part of code that isn’t needed anymore that was handling placing the shoulders under the camera. I started handling this in a different place and didn’t realize this code was still here.</li>
+<li>The above change results in the NL545 from the WTT backport working properly</li>
+<li>Fixed the frustum and occlusion culling toggles not saving</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a183b516ac92a6d75becf19027e1aac26f8163ce43f3400a2ce673fdc0dfeeb9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/d741e138-787b-4323-8cce-c8c0c2e0d445?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A57Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A02Z&amp;ske=2026-08-01T20%3A59%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=puQpAcW%2F0GHVqyIQLgZieiFQk1QZ2GmYrOexnSD8Us4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIyOSwibmJmIjoxNzg1NjE1NDI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.HFxXrByKphJB_x-P9I3I8AZxTfm2qqgVx5Sr3yK9X9U&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2025-12-21T06:19:00.000000Z">21 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.10</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>478 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog</strong></p>
+<ul>
+<li>Various optimizations</li>
+<li>Adjusted ramp for hold breath smoothing, the smoothing should ramp up more now the higher your zoom is</li>
+<li><em><strong>Shoulder positioning 2.0 - Shoulders are now placed nearly perfectly, you will be able to aim up now without your left arm pulling back and detaching from the gun foregrip. This also just feels like an overall improvement for the arm IK</strong></em></li>
+<li>Toggles in VR settings to disable frustum and occlusion culling GPUInstancing, unfortunately couldn’t figure out a way to get it working properly for multipass stereo so just added toggles. This completely resolves the issue of grass culling all the way to the right in your right eye and also grass disappearing in your right eye when a gun is blocking it in your left eye. If you’re worried about performance, you can disable occlusion culling and leave frustum on. Occlusion culls out grass behind gun, frustum culls out the grass on the right</li>
+<li><em><strong>Auto arm length adjustment when loading into a raid and when using the reset height bind - this isn’t <em>perfect</em> I currently have this working by moving your shoulders forward/backward based on your height. So I had to sort of hold it back a bit to avoid your shoulders moving <em>too</em> much and causing IK issues</strong></em></li>
+<li>Quick transfer items to sell at trader by holding right grip and pressing A</li>
+<li>Quick reload added, works by double tapping the reload button (if this isn’t working for you go into tarkov steamvr bindings, edit it, and remove the long press action for the B button on controller)</li>
+<li><em><strong>Update to head to leg sync, when looking down while walking, legs will not move ahead of your head position anymore, same for looking up, legs won’t move back further when looking up while walking</strong></em></li>
+<li>Reduced timer on when movement stop is detected, before when you would stop and then try leaning, your legs will follow too quickly. There was a delay between moving and stopping, I reduced that timer. So now as soon as you stop moving and try leaning, legs shouldn’t instantly follow. Together with the previous point, this makes leaning a lot more predictable</li>
+<li><em><strong>Velocity based melee, you can now just swing your hand with a melee weapon out and it will work!</strong></em></li>
+<li>Shoulder positioning adjustments for sprinting with sprint animation is disabled (it’s a lot better now)</li>
+<li>Right shoulder moves back a bit when aiming to simulate a shooting stance to make IK behave better, specifically the elbow</li>
+<li>Adjusted wrist raycast for wrist UI’s, it works a lot more consistently now</li>
+<li>Fixed camera flying off to some random spot for a second when using meds/food with your melee weapon out</li>
+<li><em><strong>Grenade pin resetting by pressing left trigger after pulling pin</strong></em></li>
+<li>Re-did grenade animation handling, it looks a lot better now. Instead of it playing through the whole animation, it starts around the point you let go of the grenade with hand open</li>
+<li><em><strong>Seated mode added to VR settings menu, this basically just makes it so arm length adjusts better when sitting in an average office chair</strong></em></li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/663e1788444eb8d295bb435e6c2615049d6f6ec44424b32684aeebb087f1055a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/0a50d503-5ff3-45e3-9bf6-0da2398d33b7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A59Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A45Z&amp;ske=2026-08-01T21%3A12%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SHJFyoyvq3gCWOYPhB6axw511huQ8k3YMijCF5JqVe8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMCwibmJmIjoxNzg1NjE1NDMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.apc3Sb1Q5s8txa_kOe0hHgBGx0iMKXd-JpMVRhE-8q4&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-27T02:45:00.000000Z">27 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,080 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Small bug fix</strong></p>
+<ul>
+<li>Fixed an issue where if you went prone then stood back up, your body wouldn’t stay in sync with your rotation</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/24b260124a048cbe692a792ac41c3144405523af3a09440c3b3e76ea1666bbd9?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/5b7fed0b-9eda-4d58-bdd3-43a40d2ed29c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A14Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.21.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A54Z&amp;ske=2026-08-01T21%3A06%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tMmvNKmnEYjE9kKAKFHEySgvpWnRTpeQso1n2ILiXck%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMCwibmJmIjoxNzg1NjE1NDMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.apc3Sb1Q5s8txa_kOe0hHgBGx0iMKXd-JpMVRhE-8q4&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.21.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-26T04:05:00.000000Z">26 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.6</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>94 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix changelog:</strong></p>
+<ul>
+<li>Fixed ADS not selecting the correct scope when you change your scope mid-raid to a scope with a red dot on top</li>
+<li>Changed some VR settings naming - Changed “Weapon Aim Smoothing” to just “Weapon Smoothing” as this option didn’t only take effect when aiming. Changed the weapon aim smoothing slider to “Weapon Smoothing Strength” which is a lot more understandable, the higher the strength, the more smoothing will be applied. Changed the “Scope Smoothing” toggle to “Turn On Hold Breath Sensitivity” and changed the slider for it to “Hold Breath Sensitivity”. The higher the sensitivity slider, the more reactive your movements will be</li>
+<li>Re-did scope/hold breath smoothing, if you have the “Turn On Hold Breath Sensitivity” setting enabled, the smoothing will now dynamically adjust based on your current zoom level, this makes scopes a lot more practical to use</li>
+<li>Un-did something I did to remove ADS animation which caused stamina to not drain resulting in coming up with a custom stamina drain. After testing stuff, I found out this had no effect on the ADS animation. Normal Tarkov stamina is back, no more double speed arm stamina drain</li>
+<li>Other various adjustments to IK</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0231a468e97bb1c6b1ddede72ab4e0b2138dd7732e9f7c94b4f2c1f5732005f4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/5b7fed0b-9eda-4d58-bdd3-43a40d2ed29c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A14Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.21.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A54Z&amp;ske=2026-08-01T21%3A06%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tMmvNKmnEYjE9kKAKFHEySgvpWnRTpeQso1n2ILiXck%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMCwibmJmIjoxNzg1NjE1NDMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.apc3Sb1Q5s8txa_kOe0hHgBGx0iMKXd-JpMVRhE-8q4&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.21.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-23T02:54:00.000000Z">23 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.6</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>173 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Small update, just wanted to get out a polish pass on the big polish pass~</p>
+<ul>
+<li>Added toggle to re-enable EFT’s weapon inertia when turning, this was totally removed in 1.1.1 but I notice after fixing all the bad jitters, I actually kinda like this effect, I know others don’t though. Therefore- toggle!</li>
+<li><strong>Adjusted shoulder positioning when disable run animation is toggled, this makes this option a lot more practical to use! Doesn’t look <em>great</em> still but looks a lot better (I set this to toggled on as default setting for new users of the VR mod)</strong></li>
+<li>Fixed IK breaking when you spam trigger to cancel using item</li>
+<li>Fixed haptic/vibration spam when hand is near foregrip</li>
+<li>Various null fixes</li>
+<li>Removed distance check on scopes/sights and just made the toggle angle smaller to avoid accidentally toggling aim. The max distance I setup didn’t seem to work consistently for all guns/sight configurations</li>
+<li><strong>ADS jitter fully resolved, no more jitter whatsoever when going to aim</strong></li>
+<li>Slight shoulder placement adjustments when not running</li>
+<li>More improvements to run anim disabled setting, now when you make a sudden stop your gun doesn’t get stuck in animation and move away. There’s still a sudden stop movement with your hands/arms but you’ll keep full control of your gun</li>
+<li><strong>You can now control your gun almost immediately after a jump and you’ll keep control of it when landing too (get them trick shots)</strong></li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bdc332fc408585b92487a9f8ac574715952c52f865aba69dd085a58accff1508?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/5b7fed0b-9eda-4d58-bdd3-43a40d2ed29c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A14Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.21.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A54Z&amp;ske=2026-08-01T21%3A06%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tMmvNKmnEYjE9kKAKFHEySgvpWnRTpeQso1n2ILiXck%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMCwibmJmIjoxNzg1NjE1NDMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.apc3Sb1Q5s8txa_kOe0hHgBGx0iMKXd-JpMVRhE-8q4&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.21.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2025-11-16T17:54:00.000000Z">16 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.6</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>328 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Important:</strong> There has been some adjustments to controls, check the controls on the main page of the mod or read through this changelog</p>
+<p>I have spent an insane amount of time trying to improve the overall experience in SPT-VR and this is the result of that hard work. This is probably the biggest polish pass that this mod has had so far. I’ve pretty much tried to improve on everything across the board specifically arm IK and gun handling. But there are just loads of other things check the changes below.</p>
+<p><strong>NOTE</strong>: Left handed mode unfortunately won’t be able to see all of these IK improvements. I’m going to have to fine tune specifically shoulder placement for left handed. If you are left handed, I would recommend restarting your game after enabling left handed mode. Also if you are having trouble using left click in left handed mode, edit your steamvr bindings and remove the “start” binding from long press X/A on left controller. Unfortunately, this seems like a default binding from SteamVR.</p>
+<p><strong>Update Changelog:</strong></p>
+<ul>
+<li><strong>New way to control tactical devices, this change was needed because the old way doesn’t sync with other Fika players and also bots didn’t detect flashlights/lasers - New build you will control tactical device by holding left grip and tapping B to turn on/off and hold B for 0.3 seconds to toggle to next. Highlight tactical device functionality has been completely disabled</strong></li>
+<li>Menu laser pointer will now stay visible for most of the time on raid load screen</li>
+<li>Opening inventory/UI will now force your left hand to disconnect from your gun if you were two handing it. This results in improved IK consistency and less jank</li>
+<li>FPS independent rotating when using smooth turn. Before, when rotating with your thumbstick, the turning would feel more choppy depending on how low your FPS was</li>
+<li><strong>Completely disabled weapon tilting when rotating/strafing</strong></li>
+<li><strong>Completely disabled the animation that happens when ADSing resulting in significantly less jitter</strong></li>
+<li><strong>Improved the ADS input trigger to avoid ADS spamming when looking at the gun at certain angles, even less jitters for ADS yay!</strong></li>
+<li>Fixed the issue where guns without stocks and some pistols would shift forward when ADSing</li>
+<li>Adjusted scopes.json file, a lot easier to understand and just much cleaner to look at</li>
+<li><strong>Fixed the arm IK when rotating your wrist, no more twisted forearm</strong></li>
+<li><strong>Improved IK to make it feel more natural and less static, when you twist your wrists inwards, your elbow will move outwards</strong></li>
+<li>Adjusted the extract timer menu on your wrist to be more consistent</li>
+<li>Adjusted the raycast used to interact with containers, doors, loose loot, and the wrist menu’s. The raycast now has a wider radius making it much easier to get the context menu’s to come up, this is a huge help for those really small items like keys or small ammo boxes</li>
+<li><strong>Added backpack quick drop, when you’re not holding loose loot and put your hand into the backpack collider then press trigger, backpack will release</strong></li>
+<li><strong>Added toggle for head lamp, works same way as toggling night vision except you press trigger rather than grip to toggle it</strong></li>
+<li><strong>UBGL dedicated toggle, while holding the gun with your second hand, hold left trigger and press A</strong></li>
+<li>Changed how main sight is determined, now whenever you have a scope attached it will <em>always</em> use the scope as the default sight. This makes a lot more attachment configurations work, example is a optic scope with ring mounts that have rails on them, if you put a reflex on it, it won’t disable the scope camera anymore</li>
+<li><strong>BTR menu fixed and is now usable</strong></li>
+<li>Epics AIO modded scopes partial support</li>
+<li><strong>Gun jitter fixed on uneven surfaces like rubble and slopes</strong></li>
+<li><strong>Moved shoulders, they are placed much better now in relation to your head</strong></li>
+<li>Overall IK improvements</li>
+<li><strong>Item wheel can now be accessed using the same collider as your backpack, reach back and press grip</strong></li>
+<li>There’s now a cooldown system with inputs to avoid double triggering collider inputs, this fixes a busy hands bug that happens when too many actions happen too close to each other</li>
+<li>Fixed placement of extract, transit, and placing item UI to be more out in front of you and easy to see</li>
+<li>Adjusted size of right click menu to be easier to select options</li>
+<li>Fika main menu online players screen fixed</li>
+<li>Fika send item UI fixed</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/934fa7ba676ddf898d34be118f276ab8170923989b6b212f218e4fdb5f22a6bc?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/db8331ba-1d57-403f-9820-cbc109913cf6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A11Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A12Z&amp;ske=2026-08-01T21%3A06%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1B3pTEMMvYYh8yzVn5zDi6N3QDClOj5P3ePvwGncY00%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMSwibmJmIjoxNzg1NjE1NDMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.849ih9LqWxrBsV8nMmo9pfqyaIlDjMxLLLTLkGPapQ8&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-10-31T17:30:00.000000Z">31 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>673 downloads</span><span>14.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Updates:</p>
+<ul>
+<li>Updated to SPT 4.0.x</li>
+<li>Added support for EFTToggle (new function for toggling buttons)</li>
+<li>EFTToggle support fixes stash sort table and search functions</li>
+<li>Removed EFT’s “ram cleaner” from running when opening inventory (this was not a proper usage of this)</li>
+</ul>
+<p>No other significant changes from previous 3.11 build. I did make some adjustments a while ago during early testing builds of 4.0, mainly fixes to improve gun jitter when standing on the edge of a curb or on slanted surfaces.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/89721d157567c33f0f4b415d6621b0e7c1c5a3a4b5810d17385dbbc7f81d36fb?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/663849239/6cd40c62-1802-4df0-a632-41d2833a6725?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A06Z&amp;rscd=attachment%3B+filename%3DSPT-VR-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A50Z&amp;ske=2026-08-01T20%3A57%3A06Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eYV9fmbf6bnBkUUqiQ3PWJBsLe05SRIT8%2F0koeW2WSc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNzIzMSwibmJmIjoxNzg1NjE1NDMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.849ih9LqWxrBsV8nMmo9pfqyaIlDjMxLLLTLkGPapQ8&amp;response-content-disposition=attachment%3B%20filename%3DSPT-VR-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.9</h2></div><time datetime="2025-06-06T18:07:46.000000Z">6 June 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,374 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>I’ve setup a ko-fi, I’ve held off from doing this for a while because I didn’t feel like I’ve done enough to accept any donations, at this point though I’ve been working on this day and night and have made some pretty significant changes so if anyone wants to send some support it’s greatly appreciated <a target="_blank" class="external-link" href="https://ko-fi.com/matsix" rel="noreferrer noopener">https://ko-fi.com/matsix</a></p>
+<p><strong>Highly recommend installing my other mod - <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2876-vram-cleaner/" rel="noreferrer noopener">VRAM Cleaner</a></strong></p>
+<p><strong>Big Update:</strong></p>
+<ul>
+<li>
+<p><strong>Grenade fix, no more issues with your hand getting stuck when pulling out a grenade, and your hand will always be placed in the correct spot</strong></p>
+</li>
+<li>
+<p>Right click context menu and inspect window will not open in front of or behind the inventory anymore if you’re looking too far up/down when opening inventory</p>
+</li>
+<li>
+<p>Inspect window will not open way out of view anymore if it’s opened while prone</p>
+</li>
+<li>
+<p>Partial fix for stash while in hideout, items should be visible, but it’ll only work if you’re facing somewhat forward in your playspace, if you physically turn 90+ degrees items will disappear (visually not actually)</p>
+</li>
+<li>
+<p>Trader, flea market, messages, etc. menu positions fixed while in hideout</p>
+</li>
+<li>
+<p>Fixed null that would occasionally happen when entering hideout causing controls to stop working</p>
+</li>
+<li>
+<p>Slight change the cloud density scaling, it was getting too cloudy a bit too quickly and the sun was still casting shadows which means it wasn’t scaling to tarkov’s clouds correctly, should be a bit better now</p>
+</li>
+<li>
+<p>Fixed an issue with physically picking up items that would cause a null and make the item get stuck in your hand</p>
+</li>
+<li>
+<p>Shouldn’t run into any issues with not being able to physically pick up items anymore</p>
+</li>
+<li>
+<p>It’s now setup where if you’re currently holding an item, you won’t have the context menu show up to loot an item you’re looking at. This is to avoid you picking up the item in your hand with context menu which causes nulls</p>
+</li>
+<li>
+<p><strong>Added FXAA built directly into the render pipeline, doesn’t completely get rid of the noisiness or aliasing but definitely helps smooth out some edges</strong></p>
+</li>
+<li>
+<p><strong>Jitter fixed when standing on a slope, no more needing to find stable footing while aiming! This is big, it probably happened in a lot more places than you think, if you stood even on the edge of a curb or anything that changed your elevation, your gun would jitter like crazy. It was almost impossible to aim while standing on stairs</strong></p>
+</li>
+<li>
+<p><strong>You can now yeet loose loot that you pick up in the world! (not fika synced)</strong></p>
+</li>
+<li>
+<p><strong>You can now… yeet grenades. Like it’s actually proper. You can toss a grenade, drop a grenade, lob it through a window, underhand it, it just works™ (Is fika synced)</strong></p>
+</li>
+<li>
+<p>Fixed left arm IK when using grenades/melee</p>
+</li>
+<li>
+<p><strong>Realized ram cleaner was being totally bypassed in SPTVR, it now works the same way it does in base tarkov when the setting is enabled. Opening inventory will clean RAM</strong></p>
+</li>
+<li>
+<p>Other code optimizations here and there, such as getcomponent and camera.main not being called every frame anywhere anymore (there may still be some spots I didn’t notice due to it not being obvious this will be a continued effort to improve performance in sptvr)</p>
+</li>
+<li>
+<p>Reduced VRAM usage in the main rendering logic</p>
+</li>
+</ul>
+<p>Thanks Gbtonzee for updating the scopes.config file, it now should include scopes that were missing and some modded scopes (modded scopes zooming won’t work properly unless they’re setup the same exact way BSG sets up scopes)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.9" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.7</h2></div><time datetime="2025-05-09T05:21:29.000000Z">9 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>490 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Read pinned comment</strong></p>
+<p><strong>Big Update! Lots of necessary fixes!</strong></p>
+<ul>
+<li>
+<p><strong>Scopes have been fully completed and should be way more consistent now. Smooth zoom will work even with the first zoom when you first spawn in. There shouldn’t be anymore issues where it’s showing the wrong reticle either</strong></p>
+</li>
+<li>
+<p>Body rotation has been tied to head rotation, hurts a bit with immersion by not separating it from the legs but it makes the arms IK wayyy more stable</p>
+</li>
+<li>
+<p>Gun does not shift anymore when saving settings and exiting menu, it will always be in the correct position now</p>
+</li>
+<li>
+<p><strong>Complete rewrite of the head to leg sync. You can lean left and right more now without your body following you and your legs will never be in front of your head anymore. If they do, just walking will reset the legs back to the right position</strong></p>
+</li>
+<li>
+<p><strong>Adjusted quickslot collider (for meds and nades) to left side, like how you take out map in ITR. The chest position felt a bit inconsistent and caused accidental opening pretty often. Avoid looking left when going to grab, looking left will make the collider move and become harder to reach.</strong></p>
+</li>
+<li>
+<p>Made the inventory always open directly in front of you regardless of your rotation, always at the same distance</p>
+</li>
+<li>
+<p>Adjusted fog a bit so that the alpha is never at 1.0, 1.0 is pretty much just opaque and it doesn’t look nice, I’ve capped it at 0.7</p>
+</li>
+<li>
+<p>Went the ITR2 route, arms will disappear when going prone and instead only shows hands. This avoids the really bad IK while prone (IK that I refuse to touch and destroy lol)</p>
+</li>
+<li>
+<p>Fixed bugs with some guns with changing fire select causing nulls and breaking a lot of functionality</p>
+</li>
+<li>
+<p><strong>Added support for all the new guns from EFT 0.16</strong></p>
+</li>
+<li>
+<p>Unfortunately, I’m thinking Fika support may need to be partially dropped. I’ve gotten it to a point where it isn’t even throwing any errors anymore but it still crashes randomly. Base SPT has no issues like this, it seems like there’s been quite a few changes from Fika 3.9 to now. This VR mod changes so many different things, I think a special sptvr fika compatibility mod needs to be made for whoever is hosting and I’m just not capable of doing that and maintaining it, at least not yet. I’ve done some testing and it seems like self hosting fika when you have sptvr installed works a bit better though.</p>
+</li>
+<li>
+<p>Other random UI and bug fixes</p>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.7" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.6</h2></div><time datetime="2025-04-29T00:47:06.000000Z">29 April 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>202 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>New person here! Hey!</p>
+<p>Just want to start off by saying, Cybensis is a genius and I have the utmost respect for what he’s done to get this mod to the state it’s in. I am just a very passionate dude that didn’t want to see this die.</p>
+<p>On that note, I just want to let everyone know what my plans are for this mod. I’m less interested in compatibility with other mods. Imo, this mod changes too much in the game to be expected to keep up with other peoples mods and make sure they work. This is <em>meant</em> to be a sole installed mod sort of deal. Don’t expect <strong>anything</strong> to be compatible with it. Fika is the one mod that I want to try and keep this working with though because using a headless dedicated client is a massive help with performance when VR really needs every bit of it.</p>
+<p>-Also a quick shout out to the few people that were testing this. I was pushing out new testing builds often so I really appreciate any time you spent making sure things were working!</p>
+<p>Thank you Havviks, groundzeroday, gbtonzee, and LiftIsTheWhey</p>
+<p><strong>Big update!</strong></p>
+<ul>
+<li>Updated to SPT 3.11</li>
+<li>Added smooth variable zoom similar to how it works in tarkov now, all variable scopes are smooth, non-variable switch between the two. I’m not using BSG’s implementation of this, I’ve completely re-did the way scope zoom works.</li>
+<li>Added variable smooth zoom sensitivity to settings</li>
+<li>Added “disable run animation” option in VR settings</li>
+<li>Added “Disable prism effects” in VR options, this totally disables the post processing component BSG uses (may not work nicely with amands)</li>
+<li><strong>BIG</strong>: W.I.P. Enabled a new fog using prism effects, BSG fog is totally broken in VR so needed a new solution. Currently the fog is setup to where it will actually move dynamically based on the weather. I tied the fog to the fog density calculations which are running every frame in game. And… YES the fog can be disabled (this may also not work nicely with amands) Best thing about this new fog is that it no longer has graphical issue, I’ve made it look exactly the same in and out of the scope. There is some random times where you can notice the fog isn’t appearing great in VR but it works significantly better than old fog</li>
+<li>Fixed random bugs that came up with 3.11</li>
+<li>Fixed AddOffer menu not working</li>
+<li>Picking up loose loot and putting it behind your back is now instant, no longer does pickup animation</li>
+<li>Fixed loads of other just random small bugs and nulls</li>
+<li>FIKA <em>EXPERIMENTAL SUPPORT</em> ….. it works, sorta. You can get into games fine but there’s random nulls and I know for sure a big null when you get killed which may require restarting your game. I’ve probably heavily over-engineered some of the patch fixes for it, I’ll come back to it</li>
+<li>Temporarily disabled EFT API, was having trouble with this, I’ll come back to it at some point. Not very important.</li>
+<li>Changed the way weapon hiding works when going into your inventory. This fixed a big bug that a lot of people probably had where if you changed scopes in inventory and exited the inventory after the animation of changing the scope finished, the scope would not work. That is resolved now, this may also fix some other random bugs.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.6" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.6+1</h2></div><time datetime="2025-04-29T05:11:39.000000Z">29 April 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>729 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Changes:</p>
+<ul>
+<li>Fixed FIKA support, it should be back to how it was on 3.9 Read below</li>
+</ul>
+<p>Yes, I was dumb. I was fixing FIKA support around when I first picked up on the development here and had no idea what I was doing. I overdid a lot of it because of a dumb mistake, reduced code back to pretty much what Cybensis had there but made some slight adjustments.</p>
+<p>NOTE: Just did some further testing, it’s a lot more stable but there is still a crash that happens occasionally on extract. I’ll get it figured out.</p>
+<p>Read stickied comment if you’re experiencing an issue where both eyes are appearing in one eye!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.6.1" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2024-12-08T10:12:16.000000Z">8 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>256 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>This release fixes the bug with scopes not working caused by changing from SPT 3.9 to 3.10, please note some scopes are still not configured and will still not work but the majority of them should still be working, and the variable zoom feature I implemented is also not working now, but will be fixed.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.3" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2024-12-07T06:15:43.000000Z">7 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>313 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h2><strong>Release V1.0.2 - Update to SPT 3.10 and some small improvements</strong></h2>
+<p>I was previously working on getting a left handed mode as well as adding some more motion sickness support options but decided to put that on the back burner for a little bit as SPT 3.10 released. This update doesn’t add anything special and might break some stuff I missed but for the most part things appear to be working. Below is a list of changes and known bugs/isssues:</p>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Updated to SPT 3.10 including support for transit</li>
+<li>You can now play the game in flatscreeen mode without removing the install files if no headset is picked up by steamvr</li>
+<li>Finally fixed the position of the right hand laser pointer</li>
+<li>Fixed some issues with guns in the hideout</li>
+<li>Fixed issue with using multiple of the same grenade causing issues</li>
+<li>Improved positioning of grenades to VR controller</li>
+<li>Slightly improved grenade accuracy</li>
+</ul>
+<p><strong>Known Bugs</strong></p>
+<ul>
+<li>Any new weapons added in Tarkov from the version in SPT 3.9 to SPT 3.10 likely won’t have any of the weapon highlighting working and won’t allow you to interact with the weapon, this will be fixed in the next update.</li>
+<li>The BTR is enterable if you look at the door, and you can use the menu in the BTR but the camera positioning is kind of off and selecting the talk to driver menu option doesn’t do anything at the moment</li>
+<li>Some really nice clouds were added in the updated version of Tarkov but unfortunately I have not found a way to get them rendering correctly in VR, so at the moment they are disabled. If anyone wants to help with this please let me know!!</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2825cba6d43e15975dead9f0caa413f61e5b85f120f36a4522ddd49fe9e472a8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/cybensis/SPT-VR/releases/tag/v1.0.2" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.matsix.sptvr</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>23 October 2024</dd></div>
+      <div><dt>Updated</dt><dd>31 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/cybensis/SPT-VR" target="_blank" rel="noreferrer noopener">https://github.com/cybensis/SPT-VR</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>Helps to write the code and reverse engineer the game, I am very open about this. This is a very complex project for a very err… complex? game that does not like being modded. Not sure if this mod would be possible without the help of AI… unless you’re a psychopath. Kidding, there’s some really talented people out there, I am just a dude making my dream VR game. So I use what I can.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

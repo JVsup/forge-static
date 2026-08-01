@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Operator Registry · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Operator Registry</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/1f0961e436d2b6ee842ed184c79c43a475c522649effec98789236f3da7df75f.webp" alt="Operator Registry thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Operator Registry</h1>
+    <p class="hero-teaser">A shared community identity system, dog tags use real players and levels from other mod users.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0a375ce54aa7e016c44b8a0a6413dcbe3e3ae68147f4f5fd3d8cfb7f7f2330b6.webp" alt="" width="32" height="32">shaneeexd</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>79</dd></div>
+    <div><dt>Favourites</dt><dd>3</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Operator Registry content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Players running this mod anonymously contribute their PMC identity (nickname + level)
+into a community registry. Other players then see these real community operators used as
+PMC bot names in their own raids.</p>
+<p><strong>This does NOT affect gameplay.</strong> Only the bot’s displayed nickname and level are changed.
+Equipment, inventory, health, AI, difficulty, bot generation settings and progression are
+never touched, fully compatible with ABPS and other AI mods.</p>
+<h2>How it works</h2>
+<p>When you launch the game, the mod anonymously registers your PMC’s nickname and level to a
+community registry. A central cache server collects all registered operators and serves
+them back to every player. At raid start, your game downloads the latest operator cache
+and uses those real community names for PMC bots in your raids.</p>
+<p><strong>No network calls happen during raids.</strong> The operator list is downloaded once at raid
+start and used locally for the entire raid. If the download fails, the last good cache is
+used instead - raids are never blocked by network issues.</p>
+<h2>What gets collected</h2>
+<p>Only:</p>
+<ul>
+<li>An anonymous, persistent <strong>installation UUID</strong> (generated once, never regenerated)</li>
+<li>Your PMC <strong>nickname</strong></li>
+<li>Your PMC <strong>level</strong></li>
+<li>Timestamps (<code>firstSeen</code>, <code>lastSeen</code>)</li>
+<li>SPT and mod versions</li>
+</ul>
+<p>No profile data, no equipment, no inventory, no gameplay stats. See
+<span class="dead-link">PRIVACY.md</span> for the full disclosure.</p>
+<h2>Requirements</h2>
+<ul>
+<li>SPT 4.0.13</li>
+<li>An internet connection (for registration + cache download on startup only)</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release.</li>
+<li>Extract the <code>SPT</code> folder into your SPT install directory
+(so it lands at <code>SPT/user/mods/SPT-OperatorRegistry/</code>).</li>
+<li>Launch the SPT server and start the game.</li>
+</ol>
+<p>On first launch the mod generates a persistent installation UUID and registers your PMC
+to the community registry. On every subsequent launch it updates your nickname/level/
+lastSeen (keyed by the same UUID, so it never duplicates).</p>
+<h2>Configuration</h2>
+<p>Edit <code>SPT/user/mods/SPT-OperatorRegistry/config/config.json</code>:</p>
+<pre><code>{
+  "enabled": true,
+  "operatorChance": 1.0,
+  "cacheUrl": "http://144.21.60.21/operators",
+  "maxCacheAgeHours": 24
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>Master switch. Disables both registration and bot replacement.</td>
+</tr>
+<tr>
+<td><code>operatorChance</code></td>
+<td><code>1.0</code></td>
+<td>Fraction of PMC bots that become community operators. <code>0.0</code>–<code>1.0</code>. Lower values leave more vanilla names.</td>
+</tr>
+<tr>
+<td><code>cacheUrl</code></td>
+<td><code>http://144.21.60.21/operators</code></td>
+<td>URL of the community cache endpoint. Set to <code>""</code> to disable cache downloads (registration still works).</td>
+</tr>
+<tr>
+<td><code>maxCacheAgeHours</code></td>
+<td><code>24</code></td>
+<td>Max acceptable local cache age before a background refresh is triggered.</td>
+</tr>
+</tbody>
+</table>
+<h2>Bot name replacement</h2>
+<p>For each PMC bot (USEC/Bear) generated in a raid, the mod rolls <code>operatorChance</code>. On a
+hit, it picks a random community operator from the local cache and replaces <strong>only</strong> the
+bot’s displayed nickname and level. Equipment, inventory, AI, difficulty, and everything
+else is left completely untouched.</p>
+<p>Operator levels are the real community levels - no averaging, no appending numbers, no
+name modification. Each operator can only appear once per raid. Duplicate names are
+intentionally allowed (multiple players can have the same nickname).</p>
+<p>Scavs, bosses, and other non-PMC bots are never affected.</p>
+<h2>Troubleshooting</h2>
+<ul>
+<li><strong>No community operators appear in raids</strong>: Ensure <code>cacheUrl</code> is set and reachable.
+Check the server log for <code>[OperatorRegistry] Cache refreshed: N operators</code>.</li>
+<li><strong>Bots still show vanilla names</strong>: <code>operatorChance</code> may be low, or the cache is empty.
+Operators only replace PMCs (USEC/Bear), not scavs or bosses.</li>
+<li><strong>Registration not happening</strong>: Check the server log for Firebase auth errors. The mod
+falls back gracefully - raids still work without registration.</li>
+<li><strong>Cache download fails</strong>: The mod keeps using the last good local cache. Raids are never
+blocked by network issues.</li>
+<li><strong>Want to fully opt out</strong>: Set <code>"enabled": false</code> in config.json, or remove the mod.</li>
+</ul>
+<h2>Credits</h2>
+<ul>
+<li><strong>Author:</strong> ShaneeexD</li>
+<li><strong>License:</strong> MIT</li>
+</ul>
+<p><strong>READ THE <span class="dead-link">PRIVACY DISCLOSURE</span></strong></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-08-01T02:00:00.000000Z">1 August 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>79 downloads</span><span>23.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/25a74602877f7e50a1f5a8cdbc6a2fc55e12562822b14b199d96245816998d9b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1cSYywfH1r4UQbHkYsEWMt8OADB9f07bq&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.shaneeexd.operatorregistry</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 August 2026</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ShaneeexD/SPT-OperatorRegistry/tree/main" target="_blank" rel="noreferrer noopener">https://github.com/ShaneeexD/SPT-OperatorRegistry/tree/main</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, as well as descriptions. The code is thoroughly reviewed by me before anything is published.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

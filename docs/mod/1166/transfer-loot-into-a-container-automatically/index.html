@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Transfer loot into a container automatically · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Transfer loot into a container automatically</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/0a8a723154b0337f85a707f153ec56516e2e33a7fd34b2686b0303471bbd42c5.webp" alt="Transfer loot into a container automatically thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Transfer loot into a container automatically</h1>
+    <p class="hero-teaser">Looting an item will now place it in a matching container, such as a dogtag case or a document case</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/2dcb9f9d8dee4fa330fc1ef197bfdca68200413a99a6b4e1f3c21b0f25ce7657.webp" alt="" width="32" height="32">CactusPie</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>5,175</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Transfer loot into a container automatically content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3>Description</h3>
+<p>Using ctrl+click on a loot item will move it into a matching container marked with a @loot tag. For instance, if you mark your Documents case with a @loot tag and put it in your secure container, all keys you loot using ctrl+click will be placed in that documents case automatically. Works only in raid - will not work with your hideout stash!</p>
+<h3>Installation</h3>
+<p>Copy CactusPie.ContainerQuickLoot.dll to BepInEx\plugins directory</p>
+<h3>Settings (F12 menu)</h3>
+<ul>
+<li>Enable for Ctrl+click - whether or not the items should be automatically transferred to containers when moving them using ctrl+click in the loot menu</li>
+<li>Enable for loose loot - whether or not loose loot you pick up should be automatically palced in a container. This works for all the loot you just find lying around on the ground, shelves, etc.</li>
+</ul>
+<h3>Usage</h3>
+<ol>
+<li>Put a container in your inventory. For instance a Documents case:</li>
+<li>Right click the container and select the “tag” option</li>
+<li>Set a @loot tag for the item.</li>
+<li>Ctrl+clicking a compatible loot item (such as a key) in raid or picking up loose loot will now put it in the documents case</li>
+</ol>
+<p>Removing the @loot tag will stop the items from being automatically put in it</p>
+<p>You can also add numbered suffixes to @loot tags in order to give a certain container a priority. For instance a container with @loot2 tag will take higher priority than a container with @loot3 tag. Not specifying any suffix assumes a “0” suffix/priority. Examples:</p>
+<ul>
+<li>@loot will take higher priority than @loot1</li>
+<li>@loot10 will take higher priorty than @loot20</li>
+<li>In case of two containers with the same @loot tag, the game will automatically assign a higher priority to one</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.1</h2></div><time datetime="2024-01-18T21:03:06.000000Z">18 January 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.7.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,230 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed an issue that would sometimes prevent items from being transferred when “Merge stacks for non-loot containers” is enabled</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ef5c19bf76096983e7077a2e87b342dc9a852dba779c79582c00cdddbc1c39d0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/720797317/20b0f49d-6c27-4cbf-8f5f-69f8e34961ec?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A22Z&amp;rscd=attachment%3B+filename%3DCactusPie.ContainerQuickLoot.dll&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A02Z&amp;ske=2026-08-01T21%3A04%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=t5G4AbTjGRRPDSQKWeZbYH%2F%2BrxocFBkBplbDbYjF0eY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMiwibmJmIjoxNzg1NjE1MTEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.I74djDm_Bw-0v1IMVbqenElskXK8KBKldN5cw83VZ18&amp;response-content-disposition=attachment%3B%20filename%3DCactusPie.ContainerQuickLoot.dll&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2023-11-19T20:55:04.000000Z">19 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.2</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>281 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>First release for 3.7.2</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ef5c19bf76096983e7077a2e87b342dc9a852dba779c79582c00cdddbc1c39d0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/720797317/b24dd410-664f-4247-b361-c6042bdee02b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A52%3A40Z&amp;rscd=attachment%3B+filename%3DCactusPie.ContainerQuickLoot.dll&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A52%3A04Z&amp;ske=2026-08-01T20%3A52%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kqBSJVZWHhkPmJ3Dsq2lk1Q282sqWgAu5nFg0zzX2rM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMSwibmJmIjoxNzg1NjE1MTExLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.oclwQ4BhqkZhoAIdlvqtbFwSEmJtYwHR6oo7vWn-fjk&amp;response-content-disposition=attachment%3B%20filename%3DCactusPie.ContainerQuickLoot.dll&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      
+      <div><dt>Published</dt><dd>19 November 2023</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/CactusPie/SPT-ContainerQuickLoot" target="_blank" rel="noreferrer noopener">https://github.com/CactusPie/SPT-ContainerQuickLoot</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

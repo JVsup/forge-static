@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Fair Equipment Restoration · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Fair Equipment Restoration</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/6b740a872e2fc65f8b8f80dfbb3b663b72826614875f41ce1d069a5dc1ff6da1.webp" alt="Fair Equipment Restoration thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Fair Equipment Restoration</h1>
+    <p class="hero-teaser">A customizable softcore mod that preserves item wear and consumption.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/1e809a2d30b2593b5f3b211e2f56f04cc9e67be97af7c72b762a80f268d55489.svg" alt="" width="32" height="32">gorecreek</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>922</dd></div>
+    <div><dt>Favourites</dt><dd>3</dd></div>
+    <div><dt>Mod lists</dt><dd>3</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Fair Equipment Restoration content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>In this episode of Keep Your Equipment™ mod series:</p>
+<ul>
+<li>Keep the gear you had at the start of the raid (wow)</li>
+<li>Preserve item state: anything worn, consumed, or lost stays that way after death</li>
+<li>Handle insurance, transfers and the mail service</li>
+<li>Configurable behavior for secure slots</li>
+<li>Configuration toggles for most other mod features</li>
+</ul>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><p>An SPT mod that provides a configurable softcore implementation with the goal of delivering a more balanced experience.</p>
+<p>If you’ve ever noticed the inconsistency where softcore implementations restore all your spent ammo, meds, and gear durability, yet your character still needs to heal and satisfy thirst and hunger, this mod is for you. It aims to provide a more consistent sense of progression by also tracking the state of your equipment - what items you consumed or broke.</p>
+<p>You will need to repair your weapons and armor, replace meds and food, and refill ammo after both successful and failed raids.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>Drag and drop the contents of the downloaded ZIP to the SPT root folder, just like other mods.
+<img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="instructions"></p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">FAQ</div>
+<div class="tab-content"><p><strong>Q</strong>: I went in raid, found some equipment better that I had on me and dropped the old piece. Then I died and my old equipment was not restored.</p>
+<p><strong>A</strong>: This is default behavior that can be changed by setting <strong>restoreLostItems</strong> to true. The items you dropped are treated as lost/consumed and are not restored. Read more in <strong>How this works</strong> and <strong>Configuration</strong> sections.</p>
+<hr>
+<p><strong>Q</strong>: Is the mod compatible with Fika?</p>
+<p><strong>A</strong>: There is a report of them working well together, so you can try it yourself. Make sure to let me know if it works!</p>
+<hr>
+<p><strong>Q</strong>: How is this different from Keep Starting Gear?</p>
+<p><strong>A</strong>: This mod has features that punish you for dying while still restoring your gear, working like an alternate progression mod. KSG is kind of a configurable save system that saves your inventory to snapshots on disk. While both can be configured to work in a similar way, the implementation is different. Read <strong>How this works</strong> section and our github repos to understand more.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><p>The default configuration assumes that item state should always be preserved after a raid. Secure slots are not affected. You are free to configure it to behave almost like a full rollback (item-wise) if you want though. Changes to lostondeath.json are not supported, as they may break insurance handling in some cases.</p>
+<hr>
+<p><strong>restoreLostItems</strong>: If disabled, items that you brought into the raid but lost or consumed entirely will not be restored. Examples include consumed food, meds, spent ammo, a backpack dropped to take a better one etc. Disabled by default.</p>
+<p><strong>restoreItemCondition</strong>: If disabled, item wear accumulated during the raid will not be restored. For example, if you died from a chest shot, your chest plate will remain damaged after restoration. Weapons will also eventually need repairs even if you never survive raids. Disabled by default.</p>
+<p><strong>restoreOnlyLostOnDeathSlots</strong>: If enabled, only items from lost-on-death slots (defined by <code>SPT\SPT_Data\configs\lostondeath.json</code>) are processed. Your secure container, special slots, melee and similar are unaffected by the mod. Enabled by default.</p>
+<p><strong>updateOnTransfer</strong>: If enabled, the saved inventory is updated on transfer. Disabled by default.</p>
+<p><strong>restoreInsurance</strong>: If enabled, insurance is restored on items returned via this mod’s restoration process. Enabled by default.</p>
+<p><strong>restoreFoundInRaid</strong>: If enabled, the Found in Raid flag is restored on items returned via this mod’s restoration process. Disabled by default.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">How this works</div>
+<div class="tab-content"><p>When a raid ends, the mod has access to your pre-raid inventory, your post-raid inventory, and a list of transferred and lost insured items.</p>
+<p>The pre-raid inventory is compared to the post-raid inventory using unique item IDs. If an item exists in both inventories, it’s state in the pre-raid inventory is updated with it’s state in the post-raid inventory (controlled by <strong>restoreItemCondition</strong> config option). If an item exists only in the pre-raid inventory, it is treated as lost and removed from the pre-raid inventory (controlled by <strong>restoreLostItems</strong> config option). Then your inventory is set to this updated pre-raid inventory.</p>
+<p>Items in safe slots are excluded from this process. Transferred items are not returned, even if the config option is on. Insured items that are restored by the mod do not go through the insurance system.</p>
+<p>This creates several edge cases where the mod is unable to place an item back into your pre-raid inventory. In such cases, the item is sent via the game’s mail service (a message from SYSTEM).</p>
+<p>Also note that the mod does not restore quest progress, so in-raid quest rewards from BTR driver or Lightkeeper will not be restored if you lose them. Try using something like <a target="_blank" class="external-link" href="../../2150/no-save-on-death-respawned/" rel="noreferrer noopener">this</a> if you need complete restoration.</p>
+<p>As a bonus, the mod fixes an existing SPT issue where insured items thrown directly out of the secure container are not returned via insurance.</p>
+<hr>
+<p>This is a server-only mod.</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><ul>
+<li>Mods that modify raid-end behavior are likely incompatible</li>
+<li>Fika compatibility unknown. You can report issues about it if there are any, but I can’t promise I will fix them</li>
+<li>SVM is compatible, but Softcore and Safe Exit must be disabled to avoid issues</li>
+<li>lostondeath.json wipeOnRaidStart=true prevents the mod from working because the mod does not get the pre-raid inventory, keep set to false</li>
+<li>lostondeath.json individual slot changes will work, but some setups can allow item duplication via insurance, either don’t change it or don’t use insurance</li>
+<li>MergeConsumables is compatible: if you restore the condition of a starting item with some other item (by dragging and dropping it onto the starting item) during a raid and then die, it will return correctly, with its condition depending on whether you had restoreCondition enabled. However, if you fully consume that item to restore the condition of another item, it will be treated as lost.</li>
+</ul></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Known issues</div>
+<div class="tab-content"><ul>
+<li><strong>restoreLostItems=false</strong> Splitting item stacks in raid causes the split portion to be treated as lost and not returned, even if it was still in your inventory on death</li>
+<li><strong>restoreLostItems=false</strong> Removing ammo from a magazine is treated as a loss for the same reason: stack splitting creates a new item with a new ID</li>
+<li><strong>restoreInsurance=true, restoreLost=false</strong> Items returned via the mail service (not through insurance) will not retain insurance</li>
+</ul>
+<hr>
+<p>If you encounter something that is not on this list, report it <a target="_blank" class="external-link" href="https://github.com/gorecreek/FER/issues" rel="noreferrer noopener">here</a></p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-05T05:00:00.000000Z">5 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>922 downloads</span><span>22.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/755b9a084cb10e5f4a3e6772ec0bfcdcee0fe49505581ffc56e71dc13b9e80f7/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1150079829/e4abb794-232b-4a62-82a8-59f5b971d0bc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A40Z&amp;rscd=attachment%3B+filename%3Dgorecreek-FairEquipmentRestoration-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A35Z&amp;ske=2026-08-01T21%3A12%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bsNggNWa95v8%2F1lAqelsDXSYe2GCiBCFre3xl0mwxUA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&amp;response-content-disposition=attachment%3B%20filename%3Dgorecreek-FairEquipmentRestoration-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.gorecreek.fairequipmentrestoration</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>5 February 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/gorecreek/FER" target="_blank" rel="noreferrer noopener">https://github.com/gorecreek/FER</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

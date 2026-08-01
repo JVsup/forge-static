@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Check Mods · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Check Mods</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/e8005b57a0ea7883ad99f2a664006d284bcecf6995c2b1b9045c8ca6e3105ab6.webp" alt="Check Mods thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      <span class="badge badge-featured">Featured</span>
+      <span class="badge"></span>
+    </div>
+    <h1>Check Mods</h1>
+    <p class="hero-teaser">Validates your SPT mod setup against the Forge API, identifying outdated mods, missing dependencies, and version conflicts. Your first step in troubleshooting mod issues.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/490b5066998b8c499248020ba9827cc8b34da2d60e6c88449c5f9fe5b6c0b91a.webp" alt="" width="32" height="32">Refringe</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>38,972</dd></div>
+    <div><dt>Favourites</dt><dd>117</dd></div>
+    <div><dt>Mod lists</dt><dd>159</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Check Mods content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Check Mods is your first step in troubleshooting mod issues. This command-line tool validates your Single Player Tarkov mod installation against the official Forge API, giving you a complete picture of your mod setup’s health. It scans both server-side and client-side mods, matches them to their Forge listings, and identifies exactly what needs attention, whether that’s outdated versions, missing dependencies, or compatibility conflicts with your SPT version.</p>
+<p>No setup, no configuration, and no API key required. Drop in the executable and run it.</p>
+<hr>
+<h2>Features</h2>
+<p>Check Mods provides the following features.</p>
+<div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">SPT Updates</div>
+<div class="tab-content"><p>Notifies you when a new SPT version is available.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/3f34b9cd793247fa809f3ca00ca5e26e9c14e78610669bfbb35bb9fae7fc6d2a.webp" alt="SPT Updates"></p></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">Check Mods Updates</div>
+<div class="tab-content"><p>Checks whether a newer version of Check Mods itself is available on the Forge, and tells you whether that version supports your installed SPT version.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/6bce15366d71244cc25a0297baeae0bb357c55222de3cede6ae058892844fa84.webp" alt="Check Mods Updates"></p></div></div>
+<div id="tabset-2-panel-3" class="tab-panel"><div class="tab-title">Forge Verification</div>
+<div class="tab-content"><p>Loads local mods, pairs the server-side and client-side halves of the same mod, and matches them against the official Forge database. Warnings are shown when issues are found and are particularly useful for mod authors to help ensure that their mods meet the file format standards on the Forge.</p>
+<p><strong>Loading:</strong><br>
+<img loading="lazy" decoding="async" src="../../../assets/18fa1d692d9dcbb1c7482d3368848429f44212a8ed376c25dea36d81078d8c9d.webp" alt="Forge Verification Loading"></p>
+<p><strong>Reconciliation:</strong><br>
+<img loading="lazy" decoding="async" src="../../../assets/497adac7ea72b065df20b861f43bcfc78d407626027a8c945522e868e5b0c942.webp" alt="Forge Verification Reconciliation"></p>
+<p><strong>Verification:</strong><br>
+<img loading="lazy" decoding="async" src="../../../assets/4e16bd922218e447d4e65d691440f81dd4f8c343a39d6e6e20b6595a63d35126.webp" alt="Forge Verification"></p></div></div>
+<div id="tabset-2-panel-4" class="tab-panel"><div class="tab-title">Installation Checks</div>
+<div class="tab-content"><p>Flags mods installed in the wrong place, such as a server mod sitting in the client plugins folder (or the reverse), and plugin folders that contain two or more unrelated mods.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/d8bbef3f650f489e3f140b9547ef25dcb6e7020e3fc3cb2608df0afdaefe486b.webp" alt="Installation Checks"></p></div></div>
+<div id="tabset-2-panel-5" class="tab-panel"><div class="tab-title">Mod SPT Compatibility</div>
+<div class="tab-content"><p>Checks that each of your mods are flagged as compatible with the SPT version that they’re installed in. Provides links to versions which are compatible, if available.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/2cfe740fdbb068084b4004dae609354ee2984f2565f3cc0e16314985b964f2f4.webp" alt="Mod SPT Compatibility"></p></div></div>
+<div id="tabset-2-panel-6" class="tab-panel"><div class="tab-title">Mod Dependency Analysis</div>
+<div class="tab-content"><p>Builds a complete dependency tree, which flags missing dependencies, and detects dependency conflicts. Provides links to missing dependencies, if available.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/fd2ecd110404039a38f3d0d08695f3636105ef26f3ecb4d8e4a65b347e42bdbc.webp" alt="Dependency Analysis"></p></div></div>
+<div id="tabset-2-panel-7" class="tab-panel"><div class="tab-title">Mod Updates</div>
+<div class="tab-content"><p>Provides a breakdown of each of the mod versions you have installed and the updates that are available that are compatible with your SPT version and do not break your dependencies. When updates are found, you can open every updatable mod’s Forge page in your browser at once from the end-of-run menu.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/5cb913b1deefa7a0f33d2ddef398883816366d64122b3f1568d7f9fb42b9c314.webp" alt="Mod Updates"></p></div></div>
+<div id="tabset-2-panel-8" class="tab-panel"><div class="tab-title">Ignoring False Positives</div>
+<div class="tab-content"><p>Dismiss updates you don’t want flagged, whether they’re false positives or updates you’re intentionally skipping. Your choices are remembered locally so they won’t nag you on future runs. You can optionally seed your list from a community-maintained list, and contribute your own dismissals back to help everyone else.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/14718df974c61a2574f1a264f43d0fdd53acb43d82531aa2eabfad2b4a6de65a.webp" alt="Ignoring False Positives"></p></div></div></div>
+<hr>
+<h2>Documentation</h2>
+<p>Some important information you may need to know.</p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>The install is dead-simple. Decompress the downloaded archive (the single <code>.exe</code> file) into the root folder of your SPT install. It should be in the same location as your <code>EscapeFromTarkov.exe</code> <strong>within your SPT directory</strong>. Run the file to begin the check.</p>
+<p>To uninstall the tool, simply delete the <code>.exe</code> file from the root of the install, and optionally, the additional files mentioned in the next tab.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Additional Files</div>
+<div class="tab-content"><p>This mod saves files into your system’s <code>%APPDATA%/SptCheckMods/</code> directory. There are currently two file types which are stored there.</p>
+<ul>
+<li>Rotating log files: <code>%APPDATA%/SptCheckMods/logs/checkmod.log</code></li>
+<li>Ignored updates list: <code>%APPDATA%/SptCheckMods/ignored-updates.json</code></li>
+</ul></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Network Connections</div>
+<div class="tab-content"><p>It should go without saying, but this mod makes external connections:</p>
+<ul>
+<li><code>https://forge.sp-tarkov.com</code> - Forge API for mod information. <em>Required.</em></li>
+<li><code>https://forge-static.sp-tarkov.com</code> - Community update ignore list. <em>Optional.</em></li>
+</ul>
+<p>There are no other network connections made. The source is available if you wish to independently verify or compile yourself.</p></div></div></div>
+<hr>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/refringe" rel="noreferrer noopener">I like coffee and vodka.</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-06-25T20:09:00.000000Z">25 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>7,509 downloads</span><span>2.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s Changed</h2>
+<ul>
+<li><strong>Improved mod compatibility detection</strong><br>
+Shows a warning when a mod matches with the Forge, but the SPT version is not compatible.</li>
+<li><strong>Forge API pacing</strong><br>
+Requests to the Forge are now “smooth” to avoid tripping Forge rate limits before they are triggered.</li>
+<li><strong>Mod update dependency changes</strong><br>
+Shows a warning when a mod update is available and its dependencies have changed and need to be modified.</li>
+<li><strong>Improved community ignore list sharing</strong><br>
+Only prompt and share ignored version updates that the community list lacks.</li>
+<li><strong>Open updates in browser</strong><br>
+There is now a menu including the option to open all of the updated mods’ pages in your browser.</li>
+<li><strong>Updated output formatting</strong><br>
+The output formatting has been updated to be more easily readable.</li>
+<li><strong>Native-DLL scan warnings</strong><br>
+The warnings about native-DLL scans have been moved to a debug level log and are no longer shown in the regular output.</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/compare/v1.2.0...v1.2.1" rel="noreferrer noopener">Full Changelog</a></strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9634879859fc7151db8f4269ae5a5706851c09a740b0bb697b0a5007f7fcea79" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/url/4349e9d428fa42e65aa57ccad6a43b3f4aa3b35c5a016ace247cd917eb663038" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1016791501/a8d9e02e-ad6a-49e8-86a1-e13e3a250847?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A03Z&amp;rscd=attachment%3B+filename%3DCheckMods-win-x64.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A13Z&amp;ske=2026-08-01T20%3A58%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZkSdoW2ZuZ30oWP6sJ%2FetOYySijYZG2FCp5U1qjsG5s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0NywibmJmIjoxNzg1NjE1ODQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PicFaTDnfwcg5yJxtCFWbvOu3TKgkLIFQDNOmNQRzWw&amp;response-content-disposition=attachment%3B%20filename%3DCheckMods-win-x64.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-06-22T20:49:00.000000Z">22 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ^4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,132 downloads</span><span>2.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s Changed</h2>
+<ul>
+<li><strong>Dismiss false-positive update prompts</strong><br>
+Mods that get incorrectly flagged as “update available” can now be ignored so they stop nagging on every run. Ignored entries are persisted, with an opt-in remote list of known false positives shared across users. Includes a new in-app workflow to report a false positive.</li>
+<li><strong>No more Forge API key required</strong><br>
+Forge API authentication has been removed entirely. The app no longer needs (or prompts for) an API key (the Forge API is now open).</li>
+<li><strong>Forge API rate limiting</strong><br>
+Requests are now throttled to stay within Forge’s published rate limits.</li>
+<li><strong>Self-update check</strong><br>
+The executable is now versioned from the git release tag, and on startup the app checks Forge for a newer Check Mods release and lets you know when one is available.</li>
+<li><strong>Detect misplaced &amp; cross-installed mods</strong><br>
+The scanner now flags mods installed in the wrong location.</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/compare/v1.0.1...v1.2.0" rel="noreferrer noopener">Full Changelog</a></strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/c606edb903b3f62cb77314f66e4a7f0a062888038558103307a4c8ef24672b4d" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1016791501/4a506efc-90fc-419c-b160-56c744540e7e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A28Z&amp;rscd=attachment%3B+filename%3DCheckMods-win-x64.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A05%3A06Z&amp;ske=2026-08-01T21%3A05%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8H%2FSQZPvP%2Fpd8E2xeTrFDsTihAvr4cxLYYVezuAhyYg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0OCwibmJmIjoxNzg1NjE1ODQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uvoVu5pEkGcXJ4MEX_-zLsPlxUqJMU3kqP0QPmEaETA&amp;response-content-disposition=attachment%3B%20filename%3DCheckMods-win-x64.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-04-16T02:52:00.000000Z">16 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ^4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>8,842 downloads</span><span>2.2 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s Changed</h2>
+<ul>
+<li>fix: resolve Ctrl-C hard-lock during API key prompt by @refringe in <a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/pull/21" rel="noreferrer noopener">PR 21</a></li>
+<li>fix: prevent DLL file locking during mod scanning by @refringe in <a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/pull/23" rel="noreferrer noopener">PR 23</a></li>
+<li>chore: update .gitignore with .vs gibberish by @refringe in <a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/commit/80518573a6114e6b935bc5777ad8907504620dba" rel="noreferrer noopener">8051857</a></li>
+<li>fix: properly display blocked mod update information by @refringe in <a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/pull/32" rel="noreferrer noopener">PR 32</a></li>
+<li>feat: add GitHub issue templates and PR template by @refringe in <a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/commit/3bb40b1e69edb9ae6e3247391eeb4423db19442b" rel="noreferrer noopener">3bb40b1</a></li>
+<li>chore: updated dependancies by @refringe</li>
+</ul>
+<p><strong><a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/compare/v1.0.0...v1.0.1" rel="noreferrer noopener">Full Changelog</a></strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/778f63d1a2ee797d385df2f2b6088676865946ffe73b05e6f7a2663e8ba7a992" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1016791501/5011fbae-e9b4-4cca-8ea2-f83e99eeecc2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A55Z&amp;rscd=attachment%3B+filename%3DCheckMods-win-x64.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A35Z&amp;ske=2026-08-01T21%3A23%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=QhhOMd4Rmjm%2BwXPlrxipTOTA%2Fb4RVHaMNysj2t4YiDU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0OCwibmJmIjoxNzg1NjE1ODQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uvoVu5pEkGcXJ4MEX_-zLsPlxUqJMU3kqP0QPmEaETA&amp;response-content-disposition=attachment%3B%20filename%3DCheckMods-win-x64.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-11-28T15:24:00.000000Z">28 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>20,871 downloads</span><span>1.4 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>Full send!</h1>
+<p><em>Better scanning, less errors, and you no longer need .NET 10.</em></p>
+<h3>Features</h3>
+<ul>
+<li>Windows builds are now automatically compressed into a zip archive.</li>
+</ul>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed assembly scanning errors. Handle assemblies with unloadable types during server mod metadata extraction.</li>
+<li>Fixed service scope validation errors. Changed scoped services to transient to resolve possible DI scope validation issues.</li>
+<li>Fixed .NET compatibility. Downgraded to .NET 9 for better compatibility with SPT server.</li>
+</ul>
+<h3>Internal</h3>
+<ul>
+<li>Replaced manual dependency injection with SPTarkov.DI’s attribute-based registration.</li>
+<li>Fixed cross-platform build compatibility by replacing Unix commands with MSBuild tasks.</li>
+<li>Added <code>IApiKeyProvider</code> singleton to persist API keys across transient service instances.</li>
+</ul>
+<p><a target="_blank" class="external-link" href="https://github.com/refringe/SPT-Check-Mods/compare/v1.0.0-beta.1...v1.0.0" rel="noreferrer noopener">Full Changelog</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/e33f0e20bd39d3c97640d2468cbb10e64c28592d91b9e3600822320a948e92e7" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1016791501/f58233cc-788d-46a5-843b-d887268a8be5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A03Z&amp;rscd=attachment%3B+filename%3DCheckMods-win-x64.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A51Z&amp;ske=2026-08-01T21%3A13%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=P%2BOTU7h3j3gNa4GyXpc%2FA8p0Dn2RFI0VGKsH%2FQXpGTE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0OCwibmJmIjoxNzg1NjE1ODQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uvoVu5pEkGcXJ4MEX_-zLsPlxUqJMU3kqP0QPmEaETA&amp;response-content-disposition=attachment%3B%20filename%3DCheckMods-win-x64.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0-beta.1</h2></div><time datetime="2025-11-27T17:20:00.000000Z">27 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>618 downloads</span><span>1007.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>Beta 1 Release</h2>
+<ul>
+<li>Rewrite for SPT 4.0 compatability</li>
+<li>Drops SPT 3.11 support</li>
+</ul>
+<blockquote>
+<p>This version requires that you have the <a target="_blank" class="external-link" href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.0-windows-x64-installer" rel="noreferrer noopener">.NET Runtime 10.0.0</a> installed. It will flash open and immediatly close if you do not have it installed.</p>
+</blockquote>
+<p>Looking for general feedback… what works and what does doesn’t. Please only give feedback on issues with the tool and not for mod issues; for example, the tool reporting the incorrect mod version (this is a mod author problem).</p>
+<h3>Known Issues:</h3>
+<ul>
+<li><code>Could not read mod DLL FikaServer.dll. Reason: Unable to load one or more of the requested types.</code></li>
+<li>Untested on Linux build</li>
+<li>Untested on Fika headless install</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/40846ee5e881cf68b1e91b80fc8d6d73b60a141335c9a3a671c7c0b700d23f6d/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1016791501/65f367a2-8fd6-4c42-8346-32e38b14860c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A21%3A05Z&amp;rscd=attachment%3B+filename%3DCheckMods-win-x64.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A18Z&amp;ske=2026-08-01T21%3A21%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TzR0BwnI3fYY8H7SRIHIXSm%2Fn3vFgWDwmwzVqY8Oebg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0OSwibmJmIjoxNzg1NjE1ODQ5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.bJL_MCeTc47nbh7PjCQadpPCwRuBNIroylHu6MJMsP0&amp;response-content-disposition=attachment%3B%20filename%3DCheckMods-win-x64.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.refringe.checkmods</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>27 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/refringe/SPT-Check-Mods" target="_blank" rel="noreferrer noopener">https://github.com/refringe/SPT-Check-Mods</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

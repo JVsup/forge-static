@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SuntionCore.SPTExtensions · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SuntionCore.SPTExtensions</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="SuntionCore.SPTExtensions thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SuntionCore.SPTExtensions</h1>
+    <p class="hero-teaser">Extension features for SuntionCore, primarily consisting of dependency-injected utility classes.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f5eaacedfe1588811ded2c8c177c945c2a8c466690409b71c461969786ce18c9.webp" alt="" width="32" height="32">Suntion</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>749</dd></div>
+    <div><dt>Favourites</dt><dd>2</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SuntionCore.SPTExtensions content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>SuntionCore.SPTExtensions</h3>
+<p>This module consolidates utility classes that depend on SPT-related classes. It serves as an extension to the <a target="_blank" class="external-link" href="../../2600/suntioncore/" rel="noreferrer noopener">SuntionCore</a> module. By default, this module supports both Chinese (“ch”) and English (“en”) and utilizes the default logging path provided by SuntionCore.</p>
+<blockquote>
+<p><strong>To change the display language:</strong><br>
+<code>SuntionCoreSPTExtensionsMod.I18NSPTExtensions.Value.CurrentLang = "target_language"</code></p>
+<p><strong>To extend language support:</strong><br>
+Fork my repository, refer to the content within the <code>OnLoad</code> function in the C# code under <code>SuntionCore.SPTExtensions/Services</code> to add your extensions, and then submit a Pull Request. Please avoid making extensive modifications to files, as this makes the review process difficult.</p>
+</blockquote>
+<h3>Features</h3>
+<h4>ModMailService</h4>
+<ul>
+<li><strong>Smart Message Splitting</strong>: Automatically splits long texts by newlines (<code>SplitStringByNewlines</code>) to prevent client overflow.</li>
+<li><strong>Async Batch Sending</strong>: Supports high-volume asynchronous dispatch (<code>SendAllMessageAsync</code>).</li>
+<li><strong>Economy Integration</strong>: Handles multi-currency payments, payouts, and item mailing.</li>
+<li><strong>Error Handling</strong>: Includes comprehensive exception catching with localized error messages.</li>
+</ul>
+<h4>ProfileAndAccountService</h4>
+<ul>
+<li><strong>ID Mapping Cache</strong>: Maintains a bidirectional cache between Player IDs (Pmc/Scav) and Account IDs.</li>
+<li><strong>Fast Lookup</strong>: Provides <code>GetPmcDataByPlayerId</code> to retrieve player profiles instantly using any ID type.</li>
+<li><strong>Auto-Indexing</strong>: Implements <code>IOnLoad</code> to automatically build account data indices on server startup.</li>
+</ul>
+<h4>Infrastructure</h4>
+<ul>
+<li><strong>Lazy Initialization</strong>: Static entry point (<code>SuntionCoreSPTExtensionsMod</code>) provides on-demand <code>Logger</code> and <code>I18N</code> instances.</li>
+<li><strong>Localization</strong>: Registered translation keys for English and Chinese (e.g., <code>KeyInvalidMoneyId</code>, <code>KeyProfileNotFound</code>).</li>
+</ul>
+<h3>How to Reference This Library in Your Project</h3>
+<h4>&gt;= v1.2.0</h4>
+<p>Add PackageReference By <strong>NuGet</strong></p>
+<p>.csproj:</p>
+<pre><code>&lt;ItemGroup&gt;
+    &lt;PackageReference Include="SuntionCore" Version="x.x.x" /&gt;
+    &lt;PackageReference Include="SuntionCore.SPTExtensions" Version="x.x.x" /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<h4>Old Version</h4>
+<ol>
+<li>Create a <code>libs</code> folder within your mod project directory (optional).</li>
+<li>Install both this module and the SuntionCore module into SPT (this module’s releases are packaged by default for universal mod installation). Copy <code>"YourGameFolder\SPT\user\mods\SuntionCore\SuntionCore.dll"</code> and <code>"YourGameFolder\SPT\user\mods\SuntionCore.SPTExtensions\SuntionCore.SPTExtensions.dll"</code> to the <code>libs</code> folder mentioned above.</li>
+<li>Add the following content to your <code>YourProjectName.csproj</code> file:
+<pre><code>&lt;ItemGroup&gt;
+    &lt;Reference Include="SuntionCore.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+    &lt;Reference Include="SuntionCore.SPTExpand.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.SPTExtensions.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<blockquote>
+<p>Note: <code>HintPath</code> should be the relative path of the actual DLL files relative to your <code>.csproj</code> file.<br>
+<code>Private</code> must be set to <code>False</code> to prevent incorrectly bundling all referenced libraries during the build output.
+Please refer to the documentation in my repository, as HTML tags within the <code>.csproj</code> file are stripped/blocked when rendered on the webpage.</p>
+</blockquote>
+</li>
+<li>Your compiler will now be able to correctly reference and use the contents of this library.</li>
+</ol>
+<p>Create mod dependencies using the following code:</p>
+<pre><code>class YourModMetadata
+{
+    public override Dictionary&lt;string, Range&gt;? ModDependencies { get; init; } = new()
+    {
+        { "com.suntion.suntioncore", new Range("&gt;=1.0.0") },
+        { "com.suntion.suntioncore.sptextensions", new Range("&gt;=0.1.0") }
+    };
+}
+</code></pre>
+<h3>Credits</h3>
+<p>Inspiration sources:</p>
+<ul>
+<li><a target="_blank" class="external-link" href="../../2587/massivesoftcore/" rel="noreferrer noopener">MassivesoftCore</a> | <strong>Regarding the creation of SPT class libraries</strong></li>
+<li><a target="_blank" class="external-link" href="../../2588/massivesoftweapons/" rel="noreferrer noopener">MassivesoftWeapons</a> | <strong>Regarding referencing SPT class libraries</strong></li>
+<li><a target="_blank" class="external-link" href="../../2341/raid-record/" rel="noreferrer noopener">Raid Record</a> |
+<ul>
+<li><strong>Fund deduction/claim processing/message sending/item sending functionalities</strong></li>
+<li><strong>Retrieving player saves/handling conversions for sessions, profileIds, etc.</strong></li>
+</ul>
+</li>
+<li><a target="_blank" class="external-link" href="https://github.com/sp-tarkov/server-csharp" rel="noreferrer noopener">SPT.Server</a> | <strong>Logic for splitting items, deducting funds, adding money, etc.</strong></li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>SuntionCore.SPTExtensions</h3>
+<p>本模块整合了依赖 SPT 相关类的工具类，作为 <a target="_blank" class="external-link" href="../../2600/suntioncore/" rel="noreferrer noopener">SuntionCore</a> 模块的扩展。默认情况下，本模块支持中文 (“ch”) 和英文 (“en”)，并使用 SuntionCore 提供的默认日志路径。</p>
+<blockquote>
+<p><strong>更改显示语言：</strong><br>
+<code>SuntionCoreSPTExtensionsMod.I18NSPTExtensions.Value.CurrentLang = "目标语言"</code></p>
+<p><strong>扩展语言支持：</strong><br>
+Fork 我的仓库，参考 <code>SuntionCore.SPTExtensions/Services</code> 下 C# 代码中 <code>OnLoad</code> 函数的内容来添加您的扩展，然后提交 Pull Request。请避免对文件进行大量修改，这会增加审核难度。</p>
+</blockquote>
+<h3>功能特性</h3>
+<h4>ModMailService</h4>
+<ul>
+<li><strong>智能消息分割</strong>：自动按换行符分割长文本 (<code>SplitStringByNewlines</code>)，防止客户端溢出。</li>
+<li><strong>异步批量发送</strong>：支持高容量异步分发 (<code>SendAllMessageAsync</code>)。</li>
+<li><strong>经济系统集成</strong>：处理多货币支付、支出和物品邮寄。</li>
+<li><strong>错误处理</strong>：包含全面的异常捕获，并返回本地化的错误信息。</li>
+</ul>
+<h4>ProfileAndAccountService</h4>
+<ul>
+<li><strong>ID 映射缓存</strong>：维护玩家 ID（Pmc/Scav）与账户 ID 之间的双向缓存。</li>
+<li><strong>快速查找</strong>：提供 <code>GetPmcDataByPlayerId</code> 方法，可使用任何 ID 类型即时检索玩家档案。</li>
+<li><strong>自动索引</strong>：实现 <code>IOnLoad</code> 接口，在服务器启动时自动构建账户数据索引。</li>
+</ul>
+<h4>基础设施</h4>
+<ul>
+<li><strong>懒加载初始化</strong>：静态入口点 (<code>SuntionCoreSPTExtensionsMod</code>) 按需提供 <code>Logger</code> 和 <code>I18N</code> 实例。</li>
+<li><strong>本地化</strong>：注册了英文和中文的翻译键（例如 <code>KeyInvalidMoneyId</code>、<code>KeyProfileNotFound</code>）。</li>
+</ul>
+<h3>如何在您的项目中引用此库</h3>
+<h4>&gt;= v1.2.0</h4>
+<p>使用<strong>NuGet</strong>添加包引用:</p>
+<p>.csproj:</p>
+<pre><code>&lt;ItemGroup&gt;
+    &lt;PackageReference Include="SuntionCore" Version="x.x.x" /&gt;
+    &lt;PackageReference Include="SuntionCore.SPTExtensions" Version="x.x.x" /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<h4>旧版本</h4>
+<ol>
+<li>在您的模组项目目录中创建一个 <code>libs</code> 文件夹（可选）。</li>
+<li>将此模块和 SuntionCore 模块都安装到 SPT 中（本模块的发布包默认为通用模组安装格式）。将 <code>"您的游戏文件夹\SPT\user\mods\SuntionCore\SuntionCore.dll"</code> 和 <code>"您的游戏文件夹\SPT\user\mods\SuntionCore.SPTExtensions\SuntionCore.SPTExtensions.dll"</code> 复制到上述的 <code>libs</code> 文件夹。</li>
+<li>在您的 <code>YourProjectName.csproj</code> 文件中添加以下内容：
+<pre><code>&lt;ItemGroup&gt;
+    &lt;Reference Include="SuntionCore.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+    &lt;Reference Include="SuntionCore.SPTExpand.dll"&gt;
+        &lt;HintPath&gt;libs\SuntionCore.SPTExtensions.dll&lt;/HintPath&gt;
+        &lt;Private&gt;False&lt;/Private&gt;
+    &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<blockquote>
+<p>注意：<code>HintPath</code> 应是相对于您的 <code>.csproj</code> 文件的实际 DLL 文件路径。<br>
+<code>Private</code> 必须设置为 <code>False</code>，以防止在构建输出时错误地打包所有引用的库。
+请参考我仓库中的文档，因为在网页上渲染时，<code>.csproj</code> 文件中的 HTML 标签会被剥离/屏蔽。</p>
+</blockquote>
+</li>
+<li>您的编译器现在可以正确引用并使用此库的内容。</li>
+</ol>
+<p>使用以下代码创建模组依赖：</p>
+<pre><code>class YourModMetadata
+{
+    public override Dictionary&lt;string, Range&gt;? ModDependencies { get; init; } = new()
+    {
+        { "com.suntion.suntioncore", new Range("&gt;=1.0.0") },
+        { "com.suntion.suntioncore.sptextensions", new Range("&gt;=0.1.0") }
+    };
+}
+</code></pre>
+<h3>致谢</h3>
+<p>灵感来源：</p>
+<ul>
+<li><a target="_blank" class="external-link" href="../../2587/massivesoftcore/" rel="noreferrer noopener">MassivesoftCore</a> | <strong>关于 SPT 类库的创建</strong></li>
+<li><a target="_blank" class="external-link" href="../../2588/massivesoftweapons/" rel="noreferrer noopener">MassivesoftWeapons</a> | <strong>关于引用 SPT 类库</strong></li>
+<li><a target="_blank" class="external-link" href="../../2341/raid-record/" rel="noreferrer noopener">Raid Record</a> |
+<ul>
+<li><strong>资金扣除/领取处理/消息发送/物品发送功能</strong></li>
+<li><strong>获取玩家存档/处理 session、profileId 等的转换</strong></li>
+</ul>
+</li>
+<li><a target="_blank" class="external-link" href="https://github.com/sp-tarkov/server-csharp" rel="noreferrer noopener">SPT.Server</a> | <strong>物品拆分、扣除资金、添加资金等逻辑</strong></li>
+</ul></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-28T12:25:00.000000Z">28 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>748 downloads</span><span>12.0 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Version 1.0.0 Release Notes</h3>
+<h4>Bug Fix: Language Pack Loading Issue Resolved</h4>
+<p>This release addresses a critical issue where language packs failed to load due to service initialization timing conflicts. The module has been upgraded to stable version 1.0.0.</p>
+<p><strong>Core Fix: Refactored Service Initialization Flow</strong></p>
+<ul>
+<li>
+<p><strong>Double-Checked Locking Pattern</strong>: Added a private <code>Initialize()</code> method with double-checked locking (based on an <code>initialized</code> flag) to ensure I18N registration logic executes only once, eliminating race conditions.</p>
+</li>
+<li>
+<p><strong>Defensive Initialization</strong>: Moved initialization logic from the <code>OnLoad</code> lifecycle hook to the business layer. Methods including <code>Payment</code>, <code>SendMoney</code>, <code>SendItems</code>, and <code>UpdateAccountData</code> now explicitly call <code>Initialize()</code> at their entry points, preventing “language pack not loaded” exceptions that previously occurred when external calls were made before module loading completed.</p>
+</li>
+<li>
+<p><strong>Execution Order Correction</strong>: Fixed the execution sequence in <code>ProfileAndAccountService.UpdateAccountData</code> to ensure account data warm-up completes before any logging operations begin.</p>
+</li>
+</ul>
+<hr>
+<h4>Stable Release: Version 1.0.0</h4>
+<p>This upgrade marks the core extension module’s transition out of preview state:</p>
+<ul>
+<li>Version incremented from <code>0.1.0</code> to <code>1.0.0</code> in both <code>SuntionCoreSPTExtensionsMod.cs</code> and <code>SuntionCore.SPTExtensions.csproj</code></li>
+<li><strong>No breaking API changes</strong> - All existing public interfaces remain fully compatible</li>
+<li>The module is now considered production-ready for all SPTarkov server modding projects</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>版本 1.0.0 更新日志</h3>
+<h4>问题修复：解决因服务初始化时序导致的语言包加载失败问题</h4>
+<p>本次更新解决了一个关键问题：由于服务初始化时序冲突，导致语言包无法正常加载。该模块现已升级至稳定版本 1.0.0。</p>
+<p><strong>核心修复：重构服务初始化流程</strong></p>
+<ul>
+<li>
+<p><strong>双重检查锁定模式</strong>：新增了基于 <code>initialized</code> 标志的私有 <code>Initialize()</code> 方法，采用双重检查锁定模式，确保 I18N 注册逻辑仅执行一次，消除了竞态条件。</p>
+</li>
+<li>
+<p><strong>防御性初始化</strong>：将初始化逻辑从 <code>OnLoad</code> 生命周期钩子移至业务层。<code>Payment</code>、<code>SendMoney</code>、<code>SendItems</code> 和 <code>UpdateAccountData</code> 等方法现在在其入口点显式调用 <code>Initialize()</code>，防止了在模块加载完成前因外部调用而导致的“语言包未加载“异常。</p>
+</li>
+<li>
+<p><strong>执行顺序修正</strong>：修复了 <code>ProfileAndAccountService.UpdateAccountData</code> 中的执行顺序，确保账户数据预热在任何日志记录操作开始前完成。</p>
+</li>
+</ul>
+<hr>
+<h4>稳定版本发布：1.0.0</h4>
+<p>此次升级标志着核心扩展模块正式退出预览状态：</p>
+<ul>
+<li>版本号在 <code>SuntionCoreSPTExtensionsMod.cs</code> 和 <code>SuntionCore.SPTExtensions.csproj</code> 中从 <code>0.1.0</code> 递增至 <code>1.0.0</code></li>
+<li><strong>无破坏性 API 变更</strong> - 所有现有公共接口保持完全兼容</li>
+<li>该模块现已被视为生产就绪，适用于所有 SPTarkov 服务端模组开发项目</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e4125fc24c1b5345784c19c92ca5cd32a7c76c275ac04f73dd9a63fbd6b593ce/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/a05bcdb6-ab03-43d0-9007-60e04fdbfc8c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A06Z&amp;rscd=attachment%3B+filename%3DSuntionCore.SPTExtensions-1.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A53Z&amp;ske=2026-08-01T21%3A03%3A06Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=f2%2F1GMRbpkKFicV9y6W%2F4gPJDV4zeC%2FppHzVcNAS9g8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore.SPTExtensions-1.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.0</h2></div><time datetime="2026-02-28T12:25:00.000000Z">28 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1 downloads</span><span>11.9 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Features</h3>
+<ul>
+<li><strong>ModMailService</strong>: Introduced a new ModMail service with intelligent message splitting to automatically divide long texts by line breaks, preventing client-side overflow. Supports efficient batch message sending and integrates seamlessly with the economy system for multi-currency payments and item distribution. Enhanced with comprehensive error handling and localized error messages for a smoother experience.</li>
+</ul>
+<h3>Infrastructure</h3>
+<ul>
+<li><strong>Lazy Initialization</strong>: Improved system startup with lazy loading for Logger and I18N services, optimizing resource usage.</li>
+<li><strong>Localization</strong>: Added full translation support for English and Chinese, including all new error and system messages.</li>
+</ul></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>功能</h3>
+<ul>
+<li><strong>Mod邮件服务</strong>：新增Mod邮件服务，支持智能消息分割功能，可自动按换行符拆分长文本，避免客户端溢出。支持高效批量异步发送，并与经济系统深度整合，实现多货币支付与物品发放。配备完善的异常处理机制和本地化错误提示，提升使用体验。</li>
+</ul>
+<h3>基础设施</h3>
+<ul>
+<li><strong>延迟初始化</strong>：优化系统启动流程，对日志记录器和本地化服务实现延迟加载，提高资源利用效率。</li>
+<li><strong>本地化支持</strong>：新增英文与中文翻译支持，覆盖所有新增的错误提示与系统信息。</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/12b0c7dc6f7cb4e49429edbb66887f6be04b192da7f36bf145964368b9082e99/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1162691348/9c2091e4-73cd-45e4-880f-687fe8ea8321?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A14Z&amp;rscd=attachment%3B+filename%3DSuntionCore.SPTExtensions-0.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A47Z&amp;ske=2026-08-01T21%3A20%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bShpi7Xr1cs5DkcfnnfsOvSrIm%2BRjBFn0zYc6TV%2FDbg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuntionCore.SPTExtensions-0.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.suntion.suntioncore.sptextensions</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 February 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/SunYanbox/SuntionCore/tree/master/SuntionCore.SPTExtensions" target="_blank" rel="noreferrer noopener">https://github.com/SunYanbox/SuntionCore/tree/master/SuntionCore.SPTExtensions</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

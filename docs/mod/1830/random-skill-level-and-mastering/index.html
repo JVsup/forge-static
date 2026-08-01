@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Random skill level and mastering · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Random skill level and mastering</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/adeb7084e1d431dae310f6cfb15c5d5b80adcc7bd448abfe84e3ecd99cf1881a.webp" alt="Random skill level and mastering thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Random skill level and mastering</h1>
+    <p class="hero-teaser">You&#39;re a professional PMC, not a baby</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/9793102ff2ed7833dd6fda832145f3c35f2db5f6de5cd991194e008192887d1c.webp" alt="" width="32" height="32">Hacker228</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,644</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Random skill level and mastering content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">About</div>
+<div class="tab-content"><p>I really didn’t like that we play for a PMC that went through many conflicts and didn’t get any skills. This mod is designed to fix that because each person is individual in their skills, so each profile you create will have different skills.</p>
+<p>You will no longer have to level up from scratch, your skills will be similar to the skills of a person who has completed training.</p>
+<p>Feel free to report bugs and queries in the forum or on my GitHub <a target="_blank" class="external-link" href="https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod" rel="noreferrer noopener">https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod</a></p>
+<p>A new profile is recommended!</p>
+<p>Implemented a system for checking the selected faction in the profile. If you select Bear, weapon mastering will increase only for weapons common in the Russian army. If you select USEC, the weapon mastering will increase for weapons common in NATO countries.</p>
+<p>Simply put, Bear does not know how to handle NATO weapons, and USEC does not know how to handle Russian weapons.</p>
+<p>This mod only changes the skill and mastery level of weapons, which are zero. Each profile will have different skill and mastery levels.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>1. Drag the user folder from the zip archive into the SPT installation folder.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">How to configure</div>
+<div class="tab-content"><p>After installing the mod, open the [tt]config.json[/tt] file and set the value to true or falls for the selected skills.</p>
+<p>true - random skill level</p>
+<p>false - Skill will remain at the same progress level</p>
+<p>minSkillLevel contains the minimum skill level, by default equals 0</p>
+<p>maxSkillLevel contains the maximum skill level, by default equals 3000</p>
+<p>minMasteringLevel contains the minimum weapon mastering level, by default equals 0</p>
+<p>maxMasteringLevel contains the maximum weapon mastering level, by default equals 1000</p>
+<p>If you want to add a new weapon for some faction, then use the config.json file</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Vanila config.json</div>
+<div class="tab-content"><p>{ “minSkillLevel”: 0, “maxSkillLevel”: 3000, “minMasteringLevel”: 0, “maxMasteringLevel”: 1000, “Skills”: { “Endurance”: true, “Strength”: true, “Vitality”: true, “Health”: true, “StressResistance”: true, “Metabolism”: true, “Immunity”: true, “Perception”: true, “Intellect”: true, “Attention”: true, “Charisma”: true, “Memory”: true, “Pistol”: true, “Revolver”: true, “SMG”: true, “Assault”: true, “Shotgun”: true, “Sniper”: true, “LMG”: true, “HMG”: true, “Launcher”: true, “AttachedLauncher”: true, “Throwing”: true, “Melee”: true, “DMR”: true, “RecoilControl”: true, “AimDrills”: true, “TroubleShooting”: true, “Surgery”: true, “CovertMovement”: true, “Search”: true, “MagDrills”: true, “Sniping”: true, “ProneMovement”: true, “LightVests”: true, “HeavyVests”: true, “WeaponModding”: true, “AdvancedModding”: true, “WeaponTreatment”: true, “Freetrading”: true, “Barter”: true, “Crafting”: false, “HideoutManagement”: false }, “Mastering”: { “Bear”: [ “AK74”, “AKM”, “SVD”, “VSS”, “DVL”, “KS23”, “VSK94”, “T5000”, “SR2”, “RPD” ], “USEC”: [ “M4”, “MDR”, “MPX”, “MP5”, “SA-58”, “P90”, “AXMC”, “STM-9”, “MP7”, “SR25”, “M1A” ] } } {.endtabset}</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2024-11-09T07:53:38.000000Z">9 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,238 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Added faction-based weapon mastering randomization.</p>
+<p>- Updated config.json to include weapon lists for Bear and USEC factions.</p>
+<p>- Added mastery weapons for Bear: AK74, AKM, SKS, SVD, VSS, DVL, KS23, VSK94, T5000, SR2, RPD.</p>
+<p>- Added mastery weapons for USEC: M4, MDR, MPX, MP5, SA-58, P90, AXMC, STM-9, MP7, SR25, M1A.</p>
+<p>- Implemented conditional check in mod to identify faction (Bear or USEC) based on profile side.</p>
+<p>- Adjusted mastering progress update logic to apply only for faction-specific weapons.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e3bb458353657f7411dee1c703b15e782c2aa6d4c7e3f1d04e65597ad6286599?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/885656580/669fc9bd-967a-4235-afeb-0f0247661161?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A51Z&amp;rscd=attachment%3B+filename%3Dz_hacker228-randomskilllevelandmastering.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A57Z&amp;ske=2026-08-01T20%3A59%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=i06GrBeU0bzTrXlo6GaVozVYii%2FV1YTefUFEXD7Jhow%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc3NywibmJmIjoxNzg1NjE1NDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZwhBWbFdMOfElCiypsy7X-GCCyZzLUCFAW3jESW-w-Q&amp;response-content-disposition=attachment%3B%20filename%3Dz_hacker228-randomskilllevelandmastering.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>8 November 2024</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod" target="_blank" rel="noreferrer noopener">https://github.com/Spaghetti-jpg/Random-skill-level-and-mastering-SPT-Mod</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

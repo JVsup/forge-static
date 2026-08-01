@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>FikaSync · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>FikaSync</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/25c598b03d3f91745d46a999a6c7cf1b31fe9a252e2a88c329eaa0020a7797f5.webp" alt="FikaSync thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>FikaSync</h1>
+    <p class="hero-teaser">A simple tool for sync your game profile with friends via GitHub.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0ea6763660506f13fe747130ac2b6d2490a7fdb8815630b197541a05fcf4c454.webp" alt="" width="32" height="32">fanteeek</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,514</dd></div>
+    <div><dt>Favourites</dt><dd>17</dd></div>
+    <div><dt>Mod lists</dt><dd>31</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="FikaSync content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>FikaSync</strong> is an automated tool developed for me and my friends. It allows you and your friends to easily synchronize game profiles when launching a server via a private GitHub repository. (The repository acts as cloud storage for all your profiles.)</p>
+<h2>Features</h2>
+<ul>
+<li><strong>No Manual File Transfers:</strong> Eliminates the need to manually send profiles to the host or transfer them back to clients after the game. Each player’s progress is automatically updated on the server.</li>
+<li><strong>.fikaignore Support</strong>: Full control over your shared data. List specific profile files or directories in a .fikaignore file (similar to .gitignore) to prevent them from being uploaded to the shared repository (e.g., for keeping a solo profile private).</li>
+</ul>
+<h2>How It Works</h2>
+<ol>
+<li>The host launches FikaSync. The tool downloads the latest profiles from the repository, ensuring that the host’s local profiles are up to date for all participants. It then automatically launches SPT.Server and SPT.Launcher.</li>
+<li>Play together enjoy the session. All local profiles are saved as usual.</li>
+<li>After the session, the host closes FikaSync. The tool automatically commits all changes made to the profiles and sends them back to the shared repository.</li>
+<li>If the host changes to another person, the host launches FikaSync. It will download the latest new profiles from the repository to your local computer, saving your progress.</li>
+</ol>
+<h2>Prerequisites</h2>
+<ol>
+<li>Need to install <a target="_blank" class="external-link" href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-9.0.9-windows-x64-installer" rel="noreferrer noopener">.NET 9</a> <em>(If you have a working SPT, you don’t need it.)</em></li>
+<li>A <strong>Private GitHub Repository</strong> to store the profiles. <em>(Only one person needs to create a repository.)</em></li>
+<li>A <strong>GitHub Fine-grained Personal Access Token</strong> with <strong>Contents</strong> -&gt; <strong>Read and Write</strong> permissions (scoped specifically to your repository).</li>
+</ol>
+<h3>How to Create Private Repository</h3>
+<ol>
+<li>You need to be loggined in Github</li>
+<li>Go here <a target="_blank" class="external-link" href="https://github.com/new" rel="noreferrer noopener">Create repository</a></li>
+<li>Give any name to the repository</li>
+<li>Choose visibility to <strong>Private</strong></li>
+<li>Click <strong>Create repository</strong></li>
+</ol>
+<h2>How to get Fine-grained Personal Access Token</h2>
+<ol>
+<li>You need to be loggined in Github</li>
+<li>Go here <a target="_blank" class="external-link" href="https://github.com/settings/personal-access-tokens/" rel="noreferrer noopener">Personal Access Tokens</a></li>
+<li>Click <strong>Generate a new token</strong></li>
+<li>Give it any name</li>
+<li>Select the token expiration date (usually 30 days, after which it will expire)</li>
+<li>Below, select Only select repositories and choose your repository (if you don’t have it, you need <a target="_blank" class="external-link" href="https://github.com/new" rel="noreferrer noopener">Create repository</a>)</li>
+<li>Below, add the <strong>Contents</strong> permission</li>
+<li>For the contents permission, make sure that <strong>Read and Write</strong> rights are enabled!</li>
+<li>Click the <strong>Generate token</strong> button</li>
+</ol>
+<h2>FAQ</h2>
+<p><strong>Q: Do my friends need to create repositories and configure FikaSync?</strong></p>
+<p><strong>A:</strong> No, only one person needs to create the repository! When you first launch FikaSync, it will ask for a GitHub token and the repository URL (it will then be saved in the .env file, where you can edit it if necessary). Once everything is set up, you can simply send your friends the ready-made .env file, which will already contain the token and repository link. (The .env file is located in the same directory as FikaSync.exe.)</p>
+<p><strong>Q: Do I need FikaSync if my friends and I have a separate dedicated PC/VPS with SPT Server running 24/7?</strong></p>
+<p><strong>A:</strong> No, you don’t need it. It’s necessary for those who have different hosts. Today, a friend with a powerful PC launches a server, tomorrow you want to play alone, but with up-to-date profiles, without transferring your profile from his PC to yours.</p>
+<h2>Getting Started</h2>
+<h3>1. Installation</h3>
+<p>Download the latest <code>FikaSync.exe</code>
+<strong>Important:</strong> Place the executable inside your <strong>root game folder</strong> (right next to <code>EscapeFromTarkov.exe</code>).</p>
+<h3>2. Configuration</h3>
+<p>When you first launch the app, you will be prompted to enter your GitHub token and repository URL or you can create a file named <code>.env</code> next to the executable (<code>.exe</code>). Open it with Notepad and add your settings:</p>
+<pre><code># Your GitHub Fine-grained Token
+GITHUB_PAT=github_pat_...
+
+# The HTTPS URL of your private repository
+REPO_URL=https://github.com/YourUsername/Your-Repo-Name
+</code></pre>
+<h2>Usage</h2>
+<ol>
+<li>Run <code>FikaSync.exe</code>.</li>
+<li>Wait for the tool to sync profiles and launch the server.</li>
+<li>Play the game!</li>
+<li>When you are done playing, close the game and <strong>press [ENTER]</strong> in the FikaSync console window to upload your progress to the repository.</li>
+</ol>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.5</h2></div><time datetime="2026-01-26T21:51:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>0 downloads</span><span>930.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changes</h1>
+<h3>ADDED</h3>
+<ul>
+<li>Added InnerException output</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/883b43058ee1faf61cb2fdfb25e0fcf70dc496d859e07fe1fd958aa4917ae608?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f6b6cbd2-d65c-47aa-b893-2751930cebef?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A55Z&amp;rscd=attachment%3B+filename%3DFikaSync.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A01Z&amp;ske=2026-08-01T21%3A12%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZByuOFZ7yEcYO0q5t%2B4GZ9WHaNB0GiqJTmcmLnTeBFU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.5</h2></div><time datetime="2026-01-26T20:00:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,396 downloads</span><span>930.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changes</h1>
+<h3>ADDED</h3>
+<ul>
+<li>Added InnerException output</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZmY5NzVkODg2YmI3ZWY3NTlmYTk5MDA4OTQyYzUxYWY6MTc2OTQ2MDU3MQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f6b6cbd2-d65c-47aa-b893-2751930cebef?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A55Z&amp;rscd=attachment%3B+filename%3DFikaSync.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A01Z&amp;ske=2026-08-01T21%3A12%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZByuOFZ7yEcYO0q5t%2B4GZ9WHaNB0GiqJTmcmLnTeBFU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.4</h2></div><time datetime="2026-01-06T23:14:00.000000Z">6 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>464 downloads</span><span>930.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changes</h1>
+<h3>ADDED</h3>
+<ul>
+<li>Added support for SPT 3.11.x file structure</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/861b1b8f4125291d53e3b9acbdb60ab660261aa580fad1b30ab31894a3ad2d43?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/443f5d70-a0be-4b2d-b92d-bc6abe4b44f1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A30Z&amp;rscd=attachment%3B+filename%3DFikaSync.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A26Z&amp;ske=2026-08-01T21%3A08%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=rEhUQB6eCB3FBY6hKFWf11vnDnosmtozinr%2Byefci6s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.3</h2></div><time datetime="2025-12-25T20:37:00.000000Z">25 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>505 downloads</span><span>940.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changes</h1>
+<h3>FIXED</h3>
+<ul>
+<li>Fixed issue when new created repository was empty</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZGRmZWNhNjNjNTEyZGQ1ZmZmY2EzYTMwMDk1ZTI0MTE6MTc2NjY5MTQxNQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/f0545358-0798-4fb9-9983-5bcd61cad7f0?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A08Z&amp;rscd=attachment%3B+filename%3DFikaSync.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A00Z&amp;ske=2026-08-01T21%3A14%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Kp3hB0DtBOZ9x9lQPeSy6wkZWZdJU4SbXLrllB7vTcI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MywibmJmIjoxNzg1NjE1ODUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.SK9zz-txcvEze8sjtcvbfXsqa_Hd0Iq-yV-IoQWDfiQ&amp;response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.2</h2></div><time datetime="2025-12-23T07:11:00.000000Z">23 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>149 downloads</span><span>939.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Changes</h1>
+<h3>MODIFIED</h3>
+<ul>
+<li>Change release on git from <code>.exe</code> to <code>.7z</code></li>
+<li>Seamless auto-updater for 7zip files from Release.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/27a43c6533fa449e19dde5f957543741216deddd36d2d291deb52bd12abbad1b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1109219781/c1d2d450-c674-4cf8-8da0-47bdf700b86c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A20Z&amp;rscd=attachment%3B+filename%3DFikaSync.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A39Z&amp;ske=2026-08-01T21%3A20%3A20Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2JxsnhPYcvsANhZyAbYUPP23ft9SNaNHYOUszr%2FePpQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1NCwibmJmIjoxNzg1NjE1ODU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.pWITp8_ZBenZmUbLdE4MfEbCKiiA7_VieqNGQDHATK4&amp;response-content-disposition=attachment%3B%20filename%3DFikaSync.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.fanteeek.fikasync</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>23 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/fanteeek/fikasync" target="_blank" rel="noreferrer noopener">https://github.com/fanteeek/fikasync</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

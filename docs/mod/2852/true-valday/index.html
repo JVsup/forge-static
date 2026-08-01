@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>True Valday · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>True Valday</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/9e97bc2c96cb7a53cbb6d251373346fd4cdaa1f8b22d531d6fac7913a27c3ef3.webp" alt="True Valday thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>True Valday</h1>
+    <p class="hero-teaser">The Valday PS-320 used to be clean glass, then the optics rework filled it with a shadow that swims every time you move. True Valday hands the old sight picture back.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Sipto</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>515</dd></div>
+    <div><dt>Favourites</dt><dd>5</dd></div>
+    <div><dt>Mod lists</dt><dd>9</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="True Valday content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><h3>Overview</h3>
+<p>Gives the Valday PS-320 back the sight picture it had before the optics rework: glass that runs clear to the edge, with just enough life left in the shadow that the picture still reacts to movement instead of looking painted on. Both zoom modes benefit, 1x and 6x.</p>
+<p>Only the Valday is touched. Every other optic keeps its stock glass.</p>
+<h3>How it works</h3>
+<p>The Valday’s tunnel vision isn’t code, it’s two numbers baked into the scope’s lens material: how wide the clear picture is, and how far the shadow travels as your eye comes off the axis. The Valday ships with a clear radius of 0.474 where clean 1-6x glass like the Razor sits at 0.94, and half again the shadow travel. The mod rewrites both as the scope spawns. No bundle edits — your game files are never modified.</p>
+<p>There’s nothing to configure and that’s on purpose. The numbers are the ones I settled on after tuning them live in raids — clear radius 1.0, shadow travel a touch over stock — and they’re compiled in.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h3>Requirements</h3>
+<p><strong>Nothing.</strong> No dependencies, no integrations.</p>
+<h3>Steps</h3>
+<ol>
+<li>Download the archive.</li>
+<li>Extract it into your SPT folder — the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>.</li>
+<li>Merge when Windows asks. <code>TrueValday</code> lands in <code>BepInEx/plugins</code>.</li>
+<li>Launch.</li>
+</ol>
+<p>Client-side only. Nothing goes in <code>user/mods</code>, and in a Fika group only you need it.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><p>It rewrites two values on the Valday’s lens material and touches nothing else. A mod that adjusts those same lens numbers across all scopes will fight it over the Valday — last writer wins — but reticle mods, zoom mods and PiP changes don’t overlap it.</p>
+<p>Built against SPT 4.0.13. The hooks are stable named classes, so it should ride out small updates; the material numbers are the shipping asset’s and could move on a major optics patch.</p></div></div></div>
+
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-28T01:36:00.000000Z">28 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>515 downloads</span><span>5.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>check mod description</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/6d8bcc3adc2847d3fb32b552f6cd73996a8010cdcf742baf9bdb648b7c72078e" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1314414099/8a349a86-bb58-4d06-b120-9e0ce21475c5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A31Z&amp;rscd=attachment%3B+filename%3DTrueValday-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A20Z&amp;ske=2026-08-01T21%3A07%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=VD6elXXtGgGPDoLkBva0NFeA62HvSyIjLpn%2Bg6nav18%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4MiwibmJmIjoxNzg1NjE2MDgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.dV5nDTX6P-C_tEK6IIWeWFH1mgbwTdXWSSsMVthPMOc&amp;response-content-disposition=attachment%3B%20filename%3DTrueValday-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sipto.truevalday</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/CameronsWorks/TrueValday" target="_blank" rel="noreferrer noopener">https://github.com/CameronsWorks/TrueValday</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to generate the Mod Cover Photo and audit the mod</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

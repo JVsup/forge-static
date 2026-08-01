@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Trader Namer · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Trader Namer</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/b4baa5e929518bc32565bd23aebeeb8463a52aa34e6e8155a95ea33201e6aae9.webp" alt="Trader Namer thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Trader Namer</h1>
+    <p class="hero-teaser">Change your traders&#39; names and avatars.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/073b06a4e7ee3edc1d1c73f8e15949727a027d8442713a25c7d4e2aa6f3918a5.webp" alt="" width="32" height="32">sgtlaggy</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>7,432</dd></div>
+    <div><dt>Favourites</dt><dd>3</dd></div>
+    <div><dt>Mod lists</dt><dd>2</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Trader Namer content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>A <a target="_blank" class="external-link" href="https://sgtlaggy.github.io/spt-trader-namer/" rel="noreferrer noopener">web configuration tool</a> is available to configure trader details without manually editing the JSON config.</p>
+<p>The novel difference from other avatar-swapping mods is that it uses trader nicknames instead of obscure avatar IDs that don’t match the trader ID.</p>
+<p>Instead of using a trader’s nickname you can use either their regular ID (for compatibility with Windows filename restrictions) or avatar ID (to easily switch from other avatar-switching mods).</p>
+<p>Both features of the mod should work for custom traders as long as this mod loads after them.</p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Name Examples</div>
+<div class="tab-content"><p>Edit <code>config.json</code> and add a new line between the <code>{}</code> in the format <code>"Default Name": "New Name"</code>.</p>
+<p>The key (left) should be the trader’s default nickname/ID like <code>Prapor</code> or <code>54cb50c76803fa8b248b4571</code>, the value (right) is what you want their new name to be.</p>
+<p>Examples:</p>
+<pre><code>{
+    "Prapor": "Sidorovich"
+}
+</code></pre>
+<pre><code>{
+    "Prapor": "Sidorovich",
+    "Fence": "Drebin"
+}
+</code></pre>
+<p>Details like the trader’s Location and Description can also be changed with extended syntax.
+Valid keys are “FullName”, “FirstName”, “Nickname”, “Location”, and “Description”. All are case-sensitive.</p>
+<pre><code>{
+  "Prapor": {
+    "Nickname": "Sidorovich",
+    "Location": "Rookie Village in the Cordon",
+    "Description": "A reliable source of equipment for stalkers."
+  },
+  "Fence": "Drebin"
+}
+</code></pre></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Avatars</div>
+<div class="tab-content"><p>Name an image based on the trader’s default nickname/ID like <code>Prapor.jpg</code>, <code>54cb50c76803fa8b248b4571.jpg</code>, or <code>59b91ca086f77469a81232e4.jpg</code> and put it in the mod’s <code>avatars</code> folder.</p>
+<p>Images should be JPEG or PNG and sizes around 500x500 work best.</p>
+<p>All users will need to go into their launcher settings and select <code>Clean Temp Files</code> for avatars to update.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Language</div>
+<div class="tab-content"><p>By default names are looked up using your <code>system</code> language but this can be changed in <code>config.json</code>. You can find language codes in <code>SPT_Data/Server/database/locales/</code>; the value for English is <code>en</code>, Russian is <code>ru</code>, etc.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.1</h2></div><time datetime="2025-11-21T20:05:00.000000Z">21 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>883 downloads</span><span>8.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Changed load order to load after (hopefully) all custom traders.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ad288a6e0e1c847b5fd4119395a18ff0592db95096b9d9dc858ae4dd1a1fc4dc?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/825229723/db095d8e-b5cc-4499-8b95-e7583282e934?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A13Z&amp;rscd=attachment%3B+filename%3DTraderNamer-4.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A02Z&amp;ske=2026-08-01T21%3A03%3A13Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=I9X9hfNdhxC2R9VFxkbY7YafKFxSkLvQt0enHrtHnp8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&amp;response-content-disposition=attachment%3B%20filename%3DTraderNamer-4.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.0</h2></div><time datetime="2025-10-11T22:55:38.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>365 downloads</span><span>8.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Updated to SPT 4.0.</p>
+<p>Moved and changed config file. Previously separate files for language and trader details, now just <code>config.json</code> with those as separate keys. An old <code>names.json</code> file can simply be copy-pasted over the empty <code>{}</code> in the new config file.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9e3e3b2fc62df2b81eb9c3e0e14db8ad8706278dbc7b658b6f682d9122bf052a" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/825229723/a95f09fa-684c-4f1a-9b53-5a454199b394?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A05%3A29Z&amp;rscd=attachment%3B+filename%3DTraderNamer-4.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A04%3A31Z&amp;ske=2026-08-01T21%3A05%3A29Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=cNni5ch11gwQSMioOSILhG1aBnnF3QnBDkPcn5qHrIA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&amp;response-content-disposition=attachment%3B%20filename%3DTraderNamer-4.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.1.0</h2></div><time datetime="2025-04-01T22:37:56.000000Z">1 April 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,070 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Now supports using trader ID to get around Windows filename restrictions</p>
+<p>Because it wasn’t much more effort, you can also use early traders’ avatar ID to more easily transition from other avatar-switching mods</p>
+<p>These apply to both avatars and names.json</p>
+<p>Traders’ original names are now grabbed from the system locale instead of English by default. This can be changed in the new lang.json config.</p>
+<p>This is mainly useful for anyone using Fika with players who use different system languages and don’t have a dedicated server setup.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/825229723/36dcc7f5-f2e1-4fd6-8d21-197e2d3e8c56?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A55%3A25Z&amp;rscd=attachment%3B+filename%3DTraderNamer-3.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A55%3A18Z&amp;ske=2026-08-01T20%3A55%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=V2IEwKGomSxJWtQBs2h%2BCYf%2BKj6SbFr3w9FwP4LhJSM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMCwibmJmIjoxNzg1NjE1MzAwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.S9specabJYcCDAQg6UDzjYlMWSmX5E0Jgm1fCXZFaS8&amp;response-content-disposition=attachment%3B%20filename%3DTraderNamer-3.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2025-03-15T22:24:48.000000Z">15 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>353 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Updated to 3.11</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/825229723/0dbd0219-321c-43f8-bcd0-107eaa6b82ae?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A36Z&amp;rscd=attachment%3B+filename%3DTraderNamer-3.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A20Z&amp;ske=2026-08-01T21%3A09%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=GBoymP3n1e41UgGrmFq2JWhquPdfp9lsaUtAGCkkLZQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&amp;response-content-disposition=attachment%3B%20filename%3DTraderNamer-3.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2024-07-07T07:59:50.000000Z">7 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>260 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Currently the 3.9 launcher’s “Clean Temp Files” option does not work correctly.</p>
+<p>Until this is fixed users can delete the user/sptappdata/files/trader folder.</p>
+<p>A 3.8.3 release is available in the Github releases.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1afd15efc86ddb1c2b61ab538486cad2ab35f5028f843aea352f0184ff0af1d8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/825229723/5ca0e4ab-afe2-4ba3-8128-4bf07511c511?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A50%3A03Z&amp;rscd=attachment%3B+filename%3DTraderNamer-2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A49%3A05Z&amp;ske=2026-08-01T20%3A50%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5yllHM%2BmZRHTsaRFO4byK%2BFSeZr2m92esfqlikg10q0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTYwMSwibmJmIjoxNzg1NjE1MzAxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LjeVRMryNQccxGNJa_OcgC4LzbxJRUQJL9Ja6qzKK1E&amp;response-content-disposition=attachment%3B%20filename%3DTraderNamer-2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sgtlaggy.tradernamer</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 July 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/sgtlaggy/spt-trader-namer/tree/ts" target="_blank" rel="noreferrer noopener">3.11</a></li><li><a href="https://github.com/sgtlaggy/spt-trader-namer" target="_blank" rel="noreferrer noopener">4.0</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

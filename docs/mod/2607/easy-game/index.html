@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Easy Game · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Easy Game</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="Easy Game thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Easy Game</h1>
+    <p class="hero-teaser">Adjust character stats, raid duration, item carry limits, magazine times, ammo stacks, stimulator usage, access card uses, flea market restrictions/offers, default item examination, and Labyrinth map visibility. </p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f5eaacedfe1588811ded2c8c177c945c2a8c466690409b71c461969786ce18c9.webp" alt="" width="32" height="32">Suntion</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,804</dd></div>
+    <div><dt>Favourites</dt><dd>7</dd></div>
+    <div><dt>Mod lists</dt><dd>1</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Easy Game content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Easygame Mod for SPTarkov</h3>
+<p>This is a feature-rich mod for the Escape from Tarkov SPTarkov server that provides comprehensive game customization through a unified configuration file. The mod offers independently toggleable features covering character attributes, raid mechanics, item systems, economy, and access cards.</p>
+<h3>Core Features</h3>
+<h4>Character and Raid Adjustments</h4>
+<ul>
+<li>Modify base health, energy, and hydration values for all profiles</li>
+<li>Adjust raid duration across all maps</li>
+<li>Customize item carry limits when entering raids</li>
+</ul>
+<h4>Weapons and Ammunition</h4>
+<ul>
+<li>Adjust magazine loading, unloading, and checking times</li>
+<li>Modify stack sizes for all ammunition types</li>
+</ul>
+<h4>Items and Market</h4>
+<ul>
+<li>Remove flea market selling restrictions on items</li>
+<li>Adjust maximum active offer counts per level</li>
+<li>Set all items as examined by default</li>
+</ul>
+<h4>Consumables</h4>
+<ul>
+<li>Configure stimulator usage times, weight, and price multipliers for all injectors except morphine</li>
+</ul>
+<h4>Access Cards</h4>
+<ul>
+<li>Customize maximum usage counts for both Labs and Labyrinth access cards</li>
+</ul>
+<h4>Map Display</h4>
+<ul>
+<li>Optionally show the Labyrinth map in the map selection screen</li>
+</ul>
+<p>All features are managed through a centralized <code>config.json</code> file, allowing users to flexibly enable or disable specific functions and adjust parameters to achieve a personalized gaming experience.</p>
+<hr>
+<h3>Configuration Guide</h3>
+<p>The <code>config.json</code> configuration file is located by default in <code>SPT/user/mods/Easygame/data</code>.</p>
+<ul>
+<li><strong>Version v1.0.0</strong>: The server must be run at least once to wait for the configuration to be automatically generated. You can also manually create a configuration file containing all the following keys and set up the desired functions in advance according to your needs.</li>
+<li><strong>After Version v1.0.0</strong>: A configuration file will be provided by default, allowing you to set the desired functions before starting the server.</li>
+</ul>
+<pre><code>{
+    // Function enable/disable switches
+    "EnableFunction": {
+        // Whether to remove all flea market selling restrictions on items
+        "IsUnlockAllItemsSellLimit": true,
+        // Whether to display Labyrinth map in map selection screen
+        "ShowMapToChoiceScene": true,
+        // Whether to customize item carry limits into raid
+        "EnterGameItemLimit": true,
+        // Whether to modify health, energy and hydration values
+        "EnergyHydrationModify": true,
+        // Whether to modify raid duration
+        "RaidTimeModify": true,
+        // Whether to modify magazine loading/unloading/checking times
+        "AmmoTimeModify": true,
+        // Whether to modify flea market max active offer count per level
+        "MaxActiveOfferCountModify": true,
+        // Whether to adjust Labs access card usage count
+        "AdjustLabsAccess": true,
+        // Whether to adjust Labyrinth access card usage count
+        "AdjustLabysAccess": true,
+        // Whether to modify stimulator durability (excluding morphine)
+        "AdjustSimulatorMaxHpResource": true,
+        // Whether to adjust ammo stack size
+        "AdjustAmmoStack": true,
+        // Whether to set all items as examined by default
+        "AllExaminedByDefault": false
+    },
+    // Stimulator configuration settings
+    "StimulatorConfig": {
+        // Number of uses for stimulators
+        "UseTimes": 10,
+        // Price multiplier for stimulators
+        "PriceModify": 5,
+        // Weight of stimulators in kilograms
+        "Weight": 0.5
+    },
+    // Maximum item limit when entering raid
+    "EnterGameItemLimit": 3600,
+    // Health multiplier for all profiles
+    "HealthModify": 1.5,
+    // Energy and hydration multiplier for all profiles
+    "EnergyHydrationModify": 1.5,
+    // Raid duration multiplier
+    "RaidTimeModify": 3,
+    // Magazine loading time multiplier
+    "TakeInAmmoTimeModify": 0.05,
+    // Magazine unloading time multiplier
+    "TakeOutAmmoTimeModify": 0.05,
+    // Magazine checking time multiplier
+    "CheckAmmoTimeModify": 0.45,
+    // Flea market max active offers multiplier per level
+    "MaxActiveOfferCountModify": 7,
+    // Labs access card maximum usage count
+    "LabsAccessMaximumNumberOfUsage": 10,
+    // Labyrinth access card maximum usage count
+    "LabysAccessMaximumNumberOfUsage": 10,
+    // Ammo stack size
+    "AmmoStack": 300
+}
+</code></pre>
+<hr></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>Easygame SPTarkov 模组</h3>
+<p>这是一个功能丰富的 Escape from Tarkov SPTarkov 服务端模组，通过统一的配置文件提供全面的游戏自定义功能。该模组提供独立可切换的功能，涵盖角色属性、战局机制、物品系统、经济和访问卡。</p>
+<h3>核心功能</h3>
+<h4>角色与战局调整</h4>
+<ul>
+<li>修改所有档案的基础生命值、能量和水分值</li>
+<li>调整所有地图的战局时长</li>
+<li>自定义进入战局时的物品携带上限</li>
+</ul>
+<h4>武器与弹药</h4>
+<ul>
+<li>调整弹匣装填、卸弹和检查时间</li>
+<li>修改所有弹药类型的堆叠数量</li>
+</ul>
+<h4>物品与市场</h4>
+<ul>
+<li>解除跳蚤市场物品售卖限制</li>
+<li>调整每等级最大活跃报价数量</li>
+<li>默认设置所有物品为已检查状态</li>
+</ul>
+<h4>消耗品</h4>
+<ul>
+<li>配置 stimulator 使用次数、重量和价格倍率（除吗啡外所有注射器）</li>
+</ul>
+<h4>访问卡</h4>
+<ul>
+<li>自定义实验室（Labs）和迷宫（Labyrinth）访问卡的最大使用次数</li>
+</ul>
+<h4>地图显示</h4>
+<ul>
+<li>可选在地图选择界面显示迷宫地图</li>
+</ul>
+<p>所有功能通过集中的 <code>config.json</code> 文件管理，允许用户灵活启用或禁用特定功能并调整参数，以实现个性化的游戏体验。</p>
+<hr>
+<h3>配置指南</h3>
+<p><code>config.json</code> 配置文件默认位于 <code>SPT/user/mods/Easygame/data</code>。</p>
+<ul>
+<li><strong>v1.0.0 版本</strong>：必须至少运行一次服务端以等待配置自动生成。您也可以手动创建包含以下所有键的配置文件，并根据需要预先设置所需功能。</li>
+<li><strong>v1.0.0 之后版本</strong>：默认会提供配置文件，允许您在启动服务端前设置所需功能。</li>
+</ul>
+<pre><code>{
+    // 功能启用/禁用开关
+    "EnableFunction": {
+        // 是否解除所有物品的跳蚤市场售卖限制
+        "IsUnlockAllItemsSellLimit": true,
+        // 是否在地图选择界面显示迷宫地图
+        "ShowMapToChoiceScene": true,
+        // 是否自定义带入战局的物品上限
+        "EnterGameItemLimit": true,
+        // 是否修改生命值、能量和水分值
+        "EnergyHydrationModify": true,
+        // 是否修改战局时长
+        "RaidTimeModify": true,
+        // 是否修改弹匣装填/卸弹/检查时间
+        "AmmoTimeModify": true,
+        // 是否修改跳蚤市场每等级最大活跃报价数量
+        "MaxActiveOfferCountModify": true,
+        // 是否调整实验室访问卡使用次数
+        "AdjustLabsAccess": true,
+        // 是否调整迷宫访问卡使用次数
+        "AdjustLabysAccess": true,
+        // 是否修改 stimulator 耐久度（不含吗啡）
+        "AdjustSimulatorMaxHpResource": true,
+        // 是否调整弹药堆叠数量
+        "AdjustAmmoStack": true,
+        // 是否默认所有物品为已检查状态
+        "AllExaminedByDefault": false
+    },
+    // 刺激物配置设置
+    "StimulatorConfig": {
+        // 刺激物使用次数
+        "UseTimes": 10,
+        // 刺激物价格倍率
+        "PriceModify": 5,
+        // 刺激物重量（千克）
+        "Weight": 0.5
+    },
+    // 进入战局时最大物品上限
+    "EnterGameItemLimit": 3600,
+    // 所有档案的生命值倍率
+    "HealthModify": 1.5,
+    // 所有档案的能量和水分倍率
+    "EnergyHydrationModify": 1.5,
+    // 战局时长倍率
+    "RaidTimeModify": 3,
+    // 弹匣装填时间倍率
+    "TakeInAmmoTimeModify": 0.05,
+    // 弹匣卸弹时间倍率
+    "TakeOutAmmoTimeModify": 0.05,
+    // 弹匣检查时间倍率
+    "CheckAmmoTimeModify": 0.45,
+    // 跳蚤市场每等级最大活跃报价倍率
+    "MaxActiveOfferCountModify": 7,
+    // 实验室访问卡最大使用次数
+    "LabsAccessMaximumNumberOfUsage": 10,
+    // 迷宫访问卡最大使用次数
+    "LabysAccessMaximumNumberOfUsage": 10,
+    // 弹药堆叠数量
+    "AmmoStack": 300
+}
+</code></pre></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-02-28T04:57:00.000000Z">28 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,574 downloads</span><span>17.7 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Version 1.1.0 Release Notes</h3>
+<h4>New Features</h4>
+<p><strong>Task Execution Statistics and Performance Monitoring</strong></p>
+<ul>
+<li>Introduced a task runtime status tracking system that automatically records the execution result and time consumption of each task</li>
+<li>Added a task statistical report feature that outputs detailed performance analysis when the mod starts (output to <strong>Game Folder\SPT\user\mods\SuntionCore\ModLogs\EasyGame.log</strong>):
+<ul>
+<li>Completion status of each task (success/failure)</li>
+<li>Precise task execution time (millisecond precision)</li>
+<li>List of tasks skipped due to condition filtering</li>
+<li>Total time consumption of the entire task scheduling process</li>
+</ul>
+</li>
+<li>Automatically handles duplicate task names by appending suffixes like <code>_0</code>, <code>_1</code>, etc., to avoid overwriting statistical information</li>
+</ul>
+<hr>
+<h4>Optimizations and Refactoring</h4>
+<p><strong>Enhanced Configuration Loading Logic</strong></p>
+<ul>
+<li>Refactored the configuration loading process, moving directory creation into exception handling blocks to improve file operation robustness</li>
+<li>Added an outer global exception catch to prevent mod crashes caused by file I/O errors</li>
+<li>Applied null coalescing operators <code>?? 1.0d</code> to all numerical configuration items, ensuring the default multiplier of 1.0 is used when configurations are missing</li>
+<li>Simplified null check logic, removing redundant nested null conditional operators</li>
+</ul>
+<hr>
+<h4>Configuration Improvements</h4>
+<p><strong>Default Configuration File</strong></p>
+<ul>
+<li>Added a default mod configuration file <code>config.json</code>, allowing users to customize mod behavior before the first run</li>
+<li>Changed the default value for the “All Items Inspected” option to <code>false</code> (previously <code>true</code>)</li>
+<li>In coordination with the null safety logic in the code layer, ensures the mod can still run with safe default values when parts of the configuration are missing</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>版本 1.1.0 更新日志</h3>
+<h4>新特性</h4>
+<p><strong>任务执行统计与性能监控</strong></p>
+<ul>
+<li>引入了任务运行时状态跟踪系统，自动记录每个任务的执行结果和耗时</li>
+<li>新增任务统计报告功能，在模组启动时输出详细的性能分析（输出至 <strong>游戏目录\SPT\user\mods\SuntionCore\ModLogs\EasyGame.log</strong>）：
+<ul>
+<li>每个任务的完成状态（成功/失败）</li>
+<li>精确的任务执行时间（毫秒级精度）</li>
+<li>因条件过滤而跳过的任务列表</li>
+<li>整个任务调度过程的总耗时</li>
+</ul>
+</li>
+<li>自动处理重复的任务名称，通过添加 <code>_0</code>、<code>_1</code> 等后缀，避免统计信息被覆盖</li>
+</ul>
+<hr>
+<h4>优化与重构</h4>
+<p><strong>增强的配置加载逻辑</strong></p>
+<ul>
+<li>重构了配置加载流程，将目录创建移至异常处理块内部，提高了文件操作的鲁棒性</li>
+<li>添加了外层全局异常捕获，防止因文件 I/O 错误导致模组崩溃</li>
+<li>对所有数值型配置项应用了空合并运算符 <code>?? 1.0d</code>，确保在配置缺失时使用默认倍率 1.0</li>
+<li>简化了空值检查逻辑，移除了冗余的嵌套空条件运算符</li>
+</ul>
+<hr>
+<h4>配置改进</h4>
+<p><strong>默认配置文件</strong></p>
+<ul>
+<li>新增了默认模组配置文件 <code>config.json</code>，允许用户在首次运行前自定义模组行为</li>
+<li>将“所有物品已检查“选项的默认值更改为 <code>false</code>（此前为 <code>true</code>）</li>
+<li>与代码层的空安全逻辑协同，确保在部分配置缺失时模组仍能使用安全默认值运行</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a75484fd0869773516546e34b3885a471eb9d58832c831106db42b8ee87c92bc/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1167608092/9a0f3a17-0c07-4f04-bd7e-bcaf3c1fb9a1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A55Z&amp;rscd=attachment%3B+filename%3DEasyGame-1.1.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A47Z&amp;ske=2026-08-01T21%3A00%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1PriGtWU3M1eF6q%2Bzm8katHhLjWQohbpA7urOCJIR1E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&amp;response-content-disposition=attachment%3B%20filename%3DEasyGame-1.1.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-26T15:26:00.000000Z">26 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>230 downloads</span><span>16.5 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><ul>
+<li><strong>Carry Limit Adjustment</strong>: Modify the maximum number of items players can bring into a raid</li>
+<li><strong>Raid Duration Modification</strong>: Adjust extraction time limits for all maps</li>
+<li><strong>Magazine Operation Time Modification</strong>: Adjust time required for loading, unloading, and checking magazines</li>
+<li><strong>Character Base Stats Modification</strong>: Adjust base health, energy, and hydration limits for all profiles</li>
+<li><strong>Flea Market Selling Restriction Removal</strong>: Allow items that couldn’t be sold on the flea market to be listed</li>
+<li><strong>Ammo Stack Size Modification</strong>: Modify stack limits for all ammunition types</li>
+<li><strong>Stimulator Durability Modification</strong>: Modify usage count, weight, and price for all injectors (except morphine)</li>
+<li><strong>Default Item Examination</strong>: Make all items examined by default</li>
+<li><strong>Labyrinth Map Display</strong>: Make the Labyrinth map appear in the map selection screen</li>
+<li><strong>Flea Market Offer Limit Modification</strong>: Adjust maximum offer count limits for different edition levels on the flea market</li>
+<li><strong>Labs Access Card Usage Adjustment</strong>: Modify usage count for Labs access cards</li>
+<li><strong>Labyrinth Access Card Usage Adjustment</strong>: Modify usage count for Labyrinth access cards</li>
+</ul></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><ul>
+<li><strong>携带上限调整</strong>：修改玩家能够带入战局的最大物品数量</li>
+<li><strong>战局时长调整</strong>：调整所有地图的撤离时间限制</li>
+<li><strong>弹匣操作时间调整</strong>：调整装弹、卸弹和检查弹匣所需的时间</li>
+<li><strong>角色基础属性调整</strong>：调整所有档案的基础健康值、能量值与水分值上限</li>
+<li><strong>跳蚤市场出售限制解除</strong>：允许原本无法在跳蚤市场出售的物品上架</li>
+<li><strong>弹药堆叠数量调整</strong>：修改所有类型弹药的堆叠上限</li>
+<li><strong>注射器耐久调整</strong>：修改所有注射器（除吗啡外）的使用次数、重量与价格</li>
+<li><strong>默认物品检视</strong>：所有物品默认设置为已检视状态</li>
+<li><strong>迷宫地图显示</strong>：使迷宫地图显示在地图选择界面中</li>
+<li><strong>跳蚤市场挂单上限调整</strong>：调整不同版本在跳蚤市场的最大挂单数量</li>
+<li><strong>实验室门禁卡使用调整</strong>：修改实验室门禁卡的使用次数</li>
+<li><strong>迷宫门禁卡使用调整</strong>：修改迷宫门禁卡的使用次数</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/19b0896660937ae6ac743b836ad071fb1e876d13c4b1edf3657c553539e97b10/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1167608092/a8892950-0944-40e8-9a77-967405cab472?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A22Z&amp;rscd=attachment%3B+filename%3DEasyGame-1.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A42Z&amp;ske=2026-08-01T21%3A10%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=cV7q39aiyNAJgLEBYUF2sRQnWC6o3kzCRZ1TPOxvNPc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NywibmJmIjoxNzg1NjE1ODg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WcYR5KOHPYYsTk6Hp_uOfQH3LCAzd8D-KyaS4b7sQ6A&amp;response-content-disposition=attachment%3B%20filename%3DEasyGame-1.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.suntion.easygame</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 February 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/SunYanbox/EasyGame" target="_blank" rel="noreferrer noopener">https://github.com/SunYanbox/EasyGame</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Enemy Markers · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Enemy Markers</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/ffd7d0a03df102c07b5be6e765ce64f9c787d1861ac01abeeffe6f80dcb7d4ba.png" alt="Enemy Markers thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Enemy Markers</h1>
+    <p class="hero-teaser">Simply a Marker that shows the enemies with a &quot;v&quot; shaped marker. Can also display the distance from the enemy.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/dad9e90773aa400739f807267cc69c57cd75a865b3ec6d85ecf3e25633950a57.svg" alt="" width="32" height="32">APerson</span>
+      <span class="author"><img src="../../../assets/a7839a94ffbaf871a9b4cbf5f3d1aa1a671c43164d61618aac5ec6309c3df8f2.webp" alt="" width="32" height="32">flir</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>17,697</dd></div>
+    <div><dt>Favourites</dt><dd>13</dd></div>
+    <div><dt>Mod lists</dt><dd>14</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Enemy Markers content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>9</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>I (APerson) AM NOT THE ORIGINAL CREATOR OF THIS MOD</strong></p>
+<p>This mod gives you the ability to spot an enemy and have a Marker showing where they are for <strong>5 Seconds</strong>.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/966141cf1d16c6789e14fa281e454e9b2273794e909589ac1bf9cf68c4b1049b.webp" alt="scav scoped"></p>
+<p>Configurable:</p>
+<p>Marker character</p>
+<p>Size</p>
+<p>Distance / Radius from center</p>
+<p>Color by “player” category (Bear/Usec/Scav/Boss …)</p>
+<p>To install just unzip at the root of your SPT folder and it will create a <code>BepInEx\\plugins\\flir.enemymarkers</code> directory for you</p>
+<h3>If you want to help in the development of this mod you are welcome to propose merge requests or issues on its project page: <a target="_blank" class="external-link" href="https://gitlab.com/flir063-spt/enemymarkers" rel="noreferrer noopener">https://gitlab.com/flir063-spt/enemymarkers</a></h3>
+<p>Do not make requests somewhere else than gitlab as I would not see them, I (flir) am not the “author” of this mod, just an additional author.</p>
+<p>Special Thx to Level-Yellow-316 on Reddit for originally making this mod.</p>
+<p>Known Issues</p>
+<p>none ATM</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2025-11-15T23:53:00.000000Z">15 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>9,212 downloads</span><span>13.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Features</p>
+<ul>
+<li>Added optional light sources above detected characters. The lights follow the same visibility rules as markers. Disabled by default with configurable intensity and range settings.</li>
+</ul>
+<p>Bug Fixes</p>
+<ul>
+<li>Fixed bug where marker colors could change for the same character when entering and exiting ghost mode. Colors are now cached when markers are created and restored when exiting ghost mode.</li>
+<li>Fixed bug where markers would permanently show incorrect colors due to race condition at marker creation. Player profile data (Side, Role) may be incomplete when OnPersonAdd fires, causing wrong color assignment. Color is now validated and recalculated on first visibility when player data is fully loaded.</li>
+<li>Fixed bug where ghost marker character would not update from “v” to “x” immediately when entering ghost mode. The marker character now changes instantly when losing line of sight, instead of waiting for the player to move.</li>
+<li>Fixed bug where ghost markers remained visible when the marker toggle key was pressed. Ghost markers now correctly respect the visibility toggle state (default: Y key), hiding along with live markers when toggled off.</li>
+<li>Fixed bug where markers would briefly appear white before showing the correct color. Color is now explicitly reapplied when markers become visible to ensure Unity TextMesh properly renders the assigned color.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9a9338b5499c90390d8b2a09a60824d6d8331d7dff9bfcc97d8cd3413115f02a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.3.0/flir.enemymarkers-v1.3.0.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2025-11-13T16:31:00.000000Z">13 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>259 downloads</span><span>12.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed ghost marker distance calculation</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url-analysis/u-69cdf565078ead4bbd6ae8809e2cfe4155f06d06e5a9c05b673b92182208cb2b-e45dbbc2" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.1.3/flir.enemymarkers-v1.1.3.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2025-11-12T22:38:00.000000Z">12 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>143 downloads</span><span>12.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added an option to have markers become ghosts when the tracked character goes behind cover. Showing the last know position for 5 seconds. This is a less OP option than active tracking.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url-analysis/u-345ef5cf2860a95ca6994cf0481e161bbd863b5dd2c5bbadd40c0a5edd260746-b8f6549c" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/api/v4/projects/68962130/packages/generic/flir.enemymarkers/1.1.2/flir.enemymarkers-v1.1.2.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2025-11-11T14:22:00.000000Z">11 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>161 downloads</span><span>11.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added foliage masking as an option</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/ba115c299ac95bf2e9414e95919be732a6add37c88bcfa7910add8a5924f0f2c?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/246071419/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2025-11-10T22:27:00.000000Z">10 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>145 downloads</span><span>11.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>This is an important version as it changes the way we create and display markers altogether:</p>
+<ul>
+<li>removed gui markers and replaced them with 3D objects. This
+fixes all issues with scopes DLSS or whatever.</li>
+<li>Added new keybinding to toggle distance display.</li>
+<li>Added new options for scaling the markers.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url-analysis/u-33c4afb86d8c95ba8ef82ff857cfe91385830a841c23b9680afad9e00c4ebf66-18b86076" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/245822695/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.8</h2></div><time datetime="2025-11-09T00:13:00.000000Z">9 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>241 downloads</span><span>11.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added keybinding to toggle markers on/off</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/812b50ad9ebb1d87e08acd6e53d72c4de3e02add0059fca7b0268dda3267a72a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/245393067/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.7</h2></div><time datetime="2025-11-05T21:33:00.000000Z">5 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>327 downloads</span><span>10.8 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added a fix to support DLSS</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/bdd21e50afa68a4d81e8d0b5cadd98ae5fe1d6a8134360ea33712e4506fdcd7d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/244514215/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.6</h2></div><time datetime="2025-11-05T20:32:00.000000Z">5 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>51 downloads</span><span>10.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Ported to SPT4</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/75cb3f5bb75b66fa53b59c6a2fb507b079c373152de6ac0259ed949bed686084?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/244504264/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.4</h2></div><time datetime="2025-05-04T12:43:26.000000Z">4 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,129 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>With this version the mod works for more than one raid. \o/</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/8ce7e1203f2d9d0ea391ccd5fe50614ad355017fd249467bbbf061c4f72b344d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://gitlab.com/flir063-spt/enemymarkers/-/package_files/190903230/download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>flir.enemymarkers</code></dd></div>
+      <div><dt>License</dt><dd>The Unlicense</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>28 November 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://gitlab.com/flir063-spt/enemymarkers" target="_blank" rel="noreferrer noopener">https://gitlab.com/flir063-spt/enemymarkers</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

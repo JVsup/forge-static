@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Global Flea Dynamics (DFP Addon) · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../addons/">Addons</a><span aria-hidden="true">/</span><span>Global Flea Dynamics (DFP Addon)</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/c2433171a711f74b690ae3532a10af97a3318660e7a607ca6ce20b716dea36c2.webp" alt="Global Flea Dynamics (DFP Addon) thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h1>Global Flea Dynamics (DFP Addon)</h1>
+    <p class="hero-teaser">Takes ALL ITEMS from base SPT and applies the DYNAMIC FLEA to them.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/c003406fe38bc981cf8c5f1d642be2a4140727c6f6a59acd0fd2c38f3f91151e.webp" alt="" width="32" height="32">pandize</span>
+      <span class="author"><img src="../../../assets/4dc73268c9a296ad9ff038fd32a82a2003b2c016eb9d6c26d8f07ffc3e061c28.webp" alt="" width="32" height="32">hiop90</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>146</dd></div>
+    
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Global Flea Dynamics (DFP Addon) content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>Global Flea Dynamics</strong> is just a config for Dynamic Flea Price (DFP).</p>
+<p>It takes all items from the <a target="_blank" class="external-link" href="https://github.com/hiop/SPT-DynamicFleaPrice/blob/master/Config/SPT-407-CategoryAndItem-En.txt" rel="noreferrer noopener">Database Set</a> on Github, and applies a configurable multiplier to each.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/eabf5be6f481fdf2f655d1eecaf6a6f67bcb7e842054df0f0f51702352e732e6.webp" alt="LineBreak"></p>
+<p><strong>– Is it balanced? –</strong></p>
+<p>Sort of. You can manipulate it since selling impacts the market harder;</p>
+<pre><code>  "moreMultiplierPerSelling": 2,
+</code></pre>
+<p>The numbers aren’t completely dialed in for balance, but they should be good enough!</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/eabf5be6f481fdf2f655d1eecaf6a6f67bcb7e842054df0f0f51702352e732e6.webp" alt="LineBreak"></p>
+<p><strong>– Can I change the multipliers? –</strong></p>
+<p>Of course! Just remember, <strong>rounds are unique</strong> and have their own multipliers of 0.00150.</p>
+<p>I’ve categorized each item and applied a multiplier that <strong>counts</strong> each category.
+For example:</p>
+<pre><code>"Assault Rifles"  = 0.15001
+"Ammo Packs"      = 0.15002
+"Mechanical Keys" = 0.15003
+"etc"             = ...
+</code></pre>
+<p><img loading="lazy" decoding="async" src="../../../assets/3fedcdcebae4841e0501e3b46c8a7e308a806e948b59389b354ac4ef38100b62.webp" alt="Replace Each Category GIF"></p>
+<p>This allows you to search &amp; replace for each of the 65 categories OR change all with replacing 0.15.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/eabf5be6f481fdf2f655d1eecaf6a6f67bcb7e842054df0f0f51702352e732e6.webp" alt="LineBreak"></p>
+<p><strong>All Items,
+configured for a dynamic flea market.</strong></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/ebe8778afee15d314dffd939b7fde3e8992fcb4f4b874457b89c111400a53986.webp" alt="All Items Config GIF"></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-12-27T15:37:00.000000Z">27 December 2025</time></header>
+          <div class="version-badges">
+            
+            <span class="badge">Parent mod ~2.0.0</span>
+            
+            <span>146 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Release containing the .json5 changes.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/d14aec45cb1d4dd3ef7918b46ee40bfcc9c056f6cefd595b6af2870ced290b6e/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/hiop/SPT-DynamicFleaPrice" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      <div><dt>Parent mod</dt><dd><a href="../../../mod/2493/dynamic-flea-price/">Dynamic Flea Price</a></dd></div>
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>27 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/hiop/SPT-DynamicFleaPrice" target="_blank" rel="noreferrer noopener">https://github.com/hiop/SPT-DynamicFleaPrice</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

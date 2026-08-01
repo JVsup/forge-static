@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Foldables · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Foldables</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/4086df1afbcc8401ffca7134ae6c5ae6ce5b3935691e6c338a5fd2e6f2af9759.webp" alt="Foldables thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Foldables</h1>
+    <p class="hero-teaser">You can now fold backpacks and vests!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/48fc1216029eb67a29c7ed64ac5124f25ab2ef57a56f5a042451f1f5e83504b4.webp" alt="" width="32" height="32">ozen</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>33,253</dd></div>
+    <div><dt>Favourites</dt><dd>82</dd></div>
+    <div><dt>Mod lists</dt><dd>198</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Foldables content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>Foldables</strong> introduces the ability to fold your gear, <em>collapsing</em> into smaller grid sizes. This way you can save space in your stash, or keep valuable backpacks/vests you find in-raid.</p>
+<hr>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><h4>Features</h4>
+<ul>
+<li>Every compatible gear now has a folded state: Fold like you would a gun by using <code>middle mouse click</code> or by using the context menu</li>
+<li>Compatible gear includes: Backpacks, Unarmored Vests, Headphones</li>
+<li>Realism and balancing: Folded gear cannot be opened and cannot contain any items. Folding in-raid takes time, scaled based on the size of the gear</li>
+<li>Seamless experience: Unfold gear on equip. Unfold gear when trying to open it. Ask to spill the contents when folding a container that is not empty. Ability to fold/unfold items on the ground in-raid, by holding the interaction button (<code>F</code>)</li>
+<li>Configurable: Configuration is available server side and client side</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h4>Installation</h4>
+<ul>
+<li>Extract the contents of the .zip archive into your SPT folder.</li>
+</ul>
+<h4>Note to Fika users:</h4>
+<ul>
+<li>Must also be installed in the headless client</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/f8a882020797ae7b0f90dc418fa7bf212be49d7205750ccf2c1ace20c747fbae.webp" alt="Installation">
+Thank you <span class="dead-link">DrakiaXYZ</span> for the gif</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><h4>Configuration</h4>
+<h4>Server Side</h4>
+<p>In the <code>config.json</code> file:</p>
+<ul>
+<li><code>MinFoldingTime</code> - Minimum folding time in-raid for the smallest gear. Default is <code>1</code> second</li>
+<li><code>MaxFoldingTime</code> - Maximum folding time in-raid for the largest gear. Default is <code>5</code> seconds. Setting both to <code>0</code> effectively removes the delay in-raid</li>
+</ul>
+<p>For a more tailored experience:</p>
+<ul>
+<li><code>Overrides</code> - Override foldable properties for certain gear. See <code>config.json</code> for an example</li>
+<li><code>BackpackFoldedCellSizes</code> and <code>VestFoldedCellSizes</code> - Folded sizes are calculated based on this, for example (using default values) all backpacks with a grid count of &lt;= <code>15</code> will have a folded size of <code>1x2</code></li>
+</ul>
+<h4>Client Side</h4>
+<p>In the BepInEx configuration manager (<code>F12</code>)</p>
+<ul>
+<li><code>Fold While Equipped</code> - Allow folding while gear is equipped. Default is <code>true</code></li>
+<li><code>Spill Confirmation</code> - Show a confirmation dialogue before spilling contents, if possible. If disabled, always spill without asking. Default is <code>true</code></li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><h4>Compatibility</h4>
+<ul>
+<li><a target="_blank" class="external-link" href="../../1342/ui-fixes/" rel="noreferrer noopener">UIFixes</a> by <span class="dead-link">Tyfon</span> MultiSelect interoperability: Fold/unfold multiple gear if it allows</li>
+<li>Fika: Must also be installed in the headless client. Players interacting with the same item is untested</li>
+<li>This should work with mods that add custom gear</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><h4>Support</h4>
+<p>If you find bugs, or have feature suggestions, feel free to post them on the comment section, or open an issue on GitHub, or most preferably through the <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1374428464999829555" rel="noreferrer noopener">SPT Discord, <code>ozen</code></a></p>
+<h4>Contributing</h4>
+<ul>
+<li>I would appreciate it if you could help translate this mod into your language. Locale files are inside <code>config/locales/</code>, with your language <code>__.json</code></li>
+</ul>
+<h4>Future Plans</h4>
+<ul>
+<li>Folded static loot</li>
+<li>Custom folded models (okay, maybe not)</li>
+</ul></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Credits</div>
+<div class="tab-content"><h4>Credits</h4>
+<ul>
+<li>Thanks to <span class="dead-link">Tyfon</span> for entertaining my questions, and for his work on UIFixes which showed what else can be possible</li>
+<li>Thanks to <span class="dead-link">BloodRain13</span> for helping test this mod extensively</li>
+<li>Thanks to <span class="dead-link">Gleneth</span> for his help on initial testing</li>
+<li>FlatIcon - <a target="_blank" class="external-link" href="https://www.flaticon.com/free-icon/military_3856880" rel="noreferrer noopener">1</a>, <a target="_blank" class="external-link" href="https://www.flaticon.com/free-icon/clean-clothes_9619571" rel="noreferrer noopener">2</a></li>
+</ul></div></div></div>
+<hr>
+<p>If you enjoy my work, you can <a target="_blank" class="external-link" href="https://ko-fi.com/ozenm" rel="noreferrer noopener">buy me a coffee</a> ☕</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2025-12-27T17:15:00.000000Z">27 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>23,446 downloads</span><span>36.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added:</p>
+<ul>
+<li>Russian language localization (Thanks <span class="dead-link">@DragonX86-dev</span>!)</li>
+</ul>
+<p>Fixed:</p>
+<ul>
+<li>Out of bounds issue</li>
+<li>Mod compatibility load order</li>
+</ul>
+<p>Modified:</p>
+<ul>
+<li>Fallback locale languages to English</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/659c1bd16864d4dd6a02d0357e2d4c62da1e169c322d1e062e526fd1cea25ea0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1086612617/eb967415-8241-4efc-a292-b795f531688d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A57Z&amp;rscd=attachment%3B+filename%3Dozen-Foldables-1.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A20Z&amp;ske=2026-08-01T21%3A11%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Pq%2BTfxJe2B0x5MvyqnI9OxpY0DlO6fejcMs5jyMrrXQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dozen-Foldables-1.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-11-11T18:11:00.000000Z">11 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>7,979 downloads</span><span>34.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added:</p>
+<ul>
+<li>Foldable headsets</li>
+</ul>
+<p>Fixed:</p>
+<ul>
+<li>Foldable items ending up on top when sorting</li>
+<li>Image scale when folded item is rotated</li>
+<li>Some cases of null ref exceptions</li>
+</ul>
+<p>Modified:</p>
+<ul>
+<li>Smaller default folding sizes to encourage folding</li>
+<li>Try optimize mod’s server start</li>
+<li>Use SPT patch manager</li>
+</ul>
+<p><strong>Note</strong>: This update changes the config’s default values, it is recommended to make a backup of your current config then <em>migrate</em> your changes</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f76370a49ae5335b8b974696eb6fc7aff69d81b17bb7253e702c4075d548619e?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1086612617/87e7cd3a-7ec7-45e3-a1fb-cfd88c87fa51?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A49Z&amp;rscd=attachment%3B+filename%3Dozen-Foldables-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A49Z&amp;ske=2026-08-01T21%3A22%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=50Cdi7R2892uY4Woz%2Fsj0h7xAut1xjuU4vr%2FkjpxYM0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dozen-Foldables-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-11-07T18:39:00.000000Z">7 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.3</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,828 downloads</span><span>32.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/d4fc5995939310e81bc74e0e733584b2b1a8c7a78a2ae2ba00386bf9c6c22ac1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1086612617/06ed11f3-7b2d-446b-a604-27d30e4bae15?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A12Z&amp;rscd=attachment%3B+filename%3Dozen-Foldables-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A06Z&amp;ske=2026-08-01T21%3A12%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nccBKz124scpbY2Yo7GOBzkrGuT%2Bupjuf%2BqVboLLy%2Fs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE0MywibmJmIjoxNzg1NjE1ODQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EMxRrzTU44L8AspcdovDt2p19EpVGryhQpkZKa5jcyY&amp;response-content-disposition=attachment%3B%20filename%3Dozen-Foldables-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.ozen.foldables</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 November 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ozen-m/SPT-Foldables" target="_blank" rel="noreferrer noopener">https://github.com/ozen-m/SPT-Foldables</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>LiveBitcoinPricesREDUX · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>LiveBitcoinPricesREDUX</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/f03e6521cb93dec66b193aaac941c884cd1b38a576ead1607efce1c85da00764.webp" alt="LiveBitcoinPricesREDUX thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>LiveBitcoinPricesREDUX</h1>
+    <p class="hero-teaser">Adjust SPT Bitcoin prices to match Live!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/593d9461f22427ee731ae255be4fc7e82337400048b8a9835cdc8f45b66c0d2d.webp" alt="" width="32" height="32">AmightyTank</span>
+      <span class="author"><img src="../../../assets/830e9cd087fafeeac3be4a0c8336278ed7038b8f7478fb20038210ae5972264d.webp" alt="" width="32" height="32">Shardbyte</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>6,472</dd></div>
+    <div><dt>Favourites</dt><dd>25</dd></div>
+    <div><dt>Mod lists</dt><dd>41</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="LiveBitcoinPricesREDUX content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><h3>LiveBitcoinPricesREDUX</h3>
+<p>This mod dynamically updates the in-game price of <strong>Physical Bitcoin</strong> in SPT to match live Tarkov pricing.</p>
+<ul>
+<li>Supports <strong>SPT 4.0</strong></li>
+<li>Rebuilt in <strong>C#</strong> for SPT 4.0</li>
+<li>Supports both <strong>PVE</strong> and <strong>PVP</strong> pricing modes through config</li>
+<li>Uses cached fallback data if the live API is unavailable</li>
+<li>Optional periodic updates can be enabled in config</li>
+</ul>
+<p>Bitcoin price data is fetched live from <a target="_blank" class="external-link" href="https://tarkov.dev/" rel="noreferrer noopener">Tarkov Dev</a>.</p>
+<p>Stay synced with live Tarkov Bitcoin pricing in your SPT setup.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><ol>
+<li>Download and extract the mod archive.</li>
+<li>Copy the included <code>SPT</code> folder into your main SPT directory.</li>
+</ol>
+<p>Final structure should look like this:</p>
+<p><code>SPT\user\mods\LiveBitcoinPricesREDUX\</code></p>
+<p>That’s it. The mod will update Bitcoin pricing automatically on server start.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><p>The mod includes:</p>
+<ul>
+<li><code>config/config.json</code> — main settings</li>
+<li><code>config/price.json</code> — cached price data used as fallback</li>
+</ul>
+<h3>Main options</h3>
+<ul>
+<li><code>GameMode</code>
+<ul>
+<li><code>"pve"</code> = uses Tarkov PVE pricing</li>
+<li><code>"pvp"</code> = uses Tarkov PVP pricing</li>
+</ul>
+</li>
+<li><code>EnablePeriodicUpdates</code>
+<ul>
+<li><code>false</code> = update on server boot only</li>
+<li><code>true</code> = keep updating on the configured interval</li>
+</ul>
+</li>
+<li><code>UpdateInterval</code>
+<ul>
+<li>update frequency in seconds when periodic updates are enabled</li>
+</ul>
+</li>
+<li><code>EnableLogging</code>
+<ul>
+<li>enables console logging</li>
+</ul>
+</li>
+<li><code>Advanced.EnablePriceCaching</code>
+<ul>
+<li>enables cached fallback pricing</li>
+</ul>
+</li>
+<li><code>Advanced.CacheExpirationHours</code>
+<ul>
+<li>max cache age before it is ignored</li>
+</ul>
+</li>
+<li><code>Advanced.ApiTimeout</code>
+<ul>
+<li>API timeout in milliseconds</li>
+</ul>
+</li>
+<li><code>Advanced.UserAgent</code>
+<ul>
+<li>custom user agent for requests</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Additional Info</div>
+<div class="tab-content"><ul>
+<li>Original mod by <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/62838-shardbyte/" rel="noreferrer noopener">Shardbyte</a>; this is an updated continuation.</li>
+<li>Original mod available <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1767-live-bitcoin-prices" rel="noreferrer noopener">here</a>.</li>
+<li>This version has been converted from JavaScript to C# for SPT 4.0 compatibility.</li>
+</ul>
+<p><strong>Note:</strong> This mod focuses only on updating Physical Bitcoin pricing. It does not rebalance the wider economy.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-04-16T15:01:00.000000Z">16 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,082 downloads</span><span>13.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s new in 1.0.2</h2>
+<h3>Fixes</h3>
+<ul>
+<li>Reworked core logic to run on server boot only (periodic updates now optional)</li>
+<li>Fixed live price fetching using <span class="dead-link">Tarkov DEV</span> API</li>
+<li>Improved fallback handling when API is unavailable</li>
+</ul>
+<h3>New Features</h3>
+<ul>
+<li>Added support for PVE and PVP pricing modes
+<ul>
+<li>pve → uses gameMode: pve</li>
+<li>pvp → maps to gameMode: regular</li>
+</ul>
+</li>
+<li>Added caching system (price.json) with expiration handling</li>
+<li>Added optional periodic price updates via config</li>
+<li>Added configurable API timeout and user agent</li>
+<li>Improved logging for better debugging and visibility</li>
+</ul>
+<h3>Other Changes</h3>
+<ul>
+<li>Converted codebase from JavaScript to C# (SPT 4.0 compatible)</li>
+<li>Switched to basePrice API method for simpler and more accurate pricing</li>
+<li>Simplified and modernized config structure (config.json + price.json)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/fad11c4491d308df761d00f4058a2b82e1915a1dd3e41fc0dc9e43847f609bf3?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/990451960/3cec9671-88d8-447c-9f15-0cc6b474239a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A11Z&amp;rscd=attachment%3B+filename%3DLiveBitcoinPricesREDUX-1.0.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A02Z&amp;ske=2026-08-01T21%3A00%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xVBuVLu8V%2FXDTdgTYGhEdsyOXN0UJNlL5dDBWPq33sk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk3NCwibmJmIjoxNzg1NjE1Njc0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JIVwMbiduLHKM4XpmSsIOcSwpw-yFFv3jqWsKDdR4sA&amp;response-content-disposition=attachment%3B%20filename%3DLiveBitcoinPricesREDUX-1.0.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2025-05-26T06:28:16.000000Z">26 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,390 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/221fc17e46ab5e8dc71abfbd2a08380aecb4c08a7144d279ac759b477641f9fd" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/990451960/c5fd335f-1ff4-4998-aba3-abce9a6745b3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A44Z&amp;rscd=attachment%3B+filename%3DShardbyte-LiveBitcoinPricesREDUX-3.11-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A09Z&amp;ske=2026-08-01T20%3A59%3A44Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7X5h5dSMooz6E8YUk1jp%2BzHkUPjz4XPiSpQ4SRi%2Fg7s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTk3NCwibmJmIjoxNzg1NjE1Njc0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JIVwMbiduLHKM4XpmSsIOcSwpw-yFFv3jqWsKDdR4sA&amp;response-content-disposition=attachment%3B%20filename%3DShardbyte-LiveBitcoinPricesREDUX-3.11-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.shardbyte.livebitcoinpricesredux</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>26 May 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/AlmightyTank/Shardbyte-LiveBitcoinPricesREDUX/" target="_blank" rel="noreferrer noopener">https://github.com/AlmightyTank/Shardbyte-LiveBitcoinPricesREDUX/</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

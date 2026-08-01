@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Master Tools · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Master Tools</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/dce14744cf6eb98beba62161a2140c5d6116341c8389ac26e1711b6a0b7b14b6.webp" alt="Master Tools thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Master Tools</h1>
+    <p class="hero-teaser">This mod provides a comprehensive suite of tools.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/a5aa5109729db731312089eac4f8d0a715b401d1812fe1749911b53e4781e0e3.webp" alt="" width="32" height="32">Master</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>9,787</dd></div>
+    <div><dt>Favourites</dt><dd>9</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+
+<div class="warning-box warning-danger">Forge displayed a cheat-related notice for this item.</div>
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Master Tools content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>4</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Master Tools - Features Guide</h1>
+<p><em><strong>Please read the version tab to learn more about the updates.</strong></em></p>
+<p><em><strong>To install, simply extract the “master.dll” file to “SPT\BepInEx\plugins”</strong></em></p>
+<p>⌨️ Controls</p>
+<p>•
+INSERT: Open/Close the Mod Menu.</p>
+<p>• NumpadKeys</p>
+<p>🛡️ General Cheats</p>
+<p>•
+GodMode: Makes your character immune to all forms of damage. You will not take damage from bullets, falls, or explosions.</p>
+<p>•
+Infinite Stamina: Keeps your Leg Stamina, Arm Stamina (Aiming), and Oxygen levels at 100% at all times.</p>
+<p>•
+No Weight Penalties: Removes movement speed and stamina drain penalties caused by carrying heavy gear or loot.</p>
+<p>•
+Unlock All Doors: A powerful utility that instantly unlocks every locked door and container on the map during a raid. No keys required.</p>
+<p>👥 Player ESP</p>
+<p>Visualizes all players and bots through walls with the following features:</p>
+<p>•
+Faction Identification: Different colors for BEAR, USEC, Bosses and Savages (Scavs/Raiders).</p>
+<p>•
+Distance Tracking: Shows the exact distance in meters to each target.</p>
+<p>•
+Customizable Colors: Full RGB sliders to change faction colors in real-time.</p>
+<p>•
+Performance Control: Adjustable Update Rate (FPS) slider to balance between smooth visuals and CPU performance.</p>
+<p>•
+Distance Filter: Set a maximum range to avoid screen clutter.</p>
+<p>📦 Item &amp; Container ESP</p>
+<p>Advanced loot tracking system optimized for high performance:</p>
+<p>•
+Loose Item ESP: Shows items lying on the ground.</p>
+<p>•
+Container Item ESP: Shows items hidden inside crates, jackets, safes, and dead bodies.</p>
+<p>•
+Multi-Filter System: Search for specific items by entering names or IDs. Supports comma-separated lists (e.g., LedX, GPU, Salewa).</p>
+<p>•
+Optimized Performance: Uses a smart caching system for containers and squared-distance calculations to ensure zero FPS drops even on loot-heavy maps.</p>
+<p>•
+Update Rate (FPS): Independent refresh rate control for loot visuals.</p>
+<p>⚙️ Technical Details</p>
+<p>• Optimization:</p>
+<ul>
+<li>
+<p>Features a container caching system that refreshes every 10 seconds to maintain high frame rates.</p>
+</li>
+<li>
+<p>Culling provides a small performance boost by disabling meshes at distance. ⚠️ However, this may cause bots to appear instantly once they enter the configured range.</p>
+</li>
+</ul>
+<p>• Config file on -&gt; “SPT\BepInEx\config\com.master.tools.cfg”</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.2</h2></div><time datetime="2026-01-25T23:14:00.000000Z">25 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,943 downloads</span><span>16.9 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>
+<p>Added ESP quest support for item quests only (I’m working on implementing all quest types here).</p>
+</li>
+<li>
+<p>Fixed the ESP color bug — you can now switch the colors for Bears, USEC, Scavs, and Bosses without any issues.</p>
+</li>
+<li>
+<p>Added a new feature to change FOV when a specific weapon category is equipped.</p>
+</li>
+<li>
+<p>Various other fixes and improvements.</p>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OWIxZDRkZDQ3NzBmMDdhYTVlZDdjYjA0MDAzMTlhMDM6MTc2OTM4MjgwOA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1137118467/4baad523-c9a6-4da6-a053-248bf4dfd0d8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A10Z&amp;rscd=attachment%3B+filename%3Dmaster.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A02Z&amp;ske=2026-08-01T21%3A08%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=P3guJ3RUFI56SSzxTVxxMFLyUr1C6mD%2FUFYWn6Nb%2BuI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MCwibmJmIjoxNzg1NjE1ODYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TxD6ftOorig4wPDLyqwQzAMSsA8uHdi_78DFq8jI6hE&amp;response-content-disposition=attachment%3B%20filename%3Dmaster.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-01-22T23:38:00.000000Z">22 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>927 downloads</span><span>13.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Patch Notes — UI Tabs Update</h1>
+<p>This update introduces a new <strong>Tab-based menu layout</strong>, splitting the mod features into organized sections for easier navigation and configuration.</p>
+<hr>
+<h2>General Tab</h2>
+<ul>
+<li>
+<p><strong>God Mode</strong></p>
+<ul>
+<li>You take no damage while enabled.</li>
+<li>Disable it to receive damage again.</li>
+</ul>
+</li>
+<li>
+<p><strong>Infinite Stamina</strong></p>
+<ul>
+<li>Stamina no longer decreases while running or aiming.</li>
+<li>Breath stamina stays full.</li>
+</ul>
+</li>
+<li>
+<p><strong>No Weight Penalties</strong></p>
+<ul>
+<li>Removes armor and weight-related movement penalties.</li>
+<li>Prevents weight effects from slowing you down.</li>
+</ul>
+</li>
+<li>
+<p><strong>Show Status Window</strong></p>
+<ul>
+<li>Displays a status panel showing which features are enabled/disabled.</li>
+</ul>
+</li>
+<li>
+<p><strong>Show Weapon Info in Status</strong></p>
+<ul>
+<li>Shows your current weapon and magazine ammo count in the Status Window.</li>
+<li><strong>Requires Status Window enabled.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Unlock All Doors in Raid</strong></p>
+<ul>
+<li>Unlocks all doors during the raid.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enable Bot Distance Culling</strong></p>
+<ul>
+<li>Disables bot-related rendering/AI elements at distance to improve FPS.</li>
+<li>This can significantly increase performance, but please report any bugs or unusual behavior.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+<h2>Player ESP Tab</h2>
+<ul>
+<li>
+<p><strong>Enable Player ESP (Text)</strong></p>
+<ul>
+<li>Shows player/bot information as text:
+<ul>
+<li>Name, faction, and distance</li>
+</ul>
+</li>
+<li>You can now customize:
+<ul>
+<li>Font size</li>
+<li>Text transparency</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Chams (NEW)</strong></p>
+<ul>
+<li>Highlights bots through walls using a chams-style effect.</li>
+<li>Note: this feature may temporarily affect some textures/materials.</li>
+<li>Colors are intentionally strong for better visibility.</li>
+<li>Still needs improvements and fixes.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+<h2>Item ESP Tab</h2>
+<ul>
+<li>Same as the previous update.</li>
+<li><strong>Container cache refresh time is now set to 5 minutes</strong> (improves stability and performance).</li>
+</ul>
+
+<hr>
+<h2>Visual Tab</h2>
+<ul>
+<li>
+<p><strong>Thermal Vision</strong></p>
+<ul>
+<li>Full-screen thermal vision mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Night Vision</strong></p>
+<ul>
+<li>Full-screen night vision mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Teleport Filtered Items to Me (NEW)</strong></p>
+<ul>
+<li>When Item ESP filters are enabled, this button teleports <strong>loose items</strong> to your location.</li>
+<li><strong>Container items will NOT teleport</strong> (only items already outside containers).</li>
+<li>Recommendation: enable <strong>God Mode</strong>, because teleporting many items at once may cause damage in some situations.</li>
+<li>I’m working on fixes and improvements for this feature.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+<h2>Troll Tab</h2>
+<ul>
+<li>
+<p><strong>SpeedHack</strong></p>
+<ul>
+<li>Increases movement speed heavily.</li>
+<li>Warning: you can glitch/fly depending on speed values.</li>
+<li>Recommended: enable <strong>God Mode</strong> while testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Teleport All Enemies to Me</strong></p>
+<ul>
+<li>Teleports enemies within range (up to ~3m) to a position in front of you.</li>
+<li>Warning: using this without <strong>God Mode</strong> can get you killed instantly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Big Head Mode</strong></p>
+<ul>
+<li>Multiplies bot head size.</li>
+<li>The most fun feature in the mod.</li>
+</ul>
+</li>
+</ul>
+
+<h2>Configs Tab</h2>
+<ul>
+<li>Configuration keybinds</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MTlkOTEyM2VhZGNkZWRiZDExMjI2YjdhNzgzYzg2NzU6MTc2OTEyNTEwNw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1137118467/76708c92-7885-4087-910b-0f87607ca164?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A26Z&amp;rscd=attachment%3B+filename%3Dmaster.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A28Z&amp;ske=2026-08-01T21%3A17%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wA3L17V0LgVKUBP8sksv1PQsPW%2BInxKNb6jUW86Eo6Q%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MCwibmJmIjoxNzg1NjE1ODYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TxD6ftOorig4wPDLyqwQzAMSsA8uHdi_78DFq8jI6hE&amp;response-content-disposition=attachment%3B%20filename%3Dmaster.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.8.2</h2></div><time datetime="2026-01-20T13:48:00.000000Z">20 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>687 downloads</span><span>10.8 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Patch Notes — Update (WIP)</h1>
+<h1>⚠️ Development Status</h1>
+<p><em><strong>Infinite Ammo is still in development.</strong></em>
+This update is taking longer than expected — thanks for the patience, friends.</p>
+<h1>✅ Installation / Required Action</h1>
+<p>Delete the old config file:
+Remove com.master.tools.cfg from:
+SPT\BepInEx\config</p>
+<h1>🔧 Changes &amp; Improvements</h1>
+<ul>
+<li>
+<p>Added a toggle key for all features that can be customized through the .cfg file.</p>
+</li>
+<li>
+<p>Boss ESP now uses a separate highlight color (Purple) to make bosses easier to identify.</p>
+</li>
+<li>
+<p>Added a “MOD STATUS” window displaying:</p>
+<pre><code>Weapon info
+Weapon name
+Ammo count in the magazine
+</code></pre>
+</li>
+</ul>
+<h1>🧩 Performance Notes</h1>
+<p>Culling provides a small performance boost by disabling meshes at distance.</p>
+<p>⚠️ However, this may cause bots to appear instantly once they enter the configured range.</p>
+<p><strong>Recommended culling distance: 150m</strong></p>
+<ul>
+<li>
+<p>Besides Culling, no other feature is intended to increase FPS. Any “optimization” mentioned is strictly related to the mod’s internal logic — for example:</p>
+<pre><code>Using container loot caching to avoid updating loot every 1s
+(this prevents constant refreshes but uses a lot of memory)
+</code></pre>
+</li>
+</ul>
+<h1>🚀 Coming Soon</h1>
+<p>More features soon.</p>
+<p>Good game — and good hacking. See you guys.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bb7d2edbd5c68d20fef2a52d7de816131e60b3a03aac8fe53532a4ecfbb7a156?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1137118467/531cea5f-3695-4c3a-b229-da41c5847ab8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A47Z&amp;rscd=attachment%3B+filename%3Dmaster.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A44Z&amp;ske=2026-08-01T21%3A22%3A47Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Ru%2BrWHL01fk6jAWsGySBx6Q7hBsaj1DBA3k8HTIx85w%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2MCwibmJmIjoxNzg1NjE1ODYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.TxD6ftOorig4wPDLyqwQzAMSsA8uHdi_78DFq8jI6hE&amp;response-content-disposition=attachment%3B%20filename%3Dmaster.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2026-01-19T00:12:00.000000Z">19 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,230 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h1>Master Tools - Features Guide</h1>
+<p>⌨️ Controls</p>
+<p>•
+INSERT: Open/Close the Mod Menu.</p>
+<p>•
+F7: Toggle GodMode (Quick Action).</p>
+<p>•
+F8: Toggle Player ESP (Quick Action).</p>
+<p>🛡️ General Cheats</p>
+<p>•
+GodMode: Makes your character immune to all forms of damage. You will not take damage from bullets, falls, or explosions.</p>
+<p>•
+Infinite Stamina: Keeps your Leg Stamina, Arm Stamina (Aiming), and Oxygen levels at 100% at all times.</p>
+<p>•
+No Weight Penalties: Removes movement speed and stamina drain penalties caused by carrying heavy gear or loot.</p>
+<p>•
+Unlock All Doors: A powerful utility that instantly unlocks every locked door and container on the map during a raid. No keys required.</p>
+<p>👥 Player ESP</p>
+<p>Visualizes all players and bots through walls with the following features:</p>
+<p>•
+Faction Identification: Different colors for BEAR, USEC, and Savages (Scavs/Bosses/Raiders).</p>
+<p>•
+Distance Tracking: Shows the exact distance in meters to each target.</p>
+<p>•
+Customizable Colors: Full RGB sliders to change faction colors in real-time.</p>
+<p>•
+Performance Control: Adjustable Update Rate (FPS) slider to balance between smooth visuals and CPU performance.</p>
+<p>•
+Distance Filter: Set a maximum range to avoid screen clutter.</p>
+<p>📦 Item &amp; Container ESP</p>
+<p>Advanced loot tracking system optimized for high performance:</p>
+<p>•
+Loose Item ESP: Shows items lying on the ground.</p>
+<p>•
+Container Item ESP: Shows items hidden inside crates, jackets, safes, and dead bodies.</p>
+<p>•
+Multi-Filter System: Search for specific items by entering names or IDs. Supports comma-separated lists (e.g., LedX, GPU, Salewa).</p>
+<p>•
+Optimized Performance: Uses a smart caching system for containers and squared-distance calculations to ensure zero FPS drops even on loot-heavy maps.</p>
+<p>•
+Update Rate (FPS): Independent refresh rate control for loot visuals.</p>
+<p>⚙️ Technical Details</p>
+<p>•
+Compatibility: Designed for modern SPT versions (3.10+).</p>
+<p>•
+Optimization: Features a container caching system that refreshes every 10 seconds to maintain high frame rates.</p>
+<p>•
+Config file on -&gt; “SPT\BepInEx\config\com.master.tools.cfg”</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/807f295d61d2e438a0de91f5536c30de07fbfd1106c2136173b952bed301f99f/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/M4st3rzzz/Master-Tool/" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.master.tools</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>18 January 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/M4st3rzzz/Master-Tool/" target="_blank" rel="noreferrer noopener">https://github.com/M4st3rzzz/Master-Tool/</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

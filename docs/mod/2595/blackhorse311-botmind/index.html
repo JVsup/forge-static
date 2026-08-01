@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Blackhorse311-BotMind · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Blackhorse311-BotMind</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/dd68184bf5f2d61800589cebba4538047d17a0028d579ee82bc2dbe2adc4c097.webp" alt="Blackhorse311-BotMind thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Blackhorse311-BotMind</h1>
+    <p class="hero-teaser">Smarter bots. On-demand medics. Three AI modules in one package.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/638e425d6b7efa604726a0fdc2a180bfbb7b93515d50f75467c4ce3cb8d9a2d0.webp" alt="" width="32" height="32">Blackhorse311</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>4,021</dd></div>
+    <div><dt>Favourites</dt><dd>2</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Blackhorse311-BotMind content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>⚠️ Found a bug? Report it on our GitHub Issue Tracker: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/issues</a> Include your
+mod list, SPT version, and BepInEx/LogOutput.log file.</p>
+<p>⚠️ REQUIRES SPT 4.0.12 — This mod will NOT work on 4.0.11 or earlier versions.</p>
+<p>BotMind — Smarter bots. On-demand medics.</p>
+<p>Three AI modules in one package: intelligent Looting, objective-based Questing, and the MedicBuddy on-demand medical
+team.</p>
+<p>How It Works:</p>
+<p>Looting: Bots scan area → Find valuable loot → Navigate → Pick up items
+Questing: Bots get objectives → Navigate map → Explore → Extract
+MedicBuddy: Press LCtrl+LAlt+F10 → Team spawns → Medic heals you → Team retreats</p>
+<p>Key Features</p>
+<p>Intelligent Looting — Bots loot corpses, containers, and loose items based on value. Throttled to prevent hoover
+behavior (max 3 targets per 2 minutes, 15s cooldown between targets).
+Objective Questing — PMC and Scav bots pursue objectives, explore areas, and extract. Natural pauses between
+objectives. Raiders, Rogues, and boss bots are excluded.
+MedicBuddy — Summon a friendly medical team with one keypress. Full healing: HP, bleeds, fractures, destroyed limbs.
+Voice Lines — 60 voice lines (EN/RU) for immersive medic interactions.
+CCP Rally Points — Press Y to direct your medical team to a specific treatment location.
+Medic Promotion — If the medic dies, a shooter gets promoted automatically.
+SAIN Integration — Optional combat awareness and extraction support. Works fully without SAIN too.
+Configurable Combat Alert — Control how long bots fight before returning to objectives (default 15s, adjustable
+10-120s in F12).
+SAIN BotMind Preset — Optional SAIN config preset for faster enemy detection and more aggressive combat.</p>
+<p>Dependencies</p>
+<p>REQUIRED:</p>
+<ul>
+<li>SPT 4.0.12 (will NOT work on earlier versions)</li>
+<li>BigBrain 1.4.x (AI layer framework)</li>
+</ul>
+<p>RECOMMENDED:</p>
+<ul>
+<li>SAIN 3.x+ (combat awareness and extraction)</li>
+<li>Waypoints 1.8.x+ (improved NavMesh for bot navigation — prevents freezing/stuck bots)</li>
+</ul>
+<p>COMPATIBLE WITH:</p>
+<ul>
+<li>LootingBots (auto-detected — BotMind disables its Looting module, MedicBuddy + Questing still work)</li>
+<li>SWAG + Donuts</li>
+<li>AI Limit</li>
+<li>FIKA (confirmed working)</li>
+<li>Custom item mods</li>
+</ul>
+<p>Installation</p>
+<p>Download the latest release from GitHub: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/releases/latest" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/releases/latest</a>
+Extract the archive directly into your SPT root folder (where SPT.Server.exe is)
+Files go to:</p>
+<ul>
+<li>Client: BepInEx/plugins/Blackhorse311-BotMind/Blackhorse311.BotMind.dll</li>
+<li>Server: SPT/user/mods/Blackhorse311-BotMind/Blackhorse311.BotMind.Server.dll</li>
+<li>Voice lines: BepInEx/plugins/Blackhorse311-BotMind/voicelines/ (en/ and ru/)</li>
+<li>SAIN Preset (optional): BepInEx/plugins/SAIN/Presets/BotMind/</li>
+</ul>
+<p>MedicBuddy Controls</p>
+<p>LCtrl+LAlt+F10 — Summon the medical team
+Y — Set a Casualty Collection Point (CCP) at your position</p>
+<p>How MedicBuddy works:</p>
+<ol>
+<li>Press LCtrl+LAlt+F10 to summon the medical team</li>
+<li>A medic and shooter escorts spawn and navigate to your position</li>
+<li>Press Y to set a CCP rally point where you want treatment</li>
+<li>The team establishes a defensive perimeter</li>
+<li>The medic heals all injuries (HP, bleeds, fractures, destroyed limbs)</li>
+<li>After treatment, the team retreats and despawns</li>
+</ol>
+<p>Tips:</p>
+<ul>
+<li>Use open areas for your CCP — tight corridors cause navigation issues</li>
+<li>Shooter escorts engage hostile bots during treatment</li>
+<li>5-minute cooldown between summons (configurable)</li>
+<li>PMC raids only by default (configurable)</li>
+<li>You must be injured and have no medical equipment to call the team</li>
+</ul>
+<p>SAIN BotMind Preset (Optional)</p>
+<p>BotMind includes an optional SAIN configuration preset that tunes bot detection and aggression. Without it, SAIN’s
+default settings can cause bots to walk past enemies before engaging.</p>
+<p>What it changes (compared to SAIN “hard” difficulty):</p>
+<ul>
+<li>GainSightCoef: 1.0 → 1.5 (50% faster visual target acquisition)</li>
+<li>AggressionCoef: 1.0 → 1.3 (30% more aggressive combat decisions)</li>
+<li>HearingDistanceCoef: 1.0 → 1.15 (15% better hearing range)</li>
+<li>VisibleDistCoef: 1.0 → 1.1 (10% further vision range)</li>
+</ul>
+<p>How to activate:</p>
+<ol>
+<li>Preset auto-installs to BepInEx/plugins/SAIN/Presets/BotMind/ when you extract the mod</li>
+<li>In-game, press F6 to open the SAIN GUI</li>
+<li>Select “BotMind” from the preset dropdown</li>
+<li>Changes take effect immediately</li>
+</ol>
+<p>How to revert: Press F6 and select any other preset. Your original SAIN settings are never modified.</p>
+<p>Configuration</p>
+<p>Press F12 → Find “BotMind” → Adjust settings</p>
+<p>General:</p>
+<ul>
+<li>Enable Looting (default: on)</li>
+<li>Enable Questing (default: on)</li>
+<li>Enable MedicBuddy (default: on)</li>
+<li>Combat Alert Duration (default: 15s) — How long bots fight after sensing an enemy before resuming objectives</li>
+</ul>
+<p>Looting:</p>
+<ul>
+<li>Search Radius (default: 35m, range: 10-200m)</li>
+<li>Minimum Item Value (default: 5000 rubles)</li>
+<li>Loot Corpses / Containers / Loose Items (all default: on)</li>
+</ul>
+<p>Questing:</p>
+<ul>
+<li>PMCs Do Quests (default: on)</li>
+<li>Scavs Do Quests (default: off)</li>
+<li>Quest Priority (default: 50)</li>
+</ul>
+<p>MedicBuddy:</p>
+<ul>
+<li>Summon Keybind (default: LCtrl+LAlt+F10)</li>
+<li>Cooldown (default: 300s)</li>
+<li>Team Size (default: 4, range: 2-6)</li>
+<li>PMC Raids Only (default: on)</li>
+<li>Rally Point Keybind (default: Y)</li>
+<li>Enable Voice Lines (default: on)</li>
+<li>Voice Volume (default: 80)</li>
+<li>Escort Difficulty (default: 2/hard, range: 0-3)</li>
+</ul>
+<p>Performance:</p>
+<ul>
+<li>Max Bots Per Map (default: 0 = use game defaults, max: 31)</li>
+<li>When MedicBuddy is enabled, team-size slots are auto-reserved so your medical team always has room to spawn.</li>
+</ul>
+<p>Troubleshooting</p>
+<ul>
+<li>Mod doesn’t work / strange behavior → Verify you are on SPT 4.0.12</li>
+<li>MedicBuddy not responding → Check mod is enabled in F12. Check PMC-only setting if playing as Scav.</li>
+<li>Medic getting stuck → Move to an open area and press Y to set a new CCP</li>
+<li>Bots walking past enemies → Activate the BotMind SAIN preset (F6). Increase Combat Alert Duration in F12. Install
+Waypoints.</li>
+<li>Bots freezing or getting stuck → Install Waypoints mod (DrakiaXYZ-Waypoints)</li>
+<li>Bots looting too aggressively → Lower Search Radius (default 35m). Session limit is 3 targets per 2 minutes.</li>
+<li>Bots standing still with questing on → Update to v1.6.0. Major fixes in v1.5.0 and v1.6.0.</li>
+<li>Bots walking backwards → Update to v1.6.0. Fixed movement facing bug.</li>
+<li>Raiders/Bloodhounds stuck on questing → Update to v1.6.0. Non-PMC/Scav bots are now excluded from questing.</li>
+<li>Bots stuck looting a container → Update to v1.6.0. Added action-level timeout safety net.</li>
+</ul>
+<p>Changelog</p>
+<p>v1.6.0 (2026-03-02)</p>
+<ul>
+<li>Fix: Bots no longer get stuck in “Complete” looting state — added action-level timeout safety net in LootingLayer
+(#10)</li>
+<li>Fix: Raiders and Rogues no longer receive questing objectives — explicit role allowlist prevents non-PMC/Scav bots
+from getting stuck on bad waypoints (#10)</li>
+<li>Fix: Bots no longer walk backwards — GoToPoint lookToMovingDirection parameter enabled across all movement calls
+(#10)</li>
+<li>29 new tests (220 total)</li>
+</ul>
+<p>v1.5.0 (2026-02-28)</p>
+<ul>
+<li>Fix: Bots no longer stuck at spawn when questing is enabled — questing layer stays active during objective cooldown
+instead of letting EFT’s default brain walk bots back to spawn</li>
+<li>Fix: Graduated waypoint generation — tries far, medium, then close distances so bots always find reachable
+destinations</li>
+<li>Fix: Exploration now radiates from bot’s current position instead of circling spawn</li>
+<li>Fix: Looting timeout log spam — was firing every frame (110K+ lines per session), now logs once</li>
+<li>Fix: Combat Alert Duration default reduced 30s → 15s (30s kept bots in perpetual combat on active maps)</li>
+<li>20 new tests (191 total)</li>
+</ul>
+<p>v1.4.0 (2026-02-21)</p>
+<ul>
+<li>Fix: Bot movement speeds increased — bots now jog/sprint instead of creeping</li>
+<li>Fix: Pose and move speed reset in all Stop() methods — no more crouch/slow persistence after AI transitions</li>
+<li>Fix: Looting throttle — 8s scan interval, 15s cooldown, 3 targets per 2min session limit</li>
+<li>Fix: Default search radius 50m → 35m</li>
+<li>Fix: 5s cooldown between questing objectives</li>
+<li>Fix: Combat detection always checks EFT GoalEnemy alongside SAIN</li>
+<li>New: Combat Alert Duration config (15s default, 10-120s range)</li>
+<li>New: Waypoints soft dependency with startup warning</li>
+<li>New: Optional SAIN “BotMind” preset for faster detection and higher aggression</li>
+<li>37 new tests (171 total)</li>
+</ul>
+<p>v1.3.0 (2026-02-19)</p>
+<ul>
+<li>Fix: Looting collider buffer 64 → 256 for loot-adding mods</li>
+<li>Fix: Overall timeout (60s) on all looting logic</li>
+<li>Fix: Stuck detection for container and corpse navigation</li>
+<li>Fix: Non-SAIN combat fallback via GoalEnemy/IsUnderFire</li>
+<li>22 new tests (134 total)</li>
+</ul>
+<p>v1.2.0 (2026-02-18)</p>
+<ul>
+<li>Fix: Bots no longer stuck in failed/standby questing states</li>
+<li>Fix: NavMesh path validation, SamplePosition tolerance 20m → 5m</li>
+<li>Fix: Local Explore fallback for unreachable waypoints</li>
+<li>Fix: Removed LookToMovingDirection blocking enemy detection</li>
+</ul>
+<p>v1.1.1 (2026-02-18)</p>
+<ul>
+<li>Fix: Bots no longer idle after reaching waypoints</li>
+<li>Fix: PMC bots detect and engage each other during questing</li>
+</ul>
+<p>v1.1.0 (2026-02-17)</p>
+<ul>
+<li>New: Bot Limit Slider (0-31) with MedicBuddy slot reservation</li>
+<li>New: Escort combat awareness and configurable difficulty</li>
+<li>New: LootingBots auto-compatibility</li>
+<li>30 new tests (112 total)</li>
+</ul>
+<p>v1.0.0 (2026-02-17)</p>
+<ul>
+<li>Initial release: Looting, Questing, MedicBuddy</li>
+<li>60 voice lines (EN/RU), 82 unit tests</li>
+</ul>
+<p>Credits</p>
+<p>Author: Blackhorse311</p>
+<p>BotMind was developed through collaboration between Blackhorse311 and Claude (AI by Anthropic).</p>
+<p>Thanks to: SPT Team, BepInEx Team, DrakiaXYZ (BigBrain + Waypoints), Solarint (SAIN), Anthropic (Claude)</p>
+<p>Inspiration: DanW (QuestingBots), Skwizzy (LootingBots)</p>
+<p>Community Contributors:</p>
+<ul>
+<li>Th3Kenix — Reported questing idle/stuck and PMC non-engagement</li>
+<li>ExcellentBugg — Confirmed persistent questing standby bug (#3)</li>
+<li>ExcellentBug, wookie143, Legitimancer — Reported movement and looting issues (v1.4.0)</li>
+<li>Guntero, simjounhax, alecontt — Reported questing stuck at spawn (v1.5.0)</li>
+<li>DigitalBurns — Reported questing stuck (#9, v1.5.0) AND loot hang + backwards walking (#10, v1.6.0)</li>
+<li>Capricorn — Reported MedicBuddy + ABPS compatibility</li>
+<li>thesubnautica19881 — Confirmed FIKA compatibility</li>
+<li>LO010OL — LootingBots compatibility question</li>
+</ul>
+<p>License: MIT — Full source: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2026-03-02T19:23:00.000000Z">2 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,982 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s Changed</h2>
+<p>Three fixes for <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues/10" rel="noreferrer noopener">#10</a> reported by @DigitalBurns:</p>
+<h3>1. Container Loot Hang Fixed</h3>
+<p>Bots getting stuck in “Complete” looting state for 60s. Added action-level timeout (70s) in LootingLayer as a safety net when internal signals are lost, plus fixed a missing <code>_target</code> reset in LootCorpseLogic.</p>
+<h3>2. Raiders/Rogues No Longer Receive Questing Objectives</h3>
+<p>Raiders (brain name “PMC”, but WildSpawnType.pmcBot) and Rogues were falling through the PMC/Scav role guards in QuestingLayer and getting stuck on bad waypoints — especially on Woods. Added explicit role allowlist: only actual PMCs and Scavs get questing now.</p>
+<h3>3. Backwards Walking Fixed</h3>
+<p>All GoToPoint() calls were passing <code>false</code> for the <code>lookToMovingDirection</code> parameter, leaving EFT’s locomotion with no facing constraint. Changed to <code>true</code> across all movement calls. This is a one-time path hint (not the per-frame override removed in v1.2.0), so enemy detection remains unaffected.</p>
+<h3>Stats</h3>
+<ul>
+<li><strong>Build:</strong> 0 errors, 0 warnings</li>
+<li><strong>Tests:</strong> 220 passing (29 new)</li>
+<li><strong>Files changed:</strong> 13</li>
+</ul>
+<h3>Installation</h3>
+<p>Extract the archive directly into your SPT root folder (where <code>SPT.Server.exe</code> is located).</p>
+<p><strong>Requires:</strong> SPT 4.0.12 + BigBrain 1.4.x</p>
+<h3>Thanks</h3>
+<ul>
+<li><strong>@DigitalBurns</strong> — for detailed bug reports with BotDebug screenshots and BepInEx logs on both <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues/9" rel="noreferrer noopener">#9</a> and <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues/10" rel="noreferrer noopener">#10</a>. Two releases worth of fixes came from your reports!</li>
+<li><strong>Guntero, simjounhax, alecontt</strong> — for reporting questing stuck behavior on SPT Forge</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.5.0...v1.6.0" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.5.0...v1.6.0</a></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/4c97410fea443d901565f437be97cc6b5d5d41b1da12b8f92381eae59b72ccae" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/328d6f03-496a-49bf-86ff-5e928024f2dc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A19%3A22Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.6.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A18%3A34Z&amp;ske=2026-08-01T20%3A19%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=f0PEgHwZtsQK9UX2W%2BlBaSPvmxbG3kkchrUGN8IZstc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.6.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2026-03-01T05:39:00.000000Z">1 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>377 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><p>v1.5.0 - Fix Questing Stuck at Spawn</p>
+<h2>What’s Changed</h2>
+<p><strong>Major fix: Bots no longer get stuck at spawn when questing is enabled.</strong> Multiple users reported PMC bots standing still or returning to their spawn point with questing on. Root cause was 4 interacting bugs, all fixed in this release.</p>
+<h3>Bug Fixes</h3>
+<ul>
+<li><strong>Questing layer stays active during cooldown</strong> — Previously, a 5-second gap between objectives let EFT’s default brain walk bots back to spawn. The layer now handles the pause internally so bots stay where they are.</li>
+<li><strong>Graduated waypoint generation</strong> — Old 50m minimum range frequently failed NavMesh validation on complex maps (Woods, Interchange). Now tries far→medium→close distance tiers (50-150m → 20-60m → 10-30m) so bots always find a reachable destination.</li>
+<li><strong>Progressive exploration</strong> — Explore waypoints now generate from the bot’s current position instead of a fixed point at spawn, so bots actually move outward across the map.</li>
+<li><strong>Combat alert duration reduced</strong> — Default reduced from 30s to 15s. The old value kept bots in perpetual “combat mode” on active maps, preventing questing entirely. Still configurable in F12.</li>
+<li><strong>Looting timeout log spam fixed</strong> — The timeout warning was firing every frame (producing 110,000+ spam lines in one session). Now logs once per timeout event.</li>
+</ul>
+<h3>Other Changes</h3>
+<ul>
+<li>POST_OBJECTIVE_COOLDOWN reduced from 5s to 3s for snappier objective transitions</li>
+<li>Version strings synchronized to 1.5.0 across client, server, and plugin attribute</li>
+<li>20 new unit tests (191 total, all passing)</li>
+</ul>
+<h3>Installation</h3>
+<p>Extract the 7z to your SPT root folder. Includes:</p>
+<ul>
+<li><code>BepInEx/plugins/Blackhorse311-BotMind/</code> — Client plugin + voice lines</li>
+<li><code>SPT/user/mods/Blackhorse311-BotMind/</code> — Server mod</li>
+<li><code>sain-preset/BotMind/</code> — Optional SAIN preset (copy to <code>BepInEx/plugins/SAIN/Presets/</code>)</li>
+</ul>
+<p><strong>Requires:</strong> SPT 4.0.12 + BigBrain 1.4.x</p>
+<h3>Full Changelog</h3>
+<p><a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.4.0...v1.5.0" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.4.0...v1.5.0</a></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/88cb940a6a806cba99057d206ca4f01de3feb1648bd22b75c46195daa1566a74" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/011698b5-2b81-4f20-bbaf-18e03ffe85b6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A29%3A24Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.5.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A29%3A11Z&amp;ske=2026-08-01T20%3A29%3A24Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bQCMwIcBa8ScnCPaxmXNUFLvnI%2BHeV%2FA0LztN2BQjZU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.5.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2026-02-21T21:16:00.000000Z">21 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>628 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s Changed</h2>
+<p>Addresses community-reported issues with bot movement, combat awareness, and looting behavior. Thanks to ExcellentBug, wookie143, Legitimancer, and DigitalB for the detailed reports.</p>
+<h3>Movement Fixes</h3>
+<ul>
+<li><strong>Bot speeds increased</strong> across all modules — bots now jog/sprint instead of creeping</li>
+<li><strong>Pose/speed reset</strong> in all layer Stop() methods — bots no longer stay crouched or slow after transitioning between AI layers</li>
+</ul>
+<h3>Combat Detection</h3>
+<ul>
+<li><strong>Always checks EFT native enemy awareness</strong> (GoalEnemy, IsUnderFire) alongside SAIN — prevents bots walking past visible enemies</li>
+<li><strong>New: Combat Alert Duration</strong> config (default 30s, range 10-120s) — controls how long bots stay in fight mode before resuming questing/looting</li>
+<li><strong>Waypoints soft dependency</strong> — warns at startup if DrakiaXYZ-Waypoints is not installed</li>
+</ul>
+<h3>Looting Throttle</h3>
+<ul>
+<li>Scan interval 2s → 8s</li>
+<li>15-second cooldown between loot targets</li>
+<li>Session limit: max 3 targets per 2-minute window</li>
+<li>Default search radius reduced from 50m to 35m</li>
+</ul>
+<h3>Questing</h3>
+<ul>
+<li>5-second cooldown between objectives for natural-looking behavior transitions</li>
+</ul>
+<h3>SAIN BotMind Preset (Optional)</h3>
+<p>Includes a SAIN configuration preset tuned for BotMind:</p>
+<ul>
+<li>50% faster visual target acquisition</li>
+<li>30% more aggressive combat decisions</li>
+<li>15% better hearing range</li>
+<li>10% further vision range</li>
+</ul>
+<p><strong>To activate:</strong> Press F6 in-game → select “BotMind” preset. Fully reversible — your SAIN settings are never overwritten.</p>
+<h3>Tests</h3>
+<ul>
+<li>37 new unit tests for behavior throttle logic (171 total)</li>
+<li>Build: 0 errors, 0 warnings</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.3.0...v1.4.0" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.3.0...v1.4.0</a></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a25667f145f6057c9a7158f74c81e6bd3661da1d6b6a3ec028ca6f56c42b3e54" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/1958c5e0-634d-426d-9639-cc8fdf12722c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A14%3A43Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.4.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A14%3A05Z&amp;ske=2026-08-01T20%3A14%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6vPrE8%2FtRc24O407%2BER%2Bm677jLKx%2FRZVlg27nLaaZyQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.4.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2026-02-19T18:17:00.000000Z">19 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>374 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s New in v1.3.0</h2>
+<p>Looting reliability improvements and non-SAIN combat awareness. Bots no longer get stuck indefinitely on unreachable loot targets, and bots without SAIN now properly yield to combat.</p>
+<h3>Bug Fixes</h3>
+<ul>
+<li>
+<p><strong>Looting collider buffer increased from 64 to 256</strong> — Prevents missing containers when loot-adding mods (Lots of Loot Redux, etc.) are installed. The previous buffer of 64 could silently truncate scan results on modded maps with dense loot.</p>
+</li>
+<li>
+<p><strong>Overall timeout (60s) added to all looting logic</strong> — Bots will no longer get stuck indefinitely on unreachable containers, corpses, or items. Container and corpse looting time out after 60 seconds; loose item pickup times out after 45 seconds.</p>
+</li>
+<li>
+<p><strong>Stuck detection added to container and corpse navigation</strong> — Bots abort after 5 consecutive movement checks with no distance progress (&lt; 0.3m improvement). Catches cases where bots are pathing against walls or obstacles.</p>
+</li>
+<li>
+<p><strong>Non-SAIN combat fallback</strong> — Bots without SAIN now properly yield to combat via native EFT enemy detection (<code>GoalEnemy</code>, <code>IsUnderFire</code>). Previously, <code>IsBotInCombat()</code> returned <code>float.MaxValue</code> when SAIN wasn’t loaded, meaning bots would loot while being shot at.</p>
+</li>
+<li>
+<p><strong>22 new unit tests</strong> for timeout logic, stuck detection, collider buffer bounds, and combat fallback (134 total)</p>
+</li>
+</ul>
+<h3>Installation</h3>
+<blockquote>
+<p><strong>REQUIRES SPT 4.0.12</strong> — This mod will NOT work on 4.0.11 or earlier versions.</p>
+</blockquote>
+<ol>
+<li>Extract the archive directly into your SPT root folder</li>
+<li>The folder structure should be:
+<pre><code>SPT/
+└── BepInEx/
+    └── plugins/
+        └── Blackhorse311-BotMind/
+            ├── Blackhorse311.BotMind.dll
+            └── voicelines/
+                ├── en/ (30 .ogg files)
+                └── ru/ (30 .ogg files)
+</code></pre>
+</li>
+</ol>
+<h3>Requirements</h3>
+<ul>
+<li><strong>SPT 4.0.12</strong> (will NOT work on 4.0.11 or earlier)</li>
+<li>BigBrain 1.4.x</li>
+<li>SAIN 3.x/4.x (optional but recommended)</li>
+</ul>
+<h3>Compatibility</h3>
+<ul>
+<li><strong>FIKA</strong>: Confirmed working</li>
+<li><strong>LootingBots</strong>: Auto-detected and compatible (BotMind looting auto-disables)</li>
+<li><strong>SAIN 4.4.0</strong>: Compatible</li>
+<li><strong>Lots of Loot Redux</strong>: Now properly supported with larger collider buffer</li>
+</ul>
+<h3>Full Changelog</h3>
+<p><a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.2.0...v1.3.0" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.2.0...v1.3.0</a></p>
+<h3>Credits</h3>
+<ul>
+<li><strong>Rockjaw</strong> — Container looting report that identified the collider buffer limitation</li>
+<li><strong>DeRuffo</strong> — Bug report on looting getting stuck with large mod lists</li>
+<li><strong>Capricorn</strong> — Feedback on bot behavior during combat without SAIN</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fc6f5fb3fe2427d477ed7c92160be73ec0f4210920603cd67618c2d3e2b3f622" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/d24d9770-b2ca-4106-970d-578331330ef7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A14%3A12Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.3.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A13%3A45Z&amp;ske=2026-08-01T20%3A14%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5hXotETLB7v15900M4H4uxDC3ZNvZfb5%2BmVJSAtrss4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.3.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-02-18T23:22:00.000000Z">18 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>216 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>What’s New (v1.1.0 + v1.1.1 + v1.2.0)</h2>
+<p>This is the first combined release since v1.0.0, covering three versions of improvements and bug fixes.</p>
+<h3>Features (v1.1.0)</h3>
+<ul>
+<li><strong>Bot Limit Slider</strong> — BotLimitPatch + BotLimitManager with slot reservation for MedicBuddy escort teams</li>
+<li><strong>Escort Combat Awareness</strong> — DefendPerimeterLogic scans for threats using <code>Physics.OverlapSphere</code>, feeds <code>CheckAndAddEnemy</code>, and faces nearest enemy</li>
+<li><strong>Escort Difficulty Config</strong> — Configurable <code>BotDifficulty</code> (0–3, default: hard) for MedicBuddy escort bots</li>
+<li><strong>LootingBots Compatibility</strong> — Auto-detects LootingBots (<code>me.skwizzy.lootingbots</code>) and disables BotMind’s Looting module to avoid conflicts. MedicBuddy + Questing remain active.</li>
+<li><strong>30 new unit tests</strong> — 112 total, all passing</li>
+</ul>
+<h3>Bug Fixes</h3>
+<h4>v1.1.1 — Issue #1: Questing Idle/Stuck + PMC Non-Engagement</h4>
+<ul>
+<li><code>QuestManager.MarkCurrentObjectiveComplete()</code> now calls <code>UpdateObjectives()</code> immediately instead of leaving a 5-second idle gap</li>
+<li>Removed <code>LookToMovingDirection()</code> from GoToLocationLogic, ExploreAreaLogic, and ExtractLogic — these calls overrode EFT’s natural head-scanning, preventing <code>LookSensor</code> from detecting enemies, which meant SAIN combat never activated</li>
+<li><code>QuestingLayer.IsActive()</code> now updates immediately when idle (was throttled to 5s even with no objective)</li>
+</ul>
+<h4>v1.2.0 — Issues #2 &amp; #3: Questing Failed/Standby States</h4>
+<ul>
+<li><strong>Path reachability validation</strong>: Objective generation now validates a complete walkable path using <code>NavMesh.CalculatePath()</code> before accepting waypoints — not just checking that a position exists on NavMesh</li>
+<li><strong>Reduced snap tolerance</strong>: <code>NavMesh.SamplePosition</code> tolerance reduced from 20m to 5m to prevent wrong-floor/building snaps</li>
+<li><strong>Local exploration fallback</strong>: When no reachable long-range waypoints can be found, bots fall back to exploring locally (40m for PMCs, 30m for Scavs) instead of standing idle</li>
+<li><strong>F12 runtime toggle works</strong>: QuestingLayer is now always registered for both PMC and Scav brain types — the <code>IsActive()</code> method handles per-type filtering at runtime, so toggling <code>PMCsDoQuests</code>/<code>ScavsDoQuests</code> in F12 works without restart</li>
+<li><strong>Separate path failure counter</strong>: Path-to-target failures and movement-stuck detection now use independent counters, preventing premature failure declarations</li>
+<li><strong>Remaining LookToMovingDirection cleanup</strong>: Removed 5 more calls from FindItemLogic, PlaceItemLogic, LootContainerLogic, PickupItemLogic, and LootCorpseLogic</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>Extract the zip to your SPT root folder</li>
+<li>The folder structure should be:
+<pre><code>SPT/
+└── BepInEx/
+    └── plugins/
+        └── Blackhorse311-BotMind/
+            ├── Blackhorse311.BotMind.dll
+            └── voicelines/
+                ├── en/ (30 .ogg files)
+                └── ru/ (30 .ogg files)
+</code></pre>
+</li>
+</ol>
+<h3>Requirements</h3>
+<ul>
+<li>SPT 4.0.12</li>
+<li>BigBrain 1.4.x</li>
+<li>SAIN 4.x (optional but recommended)</li>
+</ul>
+<h3>Compatibility</h3>
+<ul>
+<li><strong>FIKA</strong>: Confirmed working (thanks thesubnautica19881!)</li>
+<li><strong>LootingBots</strong>: Auto-detected and compatible (BotMind looting auto-disables)</li>
+<li><strong>SAIN 4.4.0</strong>: Compatible</li>
+</ul>
+<h3>Full Changelog</h3>
+<p><a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.2.0" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.2.0</a></p>
+<h3>Credits</h3>
+<ul>
+<li><strong>Th3Kenix</strong> — Detailed bug reports with debug screenshots for Issues #1, #2, and #3</li>
+<li><strong>ExcellentBugg</strong> — Confirming Issue #2 persisted after v1.1.1</li>
+<li><strong>LO010OL</strong> — LootingBots compatibility question that led to auto-detection feature</li>
+<li><strong>thesubnautica19881</strong> — FIKA compatibility confirmation</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/566458f3d94d94ad8c36e7ff34fbfd59e6d4dd79a9bb23b3ba39c0c372433688" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/bfbc10b8-23f3-4a98-a6ee-7556072f524b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A30%3A31Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A29%3A48Z&amp;ske=2026-08-01T20%3A30%3A31Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=yG3piMsQAF%2Brz2LJMed7XYTKJd39LvHgLN9b%2FlrOEYA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-02-18T07:06:00.000000Z">18 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>250 downloads</span><span>4.6 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>New Features</h2>
+<h3>Bot Limit Slider</h3>
+<p>New <strong>Max Bots Per Map</strong> config setting (0–31) with automatic MedicBuddy slot reservation. When MedicBuddy is enabled,
+team-size slots are auto-reserved so your medical team always has room to spawn. Compatible with SWAG+Donuts and AI
+Limit.</p>
+<h3>Escort Combat Awareness</h3>
+<p>Shooter escorts now actively scan for and engage nearby threats. Scans every 1s for hostiles within 80m, registers up
+to 4 nearest threats, and faces the nearest enemy instead of looking randomly outward.</p>
+<h3>Escort Difficulty Config</h3>
+<p>New <strong>Escort Difficulty</strong> setting (0–3, default 2 = hard) to control escort bot combat skill level.</p>
+<h3>LootingBots Compatibility</h3>
+<p>BotMind now auto-detects <span class="dead-link">LootingBots</span> and disables its own
+Looting module to avoid conflicts. MedicBuddy and Questing continue to work alongside LootingBots.</p>
+<h2>Bug Fixes</h2>
+<ul>
+<li><strong>Bots no longer go idle after reaching quest waypoints</strong> — objective rotation is now immediate instead of waiting
+up to 5 seconds between waypoints (<a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues/1" rel="noreferrer noopener">#1</a>)</li>
+<li><strong>Stuck bots now properly transition to the next objective</strong> — when the stuck counter hits 3, bots move on instead
+of standing still</li>
+<li><strong>PMC bots from different teams now detect and engage each other</strong> — removed a per-frame steering override that was
+blocking EFT’s natural head-scanning and enemy perception</li>
+<li>Stuck/navigation failure logging upgraded from Debug (hidden) to Warning (visible) for easier troubleshooting</li>
+</ul>
+<h2>Stats</h2>
+<ul>
+<li>30 new unit tests (112 total)</li>
+<li>0 build warnings</li>
+</ul>
+<h2>Thanks</h2>
+<ul>
+<li><strong><a target="_blank" class="external-link" href="https://github.com/Th3Kenix" rel="noreferrer noopener">Th3Kenix</a></strong> — reported questing idle/stuck bug and PMC non-engagement
+(<a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/issues/1" rel="noreferrer noopener">#1</a>)</li>
+<li><strong>LO010OL</strong> — identified LootingBots compatibility question on SPT Forge</li>
+</ul>
+<p><strong>Full Changelog</strong>: <a target="_blank" class="external-link" href="https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.1.1" rel="noreferrer noopener">https://github.com/Blackhorse311/BotMind/compare/v1.0.0...v1.1.1</a></p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3dabb51a0d5754e6da79d3e08de74f6158a150cbb9a8b286f03dbff3b780de8a" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/db2f4231-9cf1-4649-b8c9-58a265e5579c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A37%3A48Z&amp;rscd=attachment%3B+filename%3DBlackhorse311.BotMind.v1.1.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A37%3A16Z&amp;ske=2026-08-01T20%3A37%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wfDLhULq1asC1mAMyGW%2F%2BbH45Ep9p0ZlJkkt9qowodo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNCwibmJmIjoxNzg1NjEzMjI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lDgQ5mBt69my35bfxigvT6q18nkM8_9VAUTcCJ42I_g&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311.BotMind.v1.1.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-02-17T20:11:00.000000Z">17 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>194 downloads</span><span>4.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial Release</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/eb3cfd9fc8612de79719dd1d0f889a209bb747814d5e9eda3606eac0078fccb8" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1160295202/aea8fa4e-35c7-4a34-b7ae-c2c215ba94d3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A36%3A22Z&amp;rscd=attachment%3B+filename%3DBlackhorse311-BotMind.v1.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A36%3A21Z&amp;ske=2026-08-01T20%3A36%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KsBnB6jmdo1U38sgEBtvLzM%2Be2S69u%2BtNWF8%2BKQhdd8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxMzUyNSwibmJmIjoxNzg1NjEzMjI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FfM9RFmMZyWeA5mYgj1hNqyyqOE33BhKJ3477AuWGP4&amp;response-content-disposition=attachment%3B%20filename%3DBlackhorse311-BotMind.v1.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.blackhorse311.botmind</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>2 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Blackhorse311/BotMind/archive/refs/tags/v1.5.0.zip" target="_blank" rel="noreferrer noopener">GitHub Repository</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

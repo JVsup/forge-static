@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Raiders Vs Rogues · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Raiders Vs Rogues</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/cf67ffa861fe9f9c4ff8ba1d3fb0973aee861fef7c4218aa786cea30f9eb5aaf.webp" alt="Raiders Vs Rogues thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Raiders Vs Rogues</h1>
+    <p class="hero-teaser">In a world of uncertainty, you can never be sure what you&#39;ll come across next. In true Tarkov fashion, Rogues and Raiders are now roaming the entire region. New brains</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8af205d2dcdff20fed39f555736ca61c0c51de74450352d3b31fbf941eade324.svg" alt="" width="32" height="32">Sipto</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,863</dd></div>
+    <div><dt>Favourites</dt><dd>17</dd></div>
+    <div><dt>Mod lists</dt><dd>34</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Raiders Vs Rogues content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>5</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><h3>Overview</h3>
+<p>Adds roaming Rogue and Raider warbands that patrol, take ground and hunt across the map. They sit on top of the normal bot population and never eat scav or PMC spawn slots.</p>
+<h3>How they behave</h3>
+<p>Squads are a leader plus two to four others, three to five bodies. Each rolls separately for whether it starts on the map or arrives later, at roughly a 40/60 split, and the latecomers turn up between the 10% and 60% mark of the raid clock, scaled to that map’s timer. The place keeps changing after the first ten minutes.</p>
+<p>Rogues and Raiders are hostile to each other, and to the custom factions if you run them. How they treat you follows the <strong>Friendliness</strong> setting, which defaults to faction-authentic — Rogues keep their Lighthouse manners and warn USEC before shooting, BEAR gets no warning, Raiders shoot everyone.</p>
+<h3>Where they roam</h3>
+<table>
+<thead>
+<tr>
+<th>Faction</th>
+<th>Maps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rogues:</strong>    Customs, Woods, Shoreline, Lighthouse</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Raiders:</strong>    Reserve, both Factories, Interchange, Labs</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Both:</strong>    Streets, both Ground Zero tiers</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Overlap maps roll for each faction independently, so those are where the two actually run into each other.</p>
+<h3>How hard they hit</h3>
+<p>Difficulty sits at impossible, weapons come in at 92–100% durability, armour spawns within 5 durability points of full, ammo is weighted 60/25/10 across the top three penetrating rounds per calibre with nothing below that ever rolled, and gear is gated to armour class 4 and up.</p>
+<p>Armour is stated in points rather than a percentage on purpose. SPT only applies a percentage band to armour on bots it considers PMCs, and <code>exUsec</code>/<code>pmcBot</code> aren’t in that set — so their armour starts at the item’s full durability and comes off by a flat roll of 0–5 points. What that means as a percentage depends on the piece: 5 points off a 15-durability helmet is a lot, off an 85-durability shield it’s nothing.</p>
+<p>Understand this before you tune it: the durability, ammo and gear upgrades are faction-wide. They rewrite the shared exUsec and pmcBot data, so the ordinary Rogues and Raiders already on the map get them too, not just the squads this adds. Each has its own switch, so turn off what you don’t want. Difficulty is separate — <code>forceHardestDifficulty</code> is what pushes the vanilla waves onto the same tier.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><h3>Requirements</h3>
+<ul>
+<li><strong>DrakiaXYZ-BigBrain</strong> — required.</li>
+<li><strong>SAIN</strong> — optional, read by reflection rather than referenced. Without it squads still spawn and roam, they just fight on the vanilla brain.</li>
+<li><strong>DrakiaXYZ-Waypoints</strong> — optional, but its expanded navmesh noticeably improves patrol coverage.</li>
+<li><strong>Fika</strong> — only for co-op.</li>
+</ul>
+<p>A missing dependency logs a warning rather than crashing you out.</p>
+<h3>Steps</h3>
+<ol>
+<li>Download the archive.</li>
+<li>Extract it into your SPT folder — the one holding <code>SPT.Server.exe</code> and <code>BepInEx</code>.</li>
+<li>Merge the <code>user</code> and <code>BepInEx</code> folders when Windows asks.</li>
+<li>Restart the SPT server.</li>
+</ol>
+<h3>Fika</h3>
+<p>The server mod goes with the SPT server, and the client plugin goes on whichever machine owns the raid, headless included. Everyone else needs nothing.</p>
+<p>Squad sizes assume the <strong>As Online</strong> bot amount setting.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><h3>Server — <code>user/mods/RoguesVRaidersServer/config.jsonc</code></h3>
+<p>Restart the server after editing.</p>
+<ul>
+<li><strong>Where they spawn</strong> — <code>rogueMaps</code>, <code>raiderMaps</code>, <code>overlapMaps</code>, plus <code>chanceOverrides</code> for per-map tuning</li>
+<li><strong>How many</strong> — <code>escortAmount</code>, a list rolled per squad</li>
+<li><strong>When</strong> — <code>startSpawnShare</code>, <code>midRaidEarliest</code>, <code>midRaidLatest</code></li>
+<li><strong>How hard</strong> — <code>difficulty</code>, <code>forceHardestDifficulty</code>, <code>upgradeDurability</code>, <code>upgradeAmmo</code>, <code>ammoRankWeights</code>, <code>upgradeGearTier</code>, <code>minArmorClass</code></li>
+</ul>
+<p><code>forceHardestDifficulty</code> does less than the name suggests: it only pushes the vanilla exUsec and pmcBot waves onto the same difficulty tier. Switching it off still leaves the gear and ammo upgrades reaching vanilla spawns — those are governed by <code>upgradeDurability</code>, <code>upgradeAmmo</code> and <code>upgradeGearTier</code> instead.</p>
+<h3>Client — F12, section <em>Rogues V Raiders</em></h3>
+<p>Enable, Rogue Squads, Raider Squads, Friendliness, Roaming Objectives, Objective Layer Priority, Lockdown POIs, Lockdown Delay, Broad AI Hostility, Hunt and Takeover, Min Spawn Distance, Alive Bot Ceiling, Force Spawn Over Bot Cap, Scale Chance By Level, Verbose Logs.</p>
+<h3>Level scaling overrides the config</h3>
+<p><strong>Scale Chance By Level</strong> is on by default, and while it’s on the level curve replaces every chance number you set — <code>rogueChance</code>, <code>raiderChance</code>, <code>overlapChance</code> and the per-map overrides alike. That curve is 10% at level 15, +5% every 5 levels, capped at 25%.</p>
+<p>Set a chance in the config, see nothing change, that’s why. Turn the toggle off and your numbers take over.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><h3>Acid’s Bot Placement System</h3>
+<p>ABPS rebuilds <code>BossLocationSpawn</code> from scratch at boot and after every raid, which wipes anything anyone else injected. Handled — the injector re-runs on raid start, after ABPS’s pass and before the raid snapshot is taken. Nothing for you to configure.</p>
+<h3>ORBIT</h3>
+<p>Keep ORBIT’s <strong>Vanilla raiders (RESTART)</strong> set to <code>true</code>. With it true, ORBIT leaves exUsec and pmcBot alone. Flip it false and ORBIT starts driving the same bots this does, and the two will fight over the mover.</p>
+<h3>SAIN</h3>
+<p>Soft integration. SAIN keeps running its own targeting, aiming and personality on these squads the same as any other exUsec or pmcBot.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2026-07-30T01:03:00.000000Z">30 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>430 downloads</span><span>57.9 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>Rogues V Raiders 1.6.0</h1>
+<p><strong>Warband squads now spawn at least 200 m from every player</strong>, measured when they actually spawn — at
+the exact points they take, not the zone’s centre, and not where people stood at raid start.</p>
+<ul>
+<li>The F12 slider is now <strong>Min Distance From Players (m)</strong> (0–500, default 200). It replaces <em>Min Spawn
+Distance</em>, whose old saved value is ignored — everyone starts on the new default.</li>
+<li>The scheduler still holds a squad while a player is near its zone, so most spawns land well past the
+floor. A zone that never opens up — someone camping it on a small map — fields its squad at the
+farthest points it has after five minutes rather than skipping it, so Factory and Labs keep their
+raiders.</li>
+<li>Squads without a named zone, which previously skipped the distance check entirely, are covered too:
+the floor is enforced at point selection, wherever the squad ends up spawning.</li>
+</ul>
+<h2>Files</h2>
+<p><code>RoguesVRaiders-1.6.0.zip</code>
+SHA-256: <code>D42C9D7233B27BCF2875827712A157C5176F8C96C2C59D547F9E0B3E5BE3EA59</code></p>
+<h2>VirusTotal</h2>
+<p>All three DLLs clean, 0/74:</p>
+<ul>
+<li><code>RoguesVRaiders.dll</code>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/b29bd42ab3669610e003426c202dc84f192489d6dff1facd23a3b3a70038ec3b" rel="noreferrer noopener">https://www.virustotal.com/gui/file/b29bd42ab3669610e003426c202dc84f192489d6dff1facd23a3b3a70038ec3b</a></li>
+<li><code>RoguesVRaiders.Core.dll</code>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb" rel="noreferrer noopener">https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb</a></li>
+<li><code>RoguesVRaidersServer.dll</code>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791" rel="noreferrer noopener">https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791</a></li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bbe5b2dd7de727ead332948efc77624239defcb3f6829df857f04db0085519a8" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/7916d19547fe5c4b7e95eab848d8daf1c833bc82079ba413028dd17c9c6696eb" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/e40831b1fe8e94953bd058ad337c10ce71fd94f496b621bc58c1491f319e0791" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/7f24e199-8bad-4911-85c1-aa4641ce0955?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A46Z&amp;rscd=attachment%3B+filename%3DRoguesVRaiders-1.6.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A06Z&amp;ske=2026-08-01T21%3A22%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2ChFs4FlkJKb2AbBre1iB%2BPUG8U1WRVZNwrXUObvK%2Fs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.6.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2026-07-27T07:55:00.000000Z">27 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>487 downloads</span><span>57.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Faction mods now actually fight the warbands, both ways round.</p>
+<ul>
+<li><strong>Third-party factions are hostile to Rogues <em>and</em> Raiders, and they to it.</strong> Every faction mod decides for itself who its bots fight, and they don’t agree with each other. UNTAR, for one, ships counting neither Rogues nor Raiders an enemy — so a UNTAR patrol and a warband could share a map as neutrals and walk straight past each other. RUAF, by contrast, already had it wired both ways. Whichever faction mods you have installed, their bots and both warbands are now hostile to each other from the moment they spawn, rather than relying on this mod catching up to them mid-raid.</li>
+</ul>
+<p>The game decides hostility by role, so this reaches ordinary Lighthouse Rogues and Reserve Raiders as well, not only the squads this mod adds. Set <code>customFactionHostility</code> to <code>false</code> in the server config to leave every faction mod’s own wiring exactly as it shipped, or list individual bot type names in <code>customFactionExclusions</code> to spare just those.</p>
+<h2>Install</h2>
+<p>Extract into your SPT folder, the one holding <code>EscapeFromTarkov.exe</code> and <code>BepInEx</code>. Merge <code>SPT</code> and <code>BepInEx</code> when Windows asks, then restart the server. That puts <code>RoguesVRaidersServer</code> in <code>SPT/user/mods/</code> and <code>RoguesVRaiders</code> in <code>BepInEx/plugins/</code>.</p>
+<p><strong>If you have tuned your config, back it up first.</strong> The archive ships a default <code>config.jsonc</code>, and extracting over an existing install will overwrite yours.</p>
+<p>Upgrading from 0.1.1 or earlier: those builds put the server mod in <code>user\mods\RoguesVRaidersServer</code> at the install root, where the server never read it. Delete that stray <code>user</code> folder - the real one is <code>SPT\user\mods\RoguesVRaidersServer</code>.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/bce307c7f690d2c458c3f4b6ed42b6249028c4509a459e0b87fe55ec5e98e2df" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/58485f7523b13438945e8417c39362d2e256068b2275fb6d7970c33ca25d655c" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/d143916b60328ef3008c0203329d3e764adc595cf7a28cfd6622543389f17447" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/7f24e199-8bad-4911-85c1-aa4641ce0955?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A46Z&amp;rscd=attachment%3B+filename%3DRoguesVRaiders-1.6.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A06Z&amp;ske=2026-08-01T21%3A22%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2ChFs4FlkJKb2AbBre1iB%2BPUG8U1WRVZNwrXUObvK%2Fs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.6.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2026-07-19T19:00:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>876 downloads</span><span>52.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Co-op hardening. Only matters on a Fika host running other spawn mods, but there’s no reason to skip it.</p>
+<ul>
+<li><strong>Squad waves can no longer be torn by overlapping raids.</strong> On a host with more than one group, one raid ending while another starts could have this mod and Wedge rewriting the same map’s spawn-wave list at the same moment. Those rewrites now lock on the map itself — the same convention Wedge uses, so the two queue instead of colliding.</li>
+</ul>
+<p>Numbering jumps straight from 0.1.3 to 1.4.0. Nothing was released in between; this is the same mod, just off the 0.x line.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/1174af5dbdd415bd959f4cd9045a54a75f9f395f19fb4a9dc5410582b4d5445e" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/0d3ca9008f7555331240c1ffba320343987b0ce99711b166fa3dcf96661141d9" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/4b1664b2509cfd39eb84b7ba9a7a8e344b078eaab5eeb69084a28b1b6c25d9ba" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/c6681180-6b1a-4c80-bd02-0d9295472d02?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A12Z&amp;rscd=attachment%3B+filename%3DRoguesVRaiders-1.4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A09Z&amp;ske=2026-08-01T21%3A08%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7tOUVKvolX0bRMOJJdkexlzhrNIOYDYJ1%2BOK3fuiE38%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-1.4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-16T06:14:00.000000Z">16 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>857 downloads</span><span>49.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>check description</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/aab1123a82835e435e9446734ca991bfd5cd92d1c0a731e62b2c13e1956f4efb" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/892d8b129526a2fa060fa089f00005b0af63facb58e94703a3294143dbe48ec3" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/286a1fb630ae2f289469adca1ff6dc8806cbf312e2442e02f4db3f7e0f4dc908" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/af7380a4-8319-43e7-907e-1d1bc625c151?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A17Z&amp;rscd=attachment%3B+filename%3DRoguesVRaiders-0.1.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A26Z&amp;ske=2026-08-01T21%3A09%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Jc0bs1dpG839TLs0VyPGa76ACgPlWbhtZe6YNF0R0Qk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&amp;response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-0.1.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.1.3</h2></div><time datetime="2026-07-19T02:52:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>213 downloads</span><span>52.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Bug fixes. Worth taking if you run this at all, and especially if you run Waypoints.</p>
+<ul>
+<li><strong>Squad members no longer judder on the spot.</strong> Followers were being re-issued a move order every single frame, and that order carried a flag that has the game teleport a bot to its nearest cover node whenever it can’t path to where it was sent. A follower’s formation slot lands somewhere unreachable often enough that this showed up in raid as bots stuttering instead of following. It’s more noticeable with <strong>DrakiaXYZ-Waypoints</strong> installed, since the wider navmesh produces more of those spots. Orders are now throttled per bot, and issued without the flag that teleports.</li>
+<li><strong>A bad config value no longer stops your server from starting.</strong> An empty <code>escortAmount</code>, a chance of 5000, a <code>null</code> where a list belongs — any of those used to throw during boot, and because nothing upstream catches it, the whole SPT server refused to start behind a stack trace that pointed nowhere near this mod. Values are now checked as they load: anything unusable clamps into range or reverts to its default and says which in the server log, and a config that can’t be used at all leaves this mod inert for the session instead of taking the server down with it.</li>
+<li><strong>SAIN integration fails the right way round.</strong> It now tells “SAIN isn’t installed” apart from “SAIN is installed but a version change made it unreadable”, and in the second case hands movement back to SAIN rather than fighting it for control of the bot.</li>
+<li>The server DLL no longer carries build-machine folder paths.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../791/sain-solarints-ai-modifications-full-ai-combat-system-replacement/">SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</a></li><li><a href="../../1594/apbs-acids-progressive-bot-system/">APBS - Acid&#39;s Progressive Bot System</a></li><li><a href="../../2706/orbit/">ORBIT</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9ba8ccd9cd19103564b798b3c26c7e35b0cde603e472f33f32925266f326f6d9" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/892d8b129526a2fa060fa089f00005b0af63facb58e94703a3294143dbe48ec3" target="_blank" rel="noreferrer noopener">report 2</a> <a href="https://www.virustotal.com/gui/file/002721a486cb702c1fb4be7ae05bc17d702ce0bfc46bd83c491329f6128e718b" target="_blank" rel="noreferrer noopener">report 3</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301936376/e4ca0029-dd23-4d27-b85f-458af1ec5a39?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A17Z&amp;rscd=attachment%3B+filename%3DRoguesVRaiders-0.1.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A40Z&amp;ske=2026-08-01T21%3A26%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=MiZbvhEkieUNRYGpC7f1%2Bgp7mk5EV9SGeeAXRMN54IE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&amp;response-content-disposition=attachment%3B%20filename%3DRoguesVRaiders-0.1.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.sipto.roguesvraiders</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>16 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>30 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/CameronsWorks/RoguesVRaiders" target="_blank" rel="noreferrer noopener">https://github.com/CameronsWorks/RoguesVRaiders</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was utilized to create the Mod Photo as well as audit the mod.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

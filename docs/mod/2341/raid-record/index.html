@@ -1,0 +1,1522 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Raid Record · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Raid Record</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/e610b110c2ed7b0c9e1eb59796a23adabfad2f20d3d26a9f356f9583c1c095d5.webp" alt="Raid Record thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Raid Record</h1>
+    <p class="hero-teaser">RaidRecord is a mod that meticulously logs comprehensive battle data for every raid—including kills, item changes, financial gains, and more—far beyond the basic stats provided by the vanilla game. And can also be used for quick equipment purchases.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f5eaacedfe1588811ded2c8c177c945c2a8c466690409b71c461969786ce18c9.webp" alt="" width="32" height="32">Suntion</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>2,641</dd></div>
+    <div><dt>Favourites</dt><dd>2</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Raid Record content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>18</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Introduction and Installation</div>
+<div class="tab-content"><h3>Mod Overview</h3>
+<p>The base game only saves limited statistics (Overview page), while this mod accurately records complete combat logs for every match, including:</p>
+<p><strong>Kills</strong>
+View in match details page</p>
+<ul>
+<li>Specific weapon used</li>
+<li>Hit location (head, chest, limbs, etc.)</li>
+<li>Type of target killed (PMC, Scav, Boss, Scav Boss, Boss guard, etc.)</li>
+<li>Time the target was killed</li>
+</ul>
+<p><strong>Loot</strong>
+View in match details page</p>
+<ul>
+<li>List of items brought into the match and items taken out</li>
+<li>Items newly found in the match, items lost, and changed items (increased bullet count, decreased durability of medical supplies and weapons, etc.)</li>
+</ul>
+<p><strong>Match Earnings</strong>
+View in match details page / View in record list page</p>
+<ul>
+<li>
+<p>Match map information, match playtime</p>
+</li>
+<li>
+<p>At the start of the match:</p>
+<ul>
+<li>Combat Readiness Value (similar to Delta Action, calculates the combined value of weapons, rigs, backpacks, armor, etc.)</li>
+<li>Secure Container value (total value of all items in the Secure Container, often accounting for a large portion)</li>
+<li>Total value brought in (equals Combat Readiness Value + Secure Container value + value of items in backpack, rig, pockets, and special slots)</li>
+</ul>
+</li>
+<li>
+<p>When leaving the match:</p>
+<ul>
+<li>Total value extracted (gross profit)</li>
+<li>Losses (consumed items, discarded items, durability loss, etc.)</li>
+<li>Net profit (gross profit - losses)</li>
+</ul>
+</li>
+<li>
+<p>Match result:</p>
+<pre><code>// Theoretically includes these:
+public enum ExitStatus
+{
+  SURVIVED,
+  KILLED,
+  LEFT, // Left the match (via the in-game Esc menu option)
+  RUNNER,
+  MISSINGINACTION,
+  TRANSIT,
+}
+</code></pre>
+</li>
+<li>
+<p>If survived/transited/rushed extraction: Extraction point information, playstyle information</p>
+</li>
+<li>
+<p>Otherwise: Information about which faction and which enemy (name not important except for bosses) eliminated you using what weapon and which limb was hit.</p>
+</li>
+</ul>
+<p><strong>Prices</strong>
+View in the Prices page</p>
+<blockquote>
+<p>This feature leans towards debugging, primarily used to verify if the mod’s calculated prices are correct. It can also be used for fuzzy searching of item names and IDs related to keywords, and for purchasing FIR items for quests.</p>
+</blockquote>
+<p><img loading="lazy" decoding="async" src="../../../assets/9777dee1722c670a17a7312654689e309721a0dec4bc0d19ebc65fcfd1d02c2b.webp" alt="Quick buy"></p>
+<p><strong>Quick Loadout</strong>
+View in match details page / View in record list page</p>
+<blockquote>
+<p>Quickly purchase the equipment used when entering a specific match.
+You can filter for specific required equipment categories.</p>
+</blockquote>
+<p><img loading="lazy" decoding="async" src="../../../assets/37113e02d1e2526487991b0cda492156680a60b638600dc8b3213d49dbc3fc78.webp" alt="Quick buy"></p>
+<p><strong>Exception Handling</strong></p>
+<ul>
+<li>The mod records data on the server side. If the server crashes for reasons unrelated to this mod before the match ends, as long as it doesn’t crash immediately after the client finishes the match, restarting the server still has a high probability (&gt;90%) of correctly recording the match data.</li>
+<li>If you Alt+F4 after a match starts or the client crashes, launching the next game will cause the cached result of that match to be recorded as an unknown outcome.</li>
+</ul>
+<p><strong>Record List Page</strong></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/3af53b3c01dab5d13d838aa92dd9e6c5ec5ee7eb750b63be2ab4483efd562de9.webp" alt="Quick buy"></p>
+<p><strong>WebUI Homepage</strong></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/6b2efe1669c8feb49078c238c8e5c964354ff355e109945d73947233d4731727.webp" alt="Quick buy"></p>
+<h3>Accessing the WebUI</h3>
+<p>· Method 1 (Quick Jump):
+In the console, find the line [RaidRecord] WeiUI run at <a target="_blank" class="external-link" href="https://127.0.0.1:6969/RaidRecord" rel="noreferrer noopener">https://127.0.0.1:6969/RaidRecord</a>, hold down the Ctrl key and left-click the link. The browser will automatically open the corresponding page.
+· Method 2 (Manual Entry):
+Open any browser, manually enter the address displayed in the console (e.g., <a target="_blank" class="external-link" href="https://127.0.0.1:6969/RaidRecord" rel="noreferrer noopener">https://127.0.0.1:6969/RaidRecord</a>) into the address bar, and press Enter to access it.</p>
+<h3>Installation Method</h3>
+<p>The installation is simple. Just extract the .7z file to your SPT game root directory.
+After installation, your file structure should look like this:</p>
+<pre><code>Your SPT Game Root Directory\SPT\user\mods\RaidRecord\(any mod files)
+</code></pre>
+<h3>Credits</h3>
+<ul>
+<li>Thanks to the SPT team for providing the framework and documentation.</li>
+<li>Thanks to DrakiaXYZ, HiddenCirno, jbs4bmx, GhostFenix̵̮̀x̴̹̃©, Dsnyder | WTT, and all other developers in the community for sharing their experience, code, and patiently answering questions.</li>
+<li>Thank you for downloading and trying out this mod.</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Configuration and Data</div>
+<div class="tab-content"><h3>Settings</h3>
+<ol>
+<li>
+<p>Recommended method: Change directly in the WebUI.</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/492afc259cb33f488873b3e41ea1d47e76437b8992f1ed045dc6db25c95a73c6.webp" alt="Quick buy"></p>
+</li>
+<li>
+<p>Go to …/SPT/user/mods/RaidRecord/db and open “config.json”.</p>
+</li>
+<li>
+<p>Set <code>local</code> to the two-letter name of a translation file that exists in the db/locals folder, e.g., “cn”.</p>
+<blockquote>
+<p>If changing the language has no effect, clear the local cache in the Launcher and restart the client.</p>
+</blockquote>
+</li>
+<li>
+<p>Set <code>logPath</code> to change the output directory for some logs within the mod (to prevent mod error messages from cluttering the SPT server logs).</p>
+</li>
+<li>
+<p>Set <code>autoUnloadOtherLanguages</code> to enable the optimization feature for multi-language support starting from <code>0.6.4</code>.</p>
+</li>
+<li>
+<p>Set <code>priceCacheUpdateMinTime</code> to change the update interval for the mod’s price cache. This setting does not affect the <code>price</code> command, which will always get the price calculated by the mod immediately.</p>
+</li>
+<li>
+<p>Set <code>modGiveIsFIR</code> to modify whether items given by the mod (when purchasing items via the mod, quick loadout) are FIR (Found in Raid) status.</p>
+</li>
+</ol>
+<h3>Database Description</h3>
+<blockquote>
+<p>…/SPT/user/mods/RaidRecord/db folder</p>
+</blockquote>
+<p><strong>~0.6.1</strong>
+The locals folder contains translation files.
+The records folder (created after running the mod) contains record files for different accounts.
+config.json saves the mod configuration.</p>
+<p>For installation and database compatibility, refer to the details in the <strong>Version</strong> section of this mod.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Commands and Language</div>
+<div class="tab-content"><h3>Command System</h3>
+<blockquote>
+<p>All commands and parameters are case-insensitive, but it is recommended to use lowercase letters.
+Command usage: <code>commandkey parameter1 parameter1value parameter2 parameter2value suffixparameter</code>
+String-type parameter values can be enclosed in half-width English double quotes to include spaces.</p>
+</blockquote>
+<p>After entering a match, find a friend named <strong>Raid Record Manager</strong> and send <code>help</code> to get command help information.</p>
+<p>The current version supports the following commands:</p>
+<ul>
+<li>help: Get help information for all commands.</li>
+<li>cls: Clear the chat history in the dialog (recommended to use frequently).</li>
+<li>info: Get earnings, kills, and other information for a specified match.</li>
+<li>items: Get the loot changes or brought-in/taken-out list for a specified match. Can be limited to output items whose price change falls within the [ge, le] range.</li>
+<li>list: List all existing match records. Later pages contain newer matches. You can adjust the number of items per page using the <code>limit</code> parameter.</li>
+<li>price: Get the value of a specified item, or perform a fuzzy search for multiple item values by name.</li>
+<li>buy: Quickly purchase the equipment used when entering a specified match (in-game, entering <code>buy</code> can quickly purchase the equipment from the last match).</li>
+</ul>
+<h3>Localization Method</h3>
+<p><strong>AI-Assisted Translation</strong></p>
+<ol>
+<li>Make a copy of <code>ch.json</code> or <code>en.json</code>, rename it to the two-letter name of the target language, e.g., “cz.json” (best to correspond with the name of Game Folder\SPT\SPT_Data\database\locales\global**.json).</li>
+<li>Send the translation file to the AI and ask it to translate while preserving the format.
+<ul>
+<li>If the AI modifies any translation keys, interrupt it and instruct the AI to only translate the JSON values.</li>
+<li>If the AI modifies anything inside <code>{{}}</code>, interrupt it and instruct the AI not to translate <code>{{}}</code> or the values inside them.</li>
+</ul>
+</li>
+<li>Verify that the translation results are correct. The above steps should translate over 70% of the content.</li>
+<li>Check whether the column variables in the tables under the <code>"translations"</code> key correspond with their names to prevent the AI from altering word order (changing column and table names together is acceptable).</li>
+<li>Check for missing <code>\n</code>.</li>
+</ol>
+<p><strong>Manual Translation</strong></p>
+<ol>
+<li>Find translations in <code>Game Folder\SPT\SPT_Data\database\locales\global\**.json</code>.
+<ul>
+<li>“roleNames”: Search for <code>BotRole</code> and <code>ScavRole</code>.</li>
+<li>“armorZone”: Search for <code>DeathInfo</code>, <code>Collider Type</code> (recommended), <code>Armor Zone</code>, <code>HeadSegment</code>.</li>
+</ul>
+</li>
+<li>If you urgently need to use commands, prioritize translating values under “translations”.</li>
+<li>If you urgently need to view logs output by the server, prioritize translating values under “serverMessage”.</li>
+</ol></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">简介与安装</div>
+<div class="tab-content"><h3>模组概述</h3>
+<p>原版游戏仅保存有限统计数据(总览页面), 而本模组精准记录每一场对局的完整战斗日志, 包括:</p>
+<p><strong>击杀</strong></p>
+<p>对局详情页面查看</p>
+<ul>
+<li>使用的具体武器</li>
+<li>命中部位(头部、胸部、四肢等)</li>
+<li>击杀目标类型(PMC、Scav、Boss、Scav Boss、Boss 带的守卫等)</li>
+<li>击杀目标的时间</li>
+</ul>
+<p><strong>物资</strong></p>
+<p>对局详情页面查看</p>
+<ul>
+<li>带入对局的物品与带出对局的物品清单</li>
+<li>这场对局中新搜到的物资, 损失的物资, 变化的物资(子弹数量增加, 药品与武器耐久减少等)</li>
+</ul>
+<p><strong>对局收益</strong></p>
+<p>对局详情页面查看 / 战绩列表页面查看</p>
+<ul>
+<li>
+<p>对局地图信息, 对局游玩时间</p>
+</li>
+<li>
+<p>对局入场时的</p>
+<ul>
+<li>战备价值(类似三角洲行动, 计算武器, 弹挂, 背包, 护甲等装备的价值和)</li>
+<li>安全箱内价值(安全箱内所有物资总价值, 有不少情况下, 这里的价值占非常大的比率)(Scav模式为0)</li>
+<li>总的带入价值(该值等于战备价值+安全箱内价值+背包弹挂口袋特殊插槽内的物品价值)</li>
+</ul>
+</li>
+<li>
+<p>离开对局时</p>
+<ul>
+<li>带出总价值(算是毛利润)</li>
+<li>战损(使用物品消耗, 丢弃物品, 耐久损耗等)</li>
+<li>净利润(毛利润-战损)</li>
+</ul>
+</li>
+<li>
+<p>对局结果</p>
+<pre><code>// 理论上有这些:
+public enum ExitStatus
+{
+  SURVIVED, // 幸存
+  KILLED, // 被击杀
+  LEFT, // 离开对局(指客户端Esc后那个选项)
+  RUNNER, // 匆匆撤离
+  MISSINGINACTION, // 迷失
+  TRANSIT, // 转移
+}
+</code></pre>
+</li>
+<li>
+<p>如果幸存/转移/匆匆撤离 : 撤离点信息, 游戏风格信息</p>
+</li>
+<li>
+<p>其他情况: 被哪个阵营的哪个敌人(除了boss, 名称不重要)使用什么武器命中你哪个肢体淘汰你的信息</p>
+</li>
+</ul>
+<p><strong>价格</strong></p>
+<p>在价格页面查看</p>
+<blockquote>
+<p>该功能偏向调试, 主要用于验证模组计算的价格是否正确, 也可以用于模糊搜索与关键词相关的物品名称与ID, 以及购买FIR物品过任务</p>
+</blockquote>
+<p><img loading="lazy" decoding="async" src="../../../assets/49774cb870fa3e530e2717948695e615a0823be84bc45c959e099a7c2374cc0c.webp" alt="Quick buy"></p>
+<p><strong>快捷起装</strong></p>
+<p>对局详情页面查看 / 战绩列表页面查看</p>
+<blockquote>
+<p>可以快速购买指定对局进入对局时的装备
+可以筛选指定需要的装备类别</p>
+</blockquote>
+<p><img loading="lazy" decoding="async" src="../../../assets/3cc497f3f5739ebeffd5aa0d93e11ec14d6c979b5d9096c49c8b7624a79f4f47.webp" alt="Quick buy"></p>
+<p><strong>意外情况处理</strong></p>
+<ul>
+<li>模组会在服务端记录数据, 如果对局结束前服务端在非本模组原因下崩溃, 只要不是客户端刚对局结束时服务端就崩溃, 重启服务端仍然有概率(&gt;90%)正确记录对局数据</li>
+<li>对局启动后Alt+F4或者客户端崩溃, 下一次启动战局后会导致记录的该战局的缓存对局结果被记录为未知结局</li>
+</ul>
+<p><strong>对局列表页面</strong></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/d2ca211980cdd229c56f84fb8da9e8641b103e04b4bb05ec16a6d95a2c777070.webp" alt="Quick buy"></p>
+<p><strong>WebUI主页</strong></p>
+<p><img loading="lazy" decoding="async" src="../../../assets/d701fa1feccefbad0c24878c0201a0945f41d0ea64cededa78566472cca1cb07.webp" alt="Quick buy"></p>
+<h3>访问 WebUI</h3>
+<p>· 方法一（快捷跳转）：
+在控制台找到 [RaidRecord] WeiUI run at <a target="_blank" class="external-link" href="https://127.0.0.1:6969/RaidRecord" rel="noreferrer noopener">https://127.0.0.1:6969/RaidRecord</a> 这一行，按住 Ctrl 键并用鼠标左键点击该链接，浏览器会自动打开对应页面。
+· 方法二（手动输入）：
+打开任意浏览器，在地址栏手动输入控制台中显示的地址（如 <a target="_blank" class="external-link" href="https://127.0.0.1:6969/RaidRecord" rel="noreferrer noopener">https://127.0.0.1:6969/RaidRecord</a>），然后按回车键访问。</p>
+<h3>安装方式</h3>
+<p>安装方法很简单, 只需将 .7z 文件解压到您的SPT游戏根目录即可
+安装完成后，您的文件结构应如下所示：</p>
+<pre><code>你的SPT游戏根目录\SPT\user\mods\RaidRecord\(模组的任何文件)
+</code></pre>
+<h3>致谢</h3>
+<ul>
+<li>感谢SPT团队提供的框架与文档。</li>
+<li>感谢DrakiaXYZ, HiddenCirno, jbs4bmx, GhostFenix̵̮̀x̴̹̃©, Dsnyder | WTT以及其他所有在社区中分享经验、代码与耐心解答问题的开发者们。</li>
+<li>感谢您下载并尝试本模组。</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">配置与数据</div>
+<div class="tab-content"><h3>设置</h3>
+<ol>
+<li>
+<p>推荐方案, 直接在WebUI更改</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/2cb4a168e8ddd12ac2e8f14af6d7eb1a6422cda44e5c6f78b23de49863627c95.webp" alt="Quick buy"></p>
+</li>
+<li>
+<p>前往…/SPT/user/mods/RaidRecord/db 并打开“config.json”</p>
+</li>
+<li>
+<p>设置<code>local</code>为db/locals文件夹下存在的翻译文件的二位名称, 例如“cn“</p>
+<blockquote>
+<p>更改任何语言后如果无效, 应该在Launcher清理本地缓存后再启动客户端</p>
+</blockquote>
+</li>
+<li>
+<p>设置<code>logPath</code>以更改模组内一些日志的输出目录(这是为了避免模组报错信息导致SPT服务端日志过于繁琐的问题)</p>
+</li>
+<li>
+<p>设置<code>autoUnloadOtherLanguages</code>, 以启用<code>0.6.4</code>开始的对多语言化的优化功能</p>
+</li>
+<li>
+<p>设置<code>priceCacheUpdateMinTime</code>, 以更改模组价格缓存的更新间隔, 该设置不会影响<code>price</code>命令, <code>price</code>只会立刻获取当前模组计算的价格</p>
+</li>
+<li>
+<p>设置<code>modGiveIsFIR</code>, 以修改模组给的物资(在模组购买物品, 快速起装)是否是FIR(对局中发现(带勾))状态</p>
+</li>
+</ol>
+<h3>数据库说明</h3>
+<blockquote>
+<p>…/SPT/user/mods/RaidRecord/db 文件夹</p>
+</blockquote>
+<p><strong>~0.6.1</strong>
+locals文件夹下为翻译文件
+records文件夹(运行过模组后才会创建)为不同账户的记录文件
+config.json保存模组配置</p>
+<p>安装与数据库的兼容性参考本模组的<strong>Version</strong>中的详细信息</p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">命令与语言</div>
+<div class="tab-content"><h3>命令系统</h3>
+<blockquote>
+<p>所有命令和参数对大小写不敏感, 但推荐全部使用小写字母
+指令使用方式为<code>命令键 参数1 参数1的值 参数2 参数2的值 尾缀参数</code>
+字符串类型参数的值可以用半角英文双引号包起来以输入空格</p>
+</blockquote>
+<p>进入对局后, 找到一个名为<strong>对局战绩管理</strong>的好友, 对他发送<code>help</code>以获取指令的帮助信息</p>
+<p>当前版本支持以下指令:</p>
+<ul>
+<li>help: 获取所有命令帮助信息</li>
+<li>cls: 清理对话框聊天记录(推荐多用用)</li>
+<li>info: 获取指定对局收益, 击杀等信息</li>
+<li>items: 获取指定对局物资变化或带入带出清单, 可以限定只输出价格变化量处于[ge, le]之间的物品清单</li>
+<li>list: 列出当前已有的所有对局记录, 页数越靠后, 对局越新; 可以通过<code>limit</code>参数调整每页显示数量</li>
+<li>price: 获取指定物品价值, 或者通过名称模糊搜索多个物品价值</li>
+<li>buy: 快速购买指定对局进入对局时的装备(局内可以输入一个buy快速购买上局装备)</li>
+</ul>
+<h3>本地化方式</h3>
+<p><strong>AI辅助翻译</strong></p>
+<ol>
+<li>复制一份<code>ch.json</code>或<code>en.json</code>, 重命名为对应语言的二位名称, 例如“cz.json“(最好与Game Folder\SPT\SPT_Data\database\locales\global**.json)的名称对应</li>
+<li>将翻译文件发送给AI, 要求它保留格式的翻译;
+<ul>
+<li>如果AI进行了任何翻译键的操作, 打断他, 并在提示词中要求AI只翻译json的值</li>
+<li>如果AI修改了任何{{}}中的内容, 打断他, 并在提示词中要求AI禁止翻译<code>{{}}</code>与其中的值</li>
+</ul>
+</li>
+<li>验证翻译结果是否正确, 上述操作基本能进行70%以上的翻译</li>
+<li>检查翻译文件<code>"translations"</code>键下的各个表的列的变量是否与名称对应, 以防止AI改变语序(列名和表名顺序一起改变是可以的)</li>
+<li>检查是否漏了<code>\n</code></li>
+</ol>
+<p><strong>手动翻译</strong></p>
+<ol>
+<li>可以在<code>Game Folder\SPT\SPT_Data\database\locales\global\**.json</code>通过找到的翻译
+<ul>
+<li>“roleNames”: 搜索<code>BotRole</code>和<code>ScavRole</code></li>
+<li>“armorZone”: 搜索<code>DeathInfo</code>, <code>Collider Type</code>(推荐), <code>Armor Zone</code>, <code>HeadSegment</code></li>
+</ul>
+</li>
+<li>急需使用命令, 优先翻译“translations“下的值</li>
+<li>急需查看服务端输出的日志, 优先翻译“serverMessage“下的值</li>
+</ol></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.7.2</h2></div><time datetime="2026-04-13T19:30:00.000000Z">13 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>374 downloads</span><span>110.5 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>Test Framework &amp; Security Improvements</h3>
+<ul>
+<li>Added unit test framework and CI environment, switching CI Runner from Ubuntu to Windows for better cross-platform compatibility</li>
+<li>Strengthened file path access control: new path validation prevents unauthorized directory access</li>
+<li>Updated dependency management: replaced local SuntionCore DLLs with NuGet packages (versions 1.2.0 and 1.0.0)</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>测试架构与安全增强</h3>
+<ul>
+<li>新增单元测试框架与 CI 环境，并将 CI Runner 从 Ubuntu 切换至 Windows 以提升跨平台兼容性</li>
+<li>强化文件路径访问控制：新增路径校验逻辑，阻止非授权目录访问</li>
+<li>更新依赖管理：将本地 SuntionCore DLL 替换为 NuGet 包（版本 1.2.0 和 1.0.0）</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li><li><a href="../../2609/suntioncoresptextensions/">SuntionCore.SPTExtensions</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7990d763e421b3cf13072807f9285e2a6bf1e50efbd46d49face6189ca93f159/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/de45a331-3a8f-42a8-8f9d-551cab40b7ee?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A39Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.7.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A22Z&amp;ske=2026-08-01T21%3A00%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Yqziy3GHiL99EGtHX3sLZ0mKuC6aQmxpuwsFtEhIePs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.7.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.7.1</h2></div><time datetime="2026-04-02T10:14:00.000000Z">2 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>117 downloads</span><span>110.0 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-2-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3>New Features</h3>
+<ul>
+<li><strong>Price Calculation Mode Configuration</strong>: Introduced configurable base price calculation strategy with three modes
+<ul>
+<li><code>Handbook</code>: Use handbook prices</li>
+<li><code>AvgRagfair</code>: Use average flea market prices</li>
+<li><code>Auto</code>: Automatically select optimal price source</li>
+</ul>
+</li>
+<li><strong>Web UI Configuration</strong>: Added dropdown selection component for price calculation mode, supporting graphical configuration of all three modes</li>
+<li><strong>Multi-language Support</strong>: Added Chinese, English, and Korean interface text for price mode configuration</li>
+</ul>
+<h3>Refactoring &amp; Optimization</h3>
+<ul>
+<li><strong>Simplified Price System</strong>: Rewrote price retrieval logic, removed redundant dependency injections (PaymentHelper, HandbookHelper, DatabaseService, RagfairOfferService), replaced with unified RagfairController</li>
+<li><strong>Legacy Code Cleanup</strong>: Removed complex flea market offer traversal logic and private method GetAveragePriceFromOffers</li>
+</ul>
+<h3>Changes</h3>
+<ul>
+<li><strong>Default Configuration Adjustment</strong>: Changed default price calculation mode value to AvgRagfair</li>
+</ul></div></div>
+<div id="tabset-2-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3>新增功能</h3>
+<ul>
+<li><strong>价格计算模式配置</strong>：引入可配置的基础价格计算策略，支持三种模式
+<ul>
+<li><code>Handbook</code>：使用手册价格</li>
+<li><code>AvgRagfair</code>：使用跳蚤市场平均价格</li>
+<li><code>Auto</code>：自动选择最优价格来源</li>
+</ul>
+</li>
+<li><strong>Web界面配置</strong>：新增价格计算方式下拉选择组件，支持三种模式的图形化配置</li>
+<li><strong>多语言支持</strong>：为价格模式配置添加中、英、韩文界面文本</li>
+</ul>
+<h3>重构优化</h3>
+<ul>
+<li><strong>简化价格系统</strong>：重写价格获取逻辑，移除冗余的依赖注入（PaymentHelper、HandbookHelper、DatabaseService、RagfairOfferService），替换为统一的RagfairController</li>
+<li><strong>清理遗留代码</strong>：删除复杂的跳蚤报价遍历逻辑及私有方法GetAveragePriceFromOffers</li>
+</ul>
+<h3>变更</h3>
+<ul>
+<li><strong>默认配置调整</strong>：价格计算模式默认值为AvgRagfair</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li><li><a href="../../2609/suntioncoresptextensions/">SuntionCore.SPTExtensions</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/532e142c9b07e6eebc5a4d0dded7a33db6ec6ddf10f90c2a7029dba5a606bfd0/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/0d82ace2-e0de-47c3-b284-1b1c6ffd243f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A46Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.7.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A44Z&amp;ske=2026-08-01T21%3A03%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=z8k8Zn3cEtdYz9tiVpaiEAAfBAeZcAJGgo6TA7QYjc0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.7.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.7.0</h2></div><time datetime="2026-03-10T08:55:00.000000Z">10 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>152 downloads</span><span>110.0 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-3-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p><strong>New Features</strong></p>
+<ul>
+<li><strong>Favorite Records System</strong>
+<ul>
+<li>Support for adding important raid records to favorites to prevent accidental deletion</li>
+<li>Visual indicator for favorite status (green marker)</li>
+<li>Added “Show only favorites” filter toggle for quick access to important records</li>
+<li>Favorite status automatically persists across sessions</li>
+</ul>
+</li>
+</ul>
+<p><strong>Optimizations and Improvements</strong></p>
+<ul>
+<li>
+<p><strong>Data Model Optimization</strong></p>
+<ul>
+<li>Added <code>MapId</code> property to <code>RaidArchive</code> with lazy loading strategy for improved performance</li>
+<li>Removed outdated state transition logic to simplify data structure</li>
+<li>Optimized compatibility handling for legacy data</li>
+</ul>
+</li>
+<li>
+<p><strong>Value Calculation Rules Adjustment</strong></p>
+<ul>
+<li>Removed value-zeroing restriction for Scabbard, allowing normal valuation to address the “zero-cost knife” issue</li>
+<li>Explicitly exclude knives (<code>BaseClasses.KNIFE</code>) and secure container items from equipment value calculation</li>
+</ul>
+</li>
+</ul>
+<p><strong>Removals</strong></p>
+<ul>
+<li>Removed unused <code>State</code> property from <code>RaidInfo</code> and <code>RaidArchive</code></li>
+<li>Deleted <code>EFTCombatRecord.ArchivedRecords</code> calculation property and related state transition logic</li>
+</ul></div></div>
+<div id="tabset-3-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p><strong>新增功能</strong></p>
+<ul>
+<li><strong>战绩收藏系统</strong>
+<ul>
+<li>支持将重要战绩添加至收藏夹，防止误删</li>
+<li>新增收藏状态视觉标识（绿色标记）</li>
+<li>增加“只显示收藏“筛选开关，便于快速定位重要记录</li>
+<li>收藏状态自动持久化存储</li>
+</ul>
+</li>
+</ul>
+<p><strong>优化与改进</strong></p>
+<ul>
+<li>
+<p><strong>数据模型优化</strong></p>
+<ul>
+<li><code>RaidArchive</code> 新增 <code>MapId</code> 属性，采用惰性填充策略提升性能</li>
+<li>移除过时的状态流转逻辑，简化数据结构</li>
+<li>优化旧数据兼容性处理</li>
+</ul>
+</li>
+<li>
+<p><strong>价值计算规则调整</strong></p>
+<ul>
+<li>移除对 <code>Scabbard</code>（刀鞘）的价值归零限制，允许正常计价，解决“零元购“刀具的问题</li>
+<li>从战备价值中显式排除刀具 (<code>BaseClasses.KNIFE</code>) 与安全箱物品</li>
+</ul>
+</li>
+</ul>
+<p><strong>移除项</strong></p>
+<ul>
+<li>移除 <code>RaidInfo</code> 和 <code>RaidArchive</code> 中未使用的 <code>State</code> 属性</li>
+<li>删除 <code>EFTCombatRecord.ArchivedRecords</code> 计算属性及相关状态流转逻辑</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li><li><a href="../../2609/suntioncoresptextensions/">SuntionCore.SPTExtensions</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/eef726cb4be047d53b2bae7effd32f7197ce56e43ea4e6bef417137821a1cf14/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/2dd5ca90-10e2-4d7f-8fe5-0be32863e5d2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A22Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.7.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A40Z&amp;ske=2026-08-01T20%3A58%3A22Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=H%2Bk9AIbUkCY4EgIslGHCkn2xpOFX6e1zPy4KTJcU8b8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.7.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.13</h2></div><time datetime="2026-03-06T06:38:00.000000Z">6 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>52 downloads</span><span>109.2 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-4-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p><strong>New Features</strong></p>
+<ul>
+<li>Added tooltip hints for the “Fix Archive” button in the settings page, explaining when and how to use this feature properly</li>
+<li>Added multi-language support for the Statistics Page navigation link (now supports Chinese, English, and Korean)</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Enhanced logging system to better track account initialization, record deletions, and item purchases</li>
+<li>Improved error handling in charts and purchase pages to prevent crashes when data is missing</li>
+<li>Unified item distribution logic across WebUI and chat commands - items you purchase or receive will now consistently follow your “Found in Raid” (FIR) settings</li>
+<li>Optimized background code for better performance and maintainability</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+<li>Fixed an issue where FIR status configuration wasn’t being properly applied after the Suntion extension refactor</li>
+<li>Fixed an issue where logs might not be recorded due to missing data at the start/end of a raid</li>
+</ul>
+<p><strong>Note for Users</strong>
+The “Fix Archive” feature in settings is designed specifically for players upgrading from version 0.6.8 or earlier. Using it too frequently may affect your statistics accuracy. Please use it only when needed.</p></div></div>
+<div id="tabset-4-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p><strong>新增功能</strong></p>
+<ul>
+<li>设置页面的“修复存档”按钮增加了提示信息，详细说明该功能的适用场景（仅建议从 0.6.8 及更早版本升级的用户使用）</li>
+<li>统计页面的导航链接现已支持多语言显示（中文、英文、韩文）</li>
+</ul>
+<p><strong>优化改进</strong></p>
+<ul>
+<li>增强了后台日志记录，能更好地追踪账号初始化、删除记录、购买物资等操作</li>
+<li>优化了统计图表和购买页面的错误处理，避免因数据异常导致页面崩溃</li>
+<li>统一了网页端和聊天命令的物品发放逻辑 - 现在购买或领取的物品将完全遵循您的“是否标记为战局中找到”(FIR)设置</li>
+<li>对部分后台代码进行了清理和优化，提升运行效率</li>
+</ul>
+<p><strong>问题修复</strong></p>
+<ul>
+<li>修复了使用 Suntion 扩展重构后，物品的“战局中找到”(FIR)状态配置未能正确生效的问题</li>
+<li>修复了战局开始/结束时可能因数据缺失导致的日志未记录</li>
+</ul>
+<p><strong>温馨提示</strong>
+设置页面中的“修复存档”功能主要是为从 0.6.8 及更早版本升级的玩家准备的数据修正工具。频繁使用可能会导致统计数据不准确，请仅在必要时使用。</p></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li><li><a href="../../2609/suntioncoresptextensions/">SuntionCore.SPTExtensions</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cd0c383a95de930104e3079f2b137be486d5d274a8f3391fe4bac9785f4a6fe4/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/8eb06548-3c55-4412-80ae-33376d6eca76?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A51Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.13.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A22Z&amp;ske=2026-08-01T21%3A00%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=LZ0%2BiqV5M0MNP5TEO8Fa4Tqq8NPhSAjZ9J0eBNaNAVw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.13.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.12</h2></div><time datetime="2026-02-28T12:05:00.000000Z">28 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>62 downloads</span><span>136.6 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-5-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p><strong>Raid Statistics Page</strong>: Added a comprehensive statistics dashboard with multiple data visualization components</p>
+<ul>
+<li><strong>Economic Analysis</strong>: View entry value, equipment value, gross and net profit trends with interactive dual-line charts</li>
+<li><strong>Extraction Patterns</strong>: Track extraction distribution across different maps with visual stacked bar charts</li>
+<li><strong>Faction Performance</strong>: Analyze extraction statistics for different factions through intuitive visualizations</li>
+<li><strong>Raid Efficiency</strong>: Monitor profit-to-loss ratio and net profit per minute with flexible chart type switching</li>
+</ul>
+<p><strong>Improved Interface &amp; Experience</strong>:</p>
+<ul>
+<li>Added multilingual support for all statistics features with dynamic language switching</li>
+<li>Enhanced pagination controls with clearer navigation and visual feedback</li>
+<li>Standardized profit-to-loss ratio display to three decimal places for consistent readability</li>
+<li>Migrated currency display to unified format across all interface elements</li>
+</ul>
+<p><strong>Technical Refinements</strong>:</p>
+<ul>
+<li><strong>Fixed raid duration display</strong> to correctly show match time instead of raw timestamp</li>
+<li>Improved error logging with specific identifiers for easier troubleshooting</li>
+</ul></div></div>
+<div id="tabset-5-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p><strong>新增数据统计页面</strong>：添加了全面的数据统计仪表板，包含多个数据可视化组件</p>
+<ul>
+<li><strong>经济趋势分析</strong>：通过交互式双线图表查看入场价值、装备价值、毛利润和净利润趋势</li>
+<li><strong>撤离分布统计</strong>：使用堆叠柱状图追踪不同地图上的撤离分布情况</li>
+<li><strong>阵营表现分析</strong>：通过直观的可视化图表分析不同阵营的撤离统计数据</li>
+<li><strong>对局效率监控</strong>：灵活切换图表类型，查看盈亏比和每分钟净利润变化趋势</li>
+</ul>
+<p><strong>界面与体验优化</strong>：</p>
+<ul>
+<li>为所有统计功能添加多语言支持，实现动态语言切换</li>
+<li>优化分页控制，提供更清晰的导航和视觉反馈</li>
+<li>统一盈亏比显示为三位小数，确保阅读一致性</li>
+<li>整合全界面货币显示格式，统一展示风格</li>
+</ul>
+<p><strong>问题修复</strong>：</p>
+<ul>
+<li><strong>修复 raid 持续时间显示</strong>，现在正确显示对战时间而非原始时间戳</li>
+<li>改进错误日志，使用具体标识符便于问题排查</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li><li><a href="../../2609/suntioncoresptextensions/">SuntionCore.SPTExtensions</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ebd48da28d0cb1ad1cf0e8b7151bfa59ca8025280e2489d1e71a3e2d4a5c7bb9/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/8258a158-bab5-4db3-b6d3-1701af714186?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A18Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.12.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A26Z&amp;ske=2026-08-01T21%3A09%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=NvyXXI6JJpj639GW%2FEBobG6oCPdhGhgjE0L%2BToXA4eQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.12.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.11</h2></div><time datetime="2026-02-23T04:56:00.000000Z">23 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>75 downloads</span><span>128.4 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-6-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p><strong>New</strong></p>
+<ul>
+<li><strong>Korean Language Support</strong>: Added Korean localization, primarily contributed by <a target="_blank" class="external-link" href="https://github.com/jgtonys" rel="noreferrer noopener">Jungyu Kim</a></li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li><strong>Fixed Timezone Display Issue</strong>: Resolved the problem where battle record times and creation times were showing in UTC instead of your local system time</li>
+</ul></div></div>
+<div id="tabset-6-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p><strong>新增</strong></p>
+<ul>
+<li><strong>韩语语言支持</strong>：新增韩语本地化翻译，主要贡献者 <a target="_blank" class="external-link" href="https://github.com/jgtonys" rel="noreferrer noopener">Jungyu Kim</a></li>
+</ul>
+<p><strong>修复</strong></p>
+<ul>
+<li><strong>修复时区显示问题</strong>：解决了对战记录时间、创建时间等使用 UTC 时间而非用户本地系统时间显示的问题</li>
+</ul></div></div></div>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2600/suntioncore/">SuntionCore</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f66e6bc37f2a33663adfdf0a7ecf604e977e030c25c4c53368b3a2cd8200b213/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/7beb39fa-fab9-48a3-be77-6c946938a36f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A16Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.11.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A18Z&amp;ske=2026-08-01T20%3A57%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=paFgWpx7Yvr0ylM4pQAKnPlMLpi5sRqAcsNobR0mt3I%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.11.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.10</h2></div><time datetime="2026-02-19T13:04:00.000000Z">19 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.8</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>87 downloads</span><span>130.3 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-7-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><p>New Features</p>
+<ul>
+<li>When selecting a save file, display the disk space occupied by the save (only includes historical record files from this mod).</li>
+<li>Allow deletion of historical match records directly from the match history list interface.</li>
+</ul>
+<p>Known Issues</p>
+<ul>
+<li>After deleting a save file, the tab names of all subsequently opened detailed information views will not update automatically (confirmed behavior when viewing information; no plans to fix).</li>
+</ul></div></div>
+<div id="tabset-7-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><p>新增</p>
+<ul>
+<li>选择存档时, 显示存档占用的磁盘大小(只是本模组的历史记录存档文件)</li>
+<li>在战绩列表界面允许删除历史战绩</li>
+</ul>
+<p>已知问题</p>
+<ul>
+<li>删除存档后，它后面的所有被打开的详细信息的标签名称不会同步修改(在查看信息时确认 | 没有修复计划)</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/80082ae981281f7c0540d0fcb1d16a0190850652efa088f28772f0c13d040555/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/ad0f486e-2556-461f-b337-485c856c1cac?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A01%3A30Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.10.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A55Z&amp;ske=2026-08-01T21%3A01%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=55Q9qrgufHclbugmPlxWnvyRlgephv6V%2F%2Bs9R8ec7DI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.10.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.9</h2></div><time datetime="2026-01-08T17:54:00.000000Z">8 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.2</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>350 downloads</span><span>123.5 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-8-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3><strong>New Features</strong></h3>
+<ul>
+<li><strong>Dark Mode</strong>: Now available in the settings page. The WebUI default style has been changed to dark mode to protect your eyes.</li>
+<li><strong>Durability Repair Function</strong>: Can now be adjusted in the settings interface. This affects item prices and the durability of purchased gear in the Quick Loadout feature.</li>
+<li><strong>Quick Purchase Gear Control Enhancements</strong>:
+<ul>
+<li>Displays item modification information</li>
+<li>Shows icon and text indicating whether the durability repair function is enabled</li>
+<li><strong>Added multi-select list to exclude specific items</strong>, allowing you to customize which items appear when combined with type-based exclusion
+<ul>
+<li>This exclusion method does not automatically exclude child items (unlike type-based exclusion, which excludes all child items when a parent type is excluded)</li>
+<li>Can be used to individually purchase built-in armor plates (can be sold through the quick sell mod, but not recommended)</li>
+<li>Excluded items in the multi-select list are synchronized with the item tree above to show exclusion status</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>New Repair Panel in Settings Page</strong>: Used to fix gross profit and combat loss data calculated in previous versions</li>
+<li><strong>New Compensation Control in Settings Page</strong>: Allows one-click recovery of Roubles lost due to mod issues or removal of accidentally acquired Roubles</li>
+<li><strong>New Check for Updates Button in Settings Page</strong>: Redirects to the mod’s Release page for easy update checks</li>
+</ul>
+<h3><strong>Changes</strong></h3>
+<ul>
+<li>Match history list now displays in reverse chronological order by default (more recent matches appear on smaller page numbers)</li>
+<li>Buttons under the match history page toolbar have been changed to dropdown menus, unifying the style with other table elements (info button and quick loadout button merged into menu)</li>
+</ul>
+<h3><strong>Optimizations</strong></h3>
+<ul>
+<li>Added more thorough validation checks on the price page</li>
+<li>Quantity now resets after purchasing items on the price page</li>
+<li>Optimized data generation logic when purchasing items on the price page</li>
+<li>Refactored all data structure management in the quick purchase gear control</li>
+<li>Optimized default view of match history list and toolbar layout</li>
+<li>Improved item selection display in quick purchase gear control, allowing excluded items to be collapsed or expanded</li>
+</ul>
+<h3><strong>Fixes</strong></h3>
+<ul>
+<li>Fixed tree node disabling logic</li>
+<li>Fixed text errors in Chinese WebUI settings page</li>
+<li>Fixed missing spaces in price displays in English WebUI quick purchase gear control</li>
+<li>Resolved warning messages in the quick purchase gear control</li>
+<li>Fixed alignment issues with expand/collapse buttons, total value display, and purchase button in the quick purchase gear control</li>
+<li>Fixed incorrect gross profit and combat loss calculation logic</li>
+</ul>
+<h3><strong>Known Issues</strong></h3>
+<ul>
+<li>The “Repair Archive” function in settings is primarily designed as a data correction tool for players upgrading from version 0.6.8 and earlier. Frequent use may lead to inaccurate statistics. Please use only when necessary.</li>
+</ul></div></div>
+<div id="tabset-8-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3><strong>新增功能</strong></h3>
+<ul>
+<li><strong>深色模式</strong>：现在可以在设置页面开启，WebUI 默认样式已更改为深色模式，保护您的眼睛</li>
+<li><strong>耐久度维修功能</strong>：现可在设置界面调整，影响快速配装功能中的物品价格和购买装备的耐久度</li>
+<li><strong>快速配装控件增强</strong>：
+<ul>
+<li>显示物品改装信息</li>
+<li>显示耐久度维修功能是否开启的图标和文字提示</li>
+<li><strong>新增多选列表排除特定物品</strong>，可与按类型排除结合使用，自由定制所需物品
+<ul>
+<li>此排除方式不会自动排除子节点（按类型排除会在排除父节点类型时排除所有子节点）</li>
+<li>可用于单独购买内置装甲板（可通过快速出售模组出售，但不推荐）</li>
+<li>多选列表中排除的物品会与上方物品树同步显示排除状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>设置页面新增修复面板</strong>：用于修复旧版本计算错误的总收益和战斗损失数据</li>
+<li><strong>设置页面新增补偿控制</strong>：可一键找回因模组问题损失的卢布，或清除误获取的卢布</li>
+<li><strong>设置页面新增检查更新按钮</strong>：可快速跳转至模组的 Release 页面，方便检查更新</li>
+</ul>
+<h3><strong>变更调整</strong></h3>
+<ul>
+<li>对战历史列表默认按时间倒序显示（越近的对战所在页码越小）</li>
+<li>对战历史页面工具栏下的按钮改为下拉菜单，与其他表格元素的样式统一（信息按钮和快速配装按钮合并至菜单中）</li>
+</ul>
+<h3><strong>优化改进</strong></h3>
+<ul>
+<li>在价格页面添加了更详细的空值检查</li>
+<li>在价格页面购买物品后，购买数量自动重置</li>
+<li>优化了在价格页面购买物品时 Upd 数据的生成逻辑</li>
+<li>重构了快速配装控件中所有数据结构的管理和使用逻辑</li>
+<li>优化了对战历史列表的默认视图和工具栏布局</li>
+<li>改进了快速配装控件中物品选择状态的显示，可折叠或展开已排除的物品</li>
+</ul>
+<h3><strong>问题修复</strong></h3>
+<ul>
+<li>修复了树形控件的节点禁用逻辑</li>
+<li>修复了中文 WebUI 设置页面的文本错误</li>
+<li>修复了英文 WebUI 快速配装控件中价格显示缺少空格的问题</li>
+<li>解决了快速配装控件中的警告信息</li>
+<li>修复了快速配装控件中展开/折叠按钮、总价值显示和购买按钮的对齐问题</li>
+<li>修复了总收益和战斗损失计算错误的相关逻辑</li>
+</ul>
+<h3><strong>已知问题</strong></h3>
+<ul>
+<li>设置页面中的“修复存档”功能主要是为从 0.6.8 及更早版本升级的玩家准备的数据修正工具。频繁使用可能会导致统计数据不准确，请仅在必要时使用</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e237806f6f28dc25206e9e8b8e98c2b2dc7ac0e0a7eded1ba18b5dd7e781b770/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/cc4fbbab-8451-4f34-8a6a-03d3862767cb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A47Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.9.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A06Z&amp;ske=2026-08-01T21%3A14%3A47Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1WCcVXjyLh%2FbHAw79hcqUBPw8GabLe3uXxsQVKQ0iNE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.9.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.8</h2></div><time datetime="2025-12-30T14:03:00.000000Z">30 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.2</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>160 downloads</span><span>115.1 KB</span>
+          </div>
+          <div class="prose version-notes"><div class="tabset"><div id="tabset-9-panel-1" class="tab-panel"><div class="tab-title">English</div>
+<div class="tab-content"><h3><strong>New Features</strong></h3>
+<ul>
+<li>
+<p><strong>Brand New WebUI</strong>: Added a graphical interface for easier mod management</p>
+<ul>
+<li><strong>Homepage</strong>: Player profile selection screen for quick access</li>
+<li><strong>Match List</strong>: Browse past raid history with detailed information</li>
+<li><strong>Price Page</strong>: Search items by name and view prices with the Quick Equipment Purchase tool</li>
+<li><strong>Match Details</strong>: View comprehensive raid data including basic info, kills, one-click loadout builder, and item change tracking</li>
+<li><strong>Settings Page</strong>: Modify most mod configuration options directly through the interface</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Quick Purchase System</strong>: Improved the tree-view tool for quick equipment purchasing</p>
+<ul>
+<li>Added scroll support on both List and Info pages</li>
+<li>Expanded filtering options: Filter items by Weapons, Weapon Attachments, Helmets, Armors, Chest Rigs, Backpacks, and Equipment Attachments</li>
+</ul>
+</li>
+<li>
+<p><strong>Language &amp; Mail Improvements</strong>:</p>
+<ul>
+<li>Added support for sending Found in Raid (FIR) items through the mail system</li>
+<li>Improved language switching with faster response times</li>
+</ul>
+</li>
+</ul>
+<h3><strong>Changes &amp; Improvements</strong></h3>
+<ul>
+<li><strong>Code Restructuring</strong>: Reorganized internal systems for better performance and reliability</li>
+<li><strong>Error Messages</strong>: Main interface text and key messages are fully translated; WebUI error messages can be translated through your browser</li>
+<li><strong>Item Classification</strong>: Refined item categories for more accurate filtering</li>
+<li><strong>Language Switching</strong>: Optimized logic for faster and more reliable language changes</li>
+</ul>
+<h3><strong>Fixes</strong></h3>
+<ul>
+<li><strong>Quick Purchase Tree</strong>:
+<ul>
+<li>Fixed price calculation errors when certain items were disabled</li>
+<li>Corrected item exclusion logic to properly handle parent-child relationships</li>
+</ul>
+</li>
+<li><strong>Item Categories</strong>: Fixed overly broad classifications that were affecting some item types</li>
+<li><strong>Display Issues</strong>:
+<ul>
+<li>Resolved language cache problems that could show wrong text after switching languages</li>
+<li>Fixed incorrect “Survivor” playstyle label</li>
+<li>Improved language selection clarity in settings</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-9-panel-2" class="tab-panel"><div class="tab-title">中文</div>
+<div class="tab-content"><h3><strong>新增功能</strong></h3>
+<ul>
+<li>
+<p><strong>全新WebUI界面</strong>：新增图形化界面，更方便管理模组</p>
+<ul>
+<li><strong>首页</strong>：玩家档案选择界面，快速切换档案</li>
+<li><strong>对战列表</strong>：浏览过往对战历史，查看详细信息</li>
+<li><strong>价格页面</strong>：按名称搜索物品、查看价格，使用快速配装工具</li>
+<li><strong>对战详情</strong>：查看完整对战数据，包括基本信息、击杀记录、一键配装和物品变化追踪</li>
+<li><strong>设置页面</strong>：直接通过界面修改大部分模组配置选项</li>
+</ul>
+</li>
+<li>
+<p><strong>快速配装系统升级</strong>：改进了快速配装的树形视图工具</p>
+<ul>
+<li>在列表和详情页面都添加了滚动支持</li>
+<li>扩展筛选选项：可按武器、武器配件、头盔、护甲、胸挂、背包、装备配件进行筛选</li>
+</ul>
+</li>
+<li>
+<p><strong>邮件与语言功能改进</strong>：</p>
+<ul>
+<li>新增支持通过邮件系统发送战利品（FIR）物品</li>
+<li>改进语言切换功能，响应更快速</li>
+</ul>
+</li>
+</ul>
+<h3><strong>变更与优化</strong></h3>
+<ul>
+<li><strong>代码重构</strong>：重组内部系统，提升性能和稳定性</li>
+<li><strong>错误提示</strong>：主界面文字和关键提示已完成翻译；WebUI错误提示可通过浏览器翻译</li>
+<li><strong>物品分类</strong>：优化物品分类，筛选更精准</li>
+<li><strong>语言切换</strong>：优化切换逻辑，更快速可靠</li>
+</ul>
+<h3><strong>修复</strong></h3>
+<ul>
+<li><strong>快速配装树</strong>：
+<ul>
+<li>修复禁用某些物品时可能出现的价格计算错误</li>
+<li>修正物品排除逻辑，正确处理父子关系</li>
+</ul>
+</li>
+<li><strong>物品分类</strong>：修复分类过宽影响部分物品类型的问题</li>
+<li><strong>显示问题</strong>：
+<ul>
+<li>解决切换语言后可能显示错误文字的缓存问题</li>
+<li>修正“幸存者“玩法标签错误</li>
+<li>优化设置中的语言选择显示</li>
+</ul>
+</li>
+</ul></div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2fbf53c75a3fb90ab2c81bc19320930fbc5a2da55a135a633a3e929b15d5dd27/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/7484afbc-d13b-4681-b93e-e55bc6af8d8e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A35Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.8.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A03Z&amp;ske=2026-08-01T21%3A20%3A35Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fGRofwl%2FeFS9YSnFvLeFpR9WLJLSlOna4S06%2FisBQSA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.8.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.6</h2></div><time datetime="2025-12-25T10:45:00.000000Z">25 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.2</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>93 downloads</span><span>67.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>New Features</p>
+<ul>
+<li>The <code>items</code> command now supports <code>ge</code> and <code>le</code> parameters to limit the displayed range of price changes:
+<ul>
+<li><code>ge</code> means the absolute value of the change is greater than or equal to this value.</li>
+<li><code>le</code> means the absolute value of the change is less than or equal to this value.</li>
+<li>Defaults are <code>ge=0</code> and <code>le=double.MaxValue</code>; default value is 0.</li>
+</ul>
+</li>
+<li>Added detailed records of carried equipment and compressed records of secure container items to the raid database.</li>
+<li>New <code>buy</code> command for quickly purchasing the loadout used at the start of a specified raid (excluding ammunition). By default, it purchases the loadout from the previous raid:
+<ul>
+<li><code>buy</code>: Buys the loadout from the last raid.</li>
+<li><code>buy [index: int]</code>: Buys the loadout at the specified index.</li>
+<li><code>buy [limit: int] [page: int] list</code>: Displays the specified page of available quick-buy loadouts.</li>
+<li><code>buy [limit: int] [page: int] ls</code>: Short form of the above command.
+<blockquote>
+<p>Parameter behavior for <code>buy list</code> matches the updated <code>list</code> command.</p>
+</blockquote>
+</li>
+<li><code>buy [index: int] preview</code>: Previews the loadout and its total price at the specified index.</li>
+<li><code>buy [index: int] pv</code>: Short form of the preview command.</li>
+</ul>
+</li>
+</ul>
+<p>Optimizations</p>
+<ul>
+<li>In the <code>list</code> command, non-first pages now display entries using their actual indices in the full list, ensuring consistency with indices used in <code>info</code> and <code>items</code> commands.</li>
+<li>The <code>list</code> command now defaults to showing the latest page of raids (i.e., the last page). The allowed range for the <code>limit</code> parameter has been expanded from 1–20 to 1–50.</li>
+<li>The <code>list</code> command now accepts negative values for <code>page</code>, where <code>-1</code> refers to the last page, <code>-2</code> to the second-to-last, etc.</li>
+<li>Improved support for localizing boss names. Boss display names can now be customized in <code>"roleNames"</code> within <code>locals\**.json</code>, allowing community-friendly names.</li>
+</ul>
+<p>Changes</p>
+<ul>
+<li>Extended the <code>RaidArchive</code> model with new properties <code>EquipmentItems</code> and <code>SecuredItems</code> to explicitly store player equipment and secure container item data.</li>
+<li>Reduced the minimum number of results shown for fuzzy <code>price</code> searches from 10 to 1.</li>
+<li>Built-in plate carrier slot values previously exceeded actual item values; starting this version, built-in slot values are counted as 0.</li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Fixed a typo in translation files where <code>pmcUSEC</code> was incorrectly written as <code>pmcUSER</code>.</li>
+<li>Fixed an issue where equipment inside the secure container was incorrectly included in total gear value calculations.</li>
+<li>Fixed incorrect order where current language was output before being set.</li>
+</ul>
+<p>Known Issues</p>
+<ul>
+<li>Hit body part data for player kills is not available; this field remains null.</li>
+<li>Some killed characters are labeled as <code>assault</code>, for which a suitable translation has not yet been determined.</li>
+<li><del>The <code>buy</code> command previously charged extra for built-in armor in plate carrier slots, causing unexpected costs of several hundred thousand</del> (now fixed).</li>
+</ul>
+<p>Compatibility</p>
+<ul>
+<li>Database records are compatible with versions 0.6.1 and above, but the <code>buy</code> command only works with version 0.6.6 and newer.</li>
+<li>Installation remains compatible with version 0.6.1+.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/cff0dbea33fabf0890353295027c4fedc29124afd14224c26ac7cc6abbe44562/detection" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/6f2f1a3ffef8090ca53d6987801a164ea545897fddd7f49da8ead1de0662bfb5/detection" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/681c5a8b-b815-4b2c-925e-090ab8e6dac4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A49Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.6.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A45Z&amp;ske=2026-08-01T20%3A59%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1kG1KbPsWPaPmdJYLthHlTzciLHRzanIJYaQ40BaZs8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.6.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.5</h2></div><time datetime="2025-12-22T12:40:00.000000Z">22 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>42 downloads</span><span>61.7 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Added</p>
+<ul>
+<li>Added the <code>price</code> command for searching item values; allows precise search by <code>tpl</code> or fuzzy search by <code>name</code>
+<blockquote>
+<p>If the name contains spaces, it must be enclosed within a pair of English half-width double quotes, e.g., <code>price name "45mm SSA"</code>
+Additionally, the last and only the last double quote can be omitted, e.g., <code>price name "45mm SSA</code></p>
+</blockquote>
+</li>
+</ul>
+<p>Optimizations</p>
+<ul>
+<li>Optimized price calculation logic</li>
+<li>Optimized the command system—when parameters contain spaces, they can be enclosed within a pair of English half-width double quotes, e.g., <code>items name "45mm SSA"</code></li>
+</ul>
+<p>Fixes</p>
+<ul>
+<li>Fixed an issue where the <code>items</code> command using <code>ShortName</code> caused some items to display unclear information</li>
+<li>Fixed an issue where price calculations occasionally resulted in values that were too low</li>
+<li>Fixed an issue where localized logs for registering the ChatBot were output before the localization system was fully loaded</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/23f99362c1a30091b93c0b0adf16125ecfec47598b2c136cb4cbdbb0b96d400e/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/04035f3b-738e-4a93-928a-1331ef6df675?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A34Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.5.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A00Z&amp;ske=2026-08-01T21%3A06%3A34Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=z1yTBdKs3g%2FEoPrym0XfCxX%2BPix6SoBdiSVRQC5CU6U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.5.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.4</h2></div><time datetime="2025-12-22T07:29:00.000000Z">22 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>8 downloads</span><span>58.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Module Changes</strong></p>
+<ul>
+<li><strong>Multi-language data structure update</strong>: Keys are now more meaningful and intuitively indicate the variables that can be inserted.</li>
+<li><strong>Multi-language memory optimization</strong>: Regardless of how many translation files are stored locally, once loaded and the current language is set via config.json, all language data except the current language and Chinese (the fallback language) will be unloaded from memory.</li>
+<li><strong>Price calculation optimization</strong>: Prices now account for non-outlier market values. If unavailable, the system falls back to Handbook prices or prices.json. Additionally, price caching has been added, with configurable minimum update intervals (in milliseconds).</li>
+<li><strong>Command optimization</strong>: The <code>info</code> command now includes kill counts and headshot rate information.</li>
+<li><strong>Command optimization</strong>: The <code>serverId</code> parameter has been removed from the <code>info</code> and <code>items</code> commands (as it was inconvenient to input).</li>
+<li><strong>Command optimization</strong>: Match metadata in the <code>info</code> and <code>items</code> commands has been standardized.</li>
+<li><strong>Command optimization</strong>: The <code>list</code> command no longer displays <code>serverId</code>; instead, it shows an index along with the match faction (Pmc/Scav).</li>
+<li><strong>Command optimization</strong>: The <code>list</code> command output has been formatted for better readability.</li>
+<li><strong>Log output optimization</strong>: Some module logs now output more information, and ambiguous text has been improved.</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>The <code>info</code> and <code>items</code> commands no longer use <code>ServerId</code> to retrieve matches. The <code>index</code> parameter remains optional, defaulting to <code>-1</code> if not provided.</li>
+<li>Fixed an issue where some map names did not correctly use localized descriptions.</li>
+<li>Fixed an occasional issue where killer information incorrectly displayed hit locations.</li>
+</ul>
+<p><strong>Compatibility</strong></p>
+<ul>
+<li>Installation: Can be installed over versions 0.6.1 and above.</li>
+<li>Database: Compatible with databases from versions 0.6.1 and above.</li>
+<li>Match records: Compatible with records from versions 0.6.1 and above.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/58df0c596da27bb1652df894adbc08bb693a0f53e8b7e263c019b72dc917dec1/detection" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/797463999ffdcfee418ee200d30f78c310256f9c8766a383672387b09f91021a/detection" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/1d532b66-32c6-4187-ba10-5cdfd94883a6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A04%3A02Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.4.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A08Z&amp;ske=2026-08-01T21%3A04%3A02Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=s4q%2F1mdbCVeUVR9yVGiiBm769zD18C8cJZq05sLPKxc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.4.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.3</h2></div><time datetime="2025-12-20T11:14:00.000000Z">20 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>48 downloads</span><span>42.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>New Features</strong></p>
+<ul>
+<li>
+<p><code>items</code> command now supports a <code>mode</code> parameter for switching between <code>change</code>/<code>all</code> display modes.</p>
+<blockquote>
+<p>Default is <code>change</code>. If the input parameter is invalid, it will automatically fall back to <code>change</code> mode.<br>
+In <code>change</code> mode, item additions, removals, and changes will be displayed more intuitively; duplicate owned items or unchanged supplies will not be shown.</p>
+</blockquote>
+</li>
+<li>
+<p>Added exception handling in the chatbot command execution process to improve stability.</p>
+</li>
+<li>
+<p>The server now outputs information at the start and end of raids to assist in verifying whether the mod correctly records items brought in and taken out.</p>
+</li>
+</ul>
+<p><strong>Optimizations</strong></p>
+<ul>
+<li>Improved the display format of item information in the <code>items</code> command: limited description length, aligned value columns, and significantly enhanced readability.</li>
+<li>Modified the display format of items brought in/taken out in the <code>items</code> command to clearly indicate the price calculation method.</li>
+</ul>
+<p><strong>Fixes</strong></p>
+<ul>
+<li>Fixed the issue where successfully extracting as a Scav did not correctly record items taken out.</li>
+<li>Fixed the issue where failing to extract as a Scav incorrectly recorded items taken out.</li>
+<li>Fixed the issue where misunderstanding part of the logic in SPT.Server.Core caused PMC extraction failures to not correctly record item losses (this issue only existed in versions 0.6.3dev to 0.6.3bate).</li>
+</ul>
+<p><strong>Compatibility Notes:</strong></p>
+<ul>
+<li>Installation and database are compatible with versions 0.6.1 and 0.6.2.</li>
+<li>Installation and database are <strong>not</strong> compatible with earlier versions.</li>
+</ul>
+<p><strong>Known Issues</strong></p>
+<ul>
+<li>Due to testing difficulties (testing once requires playing a full raid; testing kills and deaths is relatively easier, but testing Scav and PMC extraction requires a complete raid, making it extremely difficult to test), some issues may not be fully resolved.</li>
+<li>Did not test whether the mod can handle the “MISSINGINACTION” state correctly (too time-consuming—testing one MISSINGINACTION round takes as long as testing two or three rounds of other types, plus a debugging round). Also did not test whether the info command would report errors in this state (I have a gut feeling that it probably would).</li>
+<li>In Scav mode, entering the “labyrinth” map may cause a null reference error on the client side. This error is not caused by the mod, but please avoid entering “labyrinth” as a Scav.</li>
+<li><strong>Transferred</strong> items cannot be tracked for changes currently, and support for this will not be considered in the short term.</li>
+<li>Since it uses the SPT 4.0.8 library, support for SPT versions 4.0.0–4.0.7 may be limited.</li>
+<li>Since there is a space in the ServerId, the mod cannot parse it correctly. It is recommended to use the index instead. (Due to the length of the ServerId, it had not been tested for a long time, and this issue was only discovered during recent testing.)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/78f0d408663608f353dabf5e80576a9dff121ea410ae4ed0ffa19a9e390dc50f/detection" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/87e0cf9bcc25b6dec2e2b5b425ff5f11e0a83e99bac4d297a52af269e6ca6935/detection" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/5f9b7ca6-0809-4dea-887d-d20c99d975e3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A39Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.3.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A40Z&amp;ske=2026-08-01T21%3A20%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fOQUBts1Uj1Z8zbik98QUwgSne8C1ttgbnl%2Fm4ken%2Fo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.3.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.2</h2></div><time datetime="2025-12-19T16:34:00.000000Z">19 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>25 downloads</span><span>40.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>New</strong></p>
+<ul>
+<li>When retrieving information through the in-raid ChatBot, if there is more than one piece of information, it will display the current count and remaining count of messages sent. The end of these messages will show the first few characters of their corresponding message list to mark which information the message belongs to.</li>
+<li>The server will output messages when a game starts or ends to help verify whether match information is being recorded correctly.</li>
+<li>Scav mode is now supported.</li>
+</ul>
+<p><strong>Changes</strong></p>
+<ul>
+<li>Refactored the data structure for match records.</li>
+<li>Performed comprehensive code cleanup and formatting, optimizing code style.</li>
+<li>Implemented non-null reference checks for most functions, except those related to commands.</li>
+<li>Displays error messages when some references are null, facilitating tracking and reporting of potential errors.</li>
+<li>The new version supports recording combat data for Scav mode.</li>
+</ul>
+<p><strong>Optimizations</strong></p>
+<ul>
+<li>Improved the experience of receiving long messages.</li>
+<li>Optimized methods for calculating item value and retrieving inventory information, using an approach similar to <code>InRaidHelper.SetInventory</code>.</li>
+</ul>
+<p><strong>Known Issues</strong></p>
+<ul>
+<li><del><code>info.ServerId</code> unexpectedly null at game start (fixed)</del>.</li>
+<li>Occasionally, at the end of a normal game flow, no data for any started match is found. (This is due to SPT occasionally processing requests twice, leading to no data on the second attempt. This is temporarily ignored.)</li>
+<li>Tracking the value of items related to <strong>transfer</strong> is not currently supported.</li>
+<li>Some new information and error messages in the new version lack multi-language support.</li>
+</ul>
+<p><strong>Compatibility Notes</strong></p>
+<ul>
+<li>Compatible with version 0.6.1 mod files and database, allowing for overwrite installation.
+<blockquote>
+<p>Note: After overwriting version 0.6.1 with version 0.6.2, due to data structure changes, the first server startup may result in an error. This error will not occur again after the mod automatically migrates the old version data files to the new version, unless there is an issue with the JSON structure.</p>
+</blockquote>
+</li>
+<li>Completely incompatible with version 0.6.0.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3f74a83b093d79f327fa5558333505e066ecc33b6559d82c3f2f1fd67b7820a2/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/d1d66a3e-3036-49f0-812d-a664e7799cb9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A37Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.2.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A46Z&amp;ske=2026-08-01T21%3A07%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2v4e%2BgbuRz2c83WwmPNDvYWMPD9fONCZBabhtEt9tP4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.2.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.1</h2></div><time datetime="2025-12-18T10:30:00.000000Z">18 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>40 downloads</span><span>39.1 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>New Version Content</h2>
+<p>Changes</p>
+<ul>
+<li>Compatibility with databases from the previous version (the right 0.5.0) (i.e., all files in the <code>db</code> folder)</li>
+<li>Fixed the issue where a large number of commands in version 0.6.0 were not functioning</li>
+<li>Migrated code from version 0.5.0 to the new namespace structure</li>
+</ul>
+<p>Plans</p>
+<ul>
+<li>Code cleanup using the new coding style</li>
+<li>Improved null reference checks</li>
+<li>Added more detailed logs</li>
+</ul>
+<p><strong>Compatibility Notes</strong></p>
+<ul>
+<li>The database is only compatible with <strong>version 0.5.0</strong> from <a target="_blank" class="external-link" href="https://github.com/SunYanbox/raidrecordOutdated" rel="noreferrer noopener">raidrecordOutdated</a> and is <strong>not compatible with version 0.6.0</strong>.</li>
+<li>Installation Instructions: Can be directly overwritten on top of version 0.6.0 | <strong>Not compatible with version 0.5.0 or any earlier versions</strong>.</li>
+</ul>
+<p>Known Issues</p>
+<ul>
+<li>Null reference issue when viewing match records (exited mid-game) with unknown results using the <code>info</code> command</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/ced68a9ddb819447df6a160b28904d1b464928d4355c7a7e4812da3de87af8b8/detection" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/08aa3ef93f8b84b527208854a4493e5412ee39f024204639beb1a31459e9d795/detection" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/2ed6f19a-0131-46b1-9777-9167f68bfa68?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A52Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A57Z&amp;ske=2026-08-01T21%3A24%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2B%2FlyGjcpMKoOfnUwxwXSfDAUM05Wi593LmlsgKGXlfs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.6.0</h2></div><time datetime="2025-12-18T02:44:00.000000Z">18 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>19 downloads</span><span>39.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Note: Due to extensive command failures in the current version, the download link has been redirected to the more stable version 0.6.1, which is still under testing. Refer to version 0.6.1 for virus detection information.</strong></p>
+<h2>Changes</h2>
+<ul>
+<li>Migrated the <a target="_blank" class="external-link" href="https://github.com/SunYanbox/raidrecordOutdated" rel="noreferrer noopener">raidrecordOutdated</a> project</li>
+<li>Improved mod update experience: Starting from version 0.6.0, mods can be updated directly by overwriting files</li>
+<li>Updated the project namespace style</li>
+<li>Updated the referenced SPT library version to 4.0.8</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f7aae0e6dbc0c906ab152105ece002522c089fd0ffa76c6b587ddcf1fb524621/detection" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/9cd99aef47afcb211d585f4f405235ee3ec0fa0432f24562b9e9d00851be1533/detection" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1118562386/2ed6f19a-0131-46b1-9777-9167f68bfa68?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A52Z&amp;rscd=attachment%3B+filename%3DRaidRecord-0.6.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A57Z&amp;ske=2026-08-01T21%3A24%3A52Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2B%2FlyGjcpMKoOfnUwxwXSfDAUM05Wi593LmlsgKGXlfs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DRaidRecord-0.6.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.5.0</h2></div><time datetime="2025-10-13T12:54:00.000000Z">13 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>629 downloads</span><span>32.7 KB</span>
+          </div>
+          <div class="prose version-notes"><blockquote>
+<p>2025/12/21 更新了下载链接, 以正确指向正确的地址
+Updated the download link on 2025/12/21 to correctly point to the right address</p>
+</blockquote>
+<div class="tabset"><div id="tabset-10-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><p>本模组旨在记录每局游戏中的撤离状态、物资携带情况、收益明细、击杀数据等关键信息，为习惯使用战绩系统的玩家提供一种直观且实用的选择。</p>
+<p>本次版本在原有基础上完成了从 TypeScript 到 C# 的全面重构，不仅提升了代码的性能与可维护性，还优化了部分指令的显示效果，并增强了对文本本地化的支持，为多语言玩家提供更友好的体验。</p></div></div>
+<div id="tabset-10-panel-2" class="tab-panel"><div class="tab-title">Localisation support</div>
+<div class="tab-content"><p>Translators from any country can localise the module by translating ch.json, but need to retain as much of the <code>{i}</code> formatted text as possible to allow the string formatting to <strong>output the correct content</strong></p>
+<p>AI-generated content statement: <code>v0.5.0/db/locals/en.json</code> where translations are derived from AI-generated content.</p></div></div>
+<div id="tabset-10-panel-3" class="tab-panel"><div class="tab-title">Example of command</div>
+<div class="tab-content"><blockquote>
+<p>set config.local=en</p>
+</blockquote>
+<p><strong>When the module is loaded</strong></p>
+
+<p>cls</p>
+
+<p>help</p>
+
+<p>list</p>
+
+<p>info</p>
+
+<p>items</p>
+<blockquote>
+<p>Use with caution if there are many items being brought out/in, currently there is no optimisation for the return message.</p>
+</blockquote>
+</div></div>
+<div id="tabset-10-panel-4" class="tab-panel"><div class="tab-title">命令示例</div>
+<div class="tab-content"><blockquote>
+<p>需要设置 config.local=ch</p>
+</blockquote>
+<p><strong>模组加载时</strong></p>
+
+<p>cls</p>
+
+<p>help</p>
+
+<p>list</p>
+
+<p>info</p>
+
+<p>items</p>
+<blockquote>
+<p>带出/带入物品多的情况慎用, 目前没有优化返回的消息</p>
+</blockquote>
+</div></div>
+<div id="tabset-10-panel-5" class="tab-panel"><div class="tab-title">configuration file</div>
+<div class="tab-content"><p>当前版本在<code>.config.json</code>中提供两个键值对: <code>local</code>和<code>logPath</code>
+<code>local</code>后跟一个2字符长度的语言缩写(类似<code>"BSG Folder\SPT\SPT_Data\database\locales\global"</code>下的文件命名), 表示你希望模组在输出命令等信息时使用的语言, 需要确保<code>"BSG Folder\SPT\user\mods\suntion-raidrecord-v0.5.0\db\locals"</code>目录下存在<strong>对应名称的本地化文件</strong></p>
+<p>另一个<code>logPath</code>表示你希望模组的部分日志(如果输出到SPT, 会导致过分臃肿)的输出目录, 默认为<code>log.log</code>, 每次启动SPT.Server.exe后会重新覆盖该文件</p></div></div>
+<div id="tabset-10-panel-6" class="tab-panel"><div class="tab-title">database files</div>
+<div class="tab-content"><p><strong>Part 1 Localisation files</strong></p>
+<p>在文件路径“BSG Folder\SPT\user\mods\suntion-raidrecord-v0.5.0\db\locals“下, 存放翻译文件, 名称与config.json中的值对应</p>
+<p><strong>Part 2 Localisation files</strong></p>
+<p>在文件路径“BSG Folder\SPT\user\mods\suntion-raidrecord-v0.5.0\db\records“下, 存放不同存档的历史战绩, 存档格式为<code>{playerId}.json</code></p></div></div>
+<div id="tabset-10-panel-7" class="tab-panel"><div class="tab-title">Installation Mod</div>
+<div class="tab-content"><p>将下载的<code>suntion-raidrecord-v0.5.0.7z</code>解压到离线版塔克夫根目录<code>BSG Folder</code></p></div></div>
+<div id="tabset-10-panel-8" class="tab-panel"><div class="tab-title">Credits</div></div></div>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/94efdfaaed6d2a7e2e91533ac0a6ebecaa60d7e7a8da7185656837a2e870e9f8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1070962179/da7dc96c-63e3-4d51-b870-d3e9f99a4350?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A17Z&amp;rscd=attachment%3B+filename%3Dsuntion-raidrecord-v0.5.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A23Z&amp;ske=2026-08-01T21%3A08%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KvT4TCFwSVlDkWIFAqqCNGjeQFcN5mM7HuSqZeWCaf0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3Dsuntion-raidrecord-v0.5.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.0</h2></div><time datetime="2025-10-06T17:32:00.000000Z">6 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>308 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><blockquote>
+<p>2025/12/21 更新了下载链接, 以正确指向正确的地址
+Updated the download link on 2025/12/21 to correctly point to the right address</p>
+</blockquote>
+<p>本模组自动追踪每局游戏的开始与结束，并记录对局中的关键数据。具体功能包括：</p>
+<ul>
+<li>战局前统计：记录进入对局时所有装备价值、安全箱内物品价值，以及总带入物品价值。</li>
+<li>战局后记录：统计带出物品价值、本局战损情况与击杀信息等。</li>
+<li>数据压缩与存储：自动压缩并保存对局结果数据，便于后续查询。</li>
+<li>战绩查询系统：集成ChatBot功能，允许玩家通过客户端随时浏览个人历史战绩，并查询指定对局的详细数据。</li>
+</ul>
+<hr>
+<blockquote>
+<p>Translate by DeepL:</p>
+</blockquote>
+<p>This module automatically tracks the start and end of each game and records key data from the game. Specific features include:</p>
+<ul>
+<li>Pre-game statistics: Record the value of all equipment, safe deposit box items, and the total value of items brought in when entering the game.</li>
+<li>Post-game record: Record the value of items brought out, battle damage and kills in the game.</li>
+<li>Data compression and storage: Automatically compress and save the game result data for subsequent enquiry.</li>
+<li>Record Enquiry System: Integrated ChatBot function, allowing players to browse their personal record and enquire the detailed data of a specific game at any time through the client.</li>
+</ul>
+<h3>客户端命令接口 client-side command interface</h3>
+<p><strong>help</strong></p>
+<p>获取所有命令详细描述与使用方式</p>
+<p>Get detailed descriptions of all commands and how to use them</p>
+<p><strong>list</strong></p>
+<p>获取指定页码的历史战绩</p>
+<p>Get the history of the specified page number</p>
+<p><strong>info</strong></p>
+<p>获取指定index或serverId的战绩详情</p>
+<p>Get the performance details for the specified index or serverId.</p>
+<p><strong>check</strong></p>
+<p>简单的检查指定战绩的收益和战损数据, 并修复错误的数据</p>
+<p>Simply check the gain and loss data for a given campaign, and fix any errors.</p>
+<p><strong>cls</strong></p>
+<p>清空历史对话记录, 重启客户端后生效(因为本地缓存没清理)</p>
+<p>Clear dialogue history, restart the client to take effect (because the local cache is not cleared).</p>
+<h2>安装 mounting</h2>
+<p>下载压缩包后使用7z解压到SPT根目录</p>
+<p>Download the archive and extract it to the SPT root directory using 7z.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/537dabf85af70b9c6b88b6d6aedc0d801cf5914c8b2f7e8aa1ed476b23d05ac7?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1070962179/bc8295f0-e66a-4d38-ad72-fe63ea3b2125?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A36Z&amp;rscd=attachment%3B+filename%3Dsuntion-raidrecord-v0.4.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A28Z&amp;ske=2026-08-01T21%3A22%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=AsIshkIEh6eYTX19Q5eIp085HXLE9ExCGCIRtUupar8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzOCwibmJmIjoxNzg1NjE1ODM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fy4YTMrnXEgij0bMGDnhPEMA4o6ZA9FfSzrpX-D5dWA&amp;response-content-disposition=attachment%3B%20filename%3Dsuntion-raidrecord-v0.4.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.suntion.raidrecord</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-SA 3.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>13 October 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/SunYanbox/RaidRecord" target="_blank" rel="noreferrer noopener">Repository</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

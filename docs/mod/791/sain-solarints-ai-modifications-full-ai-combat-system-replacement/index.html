@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/99137265656bf9667bf0d74a5550092a8b9fa3b833e55fe78e5bdcb21ebe1267.webp" alt="SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      <span class="badge badge-featured">Featured</span>
+      <span class="badge"></span>
+    </div>
+    <h1>SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement</h1>
+    <p class="hero-teaser">Bots that don&#39;t suck.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/dbf7567e1c4d4b745d627e3bb2e13c1f5cdb714826aa7288d88e8c89b3c5af8a.webp" alt="" width="32" height="32">Solarint</span>
+      <span class="author"><img src="../../../assets/f1d2533c994ed91f540679bbc6ee02e42ba70149b776e37c1534147c67e656a6.webp" alt="" width="32" height="32">DrakiaXYZ</span><span class="author"><img src="../../../assets/45625ff13077d0321c0df02f603c0a7e849097435958d409cacc59b35f53b1a1.webp" alt="" width="32" height="32">ArchangelWTF</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,240,947</dd></div>
+    <div><dt>Favourites</dt><dd>436</dd></div>
+    <div><dt>Mod lists</dt><dd>640</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SAIN - Solarint&#39;s AI Modifications - Full AI Combat System Replacement content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>28</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>5</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>Report issues or bugs to here: <a target="_blank" class="external-link" href="https://github.com/ArchangelWTF/SAIN/issues" rel="noreferrer noopener">SAIN Github Issue Tracker</a></strong></p>
+<p><strong>Any issues must include a full list of your server and client mods, the version of SPT you are playing on, and either your Bepinex/LogOutput file or an exact description of the issue you are experiencing and the context of when it occurred. Just telling me “its broken” is not helpful what so ever.</strong></p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Features</div>
+<div class="tab-content"><p><strong>SAIN 3.0: New Features:</strong></p>
+<ul>
+<li>
+<p><strong>New Combat AI</strong></p>
+<ul>
+<li>Fully replaced combat logic.</li>
+<li>AI Will Run for cover while reloading and using first aid.</li>
+<li>Entirely new decision system and framework.</li>
+<li>Bots will move outside their bot-zones to investigate gunfire or chase enemies.</li>
+</ul>
+</li>
+<li>
+<p>Full Bot Customization and Difficulty Modifications while in-game.</p>
+<ul>
+<li>
+<p>Press f6 (Default Key) to open new in-game GUI.</p>
+</li>
+<li>
+<p>Includes difficulty presets that modify SAIN config settings.</p>
+<ul>
+<li>These presets have no influence on other difficulty options in other mods or the selected difficulty when starting a raid. They are ONLY for quickly changing SAIN gui settings.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>New Tracking of Last Known Position for bots.</p>
+<ul>
+<li>Bots will only use real sensory information to track where they last saw or heard you, and will remember that location for longer. Bots will share this info if they are in a group, and either using headsets, or close by to friendlies.</li>
+<li>When making lots of noise from 1 place, bots will get increasingly accurate information on where a sound came from, and be able to see their target from further away, and see them faster if they heard them from the same place that they currently are. Repositioning is key!</li>
+</ul>
+</li>
+<li>
+<p><strong>Bot Extracts</strong></p>
+<ul>
+<li>
+<p>PMCs and Scavs will move to extract at the end of raid, or if they are heavily injured and can’t heal.</p>
+</li>
+<li>
+<p>If using Looting Bots, SAIN will track how much loot they’ve gained during a raid (Net-Loot-Value) and can decide to leave if they are satisfied.</p>
+<ul>
+<li>Can be configured in “Looting Bots” tab in Global Settings.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Bots React to you reloading, healing, pulling out grenades, pulling pins on grenades, using surgery, or looting.</strong></p>
+<ul>
+<li>Yes you can bait the AI now.</li>
+</ul>
+</li>
+<li>
+<p><strong>New Cover System for AI</strong></p>
+<ul>
+<li>Bots use objects around them in the real gameworld rather than preset static points.</li>
+<li>Anywhere there is NavMesh and objects, bots will take cover and fight properly.</li>
+</ul>
+</li>
+<li>
+<p><strong>New AI Personality System</strong></p>
+<ul>
+<li>Bots are assigned a personality preset that influences their decisions and talk behavior.</li>
+<li>Bots with excellent gear will be more aggressive, taunt their enemy, and wait for enemies to show up far less frequently.</li>
+<li>Currently Implemented: GigaChad, Snapping Turtle, Wreckless, Chad, Rat, Coward, Timmy, Normal.</li>
+</ul>
+</li>
+<li>
+<p>New Squad Personality System</p>
+<ul>
+<li>Groups of bots will have specific personalities that affects how vocal they are, their coordination, and their aggression level.</li>
+<li>Currently Implemented: GigaChads, Elite, TimmyTeam6, Rats, Normal</li>
+</ul>
+</li>
+<li>
+<p>**New Talk System</p>
+<ul>
+<li>
+<p>Solo bots are less talkative.</p>
+</li>
+<li>
+<p>Bot Groups now use a complex system to call out enemy locations, friendly status, their current actions, and requests to other group members in close proximity.</p>
+</li>
+<li>
+<p>Squad leaders will call out orders for bots based on the situation.</p>
+</li>
+<li>
+<p>Personality Specific Voice Behaviors</p>
+<ul>
+<li>Rats and Timmys may beg for their life and try to stop you from shooting them.</li>
+<li>Chads/GigaChads will taunt enemies.</li>
+<li>and a few secret rare events that I wont spoil.</li>
+</ul>
+</li>
+<li>
+<p>New AI Voice Response System</p>
+<ul>
+<li>AI of certain personalities will respond to voicelines from both the player, and other bots, so if you start talking shit, they might start talking back!</li>
+<li>Friendly bots will voice line back to you, so you can more easily tell when a friendly is nearby so you don’t lose that scav karma.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>New Squad Tactics</strong></p>
+<ul>
+<li>
+<p>Squads will work together.</p>
+<ul>
+<li>Groups of scavs and especially PMCs are far more dangerous than before. Think carefully before engaging a group of well armed PMCs!</li>
+<li>Squads will try to help friendly members if they are in trouble</li>
+<li>Squads regroup around their squad leader if they drift too far.</li>
+<li>Squads will suppress enemies around a corner while a friendly is retreating to heal or reload.</li>
+</ul>
+</li>
+<li>
+<p>New Squad Leader System</p>
+<ul>
+<li>Each group of bots is assigned a squad leader who gives commands and behaves differently.</li>
+<li>Killing this squad leader will leave groups less combat effective by disabling Squad Specific bot actions.</li>
+<li>Try to ID a squad leader and kill them first to make a group easier to deal with!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Bot Blind Fire</strong></p>
+<ul>
+<li>Bots will blindfire over objects in the direction of their enemy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advanced Search Behavior and Movement</strong></p>
+<ul>
+<li>Bots will try to peek corners and clear dangerous areas while searching for enemies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bots now make full use of stimulators and injectors in their inventory.</strong></p>
+</li>
+<li>
+<p><strong>Bots will use hand gestures to friendlies instead of voicelining if those friendlies are within line of sight.</strong></p>
+</li>
+<li>
+<p><strong>Certain equipment items provide buffs or debuffs to stealth against AI if further than 50 meters away. Will work on adding these to the description for items, and expanding on the system for easily adding new items or configuring these values in the future.</strong></p>
+<ul>
+<li><strong>Currently Implemented:</strong></li>
+<li><strong>Tan Ulach - 7.5% faster vision speed</strong></li>
+<li><strong>Blue Untar Helmet - 10% faster vision speed</strong></li>
+<li><strong>Boonie Hats - 20% slower vision speed</strong></li>
+<li><strong>Pilgrim Backpack - 10% faster vision speed</strong></li>
+<li><strong>RAID (couch) backpack - 7.5% faster vision speed.</strong></li>
+<li><strong>Any face cover - 5% slower vision speed.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Revamped scatter system for bots based on their weapons recoil stats.</strong></p>
+<ul>
+<li>You can adjust this in the f12 menu. If a mod you are using lowers recoil for weapons, bots will also have reduced recoil!</li>
+<li>There are additional settings available if advanced settings are enabled in the f12 menu (Checkbox at the top) but I do not recommend messing with this without some fine tuning, or bots won’t be able to hit anything.</li>
+</ul>
+</li>
+<li>
+<p><strong>Flashlight detection and blinding for bots.</strong></p>
+<ul>
+<li>Bots can detect your flashlight beam being shined around and will investigate, they estimate the position and the accuracy is based on distance to to the object being illuminated.</li>
+<li>Bots are blinded by flashlights at close range, they will have increased recoil and slower aim speed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Lean.</strong></p>
+<ul>
+<li>Bots will lean based on objects around them and their enemies position, and can do so while peeking corners.</li>
+</ul>
+</li>
+<li>
+<p><strong>Weather affects bot visibility.</strong></p>
+<ul>
+<li>Poor weather conditions will actually have an affect on how well bots can see and how fast they see you.</li>
+</ul>
+</li>
+<li>
+<p><strong>More accurate time-of-day vision.</strong></p>
+<ul>
+<li>Bot vision will gradually reduce as darkness falls or increase as the sun rises. in vanilla, it changes very rapidly, but only after the sun is completely set.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sound occlusion for bot hearing.</strong></p>
+<ul>
+<li>The distance bots can hear sounds is affected by objects between them and the source. The more objects - the higher the occlusion.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gunshot audible range based on weapon caliber.</strong></p>
+<ul>
+<li>In Vanilla, bots hear all unsuppressed weapons at the same range. Now this scales depending on the caliber properly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subsonic ammo is quieter for bots.</strong></p>
+<ul>
+<li>Using a suppressor + subsonic ammo will have a dramatic effect on the range bots can hear your gunshots.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rain affects bot hearing.</strong></p>
+<ul>
+<li>Heavy rain will reduce the range bots can hear sounds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Semi-auto firemode swap for bots firing at 40+ meters.</strong></p>
+<ul>
+<li>Bots will automatically swap to semi auto when engaging targets at range.</li>
+</ul>
+</li>
+<li>
+<p><strong>Recoil, Ergo, Ammo-Type based fire-rate and full auto burst length.</strong></p>
+<ul>
+<li>How fast bots shoot is affected by their weapon stats. So low recoil guns will be fired in semi auto at a faster rate at long range, and bots will fire longer burts at close range.</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Install</div>
+<div class="tab-content"><h3>Installation</h3>
+<p>1) Open the downloaded .7z file in <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip</a></p>
+<p>2) Select the folders in the .7z file in <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip</a></p>
+<p>3) Drag the selected folders from <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip</a> into your SPT folder</p>
+<p>4) If you couldn’t tell, you need <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip</a> to extract this mod</p>
+<p>Demonstration Video:</p>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/3N6gTe2.gif" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/f8a882020797ae7b0f90dc418fa7bf212be49d7205750ccf2c1ace20c747fbae.webp" alt="3N6gTe2.gif"></a></p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">FAQ</div>
+<div class="tab-content"><ul>
+<li>How do I install?
+<ul>
+<li>Just drag and drop the two folders in the downloaded zip into the folder you installed SPT to. Thats it.
+<ul>
+<li>If Installed correctly with BigBrain, you should see SAIN in the f12 menu while ingame, and SAIN being activated in the server when starting it.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How do I configure the mod?
+<ul>
+<li>Press F6 while in-game.</li>
+</ul>
+</li>
+<li>Bots have wallhack!
+<ul>
+<li>They do not. Bots are hearing you.</li>
+<li>The intention is that if you can hear a bot, they can hear you.</li>
+<li>Stop sprinting everywhere, be aware that turning in place creates a skid noise and it can be heard by bots, just like a real player can hear it.</li>
+<li>If your character makes a noise, it can be heard with only a few exceptions.</li>
+<li>Bot hearing tries to simulate what a real player can hear to as close as possible, but I’m always tweaking and adjusting things.</li>
+</ul>
+</li>
+<li>My Spawns are messed up!
+<ul>
+<li>SAIN does not touch bot spawns, loadouts, or anything else that isn’t explicitly listed. SAIN is purely bot behavior and actions.</li>
+</ul>
+</li>
+<li>How do the difficulty presets work in the GUI?
+<ul>
+<li>The presets ONLY modify settings within the SAIN GUI. They have no impact on any other mod or what difficulty you select when starting a raid.</li>
+</ul>
+</li>
+<li>How do I make the bots smarter?
+<ul>
+<li>You can’t. There is no magical button to make ai do smarter or new things, it has to be manually programmed and designed, this is a replacement AI, so anything the bots do has to be designed and built.</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Mod Compatibilty + Known Issues</div>
+<div class="tab-content"><p><strong>Incompatibilities:</strong></p>
+<ul>
+<li><strong>ANY mod that modifies AI brain types will cause issues.</strong></li>
+<li><strong>Better Spawns Plus - Incompatible - Modifies bot brain types for some reason.</strong></li>
+<li><strong>No Bush ESP - Incompatible - Already implemented into SAIN.</strong></li>
+<li><strong>No Grenade ESP - Incompatible - SAIN requires bots to see grenades or hear the pop from them to react.</strong></li>
+<li><strong>No AI ESP - Implemented into SAIN. Do not use.</strong></li>
+<li><strong>No Boss PMCs - Incompatible - SAIN requires different brain types than No Boss PMCs uses</strong></li>
+<li><strong>Separate Hostility - Incompatible - Causes exception spam. Do not use.</strong></li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ol>
+<li>Bots will sometimes get stuck in healing animations</li>
+<li>Bots will sometimes vault into places they can’t get down from. (Mostly resolved in recent versions, but can still happen sometimes)</li>
+<li>Sometimes random stuff in EFT code becomes null, and causes sain code to throw errors.</li>
+<li>Bots can do some stupid stuff sometimes, always working on it but creating code for every possible situation is difficult.</li>
+<li>Bots sometimes spin in place when trying to look to where they are trying to run, probably just need to adjust some distance thresholds to fix this.</li>
+<li>Bots like to crouch every time they start shooting a target that appears</li>
+<li>Bots hear gunshots/footsteps from way too far while in areas like the Reserve bunker</li>
+<li>Bots don’t take into consideration bodies in the place they are trying to search (will take a lot of rework and a new system to fix this)</li>
+<li>Tarkov is cursed and made of spaghetti code.</li>
+</ol></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Support the Project</div>
+<div class="tab-content"><p><strong>I have a Patreon if you want to support my work. I am unemployed and a student, but I am working on this project full time 12+ hours a day, every day, and have been for over 4 months now. Every dollar helps!</strong></p>
+<p><a target="_blank" class="external-link" href="https://www.patreon.com/Solarint" rel="noreferrer noopener">Link to Solarint’s Patreon</a></p></div></div></div>
+<p>**HUGE Thanks to everyone in the Discord who helped test the Alpha builds of 2.0. Ya’ll are the only reason this mod works as well as it does!</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.4.3</h2></div><time datetime="2026-04-23T23:46:00.000000Z">23 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>88,734 downloads</span><span>342.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>I did nothing this release edition, hope nothing’s broken! That would be a shame.</p>
+<h2>What’s Changed</h2>
+<ul>
+<li>fix: invalid location ID for Woods by @powerCasualUser</li>
+<li>Use RemoveFromMap method to extract bot by @ozen</li>
+<li>Revert removal of LootingBots Interop by @ozen</li>
+<li>Fixed Limitations of Interop Method for Ignoring Hearing by @DanW</li>
+<li>More Conditions to Wanting Patrol Stance by @ozen</li>
+<li>Grenades Toggle Fix by @ozen</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/5935ce75a5f8056796f8ba34096fb3e1b0ef44122fe5487f9cece2a3e7d1f2a1" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/59940b9a23600286b74012b7078d41f73a5c3ef7894ceace90b066b9678b3e34" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/0622e4b2-b323-42df-8049-bfa99fe24960?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A16%3A24Z&amp;rscd=attachment%3B+filename%3DSAIN.4.4.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A19Z&amp;ske=2026-08-01T21%3A16%3A24Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lFSIY2quk5hGIkYi9qAR3nB07EGSGANf6OJ9p%2BTgtlc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.4.2</h2></div><time datetime="2026-04-01T22:00:00.000000Z">1 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>17,758 downloads</span><span>340.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Changes:</p>
+<ul>
+<li>Removed funni (The AI vibe coded fixes didn’t work out :( )</li>
+</ul>
+<p>Changes from V4.4.0:</p>
+<ul>
+<li>Fix hideout not loading properly when having night vision equipped</li>
+<li>Fix: weapon data not being updated properly by @powerCasualUser</li>
+<li>Fix: inverted difficulty modifier in recoil calculation by @powerCasualUser</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b5dc604eeb304d929838a1f7eaaf67bb304e2e66c49d95d94edf7edc825a20e3" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/e381a062ec04192a3d577160f1c86ada976a398645fe50d22f0714e2784ae222" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/f5651abb-94ad-48e7-af99-8f5652dc807f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A04Z&amp;rscd=attachment%3B+filename%3DSAIN.4.4.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A41Z&amp;ske=2026-08-01T21%3A20%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=NqTSkvNKQ%2BfFCzYCk0FQSzD3xEAJATt5LVwsJxzD%2FPY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.4.0</h2></div><time datetime="2026-01-28T13:00:00.000000Z">28 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>43,547 downloads</span><span>340.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>It is recommended to install the latest version of Fika along with this version of SAIN</p>
+<h2>What’s Changed</h2>
+<ul>
+<li>Fixed up certain bots not doing damage when getting shot in the head</li>
+<li>Added an interop with Fika to prevent SAIN from loading components when the player is a client</li>
+<li>Added various fixes for bot hearing when players are using Fika, bots will now hear just as good as they would in base SPT</li>
+<li>Fixed IsPointInvisibleSector which stopped bots from seeing various things by @astron8t-voyagerx</li>
+<li>Fixed TimeSinceShotAtToSuppress which was getting an incorrect value by @astron8t-voyagerx</li>
+<li>Minor lights optimization by @ozen-m</li>
+<li>Replacement for <code>ToggleSoundPatch</code> by @ozen-m</li>
+<li>fix: bot cannot hit reliably when strafing by @powerCasualUser</li>
+<li>Added various fixes for teleportation when switching between layers (Thanks Janky)</li>
+<li>Added a server mod to allow preset modders to more easily define bot personalities</li>
+<li>Fixed up Deathwish to include harder pmc’s</li>
+<li>Added a fix for uninstalling mods that contain custom WildSpawnTypes, this would previously cause SAIN to break</li>
+<li>Added some more grenade changes, these should be a bit more random now.. As well as fixing up a edge case that might still have allowed bots to throw grenades while BSG’s layers were in control</li>
+<li>More code cleanup work</li>
+</ul>
+<p>This will give a warning about outdated presets due to one new variable being added, but older presets should work as intended with this version.</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li><li><a href="../../827/waypoints-expanded-navmesh/">Waypoints - Expanded Navmesh</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c7b80ee433b8707c4ad120dfca2c7a4ce2965987a8e1e3a3343c6699c08594ab" target="_blank" rel="noreferrer noopener">report 1</a> <a href="https://www.virustotal.com/gui/file/a8e6b0ee11277c69d83b3422a94a7af78691d293fe1b4d69ad4d4dc173888eab" target="_blank" rel="noreferrer noopener">report 2</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/40bede05-0d19-4d7c-8015-bb8d29130dac?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A13Z&amp;rscd=attachment%3B+filename%3DSAIN.4.4.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A12Z&amp;ske=2026-08-01T21%3A19%3A13Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=l7mBvunMrUDCLvkyP%2Bnedz5Gux87RkCErhQqG4Z1K44%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQxNiwibmJmIjoxNzg1NjE2MTE2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zTLoNU7j8lVDAva8Ii8ASmlFn_77yuVeUbQmhl7U_SU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.4.4.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.3.1</h2></div><time datetime="2025-12-24T15:00:00.000000Z">24 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>37,127 downloads</span><span>1.6 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will require new presets!</strong></p>
+<p>This version wouldn’t have been possible if it weren’t for some community members actively contributing to SAIN’s code base, thanks to each one of you!</p>
+<h2>What’s Changed</h2>
+<ul>
+<li>Fix: Stops RemovePerson from being invoked repeatedly by @Arys</li>
+<li>Further fixes to log spam on bot extracting by @Arys</li>
+<li>QoL: Embed version, description, copyright into the assembly. by @yurikus</li>
+<li>Fix bot not sprint when seeking cover and invalid <code>IsSniper</code> check by @powerCasualUser</li>
+<li>Fix: add missing Blicky, 12.7x99mm, and rocket launcher to Shoot settings by @powerCasualUser</li>
+<li>Fix: Bots being able to see through certain objects and thus attempting to shoot through them</li>
+<li>Fix: Bots being forced to stop moving while asleep causing erratic behaviour</li>
+<li>Fix: Bots not entering BSG’s sleep state correctly when a user has moved far enough away</li>
+<li>Removed: No Bush ESP (Comes with the latest client by default now)</li>
+<li>Added: Partisan’s AI to be overridden by SAIN</li>
+<li>Added: Glukhar’s AI to be overridden by SAIN</li>
+<li>Added: Santa’s AI to be overridden by SAIN</li>
+<li>Added: Support for the AK-50, rocket launcher &amp; blicky</li>
+<li>Fix: Introduce global minimum aim time + fix crouch spamming by @Janky</li>
+<li>Fix: Various null references in Calcmodifier</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a31316f3e22da5e5411d74b5e2c7d66dce6bcfb4b44496798c0e72f3f045fbc3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/c560d0f5-13f7-4990-b746-9c529628a683?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A54Z&amp;rscd=attachment%3B+filename%3DSAIN.4.3.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A38Z&amp;ske=2026-08-01T21%3A07%3A54Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=LJl0B0lCCUBaOcAXukNw29P8bIx9yNRtliSY15Ecr0M%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.4.3.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.3.0</h2></div><time datetime="2025-11-21T16:01:00.000000Z">21 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>46,284 downloads</span><span>1.6 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Re-release of 4.2.0 (4.0.0) with the following changes:</p>
+<p><strong>This release will require new presets due to the Labyrinth bosses being added! Older presets will not work in Labyrinth!</strong></p>
+<ul>
+<li>Fixes Labyrinth being an invalid location</li>
+<li>Clears up logic in center of mass handling</li>
+<li>Adds new labyrinth bosses</li>
+</ul>
+<p>A huge thanks to <span class="dead-link">JankyTheClown</span> for most these fixes</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../902/bigbrain/">BigBrain</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NDk0M2MyYjk0NWFiNGRlODE0N2Q3ZGZjZTJhZmI3ZTU6MTc2Mzc0MDkwNA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1100845432/bfff152e-bab9-4470-8efd-cb51d1f3ff9e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A56Z&amp;rscd=attachment%3B+filename%3DSAIN.4.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A22Z&amp;ske=2026-08-01T21%3A10%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2BtP8ACTZxHoVrSEahmJTlVjaZjzM%2BNW%2B1cbpRL%2FiOxE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.4.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.1.3</h2></div><time datetime="2025-08-02T03:59:00.000000Z">2 August 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>67,661 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Rebalanced default presets.</p>
+<p>Heavily nerfed scavs (disabled faster cqb reaction, reduced hearing range)</p>
+<p>Goons can now aim for your head (sometimes).</p>
+<p>Killa and tagilla hold down the trigger for longer and wait less between shots.</p>
+<p>Buffed most bosses and followers.</p>
+<p>Re-enabled “Aim Center Mass” for PMCs on default difficulty, was a mistake.</p>
+<p>Slightly lowered “Aim Center Mass Point” to reduce headshots, was raised quite a bit in 4.1.0, but accidental headshots are a bit too frequent now.</p>
+<p>Lots of small changes to bot configs, too many to list.</p>
+<p><strong>You’ll need to create a new preset to get the new changes, but old presets are working fine.</strong></p>
+<p>Fixes:</p>
+<p>Fixed many boss followers being broken.</p>
+<p>Disabled smoothing or any modification to bot steering when a bot isn’t in combat. Spinny bots should be fixed now. Will return to this in the future, but something is breaking when using the new smoothing solution.</p>
+<p>Fixed some bots getting stuck in a vanilla layer, making them unable to move or fight enemies (fairly sure I fixed this, its hard to test for, but I couldn’t find any bots doing it after)</p>
+<p>Project Fika - Fixed error spam and broken bots when 1 player extracts, but the rest stay in raid.</p>
+<p>Project Fika - Fixed footstep sound from player being triggered when they weren’t moving. (Oops)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/e904a21a-b4d4-4b81-993c-84901c0f6bb9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A17Z&amp;rscd=attachment%3B+filename%3DSAIN-4.1.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A10Z&amp;ske=2026-08-01T21%3A26%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eq%2FMPNwAZ2nIWkTQgw3iU51Cp%2ByDg1uRKSNlQBaaImE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMCwibmJmIjoxNzg1NjE2MTIwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zDIh8kF7gxWFssg-LWGLN3FlkwDh-piVqQUhhG1vtrg&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-4.1.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.1.0</h2></div><time datetime="2025-07-28T04:26:06.000000Z">28 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,994 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>for SPT 3.11.x</p>
+<p>Reworked Bot turning and smoothing calculations.</p>
+<p>Added new ballistics prediction for Bot Aim. They should account for distance and leading targets fairly accurately.</p>
+<p>Thank you Janky for the help in the math of all this.</p>
+<p>Improved performance, especially for large amounts of bots fighting across the map.</p>
+<p>Reworked Bot Cover Finder.</p>
+<p>Reworked Bot Suppression. A bot’s personality now tells a bot how it should suppress enemies, some bots will be jumpy, some wont suppress at all.</p>
+<p>Improved Bot pathfinding and sprinting.</p>
+<p>Reduced how often bots will lean, and made their leans more accurate to how a person would lean into corners as they seek a target.</p>
+<p>Reworked how bots decide to seek and hold cover, or search for enemies.</p>
+<p>Improved bot group search behavior.</p>
+<p>Different Personality Types will search for enemies at different “paces”, some will carefully peek corners, others will aggressively swing angles.</p>
+<p>Improved simulated arm injuries on bots.</p>
+<p>Improved bot simulated recoil.</p>
+<p>Reworked how bots select different enemies.</p>
+<p>Reduced the amount of situations where a bot could be stuck in a loop of searching, then going back to cover, then searching again without ever making progress.</p>
+<p>Known issues:</p>
+<p>Doors are 45% cursed.</p>
+<p>Infinite mag bug. It’s a bug in the EFT build that SPT 3.11 is running on, it’s already been fixed by BSG.</p>
+<p>Bot busy hands.</p>
+<p>Tagilla is bored of using his hammer for a little while.</p>
+<p>Bots are still not the most intelligent about ammo conservation in all situations.</p>
+<p>All presets are out of date, many old settings were setup incorrectly due to de-obfuscated eft code being difficult to understand, check tool tips!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/Solarint/SAIN/releases/tag/v4.1.0" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.1</h2></div><time datetime="2025-07-08T03:47:56.000000Z">8 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,791 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>SPT 3.11.x</p>
+<p>Fixed error spam when out of raid.<br>
+Bots now use the same movement smoothing and inertia as players.<br>
+Added more control over turn smoothing and corrected a few issues with it (can be edited from globalsettings .json file of your preset)<br>
+Increased smoothing for better visual results, but it now changes depending on if a bot is aiming, at peace, sprinting, ect.<br>
+Decoupled bot character steering from movement direction, bot animations now look like players do.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/13d70241-115c-4d85-969c-60673f1ce7bc?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A36Z&amp;rscd=attachment%3B+filename%3DSAIN-4.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A40Z&amp;ske=2026-08-01T21%3A25%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6c7b%2Fbgivd6rdysg875jeB1uqLp4hTA3fX4NpsFyeQQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-4.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>4.0.0</h2></div><time datetime="2025-07-07T07:00:51.000000Z">7 July 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.11.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,142 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>SPT 3.11.3 Only.<br>
+New:<br>
+Silky Smooth bot turning.</p>
+<p>Added smoothing to bot movement, leaning, speed changes, and posed changes.</p>
+<p>Added new path visibility system that is multi-threaded. Bots should no longer stare into walls if their enemy is on the other side of it, but rather will look to the place that enemy would appear. (still needs some work, but is mostly functional)</p>
+<p>Improved bot reactions to grenades, including their own grenades (not perfect but the entire system should be redone)</p>
+<p>Rewrote how audible distance of footstep sounds is calculated, should be more closely aligned with how it sounds to players.</p>
+<p>Fixed flashlight detection not working.</p>
+<p>Moved all bots in combat to use sain’s pathfinder for walking instead of just sprinting.</p>
+<p>Greatly increased the amount of suppressing fire from bots. (Not configurable yet)</p>
+<p>Added “Strafe Speed” Config option for bot settings. Depending on bot type and difficulty bots will strafe faster or slower.</p>
+<p>Rewrote how bots are ticked and initialized.</p>
+<p>Fixed a vanilla behavior not being removed from scavs and overwriting sain behavior.</p>
+<p>Added new multithreaded functions.<br>
+- Enemy Place Job (for checking distance and visibility of last known positions)<br>
+- Path Visibility Job (Finds the place a bot should look at, based on where their enemies last know position)</p>
+<p>Optimized everything based on Unity Profiling data.</p>
+<p>Added new Hearing sensor that should both run better and expand functionality.</p>
+<p>Added Bot deafening system from gunfire. If a shot goes off close to a bot, they will be partially deaf to quieter sounds such as footsteps.</p>
+<p>Added audio masking system where bots will be unable to hear a sound if they heard something louder than that sound very recently.</p>
+<p>The intent is to allow players to use voice-lines to cover up the sounds of them healing.</p>
+<p>Added new system for bullet fly-by detection on bots that tracks each bullet’s real position to see if it comes close to them.<br>
+Many small tweaks to bot decision making to resolve issues and improve behavior.</p>
+<p>Fixed:</p>
+<p>Everything.</p>
+<p>Multiple patches were targeting the wrong methods, and a few were entirely outdated.</p>
+<p>Fixed bots teleporting.</p>
+<p>Fixed integrated suppressors not counting as being suppressed for bot hearing.</p>
+<p>Simplified a bunch of systems that were not working correctly.</p>
+<p>And a lot more.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/19f6b69c-1458-489e-8f08-dc13c4458f1f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A37Z&amp;rscd=attachment%3B+filename%3DSAIN-4.0.0-RC2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A05Z&amp;ske=2026-08-01T21%3A26%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=K3syeIncfh3TkFFKE0eeFdEh4IIOpIWDxDy8EagtRls%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMiwibmJmIjoxNzg1NjE2MTIyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.luFXSSuXL74olGzwrVSt0D9NzekL7iNeGSfUaDvtMWc&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-4.0.0-RC2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.3.0</h2></div><time datetime="2025-06-01T17:37:58.000000Z">1 June 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>31,272 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>- Updated for 3.11</p>
+<p>No new functionality has been added, this is simply to update SAIN to work on 3.11. Bugs that were on 3.10 are most likely going to be in 3.11 until Solar gets the time to work on SAIN again. Please be patient.</p>
+<p>Thanks to all new contributors for helping, and an especially big thanks to Brie for updating most of the AI logic that was broken with 3.11.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <p class="nuked">nuked from forge, <a href="https://github.com/ArchangelWTF/SAIN" target="_blank" rel="noreferrer noopener">try source code url</a></p>
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.2.1</h2></div><time datetime="2024-12-17T01:25:16.000000Z">17 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>119,303 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.10.X ONLY</strong></p>
+<p><a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file-analysis/MGNlMmUxMDk4NTQ1ZmE2ZTY4NzViNTM2Mjk2ZmM4Zjg6MTczNDM5ODM2MA==" rel="noreferrer noopener">VirusTotal Results</a></p>
+<p>There is still 1 false positive and “Antiy-AVL” thinks SAIN is “pornware”.</p>
+<p><em><strong>Changes:</strong></em></p>
+<p><strong>Reworked Bot Suppression</strong>.</p>
+<ol>
+<li>Added New Tier System for how much bots are suppressed. Old: Suppressed / Heavy Suppressed. New: Light, Medium, Heavy, Extreme</li>
+<li>Bots get Light Suppression from almost any bullet flying by them.</li>
+<li>Increased the effect that suppression has on bot stats.</li>
+<li>Add Suppression Amp to boost suppression received when bullets are very close to a bot’s head.</li>
+<li>Suppression now depends on the caliber of bullet being fired at the bot. Big Boolet = much more scary.</li>
+<li>Added extensive config options for suppression (Global Settings =&gt; Mind) Most are marked as Advanced Settings. All new settings have full tooltips to explain the system.</li>
+<li>Added Suppression Resistance for Personality and BotType configs. It is not yet pre-configured, so no bots will have resistance by default.</li>
+<li>Configuring each tier of suppression is possible by editing the GlobalSettings.json in a custom preset. No GUI for it yet.</li>
+<li>Added Hearing Distance Multiplier to Suppression Effects</li>
+</ol>
+<p><strong>Added Extensive New Config Options</strong></p>
+<ol>
+<li>Everything is configurable for bot hearing.</li>
+<li>Added Toggle in GlobalSettings =&gt; Shoot to force bots to only use semi auto if desired. (Defaults to off)</li>
+<li>Added toggles for each bot type and global toggles for different movement options for bots. So you can disable lean, vault, jump, pose adjustment, and prone globally or for specific bot types.</li>
+<li>Added Power Level Options to Global Settings, these control how different things about a bot affect their power level score, and in return what personality they are allowed to use.</li>
+<li>Added Time and Weather config options for vision and hearing.</li>
+<li>Added several new advanced config options for bot steering.</li>
+<li>Added config option to change what personality bosses are assigned. (Found in GlobalSettings.json in a custom preset, no GUI yet)</li>
+</ol>
+<p><strong>GUI Reworks</strong></p>
+<ol>
+<li>Settings menu is now more condensed to allow more options.</li>
+<li>Slight adjustments to the dimensions of everything to improve readability and consistency.</li>
+<li>Added Toggle on the top bar to enable/disable advanced settings.</li>
+<li>Added a ton of new descriptions and proper names for config values. Almost all global settings have explanations now.</li>
+</ol>
+<p><strong>General Improvements</strong></p>
+<ol>
+<li>Added .json file to match nicknames with specific personalities. (Generated on game launch when sain is installed)</li>
+<li>Enable Extract Global now swaps between SAIN extract and Vanilla extract systems. Defaults to Vanilla.</li>
+<li>Bots now have more difficulty hearing suppressed gunfire.</li>
+<li>Bots now sprint when possible when under fire by someone shooting from long range. (Can be toggled in Global Settings =&gt; Mind.</li>
+</ol>
+<p><strong>Fixes</strong></p>
+<ol>
+<li>Fixed some vanilla combat layers still being active for PMC AI.</li>
+<li>Fixed guns not firing if returning from a raid and entering the shooting range.</li>
+<li>Fixed Bot hearing not being affected by stun/flash grenades.</li>
+<li>Disabled several loggers from activating unless SAIN Debug Mode is enabled.</li>
+<li>Fixed SAIN Server mod showing incorrect version.</li>
+</ol>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/202f6ac3-8672-4478-80e5-ef1fac9c8631?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A02Z&amp;rscd=attachment%3B+filename%3DSAIN-3.2.1-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A12Z&amp;ske=2026-08-01T21%3A07%3A02Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=q5eekCcY2J7S9In3uAdDFBQ078l3BQtf0y%2B%2F6mXkT0E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.2.1-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.2.0</h2></div><time datetime="2024-12-06T02:30:13.000000Z">6 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>20,801 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.10+ ONLY</strong></p>
+<p><strong>Full credit to <a target="_blank" class="external-link" href="https://github.com/Lacyway" rel="noreferrer noopener">@Lacyway</a> for getting SAIN working with SPT 310!<br>
+Note: Apparently Virus total thinks SAIN is “Pornware”. So consider this the official porn update!<br>
+<a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/a3a9c563d2e1ea1dd204d7ae5b3c820c79476c7fb33fd031c2ccd4000ecbac59/detection" rel="noreferrer noopener">https://www.virustotal.com/gui/file/a3a9c563d2e1ea1dd204d7ae5b3c820c79476c7fb33fd031c2ccd4000ecbac59/detection</a><br>
+Changelog:</strong></p>
+<p><strong>Solarint:</strong></p>
+<ul>
+<li>Added new config options for customizing bot sound position estimation, or how accurate they are at locating the source of heard sounds. Found in Global Settings =&gt; Hearing</li>
+<li>Added new styling and design for some GUI visuals.</li>
+<li>Added categories to settings folders to improve organization (wip)</li>
+<li>Added toggle at the top of the SAIN GUI to enable/disable advanced settings.</li>
+</ul>
+<p><strong>Lacyway:</strong></p>
+<ul>
+<li>Updated for SPT 310.</li>
+<li>Zombies are now ignored by SAIN, and should be working properly.</li>
+<li>SAIN hit reactions are now off by default until Solar / new developer can take a look at them (they are known to cause issues)</li>
+<li>Fixes to improve Fika/SAIN compatibility.</li>
+<li>Add sandbox_high to locations (Fixes: <a target="_blank" class="external-link" href="https://github.com/Solarint/SAIN/issues/9" rel="noreferrer noopener">#9</a>) by <a target="_blank" class="external-link" href="https://github.com/ArchangelWTF" rel="noreferrer noopener">@ArchangelWTF</a> in <a target="_blank" class="external-link" href="https://github.com/Solarint/SAIN/issues/10" rel="noreferrer noopener">#10</a></li>
+<li>Added new ammo calibers</li>
+<li>Added new missing guards for Kaban</li>
+<li>Added Partisan to bot types</li>
+<li>Merged PR from DanW fixing nullref (other one was skipped as it was causing side effects</li>
+</ul>
+<p><strong>Known Issues:</strong></p>
+<ul>
+<li>In some openable menus in the GUI, you cannot directly type a number into the box, and you have to use the slider.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/144f21b8-d382-4622-848f-611ea6be1824?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A38Z&amp;rscd=attachment%3B+filename%3DSAIN-3.2.0-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A29Z&amp;ske=2026-08-01T21%3A03%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KnuY32MUFsDX%2BVWS60Wf7is0fXsqygUlmnMM9UxN%2B0o%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyMywibmJmIjoxNzg1NjE2MTIzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lso-Ez7ko_J9jdqW2qx4M4o71vw_1HgW1Casi3hrrPU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.2.0-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.1.0</h2></div><time datetime="2024-08-04T19:02:11.000000Z">4 August 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>132,991 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9 ONLY</strong></p>
+<p><a target="_blank" class="external-link" href="https://docs.google.com/document/d/1-VTFkZ0qUKKzYWnEXY0LI1iS006dX2eVKBEQhI2Gt8s/edit" rel="noreferrer noopener">Changelog</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/c75a8a2e-bec7-4c44-b47d-e16722c5d59d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A28%3A17Z&amp;rscd=attachment%3B+filename%3DSAIN-3.1.0-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A27%3A26Z&amp;ske=2026-08-01T21%3A28%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=0BtwIjIt10utnRq9FG2m8VSBd%2FYzIDul0sONgvbuNVY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNCwibmJmIjoxNzg1NjE2MTI0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CIUzO3afiK1Ral-4g33vz3WLlq7SqeOXjeeCE823-qc&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.1.0-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.6</h2></div><time datetime="2024-07-20T10:04:55.000000Z">20 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>34,634 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9 ONLY</strong></p>
+<p>Changelog:</p>
+<p><a target="_blank" class="external-link" href="https://docs.google.com/document/d/1OT18XcZDGrjRBpU88XRoLN9N2r46XvvgUiVXVmyG7YE/edit?usp=sharing" rel="noreferrer noopener">https://docs.google.com/document/d/1OT18XcZDGrjRBpU88XRoLN9N2r46XvvgUiVXVmyG7YE/edit?usp=sharing</a></p>
+<p>VirusTotal result:</p>
+<p><a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/f2bfcecc8a2b5511aa9d22e93c3fcce5190d363a539f6b782ff3ca90c6d585b7?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/f2bfcecc8a2b5511aa9d22e93c3fcce5190d363a539f6b782ff3ca90c6d585b7?nocache=1</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/4546b98a-559c-449b-8af0-37eef81b2f5d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A57Z&amp;rscd=attachment%3B+filename%3DSAIN.3.0.6-for-SPT-3.9.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A00Z&amp;ske=2026-08-01T21%3A06%3A57Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=wOo6utYiHqulmVN1R3x8irHycZUQ%2FsVmUWxFd0rTv4E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.3.0.6-for-SPT-3.9.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.5</h2></div><time datetime="2024-07-14T22:49:39.000000Z">14 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.2</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>14,396 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.0-3.9.2 ONLY</strong></p>
+<p>Changelog: <a target="_blank" class="external-link" href="https://docs.google.com/document/d/1zkRKmSuWWRT99j_093FR6UfTLwYCerg-Ppojql8iENM/edit" rel="noreferrer noopener">https://docs.google.com/document/d/1zkRKmSuWWRT99j_093FR6UfTLwYCerg-Ppojql8iENM/edit</a></p>
+<p>Just a few bugfixes and difficulty preset changes mostly.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/b2a7dcc6-d6be-4df5-9d95-c94ce99d7fa9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A40Z&amp;rscd=attachment%3B+filename%3DSAIN-3.0.5-for-SPT-3.9.1-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A57Z&amp;ske=2026-08-01T21%3A19%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=k8ZS4yM6h9uLGQrApHWR2KgLnNU7gRTSx8h1Q7rgKrI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQyNSwibmJmIjoxNzg1NjE2MTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.0rbLTTZObEQug1Bsb_w0y0J9zuqWyMMyith2kyHkohU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.5-for-SPT-3.9.1-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.4</h2></div><time datetime="2024-07-14T16:24:42.000000Z">14 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.2</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,651 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>SPT 3.9.0 - 3.9.2 ONLY</strong></p>
+<p>Changelog <a target="_blank" class="external-link" href="https://docs.google.com/document/d/1LV8YFY6H37iBVVxTkWjQaW9Wm6wODeGYpAh2KUPg1N0/edit" rel="noreferrer noopener">HERE</a><br>
+Virustotal Result <a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/ea08d3b420c7da05ddb2c4e01a8f09728ddfa59c0f2c78681ef85b8503733323?nocache=1" rel="noreferrer noopener">HERE</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/5d678d10-50aa-4fda-8fc9-fcee3e42a4f3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A41Z&amp;rscd=attachment%3B+filename%3DSAIN-3.0.4-for-SPT-3.9.1-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A20Z&amp;ske=2026-08-01T21%3A10%3A41Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=KjiB4sQRxdUzrR7duF9tXR7V8%2FwIdfDDF8yYQQkjCmI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.4-for-SPT-3.9.1-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.3</h2></div><time datetime="2024-07-13T07:57:16.000000Z">13 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>6,420 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog: <a target="_blank" class="external-link" href="https://docs.google.com/document/d/1mdyDZD-1bid55qmYFA-1F0qQWJOGu7otE2VV0FJcbc4/edit" rel="noreferrer noopener">https://docs.google.com/document/d/1mdyDZD-1bid55qmYFA-1F0qQWJOGu7otE2VV0FJcbc4/edit</a></p>
+<p>SPT 3.8.3 build <a target="_blank" class="external-link" href="https://github.com/Solarint/SAIN/releases/download/v3.0.3-release/SAIN.3.0.3.for.SPT.3.8.3-Release.7z" rel="noreferrer noopener">HERE</a><br>
+This will ACTUALLY be the last spt 3.8.3 release.<br>
+spt 3.8.3 build only includes bot fixes.</p>
+<p>Edit:<br>
+Fixed version being linked here going to the spt 3.8.3 version.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/d113bcb1-a024-4722-887a-55e7eb26c898?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A00Z&amp;rscd=attachment%3B+filename%3DSAIN.3.0.3.for.SPT.3.9.0-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A16Z&amp;ske=2026-08-01T21%3A03%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZY5PexgewCsinGjWQ153%2BL2LEQipa0MqeN4Kscyijmg%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0NywibmJmIjoxNzg1NjE2MTQ3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ej0iQQnGVmcnzDrJcCSz7fsLL8jbLl2VMUyCNMkVQsM&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.3.0.3.for.SPT.3.9.0-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.1</h2></div><time datetime="2024-07-10T07:02:30.000000Z">10 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>9,606 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog here:<br>
+<a target="_blank" class="external-link" href="https://docs.google.com/document/d/1y5-13J4iQ9Qo1nZuaIYLaLbduIRu6OkpUrxIb83k86w/edit" rel="noreferrer noopener">https://docs.google.com/document/d/1y5-13J4iQ9Qo1nZuaIYLaLbduIRu6OkpUrxIb83k86w/edit</a><br>
+Zip includes a SPT 3.8.3 version and a 3.9.0 version.</p>
+<p>Install the correct one, please.<br>
+Unless there is something major I need to fix, this will be the last SPT 3.8.3 release for sain, porting stuff back and forth is incredibly tedious.<br>
+Virustotal results:<br>
+3.9.0 dll: <a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/02e9c7a4653a78f452268a4c6146b1742af909423b800e961d04c8a681427162?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/02e9c7a4653a78f452268a4c6146b1742af909423b800e961d04c8a681427162?nocache=1</a></p>
+<p>3.8.3 dll: <a target="_blank" class="external-link" href="https://www.virustotal.com/gui/file/083be674cb7c8d25df8108d2b43645c460b47b13e7b879f51082131c3a82eb64?nocache=1" rel="noreferrer noopener">https://www.virustotal.com/gui/file/083be674cb7c8d25df8108d2b43645c460b47b13e7b879f51082131c3a82eb64?nocache=1</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/89d4caca-525f-41f4-9825-65a64900fa75?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A29%3A59Z&amp;rscd=attachment%3B+filename%3DSAIN-3.0.1-Release.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A29%3A04Z&amp;ske=2026-08-01T21%3A29%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=gT%2FZvBRfMT%2FG1LLS%2FJwpDtaw4XCWRDWYgWkXmwzG4Yw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.1-Release.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2024-07-07T11:25:02.000000Z">7 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,806 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Only works on 3.8.1 - 3.8.3</p>
+<p><a target="_blank" class="external-link" href="https://docs.google.com/document/d/18aJ2QQQlhT_3OfoBT0EDxYu0AvHJ-9_CjrsIY0f5cz8/edit" rel="noreferrer noopener">Change Log</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/9cf9aac8-8822-4a49-94a2-a2cd44a12a13?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A19Z&amp;rscd=attachment%3B+filename%3DSAIN-3.0.0-SPT-3.8.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A43Z&amp;ske=2026-08-01T21%3A08%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=4zRLrVT2OyEVII%2BbKqfC83kt3VCstcsYkCY2s4hCB%2FY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.0-SPT-3.8.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0+390</h2></div><time datetime="2024-07-07T13:38:42.000000Z">7 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>9,909 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Only works on 3.9.0<br>
+<strong>OLD PRESETS ARE NOT COMPATIBLE.</strong></p>
+<p>Updated for SPT 3.9.0. Requires the latest BigBrain and Waypoints version!</p>
+<p>Updated download link to a version without extra files in the User Mod that can affect Linux users. Sorry!</p>
+<p>Note: I accidentally left some loose files in a folder called “3.8.0” in the rush to fix the above issue before anyone noticed, you can just ignore it, its just some zips of releases.</p>
+<p>special thanks to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/58175-phiveaces/" rel="noreferrer noopener">Phiveaces</a> for their help getting a few references updated to new EFT code!</p>
+<p>Change log here: <a target="_blank" class="external-link" href="https://docs.google.com/document/d/18aJ2QQQlhT_3OfoBT0EDxYu0AvHJ-9_CjrsIY0f5cz8/edit" rel="noreferrer noopener">3.0.0 Changelog  </a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/efcb08d3-8483-42b9-8ec8-2ba46765427e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A33Z&amp;rscd=attachment%3B+filename%3DSAIN-3.0.0-SPT-3.9.0-Hotfix.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A37Z&amp;ske=2026-08-01T21%3A10%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=mn8ReaUv%2BLaPBtFXuH0xkucG7qjNu9tRgOwNjZUjCCQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ0OCwibmJmIjoxNzg1NjE2MTQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.altHWSdsxPirPf3HEgOrTJQROF0eyYcaQvSWyOcKRuU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN-3.0.0-SPT-3.9.0-Hotfix.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.12</h2></div><time datetime="2024-04-04T16:50:47.000000Z">4 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>49,074 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.8.0</h3>
+<ul>
+<li>Fixed major issue that caused bots to not get proper position info on the Player.
+<ul>
+<li>This was the cause of a lot of strange, unintentional behavior. Bots feel better than ever to fight. This should fix bots healing when in line of sight of the player, among many other issues.</li>
+</ul>
+</li>
+<li>Bots can be suppressed now. Suppressed bots won’t lean out of cover and will usually wait in cover until a while after they have been suppressed.</li>
+<li>Bots will shift between cover less often overall.</li>
+<li>Rats will no longer shift between cover.</li>
+<li>Added option in personality settings to enable or disable cover shifting.</li>
+<li>Added advanced config options to modify shift cover behavior. (Global Settings / Cover)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/94d0c3cd-785a-4065-82b3-38a455f37fa6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A28%3A10Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.12.for.3.8.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A27%3A33Z&amp;ske=2026-08-01T21%3A28%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tJ3S6SZhqa5uFde1d5FvVm3ifP74%2BbOPcqusBZ24b4g%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MCwibmJmIjoxNzg1NjE2MTYwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.DOcynDDZRfZT_-X6g3EnI0EQO7gbYZCgMN448zWAIjg&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.12.for.3.8.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.11</h2></div><time datetime="2024-04-02T05:46:10.000000Z">2 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>12,276 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.8.0</h3>
+<p>Update for SPT 3.8.0</p>
+<ul>
+<li>Resolve issue where bots on Ground Zero can cause massive framerate drops</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/27ed283f-22de-453c-8c71-60dd8a1a7971?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A40Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.11.for.3.8.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A22Z&amp;ske=2026-08-01T21%3A22%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=L6%2B384TiFs6kNd3Vas47VzX7LdAuVMnQ%2FD8SnV1QLm4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.11.for.3.8.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.10</h2></div><time datetime="2024-04-01T21:24:52.000000Z">1 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>3,765 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.8.0</h3>
+<p>Update for SPT 3.8.0</p>
+<ul>
+<li>Updates necessary to work with SPT 3.8.0</li>
+<li>Improved fallback behavior for bots</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/f7ac8302-16b6-4a58-bcdc-c9a7e8d37baa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A19Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.10.for.3.8.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A47Z&amp;ske=2026-08-01T21%3A03%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=CV1bm9NkP2OxGclObZes91sDA5x7ipM0EGnYyl6s92s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.10.for.3.8.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.9</h2></div><time datetime="2024-03-02T20:00:30.000000Z">2 March 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.6</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>18,840 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with <strong>SPT 3.7.4 - 3.7.6</strong></h3>
+<p>REQUIRES Latest <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions" rel="noreferrer noopener">Big Brain</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/" rel="noreferrer noopener">WayPoints</a> updates for 3.7.4 - 3.7.6 as well<br>
+This mod REQUIRES 7-zip to extract: <a target="_blank" class="external-link" href="https://www.7-zip.org/" rel="noreferrer noopener">7-zip.org</a></p>
+<ul>
+<li>Allow disabling bot extracting globally</li>
+<li>Further improvements to bot extracting</li>
+</ul>
+<h3><strong>If updating from 2.1.6 or earlier you must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/a0508c88-b05a-4c70-a5dc-102d95d1e50d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A40Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.9.for.3.7.6.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A40Z&amp;ske=2026-08-01T21%3A07%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=WvlczeBfGpmFZJwIziGkwt1BqP8VB8Yn94EvP6QmWvc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.9.for.3.7.6.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.8</h2></div><time datetime="2024-01-02T01:23:17.000000Z">2 January 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.6</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>50,874 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with <strong>SPT 3.7.4 - 3.7.6</strong></h3>
+<p>REQUIRES Latest <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions" rel="noreferrer noopener">Big Brain</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/" rel="noreferrer noopener">WayPoints</a> updates for 3.7.4 - 3.7.6 as well</p>
+<ul>
+<li>Improved bot extract handling, bots will now update their chosen extract in the event it’s inaccessible, and will be able to use triggered extracts if the trigger has been done. Thanks DanW!</li>
+<li>Bots will now investigate IR light sources if they have NVGs on, the same way they investigate visible flashlights/lasers</li>
+<li>Catch/fix a few exceptions</li>
+<li>Limit bots reloading to once every 5 seconds, to avoid potential slowdowns when a weapon has bad data</li>
+<li>Fix flashlight dazzle, it now properly checks the enemy player, and is more limited in how much scatter it adds.
+<ul>
+<li>This should resolve the issue where a bot starts missing you when THEY have a flashlight, and you aim at them</li>
+<li>The dazzle effect is now less pronounced, bots are still relatively accurate even if you’re aiming a flashlight at them</li>
+</ul>
+</li>
+<li>Player scav bots no longer spawn with boss brains</li>
+<li>This version of SAIN is only compatible with SPT 3.7.4-3.7.6, not prior versions</li>
+</ul>
+<h3><strong>If updating from 2.1.6 or earlier you must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/9a2a2a97-f090-4328-96d0-844f07191d4b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A25Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.8.for.3.7.4.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A34Z&amp;ske=2026-08-01T21%3A20%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=VJlqo5T3cmWrMEgqv6kE5WlRYVhuc%2FPfCPjPNzSNunk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MSwibmJmIjoxNzg1NjE2MTYxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zGQfLQC5M10pfOmY4GG1dbJQmM4iFpK3Bif0cY8AP1A&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.8.for.3.7.4.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.7</h2></div><time datetime="2023-12-11T04:24:38.000000Z">11 December 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.5</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>18,180 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with <strong>SPT 3.7.5</strong></h3>
+<p>REQUIRES Latest <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions" rel="noreferrer noopener">Big Brain</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/" rel="noreferrer noopener">WayPoints</a> updates for 3.7.5 as well</p>
+<ul>
+<li>Separate preset version from SAIN version, unless I make a breaking change to presets, they should no longer throw warnings</li>
+<li>Allow disabling bot talk patching via Global Settings -&gt; General Settings</li>
+<li>New handling of extract timer, should work with shortened raids introduced in SPT 3.7.4</li>
+<li>Allow external mods to trigger a forced extract on a bot</li>
+<li>Remove all pause functionality (Pausing causes too many issues to be worth maintaining that functionality)</li>
+<li>Remove SPT version number from SAIN dll filename</li>
+<li>This version of SAIN is only compatible with SPT 3.7.4-3.7.5, not prior versions</li>
+</ul>
+<h3><strong>You must delete SAIN-3.7.1.dll from BepInEx/Plugins/</strong></h3>
+<p>The filename for the plugin has changed, this means you will need to manually delete the file <code>BepInEx/Plugins/SAIN-3.7.1.dll</code></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/47227736-e83f-4c28-9ada-c9d9a622cc8a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A46Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.7.for.3.7.4.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A44Z&amp;ske=2026-08-01T21%3A08%3A46Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=GN7S5O7ciCp286sVTsMbmBta%2BbChTF%2FBAL2K%2BdAsohM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.7.for.3.7.4.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.6</h2></div><time datetime="2023-11-27T06:37:21.000000Z">27 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.4</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,305 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.3-3.7.4</h3>
+<p>REQUIRES Latest <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions" rel="noreferrer noopener">Big Brain</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/" rel="noreferrer noopener">WayPoints</a> updates for 3.7.3-3.7.4 as well</p>
+<ul>
+<li>Fix squads not being created properly</li>
+<li>Tweak to Searching to help with the run/skid/run/skid behaviour (Thanks <a target="_blank" class="external-link" href="https://github.com/y-saber" rel="noreferrer noopener">Saber</a>!)</li>
+<li>Resolve an issue that stopped SAIN from working when SPT was in debug mode</li>
+<li>Switch to 7-zip archives for releases</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/654356041/5e9c1fdf-405b-4fcf-8b16-13017ce90129?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A25Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.6.for.3.7.3.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A57Z&amp;ske=2026-08-01T21%3A23%3A25Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qTfWyRndD98lhTyRXllbSGOTNhxDnZgYXrmZuMgly%2BM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2MywibmJmIjoxNzg1NjE2MTYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gx4myM6WLZxF-CucVf1BT9wt_NrXH7A7QDHDDBhc5CU&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.6.for.3.7.3.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.1.5</h2></div><time datetime="2023-10-23T02:03:15.000000Z">23 October 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.3</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>34,652 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1, 3.7.2, 3.7.3 REQUIRES Latest <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1219-bigbrain/#versions" rel="noreferrer noopener">Big Brain</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1119-waypoints-expanded-bot-patrols-and-navmesh/" rel="noreferrer noopener">WayPoints</a> updates for 3.7.1/3.7.2/3.7.3 as well</h3>
+<p>Updated for 3.7.1</p>
+<p>Also supports 3.7.2, 3.7.3</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTA0Mzg4MWRkNzM4YmYwYTI3MTk1YzVhYWRhNmMwNjc6MTc1MDgzNTgxMw==?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/631081868/2e61bce3-47fe-441b-8653-cbf434aa6875?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A19Z&amp;rscd=attachment%3B+filename%3DSAIN.2.1.5.for.3.7.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A25%3A31Z&amp;ske=2026-08-01T21%3A26%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Xbu%2F7rws8PZ9LV35zrLqDYx2jzxSvvj%2ByzI2bFo20dI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjQ2NCwibmJmIjoxNzg1NjE2MTY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9Nz59p15zzk9cFnVyrZGjZlGnUlNtiSHOSmPMyJB1Mg&amp;response-content-disposition=attachment%3B%20filename%3DSAIN.2.1.5.for.3.7.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="anorangedoggo&#39;s sain presets"
+  data-search="anorangedoggo&#39;s sain presets a collection of personal presets aimed for fun gunfights for varying levels of players curiousvoidling"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="3326"
+  data-updated="2026-07-28T10:03:22.000000Z">
+  <a class="card-image" href="../../../addon/21/anorangedoggos-sain-presets/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/6c706a74af759fc85a3f9b696f9bc56855571f5cc695019687870dc690bb170a.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/21/anorangedoggos-sain-presets/">anOrangeDoggo&#39;s SAIN Presets</a></h2>
+    <p class="teaser">A collection of personal presets aimed for fun gunfights for varying levels of players</p>
+    <div class="card-meta">
+      <span>by CuriousVoidling</span>
+      <span>3,326 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="baconism&#39;s unrepentant bots (sain preset)"
+  data-search="baconism&#39;s unrepentant bots (sain preset) this preset will cause some mild head/eyes. baconism"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="yes"
+  data-ads="no"
+  data-downloads="180"
+  data-updated="2026-07-28T10:13:19.000000Z">
+  <a class="card-image" href="../../../addon/79/baconisms-unrepentant-bots-sain-preset/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/7b69a08031ce478b5a435ec19165b949c1701164513bbf6556cc0f4e9cca61cc.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/79/baconisms-unrepentant-bots-sain-preset/">Baconism&#39;s Unrepentant Bots (SAIN Preset)</a></h2>
+    <p class="teaser">This preset will cause some mild head/eyes.</p>
+    <div class="card-meta">
+      <span>by Baconism</span>
+      <span>180 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      <span>AI disclosure</span>
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="crackedbots sain preset"
+  data-search="crackedbots sain preset you will die every time good luck xerofixx"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="222"
+  data-updated="2026-07-28T09:58:40.000000Z">
+  <a class="card-image" href="../../../addon/24/crackedbots-sain-preset/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/01079a12f45c1ee5cc3ad8ca4290d59f746ce6fa6532fbc9f314c78abd94026f.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/24/crackedbots-sain-preset/">CrackedBots SAIN PRESET</a></h2>
+    <p class="teaser">You will die every time good luck</p>
+    <div class="card-meta">
+      <span>by xerofixx</span>
+      <span>222 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="live like experience - sain preset"
+  data-search="live like experience - sain preset pmc&#39;s and bosses should be scary. shibdib"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="2860"
+  data-updated="2026-07-28T09:58:24.000000Z">
+  <a class="card-image" href="../../../addon/20/live-like-experience-sain-preset/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/0f33396bb980f879a92612a817910efc7f87092d719ea1efec600f96aca8dee3.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/20/live-like-experience-sain-preset/">Live Like Experience - SAIN Preset</a></h2>
+    <p class="teaser">PMC&#39;s and Bosses should be scary.</p>
+    <div class="card-meta">
+      <span>by Shibdib</span>
+      <span>2,860 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="try to act human"
+  data-search="try to act human just dont let them know that you are ai. vyckalino"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="3787"
+  data-updated="2026-07-28T09:59:56.000000Z">
+  <a class="card-image" href="../../../addon/26/try-to-act-human/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/d19debb015a71c4b5e557c0423e1c3f1637eba13068fb0627ec332f9f1cb9a4a.jpg" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/26/try-to-act-human/">Try To Act Human</a></h2>
+    <p class="teaser">Just dont let them know that you are AI.</p>
+    <div class="card-meta">
+      <span>by Vyckalino</span>
+      <span>3,787 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>me.sol.sain</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>9 March 2023</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ArchangelWTF/SAIN" target="_blank" rel="noreferrer noopener">4.2.0+</a></li><li><a href="https://github.com/Solarint/SAIN" target="_blank" rel="noreferrer noopener">Original</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

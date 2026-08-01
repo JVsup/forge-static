@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Super Sprint and Jump · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Super Sprint and Jump</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/5be8419575812410807454a7268397433fab2c674b6322bc4446735af812ab84.webp" alt="Super Sprint and Jump thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Super Sprint and Jump</h1>
+    <p class="hero-teaser">Adjust run speed and jump height with hotkey. Move faster or jump higher up to 20x</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4ac584c962c3346401d93ae2e83094c176c2a5e1fd3f7636be5e3129a057664c.webp" alt="" width="32" height="32">ciallomako</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,572</dd></div>
+    <div><dt>Favourites</dt><dd>8</dd></div>
+    <div><dt>Mod lists</dt><dd>2</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Super Sprint and Jump content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>4</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>All functions in F12 menu</h1>
+<p>Won’t affect bots.</p>
+<ul>
+<li><strong>Multiply sprint speed x1.0~20.0</strong><br>
+Due to physical effect, actual speed is limited to not higher than 1.5~2.0x.</li>
+<li><strong>Sprint speed overlimit</strong><br>
+Break the physical limit but buggy:<br>
+Speed &gt;5x will get uphill obstacled sometimes, and downhill floated that can’t jump.<br>
+Speed &gt;10x could break physical collision, may run into ground and die (please stop sprint before hit on hill or wall).</li>
+<li><strong>Walk acceleration</strong><br>
+Also speed up normal walking.</li>
+<li><strong>Multiply jump height x1.0~20.0</strong><br>
+Sprinting jump distance depends on Sprint Speed coef, which is recommanded higher than jump coef*0.5.<br>
+Speed overlimit won’t affect jump, you could set high sprint speed but disable overlimit.</li>
+<li><strong>No fall damage</strong><br>
+Fall damage is automatically divided by jump height coef, and you can further remove it by this.</li>
+<li><strong>Hotkeys and HUD</strong><br>
+You can set hotkey for +- speed or height conveniently.<br>
+The current multiplier values are shown on bottom left (near stamina HUD)</li>
+</ul>
+<h1>Suggestion</h1>
+<p>If you just want to play normally but travel faster between position, only set sprint speed x2.0 is good.</p>
+<h1>Compatible</h1>
+<ul>
+<li>Conflict with JiangHu, or other mod changing sprint speed or jump height. I don’t know which one will cover another. Test on your own!</li>
+<li>In Fika server, this only affect your client</li>
+</ul>
+<h3>How to install</h3>
+<p>Download the zip and copy(drag) the BepInEx folder in package, to your SPT main folder (where EscapeFromTarkov.exe locates)</p>
+<h3>To uninstall</h3>
+<p>Just remove the dll file in YourSPT/BepInEx/plugins/SuperSprintJump.dll</p>
+<h1>Reference</h1>
+<p>Thanks <a target="_blank" class="external-link" href="../../2274/jiang-hu/" rel="noreferrer noopener">JiangHu</a> for speed patch method.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.1</h2></div><time datetime="2026-03-08T17:09:00.000000Z">8 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>2,890 downloads</span><span>5.6 KB</span>
+          </div>
+          <div class="prose version-notes"><p>v1.2.1<br>
+Add an option to accelerate normal walking speed.</p>
+<p>v1.2<br>
+Can change sprint &amp; jump multiplier with hotkeys.<br>
+Add a HUD to show current multiplier values.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/d9bb79ee282b0e479a0de3483dd34b0939547970dc147f41a15758e2685c01b5" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/54e71f9b-f040-47a0-a641-0aa328df0bbb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A38Z&amp;rscd=attachment%3B+filename%3DSuperSprintJump_v1.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A48Z&amp;ske=2026-08-01T21%3A08%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=F3lNnEgUjoztfqUs%2FUv1uhtQXdiAilxYOgG5Ew7K66Y%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-03-08T02:03:00.000000Z">8 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>78 downloads</span><span>5.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Add hotkeys to adjust sprint and jump coef.<br>
+Add HUD at bottom left to show current values.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/34fc7d612b782a708110a91f2d8a85d1ee04a5172f6bb68657744cafc8c7e04f" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/c9fedb25-2c9c-4ff4-925a-235181af4d7e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A53Z&amp;rscd=attachment%3B+filename%3DSuperSprintJump_v1.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A45Z&amp;ske=2026-08-01T21%3A07%3A53Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Jc4R21QkFp7teFOIMa%2Byo7VM2A5W2s9uiZUyo84nF3w%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-03-02T09:29:00.000000Z">2 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>455 downloads</span><span>4.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Add new option to break the sprint speed limit, but is buggy (see description page of mod)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/307f5b3d299fc2c77479b49514944611c1b006e43c78c450d33acd3a28d9c9ce" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/a60cbdb8-d33b-4b4f-ad63-845b96717a94?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A33Z&amp;rscd=attachment%3B+filename%3DSuperSprintJump_v1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A47Z&amp;ske=2026-08-01T21%3A12%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=zwmWByfGT%2BE6LnKUoHZo4M%2FAOPG4APK26eKcb30%2BmoI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-01T21:26:00.000000Z">1 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>149 downloads</span><span>3.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>v1.0.0 for SPT 4.0.x</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/be49912386972aeac7ef359632c6ac05e9aee548f1a64dcf1d25edbafb449eab" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1170207266/30a7d0c1-145f-4e8a-b854-ab8aa9fd5739?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A09Z&amp;rscd=attachment%3B+filename%3DSuperSprintJump_v1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A03Z&amp;ske=2026-08-01T21%3A19%3A09Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Pan4NL5YiB4pCcMcLHff2UgsG%2Bd5aTZ7JrRl%2FOHPc2Y%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIwOCwibmJmIjoxNzg1NjE1OTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rL3iCe6dcpwyAc5o74e-oKm_NE-MilK4v1C53PEydiI&amp;response-content-disposition=attachment%3B%20filename%3DSuperSprintJump_v1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>ciallo.supersprintjump</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Klamist/SPTIncreaseSprintJump" target="_blank" rel="noreferrer noopener">https://github.com/Klamist/SPTIncreaseSprintJump</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

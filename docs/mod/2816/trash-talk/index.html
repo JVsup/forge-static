@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Trash Talk · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Trash Talk</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/7e9536cd1195177eddee26c57cb8ce01997bba9e67af6c0c80fef47f81d8d153.webp" alt="Trash Talk thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Trash Talk</h1>
+    <p class="hero-teaser">The PMC that killed you just texted. Now you can text back. TrashTalk gives every PMC killer/victim message a real AI-generated voice — reply to them, get answers based on what you said, and enjoy the beef. Local LLM or your own API key.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/cbb2be3b13f4d7256c1d5f6dc10af5cbb030b667d0c3971ccac2a3dcf19dc134.webp" alt="" width="32" height="32">Vultify</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,330</dd></div>
+    <div><dt>Favourites</dt><dd>8</dd></div>
+    <div><dt>Mod lists</dt><dd>21</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Trash Talk content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Description</div>
+<div class="tab-content"><p>Ever get that smug message from the PMC who killed you — or the one you killed — and wish you could talk back? Now you can. TrashTalk unlocks the reply box on those PMC messages and gives every bot a real, AI-generated voice: they answer what you actually typed, remember the conversation, and know exactly how the kill went down (weapon, distance, map). Every PMC gets a randomly rolled personality — cocky, bitter, respectful, unhinged, darkly funny, or barely bothered — that sticks for the whole conversation.</p>
+<ul>
+<li>Works with brand-new kill messages AND PMC messages already sitting in your inbox</li>
+<li>Replies arrive after a realistic 15-75 second “typing” delay (configurable)</li>
+<li>Personalities, prompt, delays, and backend all editable in config.json</li>
+<li>If the AI backend is unreachable, nothing breaks — the bot just doesn’t text back</li>
+</ul>
+<p>Requires a local LLM (free, recommended — see LLM Setup tab) or your own API key. Solo SPT only — not Fika compatible.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">LLM Setup</div>
+<div class="tab-content"><h3>Hooking up the AI</h3>
+<p>TrashTalk doesn’t come with an AI inside it — you plug one in. It can be one
+running on your own PC, or a free cloud one. Either way it’s a one-time setup
+in <code>SPT/user/mods/TrashTalk/config.json</code> and you never touch it again.</p>
+<p>Only three lines in there really matter:</p>
+<ul>
+<li><code>endpoint</code> — the web address the mod sends the conversation to</li>
+<li><code>model</code> — which AI at that address writes the reply</li>
+<li><code>apiKey</code> — your personal key for the service (cloud only, local needs none)</li>
+</ul>
+<p>Pick ONE option below.</p>
+<h3>Option 1 — Ollama (runs on your PC, no account needed)</h3>
+<ol>
+<li>Install <a target="_blank" class="external-link" href="https://ollama.com" rel="noreferrer noopener">Ollama</a></li>
+<li>Open a terminal and run: <code>ollama pull llama3.2</code></li>
+<li>Done. The mod’s default config already points at it.</li>
+</ol>
+<p>Fully private, works offline, costs nothing. The trade-off: a model small
+enough to share your PC with Tarkov isn’t the sharpest — replies can come out
+flat or repetitive. It uses your GPU for a few seconds per reply (~2GB VRAM),
+and replies fire while you’re in menus, not mid-raid.</p>
+<h3>Option 2 — Groq (free cloud, best model)</h3>
+<p>Sign up at <a target="_blank" class="external-link" href="https://console.groq.com" rel="noreferrer noopener">console.groq.com</a>, then go to
+<a target="_blank" class="external-link" href="https://console.groq.com/keys" rel="noreferrer noopener">console.groq.com/keys</a> and create a key.
+Copy it right away — it’s only shown once.</p>
+<pre><code>"endpoint": "https://api.groq.com/openai/v1/chat/completions",
+"model": "llama-3.3-70b-versatile",
+</code></pre>
+<p>This is a 70B model — way bigger than anything your GPU could run next to
+Tarkov — and Groq is stupid fast, so replies generate near instantly. Free
+tier is around 1000 replies a day, which you will never hit.</p>
+<h3>Option 3 — Google Gemini (free cloud, easiest signup)</h3>
+<p>If you have a Google account you’re already signed up. Go to
+<a target="_blank" class="external-link" href="https://aistudio.google.com/apikey" rel="noreferrer noopener">aistudio.google.com/apikey</a>, hit
+Create API key, and use:</p>
+<pre><code>"endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+"model": "gemini-3-flash-preview",
+"maxTokens": 4096,
+</code></pre>
+<p>That <code>maxTokens</code> line is not optional here. Gemini 3 “thinks” before it
+writes, and the thinking silently eats out of the same token budget — in my testing it burned anywhere from 150 to 700 tokens of thinking just to write one sentence, and it occasionally spikes past 1000 — set maxTokens to 4096 and cutoffs never happen. Free tier is around 250 replies a day.</p>
+<h3>Option 4 — already have an account somewhere?</h3>
+<ul>
+<li><strong>OpenRouter</strong>: endpoint <code>https://openrouter.ai/api/v1/chat/completions</code>,
+model <code>meta-llama/llama-3.1-8b-instruct:free</code> (or any paid model they list)</li>
+<li><strong>OpenAI</strong>: endpoint <code>https://api.openai.com/v1/chat/completions</code>,
+model <code>gpt-4o-mini</code> (cheap, not free)</li>
+</ul>
+<h3>The two settings nobody explains</h3>
+<ul>
+<li><strong>maxTokens</strong> — the size cap on a single reply, NOT a usage quota. It
+doesn’t make replies longer (the mod’s prompt keeps PMCs texting in 1-2
+short sentences regardless) and it doesn’t cost you anything extra on free
+tiers. The only reason to care: thinking models like Gemini 3 spend
+invisible tokens before writing. 4096 is safe everywhere, so just use that.</li>
+<li><strong>temperature</strong> — how predictable the replies are. Low means the same kill
+gets you nearly the same message every time, higher means spicier and more
+random. The default 0.9 is where the personalities actually come through.
+Drop toward 0.5 if replies feel like nonsense, and don’t go much above 1.0
+or they will be.</li>
+</ul>
+<p>After any config edit: restart the SPT server — the config only loads at
+startup. And never share your config file, your API key is in it.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Install Instructions</div>
+<div class="tab-content"><ol>
+<li>Extract the archive</li>
+<li>Drop the <code>BepInEx</code> and <code>SPT</code> folders into your SPT root directory</li>
+<li>Set up an LLM backend (see LLM Setup tab)</li>
+<li>Kill a PMC (or get killed), check your messages after the raid, and talk back</li>
+</ol></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Known Limitations / Bugs</div>
+<div class="tab-content"><ul>
+<li>Not Fika compatible (solo SPT only)</li>
+<li>Old messages (from before installing) work, but the bot won’t know exact kill details for them</li>
+<li>If you find a bug, please report it (see Support tab)</li>
+</ul></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><p>Found a bug or have a question? Leave a comment on this mod’s page, or reach out in my thread on the SPT Discord: <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1521972310595338260" rel="noreferrer noopener">https://discord.com/channels/875684761291599922/1521972310595338260</a></p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-13T20:54:00.000000Z">13 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,330 downloads</span><span>19.1 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>TrashTalk 1.0.0</h1>
+<ul>
+<li>Reply to the post-raid messages from PMCs you killed (or who killed you) — and get real, AI-generated answers back</li>
+<li>Bots stay in character, remember how the fight went down, and hold a running conversation</li>
+<li>Powered by a free local LLM (Ollama) or your own API key — see the LLM Setup tab</li>
+<li>Solo SPT only (not Fika compatible)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a966d217a063af9509942d88ca6938813698098d39673f45557da21f3c928b8b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1299650558/5995f10a-ab39-4173-acb1-709f8c9e16c3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A54Z&amp;rscd=attachment%3B+filename%3DTrashTalk_1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A11Z&amp;ske=2026-08-01T21%3A02%3A54Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pLbkZjhjxYPcoyzSn1mQ%2FhtrV8SyGN60BNYnOcgSHqY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2NywibmJmIjoxNzg1NjE2MDY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.aYlHCXjPrlt9jlhc4qxC-oAip1Hn8M4FrQf6c39ba2o&amp;response-content-disposition=attachment%3B%20filename%3DTrashTalk_1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vultify.trashtalk</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>13 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Vultify/TrashTalk" target="_blank" rel="noreferrer noopener">https://github.com/Vultify/TrashTalk</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used to make mod profile picture for mod page. Responses from the mod itself in dialogue chats are AI generated with a scripted identity.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

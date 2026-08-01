@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SPTModViewer · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SPTModViewer</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/c467763cb2d9712344290e9e1fb8452bca753fcc116b1fe004e10b1e7e88021a.webp" alt="SPTModViewer thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>SPTModViewer</h1>
+    <p class="hero-teaser">Allows you to track the status of mods relative to the Forge site</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4dc73268c9a296ad9ff038fd32a82a2003b2c016eb9d6c26d8f07ffc3e061c28.webp" alt="" width="32" height="32">hiop90</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,838</dd></div>
+    <div><dt>Favourites</dt><dd>12</dd></div>
+    <div><dt>Mod lists</dt><dd>26</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SPTModViewer content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>2</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">How it work?</div>
+<div class="tab-content"><p><img loading="lazy" decoding="async" src="../../../assets/993993f55e5a2a976930f40945cc6027b70b219f8e083b97da6b6a81b57d998c.webp" alt="preview"></p>
+<p>This is a server-side mod. It allows you to see which mods are installed on the server and clients(profiles). The data is displayed on a local web page.</p>
+<p>Features:</p>
+<ul>
+<li>You can easily track which mods are installed on the server and on clients.</li>
+<li>Compares mod versions with Forge and highlights outdated mods</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Install</div>
+<div class="tab-content"><ul>
+<li>Unzip and paste into root game folder (like any other mods)</li>
+<li>Get token from <span class="dead-link">https://forge.sp-tarkov.com/user/api-tokens</span> (read permission only)</li>
+<li>Create file - <code>SPT\user\mods\SPTModViewer\Config</code> with name <code>SptModViewerConfig.json5</code> and your forge token:</li>
+</ul>
+<pre><code>{
+	"forgeApiToken": "YOU_FORGE_API_TOKEN_HERE"
+}
+</code></pre>
+<ul>
+<li>Start the SPT server</li>
+<li>Once the server is fully launched, you can visit the mod’s local web page:<br>
+<a target="_blank" class="external-link" href="https://127.0.0.1:6969/smv" rel="noreferrer noopener">https://127.0.0.1:6969/smv</a> (If the server is not on your computer, use the server IP and port)</li>
+<li>If everything is done correctly, you will see a page with your mods.</li>
+<li>Check out the FAQ section</li>
+</ul></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">FAQ</div>
+<div class="tab-content"><p>If the FAQ didn’t help and you still have questions, you can ask them in the comments or on the SPT Discord:<br>
+<a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1439852757212201080" rel="noreferrer noopener">https://discord.com/channels/875684761291599922/1439852757212201080</a></p>
+<hr>
+<p><strong>This is mod updater?</strong></p>
+<p>NO</p>
+<hr>
+<p><strong>I don’t understand what these multi-colored rectangles are?</strong></p>
+<p>Each mod is a block. The color of the block’s border indicates the mod status:</p>
+<ul>
+<li>Updated - green (This means that your mod matches the latest version posted on the Forge website.)</li>
+<li>Outdated - red (There is a newer/other version on the Forge website)</li>
+<li>Undefined - grey (The mod was not updated or the mod was not found on the forge site (this can happen for several reasons)</li>
+<li>Uninstalled - grey dashed (The mod has been removed from the client or server)</li>
+</ul>
+<hr>
+<p><strong>The profile selection is empty!?</strong></p>
+<p>If you don’t see player profiles (in the filter), you need to first log into the game and then refresh the website page (F5)</p>
+<hr>
+<p><strong>After synchronization, some mods remained unrecognized (gray border)!!!</strong></p>
+<p>There are several options:</p>
+<ol>
+<li>The mod is not uploaded to the Forge servers.</li>
+<li>The mod was not recognized correctly and was not found on Forge.</li>
+<li>The mod is a primary dependency of the SPT (prefix SPT.*).</li>
+<li>Some mods can be complex and contain multiple file mod files</li>
+</ol>
+<p>Solution:<br>
+Each block with a mod has a menu (three dots)</p>
+<ol>
+<li>There’s nothing you can do about it. Just ignore it.</li>
+<li>If you know for sure that the mod is on the Forge servers, then: Menu -&gt; Change GUID (then follow the instructions in the dialog)</li>
+<li>The main SPT dependencies are also a mod. They can generally be hidden so they won’t be displayed again: Menu -&gt; Hide</li>
+<li>You can simply hide non-core mods: Menu -&gt; Hide</li>
+</ol>
+<hr></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.0</h2></div><time datetime="2025-12-29T13:37:00.000000Z">29 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,339 downloads</span><span>2.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Added mod state UNINSTALLED (grey dashed block)</li>
+<li>Mod state filter now has a visual cue.</li>
+<li>Added the ability to remove information about uninstalled mods (menu option)</li>
+<li>Fixed an issue with detecting the latest version of the mod</li>
+<li>Fixed a visual display issue with the mod type filter: “0, 1, SERVER, CLIENT”</li>
+</ul>
+<p><img loading="lazy" decoding="async" src="../../../assets/0aace004df38b6c48be7235b8cd36ca8c52d6947174323066aa62644db44fece.webp" alt="preview"></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/44313fd69b739072d6afe31e740e2eefbcfe79dbba8c9cf0f89b400ad6e92783?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122340906/be87dc5c-73ff-4604-8085-67d01534e207?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A42Z&amp;rscd=attachment%3B+filename%3DSPT-ModViewer_030.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A11Z&amp;ske=2026-08-01T21%3A06%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9Cl2bvCuIgkpW%2B%2Fgd6VZ%2FH5OVnrhX4Z2IG4pFyiZilE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3DSPT-ModViewer_030.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0</h2></div><time datetime="2025-12-27T13:08:00.000000Z">27 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>499 downloads</span><span>2.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Please read the installation instructions before use mod. See “Install” tab in mod description</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url-analysis/u-dd2ca6992669b2d12e79c6f5e90d45c997f98f63f88b992365821b1c7e50dcda-267f80b3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1122340906/14611a45-a4d5-4986-b407-9beaeafef186?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A26Z&amp;rscd=attachment%3B+filename%3DSPT-ModViewer_0201.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A21Z&amp;ske=2026-08-01T21%3A17%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kmTzWwPzGOcal0DIRQFJ%2Be%2FQW3lK0BAOP6HXoaC3MeM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE1MiwibmJmIjoxNzg1NjE1ODUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.lz4FqoUt6f6D0mL6IRm7GyppVqMMjw_CWTyoMf-ewrY&amp;response-content-disposition=attachment%3B%20filename%3DSPT-ModViewer_0201.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>hiop.spt.mod.viewer</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>27 December 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/hiop/SPT-ModViewer" target="_blank" rel="noreferrer noopener">core mod</a></li><li><a href="https://github.com/hiop/SPT-ModViewerFront" target="_blank" rel="noreferrer noopener">front</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

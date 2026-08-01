@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>WTT - CommonLib · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>WTT - CommonLib</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/4573e8c7d6f56b982aa17aa49e4e1978c49361c081def26e42772a923850998e.webp" alt="WTT - CommonLib thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>WTT - CommonLib</h1>
+    <p class="hero-teaser">A modding utility library that eliminates boilerplate when adding custom items, quests, characters, and more to SPT</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0eeedc1600fe92c49dc4e348ebca22a594f613e02856dcc89047dde665e3da2c.webp" alt="" width="32" height="32">GrooveypenguinX</span>
+      <span class="author"><img src="../../../assets/935ecb0127d2ea236270faa079fffebd95b2907ac6d624be31833f2f699fd051.webp" alt="" width="32" height="32">Tron</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>309,268</dd></div>
+    <div><dt>Favourites</dt><dd>573</dd></div>
+    <div><dt>Mod lists</dt><dd>719</dd></div>
+  </dl>
+</article>
+
+
+
+
+<div class="warning-box">The author marked this item as containing advertising.</div>
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="WTT - CommonLib content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>23</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><p><strong>DISCLAIMER</strong>: <strong>YOU CANNOT INCLUDE THIS MOD IN YOUR RELEASES - ONLY LIST IT AS A DEPENDENCY</strong></p>
+<p><strong>WTT-CommonLib</strong> is a comprehensive modding library for SPT (Single Player Tarkov) that streamlines the creation and integration of custom content in Escape from Tarkov. It automatically handles both server-side database changes and client-side resource loading, allowing mod authors to add new items, quests, loot, character assets, crafting recipes, and more with simple service calls and straightforward JSON configuration.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Custom items with helpers to integrate into traders, loot containers, hideout areas, and more</li>
+<li>Custom quests and quest zones</li>
+<li>Character customization (heads, voices, clothing)</li>
+<li>Lootspawn system for random loot items and forced quest items</li>
+<li>Hideout crafting recipes</li>
+<li>Multi-language localization</li>
+<li>Custom buff effects, inventory profiles, weapon presets, rig layouts, and more!</li>
+</ul>
+<p>For detailed implementation guides and full API documentation, see the <a target="_blank" class="external-link" href="https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md" rel="noreferrer noopener">README on GitHub</a>.</p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><hr>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/3N6gTe2.gif" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/f8a882020797ae7b0f90dc418fa7bf212be49d7205750ccf2c1ace20c747fbae.webp" alt="vKRw58b.gif"></a></p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">What is WTT?</div>
+<div class="tab-content"><p><strong>What is Welcome To Tarkov?</strong></p>
+<p>Welcome To Tarkov (WTT) is a mod for SPT AKI that has been in development for over a year. What started as a small passion project has grown in size to incorporate 15+ core members as well as contributions from other well-known mod authors and friends of WTT alike.</p>
+<p><strong>How does Welcome To Tarkov change the game?</strong></p>
+<p>As a mod, WTT overhauls SPT AKI, touching on almost every vanilla game system, as well as adding completely new systems to the game and its core mechanics. Inspired by open-world hardcore survival projects like STALKER: Anomaly and STALKER: GAMMA, WTT takes SPT’s artificial multiplayer MMO difficulty adders and replaces them with a challenging world economy, loot scarcity rebalancing, a lore friendly quest overhaul, and a map-traveling system built from rewritten portions of the Traveler mod allowing seamless travel between maps. Aside from its changes to the game’s core properties, WTT also adds to the world’s variety of traders, NPC’s, characters, items, and quests:</p>
+<ul>
+<li>Over 1,000 custom bundles adding new weapons, attachments, wearables, containers, food, medical, and barter items.</li>
+<li>New bosses with their own custom gear that will be properly incorporated into WTT’s quest lines.</li>
+<li>New, meaningful traders with their own lore-friendly quests and narrative elements to help the player progress through the story-line of WTT.</li>
+<li>New playable characters and outfits that will add to the player’s customization abilities.</li>
+<li>New quest types incorporating brand new map extraction points, putting the player’s knowledge and familiarization of SPT’s maps to the test.</li>
+</ul>
+<p>Welcome To Tarkov stands as one of the largest mods created for SPT AKI thus far.</p>
+<p><strong>When does Welcome To Tarkov release?</strong></p>
+<p><em>Thursday.</em></p>
+<p><strong>Which Thursday?</strong></p>
+<p><em>TBD</em></p>
+<p><strong>Want to follow our progress?</strong></p>
+<p>You can follow the project through it’s development in our discord here:</p>
+<p><a target="_blank" class="external-link" href="https://discord.gg/WelcomeToTarkov" rel="noreferrer noopener">https://discord.gg/WelcomeToTarkov</a></p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">WTT Standalone Mods</div>
+<div class="tab-content"><p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2952-wtt-armory" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/e77d9c43e7828fec902ba124cd755d7270e016fc40d3327d381d24b765fd4863.webp" alt="image.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2823-wtt-corner-store/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/11de52ed9e09ddaf7157c611e9a1feee77651fd24da006fa6f90292d0a6225c7.webp" alt="corner.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1858-wtt-the-long-lost-heads-of-yojenkz/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/77cddd50d52434278ea83135f9091718cf71579dcf3f6a56d5a03b649b41be06.webp" alt="heads.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2412-wtt-menu-overhaul/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/f24c5bb9fcfd7810bb01338c8f6449bb19de8e6499a8c311a94532e74f9e5abb.webp" alt="menu.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1790-wtt-pack-n-strap/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/e38345545f9afe2891c1fc06420bfb11c2a6f37e215e413894a9283d7223afaf.webp" alt="packnstrap.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2175-wtt-taste-the-rainbow/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/b19801d3d7d01add49de9bb1e30627cee6105244b3d750b2e4a4a6e031e88e02.webp" alt="rainbow.png"></a></p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2085-wtt-w-a-a-c-women-s-advanced-assault-corps/" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/f01101d71f7344714b1fba5eef06dd2f45c516437cf82f097022db652a5f0b0a.webp" alt="waac.png"></a></p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.23</h2></div><time datetime="2026-07-26T04:25:00.000000Z">26 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>15,949 downloads</span><span>240.0 KB</span>
+          </div>
+          <div class="prose version-notes"><p>reduced the error logging to be behind config.
+MODDERS THAT USE COMMONLIB - ENABLE ITEM DEBUGGING IN THE CONFIG AND FIX YOUR SHIT</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OTcwYTkyZjZlNjQxODU3ZGJiOTEzM2Y0NmM5NjMxMjE6MTc4NTAzOTk3MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/90b49958-59ed-4d56-9216-e8b764b1ba8f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A11Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.23.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A35Z&amp;ske=2026-08-01T20%3A59%3A11Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=aC92ctpsTRFYPfGv%2FubzAaamhaSj2J1q%2BlY61qSDRdA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.23.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.22</h2></div><time datetime="2026-07-25T17:47:00.000000Z">25 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,537 downloads</span><span>240.1 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>FINALLY fixed salvage zones :prayge:</li>
+<li>salvage zone UI update + icon!</li>
+<li>add random craft result amount options</li>
+<li>initialized buyrestrictioncurrent for traderhelper barters (ty for the detailed bug report!)</li>
+<li>added client handling for random craft amounts</li>
+<li>added better validation warnings and a config for validation logging</li>
+<li>added fixplugintypesserialization patcher (thank you tarkin ❤️)</li>
+<li>added new quest service for making quest items</li>
+<li>removed dependency on spt customitemservice</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZDQ0ZjdjNDVkMGEzNzM0ZGIyYTQ3MTc5ZjU1OTVhNWQ6MTc4NTAwMTUwOA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/c55a9268-1cd8-4d5f-8cc4-b752efb22b1b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A49Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.22.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A14Z&amp;ske=2026-08-01T20%3A59%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8d5qaqPdCpdEp%2BbJiBycx%2F99VKXzeIkkihdWM7rW3vo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.22.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.20</h2></div><time datetime="2026-04-25T04:15:00.000000Z">25 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>103,393 downloads</span><span>163.5 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Version so good it jumped a number!</p>
+<ul>
+<li>new hideout crafting expansion by pein, now supports multi-endproducts and endproducts with nested children</li>
+<li>reworked custom parent mapping into a server service + client attribute (also by pein)</li>
+<li>separated logic in the slothelper methods, added a new one</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/c37bb8ee5205432d41cfc3c22c1ec4c3fe509a94b69293c5433ff5e9bcc9974a?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cac39e09-0eb5-4e45-9648-83120049c486?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A32Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.20.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A23Z&amp;ske=2026-08-01T20%3A59%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BbFvdprKIf4Fxmcl4l%2FtYFtLyq4nGSr0oid9bn27HoU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.20.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.18</h2></div><time datetime="2026-04-11T22:24:00.000000Z">11 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.2</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>17,220 downloads</span><span>153.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added new itemservice helper for adding items to blacklist</li>
+<li>fixed nuget package forcibly including the en.json locale for the salvage zones in your project /bonk</li>
+<li>fixed slothelper method and added support for creating new slot info</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2465f8b46284ab62dd7514e90ea101c06537c58f33cdeac5814dcfc692df07e3?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/f1460ba4-4ed0-4d21-a675-04cadc22a27b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A30Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.18.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A02Z&amp;ske=2026-08-01T21%3A00%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=awyl4Jo5VPJvaS7hBKh8KebPuZtNT%2BQDgSjQlMgE%2FyM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.18.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.17</h2></div><time datetime="2026-04-08T13:26:00.000000Z">8 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>4,870 downloads</span><span>148.3 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>fixed hideout crafts service not supporting anything but arrays /bonk</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YWM5YjljOTM5ZTUwZjkwOWM5YTUwY2E5YjQzNjVhNTc6MTc3NTY1NDcyMg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/76c20e21-13cf-4344-be67-485a003e0d64?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A18Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.17.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A51Z&amp;ske=2026-08-01T21%3A24%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BGYNgPxDApKSnQ0cgAUYtmvrPfqTOPspgLSqSLg7lXc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.17.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.16</h2></div><time datetime="2026-04-07T22:15:00.000000Z">7 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,465 downloads</span><span>147.9 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added new helper to slothelper to add ids by name</li>
+<li>Added fix custom item sort order patch (thanks Pein! ❤ )</li>
+<li>Added new “Salvage” zones to possible quest types</li>
+<li>Added locales for the salvage zone interactions</li>
+<li>Fixed hideout crafts not supporting .jsonc /bonk</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MTYyZTNjZTllY2MzMThiOWEzOWRlN2NlNDIzMzQyMjQ6MTc3NTYwMDExNQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/045b74b8-6920-4385-8897-34b0f4f134e9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A43Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.16.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A27Z&amp;ske=2026-08-01T21%3A10%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=E5i4CmAWxHgRUWxdOXB4znSbiXWzTpbluBGTZs8mD88%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMSwibmJmIjoxNzg1NjE1ODMxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.9u5hzu7rhoZuWa8TPYrKx-9FGNno9Oj1QSeGi1QMQK4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.16.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.15</h2></div><time datetime="2026-02-02T21:52:00.000000Z">2 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>49,017 downloads</span><span>138.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Implemented random loot container support for customitemserviceextended</li>
+<li>Added save method to confighelper</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ODg3MzEyN2I1ZTVlYjIzMWM2ZTk3ZTgzZTg0MDg2ZGI6MTc3MDA2OTE1Ng==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/09a925a0-6614-4de2-9a5d-07c627aec09c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A42Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.15.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A05Z&amp;ske=2026-08-01T21%3A11%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7FkszMllNx2IBmGZ%2FCeCUGg%2Bjoc9%2B914%2FWU6UtsRU68%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.15.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.14</h2></div><time datetime="2026-01-26T05:01:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>8,155 downloads</span><span>137.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>HOTFIX NUMBER 2 FOR THE DAY REEEEEEE</p>
+<ul>
+<li>fixed caliberhelper from being completely broken. PLEASE DOWNLOAD THIS VERSION IF YOU UPDATED TODAY.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/fe34c0c03bf69a2aaf44aeca61d23c233690e0f24780dd64c40b8b8f7ad5d25d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/41ba58e4-7631-453e-9d6b-36447ec93ecb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A50Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.14.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A41Z&amp;ske=2026-08-01T21%3A14%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=zvwdBIeBZg%2B3DC3A0XclpY7e4TeesmjggXiCQJXkDJE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMiwibmJmIjoxNzg1NjE1ODMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RJ7Robpip8uAXP_odX5WEfzhtyIxAjeSRL2lFj8FmnM&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.14.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.13</h2></div><time datetime="2026-01-26T02:14:00.000000Z">26 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>314 downloads</span><span>137.6 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>fixed questhelper adding to empty weapon conditions (specifically a punisher part 4 issue)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MDBiZTMxZGM2ZWNmOTZlMTY2NzdiYjVhZDg2Mzg5NjY6MTc2OTM5MzY2Mw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/b072bf61-14f6-4113-b6e3-2d425c8b293a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A21%3A59Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.13.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A01Z&amp;ske=2026-08-01T21%3A21%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Cf%2FHywaQx8MujqXe2Q2TOW5sQQH4dF%2FdZkEoCEdXY6E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.13.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.12</h2></div><time datetime="2026-01-25T22:01:00.000000Z">25 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>391 downloads</span><span>148.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added weapon mod quest helper method</li>
+<li>added CustomDialogueService for custom NPC Dialogues</li>
+<li>changed CaliberHelper to process deferred like modslots (should allow for better compatibility for ammo)</li>
+<li>fixed custom modslot images becoming blurry on low texture settings (Thanks Pein!)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZGJiMTQ1YjlkYTM5MGQyNDc5ZGQ0ZDc1YzA0YWU3NTY6MTc2OTM3ODQ5MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/8b8d83f8-7005-4193-82ec-bc9377e9804c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A50Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.12.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A17%3A07Z&amp;ske=2026-08-01T21%3A17%3A50Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=U6xPphzTBqqqduB%2F8QUBp7GSRnkKLTnRDrqJ2rCMOzk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.12.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.11</h2></div><time datetime="2026-01-03T04:04:00.000000Z">3 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>28,470 downloads</span><span>146.1 KB</span>
+          </div>
+          <div class="prose version-notes"><p>added helper method for dogtag quests</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MWRhNWRlM2RlYTcyNDY2NDk4ZTY5ZTZkMzZhMWFkMWI6MTc2NzQxMzA1OQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/0bdf86b4-6ebd-412c-991a-29ca947b53c4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A48Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.11.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A53Z&amp;ske=2026-08-01T21%3A07%3A48Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=HaAD6kVB4FdqGAtjQi9qaSjACN5VYtbf%2FTqolMBShMs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.11.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.10</h2></div><time datetime="2026-01-03T03:04:00.000000Z">3 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>343 downloads</span><span>145.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added questhelper</li>
+<li>force image cache if using fika because of local headless skill issue</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MzIzODA1ZmJkMTk1MzJhODZhNzg3MjA3ZWU1OWUyMTg6MTc2NzQwOTQ3NQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/742b7365-49ae-47e6-b73a-5dd37d1e5edf?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A43Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.10.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A48Z&amp;ske=2026-08-01T21%3A10%3A43Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ZxqJtjohe9SzXRBsv6ckKFXaTL5iJrEavut4QSSAtTI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzMywibmJmIjoxNzg1NjE1ODMzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rd6sQrF_INC2hGtrd0i0obWWFI_oWDmZSwWvcKOkdKo&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.10.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.9</h2></div><time datetime="2025-12-27T19:17:00.000000Z">27 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>13,701 downloads</span><span>143.9 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed Fika loading issue with icons!</p>
+<ul>
+<li>added new ImageManager that works similar to spt’s BundleManager, creating a cache of icons and textures if needed</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZWZmMDFlOWRhNWJlNmNmZjRlNTI0MWViYzdmMDBmOTA6MTc2Njg2MzAzMQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/a138c133-d06a-4f14-a35a-84992503e271?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A21Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.9.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A23Z&amp;ske=2026-08-01T21%3A00%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fCnZWamPb79FXlcw%2FcfkmaTedLApRkVuygXR27M%2FMAM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.9.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.8</h2></div><time datetime="2025-12-26T02:07:00.000000Z">26 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>6,925 downloads</span><span>137.2 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added customisation helper methods</li>
+<li>bugfixes</li>
+<li>sanity checks (thanks bushtail)</li>
+<li>more i’m definitely forgetting</li>
+</ul>
+<p>I wonder why commonlib is updating today….</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NzM1ZTc2NGViMmFjNjYwZTVlZDk2ZWE0YWUzM2E1YTY6MTc2NjcxNDgzNw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/31de379b-2033-4a66-a9be-1bbcca6a2aaa?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A33Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.8.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A19%3A08Z&amp;ske=2026-08-01T21%3A19%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=exjE2c31d%2BwWjHuoNKlzuhr5iYukrxXCmruHobr32bo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNCwibmJmIjoxNzg1NjE1ODM0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ugFJwjA8EgZog5yIKY0qfeg8ZQBOXHGdnj_eEkbV3E4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.8.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.7</h2></div><time datetime="2025-12-07T20:51:00.000000Z">7 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>16,149 downloads</span><span>136.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>What’s Changed:</p>
+<ul>
+<li>Fixed AddGeneratorFuel by @kittycat2002</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MzFjMDI5NTIzOWZjOGNlYjhhYTQwYWZlMjRiMjkzNWY6MTc2NTE0MDYwNw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cf0e5f84-9f13-4097-a5db-f065f1308047?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A32Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.7.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A59Z&amp;ske=2026-08-01T21%3A13%3A32Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fX0Uj8vAxlqr2S4SOKr1QnUci5w%2BWiUSpPTekQsTePI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.7.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.6</h2></div><time datetime="2025-12-04T21:03:00.000000Z">4 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>4,171 downloads</span><span>136.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Changed bundle loading methods for Static Spawn Service and Audio Service to load using SPT’s BundleManager, should alleviate any fika issues. <strong>THIS WILL REQUIRE ANYONE WHO USES THESE SERVICES TO REGISTER THEIR BUNDLE IN THE BUNDLES.JSON PROPERLY, PLEASE CONSULT THE README</strong></li>
+<li>Implemented new Custom Customization Service, with support for Hideout Customizations such as floors, ceilings, walls, and shooting range marks, as well as normal customization items like dogtags and such.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MmYwNzQxZDBlNzBhYTlkOWY4Zjc0NGU2ODM0ZTA3NzY6MTc2NDg4MjE2MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/1b72927b-9eae-4b1f-91e0-3ea1934ceb6d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A14Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.6.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A34Z&amp;ske=2026-08-01T21%3A15%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=cF4WTBbE4EkGicKndrADCY5coE0AnZK70mn7VodptQ0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.6.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.5</h2></div><time datetime="2025-11-24T00:22:00.000000Z">24 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>12,171 downloads</span><span>121.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added support for nested folders for quest locales</li>
+<li>added support for multiple crafts per file</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OTliOWVmOWQwZmRiN2E3ZGUxZTMyYTkzNjQ3MWRhZTk6MTc2Mzk0Mzc0NQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/d2422fd4-802e-4d17-b614-4ca99876667b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A28Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A10Z&amp;ske=2026-08-01T21%3A20%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fsd4NaHvwGy0ARAOrVF7OeXo4yUu6j7QLGCAM7PB2Z8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNSwibmJmIjoxNzg1NjE1ODM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgaOHDVZEU69aVOEtF5iyzgcON6TtGAWSJa9PitUEdg&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.4</h2></div><time datetime="2025-11-12T15:56:00.000000Z">12 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>11,854 downloads</span><span>121.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed more gameworld.mainplayer references for fika headless compatibility
+Added packet delivery system for static spawns for fika compatibility</p>
+<p>This version works for fika and spt, it only loads the fika helper assembly if fika is present. This should hopefully fix the last issues for headless crashing on raid start, but if there are still issues let me know!</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZjUyOGY4ZjRkM2VlMjM3MzI5MDUzNGU5ZWE2ZDU1MmU6MTc2Mjk2Mjk4OA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/7131fc8c-3271-432f-8c29-cd085c942083?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A19Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A53Z&amp;ske=2026-08-01T20%3A59%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Si4DDMxu3mz8XNSFR9wtL4kj%2BweKMcrEQQ6j6HLEZpU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.3</h2></div><time datetime="2025-11-11T20:41:00.000000Z">11 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>867 downloads</span><span>125.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>fixes headless crash when using fika. ONLY NEEDED FOR FIKA HEADLESS USERS</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MzAxN2E1NWUyZWZkZmE2NGIxNmJlNTA5ZTYzMTRlODA6MTc2Mjg5MzY3Ng==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/6373f5b9-be01-4abb-9b5d-9eacdc22f0b4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A21%3A42Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A48Z&amp;ske=2026-08-01T21%3A21%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xWZaGo8KsrdgMcB1S72DLmSB9jLHfEOUdCV8oed3UFs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2025-11-11T17:21:00.000000Z">11 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>445 downloads</span><span>125.4 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added customachievementservice &amp; modslot helpers</li>
+<li>removed debug lines causing confusion when locales/questdata weren’t present</li>
+<li>fixed a major issue with customassortservice adding multiple mods assorts multiple times /bonk</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZjI2YjkwNWQzNjg1OGQwY2Y0NzgyODM1YzcxZjNlZDA6MTc2Mjg4MTY2NQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/cfe750cd-57d3-4cba-a74f-5d1d42a4f653?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A16%3A05Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-v2.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A40Z&amp;ske=2026-08-01T21%3A16%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=y85r56AEtXXRvGgWoBn0UsNIV0R7%2FQG8pUm1NlTl4VE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNiwibmJmIjoxNzg1NjE1ODM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rvLLH1G3bzYgX4-o6Ad22eKuq7vkmgXd_9kwdce_z_4&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-v2.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2025-11-06T06:14:00.000000Z">6 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,681 downloads</span><span>88.6 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>added new helper method for customitemserviceextended for secure filters</li>
+<li>added missing properties to clothing configs for questrequirements and achievementrequirements (skillrequirements will have to wait until next major SPT verison)</li>
+<li>fixed side locked quests not working properly /bonk</li>
+<li>added buyrestrictionmax for trader barters in customitemserviceextended</li>
+<li>added new customaudioservice for facecard and radio audio</li>
+<li>renamed customprofileservice method from add to create for consistency</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/M2JjNTU2ODAzYzE3YjFhYzY4YmYzMWM3OWI3Njk5NWY6MTc2MjQwOTY3MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/28ba3935-5d3e-4eec-a31b-91e9afde878a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A02%3A45Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-.2.0.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A25Z&amp;ske=2026-08-01T21%3A02%3A45Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TEeR1EaOJJr7yj5zTzKVs9oXFAf5U9%2F6MUb1el4qvL8%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-.2.0.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-11-02T01:46:00.000000Z">2 November 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,831 downloads</span><span>79.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>2.0.0 - Unified API Release</h2>
+<p><strong>Major Update</strong></p>
+<ul>
+<li>Combined client and server CommonLib into unified framework</li>
+<li>New server-side services for custom items, quests, loot, bots, and more</li>
+<li>Custom item template registration with full client instantiation support</li>
+<li>Updated guid: use <code>com.wtt.commonlib</code> dependency</li>
+</ul>
+<p><strong>Breaking Changes</strong></p>
+<ul>
+<li>Update <code>BepInDependency</code> from <code>com.aaaWTT.ClientCommonLib</code> to <code>com.wtt.commonlib</code></li>
+</ul>
+<p><strong>See full documentation on GitHub</strong></p>
+<p><a target="_blank" class="external-link" href="https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md" rel="noreferrer noopener">https://github.com/WelcomeToTarkov/WTT-CommonLib/blob/main/README.md</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b8ab4f97b38e965c3921afb4c1973482219d4c18544a36638a2f0335d409777d?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1079537268/fd81187b-f3bc-40f5-b76f-29512c84606a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A26Z&amp;rscd=attachment%3B+filename%3DWTT-CommonLib-2.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A19Z&amp;ske=2026-08-01T21%3A15%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ilQaG%2FAUTvpTpRpqn5Lj6au%2Bh%2Fhq3BJcNrjtaFq3V9k%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DWTT-CommonLib-2.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-09-15T02:44:54.000000Z">15 September 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,349 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e812490e01d6602d2e41b939f798661e52875c495c582036e2f9cf3de86b3f9d?noca" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1056772576/46cf2bf7-1475-471b-a05c-71b7d9a68811?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A36Z&amp;rscd=attachment%3B+filename%3DWTT-ClientCommonLib.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A14%3A56Z&amp;ske=2026-08-01T21%3A15%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6dzSgkfad7RGHn4%2ByFJM4QQggeDfzyMFQaq%2FTjxKgtI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjEzNywibmJmIjoxNzg1NjE1ODM3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.v9fsHgH3KegIhN7X0M47JSWfkSvy_ID2AQpW-jb2G5Q&amp;response-content-disposition=attachment%3B%20filename%3DWTT-ClientCommonLib.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.wtt.commonlib</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>15 September 2025</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/WelcomeToTarkov/WTT-CommonLib/" target="_blank" rel="noreferrer noopener">Commonlib</a></li><li><a href="https://github.com/bmpq/FixPluginTypesSerialization" target="_blank" rel="noreferrer noopener">FixPluginsTypesSerialization Patcher</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

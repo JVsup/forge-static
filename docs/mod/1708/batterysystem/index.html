@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>BatterySystem · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>BatterySystem</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/952cdb5076d6e1432cadaeee707dca56a34ff3fd88f274bcc76ff0c886fba1cc.webp" alt="BatterySystem thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>BatterySystem</h1>
+    <p class="hero-teaser">Electronics now require drainable batteries.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/d08ba8394afa75ba1e2581cb96a92567c62ddc059e52b698717accff6b3a8919.webp" alt="" width="32" height="32">birgere</span>
+      <span class="author"><img src="../../../assets/e254dfc0a72a29912b76eb48a2860aaace9337825aab0f730b783b61b8a55c1b.webp" alt="" width="32" height="32">Jiro</span>
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,770</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="BatterySystem content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>Huge thank you to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1295-batterysystem/" rel="noreferrer noopener">Jiro for making this mod</a>!</strong></p>
+<p><strong><strong>This mod is not mine, I have only refactored the code &amp; fixed some of the largest issues!</strong></strong></p>
+<p><strong>Features</strong></p>
+<ul>
+<li>All Headsets, Tactical devices, Sights &amp; Thermal/NVGs now require batteries and have a slot reserved for them. Batteries are drained over time when the item is equipped and in use.</li>
+<li>Without batteries Sights lose their reticle (you can still see through them!) and NVDs &amp; tactical devices won’t work.</li>
+<li>Bots have batteries in their gear &amp; backpacks. Lower level enemies generally have more drained batteries.</li>
+<li>Several crafts in the hideout make it possible to recharge &amp; make batteries.</li>
+<li>Device description lets you know which battery type is required, but generally headphones always take AAs, Sights take either AAs or CR2032s, Holographic sights (like EOTECHs) and flashlights take CR123s.</li>
+</ul>
+<p><strong>Replaces Existing items:</strong></p>
+<p>D Size Batteries =&gt; CR2032 Batteries</p>
+<p>Rechargable Batteries =&gt; CR123 Batteries</p>
+<p><strong>Installation</strong></p>
+<ol>
+<li><strong>Install like normal:</strong> Drop the extracted user/ and BepInEx/ folders into your SPT installation folder.</li>
+<li><strong>Refresh Item Icons:</strong> After starting the Server, in Launcher click Settings &gt; Clean Temp files.</li>
+</ol>
+<p><strong>Compability</strong></p>
+<p><strong>BatterySystem conflicts with any mod that modifies D Size Battery or Rechargable Battery.</strong></p>
+<p><strong>Any mod that alters hearing (such as a deafening effect) won’t probably work well with unpowered headsets. I recommend disabling BatterySystem for headsets in the F12-menu.</strong></p>
+<h3><strong>Adding compatibility for custom electronics such as collimators:</strong></h3>
+<ol>
+<li>Open up order.json in your SPT-AKI/user/mods/order.json</li>
+<li>Add the folder names of your mods that add electronics. Add Jiro-BatterySystem after them:</li>
+</ol>
+<p>JSON: order.json</p>
+<p>{ “order”: [ “CustomSightModFolderName”, “AnotherCustomSightFolderName”, “Jiro-BatterySystem” ] } Custom electronics default to using CR2032 batteries.</p>
+<p>Written permission from <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/35452-jiro/" rel="noreferrer noopener">Jiro</a> to publish this updated version:</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2024-09-04T11:49:57.000000Z">4 September 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,770 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Tested with SPT 3.9.4</strong></p>
+<ul>
+<li>Updated to work with SPT 3.9.4</li>
+<li>Fixed bug where game would soft lock when you entered a Mounted Firearms</li>
+<li>Reworked battery spawning to be compatible with Realism Mod (Bots will now have batteries)</li>
+<li>Headphones that attaches to helmets now use batteries</li>
+<li>Tactical devices attached to helmets now use batteries</li>
+<li>Flashlights &amp; Lasers are now always turned off (not only visually) when out of battery, which should fix desync &amp; bots seeing lights that dont have batteries</li>
+<li>Some work on WIP feature “folding” backup sights (not working yet)</li>
+<li>Refractored almost all code (should be a lot easier to add new features now)</li>
+</ul>
+<p>^ Work since Jiro’s last update</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/656c83b28fd91c77151182e1d509ec83bd01d3e0b59dd74b93fce0bad27eb693" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/834976981/505437b3-ce43-4b68-aea1-ef90e4331401?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A42Z&amp;rscd=attachment%3B+filename%3DBatterySystem-v1.6.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A28Z&amp;ske=2026-08-01T21%3A07%3A42Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=k6%2B9Au9DaXkYX0Lf5tDdSt6TN5pbfwmvV2dhH3TwIiA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTY1MSwibmJmIjoxNzg1NjE1MzUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.fPq4h55TjT18Qdb6IGx1MU4weX3b1AdZCgBQPYdwuZs&amp;response-content-disposition=attachment%3B%20filename%3DBatterySystem-v1.6.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>4 September 2024</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Birgerev/BatterySystemMod/tree/master" target="_blank" rel="noreferrer noopener">https://github.com/Birgerev/BatterySystemMod/tree/master</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

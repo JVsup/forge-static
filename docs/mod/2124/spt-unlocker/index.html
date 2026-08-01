@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>SPT_Unlocker · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>SPT_Unlocker</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/66b0c0d5b97834fdbbbf22c6e579897c11998def05666d37444f01843a905bd6.webp" alt="SPT_Unlocker thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>SPT_Unlocker</h1>
+    <p class="hero-teaser">Unlock doors, containers, exfils (PMC and scav), and send items back to stash mid raid.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8f3afc4b2c9ad7b02da5d8515262e4f4b72e50fabbdd0aed622242eaa7fb5438.svg" alt="" width="32" height="32">BoredUltimatum</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>5,975</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="SPT_Unlocker content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>This is a proof of concept mod as a learning experience but appears to be working. At the start of raid it unlocks doors, containers, and/or exfil locations (including scav).</p>
+<p>Press F12 to bring up the SPT plugin settings window and under SPT_Unlocker:</p>
+<ul>
+<li>Unlock Doors Enabled: unlocks doors</li>
+<li>Unlock Containers Enabled: unlocks ‘lockable containers’ such as safes, Shturman’s stash, etc</li>
+<li>Unlock Exfils Enabled: unlocks PMC exfils regardless of spawn location</li>
+<li>Exfil Guaranteed Chance: all exfils are guaranteed to be active (vehicle extracts, etc)</li>
+<li>Unlock Scav Exfils for PMCs: adds scav exfil locations to PMC’s</li>
+<li>Open Item Transfer Menu: configured key opens an item transfer menu to send items back mid raid</li>
+</ul>
+<p><strong>KNOWN ISSUES</strong>:</p>
+<ul>
+<li>When disabling scav extracts after having them enabled for a raid, a timer will still come up when entering a scav exfil zone; however, the player won’t extract when the timer ends.</li>
+<li><em><strong>[Fixed in version 1.0.3]</strong></em> When transferring non empty containers (bags, etc) the EFT internal code packs them in such a way that breaks their delivery. Working on a fix for the root cause. A manual workaround for now is to update the user/profiles/{GUID}.json file, under ‘dialogs’ and the BTR ID ‘656f0f98d80a697f855d34b1’, find the bad message and update the ‘items’ field such that:
+<ul>
+<li>‘stash’ is the BTR ID ‘656f0f98d80a697f855d34b1’</li>
+<li>any entries under ‘data’ where ‘parentId’ is ‘656f0f98d80a697f855d34b1’ then the ‘slotid’ should be ‘main’</li>
+</ul>
+</li>
+</ul>
+<p>Again, this is a proof of concept. Please notify of any bugs.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2025-05-08T03:11:30.000000Z">8 May 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>4,751 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Fixed transferring non empty containers (bags, etc) being delivered correctly in message attachment.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/48126ecf0dc30d7c571a4b27d16cf7eea9b4e93f3b9241e7bb5e7782b2aece84?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://github.com/BoredUltimatum/SPT_Unlocker/blob/main/ReleaseZips/1.0.3.zip" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>3 May 2025</dd></div>
+      <div><dt>Updated</dt><dd>13 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/BoredUltimatum/SPT_Unlocker" target="_blank" rel="noreferrer noopener">https://github.com/BoredUltimatum/SPT_Unlocker</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

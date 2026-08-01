@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>You inSure About That?! · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>You inSure About That?!</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/5f90dc822c7c2a19c76e87704210636b8c9d0cbc148a7757ec0b5ba633a4c854.webp" alt="You inSure About That?! thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>You inSure About That?!</h1>
+    <p class="hero-teaser">Insure anything. Insure Everything. Go ahead, give Prapor money to insure your money so you get your money when you lose your money, you kooky kid.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/af2ca82311a4e02657036ecb1976cfbd09eb9c0482057bd49ff32d0f71d773ef.webp" alt="" width="32" height="32">Solid-Rhoads</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>626</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="You inSure About That?! content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h2><strong>Description:</strong></h2>
+<p><em>Got one more mod from my “personal collection”; Actually it was just a component of a larger server mod that I split off because I realized there isn’t currently a mod on the hub that makes all items insurable (check the config). This mod is admittedly a little finicky as it was a quick and dirty solution to a problem I had (see the known issues). Take it for what it is</em></p>
+<p><em><img loading="lazy" decoding="async" src="../../../assets/d45361f1268822473e251943c83b62ab9bbc3eaed2398963d02ac25c89b2394e.webp" alt="rBcjrLj.png"></em></p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Installation</div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">How to Install:</div>
+<div class="tab-content"><p>Mhmmm, just like that</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/cb37fe47ffc1630128e6cfe740026187233979518140debb0ed8d4010cabe876.webp" alt="vKRw58b.gif"></p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Config</div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Configuration:</div>
+<div class="tab-content"><p>There is a configuration file in the mod folder - config/config.jsonc where you’ll find the following:</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">{ “Insurable”:{ “knives”: true, //includ</div>
+<div class="tab-content"><p><img loading="lazy" decoding="async" src="../../../assets/251f51bad6775e9a0bdde9a05f7c1bae1e1de03a9f77b453379efe00a235b0b2.webp" alt="GJIrmtz.png"></p></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">Known Issues:</div>
+<div class="tab-content"><ul>
+<li>For some reason the mod also sometimes allows for you to drop/discard insured items and get them back, similar to the <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2433-insurance-fraud/" rel="noreferrer noopener">Insurance Fraud</a> mod and its <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2845-insurance-fraud-port-to-3-11/?highlight=insurance%20fraud" rel="noreferrer noopener">3.11 counterpart/update</a>. This is unintentional and I haven’t bothered to find out why I’m also probably not going to. Sowwy.</li>
+<li>Because of the way Tarkov’s ID system works, insuring stacks is finicky. When you insure a stack of ammo for example, you are not insuring every individual round. You are insuring the stack itself. So if you remove a round from the stack, the stack remains insured, but that round loses its insured status. This extends to nearly all types of stacks, and even ammo in magazines (if configured to be insurable).</li>
+<li>I haven’t tested every item, so there may be some weird exclusions. (actually I’m pretty sure I know of one already; the leatherman multitool has its own parent class all on its own for some reason and I didn’t add it to this mod)</li>
+</ul></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Conflicts:</div>
+<div class="tab-content"><ul>
+<li>Will this mod work with <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2115-insurance-plus/" rel="noreferrer noopener">Insurance Plus</a>?… I don’t know. Probably. But I didn’t check. If someone finds out put it in the comments and I’ll update this section.</li>
+<li>This mod has a few functions that are covered by other mods as well, such as <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm/" rel="noreferrer noopener">SVM</a>, and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2117-trader-qol/" rel="noreferrer noopener">Trader QoL</a>. All I can say is if you are using multiple of these double check your load order and configs to make sure you don’t overwrite or contradict something. Example: you make Insurance work on labs in SVM but then its still set to false in this mod and it overwrites it. I might add more configs to enable and disable whole parts of the mod if people really want to use both mods and this type of conflict becomes a headache. Or I might just remove the part you can configure with other mods. We’ll see.</li>
+<li>I don’t know how Lacy’s MergeConsumables handles item ID’s when merging so I can’t say if insurance will persist when you merge items. Might need some trial and error.</li>
+</ul></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Support:</div>
+<div class="tab-content"><ul>
+<li>HOWEVER, the state of support for this mod is very similar to the other mod I uploaded today as they’re both from my “personal collection” and I’m sharing them because I realized there wasn’t currently anything on the hub that does exactly what they do; But further development on them will happen if I see fit, and providing support for these mods is a secondary priority for me right now.</li>
+<li>That said, again, if something turns out to be ridiculously broken, lmk and I’ll try to fix it.</li>
+</ul>
+<p>This is a VERY quick and dirty mod that could definitely be improved, but because its not a priority for me right now, if someone else wants to take it, fix or improve it and upload an improved version, I would be completely unbothered by that “Steal this mod”.</p></div></div>
+<div id="tabset-1-panel-9" class="tab-panel"><div class="tab-title">Credits and Donations</div></div>
+<div id="tabset-1-panel-10" class="tab-panel"><div class="tab-title">Credits:</div>
+<div class="tab-content"><ul>
+<li>Credit to <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/user/18898-internalerror/" rel="noreferrer noopener">InternalError_</a>‘s insurable items mods from WAYYYY back in the day for providing me with a rudimentary framework for this mod, as well as CreamCheese’s <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/868-internalerrors-s-insurable-items/#overview" rel="noreferrer noopener">update of those mods</a> for SPT 3.7. I essentially just expanded the functionality of those mods and updated for 3.11.</li>
+</ul>
+<p><strong>Finally,</strong></p>
+<p><strong>If you like my (other) mods (not this one) and wanna show me a little support, you can:</strong></p>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/solidrhoads" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/3d0564a992a572b54b1d7bc9602afb0d72d7464c420e9c5d41fb41fad77931f8.png" alt="kofi6.png"></a></p>
+<p>Also in lieu of donations to me, I also fully endorse donating to the <a target="_blank" class="external-link" href="https://www.lupus.org/" rel="noreferrer noopener">Lupus Foundation of America</a> and the <a target="_blank" class="external-link" href="https://www.nationalmssociety.org/" rel="noreferrer noopener">National MS Society</a>. I personally have Systemic Lupus, and my mother had MS for most of her life before she passed - so these causes mean a lot to me. Giving is appreciated.</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2025-08-14T01:25:15.000000Z">14 August 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>626 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9d87ca6ec1e62ebfbe29329d29f3cd34f1d2f1cb4405170b7b66b16a08a7ef51" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1037529311/007e5d01-98a4-4839-9f4b-1303d9426840?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A03Z&amp;rscd=attachment%3B+filename%3Dsolidrhoads-youinsureaboutthat.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A01Z&amp;ske=2026-08-01T21%3A13%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=dBCL2fHGadCdE7Nmdta4%2BWk8f3zUadIN%2BrywO8fN7dw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjA3MSwibmJmIjoxNzg1NjE1NzcxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UpZd--xyog4BTjvx_XtdOyzfvpP_4e2yiGPvuk3Vm8k&amp;response-content-disposition=attachment%3B%20filename%3Dsolidrhoads-youinsureaboutthat.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>14 August 2025</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Solid-Rhoads/You-inSure-About-That" target="_blank" rel="noreferrer noopener">https://github.com/Solid-Rhoads/You-inSure-About-That</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

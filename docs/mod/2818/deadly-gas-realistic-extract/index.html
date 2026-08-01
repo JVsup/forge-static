@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Deadly Gas (realistic extract) · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Deadly Gas (realistic extract)</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/0fea75f6254edbbec31c573a6d625344d8350babb19009f325d02c723864517a.webp" alt="Deadly Gas (realistic extract) thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Deadly Gas (realistic extract)</h1>
+    <p class="hero-teaser">More realistic end of raid - survive the gas after the timer runs out ! Use gas mask to stay longer !</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/63e8361206dc7838516808e008185d561f9082e9bbba0a700a4a7d5c863e9ea9.png" alt="" width="32" height="32">LaurentMEKKA</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,045</dd></div>
+    <div><dt>Favourites</dt><dd>12</dd></div>
+    <div><dt>Mod lists</dt><dd>10</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Deadly Gas (realistic extract) content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>4</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Deadly Gas — realistic end-of-raid</h1>
+<p>Replaces the arbitrary end-of-timer MIA with a <strong>deadly gas</strong>: when the raid
+timer expires, the zone slowly fills with gas (green haze + fog) and your
+health drains : about 3 minutes to die at full health (configurable). You can
+still run for the extract: extracting during the gas counts as a normal
+<strong>Survived</strong>. Dying in the gas is a normal death. No more MIA screen at
+2 meters from the extract.</p>
+<p>Gas masks allow you to stay 3 times longer in the gas.
+Respirators allow you to stay 1.5 times longer in the gas.</p>
+<p><strong>Client-side</strong> BepInEx plugin. Nothing to install server-side.</p>
+<h2>Install</h2>
+<p>Extract it into your SPT folder (the one with
+<code>SPT.Launcher.exe</code>). The DLL lands in <code>BepInEx/plugins/MekkaDeadlyGas.dll</code>.</p>
+<h2>Configuration</h2>
+<p>In game via <strong>F12</strong> (Configuration Manager) or in
+<code>BepInEx/config/com.mekka.deadlygas.cfg</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enabled</td>
+<td>on</td>
+<td>Master switch</td>
+</tr>
+<tr>
+<td>Minutes before death</td>
+<td>3</td>
+<td>Survival time in the gas at full health (chest-based)</td>
+</tr>
+<tr>
+<td>Gas rise (seconds)</td>
+<td>20</td>
+<td>Grace period before damage starts</td>
+</tr>
+<tr>
+<td>Visual effects</td>
+<td>on</td>
+<td>Green tint + fog</td>
+</tr>
+<tr>
+<td>Tint intensity</td>
+<td>0.45</td>
+<td>Green overlay opacity (0.2 subtle → 0.7 pea soup)</td>
+</tr>
+<tr>
+<td>Fog density</td>
+<td>0.06</td>
+<td>Fog thickness at full ramp</td>
+</tr>
+<tr>
+<td>Probe mode</td>
+<td>off</td>
+<td>Diagnostic dumps for troubleshooting</td>
+</tr>
+</tbody>
+</table>
+<h2>Known quirks</h2>
+<ul>
+<li>After expiry the in-raid timer display shows ~24h instead of 00:00
+(cosmetic only, the gas is your real timer now).</li>
+<li>AI Scavs are unaffected.</li>
+<li>Works in PMC and player-Scav raids. Untested with Fika/coop.</li>
+</ul>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.4.1</h2></div><time datetime="2026-07-17T21:05:00.000000Z">17 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>640 downloads</span><span>12.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Update</p>
+<ul>
+<li>Dying to the gas now ends the raid as MIA: your PMC didn’t die, he’s lost in the gas (toggle in F12 to keep normal deaths).</li>
+<li>F12 and cfg file translated in English (was in french before, you must reapply your settings with F12 !)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/1b0da4006a28ad44ec3d6b7370855a21e638a82c1d27ba3177b70bee6755fa41?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301001347/454d6da0-d2a5-47ae-83ca-4f4787c151db?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A26%3A28Z&amp;rscd=attachment%3B+filename%3DDeadlyGas-0.4.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A26%3A13Z&amp;ske=2026-08-01T21%3A26%3A28Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=HkYvh42N7afcJdwR%2Fe4WwMx0v9dRGtR5eTpA27u3seM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DDeadlyGas-0.4.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.3.0</h2></div><time datetime="2026-07-15T16:05:00.000000Z">15 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: incompatible</span>
+            <span>251 downloads</span><span>11.8 KB</span>
+          </div>
+          <div class="prose version-notes"><p>New Features</p>
+<ul>
+<li>GP-5 and GP-7 Gas masks allow to stay 3x longer in the gas</li>
+<li>Respirator and DevTac Ronon allow to stay 1.5x longer in the gas</li>
+</ul>
+<p>Fix</p>
+<ul>
+<li>Time was calculated with thorax hp, but head kills you 40% sooner. Time is now calculated with head hp, so default is actually 3 minutes.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/380ed287a7a05e9bb05b4b0f0c2128d09183f52f2e5ef772bc3ad95f161259f6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301001347/acd3bde5-d4d7-4209-b068-7617ecfc45cb?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A17%3A17Z&amp;rscd=attachment%3B+filename%3DDeadlyGas-0.3.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A16%3A57Z&amp;ske=2026-08-01T21%3A17%3A17Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=D70qbIeDSXq%2BUZC5paXiNcYjnuggQiU%2BQpnlg7NtqQA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DDeadlyGas-0.3.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.1</h2></div><time datetime="2026-07-15T07:46:00.000000Z">15 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>101 downloads</span><span>10.4 KB</span>
+          </div>
+          <div class="prose version-notes"><p>Fix - no more FPS drop</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/78c7f8d1d4b610fe00629f3dab640ff13e33fa7e40d63d10335e4c156b630208?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301001347/6766a2de-50b0-4732-9c1f-34d4f36128ba?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A23Z&amp;rscd=attachment%3B+filename%3DDeadlyGas-0.2.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A36Z&amp;ske=2026-08-01T21%3A22%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=YtfdmhP4q2Xa7ub8KFPSzernt7R7kJGiqKoqqmud6js%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM2OCwibmJmIjoxNzg1NjE2MDY4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.6FsOyOBt1Exz-uJJ7NmcczzXLI86sinI6etdUxOnAH8&amp;response-content-disposition=attachment%3B%20filename%3DDeadlyGas-0.2.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.2.0</h2></div><time datetime="2026-07-14T23:08:00.000000Z">14 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>53 downloads</span><span>10.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First public version</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/d0101a68e597cfc38d61395d91d41d98246113e318a26d12ad1f75a64e0f5db6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1301001347/e1fea4d8-8d45-41f6-b522-f7abc5ed6e67?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A14%3A04Z&amp;rscd=attachment%3B+filename%3DDeadlyGas-0.2.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A13%3A14Z&amp;ske=2026-08-01T21%3A14%3A04Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=h5kyFgiG9eMPYtpnP%2Fl5T%2FnXwg6o3Teb8r61nS9n9pQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM3NywibmJmIjoxNzg1NjE2MDc3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.BDv_yOJ5n4yJhqXlwrO2setwEYCT8_LRFd9otOrfchA&amp;response-content-disposition=attachment%3B%20filename%3DDeadlyGas-0.2.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.mekka.deadlygas</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>14 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/laurentmekka/DeadlyGas" target="_blank" rel="noreferrer noopener">https://github.com/laurentmekka/DeadlyGas</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>AI was used as a coding assistant during the conception of this project. It helped with structure, debugging, cleanup work and some documentation wording.</p>
+<p>The actual mod direction, content, balancing, IDs, testing and final decisions are handled by myself.
+Nothing was added blindly without review or testing. Coding is part of my job, I’m 46 and working in IT since 2005.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

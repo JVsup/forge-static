@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>UnityToolkit · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>UnityToolkit</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../static/image-unavailable.svg" alt="UnityToolkit thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>UnityToolkit</h1>
+    <p class="hero-teaser">A collection of Unity libraries for client modders to make writing efficient, allocation-free code easier.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/05a516a5763289fea153e6528861e0fe8f7ad50e5a5938dca668b3842983cb4c.webp" alt="" width="32" height="32">Arys</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>255,748</dd></div>
+    <div><dt>Favourites</dt><dd>132</dd></div>
+    <div><dt>Mod lists</dt><dd>245</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="UnityToolkit content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>UnityToolkit</h1>
+<h2>What is this library for?</h2>
+<p>This library aims to provide additional tools to client modders which will (hopefully) allow them to write more optimised code
+and reduce the performance cost and memory allocation of their code even further.</p>
+<h2>How to install this library (for users)</h2>
+<ol>
+<li>Download the latest release</li>
+<li>Open the .7z with 7-Zip</li>
+<li>Drag and drop the ‘BepInEx’ folder into your game folder</li>
+<li>Play SPT</li>
+</ol>
+<h2>How to use this library (for mod developers):</h2>
+<ol>
+<li>Download the latest release</li>
+<li>Copy the assemblies from the release zip to where you store your project’s assembly references</li>
+<li>Add all the assemblies as assembly references to your project</li>
+<li>Add <code>[BepInDependency("com.arys.unitytoolkit")]</code> attribute to your plugin class (I recommend you add a minimum version string to the attribute)</li>
+<li>You can now use <em>UniTask</em>, <em>Unity.Collections</em>, <em>VContainer</em>, <em>ZLinq</em> and <em>ZString</em> in your mod</li>
+</ol>
+<h2>What features does this library provide?</h2>
+<ol>
+<li><em>UniTask</em> is a near zero-allocating, performant version of C# Tasks that’s suited for Unity than the standard C# implementation
+<ul>
+<li>It doesn’t use threads or <code>SynchronizationContext</code>/<code>ExecutionContext</code> so the result is faster performance and lower allocation while matching Unity threading (single-thread)</li>
+<li>It is also possible to replace Unity’s Coroutines, which has poor performance and higher memory allocation, with UniTask instead</li>
+<li>Documentation: <a target="_blank" class="external-link" href="https://github.com/Cysharp/UniTask" rel="noreferrer noopener">https://github.com/Cysharp/UniTask</a></li>
+</ul>
+</li>
+<li><em>Unity.Collections</em> is included in this library for the additional <code>NativeContainer</code> types it provides
+<ul>
+<li><code>NativeList</code>, <code>NativeHashMap</code>, <code>NativeMultiHashMap</code>, and <code>NativeQueue</code>: these are useful data types when you are working with Unity’s Jobs system as they are thread-safe</li>
+<li>Documentation: <a target="_blank" class="external-link" href="https://docs.unity3d.com/Packages/com.unity.collections@2.6/manual/collections-overview.html" rel="noreferrer noopener">https://docs.unity3d.com/Packages/com.unity.collections@2.6/manual/collections-overview.html</a></li>
+</ul>
+</li>
+<li><em>VContainer</em> is a fast Dependency Injection container, designed for Unity and works with injecting into both standard C# classes and Unity MonoBehaviours
+<ul>
+<li>Documentation: <a target="_blank" class="external-link" href="https://vcontainer.hadashikick.jp" rel="noreferrer noopener">https://vcontainer.hadashikick.jp</a></li>
+</ul>
+</li>
+<li><em>ZLinq</em> provides high performance, zero-allocation LINQ by utilising <code>ValueEnumerable</code>, made by the developer of UniTask
+<ul>
+<li>Documentation: <a target="_blank" class="external-link" href="https://github.com/Cysharp/ZLinq" rel="noreferrer noopener">https://github.com/Cysharp/ZLinq</a></li>
+</ul>
+</li>
+<li><em>ZString</em> is a near zero-allocating string builder, which is also made by the developer of UniTask and ZLinq
+<ul>
+<li>Documentation: <a target="_blank" class="external-link" href="https://github.com/Cysharp/ZString" rel="noreferrer noopener">https://github.com/Cysharp/ZString</a></li>
+</ul>
+</li>
+</ol>
+<h2>Is it safe?</h2>
+<p>Yes, all assemblies are just compiled versions of their original git repo
+I’ve also included a VirusTotal scan of all assemblies on the GitHub releases page</p>
+<h2>Building from source</h2>
+<ol>
+<li>Clone the repository:
+<pre><code>git clone https://github.com/ArysWasTaken/UnityToolkit.git
+</code></pre>
+</li>
+<li>Place the compiled assemblies for UniTask, Unity.Collections and ZString in <code>project\UnityToolkit\References</code>.</li>
+<li>Adjust the reference paths, macros and build events in the .csproj files</li>
+<li>Open solution in your preferred C# IDE</li>
+<li>Build solution</li>
+</ol>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2025-10-25T20:46:00.000000Z">25 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>47,062 downloads</span><span>489.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>In this release</h2>
+<ul>
+<li>Removed redundant code</li>
+<li>Removed FixPluginTypesSerialization
+<ul>
+<li>Unfortunately this plugin caused conflicts with some other mods so the decision was made to remove it</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/81ff11b228b73863f5cf1f54b9d823c344d23a6e900ec8fc3c33578569906fa1?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/798582455/e140f036-e192-458a-881d-732cff69fab3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A03Z&amp;rscd=attachment%3B+filename%3DUnityToolkit-v2.0.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A58Z&amp;ske=2026-08-01T21%3A07%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Bc6oxsP9BaCF%2Fpft0fOeW2mMIh8aLN69p69dGH6nw7A%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&amp;response-content-disposition=attachment%3B%20filename%3DUnityToolkit-v2.0.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-10-22T18:53:00.000000Z">22 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>430 downloads</span><span>520.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h1>WARNING</h1>
+<p>There is an issue with this release which causes the game to fail to load into the main menu with certain mods installed.</p>
+<p><strong>Please remove the “FixPluginTypeSerialization” folder inside the “BepInEx/patchers” folder!</strong></p>
+<p>After discussion with Tarkin, this patcher will be removed in the next update of UnityToolkit and he will provide a fixed version of that patcher in his upcoming mod.</p>
+<h2>In this release</h2>
+<ul>
+<li>Removed all APIs and extension methods
+<ul>
+<li>They were not up to par and were probably only used by myself</li>
+</ul>
+</li>
+<li>Added VContainer
+<ul>
+<li>A fast dependency injection container designed for Unity, so it also works on injecting into Unity Objects</li>
+</ul>
+</li>
+<li>Added ZLinq
+<ul>
+<li>Adds high performance, zero-allocation LINQ by using <code>ValueEnumerable</code></li>
+</ul>
+</li>
+<li>Added FixPluginTypesSerialization
+<ul>
+<li>Fixes a bug that affects all Unity Engine versions where references to custom <code>[System.Serializable]</code> classes/structs would not be deserialized correctly in Unity Objects added by client mods</li>
+<li>Thanks to Tarkin for finding this fix</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/81a0e275104d5bcec4499fd72918fc0583ba337267883913c197dd8116f38a91?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/798582455/278bb100-7ed7-40a9-9fef-a3c61c573abf?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A48%3A24Z&amp;rscd=attachment%3B+filename%3DUnityToolkit-v2.0.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A47%3A29Z&amp;ske=2026-08-01T20%3A48%3A24Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=tGeceRsnlApUtd%2Bffdi0g76QrynEb%2BKZdKbuIr0Qsh0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&amp;response-content-disposition=attachment%3B%20filename%3DUnityToolkit-v2.0.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2025-02-21T23:28:30.000000Z">21 February 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>33,876 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p>Added Dependency Injection Container and Event Bus structures for mod developers</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/7ca4b638b7704e75f5c2163766b9ee421058b125df415c354343d1a59444b3fb/detection" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/798582455/a527bed6-ff26-4c2d-979c-1f58bdef67b2?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A39Z&amp;rscd=attachment%3B+filename%3DUnityToolkit-1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A00%3A12Z&amp;ske=2026-08-01T21%3A00%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=DtbscCNItzmL3WSFPKw77zfWat7YbsYsLuNXVAjUo1w%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTU0MSwibmJmIjoxNzg1NjE1MjQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xbutwg6h83HY1ihixhTLvL-h25zSuUX8lueU18Yyxcc&amp;response-content-disposition=attachment%3B%20filename%3DUnityToolkit-1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.arys.unitytoolkit</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>20 May 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ArysWasTaken/UnityToolkit" target="_blank" rel="noreferrer noopener">https://github.com/ArysWasTaken/UnityToolkit</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

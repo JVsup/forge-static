@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>CloudSix - Volumetric Clouds · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>CloudSix - Volumetric Clouds</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/c508952d329ace2ba8eddcdc94adab78e85d2eb1f85d834e2d1e8ef32fa29694.webp" alt="CloudSix - Volumetric Clouds thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>CloudSix - Volumetric Clouds</h1>
+    <p class="hero-teaser">Replaces Tarkov&#39;s clouds with volumetric clouds using a custom shader built from the ground up</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/ba60ca0da803e9cfb895498fca9395cbe09ac4c6d5daac29e5ee7b11c54b266b.svg" alt="" width="32" height="32">matsix</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>15,010</dd></div>
+    <div><dt>Favourites</dt><dd>39</dd></div>
+    <div><dt>Mod lists</dt><dd>83</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="CloudSix - Volumetric Clouds content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>15</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p><strong>CloudSix</strong></p>
+<p>This is a total replacement of Tarkov’s built in clouds.</p>
+<p>Support my work on Ko-fi: <a target="_blank" class="external-link" href="https://ko-fi.com/matsix" rel="noreferrer noopener">https://ko-fi.com/matsix</a></p>
+<p>After over analyzing my clouds in VR, I wrote a custom over engineered volumetric cloud shader that works in VR and flatscreen.</p>
+<p>These clouds wouldn’t have been possible without the paper from Guerrilla Games on how they did the clouds in Horizon Zero Dawn - <a target="_blank" class="external-link" href="https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn" rel="noreferrer noopener">https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn</a></p>
+<p>My main focus with these clouds was keeping them visually stable and very optimized because I wanted them to work well in VR too. They could still use some improving, a lot of improving can be done just with the values I locked behind in advanced settings. You can also increase the primary steps/light steps higher by going into advanced. By default, this runs at half res, 64 primary steps on clouds and 6 light steps. I don’t believe there’s a big performance impact here unless you’re on older hardware.</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Weather affects density</li>
+<li>Wind affects cloud speed</li>
+<li>Physically based volumetrics aware of sun/moon position</li>
+<li>Procedural coloring based on Tarkov’s atmospherics</li>
+<li>Well optimized - it performs well in VR also</li>
+<li>Ground shadows based on cloud position</li>
+</ul>
+<p>Pictures:
+<a target="_blank" class="external-link" href="https://imgur.com/a/Z1Nh2P1" rel="noreferrer noopener">https://imgur.com/a/Z1Nh2P1</a></p>
+<div class="youtube-lite" data-video-id="9V9tFikvMuY" data-embed-url="https://www.youtube-nocookie.com/embed/9V9tFikvMuY?autoplay=1"><img src="../../../assets/c6c3d8e98587eeb4b42bd7ecf3de29539de78e5c8effdeb7178db727b2b7968d.webp" alt="YouTube video thumbnail" loading="lazy" decoding="async"></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.5</h2></div><time datetime="2026-05-06T03:55:00.000000Z">6 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>6,490 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Fixed an issue with eye adaptation being disabled causing the scene to be overly dark sometimes</li>
+<li>Added an option in f12 for manual exposure control when eye adaption is disabled</li>
+<li>Eye adaptation can now be enabled/disabled mid-raid</li>
+<li>Adjusted default terrain shadow density</li>
+<li>Added an option in f12 for manual control of shadow density</li>
+<li>Adjusted how ambient coloring works, should be less blue during day and darker at night</li>
+<li>Fixed an issue with cloud wind direction not actually being random at the start of each raid, it should work properly now</li>
+<li>Fixed an issue where during high cloud coverage, the top of some clouds would appear too dark</li>
+<li>Adjusted a few default shader values</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/5369ed8e934f6fe29b00d13f5137a2109a6e9d8916af6f7f10a4cb07de9e05ea?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/2be3424d-2462-49f7-ba43-ab94a006b90c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A01Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A15Z&amp;ske=2026-08-01T21%3A23%3A01Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=XRTyaqVugXbbxhE5bWkPYQ3kzug615dIek7GyDUzREc%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.4</h2></div><time datetime="2026-05-02T19:54:00.000000Z">2 May 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>704 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Improved cloud terrain shadow intensity, you should always get a shadow now when the sun is behind a cloud (the shadow intensity will be based on the density of the part of the cloud the sun is behind)</li>
+<li>Fixed an issue where the shadows being casted by the clouds were reversed, i.e. if the sun was behind a cloud in front of you on the right of the screen, you would get a shadow on the left rather than on the right</li>
+<li>Adjusted some shader values to improve the look of the clouds (reminder you can adjust pretty much everything I do if you enable the advanced bepinex settings)</li>
+<li>Adjusted default wind values, clouds should move a bit faster now</li>
+<li>Added settings to adjust the min and max wind speed. Max speed is when tarkov’s wind is at its strongest, min obviously when it’s at its lowest. Tarkov’s wind changes dynamically. So, keep in mind, if you make the gap between these speeds too small/big you may have some strange side effects</li>
+<li>Various performance optimizations to the shader that may or may not help to keep your GPU from melting</li>
+</ul>
+<p><strong>WARNING: Updates to this mod will always reset your config for it due to changes to the shader and other things requiring config values to be adjusted.</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f3c182aa47faf9cf769eb99af4daa276c9871a71535be00066e91bb4158b30ef?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/43a299f9-b9d0-4b3b-8fdc-d3f4136a8c83?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A00Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A23Z&amp;ske=2026-08-01T21%3A24%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=qav9%2Fq75xyPxdeGAEHYhVkWDQVONLcbcrMFgMsZO0C4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.3</h2></div><time datetime="2026-04-28T22:17:00.000000Z">28 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>665 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>… forgot to update plugin version… sorry lol</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ODBlOTE4MGMzMjliZDExYmFhZDE0OWY1NjgyNTNmMTU6MTc3NzQxNDY4NQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/8afc98ff-67c9-4258-ba45-51588e69cab6?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A37Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A48Z&amp;ske=2026-08-01T20%3A59%3A37Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=csrnn%2FljYQM9NHLBzpVY4sTtoheAbaK4W2WXA7%2FaYDA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE2OSwibmJmIjoxNzg1NjE1ODY5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.cF_R-YQx6b9_u_recNBIilU2qvmJgM1I9xrdcxyt-38&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.2</h2></div><time datetime="2026-04-28T20:55:00.000000Z">28 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>50 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Fixes cloud brightness during high coverage at night</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3c8fb65ec9f9a19e55e22b3123c3cc24f9202b16add40e6f3dcc1daf24182743?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/0581f1df-c82b-400e-a38a-fd110c2486c9?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A10Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A55Z&amp;ske=2026-08-01T20%3A58%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2FikOKkdCU9CyStCd9Fqx3ZRPw2ifyvvrZm5wPt67U2U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.1</h2></div><time datetime="2026-04-28T18:51:00.000000Z">28 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>79 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Eye adaptation being disabled should now work in all situations (it was still happening when going in/out of some buildings)</li>
+<li>Fixed cloud terrain shadows not appearing right at start of the raid (it may still take a few seconds to initiate but it shouldn’t take upwards of 1-2 minutes anymore)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2378e7e855ea7cf0a087146469c132494d281eba52d8b4c12d664946c0ce11c7?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/594a10f6-04a3-4fde-89b6-4931a0f41c2b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A26Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A19Z&amp;ske=2026-08-01T21%3A15%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=aVMV6wp52ksWnbdT34RADae7BoDr2Kj2vNErMYUMM8E%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>3.0.0</h2></div><time datetime="2026-04-27T01:51:00.000000Z">27 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>606 downloads</span><span>6.7 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>NOTE:</strong> Pictures in the imgur link in description have been updated to show the latest clouds</p>
+<p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Rewrote the shader pretty much from the ground up again</li>
+<li>New and improved lighting on all aspects - ambient scattering, cloud density, shading</li>
+<li>Perspective/scale actually feels proper now</li>
+<li>WAY more variety in cloud shapes/position</li>
+<li>Randomized cloud wind direction every start of raid</li>
+<li>Removed clouds from maps that shouldn’t have clouds (this includes factory)</li>
+<li>Improved high clouds, they just look better and their coverage increases/decreases along with cumulus clouds</li>
+<li>Ambient color is now pulled directly from the sky and it has made the clouds blend with the sky way better</li>
+<li>Ground shadows! Yes, the clouds now will cast shadows on the ground (sometimes it takes a few seconds at raid start to kick in, this happens on base tarkov too, not sure why it happens)</li>
+<li>So much more that I can’t think of</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9080f2d124c51111011f00cf947d288b167d937a993f634817a8289c820ebde4?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/47642a03-b770-414f-bd06-ccd8474520be?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A49Z&amp;rscd=attachment%3B+filename%3DCloudSix-3.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A02%3A58Z&amp;ske=2026-08-01T21%3A03%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=LewVMZ59iqquRDOnEW7xNKfxtPJmFfwUZCcflorgwgQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE3MiwibmJmIjoxNzg1NjE1ODcyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.f0mEVjYhhecMiy74SeDTgLabNYe7fLYFWdUuR7GK1MU&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-3.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-03-29T04:12:00.000000Z">29 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>2,227 downloads</span><span>4.3 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>NOTE: If you run VR and are struggling with performance, this might not be good to use. Use the 2D clouds version 1.0.7. You could also try lowering the primary steps to 32-48 and light steps to 8-12. Anything lower and it’s just not worth it.</strong></p>
+<p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Rewrote the shader from the ground up and is now using ray marched volumetrics</li>
+<li>Simplified the scripting of the clouds due to them being physically based, very little custom controller work is needed</li>
+<li>Added a config menu in f12, most settings are hidden in advanced, including where you can increase volumetric quality steps even higher. I hid them to avoid people crashing their PC’s. All the other settings, I don’t recommend touching unless you want to try improving the look of them, a lot of the settings are <em>very</em> sensitive</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/995ea1f4620779d4525cc014175f33dbe3384c8a32565a6df99142e67c532ee0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/452b0125-0442-49af-bfeb-d989dc1e729b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A51Z&amp;rscd=attachment%3B+filename%3DCloudSix-2.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A32Z&amp;ske=2026-08-01T21%3A03%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=SK12hjwyp9MtUpvFmpbfqbauOw6tbqcMApl3qJvu5lE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MywibmJmIjoxNzg1NjE1ODgzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.327PA_aBsNpr-xVr5A9xKCecR-cpQG-pY6NbNoGiWyI&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-2.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.7</h2></div><time datetime="2026-03-12T18:23:00.000000Z">12 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>862 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Hotfix Changelog:</strong></p>
+<ul>
+<li>Clouds no longer get cut off as bad at the horizon</li>
+<li>Adjust brightness a bit on clouds during day time</li>
+<li>Added a dither to the shader to help smooth out color banding specifically during night time</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/db56659ae0df2d88dff9ca8f56ba3df315a973a855e03f04fdeebb561251d941?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/0cdc052b-c7d4-4b8b-8b9b-14d9145d1ba3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A10Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.7.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A27Z&amp;ske=2026-08-01T21%3A10%3A10Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=7hqhk3EP4O8sbpn7vHXnTR4YZ7rkRo8moGDkFJwCfzo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.7.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.6</h2></div><time datetime="2026-03-09T06:24:00.000000Z">9 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>406 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Changed where clouds are getting initiated</li>
+<li>Changed min and max cloud speed - cloud movement will be a lot more noticeable now especially during fast wind days</li>
+<li>Re-did a lot of coloring/timing on the clouds to have longer lasting sunsets/sunrises</li>
+<li>Night clouds have been improved</li>
+<li>Improved shading on clouds, they should appear like they have more depth now</li>
+<li>Overcast clouds improved, shouldn’t be blown out white anymore</li>
+</ul>
+<p>Keep in mind, a lot of the coloring and brightness also heavily relies on what your postfx settings are. These clouds were made with postfx disabled to have a base look to the clouds.</p>
+<p>Pictures (with my PostFx): <a target="_blank" class="external-link" href="https://imgur.com/a/wIIcLDI" rel="noreferrer noopener">https://imgur.com/a/wIIcLDI</a></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/8eb0a57ff4db828c5fe9f80e1480b1c4e4ffacede839e64dbb9036a9502c76ca?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/25caf39d-7f18-4d6a-9ce6-fe374856834b?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A55Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.6.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A58Z&amp;ske=2026-08-01T21%3A22%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=%2BqPCF1CeZbZKEUacAlqR642wAxxoV54omirgtJ%2B1HZE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4MiwibmJmIjoxNzg1NjE1ODgyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.rhQ9S1NeqMUZ2Lc0L6d9apN5qdvX_auNDSyJFABjtzI&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.6.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.5</h2></div><time datetime="2026-02-17T01:19:00.000000Z">17 February 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>895 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p><strong>Update Changelog:</strong></p>
+<ul>
+<li>Adjustments to cloud color, there’s now a base night color</li>
+<li>Adjustment to moon color, there’s now a base moon color</li>
+<li>The clouds color should now be a bit deeper/vibrant based on sky/sun color</li>
+</ul>
+<p>This should improve compatibility with Hollywood Graphics moon brightness</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/00479d2f771cdcc28307e39dfc8f3fdeb22ba5d06b4527d688e0333c458805fd?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/894e33b9-724a-4140-a555-82add6377648?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A20%3A39Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A20%3A03Z&amp;ske=2026-08-01T21%3A20%3A39Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=Bcl21REHoP1ZvbXFb1NB45jVjvYHI%2Bs5bj4en2xCCOA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.4</h2></div><time datetime="2026-01-30T20:41:00.000000Z">30 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.12</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,298 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Fixed clouds not showing in scopes</li>
+</ul>
+<p><strong>NOTE: Re-download if you use anything that tracks version number, the version number in the plugin should be correct now</strong></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/2b119f7dcff665667b573550fddf46c877b24f65286cfa19561b70bc3627efbe?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/34310cdb-4e15-4b80-8bdc-41067ef99f10?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A26Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.4fixed.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A43Z&amp;ske=2026-08-01T21%3A11%3A26Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=j2LtgMQHBVB4B4UODlwNqNRJ6%2FEcKln%2Bgtqe61KIvww%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.4fixed.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.3</h2></div><time datetime="2026-01-30T04:21:00.000000Z">30 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>249 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Restored Tarkov’s cloud terrain shadows</li>
+<li>Fixed some minor bugs in code that wasn’t noticeable in game</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/f82ffbc10695b097d8cbbe0692a6a7d9c25a4cbf7699db2d8b68f06580b39711?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/5e7783a6-c347-4c6c-ad2e-e636456ea035?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A05Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.3.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A56Z&amp;ske=2026-08-01T21%3A22%3A05Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=e8YSM%2BFo0gdLDOJjX%2B9VZxJc6atQE0X2bRmpNCuWLjQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE4NSwibmJmIjoxNzg1NjE1ODg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.WlXwxiKC8amd3TqTUW4OvVUZ0CrTvH3Vlx6AqvsPU3o&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.3.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-01-29T18:23:00.000000Z">29 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>160 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Added a check to keep clouds from re-instantiating this should resolve the cloud flash issue</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/34bdb7d437461478cd04d439f0c6b187f50247433acb30695147ad5fc4988f98?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/5a7c3b0a-749c-42b5-9d36-2d98bbad4e79?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A03Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.2.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A58Z&amp;ske=2026-08-01T21%3A07%3A03Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6NNacmb1llDGcM8jiW8ltM15Rm8NGZRxoM%2B127tIEqo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.2.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-01-29T15:37:00.000000Z">29 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>106 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Changelog:</p>
+<ul>
+<li>Adjusted when the cloud commandbuffer is drawn</li>
+</ul>
+<p>Not sure why this update caused that Wacatac false positive to trip up in virustotal. Literally just moved a line of code… Goes to show how inaccurate that specific virus check is.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/3cd789e27f67036111df734a2366637257f2b08d7dc6f0a165175c768c1ec1ef?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/3d8db314-021b-4a37-a04d-3dd3d7996fb4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A18Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A58%3A48Z&amp;ske=2026-08-01T20%3A59%3A18Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=5APP7sQau5Cgprs4PWWldOSxgbMtTOrWloZimwlA3wo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-01-29T06:37:00.000000Z">29 January 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.11</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>213 downloads</span><span>1.8 MB</span>
+          </div>
+          <div class="prose version-notes"><p>First release, no changelog.</p>
+<p>Let me know what you think, feedback is always great.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/0355c6bd123c6ed7c038ec3963e0b52907e8f1dbf288bb15e06d53cd8190b1cd?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1144874798/a7629c87-5d6b-44c3-bbd2-ee13e61b960f?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A25%3A15Z&amp;rscd=attachment%3B+filename%3DCloudSix-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A24%3A23Z&amp;ske=2026-08-01T21%3A25%3A15Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TYfZMuEd%2F9rm7yP1sB1WrkhQnY6YmrxPwt1jyLqNKSQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjE5OCwibmJmIjoxNzg1NjE1ODk4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Dd4POhTs7GQUvftQzdbCSVxck-30l9zYXoqsW4dpERA&amp;response-content-disposition=attachment%3B%20filename%3DCloudSix-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.matsix.cloudsix</code></dd></div>
+      <div><dt>License</dt><dd>GNU GPLv3</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>29 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/matsixx/CloudSix" target="_blank" rel="noreferrer noopener">https://github.com/matsixx/CloudSix</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

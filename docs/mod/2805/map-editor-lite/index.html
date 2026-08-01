@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Map Editor Lite · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Map Editor Lite</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/2c0403ecfdf090f646b0f61c8bc45be1c04d6b0b821d9ee23f8e1d7fe0858fbf.webp" alt="Map Editor Lite thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Map Editor Lite</h1>
+    <p class="hero-teaser">Map Editor Lite is a server-side framework for SPTarkov that lets anyone create and share custom map content - using an in-raid editor and simple JSON packs, no programming required.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/0a375ce54aa7e016c44b8a0a6413dcbe3e3ae68147f4f5fd3d8cfb7f7f2330b6.webp" alt="" width="32" height="32">shaneeexd</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>896</dd></div>
+    <div><dt>Favourites</dt><dd>10</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+<div class="warning-box warning-danger">Forge displayed a cheat-related notice for this item.</div>
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Map Editor Lite content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>7</span></a>
+      <a class="tab" id="tab-addons" href="#addons" role="tab" aria-controls="addons" aria-selected="false">Addons <span>2</span></a>
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>Map Editor Lite - Custom Map Editor Framework</h1>
+<p><strong>Map Editor Lite</strong> is a server-side framework for SPTarkov that lets anyone create and share custom map content - loot spawns, loot zones, static objects, interactive objects, bot spawn points, extract zones, and light zones - using an in-raid editor and simple JSON packs, no programming required.</p>
+<h2>What It Does</h2>
+<ul>
+<li><strong>In-raid editor</strong>: press <code>F8</code> while in a raid to place markers, preview items, and build custom map packs.</li>
+<li><strong>Custom markers</strong>: loot spawns, loot zones, static objects, interactive objects (doors &amp; containers), bot spawn points, extract zones, and light zones.</li>
+<li><strong>Pack system</strong>: export your map edits as shareable JSON packs.</li>
+<li><strong>Web tool</strong>: import and tune exported packs, adjust spawn chances, mark quest/forced items, and finalize them for release.</li>
+<li><strong>Server injection</strong>: the server mod reads pack JSON and injects the content into SPT raid loot tables, exfiltration points, bot zones, and lighting.</li>
+<li><strong>Forced spawns</strong>: quest and guaranteed spawns are registered through <strong>WTT-CommonLib</strong>.</li>
+<li><strong>Modder friendly</strong>: other mods can ship pack JSON files in their own <code>MapLoot/</code> folders; the server mod loads them automatically.</li>
+</ul>
+<h2>MEL Prefab Hub</h2>
+<p>Anyone can make a prefab within the editor and submit them to the <a target="_blank" class="external-link" href="https://serenity-workshop.netlify.app/prefabs" rel="noreferrer noopener">prefab hub</a> for others to use.</p>
+<h2>Web Tool</h2>
+<p>The mod also includes a <a target="_blank" class="external-link" href="https://mapeditorlite-tool.netlify.app" rel="noreferrer noopener">web tool</a>, however it is mainly to be used for making micro adjustments to your existing packs, rather than for pack creation, that’s to be done with the client mod.</p>
+<h2>Images</h2>
+<p><a target="_blank" class="external-link" href="https://github.com/ShaneeexD/MapLootEditorLite#images" rel="noreferrer noopener">https://github.com/ShaneeexD/MapLootEditorLite#images</a></p>
+<h2>Installation</h2>
+<ol>
+<li>Drag the <code>SPT</code> and <code>BepInEx</code> folders from the mod archive into your SPT installation directory.</li>
+<li>Make sure <strong>WTT-CommonLib</strong> (<code>com.wtt.commonlib</code>) is installed as a server mod.</li>
+<li>Start the server. Map Editor Lite loads automatically.</li>
+</ol>
+<p>On first launch the client creates:</p>
+<ul>
+<li><code>SPT/BepInEx/config/com.shaneeexd.mapeditorlite.cfg</code> — BepInEx configuration (editor toggle, hotkeys, etc.)</li>
+<li><code>SPT/user/mods/MapEditorLite/</code> — client read/write data folder
+<ul>
+<li><code>editor/</code>          # in-raid editor saves</li>
+<li><code>spawns/</code>          # built-in spawn directory</li>
+<li><code>imports/</code>         # files imported into the tool</li>
+<li><code>cache/</code>           # cached item data</li>
+<li><code>prefabs/</code>         # saved prefabs</li>
+<li><code>exports/</code>         # packs exported from the in-raid editor</li>
+<li><code>packs/</code>           # final user packs for the server to load</li>
+</ul>
+</li>
+</ul>
+<h2>Configuration</h2>
+<p>Edit <code>SPT/BepInEx/config/com.shaneeexd.mapeditorlite.cfg</code>:</p>
+<pre><code>[General]
+EnableEditor = false
+EnableDebugVisuals = false
+</code></pre>
+<ul>
+<li><code>EnableEditor</code> — set to <code>true</code> while developing. Default is <code>false</code>, so the F8 editor is disabled until you opt in.</li>
+<li><code>EnableDebugVisuals</code> — show extra debug visuals in raid.</li>
+</ul>
+<h2>Creating a Map Pack</h2>
+<ol>
+<li>Install the client plugin and server mod.</li>
+<li>Set <code>EnableEditor = true</code> in the BepInEx config.</li>
+<li>Enter a raid and press <code>F8</code> to open the editor.</li>
+<li>Place markers for loot, zones, objects, bot spawns, extracts, or lights.</li>
+<li>Enter a pack name and click <strong>Export Pack</strong> in the editor.</li>
+<li>The exported pack is written to <code>SPT/user/mods/MapEditorLite/exports/</code>.</li>
+<li>Open the <strong>Map Editor Lite Tool</strong>, import the pack, tune anything you need.</li>
+<li>Move the final pack into <code>SPT/user/mods/MapEditorLite/packs/</code>.</li>
+</ol>
+<blockquote>
+<p><strong>Tip</strong>: Always test on a new developer profile (and clear temp cache) so you can verify spawns, loot, extracts, and lighting without affecting your main save.</p>
+</blockquote>
+<h2>Publishing a Pack</h2>
+<p>The final pack is a JSON file that can be distributed as a standalone add-on.</p>
+<p>When publishing:</p>
+<ol>
+<li><strong>State the dependency</strong>: Your add-on pack requires <strong>Map Editor Lite v1.0.0</strong> for SPT 4.0.13.</li>
+<li><strong>Do not include</strong> the Map Editor Lite DLL or other authors’ packs in your zip.</li>
+<li><strong>Test</strong> by extracting and running the server before publishing.</li>
+</ol>
+<p>Users install your pack by dragging the <code>SPT</code> folder (containing <code>SPT\user\mods\MapEditorLite\packs</code>) into their SPT install.</p>
+<h2>Dependencies</h2>
+<ul>
+<li>SPTarkov 4.0.13</li>
+<li>WTT-CommonLib (server mod)</li>
+</ul>
+<h2>More Information</h2>
+<p>View my framework mods and user created add-ons for them <a target="_blank" class="external-link" href="https://serenity-workshop.netlify.app" rel="noreferrer noopener">here.</a></p>
+<ul>
+<li>Full documentation, JSON reference, and examples are in the <a target="_blank" class="external-link" href="https://github.com/ShaneeexD/MapLootEditorLite/blob/main/README.md" rel="noreferrer noopener">GitHub README</a>.</li>
+</ul>
+<h2>License</h2>
+<p>MIT License</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.2</h2></div><time datetime="2026-07-29T06:43:00.000000Z">29 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>144 downloads</span><span>2.4 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>v2.0.2 Changelog</h2>
+<ul>
+<li>For vanilla removals, doors are now checked via ID also for better accuracy, no more wrong door removals if there are more than 1 in close proximity to each other</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/NTk1NmZjYWU3ZDE1NmE4YWFiNjExM2FkODJiY2VhMWU6MTc4NTMwNzM5MA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1lQtC_1Ec9lJLoLK0S1-Lrova6uEBqGup&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2026-07-28T03:51:00.000000Z">28 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>55 downloads</span><span>2.4 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>v2.0.1 Changelog</h2>
+<ul>
+<li>Fixed an issue where packs were being loaded the same way as exports, so previews were showing when they should not</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MTExYTc3MjU2YzgyOGJjNGVhMjYwYTE2NTdmNmRlYzM6MTc4NTIxMDcxMA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=19298iWEwk0Cs2eerancj-qo-E85GPMTq&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2026-07-27T07:17:00.000000Z">27 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>58 downloads</span><span>2.4 MB</span>
+          </div>
+          <div class="prose version-notes"><h1>v2.0.0 Changelog</h1>
+<h2>Fixes/Changes</h2>
+<ul>
+<li>Fixed issue with loot spawns chance being shared</li>
+<li>Improved loading speed and efficiency</li>
+<li>Fixed freecam ghosting</li>
+<li>Fixed container loot not correctly stacking items (money, ammo)</li>
+<li>Fixed spawn rates not working as intended</li>
+<li>More reliable object previews</li>
+<li>Copy and paste now actually pastes at crosshair location</li>
+<li>General bug fixes and QOL changes</li>
+</ul>
+<h2>Additions</h2>
+<ul>
+<li>Included scav spawns in vanilla data</li>
+<li>Added localisation support (feel free to make translations and submit an addon)</li>
+<li>Added raycast filtering for selecting objects by name</li>
+<li>Added a render view of every object and currently will be selected object while in pick mode</li>
+<li>Added ability to spawn items with child tpl’s and set their slots</li>
+<li>Added ability to lock groups and objects in the hierarchy so they cannot be accidentally clicked in the game world</li>
+<li>Added ability to set initial door states, whether it can be breached etc.</li>
+<li>Added child object detection, GameObjects now show their children in the hierarchy and can be manually edited, it also detects interactable objects like doors etc so keys can be set</li>
+<li>Added ability to set keys to containers like safes and cash registers</li>
+<li>Added ability to toggle preview mode, so you can see objects and lights etc in normal mode</li>
+<li>Added a button in the debug menu to set raid to 24 hours</li>
+<li>Added custom blocker markers (invisible walls)</li>
+<li>Added ability to inject custom models and use them as objects (bundles folder within the packs folder)</li>
+</ul>
+<p>Probably more that I do not remember - enjoy</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/YzM4NjAzYTZiNjk1ODVmZWZjNjU4ZGY1NWZlN2Y3YTk6MTc4NTEzNzQxNA==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1LYN5eDxlQ1zRoEtkNv0_pjDolxwtGx-b&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2026-07-19T23:28:00.000000Z">19 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>140 downloads</span><span>2.3 MB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.2.0 Changelog</h2>
+<h3>Added</h3>
+<ul>
+<li><strong>Custom Bot &amp; PMC Spawn Points:</strong> new <code>BotSpawnPoint</code> and <code>PmcSpawnZone</code> markers are now supported and can be placed on any map.</li>
+<li><strong>Force Player Spawn:</strong> <code>BotSpawnPoint</code> and <code>PmcSpawnZone</code> markers now expose a <code>Force Player Spawn</code> toggle. When enabled, the player is forced to spawn at that point/zone; when disabled, it allows any bot/PMC spawn.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><strong>Container Loot Stack Counts:</strong> currency/ammo and other stackable loose/static loot now spawns with the correct <code>StackObjectsCount</code> values from vanilla data instead of always spawning as single items.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/OTA1MTkzMGFiNDZmNWY3MmVkZTk0NGE3MmE2ODU3NTU6MTc4NDUwMzc0Mg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1bRt0NLj1hvbtqfUZ8JuFiQbvdXjDy7Wa&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-07-18T16:10:00.000000Z">18 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>53 downloads</span><span>306.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.1.1 Changelog</h2>
+<h3>Fixed</h3>
+<ul>
+<li><strong>Loot Zones:</strong> items inside a loot zone now respect their individual <code>% chance</code> values instead of always spawning.</li>
+<li><strong>Container Loot (Default &amp; Hybrid):</strong> copied containers set to <code>Default</code> or <code>Hybrid</code> now reliably contain loot by injecting the marker’s item list the same way <code>Custom</code> does. <code>Default</code> uses the copied vanilla loot, and <code>Hybrid</code> uses vanilla loot plus any custom items you add.</li>
+<li><strong>Import Vanilla Loot:</strong> the importer now correctly finds the vanilla database for installs where <code>SPT_Data</code> is nested inside an <code>SPT</code> subfolder.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MmM3ZTFkNjc5MGU4ODMyNjA4MTcxN2MwYjQxNmRlMWY6MTc4NDM5MTA1Ng==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1IKRknxEC6c7attbhgY1WfhggTa7TbaSM&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-07-09T00:53:00.000000Z">9 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>307 downloads</span><span>307.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>v1.1.0 Changelog</h2>
+<ul>
+<li>Pressing F8 now automatically enters freecam editor mode so the menu no longer opens over the game UI and the cursor unlock works consistently.</li>
+<li>The mod EventSystem is now activated whenever the editor cursor is unlocked (including in freecam), so editor UI buttons and inputs can be clicked.</li>
+<li>Freecam now spawns a dedicated <code>MLE_FreeCam</code> camera by cloning the player camera GameObject, so it inherits the full rendering/post-processing stack (Prism, PostProcess, HBAO, SSAA, grading, etc.).</li>
+<li>A render controller attached to the custom freecam fixes render distance/culling: far clip and layer cull distances are set to 10000, occlusion culling is disabled, and LOD bias is raised while in freecam.</li>
+<li>The player is no longer teleported every freecam frame; they are only teleported to the freecam location when exiting freecam.</li>
+<li>New <strong>Output</strong> tab in the bottom panel shows a rolling log of user-visible messages (e.g., door ID dumps, export confirmations) with the full output path, so players don’t need the BepInEx console open.</li>
+<li>Door ID dumps and pack exports now write their success/failure messages to the new Output tab.</li>
+<li>The Output tab has <strong>Copy</strong> and <strong>Clear</strong> buttons; Copy puts all log lines on the system clipboard.</li>
+<li>Copy/paste (Ctrl+C/V) and prefabs now support all marker types, including LightZone, ExtractZone, BotSpawnPoint, BotSpawnZone, and TriggerZone.</li>
+<li>Custom light zones now support configurable shadow settings (None/Hard/Soft, shadow strength/bias/normal bias) to reduce light bleeding through walls.</li>
+<li>The light inspector has a <strong>Force Shadows</strong> button that enables shadow casting/receiving on all renderers within the light’s range.</li>
+<li>Translate/rotate/scale gizmos now scale with camera distance so they stay a usable size when the camera is far from the selected marker.</li>
+<li>Added scene object removal to allow deleting existing GameObjects within a raid.</li>
+<li>Scene object removal is non-destructive: the editor only disables the object as a preview, records its name/path/position/rotation/scale in <code>removedObjects</code>, and exports it with the pack. The actual destruction only happens when the pack is loaded in a raid via <code>RuntimeInteractiveObjectSpawner</code>, and packs are only loaded from the published <code>ServerModPacksDirectory</code> (not exports).</li>
+<li>Added a new <strong>Removed</strong> tab that lists every vanilla object marked for removal, with <strong>Restore</strong> and <strong>Restore All</strong> buttons to re-enable them in the editor, plus <strong>Apply Preview</strong> and <strong>Refresh</strong> buttons.</li>
+<li>Picked scene objects are shown in both the <strong>GameObjects</strong> right panel and the main <strong>Inspector</strong> tab.</li>
+<li>All JSON serialization (map save, prefab save, pack export, door dumps) now uses <code>CultureInfo.InvariantCulture</code> so files are written correctly regardless of the user’s Windows locale.</li>
+<li>Game view no longer appears shrunk on non-standard resolutions/aspect ratios (e.g., 2560x1600 16:10); the camera now fills the full screen behind the editor UI.</li>
+<li>Freecam camera now uses the correct full-screen viewport instead of inheriting a smaller game viewport.</li>
+<li>Reduced console noise: removed informational logs from keybind presses, cursor toggles, copy/paste/undo/redo, and preview spawning. Warnings and errors remain.</li>
+<li>Cursor unlock button is now configurable in BepInEx config (<code>UnlockCursorMouseButton</code>, default 2 = middle). Set to 3 or 4 to use mouse button 4 or 5 instead.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/ZDcwMjNhODU2N2FhOWY1YmJjMjIyNzc0Mjk4YWE2Yzk6MTc4MzU1ODU3NQ==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1jGTMQbPi45ATuOjdkddKiun4rrUSAKVk&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-07-07T03:24:00.000000Z">7 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>139 downloads</span><span>277.2 KB</span>
+          </div>
+          <div class="prose version-notes"><p>First release, more to come :)</p>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../2310/wtt-commonlib/">WTT - CommonLib</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MWU4NDQxODA3ZDEwN2UyZmI5NWYzZTY5MGJiM2YwNmM6MTc4MzM5NDY4Mg==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1wTOqaklEff8-s1DeBR9pLenj_Wisfjt5&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    <section class="tab-panel" id="addons" role="tabpanel" aria-labelledby="tab-addons" hidden><div class="card-grid compact-grid"><article class="mod-card" data-archive-card
+  data-name="military checkpoint (customs)"
+  data-search="military checkpoint (customs) opens up the other small back room, and added a safe and a small loot zone on the floor shaneeexd"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="59"
+  data-updated="2026-07-28T10:13:34.000000Z">
+  <a class="card-image" href="../../../addon/87/military-checkpoint-customs/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/c873b967b663caa4ce92bf10bbfa992c264e49e98fba681e78a7e54580fb6aaf.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/87/military-checkpoint-customs/">Military Checkpoint (Customs)</a></h2>
+    <p class="teaser">Opens up the other small back room, and added a safe and a small loot zone on the floor</p>
+    <div class="card-meta">
+      <span>by shaneeexd</span>
+      <span>59 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+<article class="mod-card" data-archive-card
+  data-name="norvair (ground zero)"
+  data-search="norvair (ground zero) opens up the norvair store, with lots of loot potential. shaneeexd"
+  data-category=""
+  data-spt=""
+  data-fika="no"
+  data-featured="no"
+  data-ai="no"
+  data-ads="no"
+  data-downloads="74"
+  data-updated="2026-07-28T18:03:05.000000Z">
+  <a class="card-image" href="../../../addon/94/norvair-ground-zero/" tabindex="-1" aria-hidden="true">
+    <img src="../../../assets/b13333f20f586d580018b5263ead4e4b5b11816f2e1d906dd77dcff41f5d6fef.webp" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="card-body">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Addon</span>
+      
+      
+    </div>
+    <h2><a href="../../../addon/94/norvair-ground-zero/">NORVAIR (Ground Zero)</a></h2>
+    <p class="teaser">Opens up the NORVAIR store, with lots of loot potential.</p>
+    <div class="card-meta">
+      <span>by shaneeexd</span>
+      <span>74 downloads</span>
+    </div>
+    <div class="compat-row">
+      
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+</div></section>
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.shaneeexd.mapeditorlite</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>7 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>29 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ShaneeexD/MapLootEditorLite" target="_blank" rel="noreferrer noopener">https://github.com/ShaneeexD/MapLootEditorLite</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>I have been programming for 15 years as a hobby, I use AI to draft and create boilerplates, the custom UI was also heavily done by AI due to the nature of creating it programmatically. The code is thoroughly reviewed by me before anything is published.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

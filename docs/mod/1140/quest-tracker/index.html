@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Quest Tracker · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Quest Tracker</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/e6df34bc4eec7d2f97e9c160f1bcdc338d4d7d13a9ca7628ddc1f559f62cae50.webp" alt="Quest Tracker thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Quest Tracker</h1>
+    <p class="hero-teaser">Track quests while in-raid with a handy toggleable overlay!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/f1d2533c994ed91f540679bbc6ee02e42ba70149b776e37c1534147c67e656a6.webp" alt="" width="32" height="32">DrakiaXYZ</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>145,329</dd></div>
+    <div><dt>Favourites</dt><dd>98</dd></div>
+    <div><dt>Mod lists</dt><dd>188</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Quest Tracker content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>9</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3><strong>Features</strong></h3>
+<ul>
+<li>Quickly see your tracked quest progress via an in-game overlay at the push of a button, or by completing quest objectives</li>
+<li>Easily toggle whether a quest is tracked by right-clicking it in either your player task list, or vendor quest list</li>
+<li>Tell which tasks are tracked at a glance via the Status column in either your player task list, or vendor quest list</li>
+<li>Have a more simplified view with just quest names and their overall progress, or include individual quest objectives for a more advanced look at your quests</li>
+<li>Separate tracked quest lists for each server profile</li>
+</ul>
+<p>Preview:</p>
+<div class="youtube-lite" data-video-id="Pm5zt02sqa8" data-embed-url="https://www.youtube-nocookie.com/embed/Pm5zt02sqa8?autoplay=1"><img src="../../../assets/a207dc669f4cb4b88dd2f0898a8ec799efa79524d269340a95bd7e808763298e.webp" alt="YouTube video thumbnail" loading="lazy" decoding="async"></div>
+<h3><strong>Installation</strong></h3>
+<p>1) Open the downloaded zip file in 7-zip</p>
+<p>2) Select the folders in the zip file in 7-zip</p>
+<p>3) Drag the selected folders from 7-zip into your SPT folder</p>
+<p>Installation Video:</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/e96d5e055187368c9617d5fe238ef111d83ecb9e3d05f613e13e8d8f77a7f21b.webp" alt="Install Gif"></p>
+<h3><strong>Usage</strong></h3>
+<ul>
+<li>Toggle whether a quest is tracked by right-clicking on it, either in your player task list, or a vendor’s quest list</li>
+<li>Note: Only quests that are <em>currently active</em> can be tracked. Completed, locked, or failed quests can not be tracked</li>
+<li>Whether a quest is tracked is visible via the “Status” column in the player task list, and the right side Status text in the vendor quest list.</li>
+<li>By default, the keybind to show the task list in-raid is i</li>
+</ul>
+<h3><strong>Configuration</strong></h3>
+<p>Configuration is done via the F12 menu. The below table includes the list of available configuration options, what they do, and what their default value is.</p>
+<p>SettingDescriptionDefaultVisible At Raid Start<br>
+Whether the quest tracker panel is visible at raid start.<br>
+truePanel Toggle KeyThey key to press to toggle the quest tracker panel visibilityiAuto HideWhether to automatically hide the quest tracker panel after a timeouttrueAuto Hide TimerHow long to show the quest tracker panel when either Auto Hide is set, or Show On Objective Progress is enabled5 secondsShow On Objective ProgressWhether to temporarily show the quest tracker panel any time you advance a quest objective<br>
+The panel shows for “Auto Hide Timer” secondstrueInclude Current Map QuestsWhether to include all quests for your current map in the quest tracker panel, not just those you’ve explicitly tracked. This does <strong>NOT</strong> include tasks with the location marked as “Any”falseExclude Other Map QuestsWhether to exclude quests that are explicitly not for your current map from the quest tracker paneltrueProgress As Percent<br>
+Whether to show the total quest progress as a percent, instead of a [current]/[total] text display<br>
+true<br>
+Hide Completed Quests<br>
+Whether to remove quests that are ready to hand in from the quest tracker paneltrueShow Objectives<br>
+Whether to include quest objectives underneath each quest, including their current progress<br>
+trueObjectives As Percent<br>
+Whether to show quest objective progress as a percent, instead of a [current]/[total] text display<br>
+false<br>
+Hide Completed Objectives<br>
+Whether to hide completed objectives from the objective list<br>
+trueMaximum Width<br>
+The maximum width of the panel before text wraps<br>
+1/6 Screen WidthPanel TransparencyThe transparency value for the panel background40%Font SizeThe font size of quest names and their progress in the quest tracker panel30Objective Font SizeThe font size of quest objectives and their progress in the quest tracker panel20AlignmentWhether to snap the quest tracker panel to the right or left side of the screenRight ### <strong>Known Issues &amp; Limitations</strong></p>
+<p>The following is a non-exhaustive list of issues and limitations</p>
+<ul>
+<li>Some daily/weekly tasks may have confusing objectives, such as missing what map to extract from</li>
+<li>Sometimes the vendor quest list “Tracked!” text gets overwritten with “Active” for daily/weekly quests</li>
+<li>If something goes wrong in the plugin, it can break interacting with the Quest list. A restart of the client should resolve this</li>
+</ul>
+<h3><strong>Compatibility</strong></h3>
+<p>There are no currently known conflicts with this mod.</p>
+<p>If you are running my “Task List Fixes” plugin, please make sure you are running the latest version (1.2.2 or later) to support sorting tracked quests to the top of your player task list.</p>
+<p>If you enjoy my work, you can <a target="_blank" class="external-link" href="https://ko-fi.com/drakiaxyz" rel="noreferrer noopener">feed my caffeine addiction</a></p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2025-10-11T19:30:03.000000Z">11 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>41,020 downloads</span><span>23.5 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Update for SPT 4.0.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/0e0e44108eabb25aeb70c2da829d164eee1c16430893023679ae98dd424bbc98?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/224b0a2d-4160-4bd3-92c8-0eed7d41eba3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A54%3A56Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.6.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A54%3A28Z&amp;ske=2026-08-01T20%3A54%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=334S8wnNzSnZIoQLUSO%2FKyRKMBrC1IDPVfVBh2mLgUQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.6.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.1</h2></div><time datetime="2025-03-17T00:42:17.000000Z">17 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>27,867 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<p>Tracking can now be done at the objective level, useful for tasks that span multiple maps (Such as Shooter Born in Heaven)</p>
+<ul>
+<li>Tracking an objective will automatically track the parent quest</li>
+<li>Untracking the last tracked objective on a quest will untrack the parent quest</li>
+<li>If no specific objectives are tracked, all objectives are shown in the quest tracker</li>
+</ul>
+<p>Note that this update will clear any previously tracked quests, as the structure of the tracking file has changed</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/76fddb2a-1cbb-472c-8450-c5be3cbd8b1e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A53%3A08Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.5.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A52%3A48Z&amp;ske=2026-08-01T20%3A53%3A08Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=6%2Fs7IJracx%2F41zqSvhVHmrvKS5n7YW92A5hfATl%2FLBU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.5.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2025-03-16T20:01:00.000000Z">16 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>409 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.11.x</h3>
+<p>Update for SPT 3.11</p>
+<p>- Show “Factory day” tasks when on Factory Night</p>
+<p>- Show “Ground Zero” tasks when on Ground Zero High</p>
+<p>- Show Marathon tasks no matter the map (Treat them the same as “any” location), as they don’t include all required maps in their conditions</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/eba15ced-1509-4120-b4cf-2ed430274eec?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A07Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.5.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A42Z&amp;ske=2026-08-01T21%3A08%3A07Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=hxL2ud3zxTPrMN4BhNC3FAgTYFrKrjgpBd0iaXMJeKU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.5.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.1</h2></div><time datetime="2024-12-21T05:21:39.000000Z">21 December 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,134 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.10.x</h3>
+<ul>
+<li>Fix issue when using Fika Dedicated where the tracker list wouldn’t show in-raid</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/23d2fd96-d649-42d4-a6f5-c4b2425d738d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A19Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.4.1.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A04Z&amp;ske=2026-08-01T21%3A11%3A19Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=IVBsKs5Rz5vPJ%2BzUTvqLdOr8ownuLU%2FhDLhmb%2FpoFfw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.4.1.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-11-27T05:15:26.000000Z">27 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>5,334 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.10.x</h3>
+<ul>
+<li>Update for SPT 3.10.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/747ef459-d2bc-4497-923f-74be55319473?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A30Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.4.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A33Z&amp;ske=2026-08-01T20%3A57%3A30Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=AStuUEjMIuUK6IjH2HujN0kmPNBjGKtLAoLLGgJk7zo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.4.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2024-07-06T19:18:49.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>22,718 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.9.x</h3>
+<ul>
+<li>Update for 3.9.0</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/384155c8-8fd7-4092-a98b-a32657545cb1?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A21Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.3.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A51Z&amp;ske=2026-08-01T20%3A58%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=n4XeGglAih9CHNf8%2FQm4WplSaMBYsph3iCFBLytrOOs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQwOCwibmJmIjoxNzg1NjE1MTA4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1X14he8LT8h-Gb00wjhCcjQHAVmVVlJHxqysKygc0yc&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.3.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2024-04-01T21:18:32.000000Z">1 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>19,754 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version is NOT version agnostic, and REQUIRES SPT 3.8.0</h3>
+<p>Update for 3.8.0</p>
+<h3>Known Issues:</h3>
+<ul>
+<li>Some daily/weekly tasks may have confusing objectives, such as missing what map to extract from</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/8997b060-1c89-4fa8-9da0-bdd347f8c87c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A10%3A38Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.2.0.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A00Z&amp;ske=2026-08-01T21%3A10%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=9eT7tqR1901NVXV4nGsbTy37mOUPd9yqJ8BLOWNn3lQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMCwibmJmIjoxNzg1NjE1MTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fui7_6QRqEYa6O183LgLI_DFwGIgmfz0NeeUso4M9wU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.2.0.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2023-11-03T21:43:28.000000Z">3 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.6</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>13,896 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version was written to be generic, and support as many <em>future</em> versions of SPT as possible. Currently only tested on 3.7.0-3.7.6</h3>
+<h3>Changelog:</h3>
+<ul>
+<li>Re-organized settings. Note: Some of your settings will have reset because of this.</li>
+<li>Allow hiding completed quests and objectives</li>
+<li>Allow setting a max width (Default 1/6th screen width)</li>
+<li>Quest name and objectives will now wrap if they won’t fit on a single line</li>
+<li>Allow setting panel background transparency</li>
+<li>Allow aligning panel to the left or right side of the screen</li>
+<li>Make version agnostic
+<ul>
+<li>
+<p>Officially tested/supported on SPT 3.7.0 - 3.7.6</p>
+</li>
+<li>
+<p>User tested as working on: SPT 3.6.1</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Known Issues:</h3>
+<ul>
+<li>Some daily/weekly tasks may have confusing objectives, such as missing what map to extract from</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/610dbcda-1bc9-458c-8fe0-369372b674ed?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A33Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A42Z&amp;ske=2026-08-01T20%3A57%3A33Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=4hgJ8jtWu4dYhsfcap%2FASU%2FIjU215WtKQ7x0Vs%2FGf5U%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMCwibmJmIjoxNzg1NjE1MTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fui7_6QRqEYa6O183LgLI_DFwGIgmfz0NeeUso4M9wU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2023-11-02T07:08:18.000000Z">2 November 2023</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.7.1</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,197 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3>This version will only work with SPT 3.7.1</h3>
+<p>Initial Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/b6dc7981b4d3ae4c25ba6360f770029f0cfad90c7402ced2ec2d10b4a1fd7cd3" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/712173801/99205f43-7e61-4fa7-bebb-9f03bab30e7a?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A36Z&amp;rscd=attachment%3B+filename%3DDrakiaXYZ-QuestTracker-1.0.0_3.7.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A22Z&amp;ske=2026-08-01T21%3A09%3A36Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nw9roEU%2FPDXFgH2rKkHdfq6TVloE44MftsVCs7uI4Ek%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTQxMCwibmJmIjoxNzg1NjE1MTEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Fui7_6QRqEYa6O183LgLI_DFwGIgmfz0NeeUso4M9wU&amp;response-content-disposition=attachment%3B%20filename%3DDrakiaXYZ-QuestTracker-1.0.0_3.7.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>xyz.drakia.questtracker</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>2 November 2023</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/DrakiaXYZ/SPT-QuestTracker" target="_blank" rel="noreferrer noopener">https://github.com/DrakiaXYZ/SPT-QuestTracker</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

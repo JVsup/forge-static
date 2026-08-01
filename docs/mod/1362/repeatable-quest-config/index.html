@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Repeatable Quest Config · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Repeatable Quest Config</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/ef6a5b6bf37f29a979c0e169382f8a4dc34d791fc890c3771ce4b88d91f41cce.webp" alt="Repeatable Quest Config thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Repeatable Quest Config</h1>
+    <p class="hero-teaser">Disable certain types of Repeatable Quests and/or set multipliers for XP/Money/Rep/Skill gain rewards from Repeatable Quests. Allows instantly receiving new repeatables! Do all things repeatable!</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/71add5183d0802d4850ed79eee2f09dbbcef162e15f72ce1388ddbdd26c74377.webp" alt="" width="32" height="32">acidphantasm</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>7,396</dd></div>
+    <div><dt>Favourites</dt><dd>8</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Repeatable Quest Config content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>13</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><p>Want freedom for your Repeatable Quests? Tired of trying to fetch random ass items for traders? Disable those quest types!</p>
+<p>Tired of waiting for new repeatables? You can enable the ability to instantly receive a new one on completion!</p>
+<p>Think you should get more skill points for rewards? Or maybe skill points more often? This mod is for you!</p>
+<p>This mod is focused solely on providing flexibility and configuration for Repeatable Quests and nothing more.</p>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">INSTALLATION</div>
+<div class="tab-content"><p><strong>Installation</strong></p>
+<ol>
+<li>Open the downloaded 7z file in 7-zip</li>
+<li>Select the SPT folder in the 7z file in 7-zip</li>
+<li>Drag the SPT folder from 7-zip into your root SPT folder</li>
+</ol>
+<p>Demonstration Video (yoink):</p>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="wMIskD3.gif"></p></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">UNINSTALLATION</div>
+<div class="tab-content"><ol>
+<li>Delete <code>/ROOTSPT/SPT/user/mods/acidphantasm-repeatablequestconfig</code></li>
+<li>Done</li>
+</ol></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">CONFIG</div>
+<div class="tab-content"><p>Located at: \user\mods\acidphantasm-repeatablequestconfig\config\config.json</p>
+<p><em>The mod should not allow you to load broken settings, but if I missed something please report it via comments or github</em></p>
+<p><strong>Multipliers</strong></p>
+<ul>
+<li>xpMultiplier
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 0.01-5
+<ul>
+<li>Setting this multiplier changes the XP rewards for all repeatable quests by the amount you specify.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>currencyMultiplier
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 0.01-5
+<ul>
+<li>Setting this multiplier changes the Currency rewards for all repeatable quests by the amount you specify.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>repMultiplier
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 0.01-5
+<ul>
+<li>Setting this multiplier changes the Reputation rewards for all repeatable quests by the amount you specify.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>skillRewardChanceMultiplier
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 0.01-5
+<ul>
+<li>Setting this multiplier changes the chance you will have a skill reward for all repeatable quests.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>skillPointRewardMultiplier
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 0.01-5
+<ul>
+<li>Setting this multiplier changes the amount of Skill Points gained in rewards for all repeatable quests by the amount you specify.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Minimum Player Level &amp; Number of Quests</strong></p>
+<ul>
+<li>dailyMinPlayerLevel
+<ul>
+<li><strong>Default: 5</strong></li>
+<li>Accepted Values: 1 or higher
+<ul>
+<li>Setting this value changes the minimum level that you will start receiving Daily Quests</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>dailyNumberOfQuests
+<ul>
+<li><strong>Default: 3</strong></li>
+<li>Accepted Values: 1-15
+<ul>
+<li>Setting this value changes the maximum amount of Daily quests you will receive</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>weeklyMinPlayerLevel
+<ul>
+<li><strong>Default: 15</strong></li>
+<li>Accepted Values: 1 or higher
+<ul>
+<li>Setting this value changes the minimum level that you will start receiving Weekly Quests</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>weeklyNumberOfQuests
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 1-15
+<ul>
+<li>Setting this value changes the maximum amount of Weekly quests you will receive</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fenceMinPlayerLevel
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 1 or higher
+<ul>
+<li>Setting this value changes the minimum level that you will start receiving Fence Quests</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fenceNumberOfQuests
+<ul>
+<li><strong>Default: 1</strong></li>
+<li>Accepted Values: 1-15
+<ul>
+<li>Setting this value changes the maximum amount of quests you will receive from Fence</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Specific Quest Types Only</strong></p>
+<ul>
+<li>useSpecificQuestType
+<ul>
+<li><strong>Default: true</strong>
+<ul>
+<li><strong>Only ONE of useSpecificQuestType or useRandomQuestType can be true.</strong></li>
+<li>Setting this true will enforce all quests are only the type specified by one of the three below options.</li>
+<li><em>If multiple of the next 3 settings are set to true, then the top most one (listed in order below) will be set.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>completionOnly
+<ul>
+<li><strong>Default: false</strong></li>
+</ul>
+</li>
+<li>explorationOnly
+<ul>
+<li><strong>Default: false</strong></li>
+</ul>
+</li>
+<li>eliminationOnly
+<ul>
+<li><strong>Default: true</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Random Selection of Quest Types</strong></p>
+<ul>
+<li>useRandomQuestType
+<ul>
+<li><strong>Default: false</strong>
+<ul>
+<li><strong>Only ONE of useSpecificQuestType or useRandomQuestType can be true.</strong></li>
+<li>Setting this true will enforce each quest type (Daily/Weekly/Scav) to be restricted to the options configured below.</li>
+<li>All below values are the same as vanilla SPT.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>dailyTypes
+<ul>
+<li><strong>Default: “Exploration”, “Elimination”, “Completion”</strong>
+<ul>
+<li>Remove one of the options to remove it from the available pool of quests for all Daily quests.</li>
+<li>ENSURE that you are following the proper JSON format that is already in the config file. If you fail to do so, the server console will give you an error and not apply any changes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>weeklyTypes
+<ul>
+<li><strong>Default: “Exploration”, “Elimination”, “Completion”</strong>
+<ul>
+<li>Remove one of the options to remove it from the available pool of quests for all Weekly quests.</li>
+<li>ENSURE that you are following the proper JSON format that is already in the config file. If you fail to do so, the server console will give you an error and not apply any changes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>scavTypes
+<ul>
+<li><strong>Default: “Exploration”, “Elimination”, “Completion”</strong>
+<ul>
+<li>Remove one of the options to remove it from the available pool of quests for all Scav quests.</li>
+<li>ENSURE that you are following the proper JSON format that is already in the config file. If you fail to do so, the server console will give you an error and not apply any changes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Debug Logging</strong></p>
+<ul>
+<li>debugLogging
+<ul>
+<li><strong>Default: false</strong>
+<ul>
+<li>Enable this option to see logging in the server console for any changes you have made to the config.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">RECOMMENDED MODS</div>
+<div class="tab-content"><p><strong>Recommended Mods</strong></p>
+<p>RQC now includes this, but it’s still a good mod as an alternative.</p>
+<p><a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/1797-instant-repeatables/" rel="noreferrer noopener">Instant Repeatables</a></p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">KNOWN ISSUES</div>
+<div class="tab-content"><p><strong>Known Issues</strong></p>
+<p>May have issues if you also try to use SVM Repeatable Quest options.</p></div></div></div>
+<p>If you enjoy my work - you can <a target="_blank" class="external-link" href="https://ko-fi.com/acidphantasm" rel="noreferrer noopener">buy me a coffee</a>~</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.1</h2></div><time datetime="2025-12-26T04:34:00.000000Z">26 December 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.9</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,300 downloads</span><span>7.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 4.0.9+</strong></h3>
+<p>Nobody told me I had to work on Christmas edition. Thank you all devs, authors, and contributors for SPT. Another year, another amazing modding community! &lt;3</p>
+<p>Bugs Squashed</p>
+<ul>
+<li>Resolved issues with model and method changes in SPT 4.0.9</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/9e8baf1e7972090a8bb7f053cf78347359d3ad1997b13f0c71836274cfb28bd6?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1074575855/6f85e726-9a7d-41cb-a8cc-cd28d4299c07?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A09%3A56Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A09%3A55Z&amp;ske=2026-08-01T21%3A09%3A56Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=hU3RMcUxTfMEMw%2BdnAzIsAS2WD0JBgceaFrfzgXCpOU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>2.0.0</h2></div><time datetime="2025-10-12T04:06:00.000000Z">12 October 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT &gt;=4.0.0 &lt; 4.0.9</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>924 downloads</span><span>7.5 KB</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 4.0.0 - 4.0.8</strong></h3>
+<p>Changes</p>
+<ul>
+<li>Enhanced instant repeatable logic (Instant Repeatables now default enabled)</li>
+<li>Removed some features (specific quest types - will return in a future version)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/e3c884aa24557d158b76289a66067e20585d9e9053031f27b9d3e37b15723ba0?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1074575855/9bdd4c49-2ab6-45a0-a88d-9c4c16730f82?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A59%3A47Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A08Z&amp;ske=2026-08-01T20%3A59%3A47Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=fYzC1ercI6XTtZ13obfy%2FjpwQxNDwAvjd2wZ2bQCX8s%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.1</h2></div><time datetime="2025-03-24T15:18:30.000000Z">24 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,275 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.11.x</strong></h3>
+<p>Bugs Squashed</p>
+<ul>
+<li>Fixed instant repeatables from hanging client when completing a normal quest</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/db84e9aa-a5da-4b92-a621-867e04896ca5?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A59Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A22Z&amp;ske=2026-08-01T21%3A06%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=bdD%2FUIk56itc5Jg1OEkywPvsIA2gNG4irhybHaDcGuk%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.7.0</h2></div><time datetime="2025-03-23T04:34:31.000000Z">23 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>203 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.11.x</strong></h3>
+<p>New Features</p>
+<ul>
+<li>Config option to instantly receive a new repeatable upon completion of a repeatable (default: disabled)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/db4feb47-5712-493e-8aae-dd88cae7cb7c?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A06%3A38Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A06%3A36Z&amp;ske=2026-08-01T21%3A06%3A38Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=2xoLYJyfFrwpGDFmDnY5mg6d6O9VQNfYRxjhz7wf9Aw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.6.0</h2></div><time datetime="2025-03-15T20:26:06.000000Z">15 March 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.11.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>241 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.11.x</strong></h3>
+<p>3.11 Update</p>
+<p>Changes</p>
+<ul>
+<li>Replaced VFS with FileSystemSync</li>
+<li>Removed some logging</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/1fa0018c-1443-4bdf-92cd-60a0fa4eee97?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A12%3A40Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A11%3A51Z&amp;ske=2026-08-01T21%3A12%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=WCcvDO8QI1%2FQjq%2FbLWAhKU5uBPnU6LQV07ueB4wIOHU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.1</h2></div><time datetime="2025-01-14T05:57:53.000000Z">14 January 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>411 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.10.x</strong></h3>
+<p>Acid’s math skills strike again</p>
+<p>Bugs Squashed</p>
+<ul>
+<li>Fixed numbers being converted to a string and blatantly defying the laws of numbers.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/1a66b146-11cf-49c8-9e06-8398cd4f451d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A49Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A06Z&amp;ske=2026-08-01T20%3A56%3A49Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=8R3Ubep%2FjMLF3sUgpQjoR59WEw788BTRevnCNUtOKkE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUwOSwibmJmIjoxNzg1NjE1MjA5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sgSu1jxuHbTxEoFzGelXS72sQxXxHxKAsmYUS_MQCjM&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.5.0</h2></div><time datetime="2025-01-13T04:39:29.000000Z">13 January 2025</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>181 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.10.x</strong></h3>
+<p>Config is now a JSONC file.</p>
+<p>New Features</p>
+<ul>
+<li>Config option for removing Intel Center LV1 requirement for Fence Dailies</li>
+<li>Config option for currency multiplier now also applies to GP Coins</li>
+<li>Config option to change expiration/duration time for repeatable quests (not retroactive)</li>
+</ul>
+<p>Changes</p>
+<ul>
+<li>Now allow Fence “Pickup” quest types (item retrieval)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/e1000993-0261-46db-8c3b-cc96ae89ed21?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A47%3A40Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A47%3A13Z&amp;ske=2026-08-01T20%3A47%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=BMcXyayNOfqX3b09GFNrrV1G8yGClXAVw0%2BfdOtjguo%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.4.0</h2></div><time datetime="2024-11-26T15:05:50.000000Z">26 November 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.10.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>474 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.10.x</strong></p>
+<p>3.10 Update</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/c246bc9e-059e-4f80-b9aa-afefb68755c0?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A56%3A35Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A09Z&amp;ske=2026-08-01T20%3A56%3A35Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UKyJftwbERdE%2F8OpFRkMdiz0yrlLeK9%2FaUP6gUf9HpM%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.3.0</h2></div><time datetime="2024-07-06T20:26:28.000000Z">6 July 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>858 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><h3><strong>This version will only work for SPT 3.9.X</strong></h3>
+<p>Updated to 3.9.0</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/c4d92efc-fa0e-49a7-a3c9-786ccd1b5321?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A57%3A16Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A56%3A26Z&amp;ske=2026-08-01T20%3A57%3A16Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TARvWbfl7uNi9NqrfGNC3cdV7BlM3Zb9a1d01LczPxE%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.2.0</h2></div><time datetime="2024-05-23T03:23:48.000000Z">23 May 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>617 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.8.X</strong></p>
+<p>Added minPlayerLevel config option (min level 1)</p>
+<p>Added numberOfQuests config option (max quest count 15)</p>
+<p>General Code Cleanup</p>
+<p>NOTE: <em>Making the number of quests the maximum allowed will not actually generate that many quests. The default controller will still prevent creation of duplicate quests (if you want more, don’t limit the quest types to one specific type) this will be changed in a future version.</em></p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/7c58fdb2-b491-4a06-8dd9-0ade504fee3d?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A58%3A02Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A57%3A59Z&amp;ske=2026-08-01T20%3A58%3A02Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=ifLetTF4mFAHrG9HkYJiD%2BU0hPYpMF2BGxQ1NG2h%2BIw%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.3</h2></div><time datetime="2024-05-11T05:35:08.000000Z">11 May 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>315 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.8.X</strong></p>
+<p>Fix debug logging</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/b1a7ca14-44cf-4b39-96c6-315887287750?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T20%3A48%3A23Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A47%3A24Z&amp;ske=2026-08-01T20%3A48%3A23Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=kTk9a3mQxWf6bqjUqOTsBO2PJgsEq0lpD974KhD%2FGkQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.2</h2></div><time datetime="2024-05-03T14:25:36.000000Z">3 May 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>316 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.8.X</strong></p>
+<p>Prevent Mechanic from being in the trader pool when generating Elimination quests (thanks for bug report Nick)</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/5967bc6b-69f6-4ea9-9248-4c3f4ce7c1c8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A00%3A01Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T19%3A59%3A05Z&amp;ske=2026-08-01T21%3A00%3A01Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=uelN5ojszgVp9UK5cUEe67YgPcS%2FqFYv8uotxoXvgho%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMCwibmJmIjoxNzg1NjE1MjEwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.k0i9DjCD2pcYJrRZqucUl9ymGGRwdBwgbVPPugmtcAY&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2024-04-27T06:16:44.000000Z">27 April 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.8.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>281 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p><strong>This version will only work for SPT 3.8.X</strong></p>
+<ul>
+<li>Initial Release</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/93fde176d2d2ddc1248b98bb73a8dff435b99286cfb351d02c7048b62689328f?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/791144417/cf525089-4cb5-4694-8883-c3361d493811?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A08%3A12Z&amp;rscd=attachment%3B+filename%3Dacidphantasm-repeatablequestconfig.7z&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A08%3A09Z&amp;ske=2026-08-01T21%3A08%3A12Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=xVu33aKL38VFyCzMVnmGmUKeitmJ6RJVfLWYkAp4ok0%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTUxMSwibmJmIjoxNzg1NjE1MjExLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Lcx23EzpYXoD9j7q9BS7R8nn5QoTs8u2yz05p-OCsRs&amp;response-content-disposition=attachment%3B%20filename%3Dacidphantasm-repeatablequestconfig.7z&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.acidphantasm.repeatablequestconfig</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>27 April 2024</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/acidphantasm/acidphantasm-repeatablequestconfig" target="_blank" rel="noreferrer noopener">3.11</a></li><li><a href="https://github.com/acidphantasm/repeatablequestconfig-csharp" target="_blank" rel="noreferrer noopener">4.0</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

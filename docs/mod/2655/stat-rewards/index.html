@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Stat Rewards · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Stat Rewards</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/26ced89a81482bf01b29f393d6c4752df927ee6590c6bed82562cc08cdbb972f.webp" alt="Stat Rewards thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Stat Rewards</h1>
+    <p class="hero-teaser">Random rewards for hitting stat milestones — kills, damage, looting, and more. 48 repeatable milestones, fully configurable.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/032e8eb1dc5bfb128bea205be7fad106914be43e0f5f7e1dc8fbe3aa5304e167.webp" alt="" width="32" height="32">Chazut</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>8,009</dd></div>
+    <div><dt>Favourites</dt><dd>36</dd></div>
+    <div><dt>Mod lists</dt><dd>63</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Stat Rewards content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">Overview</div>
+<div class="tab-content"><p>Every raid you run racks up stats — kills, distance walked, blood lost, armor shredded. But those numbers just sit there doing nothing.</p>
+<p><strong>StatRewards turns your profile stats into repeatable milestones that send you random loot via mail.</strong> Kill 25 PMCs? Prapor sends you a weapon. Walk 25km? Jaeger mails you food and drinks. Lose 50 liters of blood? Therapist questions your biology and sends meds.</p>
+<p><strong>Key features:</strong></p>
+<ul>
+<li><strong>48 milestones</strong> out of the box — kills, headshots, damage, healing, looting, exploration, economy, and every weapon type</li>
+<li><strong>Random rewards by category</strong> — meds, ammo, gear, keys, barter items, money, food, drinks</li>
+<li><strong>Repeatable</strong> — milestones trigger every N stats, forever</li>
+<li><strong>Global threshold multiplier</strong> — one slider to make rewards more or less frequent</li>
+<li><strong>Fully configurable</strong> — add, remove, or tweak milestones and reward pools via JSONC config</li>
+<li>Safe for existing profiles — first install seeds milestones to current stats, no retroactive reward flood</li>
+</ul></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">Installation</div>
+<div class="tab-content"><p>Extract the zip in your SPT root folder.</p>
+<p>No client plugin needed — this is a server-only mod.</p></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">Milestones</div>
+<div class="tab-content"><p>All 48 default milestones with their thresholds:</p>
+<p><strong>Combat</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Novice Hunter</td>
+<td>25 kills</td>
+<td>Prapor</td>
+<td>Total kills, all types</td>
+</tr>
+<tr>
+<td>Headhunter</td>
+<td>15 headshots</td>
+<td>Peacekeeper</td>
+<td>Headshot kills</td>
+</tr>
+<tr>
+<td>PMC Slayer</td>
+<td>15 PMC kills</td>
+<td>Prapor</td>
+<td>Player kills (Bear + Usec)</td>
+</tr>
+<tr>
+<td>Boss Hunter</td>
+<td>3 boss kills</td>
+<td>Jaeger</td>
+<td>Boss kills (Reshala, Killa, etc.)</td>
+</tr>
+<tr>
+<td>Sniper Elite</td>
+<td>5 long shots</td>
+<td>Peacekeeper</td>
+<td>Long-distance kills (200m+)</td>
+</tr>
+<tr>
+<td>Accuracy King</td>
+<td>250 hits</td>
+<td>Peacekeeper</td>
+<td>Shots that hit a target</td>
+</tr>
+<tr>
+<td>Body Wrecker</td>
+<td>15 limbs</td>
+<td>Jaeger</td>
+<td>Limbs destroyed on enemies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weapon Types</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Weapon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knife Maniac</td>
+<td>5 kills</td>
+<td>Jaeger</td>
+<td>Melee</td>
+</tr>
+<tr>
+<td>Pistolero</td>
+<td>15 kills</td>
+<td>Mechanic</td>
+<td>Pistols</td>
+</tr>
+<tr>
+<td>SMG Specialist</td>
+<td>15 kills</td>
+<td>Skier</td>
+<td>SMGs</td>
+</tr>
+<tr>
+<td>Rifleman</td>
+<td>25 kills</td>
+<td>Prapor</td>
+<td>Assault Rifles</td>
+</tr>
+<tr>
+<td>Carbine Expert</td>
+<td>15 kills</td>
+<td>Peacekeeper</td>
+<td>Assault Carbines</td>
+</tr>
+<tr>
+<td>Marksman</td>
+<td>15 kills</td>
+<td>Peacekeeper</td>
+<td>DMRs</td>
+</tr>
+<tr>
+<td>Sniper</td>
+<td>15 kills</td>
+<td>Jaeger</td>
+<td>Bolt-action Snipers</td>
+</tr>
+<tr>
+<td>Shotgun Surgeon</td>
+<td>15 kills</td>
+<td>Jaeger</td>
+<td>Shotguns</td>
+</tr>
+<tr>
+<td>Spray &amp; Pray</td>
+<td>15 kills</td>
+<td>Mechanic</td>
+<td>Machine Guns / LMGs</td>
+</tr>
+<tr>
+<td>Grenadier</td>
+<td>10 kills</td>
+<td>Prapor</td>
+<td>Grenades / Throwables</td>
+</tr>
+<tr>
+<td>Grenade Launcher Pro</td>
+<td>5 kills</td>
+<td>Prapor</td>
+<td>Grenade Launchers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Factions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bear Hunter</td>
+<td>15 kills</td>
+<td>Peacekeeper</td>
+<td>Bear PMCs</td>
+</tr>
+<tr>
+<td>Usec Eliminator</td>
+<td>15 kills</td>
+<td>Prapor</td>
+<td>Usec PMCs</td>
+</tr>
+<tr>
+<td>Scav Exterminator</td>
+<td>50 kills</td>
+<td>Jaeger</td>
+<td>Scavs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Damage &amp; Health</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Armor Breaker</td>
+<td>5,000 armor dmg</td>
+<td>Mechanic</td>
+<td>Armor damage dealt</td>
+</tr>
+<tr>
+<td>Bullet Sponge</td>
+<td>5,000 combat dmg</td>
+<td>Therapist</td>
+<td>Combat damage taken</td>
+</tr>
+<tr>
+<td>Patch Me Up</td>
+<td>2,500 HP healed</td>
+<td>Therapist</td>
+<td>Health points restored</td>
+</tr>
+<tr>
+<td>Blood Donor</td>
+<td>50 liters</td>
+<td>Therapist</td>
+<td>Blood lost</td>
+</tr>
+<tr>
+<td>Bones of Steel</td>
+<td>10 fractures</td>
+<td>Therapist</td>
+<td>Fractures sustained</td>
+</tr>
+<tr>
+<td>Dehydration Survivor</td>
+<td>5 times</td>
+<td>Therapist</td>
+<td>Times dehydrated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Survival &amp; Raids</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Survivor</td>
+<td>10 extracts</td>
+<td>Prapor</td>
+<td>PMC raids survived</td>
+</tr>
+<tr>
+<td>Die Hard</td>
+<td>10 deaths</td>
+<td>Therapist</td>
+<td>Deaths (consolation prize)</td>
+</tr>
+<tr>
+<td>Win Streak</td>
+<td>5 streak</td>
+<td>Prapor</td>
+<td>Consecutive raids survived record</td>
+</tr>
+<tr>
+<td>Time in Tarkov</td>
+<td>5 hours</td>
+<td>Prapor</td>
+<td>Total time in PMC raids</td>
+</tr>
+<tr>
+<td>Scav Raider</td>
+<td>10 scav raids</td>
+<td>Fence</td>
+<td>Raids played as Scav</td>
+</tr>
+<tr>
+<td>Lead Spitter</td>
+<td>1,000 rounds</td>
+<td>Mechanic</td>
+<td>Ammo fired</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Movement &amp; Consumables</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Marathon Runner</td>
+<td>25 km</td>
+<td>Jaeger</td>
+<td>Distance walked</td>
+</tr>
+<tr>
+<td>Iron Stomach</td>
+<td>15 foods</td>
+<td>Jaeger</td>
+<td>Food consumed</td>
+</tr>
+<tr>
+<td>Hydration Expert</td>
+<td>15 drinks</td>
+<td>Jaeger</td>
+<td>Drinks consumed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Loot</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scavenger</td>
+<td>25 bodies</td>
+<td>Fence</td>
+<td>Corpses looted</td>
+</tr>
+<tr>
+<td>Safe Cracker</td>
+<td>15 safes</td>
+<td>Fence</td>
+<td>Safes opened</td>
+</tr>
+<tr>
+<td>Rat King</td>
+<td>100 barter items</td>
+<td>Fence</td>
+<td>Barter items picked up</td>
+</tr>
+<tr>
+<td>Key Collector</td>
+<td>10 keys</td>
+<td>Fence</td>
+<td>Keys found in raid</td>
+</tr>
+<tr>
+<td>Weapons Hoarder</td>
+<td>25 weapons</td>
+<td>Mechanic</td>
+<td>Weapons picked up</td>
+</tr>
+<tr>
+<td>Equipment Collector</td>
+<td>50 equipment</td>
+<td>Ragman</td>
+<td>Gear picked up</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Economy</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Millionaire</td>
+<td>1,000,000 ₽</td>
+<td>Ragman</td>
+<td>Roubles earned</td>
+</tr>
+<tr>
+<td>Dollar Man</td>
+<td>2,500 $</td>
+<td>Peacekeeper</td>
+<td>Dollars earned</td>
+</tr>
+<tr>
+<td>Euro Trader</td>
+<td>2,500 €</td>
+<td>Skier</td>
+<td>Euros earned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exploration</strong></p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Every</th>
+<th>Sender</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tourist</td>
+<td>25 zones</td>
+<td>Jaeger</td>
+<td>Exploration zones visited</td>
+</tr>
+<tr>
+<td>Door Kicker</td>
+<td>250 XP</td>
+<td>Prapor</td>
+<td>XP from breaching doors</td>
+</tr>
+<tr>
+<td>Locksmith</td>
+<td>250 XP</td>
+<td>Fence</td>
+<td>XP from unlocking doors</td>
+</tr>
+</tbody>
+</table></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">Chatbot</div>
+<div class="tab-content"><p>A <strong>StatRewards</strong> bot appears in your friends list. Send it any message to see your top 10 closest milestones:</p>
+<pre><code>=== StatRewards Progress ===
+
+93% — Headhunter (HeadShots) — 14/15
+79% — Armor Breaker (CauseArmorDamage) — 3952/5000
+76% — Rifleman (KilledWithAssaultRifle) — 19/25
+75% — Accuracy King (HitCount) — 187/250
+73% — PMC Slayer (KilledPmc) — 11/15
+70% — Survivor (ExitStatus) — 7/10
+68% — Scavenger (BodiesLooted) — 17/25
+64% — Weapons Hoarder (Weapons) — 16/25
+60% — Key Collector (Keys) — 6/10
+58% — Lead Spitter (AmmoUsed) — 580/1000
+
++38 more
+</code></pre></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">Configuration</div>
+<div class="tab-content"><p>Edit <code>SPT/user/mods/StatRewards/config/mod_config.jsonc</code>:</p>
+<p><strong>Global settings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>debug</code></td>
+<td><code>false</code></td>
+<td>Verbose server logging (shows seeding and trigger details)</td>
+</tr>
+<tr>
+<td><code>threshold_multiplier</code></td>
+<td><code>1.0</code></td>
+<td>Scales all milestone thresholds. <code>0.5</code> = rewards twice as often, <code>2.0</code> = half as often</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Per-milestone settings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td><code>stat_key</code></td>
+<td>Profile stat to track (see <a target="_blank" class="external-link" href="https://github.com/Chazut/StatRewards/blob/main/DESIGN.md" rel="noreferrer noopener">DESIGN.md</a> for the full list)</td>
+</tr>
+<tr>
+<td><code>stat_subkey</code></td>
+<td>Optional second key (e.g. <code>"Survived"</code> for exit status)</td>
+</tr>
+<tr>
+<td><code>every</code></td>
+<td>Trigger every N of this stat (repeatable)</td>
+</tr>
+<tr>
+<td><code>divisor</code></td>
+<td>Set to <code>100</code> for float-type counters (damage, heal, blood loss)</td>
+</tr>
+<tr>
+<td><code>sender</code></td>
+<td>Trader ID who sends the mail</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Mail message text</td>
+</tr>
+<tr>
+<td><code>reward_count</code></td>
+<td>How many items to pick per trigger</td>
+</tr>
+<tr>
+<td><code>reward_pool</code></td>
+<td>Weighted list of reward categories or specific items</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trader IDs (for <code>sender</code> field):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Trader</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prapor</td>
+<td><code>54cb50c76803fa8b248b4571</code></td>
+</tr>
+<tr>
+<td>Therapist</td>
+<td><code>54cb57776803fa99248b456e</code></td>
+</tr>
+<tr>
+<td>Fence</td>
+<td><code>579dc571d53a0658a154fbec</code></td>
+</tr>
+<tr>
+<td>Skier</td>
+<td><code>58330581ace78e27b8b10cee</code></td>
+</tr>
+<tr>
+<td>Peacekeeper</td>
+<td><code>5935c25fb3acc3127c3d8cd9</code></td>
+</tr>
+<tr>
+<td>Mechanic</td>
+<td><code>5a7c2eca46aef81a7ca2145d</code></td>
+</tr>
+<tr>
+<td>Ragman</td>
+<td><code>5ac3b934156ae10c4430e83c</code></td>
+</tr>
+<tr>
+<td>Jaeger</td>
+<td><code>5c0647fdd443bc2504c2d371</code></td>
+</tr>
+<tr>
+<td>Ref</td>
+<td><code>6617beeaa9cfa777ca915b7c</code></td>
+</tr>
+<tr>
+<td>Lightkeeper</td>
+<td><code>638f541a29ffd1183d187f57</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reward categories:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>meds</code></td>
+<td>Random medkit, drug, or stimulator</td>
+</tr>
+<tr>
+<td><code>ammo</code></td>
+<td>Random ammunition (always a full stack)</td>
+</tr>
+<tr>
+<td><code>food</code></td>
+<td>Random food item</td>
+</tr>
+<tr>
+<td><code>drink</code></td>
+<td>Random drink item</td>
+</tr>
+<tr>
+<td><code>keys</code></td>
+<td>Random mechanical key (no keycards)</td>
+</tr>
+<tr>
+<td><code>barter</code></td>
+<td>Random barter item</td>
+</tr>
+<tr>
+<td><code>weapon_preset</code></td>
+<td>Random weapon with full mod loadout</td>
+</tr>
+<tr>
+<td><code>gear</code></td>
+<td>Random armor, rig, helmet, or backpack (with plates if applicable)</td>
+</tr>
+<tr>
+<td><code>money</code></td>
+<td>Roubles (configure amount with <code>min_stack</code> / <code>max_stack</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>You can also use specific item template IDs:</p>
+<pre><code>{ "template_id": "5449016a4bdc2d6f028b456f", "min_stack": 50000, "max_stack": 100000, "weight": 2 }
+</code></pre></div></div>
+<div id="tabset-1-panel-6" class="tab-panel"><div class="tab-title">How It Works</div>
+<div class="tab-content"><p><strong>Install → play. That’s it.</strong></p>
+<p>After each raid, when you return to the main menu, the mod checks your profile’s overall stats against all configured milestones. When a threshold is crossed, random rewards are generated from the milestone’s reward pool and sent via in-game mail from the configured trader.</p>
+<p><strong>First install:</strong> All milestones are seeded to your current stats. You won’t receive a flood of retroactive rewards — only new progress counts.</p>
+<p><strong>Progress tracking:</strong> A small JSON file per profile is saved in <code>user/mods/StatRewards/progress/</code>. Delete it to re-seed.</p>
+<p><strong>Nothing is permanent.</strong> Remove the mod and nothing changes in your profile. The mod only reads stats and sends mail.</p></div></div>
+<div id="tabset-1-panel-7" class="tab-panel"><div class="tab-title">Addons</div>
+<div class="tab-content"><p>You can create <strong>addons</strong> for StatRewards — no code needed. An addon is simply a modified <code>mod_config.jsonc</code> that adds or tweaks milestones.</p>
+<p><strong>What you can do:</strong></p>
+<ul>
+<li>Add new milestones with custom stat triggers, thresholds, messages, and reward pools</li>
+<li>Change existing milestone thresholds, rewards, or trader senders</li>
+<li>Create themed packs (e.g. “Hardcore Mode” with higher thresholds, “Casual Mode” with lower ones)</li>
+</ul>
+<p><strong>How to create an addon:</strong></p>
+<ol>
+<li>Copy the default <code>mod_config.jsonc</code></li>
+<li>Add, remove, or modify milestones</li>
+<li>Share your file — users just replace theirs with yours</li>
+</ol>
+<p><strong>Available stats for milestones:</strong> see the full list in <a target="_blank" class="external-link" href="https://github.com/Chazut/StatRewards/blob/main/DESIGN.md" rel="noreferrer noopener">DESIGN.md</a> — 100+ trackable profile stats including kills by weapon type, kills by faction, damage types, looting, economy, exploration, and more.</p>
+<p><strong>Example — adding a custom milestone:</strong></p>
+<pre><code>{
+  "id": "my_custom_milestone",
+  "stat_key": "KilledWithTemplate",
+  "stat_subkey": "5cadfbf7ae92152ac412eeef",  // specific weapon template ID
+  "every": 10,
+  "sender": "5a7c2eca46aef81a7ca2145d",
+  "message": "You really love that gun.",
+  "reward_count": 2,
+  "reward_pool": [
+    { "category": "ammo", "weight": 5 },
+    { "category": "weapon_preset", "weight": 3 }
+  ]
+}
+</code></pre>
+<p>See “Configuration” tab</p></div></div>
+<div id="tabset-1-panel-8" class="tab-panel"><div class="tab-title">Compatibility</div>
+<div class="tab-content"><ul>
+<li><strong>SPT 4.0.x</strong></li>
+<li>Server-only — no client plugin required</li>
+<li>Works with <strong>any mod</strong></li>
+<li>Safe for <strong>existing profiles</strong> — install or remove at any time</li>
+</ul></div></div>
+<div id="tabset-1-panel-9" class="tab-panel"><div class="tab-title">Issues</div>
+<div class="tab-content"><p>Report them on <a target="_blank" class="external-link" href="https://github.com/Chazut/StatRewards/issues" rel="noreferrer noopener">GitHub</a>.</p></div></div>
+<div id="tabset-1-panel-10" class="tab-panel"><div class="tab-title">Support</div>
+<div class="tab-content"><p>If you enjoy StatRewards and want to support my work, feel free to buy me a coffee!</p>
+<p><a target="_blank" class="external-link" href="https://ko-fi.com/chazut" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/27dab3ba29fe5097be450545c46ec7f97796db7e8d3bbdff6c8d05a64ef678e0.svg" alt="ko-fi"></a></p>
+<p>All my mods are free and open source. Your support keeps me motivated to create more!</p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.1</h2></div><time datetime="2026-04-05T07:25:00.000000Z">5 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>7,506 downloads</span><span>23.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>Fixes</h3>
+<ul>
+<li>Fixed mail markup issue — EFT was parsing <code>#</code> in milestone numbers as color tags</li>
+<li>Adjusted BloodLoss threshold (50 → 200)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/3640dde6fa82bed8bf82f582d5e34245b91f7f1cd5c72299c5d053983802256b?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1200207374/85a27440-2904-474e-a7fd-12c8d71e2ea3?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A11%3A00Z&amp;rscd=attachment%3B+filename%3DStatRewards-1.1.1.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A10%3A46Z&amp;ske=2026-08-01T21%3A11%3A00Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=IRbgceTQzCycyUs6n%2BwC5BQSuI%2BoLqisfzi0PRmp3xY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&amp;response-content-disposition=attachment%3B%20filename%3DStatRewards-1.1.1.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.1.0</h2></div><time datetime="2026-04-04T14:51:00.000000Z">4 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>225 downloads</span><span>23.0 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>StatRewards v1.1.0</h2>
+<h3>New: In-game Chatbot</h3>
+<p>A <strong>StatRewards</strong> bot now appears in your friends list. Send it any message to see your top 10 closest milestones:</p>
+<pre><code>=== StatRewards Progress ===
+
+93% — Headhunter (HeadShots) — 14/15
+79% — Armor Breaker (CauseArmorDamage) — 3952/5000
+76% — Rifleman (KilledWithAssaultRifle) — 19/25
+75% — Accuracy King (HitCount) — 187/250
+73% — PMC Slayer (KilledPmc) — 11/15
+70% — Survivor (ExitStatus) — 7/10
+68% — Scavenger (BodiesLooted) — 17/25
+64% — Weapons Hoarder (Weapons) — 16/25
+60% — Key Collector (Keys) — 6/10
+58% — Lead Spitter (AmmoUsed) — 580/1000
+
++38 more
+</code></pre>
+<h3>Improved Mail Messages</h3>
+<p>Reward mails now include the milestone name, how many times you’ve hit it, and the stat value:</p>
+<pre><code>Novice Hunter — Milestone #3
+[Kills: 75]
+
+Not bad for a rookie. Here, keep going.
+</code></pre>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/fcf08ba1ce02dc12713ff1d97082ed35192ecd53748c6b2efa861e2a016e6bb3?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1200207374/c1cdbbd7-82f4-4d0b-956b-9ffc44095d0e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A03%3A59Z&amp;rscd=attachment%3B+filename%3DStatRewards-1.1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A03%3A46Z&amp;ske=2026-08-01T21%3A03%3A59Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=TgGdccJZ9juwE%2FWXzxbNIgPYbRaAIsEjj0Sv1mmrPz4%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&amp;response-content-disposition=attachment%3B%20filename%3DStatRewards-1.1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-04-03T23:38:00.000000Z">3 April 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>278 downloads</span><span>20.2 KB</span>
+          </div>
+          <div class="prose version-notes"><h3>What is it?</h3>
+<p>Your profile tracks hundreds of stats — kills, headshots, distance walked, blood lost, armor destroyed — but they just sit there. StatRewards turns them into repeatable milestones that send you random loot via trader mail.</p>
+<h3>Highlights</h3>
+<ul>
+<li><strong>48 milestones</strong> out of the box covering combat, weapon types, factions, health, survival, looting, economy, and exploration</li>
+<li><strong>9 reward categories</strong> — meds, ammo, gear, keys, barter items, food, drinks, weapons with attachments, and money</li>
+<li><strong>Fully configurable</strong> — add/remove milestones, tweak thresholds, change reward pools via JSONC config</li>
+<li><strong>Global threshold multiplier</strong> — one setting to make all rewards more or less frequent</li>
+<li><strong>Safe install</strong> — no retroactive reward flood, milestones seed to your current stats on first run</li>
+<li><strong>Server-only</strong> — no client plugin needed, compatible with any other mod</li>
+</ul>
+<p>See the mod page for the full milestone list and configuration guide.</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/a1269c2de31cfec65642b131cf8e5c2c5fcba123ca063c1190fbd0b28c3f60fd?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1200207374/908ff622-a6f3-4bd8-8c04-2efee67a8014?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A19%3A21Z&amp;rscd=attachment%3B+filename%3DStatRewards-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A18%3A22Z&amp;ske=2026-08-01T21%3A19%3A21Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=MEe4U7bQB39fMqRRXm%2BE%2F%2FVNUKIx6Dt6GppSOYFrF3g%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIzOCwibmJmIjoxNzg1NjE1OTM4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.XLgxP1JAf1F-7NK75SnEmiCZOQhGf1OmQa7mmWEdduo&amp;response-content-disposition=attachment%3B%20filename%3DStatRewards-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.chazut.statrewards</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>3 April 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Chazut/StatRewards" target="_blank" rel="noreferrer noopener">https://github.com/Chazut/StatRewards</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

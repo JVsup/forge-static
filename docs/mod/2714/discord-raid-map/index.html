@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Discord Raid Map · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Discord Raid Map</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/59a97200ba5703f18be85607edc7d5cfb64217e6387408615379620517250e94.webp" alt="Discord Raid Map thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>Discord Raid Map</h1>
+    <p class="hero-teaser">I wonder what the squad&#39;s up to...</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/4c6e9ba2aabd745707986e7924da510131e3f7054492576d4e195237d3dc400a.svg" alt="" width="32" height="32">Fiodor</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>378</dd></div>
+    <div><dt>Favourites</dt><dd>4</dd></div>
+    <div><dt>Mod lists</dt><dd>4</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Discord Raid Map content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>What does it do ?:</h1>
+<p>Creates a PNG of the current raid of the host and posts it on your discord via a webhook.<br>
+Updates it at the interval you set.</p>
+<hr>
+<h1>Customization:</h1>
+<ul>
+<li>Set the refresh interval to whatever you fancy.</li>
+<li>Choose your own font. Add <code>.ttf</code> or <code>.otf</code> files to <code>Assets\Fonts</code>, restart the game, then choose one with <code>Map Text &gt; Map Text Font</code>. <code>Default</code> uses the built-in bitmap font.</li>
+<li>Rename the Discord message (eg: Headless 1 etc…)</li>
+<li>Change font sizes</li>
+<li>Marker images are loaded from <code>Assets\Markers</code>. Replace <code>player.png</code>, <code>skull_enemy.png</code>, <code>skull_boss.png</code>, <code>airdrop.png</code>, <code>extract.png</code>, or <code>extract_requirements.png</code> to customize them.</li>
+<li><code>Markers &gt; Marker Display Size</code> controls how large markers appear on the map. Source PNGs can be larger than this value for sharper downsampling.</li>
+</ul>
+<hr>
+<h1>Examples:</h1>
+<p><img loading="lazy" decoding="async" src="../../../assets/72a5df23273a75114e933436ac251682324bb5dec95a99d053192901cfffc08d.webp" alt="Archived image">
+<img loading="lazy" decoding="async" src="../../../assets/17ad608a70d05cb65564041874299fbc1d2be6ce60831ceb6bc52d3506473365.webp" alt="Archived image"></p>
+<hr>
+<h1>Installation:</h1>
+<ol>
+<li>
+<p>Open the downloaded zip file.</p>
+</li>
+<li>
+<p>Drag the BepInEx folder from the zip file into your SPT folder.</p>
+</li>
+<li>
+<p>Set <code>Discord &gt; Webhook Url</code> in the generated BepInEx config. (<a target="_blank" class="external-link" href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks" rel="noreferrer noopener">https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks</a>)</p>
+</li>
+<li>
+<p>???</p>
+</li>
+<li>
+<p>Profit</p>
+</li>
+</ol>
+<p><img loading="lazy" decoding="async" src="../../../assets/bb382e1d985d30f854a6520f194aca015eb71803a62be7f8d2b1d81d7cfd8252.webp" alt="Archived image"></p>
+<hr>
+<h1>Support:</h1>
+<p>Discord thread in the SPT discord : <a target="_blank" class="external-link" href="https://discord.com/channels/875684761291599922/1482076311903146054" rel="noreferrer noopener">https://discord.com/channels/875684761291599922/1482076311903146054</a></p>
+<h1>FAQ</h1>
+<p>Q: What if I’m using a headless ?<br>
+A: The mod only sends the Discord message if the client is the host, so the mod can go everywhere and there’ll only be one message even if there are multiple players with the mod installed.<br>
+This also means that the mod needs to be on the headless since it’s the host.</p>
+<hr>
+<h1>Thanks:</h1>
+<p>The whole SPT and Fika teams for making this awesome project.<br>
+Drakia for the original gif and his config order automatizer.<br>
+Lacy for creating Fika and re-igniting my love for Tarkov.<br>
+Acid for letting me use his Labyrinth map.
+Shebuka for letting me use all his maps.
+mp-stark for his initial work on Dynamic Maps.</p>
+<hr>
+<h1>Disclaimer:</h1>
+<p>After having thought about it for a while I’m going to retire from modding for the time being.</p>
+<p>I’m relying way too much on AI to do most of the heavy work. Whenever I see AI art I can’t stop myself from being disgusted by it and I’ve come to feel the same way about AI mods.
+Hence why I’ve decided to stop modding altogether and dedicate the free time I have to learn C# and Unity.</p>
+<p>The only thing I’ll keep updated will be the per-scope config for PiP-Disabler.</p>
+<p>If anyone wants to maintain my mods they’re free to do so !
+Although PiP-Disabler is an absolute mess and would probably need to be rewritten from the ground up to be maintainable…</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-06-01T14:05:00.000000Z">1 June 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~4.0.0</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>378 downloads</span><span>6.4 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Initial release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/a0470dfe1b216232b359beb79be6550475826e3fb5ac9d593ec2cfb6c5c551fa?noca" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1248241392/295fdd86-b77d-4f16-bbcc-bbccd891ed7e?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A23%3A41Z&amp;rscd=attachment%3B+filename%3DDiscordRaidMap.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A22%3A47Z&amp;ske=2026-08-01T21%3A23%3A41Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=UUuKEZvFgbpmVdegNz29h0PwwTkarnUnOF7NqQrcLeQ%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjI4MCwibmJmIjoxNzg1NjE1OTgwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IzV1ETVImV8r4bEik0VS8a_edLr2BAacOvllb14ET7A&amp;response-content-disposition=attachment%3B%20filename%3DDiscordRaidMap.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.fiodor.discordraidmap</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>1 June 2026</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Fiodorwellfme/DiscordRaidMap" target="_blank" rel="noreferrer noopener">https://github.com/Fiodorwellfme/DiscordRaidMap</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

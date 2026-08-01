@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>UI Scaling · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>UI Scaling</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/9c5d930261f6ea7d483b1563624516f50514d288fd5eb93cb03e247d1f7f2bf5.webp" alt="UI Scaling thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>UI Scaling</h1>
+    <p class="hero-teaser">BepInEx client plugin that unlocks UI scaling to properly fill the screen at higher resolutions</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/8e7eba78715e3dc82c1fe75a970a3f3ee07da4b0933cf56e96561bcc659f3e5c.webp" alt="" width="32" height="32">Dr.Braun</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,877</dd></div>
+    <div><dt>Favourites</dt><dd>17</dd></div>
+    <div><dt>Mod lists</dt><dd>26</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="UI Scaling content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>SPT-UIScale</h1>
+<hr>
+<p><strong>NOTE: This was a mod I made because I got side tracked while trying to fix my other mods and a friend of mine playing SPT had a bag that didn’t fit in the UI properly. I probably wont spend anymore time on this unless there’s a major SPT version release</strong></p>
+<hr>
+<p>BepInEx client plugin for SPT 4.0.13 that unlocks UI scaling for the inventory and trader screens. Overrides EFT’s hardcoded 1080p canvas scaling with a configurable percentage, and adjusts panel layouts so the stash and gear panels properly fill the screen at higher resolutions.</p>
+<p><strong>Once custom scale is set youll need to either restart the client or change resolutions for the affect to take place</strong>*</p>
+<hr>
+<h2>Features</h2>
+<ul>
+<li>Configurable UI scale as a percentage of vanilla (50–150%)</li>
+<li>Automatically adjusts when changing resolution in-game</li>
+<li>Inventory screen: gear panel expands to fill available space, stash anchored to the right</li>
+<li>Trader screen: trader items anchored left, stash anchored right, deal panel centered</li>
+<li>Works with any resolution (1440p, 4K, ultrawide, etc.)</li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<ol>
+<li>Download the latest release ZIP</li>
+<li>Extract into your SPT installation directory — the DLL goes to <code>BepInEx/plugins/</code></li>
+<li>Launch SPT</li>
+</ol>
+<hr>
+<h2>Configuration</h2>
+<p>After first launch, edit <code>BepInEx/config/com.vonbraunz.uiscale.cfg</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enabled</strong></td>
+<td><code>true</code></td>
+<td>Toggle the mod on/off without uninstalling</td>
+</tr>
+<tr>
+<td><strong>Scale Percent</strong></td>
+<td><code>100</code></td>
+<td>UI scale as a percentage of vanilla. <code>100</code> = no change, <code>75</code> = 75% size (more grid space), <code>50</code> = half size. Range: 50–150</td>
+</tr>
+<tr>
+<td><strong>Log Canvas Names</strong></td>
+<td><code>false</code></td>
+<td>Debug logging to BepInEx console</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>Recommended values</h3>
+<table>
+<thead>
+<tr>
+<th>Resolution</th>
+<th>Scale Percent</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1080p</td>
+<td>100</td>
+<td>No change (vanilla)</td>
+</tr>
+<tr>
+<td>1440p</td>
+<td>75–85</td>
+<td>More inventory/stash space</td>
+</tr>
+<tr>
+<td>4K</td>
+<td>50–75</td>
+<td>Significantly more grid space</td>
+</tr>
+</tbody>
+</table>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-31T04:03:00.000000Z">31 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>1,877 downloads</span><span>5.3 KB</span>
+          </div>
+          <div class="prose version-notes"><h2>What it does</h2>
+<p>Overrides EFT’s hardcoded 1080p UI scaling, giving you more inventory and stash grid space at higher resolutions.</p>
+<h2>Features</h2>
+<ul>
+<li>Configurable scale percentage (50–150% of vanilla)</li>
+<li>Automatically adjusts when changing resolution in-game</li>
+<li>Inventory screen layout fix: gear panel expands, stash anchored right</li>
+<li>Trader screen layout fix: trader items anchored left, stash anchored right</li>
+<li>Works at any resolution (1440p, 4K, ultrawide)</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Extract the ZIP into your SPT installation directory</li>
+<li>Launch SPT</li>
+<li>Edit In game using F12 then refresh resolution</li>
+</ol>
+<h2>Recommended settings</h2>
+<table>
+<thead>
+<tr>
+<th>Resolution</th>
+<th>Scale Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1080p</td>
+<td>100 (no change)</td>
+</tr>
+<tr>
+<td>1440p</td>
+<td>75–85</td>
+</tr>
+<tr>
+<td>4K</td>
+<td>50–75</td>
+</tr>
+</tbody>
+</table>
+<h2>Requirements</h2>
+<ul>
+<li>SPT 4.0.13</li>
+<li>Client-side only — no server mod needed</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/c5a1f36772804dcd1a77bc7e945b557954c8c1a15e8706f14a445ba6d6959eb8?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1196787851/f67df24d-c274-49d7-ade1-8a86c4748f35?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A24%3A14Z&amp;rscd=attachment%3B+filename%3DUIScale-1.0.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A23%3A47Z&amp;ske=2026-08-01T21%3A24%3A14Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=lTZrqJedK%2BcEMgoAdJsCjjGYDqeYC6%2FmPU90A2TUDVY%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjIyNiwibmJmIjoxNzg1NjE1OTI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.AcJXKpy38h-Qpzg2BCnugM5lw8bP4Knq18_cOMM9vEc&amp;response-content-disposition=attachment%3B%20filename%3DUIScale-1.0.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.vonbraunz.uiscale</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>31 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Vonbraunz/SPT-UIScale" target="_blank" rel="noreferrer noopener">https://github.com/Vonbraunz/SPT-UIScale</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

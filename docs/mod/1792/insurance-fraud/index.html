@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>Insurance Fraud · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>Insurance Fraud</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/99827b96ec39b631e17d36fe9fc7ebee436f4e83484941731d88f0c92e728720.webp" alt="Insurance Fraud thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      
+    </div>
+    <h1>Insurance Fraud</h1>
+    <p class="hero-teaser">If you discard any insured gear during a raid, it will come back to you with a 100% return rate.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/9eabd56e5f8d80c582b35d941222cf6982b88a121106f771351cc8b0b4830c78.webp" alt="" width="32" height="32">penguingreentea</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>1,554</dd></div>
+    <div><dt>Favourites</dt><dd>0</dd></div>
+    
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="Insurance Fraud content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>1</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h3>Insurance Fraud</h3>
+<p>This mod <em>generously</em> simulates insurance fraud in live EFT by ensuring that all discarded insured gear will return back to you with 100% return rates (imagine you hid it in a bush or something).</p>
+<p>By default, SPT insurance works through percentage rates that are set to 75% and 85% if you insure through Prapor or Therapist respectively. This rate will still apply for all insured gear that is equipped if you die in a raid, but any other insured gear that was dropped or moved to a container outside the inventory will be affected by this mod.</p>
+<h2>Compatibility</h2>
+<p>The mod is compatible with <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2115-insurance-plus/" rel="noreferrer noopener">Insurance Plus</a>, <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2141-insurance-tweaks/" rel="noreferrer noopener">Insurance Tweaks</a> and <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/379-server-value-modifier-svm" rel="noreferrer noopener">Server Value Modifier</a>. It is not compatible with the Insurance component of <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/606-spt-realism-mod/#tab_dd136f044abee9ded916306e67d4ac3ee2ee8b4f" rel="noreferrer noopener">SPT Realism</a>.</p>
+<h2>Background</h2>
+<p>I was interested in making a mod like this so that I can feel better about dropping my guns in raid and found a lot of good direction on what and where to edit from looking through the source code of <a target="_blank" class="external-link" href="https://hub.sp-tarkov.com/files/file/2115-insurance-plus/" rel="noreferrer noopener">Insurance Plus</a> by Mattdokn. Thanks a lot!</p>
+<h2>Install</h2>
+<p>Extract directly into the SPT folder. Mod folder can be located in user/mods/.</p>
+<h2>Specifics</h2>
+<p>The mod overrides functions in /spt/src/services/InsuranceService.ts and /spt/src/controllers/InsuranceController.ts. The mod extends the Item class with an additional property (dropped: boolean) and uses it as a flag for gear that’s missing in post-raid gear, creating some conditionals that will move the gear through the deletion helper functions without getting deleted. After the insurance package is handled, the dropped property is cleaned up on all items.</p>
+<p>Any mods that do not modify the above functions in InsuranceService.ts and InsuranceController.ts should be compatible, but let me know if any issues are being experienced.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2024-10-26T01:42:50.000000Z">26 October 2024</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT ~3.9.0</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>1,554 downloads</span><span>Unknown size</span>
+          </div>
+          <div class="prose version-notes"><p class="empty-state">No description was available in the snapshot.</p></div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/baa9abd6d144502fada3ddab838b9f4fdc2e6fa5ed2f161f6be37ceeab5096fe?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/878264204/0d71e082-1be0-4522-ac83-be99052cebf7?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A07%3A40Z&amp;rscd=attachment%3B+filename%3Dpenguingreentea-insurancefraud-1.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A07%3A40Z&amp;ske=2026-08-01T21%3A07%3A40Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=pO9qgpx6091CudGpraynMd4HAMxx3pMKo6vA7VSK%2FnI%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNTc2NywibmJmIjoxNzg1NjE1NDY3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2lAYCdqxQXPAwdEtCS3ThgybkCKJHk8oDztDNKi9ZFc&amp;response-content-disposition=attachment%3B%20filename%3Dpenguingreentea-insurancefraud-1.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      
+      <div><dt>Published</dt><dd>26 October 2024</dd></div>
+      <div><dt>Updated</dt><dd>7 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/ibxccc123/SPT-InsuranceFraud" target="_blank" rel="noreferrer noopener">https://github.com/ibxccc123/SPT-InsuranceFraud</a></li></ul>
+    
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

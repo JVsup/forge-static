@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>P.L.A.T.E. - Penetration, Lethality, Armor &amp; Trauma Engine · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>P.L.A.T.E. - Penetration, Lethality, Armor &amp; Trauma Engine</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/cfc593c1ef9a2971c4499c4ea6733de11e26bf3023422d4251a1fc825a498c8f.webp" alt="P.L.A.T.E. - Penetration, Lethality, Armor &amp; Trauma Engine thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>P.L.A.T.E. - Penetration, Lethality, Armor &amp; Trauma Engine</h1>
+    <p class="hero-teaser">P.L.A.T.E. replaces Tarkov’s spreadsheet damage with physics: real penetration, material-based armor, wound channels, blood loss and blunt trauma. Bullets hurt, plates aren’t extra HP, and Therapist finally has a reason to sell you blood bags.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/abc0153ca8fa89a8f59921345991e5d773181c9c258f7c578dba3623b282b7d8.webp" alt="" width="32" height="32">anamelash</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>524</dd></div>
+    <div><dt>Favourites</dt><dd>16</dd></div>
+    <div><dt>Mod lists</dt><dd>7</dd></div>
+  </dl>
+</article>
+
+
+<div class="warning-box">This mod displayed a profile-binding notice on Forge.</div>
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="P.L.A.T.E. - Penetration, Lethality, Armor &amp; Trauma Engine content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><h1>P.L.A.T.E.</h1>
+<h3>Penetration, Lethality, Armor &amp; Trauma Engine</h3>
+<h2>Profile modification</h2>
+<p>The only item added to your profile is the blood transfusion kit, sold by Therapist and craftable in the Hideout. If you remove that item from your inventory/stash before uninstalling P.L.A.T.E., removing the mod should be safe.</p>
+<h2>Gameplay effects</h2>
+<p>You will suffer with this mod. Possibly more than people usually suffer in Tarkov. P.L.A.T.E. does not try to be fair — it tries to follow physics. And physics, as we all know, is a merciless bitch.</p>
+<p>Vanilla Tarkov treats every cartridge like a damage number with a bullet attached. P.L.A.T.E. does the opposite.</p>
+<p>Damage is calculated at the moment of impact from the projectile’s mass, caliber, velocity, construction, angle and actual path through the body. Armor behaves like a physical barrier instead of an extra health bar, and bleeding means blood is leaving your body—not that your left leg is taking periodic psychic damage.</p>
+<p>Welcome to Tarkov. Now physics is the one doing the Tarkov’ing.</p>
+<h2>Bullets are no longer spreadsheets</h2>
+<p>Every hit is resolved from the projectile’s physical state when it reaches the target.</p>
+<ul>
+<li>Distance and barrel length genuinely affect terminal performance.</li>
+<li>Grazing hits produce grazing wounds instead of deleting half a limb.</li>
+<li>Brain, neck, jaw, muscle and bone are no longer interchangeable bags of HP.</li>
+<li>Bones can stop projectiles, fracture or redirect the remaining energy.</li>
+<li>Overpenetrating bullets retain physically calculated velocity and may continue into another body part.</li>
+<li>Fragmentation divides the original projectile mass instead of spawning bonus damage from Nikita’s pocket dimension.</li>
+<li>Temporary cavitation becomes destructive at rifle velocities, while slow heavy bullets behave like slow heavy bullets.</li>
+</ul>
+<p>The damage numbers shown on ammunition cards remain as reference values. The actual result is calculated on impact.</p>
+<h2>Armor is not a dice roll</h2>
+<p>P.L.A.T.E. replaces vanilla penetration chance with a material-based interaction model anchored to real GOST protection classes.</p>
+<p>Ceramic, steel, UHMWPE, aramid and titanium each behave differently:</p>
+<ul>
+<li>Ceramic stops serious threats but cracks under repeated impacts.</li>
+<li>Steel can take a beating, although your ribs may submit a formal complaint.</li>
+<li>Fibrous armor is vulnerable to sharp AP projectiles.</li>
+<li>Titanium absorbs an exceptional amount of energy even when defeated.</li>
+<li>Oblique hits face more material and may ricochet.</li>
+<li>Worn armor provides less protection.</li>
+<li>Penetrating bullets lose energy, deform and may shed mass before entering the body.</li>
+</ul>
+<p>A plate that stops the projectile can still transfer enough energy to cause pain, contusion, internal bleeding or breathing problems.</p>
+<p>Your Slick may stop the round. It cannot negotiate with Newton.</p>
+<h2>You have blood now</h2>
+<p>Bleeding no longer deals HP damage. It drains a separate blood-volume resource and progresses through stages of hemorrhagic shock.</p>
+<p>Early blood loss brings tremors, tunnel vision and a racing pulse. Continue leaking and you lose the ability to sprint or jump, then collapse, then die with full HP bars and a very confused post-raid screen.</p>
+<ul>
+<li>Every penetrating wound can bleed.</li>
+<li>Larger wound channels bleed more.</li>
+<li>Bleeding never stops by itself.</li>
+<li>Bots follow the same rules.</li>
+<li>Blood loss carries between raids and regenerates slowly.</li>
+<li>Bandages and tourniquets stop bleeding.</li>
+<li>Painkillers reduce symptoms but do not magically replace several liters of blood.</li>
+<li>Blood transfusion kits are sold by Therapist and can be crafted at the med station.</li>
+</ul>
+<p>Winning the firefight and bleeding out behind a bush thirty seconds later is now a completely valid Tarkov experience.</p>
+<h2>Ammunition and grenades rebuilt from physical data</h2>
+<p>All ammunition—including rounds introduced by other mods—is normalized from available physical properties.</p>
+<p>Shotgun shells receive realistic pellet counts, masses and velocities. Flechettes behave like narrow steel penetrators rather than angry buckshot. Less-lethal ammunition stops functioning as accidental anti-materiel ordnance.</p>
+<p>Grenade blast and fragmentation are derived from their real prototypes, with configurable fragment range beyond vanilla’s short hard cap. Armor rated for fragmentation can stop ordinary fragments, while larger pieces near the explosion may still ruin your insurance return.</p>
+<h2>Configuration and diagnostics</h2>
+<p>Gameplay-level settings are available through the F12 menu, including a global damage scale ranging from bullet sponge to “Head, Physics.”</p>
+<p>Detailed model parameters are available in the configuration files. An automatically capped <code>events.log</code> records the full physical breakdown of every hit and should be attached to bug reports.</p>
+<h2>Compatibility</h2>
+<p>P.L.A.T.E. derives outcomes from projectile mass, velocity, caliber and armor material. Mods containing deliberately absurd ammunition or armor values may therefore produce deliberately absurd results.</p>
+<p>Other ballistics, armor or medical overhauls are incompatible by definition.</p>
+<p>Fika support is currently untested.</p>
+<p>Bring ammunition. Bring tourniquets. Stop trusting construction helmets.</p>
+<p>Good luck, PMC.</p>
+<h2>Feedback</h2>
+<p>If you have any questions, feedback, or run into issues with the mod, feel free to contact me on Discord. You can either send me a direct message at <strong>anamelash</strong> or tag <strong>@anamelash</strong> in the official SPT Discord server.</p>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.9.5</h2></div><time datetime="2026-08-01T10:00:00.000000Z">1 August 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>144 downloads</span><span>3.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Added two tuning knobs:</p>
+<ul>
+<li>Damage scale, per side (Player / PMC / Scav)</li>
+<li>Bleed rate, per side (Player / PMC / Scav)</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/76cbfe76679d69252ac5b3c6ab90fc28299d07de680c2435abc3cb92fbebbb52?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/1a0c7649-af36-4742-b808-cc72059ab638?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A22%3A55Z&amp;rscd=attachment%3B+filename%3DPLATE-0.9.5.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A21%3A58Z&amp;ske=2026-08-01T21%3A22%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=nFVaN67F58wJB8G7DL6sH5HqUWVKgwZj1TMhalBQoaU%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&amp;response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.5.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.9.4</h2></div><time datetime="2026-08-01T01:00:00.000000Z">1 August 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>200 downloads</span><span>3.5 MB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Surgical kits now stop visible bleeding on the repaired limb. This works for CMS and Surv12, only on the treated limb. Enabled by default in the F12 menu.</li>
+<li>Internal bleeding can now be disabled separately for the player, PMC bots, and scavs/bosses/raiders. Internal bleeding still has no wound icon and cannot be treated in raid by bandages, tourniquets, or surgery. All options are enabled by default and changes apply immediately, even mid-raid.</li>
+</ul>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/4f146536f9ac43b7629e06db6b1470cd9353e02f6c30c672d5011692bf46d7fe?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/a79c7981-8ab9-4595-886a-f442a0d626e4?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A13%3A55Z&amp;rscd=attachment%3B+filename%3DPLATE-0.9.4.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A12%3A57Z&amp;ske=2026-08-01T21%3A13%3A55Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=1rNkL3X2MOSnXbA82dOkICn2rjQ9qtAZiSKxonA0GCs%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&amp;response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.4.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>0.9.0</h2></div><time datetime="2026-07-31T20:00:00.000000Z">31 July 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: unknown</span>
+            <span>180 downloads</span><span>3.5 MB</span>
+          </div>
+          <div class="prose version-notes"><p>Release</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/url/9357488162a135405ce135215f3d7bd70bf030b25929acfb9ae9efb60a8fba54?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://release-assets.githubusercontent.com/github-production-release-asset/1318701809/ee7fa584-3155-4ed1-b65e-b2080d746ce8?sp=r&amp;sv=2018-11-09&amp;sr=b&amp;spr=https&amp;se=2026-08-01T21%3A15%3A51Z&amp;rscd=attachment%3B+filename%3DPLATE-0.9.0.zip&amp;rsct=application%2Foctet-stream&amp;skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&amp;sktid=398a6654-997b-47e9-b12b-9515b896b4de&amp;skt=2026-08-01T20%3A15%3A49Z&amp;ske=2026-08-01T21%3A15%3A51Z&amp;sks=b&amp;skv=2018-11-09&amp;sig=eOHnO5jyszn11m1XUtDiddVmP8YVrH4wy0UIzmCs3XA%3D&amp;jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NTYxNjM4NSwibmJmIjoxNzg1NjE2MDg1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZZFzi5h4xGQJ0gmMugXtbRZloKxuVpL-nZ58ELVOSpY&amp;response-content-disposition=attachment%3B%20filename%3DPLATE-0.9.0.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.anamelash.plate</code></dd></div>
+      <div><dt>License</dt><dd>Creative Commons BY-NC-SA 4.0</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>31 July 2026</dd></div>
+      <div><dt>Updated</dt><dd>1 August 2026</dd></div>
+      <div><dt>Fika</dt><dd>Not confirmed</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/Anamelash/spt-plate" target="_blank" rel="noreferrer noopener">https://github.com/Anamelash/spt-plate</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"><p>LLM assistants were used to help translate my own designs and algorithms into C#, as I primarily work with other languages and have limited experience with the C#/.NET ecosystem. All mechanics, architecture, physical models, testing, debugging, and final implementation decisions were created and reviewed by me.</p>
+</div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial static snapshot of public SPT Forge mod information.">
+  <meta name="color-scheme" content="dark">
+  <title>RZCustomItemTiers · Forge static archive</title>
+  <link rel="stylesheet" href="../../../static/archive.css">
+  <link rel="stylesheet" href="../../../static/responsive-fixes.css">
+  <script defer src="../../../static/archive.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../../" aria-label="Forge static archive home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><strong>THE FORGE</strong><small>STATIC ARCHIVE</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../mods/">Mods</a>
+        <a href="../../../addons/">Addons</a>
+      </nav>
+    </div>
+  </header>
+  <aside class="archive-notice" aria-label="Archive notice">
+    <div class="shell"><strong>Unofficial static archive.</strong> Snapshot taken 1 August 2026. This read-only copy is not affiliated with the original Forge or Battlestate Games.</div>
+  </aside>
+  <main id="main-content" class="shell page-content">
+    
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../../../mods/">Mods</a><span aria-hidden="true">/</span><span>RZCustomItemTiers</span>
+</nav>
+
+<article class="detail-hero">
+  <img class="detail-thumb" src="../../../assets/d55da300689bb7a9be3406290230b55e9947386c482f36051cb7283fb243352c.webp" alt="RZCustomItemTiers thumbnail" width="224" height="224">
+  <div class="detail-title">
+    <div class="eyebrow-row">
+      <span class="badge badge-muted">Mod</span>
+      
+      <span class="badge"></span>
+    </div>
+    <h1>RZCustomItemTiers</h1>
+    <p class="hero-teaser">A cleaner approach to inventory color coding. Configurable, extensible.</p>
+    <div class="author-list">
+      <span class="author"><img src="../../../assets/699f4bb396a6fd0ad8117040ea6c7ea499b1d8e23ab3adafeffb107c02815cc4.webp" alt="" width="32" height="32">RemzDNB</span>
+      
+    </div>
+  </div>
+  <dl class="hero-stats">
+    <div><dt>Downloads</dt><dd>3,916</dd></div>
+    <div><dt>Favourites</dt><dd>5</dd></div>
+    <div><dt>Mod lists</dt><dd>6</dd></div>
+  </dl>
+</article>
+
+
+
+
+
+
+<div class="detail-layout">
+  <div class="detail-main">
+    <div class="tabs" role="tablist" aria-label="RZCustomItemTiers content">
+      <a class="tab" id="tab-description" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+      <a class="tab" id="tab-versions" href="#versions" role="tab" aria-controls="versions" aria-selected="false">Versions <span>3</span></a>
+      
+    </div>
+
+    <section class="tab-panel prose" id="description" role="tabpanel" aria-labelledby="tab-description"><blockquote>
+<p>🎨 Now includes several color themes !</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/tI3S0US.png" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/eb2e5c3747e039d110d007243af86752dd8531f68b159533875a274dcdcba215.webp" alt="Themes"></a></p>
+</blockquote>
+<div class="tabset"><div id="tabset-1-panel-1" class="tab-panel"><div class="tab-title">🔎 Overview</div>
+<div class="tab-content"><p><a target="_blank" class="external-link" href="../../2430/odts-item-info-spt-40/" rel="noreferrer noopener">ODT-ItemInfo</a> is a great mod and its item information display is very useful. That said, I was never fully satisfied with its color coding implementation, and this mod is my own attempt at doing it better.</p>
+<p>In ItemInfo’s approach, items are colored by <strong>rarity</strong>, essentially, how hard they are to obtain. The problem is that acquisition difficulty and actual usefulness are two different things. For new players especially, this creates a confusing visual language where high-value colors don’t reliably mean “this is what you want to use”.</p>
+<p>I also realized that most immediately recognizable items (weapons, medical supplies, gear…) don’t really benefit from color coding at all. When you already know what everything is at a glance, adding colors to those items creates visual noise more than anything else.</p>
+<p>So the approach ended up being fairly simple :</p>
+<ul>
+<li><strong>Most item categories get no color</strong> : weapons, armor, meds, and other instantly readable items are left as default. Less clutter.</li>
+<li><strong>The tier system is small and intentional</strong> : instead of 7+ color grades, there are only 6 tiers, focused almost exclusively on ammo and a handful of important categories like armor plates and keys.</li>
+</ul>
+<p>The goal is a color system you can actually trust : if something is glowing red, it means it’s genuinely the best option in its class.</p>
+<hr>
+<p>⚫ <strong>Default</strong> — Unassigned or not worth highlighting.</p>
+<p>🔵 <strong>Notable</strong> — Ammo &amp; armor plates : decent option. <em>- OR -</em> Other items : valued 30k–60k roubles.</p>
+<p>🟣 <strong>Superior</strong> — Ammo &amp; armor plates : good, reliable choice. <em>- OR -</em> Other items : valued 60k–90k roubles.</p>
+<p>🟡 <strong>Excellent</strong> — Ammo &amp; armor plates : high-end, strong performer. <em>- OR -</em> Other items : valued 90k–200k roubles.</p>
+<p>🔴 <strong>Elite</strong> — Ammo &amp; armor plates : best-in-class, hard capped at 1 or 2 per category. <em>- OR -</em> Other items : valued 200k+ roubles.</p>
+<p>⚪ <strong>Situational</strong> — Ammo only : high damage but low pen aka leg meta (white/grey).</p>
+<p>🟢 <strong>Quest</strong> — Required for a quest.</p>
+<hr>
+<blockquote>
+<p>💡 Quest-only items are colored automatically. Quest keys for Customs and Reserve have been manually added on top of that. Other maps are not covered yet, if you want to add them, drop the TPLs in <code>config/keys.json</code>.</p>
+</blockquote>
+<blockquote>
+<p>💡 Situational tier colors are intentionally slightly lighter than Default. These rounds are niche enough that new players don’t need to pay attention to them, so they must stay visually quiet.</p>
+</blockquote></div></div>
+<div id="tabset-1-panel-2" class="tab-panel"><div class="tab-title">📸 Screenshots</div>
+<div class="tab-content"><blockquote>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/LzYeLW2.jpeg" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/92eb8dcba99391d0d94648d87a1f840874a335722e1ec1c106c031260be965a1.webp" alt="1"></a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><a target="_blank" class="external-link" href="https://i.imgur.com/2c9nQGC.jpeg" rel="noreferrer noopener"><img loading="lazy" decoding="async" src="../../../assets/5cb9519e18a10c5f4e2c8b254df91f8d2ccb930f9560c13766126094598aaf1b.webp" alt="2"></a></p>
+</blockquote></div></div>
+<div id="tabset-1-panel-3" class="tab-panel"><div class="tab-title">⚙️ Configuration</div>
+<div class="tab-content"><p>All config files live in <code>config/</code>. The system runs 4 passes on every item at server startup, in order of increasing priority.</p>
+<hr>
+<h3><code>masterConfig.json</code></h3>
+<p>Defines the color for each tier name and the global price thresholds used for automatic tiering. Supports multiple color presets via the <code>Theme</code> field : set to <code>dark</code>, <code>bright</code> or <code>verybright</code>.</p>
+<hr>
+<h3><code>categoryRules.json</code> — Pass 1</h3>
+<p>Maps item category IDs to tier names. Walks the DB parent chain, so assigning a category also covers all its sub-categories automatically. The full vanilla category hierarchy is included as comments for reference.</p>
+<p>By default, no category is assigned a meaningful tier, every root category is mapped to <code>Default</code>. This means the file currently serves as a blanket reset, but you can assign any tier to any category if you want to color entire item families at once.</p>
+<p>Quest items flagged by Tarkov’s <code>QuestItem</code> property are automatically assigned the Quest tier at this pass. However, this does not cover quest-required keys, which are not flagged as quest items in the DB : those are handled manually in <code>config/keys.json</code>.</p>
+<hr>
+<h3><code>priceRules.json</code> — Pass 2</h3>
+<p>Lists category IDs whose tier should be assigned automatically based on handbook price, using the thresholds defined in <code>masterConfig.json</code>. Items below the lowest threshold fall back to <code>Default</code>. Uses the same DB category IDs as <code>categoryRules.json</code>.</p>
+<hr>
+<h3>Override files - Pass 3</h3>
+<p><code>ammo.json</code>, <code>armorplates.json</code>, and any other <code>*.json</code> in <code>config/</code> map individual item TPLs to tier names with absolute priority. Set <code>"Enabled": false</code> to disable a file without deleting it.</p>
+<p>The per-TPL overrides are intentionally split across multiple files rather than lumped into one. This makes updates easier to manage : if you’ve built your own custom config, you can replace or ignore individual files without touching everything else. It also makes it easier to contribute to specific categories. If you know the ammo meta better than I do and want to submit a corrected <code>ammo.json</code>, you’re welcome to contribute.</p>
+<hr>
+<h3>Ammo boxes - Pass 4</h3>
+<p>Automatically inherits the color of the corresponding loose round. No configuration required.</p>
+<hr>
+<h3>Quick testing</h3>
+<p>The fastest way to preview tier colors across all items is to use <a target="_blank" class="external-link" href="../../2604/rzcustomeconomy/" rel="noreferrer noopener">CustomEconomy</a> alongside this mod :</p>
+<ol>
+<li>Open <code>RZCustomEconomy/config/masterConfig.json</code> and set <code>EnableRoutedTrades</code> to <code>true</code>.</li>
+<li>Open <code>RZCustomEconomy/config/routedTradesConfig.json</code> and set <code>ForceRouteAll</code> to <code>true</code>.</li>
+</ol>
+<p>This routes every item in the game to all traders, giving you instant visual feedback on any tier change. Once you’re done tweaking, CustomEconomy can be safely removed, it is fully non-destructive.</p></div></div>
+<div id="tabset-1-panel-4" class="tab-panel"><div class="tab-title">🔌 Compatibility</div>
+<div class="tab-content"><h3>ODT-ItemInfo</h3>
+<p>Runs after ItemInfo, so both mods are fully compatible, we will simply overwrite whatever colors it assigned. That said, if you’re using ItemInfo alongside this mod, it’s cleaner to disable its color feature in its config to avoid doing the work twice.</p>
+<hr>
+<h3>WTT - Content Backport</h3>
+<p>Items added by <a target="_blank" class="external-link" href="../../2512/wtt-content-backport/" rel="noreferrer noopener">WTT - Content Backport</a> are covered in the default config out of the box.</p>
+<hr>
+<h3>Other mods</h3>
+<p>Any mod that adds new items is supported, category-based and price-based tiering will apply automatically as long as the items follow the vanilla parent chain. Items that require manual tier assignment will need to be added to the appropriate override file.</p></div></div>
+<div id="tabset-1-panel-5" class="tab-panel"><div class="tab-title">🐱</div>
+<div class="tab-content"><p><img loading="lazy" decoding="async" src="../../../assets/c73ac855fd602f17c8c2841bbfafb184c7c93b1a77def072037a19bcb3823163.webp" alt="description"></p></div></div></div>
+</section>
+    <section class="tab-panel" id="versions" role="tabpanel" aria-labelledby="tab-versions" hidden>
+      <div class="version-list">
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.2</h2></div><time datetime="2026-03-15T06:39:00.000000Z">15 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>3,177 downloads</span><span>24.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Added <strong>Quest</strong> tier (green) : quest-only items are now colored automatically via Tarkov’s <code>QuestItem</code> flag. Quest-required keys for Customs and Reserve have been added manually on top of that. Other maps are not covered yet.</li>
+<li>Added <code>EnableVerboseLogging</code> option in <code>masterConfig.json</code>. Disabled by default to avoid log spam when missing modded items.</li>
+<li>Minor tier adjustments on a handful of items.</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../1090/color-converter-api/">Color Converter API</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/92d91283c6bbf7e5a83fa0e4c3f72ba5ffbfe7448b7bf0cc59c92767366ef430?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1Uve5HvNA_hsi5Y4v4Q_F4UPRYsPhB6LF&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.1</h2></div><time datetime="2026-03-13T03:31:00.000000Z">13 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>202 downloads</span><span>23.7 KB</span>
+          </div>
+          <div class="prose version-notes"><ul>
+<li>Almost every round has been manually assigned to a tier based on its actual penetration value. The first version was rough, sorry about that, there are probably still a few approximations here and there, but it’s now a solid baseline. The Situational tier is also now implemented for high flesh damage rounds.</li>
+<li>now supports multiple color presets via a Theme field</li>
+<li>now always require colorconverterapi</li>
+</ul>
+</div>
+          <div class="dependencies"><h3>Dependencies</h3><ul><li><a href="../../1090/color-converter-api/">Color Converter API</a></li></ul></div>
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file/824f572b717ce3324dd013dc145b0212ab72b7c320e2ae02a916419200633574?nocache=1" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1LKU6_-4JNvQlySh9_nnRWs50pLSrEuyH&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+        <article class="version-card">
+          <header><div><p class="kicker">Version</p><h2>1.0.0</h2></div><time datetime="2026-03-08T05:59:00.000000Z">8 March 2026</time></header>
+          <div class="version-badges">
+            <span class="badge">SPT 4.0.13</span>
+            
+            <span class="badge badge-muted">Fika: compatible</span>
+            <span>537 downloads</span><span>22.3 KB</span>
+          </div>
+          <div class="prose version-notes"><p>cats &gt; dogs</p>
+<p>fight me</p>
+</div>
+          
+          <div class="virus-links"><strong>VirusTotal:</strong> <a href="https://www.virustotal.com/gui/file-analysis/MjkzNDFiZWZjYTliYmRlMWU3Yzk3Y2FlMzZmMzUxYjM6MTc3Mjk0OTU5Mw==" target="_blank" rel="noreferrer noopener">report 1</a></div>
+          <div class="download-row">
+          <a class="download-button" href="https://drive.usercontent.google.com/download?id=1SucVJJNoTVt8t02klrtE0xeVvAKYtw0B&amp;export=download" target="_blank" rel="noreferrer noopener">Download externally</a>
+          
+          </div>
+        </article>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <aside class="details-card">
+    <h2>Details</h2>
+    <dl>
+      
+      <div><dt>GUID</dt><dd><code>com.rz.customitemtiers</code></dd></div>
+      <div><dt>License</dt><dd>MIT License</dd></div>
+      <div><dt>Category</dt><dd></dd></div>
+      <div><dt>Published</dt><dd>8 March 2026</dd></div>
+      <div><dt>Updated</dt><dd>28 July 2026</dd></div>
+      <div><dt>Fika</dt><dd>Compatible version available</dd></div>
+    </dl>
+    <h3>Source code</h3><ul class="source-list"><li><a href="https://github.com/remzdnb/RZ-SPTMods/" target="_blank" rel="noreferrer noopener">https://github.com/remzdnb/RZ-SPTMods/</a></li></ul>
+    <div class="ai-disclosure"><h3>AI disclosure</h3><div class="prose"></div></div>
+  </aside>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preserved for reference. Downloads are external links only; no mod archives are hosted here.</p>
+      <p>1,076 mods · 80 addons · snapshot 1 August 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
