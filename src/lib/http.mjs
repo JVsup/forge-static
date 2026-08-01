@@ -66,7 +66,11 @@ export async function cachedRequest(url, options = {}) {
         }
       }
       const manualRedirect = redirect === 'manual' && [301, 302, 303, 307, 308].includes(response.status);
-      if (!response.ok && !manualRedirect) throw new Error(`HTTP ${response.status} for ${url}`);
+      if (!response.ok && !manualRedirect) {
+        const error = new Error(`HTTP ${response.status} for ${url}`);
+        error.retryable = response.status === 408 || response.status === 429 || response.status >= 500;
+        throw error;
+      }
       const body = Buffer.from(await response.arrayBuffer());
       const meta = {
         requestUrl: url, finalUrl: response.url || url, status: response.status,
@@ -80,6 +84,7 @@ export async function cachedRequest(url, options = {}) {
       return { ...meta, body, fromCache: false };
     } catch (error) {
       lastError = error;
+      if (error.retryable === false) break;
       if (attempt < retries) await sleep(Math.min(30_000, 750 * (2 ** attempt)));
     }
   }

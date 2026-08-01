@@ -31,6 +31,8 @@ const processedMods = new Set(state.processedMods.map(Number));
 const processedAddons = new Set(state.processedAddons.map(Number));
 const queuedMods = new Set(state.modQueue.map((item) => Number(item.id)));
 const queuedAddons = new Set(state.addonQueue.map((item) => Number(item.id)));
+const inFlightMods = new Set();
+const inFlightAddons = new Set();
 
 async function persistState() {
   state.processedMods = [...processedMods];
@@ -42,11 +44,11 @@ function enqueue(type, id, slug = null, discoveredBy = 'reference') {
   id = Number(id);
   if (!Number.isInteger(id) || id <= 0) return;
   if (type === 'mod') {
-    if (processedMods.has(id) || queuedMods.has(id)) return;
+    if (processedMods.has(id) || queuedMods.has(id) || inFlightMods.has(id)) return;
     queuedMods.add(id);
     state.modQueue.push({ id, slug, discoveredBy });
   } else if (type === 'addon') {
-    if (processedAddons.has(id) || queuedAddons.has(id)) return;
+    if (processedAddons.has(id) || queuedAddons.has(id) || inFlightAddons.has(id)) return;
     queuedAddons.add(id);
     state.addonQueue.push({ id, slug, discoveredBy });
   }
@@ -103,19 +105,26 @@ async function safeHtml(url, type, id) {
 async function captureMod(item) {
   const detailUrl = new URL(`${API_ORIGIN}/mod/${item.id}`);
   detailUrl.searchParams.set('include', 'license,category,source_code_links');
-  const [detailResponse, versions] = await Promise.all([
+  const [detailOutcome, versionsOutcome] = await Promise.allSettled([
     fetchJson(detailUrl.href),
     fetchPaginated(`${API_ORIGIN}/mod/${item.id}/versions`, {
       include: 'dependencies,virus_total_links', sort: '-version,-created_at',
     }),
   ]);
-  const detail = detailResponse.json.data;
+  if (detailOutcome.status === 'rejected') throw detailOutcome.reason;
+  const detail = detailOutcome.value.json.data;
+  const versions = versionsOutcome.status === 'fulfilled' ? versionsOutcome.value : [];
+  if (versionsOutcome.status === 'rejected') state.errors.push({ type: 'mod', id: item.id, stage: 'versions', message: versionsOutcome.reason.message, at: new Date().toISOString() });
   const publicUrl = detail.detail_url || `${FORGE_ORIGIN}/mod/${item.id}/${detail.slug}`;
   const pageHtml = await safeHtml(publicUrl, 'mod', item.id);
   const page = extractPageMetadata(pageHtml, detail.owner?.name);
   const record = {
     type: 'mod', ...detail, versions,
-    page, capture: { status: 'complete', capturedAt: new Date().toISOString(), discoveredBy: item.discoveredBy },
+    page, capture: {
+      status: versionsOutcome.status === 'fulfilled' ? 'complete' : 'partial',
+      capturedAt: new Date().toISOString(), discoveredBy: item.discoveredBy,
+      error: versionsOutcome.status === 'rejected' ? versionsOutcome.reason.message : null,
+    },
   };
   await writeJson(path.join(modDir, `${item.id}.json`), record);
   enqueueFromValues([record, pageHtml], `mod:${item.id}`);
@@ -125,19 +134,26 @@ async function captureMod(item) {
 async function captureAddon(item) {
   const detailUrl = new URL(`${API_ORIGIN}/addon/${item.id}`);
   detailUrl.searchParams.set('include', 'license,mod,source_code_links');
-  const [detailResponse, versions] = await Promise.all([
+  const [detailOutcome, versionsOutcome] = await Promise.allSettled([
     fetchJson(detailUrl.href),
     fetchPaginated(`${API_ORIGIN}/addon/${item.id}/versions`, {
       include: 'virus_total_links', sort: '-version,-created_at',
     }),
   ]);
-  const detail = detailResponse.json.data;
+  if (detailOutcome.status === 'rejected') throw detailOutcome.reason;
+  const detail = detailOutcome.value.json.data;
+  const versions = versionsOutcome.status === 'fulfilled' ? versionsOutcome.value : [];
+  if (versionsOutcome.status === 'rejected') state.errors.push({ type: 'addon', id: item.id, stage: 'versions', message: versionsOutcome.reason.message, at: new Date().toISOString() });
   const publicUrl = detail.detail_url || `${FORGE_ORIGIN}/addon/${item.id}/${detail.slug}`;
   const pageHtml = await safeHtml(publicUrl, 'addon', item.id);
   const record = {
     type: 'addon', ...detail, versions,
     page: extractPageMetadata(pageHtml, detail.owner?.name),
-    capture: { status: 'complete', capturedAt: new Date().toISOString(), discoveredBy: item.discoveredBy },
+    capture: {
+      status: versionsOutcome.status === 'fulfilled' ? 'complete' : 'partial',
+      capturedAt: new Date().toISOString(), discoveredBy: item.discoveredBy,
+      error: versionsOutcome.status === 'rejected' ? versionsOutcome.reason.message : null,
+    },
   };
   await writeJson(path.join(addonDir, `${item.id}.json`), record);
   if (detail.mod?.id || detail.mod_id) enqueue('mod', detail.mod?.id || detail.mod_id, detail.mod?.slug, `addon:${item.id}`);
@@ -180,6 +196,23 @@ function assetRequests(records) {
 
 await Promise.all([ensureDir(modDir), ensureDir(addonDir)]);
 
+if (!state.failureRepairV2) {
+  for (const id of [...processedMods]) {
+    const record = await readJson(path.join(modDir, `${id}.json`), null);
+    if (record?.capture?.status !== 'failed') continue;
+    processedMods.delete(id);
+    enqueue('mod', id, record.slug, 'failure-repair');
+  }
+  for (const id of [...processedAddons]) {
+    const record = await readJson(path.join(addonDir, `${id}.json`), null);
+    if (record?.capture?.status !== 'failed') continue;
+    processedAddons.delete(id);
+    enqueue('addon', id, record.slug, 'failure-repair');
+  }
+  state.failureRepairV2 = true;
+  await persistState();
+}
+
 if (!state.seedComplete) {
   console.log(`Loading seed mods for SPT ${SPT_FILTER}…`);
   const seed = await fetchPaginated(`${API_ORIGIN}/mods`, {
@@ -213,11 +246,15 @@ while (state.modQueue.length || state.addonQueue.length) {
   const sourceQueue = type === 'mod' ? state.modQueue : state.addonQueue;
   const queued = type === 'mod' ? queuedMods : queuedAddons;
   const processed = type === 'mod' ? processedMods : processedAddons;
+  const inFlight = type === 'mod' ? inFlightMods : inFlightAddons;
   const batch = [];
   while (sourceQueue.length && batch.length < 12) {
     const item = sourceQueue.shift();
     queued.delete(Number(item.id));
-    if (!processed.has(Number(item.id))) batch.push(item);
+    if (!processed.has(Number(item.id)) && !inFlight.has(Number(item.id))) {
+      inFlight.add(Number(item.id));
+      batch.push(item);
+    }
   }
   await Promise.all(batch.map(async (item) => {
     try {
@@ -226,6 +263,7 @@ while (state.modQueue.length || state.addonQueue.length) {
     } catch (error) {
       await recordFailure(type, item, error);
     }
+    inFlight.delete(Number(item.id));
     processed.add(Number(item.id));
   }));
   completedThisRun += batch.length;
