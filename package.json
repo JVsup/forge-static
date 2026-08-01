@@ -1,0 +1,23 @@
+{
+  "name": "forge-static-archive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-time static archive generator for SPT Forge mod and addon pages",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "capture": "node src/capture.mjs",
+    "build": "node src/build.mjs",
+    "verify": "node src/verify.mjs",
+    "serve": "node src/serve.mjs",
+    "archive": "npm run capture && npm run build && npm run verify"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "nunjucks": "^3.2.4",
+    "semver": "^7.7.2",
+    "sharp": "^0.34.3"
+  }
+}

@@ -1,0 +1,3 @@
+console.error('Verification pipeline has not been installed yet.');
+process.exitCode = 1;
+
